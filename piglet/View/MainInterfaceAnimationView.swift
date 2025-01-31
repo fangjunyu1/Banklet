@@ -26,9 +26,9 @@ struct MainInterfaceAnimationView: View {
     ]
     
     var backgroundRange: [Int] {
-        Array(!isInAppPurchase ? 0..<54 : 0..<8)
+        Array(isInAppPurchase ? 0..<54 : 0..<8)
     }
-    
+
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
