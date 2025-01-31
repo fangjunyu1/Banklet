@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  piglet
+
+  Created by 方君宇 on 2024/12/30.
+  
+*/
+"CFBundleDisplayName" = "存錢豬豬";
+"UILaunchStoryboardName" = "LaunchScreenChineseTraditionalView";

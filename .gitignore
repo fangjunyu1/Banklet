@@ -1,0 +1,30 @@
+# macOS 系统相关
+.DS_Store
+
+# Xcode 相关
+build/
+DerivedData/
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Xcode Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
