@@ -19,6 +19,7 @@ struct Settings: View {
     @State private var showAboutUs = false
     @State private var showThanks = false
     @State private var showGeneral = false
+    @State private var showOpenSource = false // 显示开源视图
     @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
     @AppStorage("isShowAboutUs") var isShowAboutUs = true
     // false表示隐藏
@@ -260,6 +261,7 @@ struct Settings: View {
                                         showAboutUs.toggle()
                                     }, content: {
                                         Image(systemName: "figure.2")
+                                            .font(.caption)
                                             .padding(.horizontal,5)
                                             .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         Text("About Us")
@@ -298,6 +300,28 @@ struct Settings: View {
                                             .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                     })
                                 }
+                                // 分割线
+                                Rectangle()
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 0.5)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 60)
+                                // 开源
+                                SettingButton(action: {
+                                    showOpenSource.toggle()
+                                }, content: {
+                                    Image(systemName: "fossil.shell")
+                                        .font(.subheadline)
+                                        .padding(.horizontal,5)
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                    Text("Open source")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(Color(hex:"C1C1C1"))
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                })
                             }
                             .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
                             .cornerRadius(10)
@@ -348,7 +372,9 @@ struct Settings: View {
                 .fullScreenCover(isPresented: $showThanks, content: {
                     Thanks2View()
                 })
-                
+                .fullScreenCover(isPresented: $showOpenSource, content: {
+                    OpenSourceView()
+                })
             }
         }
     }
@@ -359,6 +385,6 @@ struct Settings: View {
     return Settings()
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(iapManager)
-        .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+//        .environment(\.locale, .init(identifier: "de"))
 }
 

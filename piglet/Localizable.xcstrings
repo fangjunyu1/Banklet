@@ -9636,6 +9636,10 @@
         }
       }
     },
+    "GitHub" : {
+      "comment" : "GitHub",
+      "extractionState" : "manual"
+    },
     "Go directly to the main interface" : {
       "comment" : "直接进入主界面",
       "extractionState" : "manual",
@@ -9857,6 +9861,9 @@
           }
         }
       }
+    },
+    "https://github.com/fangjunyu1/Banklet" : {
+
     },
     "iCloud is in beta, so please be careful when switching on and off." : {
       "comment" : "iCloud处于测试阶段，请谨慎切换开关。",
@@ -10526,6 +10533,18 @@
     },
     "Image by freepik" : {
       "extractionState" : "manual"
+    },
+    "In order to further demonstrate our protection of user privacy, we decided to host the application code as an open source project on GitHub." : {
+      "comment" : "1.0.5：为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。"
+          }
+        }
+      }
     },
     "In-app purchase completed" : {
       "comment" : "内购完成",
@@ -11411,6 +11430,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最近一次訪問日期"
+          }
+        }
+      }
+    },
+    "Let the code show in the sun" : {
+      "comment" : "1.0.5：让代码展现在阳光下",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让代码展现在阳光下"
           }
         }
       }
@@ -14119,6 +14150,18 @@
         }
       }
     },
+    "Open source" : {
+      "comment" : "1.0.5：开源",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开源"
+          }
+        }
+      }
+    },
     "Password protection" : {
       "comment" : "密码保护",
       "extractionState" : "manual",
@@ -16335,6 +16378,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "問題回饋"
+          }
+        }
+      }
+    },
+    "Project address" : {
+      "comment" : "1.0.5:项目地址",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "项目地址"
           }
         }
       }

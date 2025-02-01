@@ -18,7 +18,12 @@ struct Thanks2View: View {
             GeometryReader { geometry in
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.85
+                
                 ScrollView(showsIndicators: false ) {
+                    
+                        if !isCompactScreen {
+                            Spacer().frame(height: 30)
+                        }
                     VStack {
                         // 感谢freepik和lottieFiles
                         Text("Thanks to freepik and lottieFiles")
@@ -40,14 +45,12 @@ struct Thanks2View: View {
                                 .scaledToFit()
                                 .frame(width: isCompactScreen ? nil : width * 0.8)
                                 .opacity(colorScheme == .light ? 1 : 0.8)
-                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                             Spacer().frame(width: isLandscape ? 10 : nil, height : isLandscape ? nil : 10)
                             Image("lottiefiles")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: isCompactScreen ? nil : width * 0.8)
                                 .opacity(colorScheme == .light ? 1 : 0.8)
-                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                         }
                         
                         // 感谢以下用户的赞助
@@ -91,5 +94,5 @@ struct Thanks2View: View {
 
 #Preview {
     Thanks2View()
-        .environment(\.locale, .init(identifier: "de"))
+//        .environment(\.locale, .init(identifier: "de"))
 }

@@ -12,9 +12,7 @@ struct AppIconView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    // 鸣谢页面
-    
-    
+
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 120)), // 控制列宽范围
         GridItem(.adaptive(minimum: 100, maximum: 120)),
