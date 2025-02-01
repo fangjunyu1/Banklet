@@ -289,9 +289,6 @@ struct Home: View {
                                                 }
                                             }
                                             .allowsHitTesting(isProverb)
-                                            .onAppear {
-                                                print("LoopAnimation:\(LoopAnimation)")
-                                            }
                                         
                                         // 存钱罐日期
                                         if piggyBank[0].isExpirationDateEnabled {
@@ -381,6 +378,10 @@ struct Home: View {
                     .sheet(isPresented: $showAccessRecordsView) {
                         AccessRecordsView(piggyBank: piggyBank[0])
                     }
+                    // 管理视图
+                    .sheet(isPresented: $showManagingView, content: {
+                        ManagingView()
+                    })
                     .sheet(isPresented: $showDepositAndWithdrawView, content: {
                         DepositAndWithdrawView(isReversed: $isReversed) {
                             isPlaying = true
@@ -430,16 +431,6 @@ struct Home: View {
                                     .foregroundColor(colorScheme == .light ? .black : .white)
                             })
                         }
-                    }
-                    
-                    // 设置-存钱罐列表
-                    if showManagingView {
-                        VStack {
-                            Spacer()
-                            ManagingView(showManagingView: $showManagingView)
-                        }
-                        .transition(.move(edge: .bottom))
-                        .edgesIgnoringSafeArea(.all)
                     }
                 }
                 .frame(maxWidth: geometry.size.width ,maxHeight: geometry.size.height)

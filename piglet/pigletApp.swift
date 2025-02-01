@@ -23,6 +23,5 @@ struct pigletApp: App {
         .environment(modelConfigManager)
         .environmentObject(iapManager)
         .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
-        
     }
 }

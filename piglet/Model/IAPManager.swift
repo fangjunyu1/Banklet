@@ -7,7 +7,6 @@
 
 import StoreKit
 
-
 @available(iOS 15.0, *)
 class IAPManager:ObservableObject {
     static let shared = IAPManager()
@@ -126,10 +125,9 @@ class IAPManager:ObservableObject {
         }
     }
     
-    // 检查所有交易
+    // 检查所有交易，如果用户退款，则取消内购标识。
     func checkAllTransactions() async {
         print("开始检查所有交易记录...")
-
         let allTransactions = Transaction.all
         var latestTransactions: [String: Transaction] = [:]
 
@@ -137,7 +135,7 @@ class IAPManager:ObservableObject {
             do {
                 let verifiedTransaction = try checkVerified(transaction)
                 print("verifiedTransaction:\(verifiedTransaction)")
-                // **只保留每个商品的最新交易**
+                // 只保留最新的交易
                 if let existingTransaction = latestTransactions[verifiedTransaction.productID] {
                     if verifiedTransaction.purchaseDate > existingTransaction.purchaseDate {
                         latestTransactions[verifiedTransaction.productID] = verifiedTransaction
@@ -150,26 +148,28 @@ class IAPManager:ObservableObject {
             }
         }
 
-        var hasValidPurchase = false
-
-        // **处理最新的交易**
+        var validPurchasedProducts: Set<String> = []
+        
+        // 处理最新的交易
         for (productID, transaction) in latestTransactions {
             if let revocationDate = transaction.revocationDate {
                 print("交易 \(productID) 已退款，撤销日期: \(revocationDate)")
                 removePurchasedState(for: productID)
             } else {
-                hasValidPurchase = true
+                validPurchasedProducts.insert(productID)
                 savePurchasedState(for: productID)
             }
         }
 
-        // **如果所有交易都被退款，则清除内购标识**
-        if !hasValidPurchase {
-            for id in productID {
-                removePurchasedState(for: id)
-            }
+        // **移除所有未在最新交易中的商品**
+        let allPossibleProductIDs: Set<String> = Set(productID) // 所有可能的商品 ID
+        let productsToRemove = allPossibleProductIDs.subtracting(validPurchasedProducts)
+
+        for id in productsToRemove {
+            removePurchasedState(for: id)
         }
     }
+    
     // 当购买失败时，会尝试重新加载产品信息。
     func resetProduct() async {
         self.products = []
@@ -178,9 +178,9 @@ class IAPManager:ObservableObject {
     // 保存购买状态到用户偏好设置或其他存储位置
     func savePurchasedState(for productID: String) {
         UserDefaults.standard.set(true, forKey: productID)
-        print("Purchased state saved for product: \(productID)")
+        print("保存购买状态: \(productID)")
     }
-    
+    // 移除内购状态
     func removePurchasedState(for productID: String) {
         UserDefaults.standard.removeObject(forKey: productID)
         print("已移除购买状态: \(productID)")
