@@ -68,14 +68,14 @@ class IAPManager:ObservableObject {
                     let transaction = try checkVerified(verification)    // 验证交易
                     
                     // 获取 JSON 表示的交易信息
-//                    let jsonData = transaction.jsonRepresentation
-//                    if let signedTransactionInfo = String(data: jsonData, encoding: .utf8) {
-//                        print("Signed Transaction Info: \(signedTransactionInfo)")
-                        // 将交易信息发送到后端进行验证
-//                        sendToServer(signedTransactionInfo: signedTransactionInfo)
-//                    } else {
-//                        print("Failed to convert JSON data to string")
-//                    }
+                    //                    let jsonData = transaction.jsonRepresentation
+                    //                    if let signedTransactionInfo = String(data: jsonData, encoding: .utf8) {
+                    //                        print("Signed Transaction Info: \(signedTransactionInfo)")
+                    // 将交易信息发送到后端进行验证
+                    //                        sendToServer(signedTransactionInfo: signedTransactionInfo)
+                    //                    } else {
+                    //                        print("Failed to convert JSON data to string")
+                    //                    }
                     
                     savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
                     await transaction.finish()    // 告诉系统交易完成
@@ -110,15 +110,63 @@ class IAPManager:ObservableObject {
     }
     // handleTransactions处理所有的交易情况
     func handleTransactions() async {
+        print("进入handleTransactions方法")
         for await result in Transaction.updates {
             // 遍历当前所有已完成的交易
             do {
                 let transaction = try checkVerified(result) // 验证交易
+                print("transaction:\(transaction)")
+                
                 // 处理交易，例如解锁内容
                 savePurchasedState(for: transaction.productID)
                 await transaction.finish()
             } catch {
                 print("交易处理失败：\(error)")
+            }
+        }
+    }
+    
+    // 检查所有交易
+    func checkAllTransactions() async {
+        print("开始检查所有交易记录...")
+
+        let allTransactions = Transaction.all
+        var latestTransactions: [String: Transaction] = [:]
+
+        for await transaction in allTransactions {
+            do {
+                let verifiedTransaction = try checkVerified(transaction)
+                print("verifiedTransaction:\(verifiedTransaction)")
+                // **只保留每个商品的最新交易**
+                if let existingTransaction = latestTransactions[verifiedTransaction.productID] {
+                    if verifiedTransaction.purchaseDate > existingTransaction.purchaseDate {
+                        latestTransactions[verifiedTransaction.productID] = verifiedTransaction
+                    }
+                } else {
+                    latestTransactions[verifiedTransaction.productID] = verifiedTransaction
+                }
+            } catch {
+                print("交易验证失败：\(error)")
+            }
+        }
+
+        var hasValidPurchase = false
+
+        // **处理最新的交易**
+        for (productID, transaction) in latestTransactions {
+            if let revocationDate = transaction.revocationDate {
+                print("交易 \(productID) 已退款，撤销日期: \(revocationDate)")
+                removePurchasedState(for: productID)
+            } else {
+                hasValidPurchase = true
+                savePurchasedState(for: productID)
+            }
+        }
+
+        // **如果所有交易都被退款，则清除内购标识**
+        if !hasValidPurchase {
+            for id in productID {
+                removePurchasedState(for: id)
             }
         }
     }
@@ -132,6 +180,12 @@ class IAPManager:ObservableObject {
         UserDefaults.standard.set(true, forKey: productID)
         print("Purchased state saved for product: \(productID)")
     }
+    
+    func removePurchasedState(for productID: String) {
+        UserDefaults.standard.removeObject(forKey: productID)
+        print("已移除购买状态: \(productID)")
+    }
+    
     // 通过productID检查是否已完成购买
     func loadPurchasedState(for productID: String) -> Bool{
         let isPurchased = UserDefaults.standard.bool(forKey: productID)    // UserDefaults读取购买状态
