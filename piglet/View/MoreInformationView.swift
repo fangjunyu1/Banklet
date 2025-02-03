@@ -154,7 +154,7 @@ struct MoreInformationView: View {
                     .minimumScaleFactor(0.8)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .navigationTitle("More Information")
+                .navigationTitle("Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar{
                     ToolbarItem(placement: .topBarLeading) {
@@ -202,5 +202,5 @@ struct MoreInformationView: View {
 #Preview {
     MoreInformationView()
         .modelContainer(PiggyBank.preview)
-        .environment(\.locale, .init(identifier: "de"))
+//        .environment(\.locale, .init(identifier: "de"))
 }

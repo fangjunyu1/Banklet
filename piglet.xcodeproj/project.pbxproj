@@ -92,6 +92,7 @@
 		1D88545B2D244B27009DE7AE /* Completed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88545A2D244B27009DE7AE /* Completed.swift */; };
 		1D8854612D244FB9009DE7AE /* Fireworks1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D88545F2D244FB9009DE7AE /* Fireworks1.json */; };
 		1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8854602D244FB9009DE7AE /* Fireworks2.json */; };
+		1D89C54F2D506254000DECFF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C54E2D506254000DECFF /* DetailView.swift */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
 		1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */; };
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
@@ -262,6 +263,7 @@
 		1D88545A2D244B27009DE7AE /* Completed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completed.swift; sourceTree = "<group>"; };
 		1D88545F2D244FB9009DE7AE /* Fireworks1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks1.json; sourceTree = "<group>"; };
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
+		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
 		1DB13A332D22E9740006B0A2 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPage.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */,
 				1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
+				1D89C54E2D506254000DECFF /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
+				1D89C54F2D506254000DECFF /* DetailView.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* ColorExtensions.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
 				1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */,

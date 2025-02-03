@@ -29,11 +29,13 @@ struct Home: View {
     @State private var showAccessRecordsView = false    // 显示存取记录视图
     @State private var showMoreInformationView = false  // 显示详细信息视图
     @State private var showManagingView = false // 显示通用视图
+    @State private var showDetailView = false
     
     @AppStorage("pageSteps") var pageSteps: Int = 1
     @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
     @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
     @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
+    @AppStorage("isTestDetails") var isTestDetails = false
     
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
@@ -122,7 +124,7 @@ struct Home: View {
                                         Button(action: {
                                             showMoreInformationView.toggle()
                                         }, label: {
-                                            Label("More Information",systemImage:"list.clipboard")
+                                            Label("Details",systemImage:"list.clipboard")
                                         })
                                     }
                                 // 存钱罐顶部储蓄信息
@@ -159,7 +161,7 @@ struct Home: View {
                                             // 显示详细信息的按钮
                                             Button(action: {
                                                 withAnimation(.easeInOut(duration:0.5)) {
-                                                    isInfo.toggle()
+                                                    isTestDetails ? showDetailView.toggle() : isInfo.toggle()
                                                 }
                                             }, label: {
                                                 VStack {
@@ -170,7 +172,6 @@ struct Home: View {
                                                 }
                                                 .frame(width: 40, height: 40)
                                             })
-                                            
                                             Rectangle()
                                                 .fill(.white)
                                                 .frame(width: 30, height: 1) // 自定义宽度和高度
@@ -382,6 +383,12 @@ struct Home: View {
                     .sheet(isPresented: $showManagingView, content: {
                         ManagingView()
                     })
+                    
+                    // 详细信息（缩略）视图
+                    .sheet(isPresented: $showDetailView, content: {
+                        DetailView(CurrentAmount: piggyBank[0].amount, TargetAmount: piggyBank[0].targetAmount)
+                            .presentationDetents([.height(300)])
+                    })
                     .sheet(isPresented: $showDepositAndWithdrawView, content: {
                         DepositAndWithdrawView(isReversed: $isReversed) {
                             isPlaying = true
@@ -433,13 +440,12 @@ struct Home: View {
                         }
                     }
                 }
-                .frame(maxWidth: geometry.size.width ,maxHeight: geometry.size.height)
+                .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
                 .background(
                     backgroundImageView()
                 )
             }
         }
-        
     }
 }
 
@@ -448,5 +454,5 @@ struct Home: View {
     return Home()
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
+    //        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
 }

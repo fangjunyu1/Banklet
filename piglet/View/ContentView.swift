@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var piggyBankData: PiggyBankData? =  PiggyBankData()
     @State private var showContentView = false
     @State private var isErrorMessage = false
+    @State private var ZoomMainView = false
     
     // 密码保护方法
     func authenticate() {
@@ -62,10 +63,13 @@ struct ContentView: View {
                     authenticate()
                 }
             } else {
-                Home()
-                    .onAppear {
-                        showContentView = true
-                    }
+                ZStack {
+                    Color.black.edgesIgnoringSafeArea(.all)
+                    Home()
+                        .onAppear {
+                            showContentView = true
+                        }
+                }
             }
         }
     }
