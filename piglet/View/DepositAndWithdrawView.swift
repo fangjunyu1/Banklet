@@ -90,6 +90,11 @@ struct DepositAndWithdrawView: View {
                                     // 存入金额的情况
                                     if EnterAmount + piggyBank[0].amount >= piggyBank[0].targetAmount {
                                         
+                                        // 如果当前存钱罐不是满的，当存入金额大于等于目标金额时，记录完成日期
+                                        if piggyBank[0].amount != piggyBank[0].targetAmount {
+                                            // 记录完成日期
+                                            piggyBank[0].completionDate = Date()
+                                        }
                                         // 新增存取记录为，目标金额 - 当前金额 = 本次存满的差额。
                                         // 存取记录的金额为存满的差额
                                         let savingRecord = SavingsRecord(amount: piggyBank[0].targetAmount - piggyBank[0].amount, saveMoney: true,piggyBank: piggyBank[0])
@@ -100,6 +105,7 @@ struct DepositAndWithdrawView: View {
                                         // 如果 当前金额 + 存入金额 >= 目标金额
                                         // 当前金额 = 目标金额
                                         piggyBank[0].amount = piggyBank[0].targetAmount
+                                        
                                     } else {
                                         // 新增存取记录为： 存入金额
                                         let savingRecord = SavingsRecord(amount: EnterAmount, saveMoney: true,piggyBank: piggyBank[0])

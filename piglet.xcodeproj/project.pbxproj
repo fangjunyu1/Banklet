@@ -888,7 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\"";
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -954,7 +954,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\"";
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1017,7 +1017,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
@@ -1032,7 +1032,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1054,7 +1054,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
@@ -1069,7 +1069,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

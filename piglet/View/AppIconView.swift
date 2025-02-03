@@ -28,14 +28,14 @@ struct AppIconView: View {
     var appIcon: [Int] {
         Array(isInAppPurchase ? 0..<22 : 0..<6)
     }
-    
+    // 1.0.5版本应用图标名称： AppIcon3
     var AlternateIconName: String {
-        UIApplication.shared.alternateIconName ?? "AppIcon"
+        UIApplication.shared.alternateIconName ?? "AppIcon 2"
     }
     
     // 更换图标方法
     func setAlternateIconNameFunc(name: String) {
-            UIApplication.shared.setAlternateIconName(name == "AppIcon" ? nil : name)
+        UIApplication.shared.setAlternateIconName(name)
     }
     
     var body: some View {
@@ -52,21 +52,35 @@ struct AppIconView: View {
                         LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
-                                    setAlternateIconNameFunc(name: index == 0 ? "AppIcon" :  "AppIcon \(index)")
+                                    setAlternateIconNameFunc(name: "AppIcon \(index)")
                                 }, label: {
                                     Rectangle()
-                                        .strokeBorder(AlternateIconName == "AppIcon \(index)" ? Color(hex:"FF4B00") : .clear, lineWidth: 5)
+                                        .strokeBorder(AlternateIconName == "AppIcon \(index)" ? .blue : .clear, lineWidth: 5)
                                         .foregroundColor(.white)
                                         .frame(width: isPadScreen ? 150 : 100,height: isPadScreen ? 150 : 100)
                                         .cornerRadius(10)
                                         .clipped()
                                         .overlay {
-                                            Image(uiImage: UIImage(named: index == 0 ? "AppIcon" : "AppIcon \(index)") ?? UIImage())
+                                            Image(uiImage: UIImage(named: "AppIcon \(index)") ?? UIImage())
                                                 .resizable()
                                                 .scaledToFill()
                                                 .frame(width: isPadScreen ? 140 : 95,height: isPadScreen ? 140 : 95)
                                                 .cornerRadius(10)
                                                 .clipped()
+                                                .overlay {
+                                                    if AlternateIconName == "AppIcon \(index)" {
+                                                        VStack {
+                                                            Spacer()
+                                                            HStack {
+                                                                Spacer()
+                                                                Image(systemName: "checkmark.circle.fill")
+                                                                    .foregroundColor(colorScheme == .light ? .blue : .white)
+                                                                    .font(.title)
+                                                                    .padding(10)
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                         }
                                 })
                             }

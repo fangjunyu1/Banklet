@@ -130,11 +130,21 @@ struct Home: View {
                                 // 存钱罐顶部储蓄信息
                                 VStack(alignment: .leading) {
                                     Group {
-                                        Text("$ \(difference.formattedWithTwoDecimalPlaces())")
-                                            .font(.title2)
-                                            .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                        if piggyBank[0].amount == piggyBank[0].targetAmount {
+                                            Text("Piggy bank full")
+                                                .font(.title2)
+                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                        } else {
+                                            Text("$ \(difference.formattedWithTwoDecimalPlaces())")
+                                                .font(.title2)
+                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                        }
                                         Group {
-                                            Text("Distance")+Text(" \(piggyBank[0].name) ") + Text("Need")
+                                            if  piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
+                                            } else {
+                                                Text("Distance")+Text(" \(piggyBank[0].name) ") + Text("Need")
+                                            }
                                         }
                                         .font(.footnote)
                                         .fontWeight(.bold)

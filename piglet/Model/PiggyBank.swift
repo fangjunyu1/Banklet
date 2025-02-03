@@ -19,6 +19,7 @@ class PiggyBank {
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool = false // 标记主要存钱罐
+    var completionDate: Date = Date()    // 完成日期
     
     // 与存钱记录的关系
     @Relationship

@@ -4095,6 +4095,18 @@
         }
       }
     },
+    "Completion date" : {
+      "comment" : "1.0.5完成日期",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成日期"
+          }
+        }
+      }
+    },
     "Confirm" : {
       "comment" : "确定",
       "extractionState" : "manual",
@@ -14623,6 +14635,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "存錢罐"
+          }
+        }
+      }
+    },
+    "Piggy bank full" : {
+      "comment" : "1.0.5存钱罐已满",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存钱罐已满"
           }
         }
       }
@@ -28564,6 +28588,228 @@
         }
       }
     },
+    "Thanks to our users from Mainland China, Thailand, Angola, Finland, Argentina and Italy for their support." : {
+      "comment" : "1.0.5感谢来自中国大陆、泰国、安哥拉、芬兰、阿根廷和意大利的用户支持。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكرًا للمستخدمين من الصين القارية وتايلاند وأنغولا وفنلندا وإيطاليا على دعمهم."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gràcies als usuaris de la Xina continental, Tailàndia, Angola, Finlàndia i Itàlia pel seu suport."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Děkujeme uživatelům z pevninské Číny, Thajska, Angoly, Finska a Itálie za podporu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak til brugere fra det kinesiske fastland, Thailand, Angola, Finland og Italien for deres støtte."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Angola, Finnland und Italien für ihre Unterstützung."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Angolasta, Suomesta ja Italiasta tuesta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תודה למשתמשים מסין, תאילנד, אנגולה, פינלנד ואיטליה על תמיכתם."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मुख्य भूमि चीन, थाईलैंड, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvala korisnicima iz kontinentalne Kine, Tajlanda, Angole, Finske i Italije na podršci."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Köszönet a szárazföldi kínai, thaiföldi, angolai, finn és olasz felhasználóknak a támogatásukért."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Angola, Finlandia, dan Italia atas dukungan mereka."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Angola, Finlandia e Italia per il loro supporto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国本土、タイ、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중국 본토, 태국, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Angola, Finland dan Itali atas sokongan mereka."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Angola, Finland og Italia for deres støtte."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dank aan gebruikers van het vasteland van China, Thailand, Angola, Finland en Italië voor hun steun."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Angoli, Finlandii i Włoch za wsparcie."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Angola, Finlanda și Italia pentru sprijinul acordat."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Анголы, Финляндии и Италии за поддержку."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Angoly, Fínska a Talianska za podporu."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tack till användare från Kina, Thailand, Angola, Finland och Italien för deras stöd."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Destekleri için Çin anakarası, Tayland, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дякуємо користувачам із материкового Китаю, Таїланду, Анголи, Фінляндії та Італії за підтримку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Angola, Phần Lan và Ý đã hỗ trợ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感谢来自中国大陆、泰国、安哥拉、芬兰、阿根廷和意大利的用户支持。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
+          }
+        }
+      }
+    },
     "Thanks to the following users for their support" : {
       "comment" : "感谢以下用户的赞助",
       "extractionState" : "manual",
@@ -28782,228 +29028,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "感謝以下用戶的贊助"
-          }
-        }
-      }
-    },
-    "Thanks to users from China, Thailand, Angola, Finland and Italy for their support." : {
-      "comment" : "感谢来自中国大陆、泰国、安哥拉、芬兰和意大利的用户支持。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرًا للمستخدمين من الصين القارية وتايلاند وأنغولا وفنلندا وإيطاليا على دعمهم."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies als usuaris de la Xina continental, Tailàndia, Angola, Finlàndia i Itàlia pel seu suport."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Děkujeme uživatelům z pevninské Číny, Thajska, Angoly, Finska a Itálie za podporu."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak til brugere fra det kinesiske fastland, Thailand, Angola, Finland og Italien for deres støtte."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Angola, Finnland und Italien für ihre Unterstützung."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Angolasta, Suomesta ja Italiasta tuesta."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה למשתמשים מסין, תאילנד, אנגולה, פינלנד ואיטליה על תמיכתם."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य भूमि चीन, थाईलैंड, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvala korisnicima iz kontinentalne Kine, Tajlanda, Angole, Finske i Italije na podršci."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönet a szárazföldi kínai, thaiföldi, angolai, finn és olasz felhasználóknak a támogatásukért."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Angola, Finlandia, dan Italia atas dukungan mereka."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Angola, Finlandia e Italia per il loro supporto."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "中国本土、タイ、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "중국 본토, 태국, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Angola, Finland dan Itali atas sokongan mereka."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Angola, Finland og Italia for deres støtte."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dank aan gebruikers van het vasteland van China, Thailand, Angola, Finland en Italië voor hun steun."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Angoli, Finlandii i Włoch za wsparcie."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Angola, Finlanda și Italia pentru sprijinul acordat."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Анголы, Финляндии и Италии за поддержку."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Angoly, Fínska a Talianska za podporu."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack till användare från Kina, Thailand, Angola, Finland och Italien för deras stöd."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Destekleri için Çin anakarası, Tayland, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо користувачам із материкового Китаю, Таїланду, Анголи, Фінляндії та Італії за підтримку."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Angola, Phần Lan và Ý đã hỗ trợ."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感谢来自中国大陆、泰国、安哥拉、芬兰和意大利的用户支持。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
           }
         }
       }
@@ -31271,7 +31295,7 @@
       }
     },
     "UserSponsorshipDeadline" : {
-      "comment" : "截止到2025年1月8日。",
+      "comment" : "1.0.5 截止到2025年2月3日。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -31481,7 +31505,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "截止到2025年1月8日。"
+            "value" : "截止到2025年2月3日。"
           }
         },
         "zh-Hant" : {

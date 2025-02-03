@@ -42,12 +42,26 @@ struct MainInterfaceBackgroundView: View {
                                     BackgroundImage = ""
                                 }, label: {
                                     Rectangle()
-                                        .strokeBorder(BackgroundImage.isEmpty ?  Color(hex:"FF4B00") : .clear, lineWidth: 5)
+                                        .strokeBorder(BackgroundImage.isEmpty ?  .blue : .clear, lineWidth: 5)
                                         .overlay {
                                             Rectangle()
                                                 .cornerRadius(10)
                                                 .frame(width: isPadScreen ? 270 : 136,height: isPadScreen ? 170 : 96)
                                                 .foregroundColor(colorScheme == .light ? .white : Color(hex:"2C2B2D") )
+                                                .overlay {
+                                                    if BackgroundImage.isEmpty {
+                                                        VStack {
+                                                            Spacer()
+                                                            HStack {
+                                                                Spacer()
+                                                                Image(systemName: "checkmark.circle.fill")
+                                                                    .foregroundColor(colorScheme == .light ? .blue : .white)
+                                                                    .font(.title)
+                                                                    .padding(10)
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                         }
                                         .foregroundColor(.white)
                                         .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
@@ -59,7 +73,7 @@ struct MainInterfaceBackgroundView: View {
                                         BackgroundImage = "bg\(index)"
                                     }, label: {
                                         Rectangle()
-                                            .strokeBorder(BackgroundImage == "bg\(index)" ? Color(hex:"FF4B00") : .clear, lineWidth: 5)
+                                            .strokeBorder(BackgroundImage == "bg\(index)" ? .blue : .clear, lineWidth: 5)
                                             .foregroundColor(.white)
                                             .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
                                             .cornerRadius(10)
@@ -71,6 +85,20 @@ struct MainInterfaceBackgroundView: View {
                                                     .frame(width: isPadScreen ? 270 : 136, height: isPadScreen ? 170 : 96)
                                                     .cornerRadius(10)
                                                     .clipped()
+                                                    .overlay {
+                                                        if BackgroundImage == "bg\(index)" {
+                                                            VStack {
+                                                                Spacer()
+                                                                HStack {
+                                                                    Spacer()
+                                                                    Image(systemName: "checkmark.circle.fill")
+                                                                        .foregroundColor(colorScheme == .light ? .blue : .white)
+                                                                        .font(.title)
+                                                                        .padding(10)
+                                                                }
+                                                            }
+                                                        }
+                                                    }
                                             }
                                     })
                                 }
