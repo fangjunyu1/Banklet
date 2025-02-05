@@ -119,6 +119,16 @@ struct MoreInformationView: View {
                             Text(piggyBank[0].creationDate,format: Date.FormatStyle.dateTime)
                                 .foregroundColor(.gray)
                         }
+                        
+                        // 完成日期
+                        if piggyBank[0].amount == piggyBank[0].targetAmount {
+                            HStack {
+                                Text("Completion date")
+                                Spacer()
+                                Text(piggyBank[0].completionDate,format: Date.FormatStyle.dateTime)
+                                    .foregroundColor(.gray)
+                            }
+                        }
                         // 如果有截止日期，显示截止日期
                         if piggyBank[0].isExpirationDateEnabled {
                             // 截止日期

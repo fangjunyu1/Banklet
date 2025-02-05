@@ -18,10 +18,10 @@ struct DetailView: View {
     var SavingProgress:Double {
         return max(min(CurrentAmount / TargetAmount * 100,100),0)
     }
-    var data:[(label: String, value: Double, color: Color)] {
+    var data:[(label: String, value: Double)] {
         return [
-            (String(localized:"Deposit"), CurrentAmount, .blue),   // 已存入金额
-            (String(localized:"Remaining"), max(TargetAmount - CurrentAmount,0),.gray)
+            (String(localized:"Deposit"), CurrentAmount),   // 已存入金额
+            (String(localized:"Remaining"), max(TargetAmount - CurrentAmount,0))
         ]
     }
     var body: some View {
@@ -54,7 +54,7 @@ struct DetailView: View {
                                     .font(.footnote)
                                 Text("$")
                                     .font(.footnote)
-                                + Text(" ") + 
+                                + Text(" ") +
                                 Text(CurrentAmount.formattedWithTwoDecimalPlaces())
                                     .font(.title3)
                                     .fontWeight(.bold)

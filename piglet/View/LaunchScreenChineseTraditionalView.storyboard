@@ -15,20 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="存錢豬豬" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jSW-tz-32b">
-                                <rect key="frame" x="149" y="725" width="127" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存錢豬豬" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jSW-tz-32b">
+                                <rect key="frame" x="186.66666666666666" y="757" width="99.999999999999972" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="glS-zf-mat"/>
+                                    <constraint firstAttribute="width" constant="100" id="sgj-AJ-n2N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconWhite" translatesAutoresizingMaskIntoConstraints="NO" id="7dN-Kh-cfj">
-                                <rect key="frame" x="98" y="725" width="94" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconWhite" translatesAutoresizingMaskIntoConstraints="NO" id="7dN-Kh-cfj">
+                                <rect key="frame" x="-355.66666666666669" y="752" width="1024.3333333333333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2WF-r3-6oi"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7dN-Kh-cfj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" constant="-80" id="DRH-r1-YIc"/>
+                            <constraint firstItem="jSW-tz-32b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="40" id="RWk-9b-VfZ"/>
+                            <constraint firstItem="7dN-Kh-cfj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-40" id="YPc-F1-ww9"/>
+                            <constraint firstItem="jSW-tz-32b" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" constant="-80" id="rXF-Mo-nKw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,8 +49,5 @@
     </scenes>
     <resources>
         <image name="iconWhite" width="1024" height="1024"/>
-        <systemColor name="viewFlipsideBackgroundColor">
-            <color red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

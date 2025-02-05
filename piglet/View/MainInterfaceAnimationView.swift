@@ -59,7 +59,7 @@ struct MainInterfaceAnimationView: View {
                             })
                         }
                         .padding(10)
-                        ScrollView {
+                        ScrollView(showsIndicators: false) {
                             LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {

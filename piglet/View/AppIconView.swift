@@ -26,7 +26,7 @@ struct AppIconView: View {
     ]
     
     var appIcon: [Int] {
-        Array(isInAppPurchase ? 0..<22 : 0..<6)
+        Array(isInAppPurchase ? 0..<33 : 0..<6)
     }
     // 1.0.5版本应用图标名称： AppIcon3
     var AlternateIconName: String {
@@ -36,6 +36,7 @@ struct AppIconView: View {
     // 更换图标方法
     func setAlternateIconNameFunc(name: String) {
         UIApplication.shared.setAlternateIconName(name)
+        print("设置了\(name)为图标")
     }
     
     var body: some View {
@@ -53,6 +54,7 @@ struct AppIconView: View {
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
                                     setAlternateIconNameFunc(name: "AppIcon \(index)")
+                                    print("点击了:AppIcon \(index)")
                                 }, label: {
                                     Rectangle()
                                         .strokeBorder(AlternateIconName == "AppIcon \(index)" ? .blue : .clear, lineWidth: 5)
