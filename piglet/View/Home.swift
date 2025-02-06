@@ -465,5 +465,5 @@ struct Home: View {
     return Home()
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-    //        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
+            .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
 }

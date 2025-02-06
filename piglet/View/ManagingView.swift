@@ -37,6 +37,7 @@ struct ManagingView: View {
                     VStack {
                         
                         ScrollView(.horizontal,showsIndicators: false) {
+                            // 创建按钮
                             HStack {
                                 Button(action: {
                                     // 跳转到创建视图
@@ -48,7 +49,7 @@ struct ManagingView: View {
                                     }
                                     .padding(10)
                                     .frame(width: 140, height: 200)
-                                    .background(.white)
+                                    .background(colorScheme == .light ? .white : Color(hex:"2C2B2D"))
                                     .cornerRadius(10)
                                     .shadow(radius: 0.5)
                                 })
@@ -118,7 +119,7 @@ struct ManagingView: View {
                                             Text("\((piggyBank[index].amount / piggyBank[index].targetAmount * 100).formattedWithTwoDecimalPlaces()) %")
                                                 .multilineTextAlignment(.leading)
                                                 .fontWeight(.bold)
-                                                .foregroundColor(piggyBank[index].isPrimary ? .white : .black)
+                                                .foregroundColor(piggyBank[index].isPrimary ? .white : colorScheme == .light ? .black : .white)
                                             Rectangle().frame(width: 110, height: 5)
                                                 .cornerRadius(10)
                                                 .foregroundColor(piggyBank[index].isPrimary ? .white :.gray)
@@ -136,7 +137,8 @@ struct ManagingView: View {
                                     }
                                     .padding(10)
                                     .frame(width: 140, height: 200)
-                                    .background(piggyBank[index].isPrimary ? listColor[index % 8] : .white)
+                                    .background(piggyBank[index].isPrimary ? listColor[index % 8] : colorScheme == .light ? .white : Color(hex:"2C2B2D"))
+                                    .opacity(colorScheme == .light ? 1 : 0.8)
                                     .cornerRadius(10)
                                     .shadow(radius: 0.5)
                                     // 删除提示框
