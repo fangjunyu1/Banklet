@@ -392,6 +392,7 @@ struct Home: View {
                     // 管理视图
                     .sheet(isPresented: $showManagingView, content: {
                         ManagingView()
+                            .presentationDetents([.height(260)])
                     })
                     
                     // 详细信息（缩略）视图

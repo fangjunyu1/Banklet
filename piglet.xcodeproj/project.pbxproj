@@ -888,7 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\"";
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\" \"AppIcon 33\" \"AppIcon 34\" \"AppIcon 35\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -954,7 +954,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\"";
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\" \"AppIcon 33\" \"AppIcon 34\" \"AppIcon 35\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

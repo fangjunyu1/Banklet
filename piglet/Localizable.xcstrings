@@ -31,6 +31,9 @@
     "%@" : {
 
     },
+    "%@ %%" : {
+
+    },
     "%@.%@" : {
       "localizations" : {
         "en" : {
@@ -5879,6 +5882,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前金額"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "comment" : "1.0.5:删除",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
           }
         }
       }

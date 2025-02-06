@@ -26,7 +26,7 @@ struct AppIconView: View {
     ]
     
     var appIcon: [Int] {
-        Array(isInAppPurchase ? 0..<33 : 0..<6)
+        Array(isInAppPurchase ? 0..<36 : 0..<6)
     }
     // 1.0.5版本应用图标名称： AppIcon3
     var AlternateIconName: String {
