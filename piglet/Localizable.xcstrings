@@ -2088,16 +2088,178 @@
             "value" : "applikationsikon"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anwendungssymbol"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "εικονίδιο εφαρμογής"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icono de aplicación"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icono de aplicación"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sovelluskuvake"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icône d'application"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icône d'application"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סמל יישום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एप्लिकेशन आइकन"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ikona aplikacije"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "alkalmazás ikonra"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikon aplikasi"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icona dell'applicazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリケーションアイコン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "애플리케이션 아이콘"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikon aplikasi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "programikon"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "applicatiepictogram"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikona aplikacji"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ícone do aplicativo"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ícone do aplicativo"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "pictograma aplicației"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "значок приложения"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikonu aplikácie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "programikonen"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไอคอนแอปพลิเคชัน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "uygulama simgesi"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "значок програми"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "biểu tượng ứng dụng"
           }
         },
         "zh-Hans" : {
@@ -4174,16 +4336,178 @@
             "value" : "færdiggørelsesdato"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertigstellungsdatum"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ημερομηνία ολοκλήρωσης"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fecha de finalización"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fecha de finalización"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "valmistumispäivä"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "date d'achèvement"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "date d'achèvement"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תאריך סיום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पूरा करने की तिथि"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "datum završetka"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "befejezési dátum"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tanggal penyelesaian"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data di completamento"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료일"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tarikh siap"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ferdigstillelsesdato"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "datum van voltooiing"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data zakończenia"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data de conclusão"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data de conclusão"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data de finalizare"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "дата завершения"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termín dokončenia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "slutdatum"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันที่เสร็จสิ้น"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tamamlanma tarihi"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "дата завершення"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ngày hoàn thành"
           }
         },
         "zh-Hans" : {
@@ -6010,16 +6334,178 @@
             "value" : "slette"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "löschen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "διαγράφω"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "borrar"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "borrar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "poistaa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "supprimer"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "supprimer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לִמְחוֹק"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मिटाना"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "izbrisati"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "töröl"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "menghapus"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "eliminare"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消去"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "padam"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "slette"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "verwijderen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "usuwać"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "excluir"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "excluir"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "şterge"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "удалить"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vymazať"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "radera"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "silmek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "видалити"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xóa bỏ"
           }
         },
         "zh-Hans" : {
@@ -10964,16 +11450,178 @@
             "value" : "For yderligere at demonstrere vores beskyttelse af brugernes privatliv besluttede vi at hoste applikationskoden som et open source-projekt på GitHub."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um unseren Schutz der Privatsphäre der Benutzer weiter zu demonstrieren, haben wir uns entschieden, den Anwendungscode als Open-Source-Projekt auf GitHub zu hosten."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Για να δείξουμε περαιτέρω την προστασία του απορρήτου των χρηστών, αποφασίσαμε να φιλοξενήσουμε τον κώδικα εφαρμογής ως έργο ανοιχτού κώδικα στο GitHub."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para demostrar aún más nuestra protección de la privacidad del usuario, decidimos alojar el código de la aplicación como un proyecto de código abierto en GitHub."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para demostrar aún más nuestra protección de la privacidad del usuario, decidimos alojar el código de la aplicación como un proyecto de código abierto en GitHub."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osoittaaksemme entisestään käyttäjien yksityisyyttämme, päätimme isännöidä sovelluskoodin avoimen lähdekoodin projektina GitHubissa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour démontrer davantage notre protection de la vie privée des utilisateurs, nous avons décidé d'héberger le code de l'application en tant que projet open source sur GitHub."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour démontrer davantage notre protection de la vie privée des utilisateurs, nous avons décidé d'héberger le code de l'application en tant que projet open source sur GitHub."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כדי להדגים עוד יותר את ההגנה שלנו על פרטיות המשתמש, החלטנו לארח את קוד האפליקציה כפרויקט קוד פתוח ב-GitHub."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपयोगकर्ता की गोपनीयता की हमारी सुरक्षा को और अधिक प्रदर्शित करने के लिए, हमने एप्लिकेशन कोड को GitHub पर एक ओपन सोर्स प्रोजेक्ट के रूप में होस्ट करने का निर्णय लिया।"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kako bismo dodatno pokazali našu zaštitu privatnosti korisnika, odlučili smo ugostiti kod aplikacije kao projekt otvorenog koda na GitHubu."
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A felhasználói adatok védelmének további demonstrálása érdekében úgy döntöttünk, hogy az alkalmazáskódot nyílt forráskódú projektként tároljuk a GitHubon."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untuk lebih mendemonstrasikan perlindungan privasi pengguna, kami memutuskan untuk menghosting kode aplikasi sebagai proyek sumber terbuka di GitHub."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per dimostrare ulteriormente la nostra tutela della privacy degli utenti, abbiamo deciso di ospitare il codice dell'applicazione come progetto open source su GitHub."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーザーのプライバシーの保護をさらに実証するために、アプリケーション コードを GitHub 上のオープン ソース プロジェクトとしてホストすることにしました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자 개인 정보 보호에 대한 추가 설명을 위해 우리는 GitHub에서 애플리케이션 코드를 오픈 소스 프로젝트로 호스팅하기로 결정했습니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untuk menunjukkan lagi perlindungan privasi pengguna kami, kami memutuskan untuk mengehoskan kod aplikasi sebagai projek sumber terbuka di GitHub."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For ytterligere å demonstrere vår beskyttelse av brukernes personvern, bestemte vi oss for å være vert for applikasjonskoden som et åpen kildekode-prosjekt på GitHub."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Om onze bescherming van de privacy van gebruikers verder aan te tonen, hebben we besloten de applicatiecode als open source-project op GitHub te hosten."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aby jeszcze bardziej zademonstrować naszą ochronę prywatności użytkowników, zdecydowaliśmy się udostępnić kod aplikacji jako projekt open source w serwisie GitHub."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para demonstrar ainda mais a nossa proteção da privacidade do utilizador, decidimos alojar o código da aplicação como um projeto de código aberto no GitHub."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para demonstrar ainda mais a nossa proteção da privacidade do utilizador, decidimos alojar o código da aplicação como um projeto de código aberto no GitHub."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pentru a demonstra în continuare protecția noastră a confidențialității utilizatorilor, am decis să găzduim codul aplicației ca proiect open source pe GitHub."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы еще больше продемонстрировать нашу защиту конфиденциальности пользователей, мы решили разместить код приложения как проект с открытым исходным кодом на GitHub."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aby sme ďalej demonštrovali našu ochranu súkromia používateľov, rozhodli sme sa umiestniť kód aplikácie ako open source projekt na GitHub."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "För att ytterligare demonstrera vårt skydd av användarnas integritet beslutade vi att vara värd för applikationskoden som ett projekt med öppen källkod på GitHub."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพื่อแสดงให้เห็นการปกป้องความเป็นส่วนตัวของผู้ใช้เพิ่มเติม เราได้ตัดสินใจโฮสต์โค้ดแอปพลิเคชันเป็นโปรเจ็กต์โอเพ่นซอร์สบน GitHub"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanıcı gizliliğini koruduğumuzu daha da iyi göstermek için uygulama kodunu GitHub'da açık kaynaklı bir proje olarak barındırmaya karar verdik."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Щоб ще більше продемонструвати захист конфіденційності користувачів, ми вирішили розмістити код програми як проект із відкритим кодом на GitHub."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để thể hiện rõ hơn khả năng bảo vệ quyền riêng tư của người dùng, chúng tôi đã quyết định lưu trữ mã ứng dụng dưới dạng dự án nguồn mở trên GitHub."
           }
         },
         "zh-Hans" : {
@@ -11912,16 +12560,178 @@
             "value" : "Lad koden dukke op i solen"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lassen Sie den Code in der Sonne erscheinen"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αφήστε τον κωδικό να εμφανιστεί στον ήλιο"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deja que el código aparezca al sol."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deja que el código aparezca al sol."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anna koodin näkyä auringossa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laisse le code apparaître au soleil"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laisse le code apparaître au soleil"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תן לקוד להופיע בשמש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कोड को धूप में दिखने दें"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neka se šifra pojavi na suncu"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hagyja, hogy a kód megjelenjen a napon"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biarkan kodenya muncul di bawah sinar matahari"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lascia che il codice venga visualizzato alla luce del sole"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コードを太陽の光に当ててみましょう"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "코드가 햇빛에 나타나도록 하세요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biarkan kod itu muncul di bawah sinar matahari"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La koden dukke opp i solen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laat de code in de zon verschijnen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niech kod pojawi się na słońcu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deixe o código aparecer ao sol"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deixe o código aparecer ao sol"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lasă codul să apară la soare"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пусть код появится на солнце"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nech sa kód ukáže na slnku"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Låt koden dyka upp i solen"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปล่อยให้รหัสปรากฏกลางแดด"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kodun güneşte görünmesine izin verin"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нехай код з’явиться на сонці"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy để mã hiển thị dưới ánh mặt trời"
           }
         },
         "zh-Hans" : {
@@ -12210,16 +13020,178 @@
             "value" : "loop animation"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schleifenanimation"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animation βρόχου"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animación en bucle"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animación en bucle"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "silmukkaanimaatio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animation en boucle"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animation en boucle"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אנימציית לולאה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लूप एनीमेशन"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "petlja animacija"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hurok animáció"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animasi lingkaran"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animazione in loop"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ループアニメーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "루프 애니메이션"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animasi gelung"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "loop animasjon"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "lusanimatie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animacja pętli"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animação em loop"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animação em loop"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animație în buclă"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "циклическая анимация"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animácia slučky"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "loop animation"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาพเคลื่อนไหวแบบวนซ้ำ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "döngü animasyonu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "циклічна анімація"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hoạt hình vòng lặp"
           }
         },
         "zh-Hans" : {
@@ -12270,16 +13242,178 @@
             "value" : "Main interface animation"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation der Hauptschnittstelle"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κύρια κινούμενα σχέδια διεπαφής"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animación de la interfaz principal"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animación de la interfaz principal"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pääliittymän animaatio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation de l'interface principale"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animation de l'interface principale"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אנימציית ממשק ראשי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मुख्य इंटरफ़ेस एनीमेशन"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Animacija glavnog sučelja"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A fő felület animációja"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animasi antarmuka utama"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animazione dell'interfaccia principale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メインインターフェイスのアニメーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메인 인터페이스 애니메이션"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animasi antara muka utama"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hovedgrensesnittanimasjon"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Animatie van de hoofdinterface"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animacja głównego interfejsu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animação da interface principal"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animação da interface principal"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animație interfață principală"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Анимация основного интерфейса"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animácia hlavného rozhrania"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huvudgränssnittsanimation"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาพเคลื่อนไหวอินเทอร์เฟซหลัก"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ana arayüz animasyonu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основна анімація інтерфейсу"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoạt ảnh giao diện chính"
           }
         },
         "zh-Hans" : {
@@ -12996,16 +14130,178 @@
             "value" : "Rediger detaljeringsstilen til venstre på startsiden."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ändern Sie den Detailstil auf der linken Seite der Startseite."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τροποποιήστε το στυλ λεπτομερειών στην αριστερή πλευρά της αρχικής σελίδας."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifique el estilo de los detalles en el lado izquierdo de la página de inicio."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifique el estilo de los detalles en el lado izquierdo de la página de inicio."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa yksityiskohtien tyyliä kotisivun vasemmassa reunassa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifiez le style des détails sur le côté gauche de la page d'accueil."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifiez le style des détails sur le côté gauche de la page d'accueil."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שנה את סגנון הפרטים בצד שמאל של דף הבית."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मुख पृष्ठ के बाईं ओर विवरण शैली को संशोधित करें।"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Izmijenite stil detalja na lijevoj strani početne stranice."
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Módosítsa a részletek stílusát a kezdőlap bal oldalán."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah gaya detail di sisi kiri halaman beranda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica lo stile dei dettagli sul lato sinistro della home page."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホームページの左側にある詳細スタイルを変更します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홈페이지 왼쪽의 세부정보 스타일을 수정하세요."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubah suai gaya butiran di sebelah kiri halaman utama."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endre detaljstilen på venstre side av hjemmesiden."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wijzig de detailstijl aan de linkerkant van de startpagina."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmodyfikuj styl szczegółów po lewej stronie strony głównej."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifique o estilo dos detalhes no lado esquerdo da página inicial."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifique o estilo dos detalhes no lado esquerdo da página inicial."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modificați stilul detaliilor din partea stângă a paginii de pornire."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Измените стиль деталей в левой части главной страницы."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravte štýl podrobností na ľavej strane domovskej stránky."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ändra detaljstilen till vänster på startsidan."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปรับเปลี่ยนรูปแบบรายละเอียดทางด้านซ้ายของโฮมเพจ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ana sayfanın sol tarafındaki ayrıntı stilini değiştirin."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Змініть стиль деталей у лівій частині домашньої сторінки."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sửa đổi kiểu chi tiết ở phía bên trái của trang chủ."
           }
         },
         "zh-Hans" : {
@@ -14610,16 +15906,178 @@
             "value" : "Open source"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Source"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ανοιχτό κώδικα"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código abierto"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código abierto"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avoin lähdekoodi"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source ouverte"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source ouverte"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קוד פתוח"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खुला स्त्रोत"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otvoreni kod"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyílt forráskódú"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sumber terbuka"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fonte aperta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オープンソース"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오픈 소스"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sumber terbuka"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpen kildekode"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open-source"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwarte źródło"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código aberto"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Código aberto"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sursă deschisă"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытый исходный код"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open source"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppen källkod"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โอเพ่นซอร์ส"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık kaynak"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відкритий код"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nguồn mở"
           }
         },
         "zh-Hans" : {
@@ -15114,16 +16572,178 @@
             "value" : "Spargrisen er fuld"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparschwein ist voll"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ο κουμπαράς είναι γεμάτος"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La alcancía está llena"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La alcancía está llena"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säästöpossu on täynnä"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tirelire est pleine"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tirelire est pleine"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קופת החזירים מלאה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुल्लक भरा हुआ है"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kasica prasica je puna"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Megtelt a malacpersely"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Celengan sudah penuh"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il salvadanaio è pieno"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "貯金箱がいっぱいです"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "돼지 저금통이 꽉 찼어요"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piggy bank penuh"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparegrisen er full"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spaarvarken is vol"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skarbonka jest pełna"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O mealheiro está cheio"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O mealheiro está cheio"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pușculița este plină"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Копилка полна"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prasiatko je plné"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spargrisen är full"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กระปุกออมสินเต็มแล้ว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kumbara dolu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скарбничка повна"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con heo đất đã đầy"
           }
         },
         "zh-Hans" : {
@@ -16950,16 +18570,178 @@
             "value" : "Projektadresse"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projektadresse"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διεύθυνση έργου"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dirección del proyecto"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dirección del proyecto"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projektin osoite"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse du projet"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresse du projet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כתובת הפרויקט"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "परियोजना का पता"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adresa projekta"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projekt címe"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alamat proyek"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indirizzo del progetto"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロジェクトアドレス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로젝트 주소"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alamat projek"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosjektadresse"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Projectadres"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adres projektu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endereço do projeto"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endereço do projeto"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa proiectului"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес проекта"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa projektu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projektadress"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่อยู่โครงการ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proje adresi"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адреса проекту"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Địa chỉ dự án"
           }
         },
         "zh-Hans" : {
@@ -28770,16 +30552,178 @@
             "value" : "test funktion"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testfunktion"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "λειτουργία δοκιμής"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "función de prueba"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "función de prueba"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testitoiminto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fonction de test"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fonction de test"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פונקציית בדיקה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "परीक्षण समारोह"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "testna funkcija"
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "teszt funkció"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fungsi tes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "funzione di prova"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テスト機能"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "테스트 기능"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fungsi ujian"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "test funksjon"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "testfunctie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "funkcja testowa"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "função de teste"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "função de teste"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "funcția de testare"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "тестовая функция"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testovacia funkcia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testfunktion"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ฟังก์ชั่นทดสอบ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "test fonksiyonu"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "тестова функція"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "chức năng kiểm tra"
           }
         },
         "zh-Hans" : {
@@ -29054,14 +30998,14 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Angola, Finnland und Italien für ihre Unterstützung."
+            "state" : "translated",
+            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Argentinien, Angola, Finnland und Italien für ihre Unterstützung."
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
+            "state" : "translated",
+            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αργεντινή, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
           }
         },
         "en" : {
@@ -29096,44 +31040,44 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+            "state" : "translated",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Argentina, Angola, Finlandia e Italia por su apoyo."
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+            "state" : "translated",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Argentina, Angola, Finlandia e Italia por su apoyo."
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Angolasta, Suomesta ja Italiasta tuesta."
+            "state" : "translated",
+            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Argentiinasta, Angolasta, Suomesta ja Italiasta tuesta."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+            "state" : "translated",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Argentine, d'Angola, de Finlande et d'Italie pour leur soutien."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+            "state" : "translated",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Argentine, d'Angola, de Finlande et d'Italie pour leur soutien."
           }
         },
         "he" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "תודה למשתמשים מסין, תאילנד, אנגולה, פינלנד ואיטליה על תמיכתם."
+            "state" : "translated",
+            "value" : "תודה למשתמשים מסין, תאילנד, ארגנטינה, אנגולה, פינלנד ואיטליה על תמיכתם."
           }
         },
         "hi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "मुख्य भूमि चीन, थाईलैंड, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
+            "state" : "translated",
+            "value" : "मुख्य भूमि चीन, थाईलैंड, अर्जेंटीना, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
           }
         },
         "hr" : {
@@ -29144,44 +31088,44 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Köszönet a szárazföldi kínai, thaiföldi, angolai, finn és olasz felhasználóknak a támogatásukért."
+            "state" : "translated",
+            "value" : "Köszönjük a szárazföldi kínai, thaiföldi, Argentína, Angola, Finnország és Olaszország felhasználók támogatását."
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Angola, Finlandia, dan Italia atas dukungan mereka."
+            "state" : "translated",
+            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Argentina, Angola, Finlandia, dan Italia atas dukungan mereka."
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Angola, Finlandia e Italia per il loro supporto."
+            "state" : "translated",
+            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Argentina, Angola, Finlandia e Italia per il loro supporto."
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "中国本土、タイ、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
+            "state" : "translated",
+            "value" : "中国本土、タイ、アルゼンチン、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "중국 본토, 태국, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
+            "state" : "translated",
+            "value" : "중국 본토, 태국, 아르헨티나, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
           }
         },
         "ms" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Angola, Finland dan Itali atas sokongan mereka."
+            "state" : "translated",
+            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Argentina, Angola, Finland dan Itali atas sokongan mereka."
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Angola, Finland og Italia for deres støtte."
+            "state" : "translated",
+            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Argentina, Angola, Finland og Italia for deres støtte."
           }
         },
         "nl" : {
@@ -29192,68 +31136,68 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Angoli, Finlandii i Włoch za wsparcie."
+            "state" : "translated",
+            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Argentyny, Angoli, Finlandii i Włoch za ich wsparcie."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+            "state" : "translated",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Argentina, Angola, Finlândia e Itália pelo seu apoio."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+            "state" : "translated",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Argentina, Angola, Finlândia e Itália pelo seu apoio."
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Angola, Finlanda și Italia pentru sprijinul acordat."
+            "state" : "translated",
+            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Argentina, Angola, Finlanda și Italia pentru sprijinul acordat."
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Анголы, Финляндии и Италии за поддержку."
+            "state" : "translated",
+            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Аргентины, Анголы, Финляндии и Италии за поддержку."
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Angoly, Fínska a Talianska za podporu."
+            "state" : "translated",
+            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Argentíny, Angoly, Fínska a Talianska za podporu."
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Tack till användare från Kina, Thailand, Angola, Finland och Italien för deras stöd."
+            "state" : "translated",
+            "value" : "Tack till användare från Kina, Thailand, Argentina, Angola, Finland och Italien för deras stöd."
           }
         },
         "th" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
+            "state" : "translated",
+            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย อาร์เจนตินา แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Destekleri için Çin anakarası, Tayland, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
+            "state" : "translated",
+            "value" : "Destekleri için Çin anakarası, Tayland, Arjantin, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Дякуємо користувачам із материкового Китаю, Таїланду, Анголи, Фінляндії та Італії за підтримку."
+            "state" : "translated",
+            "value" : "Дякуємо користувачам із Китаю, Таїланду, Аргентини, Анголи, Фінляндії та Італії за підтримку."
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Angola, Phần Lan và Ý đã hỗ trợ."
+            "state" : "translated",
+            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Argentina, Angola, Phần Lan và Ý đã hỗ trợ."
           }
         },
         "zh-Hans" : {
@@ -32624,14 +34568,14 @@
         },
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Endet am 8. Januar 2025."
+            "state" : "translated",
+            "value" : "Endet am 2. Februar 2025."
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Λήγει στις 8 Ιανουαρίου 2025."
+            "state" : "translated",
+            "value" : "Λήγει στις 2 Φεβρουαρίου 2025."
           }
         },
         "en" : {
@@ -32666,44 +34610,44 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Finaliza el 8 de enero de 2025."
+            "state" : "translated",
+            "value" : "Finaliza el 2 de febrero de 2025."
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Finaliza el 8 de enero de 2025."
+            "state" : "translated",
+            "value" : "Finaliza el 2 de febrero de 2025."
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Päättyy 8.1.2025."
+            "state" : "translated",
+            "value" : "Päättyy 2.2.2025."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Se termine le 8 janvier 2025."
+            "state" : "translated",
+            "value" : "Se termine le 2 février 2025."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Se termine le 8 janvier 2025."
+            "state" : "translated",
+            "value" : "Se termine le 2 février 2025."
           }
         },
         "he" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "מסתיים ב-8 בינואר 2025."
+            "state" : "translated",
+            "value" : "מסתיים ב-2 בפברואר 2025."
           }
         },
         "hi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "8 जनवरी, 2025 को समाप्त होगा।"
+            "state" : "translated",
+            "value" : "2 फरवरी, 2025 को समाप्त होगा।"
           }
         },
         "hr" : {
@@ -32714,44 +34658,44 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "2025. január 8-án ér véget."
+            "state" : "translated",
+            "value" : "2025. február 2-án ér véget."
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Berakhir 8 Januari 2025."
+            "state" : "translated",
+            "value" : "Berakhir 2 Februari 2025."
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Termina l'8 gennaio 2025."
+            "state" : "translated",
+            "value" : "Termina il 2 febbraio 2025."
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "2025 年 1 月 8 日に終了します。"
+            "state" : "translated",
+            "value" : "2025 年 2 月 2 日に終了します。"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "2025년 1월 8일에 종료됩니다."
+            "state" : "translated",
+            "value" : "2025년 2월 2일에 종료됩니다."
           }
         },
         "ms" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Berakhir pada 8 Januari 2025."
+            "state" : "translated",
+            "value" : "Berakhir pada 2 Februari 2025."
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Slutter 8. januar 2025."
+            "state" : "translated",
+            "value" : "Slutter 2. februar 2025."
           }
         },
         "nl" : {
@@ -32762,68 +34706,68 @@
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kończy się 8 stycznia 2025 r."
+            "state" : "translated",
+            "value" : "Kończy się 2 lutego 2025 r."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Termina a 8 de janeiro de 2025."
+            "state" : "translated",
+            "value" : "Termina a 2 de fevereiro de 2025."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Termina a 8 de janeiro de 2025."
+            "state" : "translated",
+            "value" : "Termina a 2 de fevereiro de 2025."
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Se încheie pe 8 ianuarie 2025."
+            "state" : "translated",
+            "value" : "Se încheie pe 2 februarie 2025."
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Завершится 8 января 2025 г."
+            "state" : "translated",
+            "value" : "Заканчивается 2 февраля 2025 г."
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Končí sa 8. januára 2025."
+            "state" : "translated",
+            "value" : "Končí 2. februára 2025."
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Slutar 8 januari 2025."
+            "state" : "translated",
+            "value" : "Slutar 2 februari 2025."
           }
         },
         "th" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "สิ้นสุดวันที่ 8 มกราคม 2025"
+            "state" : "translated",
+            "value" : "สิ้นสุดวันที่ 2 กุมภาพันธ์ 2025"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "8 Ocak 2025'te sona eriyor."
+            "state" : "translated",
+            "value" : "2 Şubat 2025'te sona eriyor."
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Закінчується 8 січня 2025 року."
+            "state" : "translated",
+            "value" : "Закінчується 2 лютого 2025 року."
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kết thúc vào ngày 8 tháng 1 năm 2025."
+            "state" : "translated",
+            "value" : "Kết thúc vào ngày 2 tháng 2 năm 2025."
           }
         },
         "zh-Hans" : {
@@ -33540,16 +35484,178 @@
             "value" : "Når den er aktiveret, vil animationen loopes."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn diese Option aktiviert ist, wird die Animation in einer Schleife ausgeführt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όταν είναι ενεργοποιημένη, η κινούμενη εικόνα θα κάνει βρόχο."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando esté habilitado, la animación se repetirá."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando esté habilitado, la animación se repetirá."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun se on käytössä, animaatio kiertää."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorsqu'elle est activée, l'animation sera en boucle."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorsqu'elle est activée, l'animation sera en boucle."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כאשר מופעל, האנימציה תעשה לולאה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सक्षम होने पर, एनीमेशन लूप हो जाएगा।"
+          }
+        },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kada je omogućeno, animacija će se ponavljati."
           }
         },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ha engedélyezve van, az animáció ismétlődik."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat diaktifkan, animasi akan berulang."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se abilitato, l'animazione verrà riprodotta in loop."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有効にすると、アニメーションがループします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "활성화되면 애니메이션이 반복됩니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apabila didayakan, animasi akan gelung."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når aktivert, vil animasjonen gå i loop."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indien ingeschakeld, wordt de animatie herhaald."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po włączeniu animacja będzie się powtarzać."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando ativado, a animação será repetida."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando ativado, a animação será repetida."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Când este activată, animația va fi în buclă."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если этот параметр включен, анимация будет зацикливаться."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keď je povolená, animácia sa bude opakovať."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "När den är aktiverad kommer animeringen att loopa."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเปิดใช้งาน ภาพเคลื่อนไหวจะวนซ้ำ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etkinleştirildiğinde animasyon döngüye girecektir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Якщо ввімкнено, анімація буде повторюватися."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi được bật, hoạt ảnh sẽ lặp lại."
           }
         },
         "zh-Hans" : {
