@@ -62,7 +62,8 @@ struct Thanks2View: View {
                             .multilineTextAlignment(.center)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
-                        Text("  ") + Text("Thanks to our users from Mainland China, Thailand, Angola, Finland, Argentina and Italy for their support.")
+                        // 1.0.5版本，2025年2月6日更新
+                        Text("  ") + Text("Thank you user")
                             .font(.footnote)
                         Text("UserSponsorshipDeadline")
                             .font(.footnote)

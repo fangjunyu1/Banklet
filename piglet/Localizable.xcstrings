@@ -2061,13 +2061,61 @@
       }
     },
     "App Icon" : {
-      "comment" : "应用图标",
+      "comment" : "1.0.5:应用图标",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "رمز التطبيق"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "icona de l'aplicació"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikona aplikace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "applikationsikon"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ikona aplikacije"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "applicatiepictogram"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "应用图标"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "應用程式圖示"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "應用程式圖示"
           }
         }
       }
@@ -4102,7 +4150,55 @@
       "comment" : "1.0.5完成日期",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاريخ الانتهاء"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "data de finalització"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "termín dokončení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "færdiggørelsesdato"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "datum završetka"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "datum van voltooiing"
+          }
+        },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "完成日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成日期"
+          }
+        },
+        "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成日期"
@@ -5890,10 +5986,58 @@
       "comment" : "1.0.5:删除",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "يمسح"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "esborrar"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "vymazat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "slette"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "izbrisati"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "verwijderen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "删除"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
           }
         }
       }
@@ -10796,10 +10940,58 @@
       "comment" : "1.0.5：为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "ولإظهار حمايتنا لخصوصية المستخدم بشكل أكبر، قررنا استضافة رمز التطبيق كمشروع مفتوح المصدر على GitHub."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per demostrar encara més la nostra protecció de la privadesa dels usuaris, vam decidir allotjar el codi de l'aplicació com a projecte de codi obert a GitHub."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abychom dále demonstrovali naši ochranu soukromí uživatelů, rozhodli jsme se hostovat kód aplikace jako open source projekt na GitHubu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For yderligere at demonstrere vores beskyttelse af brugernes privatliv besluttede vi at hoste applikationskoden som et open source-projekt på GitHub."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kako bismo dodatno pokazali našu zaštitu privatnosti korisnika, odlučili smo ugostiti kod aplikacije kao projekt otvorenog koda na GitHubu."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om onze bescherming van de privacy van gebruikers verder aan te tonen, hebben we besloten de applicatiecode als open source-project op GitHub te hosten."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為了進一步顯示我們對使用者隱私的保護，我們決定將應用程式碼作為開源專案託管在GitHub上。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為了進一步顯示我們對使用者隱私的保護，我們決定將應用程式碼作為開源專案託管在GitHub上。"
           }
         }
       }
@@ -11696,10 +11888,58 @@
       "comment" : "1.0.5：让代码展现在阳光下",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "دع الكود يظهر في الشمس"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deixa que el codi aparegui al sol"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nechte kód ukázat se na slunci"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lad koden dukke op i solen"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neka se šifra pojavi na suncu"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laat de code in de zon verschijnen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "让代码展现在阳光下"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讓程式碼展現在陽光下"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讓程式碼展現在陽光下"
           }
         }
       }
@@ -11943,25 +12183,121 @@
       }
     },
     "Loop animation" : {
-      "comment" : "循环动画",
+      "comment" : "1.0.5: 循环动画",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "حلقة الرسوم المتحركة"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "animació en bucle"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "smyčková animace"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "loop animation"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "petlja animacija"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "lusanimatie"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "循环动画"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "循環動畫"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "循環動畫"
           }
         }
       }
     },
     "Main interface animation" : {
-      "comment" : "主界面动画",
+      "comment" : "1.0.5:主界面动画",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "الرسوم المتحركة للواجهة الرئيسية"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animació de la interfície principal"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animace hlavního rozhraní"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main interface animation"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animacija glavnog sučelja"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Animatie van de hoofdinterface"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "主界面动画"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主介面動畫"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主介面動畫"
           }
         }
       }
@@ -12636,10 +12972,58 @@
       "comment" : "1.0.5修改首页左侧的详细信息样式。",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "قم بتعديل نمط التفاصيل على الجانب الأيسر من الصفحة الرئيسية."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifiqueu l'estil de detalls a la part esquerra de la pàgina d'inici."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravte styl podrobností na levé straně domovské stránky."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rediger detaljeringsstilen til venstre på startsiden."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izmijenite stil detalja na lijevoj strani početne stranice."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wijzig de detailstijl aan de linkerkant van de startpagina."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "修改首页左侧的详细信息样式。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修改首頁左側的詳細資訊樣式。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "修改首頁左側的詳細資訊樣式。"
           }
         }
       }
@@ -14199,13 +14583,61 @@
       }
     },
     "Open source" : {
-      "comment" : "1.0.5：开源",
+      "comment" : "1.0.5:开源",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "مفتوح المصدر"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "codi obert"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open source"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open source"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otvoreni kod"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open-source"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "开源"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開源"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開源"
           }
         }
       }
@@ -14658,10 +15090,58 @@
       "comment" : "1.0.5存钱罐已满",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "الحصالة ممتلئة"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La guardiola està plena"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prasátko je plné"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spargrisen er fuld"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kasica prasica je puna"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spaarvarken is vol"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "存钱罐已满"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存錢筒已滿"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存錢筒已滿"
           }
         }
       }
@@ -16446,10 +16926,58 @@
       "comment" : "1.0.5:项目地址",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "عنوان المشروع"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adreça del projecte"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa projektu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projektadresse"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adresa projekta"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Projectadres"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "项目地址"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "項目地址"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "項目地址"
           }
         }
       }
@@ -16495,6 +17023,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instead of regretting not saving, it is better to start now."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instead of regretting not saving, it is better to start now."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instead of regretting not saving, it is better to start now."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instead of regretting not saving, it is better to start now."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instead of regretting not saving, it is better to start now."
@@ -16728,6 +17280,30 @@
             "value" : "Without accumulating small steps, you can't reach a thousand miles; without saving change, you can't realize your big dream."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without accumulating small steps, you can't reach a thousand miles; without saving change, you can't realize your big dream."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without accumulating small steps, you can't reach a thousand miles; without saving change, you can't realize your big dream."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without accumulating small steps, you can't reach a thousand miles; without saving change, you can't realize your big dream."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Without accumulating small steps, you can't reach a thousand miles; without saving change, you can't realize your big dream."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16951,6 +17527,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put change in the jar, and save the future in life."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put change in the jar, and save the future in life."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put change in the jar, and save the future in life."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put change in the jar, and save the future in life."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Put change in the jar, and save the future in life."
@@ -17184,6 +17784,30 @@
             "value" : "Not every sum of money needs to be spent, the sum saved is a gift."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not every sum of money needs to be spent, the sum saved is a gift."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not every sum of money needs to be spent, the sum saved is a gift."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not every sum of money needs to be spent, the sum saved is a gift."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not every sum of money needs to be spent, the sum saved is a gift."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17407,6 +18031,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a gentle promise to the future."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a gentle promise to the future."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a gentle promise to the future."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a gentle promise to the future."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saving money is a gentle promise to the future."
@@ -17640,6 +18288,30 @@
             "value" : "Saving money is a surprise for yourself."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a surprise for yourself."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a surprise for yourself."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a surprise for yourself."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a surprise for yourself."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17863,6 +18535,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a poem written for the future, and every sentence is full of hope."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a poem written for the future, and every sentence is full of hope."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a poem written for the future, and every sentence is full of hope."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is a poem written for the future, and every sentence is full of hope."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saving money is a poem written for the future, and every sentence is full of hope."
@@ -18096,6 +18792,30 @@
             "value" : "Saving money is like planting a tree, which will provide shade after years of accumulation."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is like planting a tree, which will provide shade after years of accumulation."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is like planting a tree, which will provide shade after years of accumulation."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is like planting a tree, which will provide shade after years of accumulation."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving money is like planting a tree, which will provide shade after years of accumulation."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18319,6 +19039,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also a sense of security."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also a sense of security."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also a sense of security."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also a sense of security."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "What you save is not only money, but also a sense of security."
@@ -18552,6 +19296,30 @@
             "value" : "What you save is not only money, but also the expectation of a better life."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also the expectation of a better life."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also the expectation of a better life."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also the expectation of a better life."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you save is not only money, but also the expectation of a better life."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18775,6 +19543,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every cent in the jar is a reward for yourself."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every cent in the jar is a reward for yourself."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every cent in the jar is a reward for yourself."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every cent in the jar is a reward for yourself."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Every cent in the jar is a reward for yourself."
@@ -19008,6 +19800,30 @@
             "value" : "Although the jar is small, it can hold a lot of wishes."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Although the jar is small, it can hold a lot of wishes."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Although the jar is small, it can hold a lot of wishes."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jar has a bottom, but the dream is boundless."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Although the jar is small, it can hold a lot of wishes."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19231,6 +20047,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jar has a bottom, but the dream is boundless."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jar has a bottom, but the dream is boundless."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jar has a bottom, but the dream is boundless."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jar has a bottom, but the dream is boundless."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The jar has a bottom, but the dream is boundless."
@@ -19464,6 +20304,30 @@
             "value" : "Spending money is a choice, saving money is wisdom."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spending money is a choice, saving money is wisdom."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spending money is a choice, saving money is wisdom."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spending money is a choice, saving money is wisdom."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spending money is a choice, saving money is wisdom."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19687,6 +20551,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving today for tomorrow's freedom."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving today for tomorrow's freedom."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving today for tomorrow's freedom."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving today for tomorrow's freedom."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saving today for tomorrow's freedom."
@@ -19920,6 +20808,30 @@
             "value" : "Every jar of money is a possibility for the future."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every jar of money is a possibility for the future."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every jar of money is a possibility for the future."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every jar of money is a possibility for the future."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every jar of money is a possibility for the future."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20143,6 +21055,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every coin is the seed of a dream."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every coin is the seed of a dream."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every coin is the seed of a dream."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every coin is the seed of a dream."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Every coin is the seed of a dream."
@@ -20376,6 +21312,30 @@
             "value" : "The jingle in the money jar is the sound of the approaching dream."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jingle in the money jar is the sound of the approaching dream."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jingle in the money jar is the sound of the approaching dream."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jingle in the money jar is the sound of the approaching dream."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The jingle in the money jar is the sound of the approaching dream."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20599,6 +21559,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let every deposit become a signpost to your dream."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let every deposit become a signpost to your dream."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let every deposit become a signpost to your dream."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let every deposit become a signpost to your dream."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Let every deposit become a signpost to your dream."
@@ -20832,6 +21816,30 @@
             "value" : "Spend one cent less, one step closer to the goal."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spend one cent less, one step closer to the goal."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spend one cent less, one step closer to the goal."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spend one cent less, one step closer to the goal."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spend one cent less, one step closer to the goal."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21060,6 +22068,30 @@
             "value" : "A small jar contains a big dream, and every coin has a future direction."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A small jar contains a big dream, and every coin has a future direction."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A small jar contains a big dream, and every coin has a future direction."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A small jar contains a big dream, and every coin has a future direction."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A small jar contains a big dream, and every coin has a future direction."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21283,6 +22315,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accumulation bit by bit will eventually become a surprise in life."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accumulation bit by bit will eventually become a surprise in life."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accumulation bit by bit will eventually become a surprise in life."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accumulation bit by bit will eventually become a surprise in life."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Accumulation bit by bit will eventually become a surprise in life."
@@ -25910,23 +26966,6 @@
         }
       }
     },
-    "Some" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "yixie"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "一些"
-          }
-        }
-      }
-    },
     "Some accumulation" : {
       "comment" : "小有积累",
       "extractionState" : "manual",
@@ -27704,13 +28743,61 @@
       }
     },
     "Test function" : {
-      "comment" : "1.0.5测试功能",
+      "comment" : "1.0.5:测试功能",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "وظيفة الاختبار"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "funció de prova"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testovací funkce"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "test funktion"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testna funkcija"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "testfunctie"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "测试功能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "測試功能"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "測試功能"
           }
         }
       }
@@ -27933,6 +29020,258 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "感謝您對我們應用的支持。"
+          }
+        }
+      }
+    },
+    "Thank you user" : {
+      "comment" : "1.0.5感谢来自中国大陆、泰国、阿根廷、安哥拉、芬兰和意大利的用户支持。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكرًا للمستخدمين من الصين القارية وتايلاند والأرجنتين وأنغولا وفنلندا وإيطاليا على دعمهم."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gràcies als usuaris de la Xina continental, Tailàndia, Argentina, Angola, Finlàndia i Itàlia pel seu suport."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Děkujeme uživatelům z pevninské Číny, Thajska, Argentiny, Angoly, Finska a Itálie za podporu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak til brugere fra det kinesiske fastland, Thailand, Argentina, Angola, Finland og Italien for deres støtte."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Angola, Finnland und Italien für ihre Unterstützung."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025.\nThanks to users from mainland China, Thailand, Argentina, Angola, Finland, and Italy for their support."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025.\nThanks to users from mainland China, Thailand, Argentina, Angola, Finland, and Italy for their support."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025.\nThanks to users from mainland China, Thailand, Argentina, Angola, Finland, and Italy for their support."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025.\nThanks to users from mainland China, Thailand, Argentina, Angola, Finland, and Italy for their support."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025.\nThanks to users from mainland China, Thailand, Argentina, Angola, Finland, and Italy for their support."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Angolasta, Suomesta ja Italiasta tuesta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "תודה למשתמשים מסין, תאילנד, אנגולה, פינלנד ואיטליה על תמיכתם."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "मुख्य भूमि चीन, थाईलैंड, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvala korisnicima iz kontinentalne Kine, Tajlanda, Argentine, Angole, Finske i Italije na podršci."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Köszönet a szárazföldi kínai, thaiföldi, angolai, finn és olasz felhasználóknak a támogatásukért."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Angola, Finlandia, dan Italia atas dukungan mereka."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Angola, Finlandia e Italia per il loro supporto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "中国本土、タイ、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "중국 본토, 태국, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Angola, Finland dan Itali atas sokongan mereka."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Angola, Finland og Italia for deres støtte."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dank aan gebruikers van het vasteland van China, Thailand, Argentinië, Angola, Finland en Italië voor hun steun."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Angoli, Finlandii i Włoch za wsparcie."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Angola, Finlanda și Italia pentru sprijinul acordat."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Анголы, Финляндии и Италии за поддержку."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Angoly, Fínska a Talianska za podporu."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tack till användare från Kina, Thailand, Angola, Finland och Italien för deras stöd."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Destekleri için Çin anakarası, Tayland, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Дякуємо користувачам із материкового Китаю, Таїланду, Анголи, Фінляндії та Італії за підтримку."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Angola, Phần Lan và Ý đã hỗ trợ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感谢来自中国大陆、泰国、阿根廷、安哥拉、芬兰和意大利的用户支持。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感謝來自中國大陸、泰國、阿根廷、安哥拉、芬蘭和義大利的使用者支援。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感謝來自中國大陸、泰國、阿根廷、安哥拉、芬蘭和義大利的使用者支援。"
           }
         }
       }
@@ -28603,228 +29942,6 @@
         }
       }
     },
-    "Thanks to our users from Mainland China, Thailand, Angola, Finland, Argentina and Italy for their support." : {
-      "comment" : "1.0.5感谢来自中国大陆、泰国、安哥拉、芬兰、阿根廷和意大利的用户支持。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرًا للمستخدمين من الصين القارية وتايلاند وأنغولا وفنلندا وإيطاليا على دعمهم."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies als usuaris de la Xina continental, Tailàndia, Angola, Finlàndia i Itàlia pel seu suport."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Děkujeme uživatelům z pevninské Číny, Thajska, Angoly, Finska a Itálie za podporu."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak til brugere fra det kinesiske fastland, Thailand, Angola, Finland og Italien for deres støtte."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Angola, Finnland und Italien für ihre Unterstützung."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Angolasta, Suomesta ja Italiasta tuesta."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה למשתמשים מסין, תאילנד, אנגולה, פינלנד ואיטליה על תמיכתם."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य भूमि चीन, थाईलैंड, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvala korisnicima iz kontinentalne Kine, Tajlanda, Angole, Finske i Italije na podršci."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönet a szárazföldi kínai, thaiföldi, angolai, finn és olasz felhasználóknak a támogatásukért."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Angola, Finlandia, dan Italia atas dukungan mereka."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Angola, Finlandia e Italia per il loro supporto."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "中国本土、タイ、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "중국 본토, 태국, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Angola, Finland dan Itali atas sokongan mereka."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Angola, Finland og Italia for deres støtte."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dank aan gebruikers van het vasteland van China, Thailand, Angola, Finland en Italië voor hun steun."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Angoli, Finlandii i Włoch za wsparcie."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Angola, Finlanda și Italia pentru sprijinul acordat."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Анголы, Финляндии и Италии за поддержку."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Angoly, Fínska a Talianska za podporu."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack till användare från Kina, Thailand, Angola, Finland och Italien för deras stöd."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Destekleri için Çin anakarası, Tayland, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо користувачам із материкового Китаю, Таїланду, Анголи, Фінляндії та Італії за підтримку."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Angola, Phần Lan và Ý đã hỗ trợ."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感谢来自中国大陆、泰国、安哥拉、芬兰、阿根廷和意大利的用户支持。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝來自中國大陸、泰國、安哥拉、芬蘭和義大利的使用者支援。"
-          }
-        }
-      }
-    },
     "Thanks to the following users for their support" : {
       "comment" : "感谢以下用户的赞助",
       "extractionState" : "manual",
@@ -29093,6 +30210,30 @@
             "value" : "Hello everyone, I am Fang Junyu, from Rizhao City, Shandong Province, China. By chance, after leaving my job in May 24, I started to learn SwiftUI and get involved in independent application development."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello everyone, I am Fang Junyu, from Rizhao City, Shandong Province, China. By chance, after leaving my job in May 24, I started to learn SwiftUI and get involved in independent application development."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello everyone, I am Fang Junyu, from Rizhao City, Shandong Province, China. By chance, after leaving my job in May 24, I started to learn SwiftUI and get involved in independent application development."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello everyone, I am Fang Junyu, from Rizhao City, Shandong Province, China. By chance, after leaving my job in May 24, I started to learn SwiftUI and get involved in independent application development."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hello everyone, I am Fang Junyu, from Rizhao City, Shandong Province, China. By chance, after leaving my job in May 24, I started to learn SwiftUI and get involved in independent application development."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29316,6 +30457,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This piggy bank app is the first app I developed independently. The first version was released at the end of May 24. It was still a relatively simple app at the time, but it still received a lot of sponsorship."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This piggy bank app is the first app I developed independently. The first version was released at the end of May 24. It was still a relatively simple app at the time, but it still received a lot of sponsorship."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This piggy bank app is the first app I developed independently. The first version was released at the end of May 24. It was still a relatively simple app at the time, but it still received a lot of sponsorship."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This piggy bank app is the first app I developed independently. The first version was released at the end of May 24. It was still a relatively simple app at the time, but it still received a lot of sponsorship."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This piggy bank app is the first app I developed independently. The first version was released at the end of May 24. It was still a relatively simple app at the time, but it still received a lot of sponsorship."
@@ -29549,6 +30714,30 @@
             "value" : "In the following six months, I worked as a food delivery person in a scenic spot while learning SwiftUI. On the last day of 2024, I completed the \"100 Days of SwiftUI\" tutorial by Paul Hudson."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the following six months, I worked as a food delivery person in a scenic spot while learning SwiftUI. On the last day of 2024, I completed the \"100 Days of SwiftUI\" tutorial by Paul Hudson."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the following six months, I worked as a food delivery person in a scenic spot while learning SwiftUI. On the last day of 2024, I completed the \"100 Days of SwiftUI\" tutorial by Paul Hudson."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the following six months, I worked as a food delivery person in a scenic spot while learning SwiftUI. On the last day of 2024, I completed the \"100 Days of SwiftUI\" tutorial by Paul Hudson."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the following six months, I worked as a food delivery person in a scenic spot while learning SwiftUI. On the last day of 2024, I completed the \"100 Days of SwiftUI\" tutorial by Paul Hudson."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29772,6 +30961,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now it is an updated version."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now it is an updated version."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now it is an updated version."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now it is an updated version."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Now it is an updated version."
@@ -30005,6 +31218,30 @@
             "value" : "I like clean and tidy applications, so when developing this application, I always kept the interface and functions relatively neat. I also considered further developing applications such as countdown, hoping to bring some interesting experiences to everyone's life."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like clean and tidy applications, so when developing this application, I always kept the interface and functions relatively neat. I also considered further developing applications such as countdown, hoping to bring some interesting experiences to everyone's life."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like clean and tidy applications, so when developing this application, I always kept the interface and functions relatively neat. I also considered further developing applications such as countdown, hoping to bring some interesting experiences to everyone's life."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like clean and tidy applications, so when developing this application, I always kept the interface and functions relatively neat. I also considered further developing applications such as countdown, hoping to bring some interesting experiences to everyone's life."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I like clean and tidy applications, so when developing this application, I always kept the interface and functions relatively neat. I also considered further developing applications such as countdown, hoping to bring some interesting experiences to everyone's life."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30233,6 +31470,30 @@
             "value" : "If you have any feature requirements or other ideas, please feel free to give me feedback through \"Settings\" - \"Problem Feedback\"."
           }
         },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any feature requirements or other ideas, please feel free to give me feedback through \"Settings\" - \"Problem Feedback\"."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any feature requirements or other ideas, please feel free to give me feedback through \"Settings\" - \"Problem Feedback\"."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any feature requirements or other ideas, please feel free to give me feedback through \"Settings\" - \"Problem Feedback\"."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any feature requirements or other ideas, please feel free to give me feedback through \"Settings\" - \"Problem Feedback\"."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30456,6 +31717,30 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finally, thank you for your patience in reading and using this article."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finally, thank you for your patience in reading and using this article."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finally, thank you for your patience in reading and using this article."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finally, thank you for your patience in reading and using this article."
+          }
+        },
+        "en-IN" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finally, thank you for your patience in reading and using this article."
@@ -31310,229 +32595,253 @@
       }
     },
     "UserSponsorshipDeadline" : {
-      "comment" : "1.0.5 截止到2025年2月3日。",
+      "comment" : "1.0.5 截止到2025年2月2日。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ينتهي في 8 يناير 2025."
+            "value" : "ينتهي في 2 فبراير 2025."
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Finalitza el 8 de gener de 2025."
+            "value" : "Finalitza el 2 de febrer de 2025."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Končí 8. ledna 2025."
+            "value" : "Končí 2. února 2025."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slutter den 8. januar 2025."
+            "value" : "Slutter den 2. februar 2025."
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Endet am 8. Januar 2025."
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Λήγει στις 8 Ιανουαρίου 2025."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Until January 8, 2025."
+            "value" : "Until February 2, 2025."
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025."
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025."
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until February 2, 2025."
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finaliza el 8 de enero de 2025."
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Finaliza el 8 de enero de 2025."
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Päättyy 8.1.2025."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Se termine le 8 janvier 2025."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Se termine le 8 janvier 2025."
           }
         },
         "he" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "מסתיים ב-8 בינואר 2025."
           }
         },
         "hi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "8 जनवरी, 2025 को समाप्त होगा।"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Završava 8. siječnja 2025."
+            "value" : "Završava 2. veljače 2025."
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "2025. január 8-án ér véget."
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Berakhir 8 Januari 2025."
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Termina l'8 gennaio 2025."
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "2025 年 1 月 8 日に終了します。"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "2025년 1월 8일에 종료됩니다."
           }
         },
         "ms" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Berakhir pada 8 Januari 2025."
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slutter 8. januar 2025."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eindigt op 8 januari 2025."
+            "value" : "Eindigt op 2 februari 2025."
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kończy się 8 stycznia 2025 r."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Termina a 8 de janeiro de 2025."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Termina a 8 de janeiro de 2025."
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Se încheie pe 8 ianuarie 2025."
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Завершится 8 января 2025 г."
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Končí sa 8. januára 2025."
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Slutar 8 januari 2025."
           }
         },
         "th" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "สิ้นสุดวันที่ 8 มกราคม 2025"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "8 Ocak 2025'te sona eriyor."
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Закінчується 8 січня 2025 року."
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kết thúc vào ngày 8 tháng 1 năm 2025."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "截止到2025年2月3日。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "截止到2025年1月8日。"
+            "value" : "截止到2025年2月2日。"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "截止到2025年1月8日。"
+            "value" : "截止到2025年2月2日。"
           }
         }
       }
@@ -32204,13 +33513,61 @@
       }
     },
     "When enabled, the animation will play in a loop." : {
-      "comment" : "启用后，动画将循环播放",
+      "comment" : "1.0.5启用后，动画将循环播放",
       "extractionState" : "manual",
       "localizations" : {
-        "zh-Hans" : {
+        "ar" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "عند التمكين، سيتم تكرار الرسوم المتحركة."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quan està activat, l'animació es farà en bucle."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když je povoleno, animace se bude opakovat."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når den er aktiveret, vil animationen loopes."
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kada je omogućeno, animacija će se ponavljati."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indien ingeschakeld, wordt de animatie herhaald."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "启用后，动画将循环播放。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用後，動畫將循環播放。"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用後，動畫將循環播放。"
           }
         }
       }
