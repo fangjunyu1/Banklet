@@ -22,9 +22,6 @@
     " %lld " : {
 
     },
-    ":" : {
-
-    },
     "%" : {
 
     },
@@ -10081,7 +10078,7 @@
       }
     },
     "Get more pictures and experience new features." : {
-      "comment" : "获得更多图片、体验新功能。",
+      "comment" : "1.0.6:获得更多图片和动画效果",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {

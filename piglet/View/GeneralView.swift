@@ -99,33 +99,33 @@ struct GeneralView: View {
                             .padding(10)
                             // 测试功能
                             // 内购情况下，显示测试功能
-                            if isInAppPurchase {
-                                VStack {
-                                    HStack {
-                                        Text("Test function")
-                                            .font(.footnote)
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                    }
-                                    SettingView(content: {
-                                        Image(systemName: "doc.plaintext")
-                                            .padding(.horizontal,5)
-                                        Text("Details")
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.8)
-                                        Spacer()
-                                        Toggle("",isOn: $isTestDetails)  // 测试功能，详细信息
-                                            .frame(height:0)
-                                    })
-                                    HStack {
-                                        Text("Modify the detailed information style on the left side of the home page.")
-                                            .font(.footnote)
-                                            .foregroundColor(.gray)
-                                        Spacer()
-                                    }
-                                }
-                                .padding(10)
-                            }
+//                            if isInAppPurchase {
+//                                VStack {
+//                                    HStack {
+//                                        Text("Test function")
+//                                            .font(.footnote)
+//                                            .foregroundColor(.gray)
+//                                        Spacer()
+//                                    }
+//                                    SettingView(content: {
+//                                        Image(systemName: "doc.plaintext")
+//                                            .padding(.horizontal,5)
+//                                        Text("Details")
+//                                            .lineLimit(1)
+//                                            .minimumScaleFactor(0.8)
+//                                        Spacer()
+//                                        Toggle("",isOn: $isTestDetails)  // 测试功能，详细信息
+//                                            .frame(height:0)
+//                                    })
+//                                    HStack {
+//                                        Text("Modify the detailed information style on the left side of the home page.")
+//                                            .font(.footnote)
+//                                            .foregroundColor(.gray)
+//                                        Spacer()
+//                                    }
+//                                }
+//                                .padding(10)
+//                            }
                             
                         }
                         

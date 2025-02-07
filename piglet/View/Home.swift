@@ -21,7 +21,7 @@ struct Home: View {
     @State private var isReversed = false   // 取出操作时，为false
     @State private var isProverb = true    // true,可以点击动画输出谚语
     @State private var isDisplayedProverb = false // true，显示谚语
-    @State private var isInfo = false   // true，显示详细信息
+//    @State private var isInfo = false   // true，显示详细信息
     @State private var currentProverb: String = ""
     @State private var lastRandomIndexes: [Int] = [] // 保存最近的随机数
     @State private var isDisplaySettings = false    // 显示设置页
@@ -36,6 +36,7 @@ struct Home: View {
     @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
     @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
     @AppStorage("isTestDetails") var isTestDetails = false
+    
     
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
@@ -171,11 +172,13 @@ struct Home: View {
                                             // 显示详细信息的按钮
                                             Button(action: {
                                                 withAnimation(.easeInOut(duration:0.5)) {
-                                                    isTestDetails ? showDetailView.toggle() : isInfo.toggle()
+                                                    showDetailView.toggle()
+//                                                    isTestDetails ? showDetailView.toggle() : isInfo.toggle()
                                                 }
                                             }, label: {
                                                 VStack {
-                                                    Image(systemName: piggyBank[0].icon)
+                                                    // 图标修改为统计图标
+                                                    Image(systemName: isTestDetails ? "chart.pie" : piggyBank[0].icon)
                                                         .resizable()
                                                         .scaledToFit()
                                                         .frame(width:20, height: 20)
@@ -205,48 +208,49 @@ struct Home: View {
                                     .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                                     .cornerRadius(10)
                                     
+                                    // 隐藏1.0.5版本以前的左侧详细信息内容
                                     // 对话内容
-                                    HStack(spacing: 0) {
-                                        // 左边的三角
-                                        LeftTriangle()
-                                            .frame(width: 10,height:10)
-                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                        // 三角旁边的详细信息框
-                                        VStack(alignment:.leading){
-                                            Group {
-                                                HStack(spacing:3) {
-                                                    Text("Target amount")
-                                                    Text(":")
-                                                    Text("$ \(piggyBank[0].targetAmount.formattedWithTwoDecimalPlaces())")
-                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].targetAmount)
-                                                }
-                                                HStack(spacing:3) {
-                                                    Text("Current amount")
-                                                    Text(":")
-                                                    Text("$ \(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
-                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].amount)
-                                                }
-                                                HStack(spacing:3) {
-                                                    Text("Saving progress")
-                                                    Text(":")
-                                                    Text(LocalizedStringKey(savingsProgress))
-                                                        .animation(.easeInOut(duration: 0.5), value: savingsProgress)
-                                                }
-                                            }
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.3)
-                                            .font(isCompactScreen ? .footnote : .body)
-                                            .fontWeight(.bold)
-                                            .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
-                                        }
-                                        .padding(.vertical,10)
-                                        .padding(.horizontal,20)
-                                        .foregroundColor(.white)
-                                        .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                        .cornerRadius(10)
-                                    }
-                                    .offset(y: -30)
-                                    .opacity(isInfo == true ? 1 : 0)
+//                                    HStack(spacing: 0) {
+//                                        // 左边的三角
+//                                        LeftTriangle()
+//                                            .frame(width: 10,height:10)
+//                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+//                                        // 三角旁边的详细信息框
+//                                        VStack(alignment:.leading){
+//                                            Group {
+//                                                HStack(spacing:3) {
+//                                                    Text("Target amount")
+//                                                    Text(":")
+//                                                    Text("$ \(piggyBank[0].targetAmount.formattedWithTwoDecimalPlaces())")
+//                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].targetAmount)
+//                                                }
+//                                                HStack(spacing:3) {
+//                                                    Text("Current amount")
+//                                                    Text(":")
+//                                                    Text("$ \(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+//                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].amount)
+//                                                }
+//                                                HStack(spacing:3) {
+//                                                    Text("Saving progress")
+//                                                    Text(":")
+//                                                    Text(LocalizedStringKey(savingsProgress))
+//                                                        .animation(.easeInOut(duration: 0.5), value: savingsProgress)
+//                                                }
+//                                            }
+//                                            .lineLimit(1)
+//                                            .minimumScaleFactor(0.3)
+//                                            .font(isCompactScreen ? .footnote : .body)
+//                                            .fontWeight(.bold)
+//                                            .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
+//                                        }
+//                                        .padding(.vertical,10)
+//                                        .padding(.horizontal,20)
+//                                        .foregroundColor(.white)
+//                                        .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+//                                        .cornerRadius(10)
+//                                    }
+//                                    .offset(y: -30)
+//                                    .opacity(isInfo == true ? 1 : 0)
                                     Spacer()
                                 }
                                 Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
@@ -408,11 +412,11 @@ struct Home: View {
                             }
                         }
                     })
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration:0.5)) {
-                            isInfo = false
-                        }
-                    }
+//                    .onTapGesture {
+//                        withAnimation(.easeInOut(duration:0.5)) {
+//                            isInfo = false
+//                        }
+//                    }
                     .navigationTitle("Banklet")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
