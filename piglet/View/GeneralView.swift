@@ -19,8 +19,8 @@ struct GeneralView: View {
     @AppStorage("isSilentMode") var isSilentMode = false
     // 提醒时间，设置提醒时间为true，否则为false
     @AppStorage("isReminderTime") var isReminderTime = false
-    
-    @State private var reminderTime: Date = Date()
+    // 存储用户设定的提醒时间
+    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
     // 授权通知
     func requestNotificationPermission() {
         let center = UNUserNotificationCenter.current()
@@ -33,6 +33,10 @@ struct GeneralView: View {
                 print("授权结果：\(granted ? "允许" : "拒绝")")
                 isReminderTime = granted
                 if granted {
+                    // 清除所有通知
+                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                    print("所有未触发的通知已清除")
+                    
                     // 如果授权成功，执行调度本地通知的命令
                     scheduleLocalNotification()
                 }
@@ -47,8 +51,12 @@ struct GeneralView: View {
         content.body = NSLocalizedString("Accumulate today and reap tomorrow.", comment: "Body text of the savings reminder notification")
         content.sound = .default
         
-        // 创建触发条件，例如 5 秒后触发
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // 创建日期和时间组件
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: Date(timeIntervalSince1970: reminderTime))
+
+        // 创建日期触发器
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         // 创建通知请求
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -168,13 +176,19 @@ struct GeneralView: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     if isReminderTime {
+                                        // 日期选择器
                                         DatePicker("",
-                                                   selection: $reminderTime,
+                                                   selection: Binding(get: {
+                                            Date(timeIntervalSince1970: reminderTime)
+                                        }, set: {
+                                            reminderTime = $0.timeIntervalSince1970
+                                            // 选择日期后，更新调度通知
+                                            scheduleLocalNotification()
+                                        }),
                                                    displayedComponents: .hourAndMinute
                                         )
                                         .datePickerStyle(DefaultDatePickerStyle()) // 日期选择器样式
                                         .frame(width: 60,height: 0)
-                                        .multilineTextAlignment(.trailing)
                                     }
                                     // 提示时间
                                     Toggle("",isOn: Binding (
