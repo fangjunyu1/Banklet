@@ -17,7 +17,7 @@
 			<string>com.fangjunyu.piglet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>Banklet://</string>
+				<string>Banklet</string>
 			</array>
 		</dict>
 	</array>

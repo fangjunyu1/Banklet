@@ -14,6 +14,8 @@ struct GeneralView: View {
     // 测试详细信息
     @AppStorage("isTestDetails") var isTestDetails = false
     @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+    
+    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in

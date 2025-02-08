@@ -29,6 +29,7 @@ struct Settings: View {
     // 控制鸣谢页面，false表示隐藏
     
     
+    
     func sendEmail() {
         let email = "fangjunyu.com@gmail.com"
         let subject = "Banklet Feedback"

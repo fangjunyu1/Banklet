@@ -11,6 +11,7 @@ import SwiftData
 struct pigletApp: App {
     @StateObject var iapManager = IAPManager.shared
     @State private var modelConfigManager = ModelConfigManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
