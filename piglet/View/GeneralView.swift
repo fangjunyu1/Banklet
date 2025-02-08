@@ -12,9 +12,10 @@ struct GeneralView: View {
     @Environment(\.colorScheme) var colorScheme
     @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
     // 测试详细信息
-    @AppStorage("isTestDetails") var isTestDetails = false
+    //    @AppStorage("isTestDetails") var isTestDetails = false
     @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    
+    // 静默模式
+    @AppStorage("isSilentMode") var isSilentMode = false
     
     var body: some View {
         NavigationStack {
@@ -36,7 +37,7 @@ struct GeneralView: View {
                                         SettingView(content: {
                                             Image(systemName: "photo.artframe")
                                                 .padding(.horizontal,5)
-                                            Text("Main interface background")
+                                            Text("Background")
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
@@ -56,7 +57,7 @@ struct GeneralView: View {
                                         SettingView(content: {
                                             Image(systemName: "film.stack")
                                                 .padding(.horizontal,5)
-                                            Text("Main interface animation")
+                                            Text("Animation")
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
@@ -74,7 +75,7 @@ struct GeneralView: View {
                                         SettingView(content: {
                                             Image(systemName: "photo.fill")
                                                 .padding(.horizontal,5)
-                                            Text("App Icon")
+                                            Text("icon")
                                                 .lineLimit(1)
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
@@ -87,6 +88,29 @@ struct GeneralView: View {
                                 .cornerRadius(10)
                                 .padding(10)
                             }
+                            
+                            // 测试功能
+                            // 内购情况下，显示测试功能
+                            VStack {
+                                HStack {
+                                    Text("After waiting for 10 seconds, hide the main view buttons and only show the animation.")
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                    Spacer()
+                                }
+                                SettingView(content: {
+                                    Image(systemName: "leaf")
+                                        .padding(.horizontal,5)
+                                    Text("Silent Mode")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: $isSilentMode)  // 测试功能，详细信息
+                                        .frame(height:0)
+                                })
+                            }
+                            .padding(10)
+                            
                             // 人脸识别
                             SettingView(content: {
                                 Image(systemName: "faceid")
@@ -99,51 +123,21 @@ struct GeneralView: View {
                                     .frame(height:0)
                             })
                             .padding(10)
-                            // 测试功能
-                            // 内购情况下，显示测试功能
-//                            if isInAppPurchase {
-//                                VStack {
-//                                    HStack {
-//                                        Text("Test function")
-//                                            .font(.footnote)
-//                                            .foregroundColor(.gray)
-//                                        Spacer()
-//                                    }
-//                                    SettingView(content: {
-//                                        Image(systemName: "doc.plaintext")
-//                                            .padding(.horizontal,5)
-//                                        Text("Details")
-//                                            .lineLimit(1)
-//                                            .minimumScaleFactor(0.8)
-//                                        Spacer()
-//                                        Toggle("",isOn: $isTestDetails)  // 测试功能，详细信息
-//                                            .frame(height:0)
-//                                    })
-//                                    HStack {
-//                                        Text("Modify the detailed information style on the left side of the home page.")
-//                                            .font(.footnote)
-//                                            .foregroundColor(.gray)
-//                                        Spacer()
-//                                    }
-//                                }
-//                                .padding(10)
-//                            }
-                            
                         }
                         
-                        Spacer()
                     }
-                    .frame(width: width)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity)
-                    .navigationTitle("General")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
+                .frame(width: width)
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                .navigationTitle("General")
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
 }
 
+
 #Preview {
     GeneralView()
-            .environment(\.locale, .init(identifier: "de"))
+//        .environment(\.locale, .init(identifier: "de"))
 }

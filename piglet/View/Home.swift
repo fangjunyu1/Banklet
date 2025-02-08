@@ -30,13 +30,18 @@ struct Home: View {
     @State private var showMoreInformationView = false  // 显示详细信息视图
     @State private var showManagingView = false // 显示通用视图
     @State private var showDetailView = false
+    // 静默模式
+    @State private var isSilentModeActive = false
+    // 上次交互时间，超过设定的时间显示静默模式
+    @State private var lastInteractionTime = Date()
     
     @AppStorage("pageSteps") var pageSteps: Int = 1
     @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
     @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
     @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
-    @AppStorage("isTestDetails") var isTestDetails = false
-    
+    //    @AppStorage("isTestDetails") var isTestDetails = false
+    // 静默模式
+    @AppStorage("isSilentMode") var isSilentMode = false
     
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
@@ -80,6 +85,35 @@ struct Home: View {
         return "proverb" + "\(newIndex)"
     }
     
+    // 监测静默状态
+    private func startSilentModeTimer() {
+        Task {
+            while true {
+                try await Task.sleep(nanoseconds: 1_000_000_000) // 1秒
+                let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
+                if elapsedTime > 10 {
+                    print("elapsedTime:\(elapsedTime)")
+                    DispatchQueue.main.async {
+                        print("进入静默模式")
+                        withAnimation(.easeInOut(duration: 1)) {
+                            isSilentModeActive = true
+                        }
+                    }
+                } else {
+                    print("elapsedTime:\(elapsedTime)")
+                }
+            }
+        }
+    }
+    
+    // 用户交互时重置静默模式
+    private func resetSilentMode() {
+        print("退出静默模式")
+        lastInteractionTime = Date()
+        withAnimation(.easeInOut(duration: 1)) {
+            isSilentModeActive = false
+        }
+    }
     
     @ViewBuilder
     private func backgroundImageView() -> some View {
@@ -94,6 +128,8 @@ struct Home: View {
         }
     }
     
+    
+    
     var body: some View {
         
         NavigationStack {
@@ -106,8 +142,8 @@ struct Home: View {
                     VStack {
                         //  存钱罐显示内容
                         if piggyBank.count != 0 {
-                            // 显示存钱罐的储蓄信息
                             Spacer().frame(height: height * 0.05)
+                            // 顶部存钱罐左侧的图标
                             HStack(spacing: 0) {
                                 Circle().fill(.white)
                                     .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
@@ -128,7 +164,7 @@ struct Home: View {
                                             Label("Details",systemImage:"list.clipboard")
                                         })
                                     }
-                                // 存钱罐顶部储蓄信息
+                                // 顶部存钱罐右侧储蓄信息
                                 VStack(alignment: .leading) {
                                     Group {
                                         if piggyBank[0].amount == piggyBank[0].targetAmount {
@@ -162,6 +198,7 @@ struct Home: View {
                             .frame(width: width, height: isLandscape ? isPadScreen ? height * 0.14 : height * 0.2 : isPadScreen ? height * 0.08: isCompactScreen ? height * 0.15 : height * 0.12)
                             .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                             .cornerRadius(10)
+                            .opacity(isSilentModeActive ? 0 : 1)
                             
                             Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
                             SpacedContainer(isCompactScreen: isCompactScreen) {
@@ -254,6 +291,7 @@ struct Home: View {
                                     //                                    .opacity(isInfo == true ? 1 : 0)
                                     Spacer()
                                 }
+                                .opacity(isSilentModeActive ? 0 : 1)
                                 Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
                                 // 存取猪猪动画
                                 HStack {
@@ -318,6 +356,7 @@ struct Home: View {
                                                 .font(.footnote)
                                                 .foregroundColor(.gray)
                                             }
+                                            .opacity(isSilentModeActive ? 0 : 1)
                                         }
                                     }
                                 }
@@ -336,6 +375,7 @@ struct Home: View {
                                     .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                                     .cornerRadius(10)
                             })
+                            .opacity(isSilentModeActive ? 0 : 1)
                             // 底部留白为50高度
                             Spacer().frame(height: height * 0.05)
                         }  else {
@@ -472,6 +512,16 @@ struct Home: View {
                 .background(
                     backgroundImageView()
                 )
+            }
+        }
+        .onAppear {
+            if isSilentMode {
+                startSilentModeTimer()
+            }
+        }
+        .onTapGesture {
+            if isSilentMode {
+                resetSilentMode()
             }
         }
     }

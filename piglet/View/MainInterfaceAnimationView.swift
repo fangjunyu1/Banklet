@@ -98,7 +98,7 @@ struct MainInterfaceAnimationView: View {
                     }
                     .frame(width: width)
                     .frame(maxWidth: .infinity,maxHeight: .infinity)
-                    .navigationTitle("Main interface animation")
+                    .navigationTitle("Animation")
                     .navigationBarTitleDisplayMode(.inline)
                 }
             }

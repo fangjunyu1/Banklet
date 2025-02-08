@@ -90,7 +90,7 @@ struct AppIconView: View {
                         }
                         .frame(width: width)
                         .frame(maxWidth: .infinity,maxHeight: .infinity)
-                        .navigationTitle("App Icon")
+                        .navigationTitle("icon")
                         .navigationBarTitleDisplayMode(.inline)
                         .padding(.vertical,20)
                         Text("Image by freepik")

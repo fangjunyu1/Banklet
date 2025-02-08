@@ -1613,6 +1613,18 @@
         }
       }
     },
+    "After waiting for 10 seconds, hide the main view buttons and only show the animation." : {
+      "comment" : "1.0.6：等待10秒后，隐藏主视图按钮，仅显示动画。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待10秒后，隐藏主视图按钮，仅显示动画。"
+          }
+        }
+      }
+    },
     "Amount" : {
       "comment" : "金额",
       "extractionState" : "manual",
@@ -2057,224 +2069,224 @@
         }
       }
     },
-    "App Icon" : {
-      "comment" : "1.0.5:应用图标",
+    "Animation" : {
+      "comment" : "1.0.6:动画",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "رمز التطبيق"
+            "value" : "الرسوم المتحركة للواجهة الرئيسية"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icona de l'aplicació"
+            "value" : "Animació de la interfície principal"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikona aplikace"
+            "value" : "Animace hlavního rozhraní"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "applikationsikon"
+            "value" : "Main interface animation"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Anwendungssymbol"
+            "value" : "Animation der Hauptschnittstelle"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "εικονίδιο εφαρμογής"
+            "value" : "Κύρια κινούμενα σχέδια διεπαφής"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icono de aplicación"
+            "value" : "Animación de la interfaz principal"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icono de aplicación"
+            "value" : "Animación de la interfaz principal"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "sovelluskuvake"
+            "value" : "Pääliittymän animaatio"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icône d'application"
+            "value" : "Animation de l'interface principale"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icône d'application"
+            "value" : "Animation de l'interface principale"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "סמל יישום"
+            "value" : "אנימציית ממשק ראשי"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "एप्लिकेशन आइकन"
+            "value" : "मुख्य इंटरफ़ेस एनीमेशन"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikona aplikacije"
+            "value" : "Animacija glavnog sučelja"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "alkalmazás ikonra"
+            "value" : "A fő felület animációja"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikon aplikasi"
+            "value" : "Animasi antarmuka utama"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "icona dell'applicazione"
+            "value" : "Animazione dell'interfaccia principale"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アプリケーションアイコン"
+            "value" : "メインインターフェイスのアニメーション"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "애플리케이션 아이콘"
+            "value" : "메인 인터페이스 애니메이션"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikon aplikasi"
+            "value" : "Animasi antara muka utama"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "programikon"
+            "value" : "Hovedgrensesnittanimasjon"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "applicatiepictogram"
+            "value" : "Animatie van de hoofdinterface"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikona aplikacji"
+            "value" : "Animacja głównego interfejsu"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ícone do aplicativo"
+            "value" : "Animação da interface principal"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ícone do aplicativo"
+            "value" : "Animação da interface principal"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "pictograma aplicației"
+            "value" : "Animație interfață principală"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "значок приложения"
+            "value" : "Анимация основного интерфейса"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ikonu aplikácie"
+            "value" : "Animácia hlavného rozhrania"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "programikonen"
+            "value" : "Huvudgränssnittsanimation"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ไอคอนแอปพลิเคชัน"
+            "value" : "ภาพเคลื่อนไหวอินเทอร์เฟซหลัก"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "uygulama simgesi"
+            "value" : "Ana arayüz animasyonu"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "значок програми"
+            "value" : "Основна анімація інтерфейсу"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "biểu tượng ứng dụng"
+            "value" : "Hoạt ảnh giao diện chính"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "应用图标"
+            "state" : "translated",
+            "value" : "动画"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "應用程式圖示"
+            "value" : "主介面動畫"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "應用程式圖示"
+            "value" : "主介面動畫"
           }
         }
       }
@@ -2941,6 +2953,228 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "您確定要繼續下一步麼？"
+          }
+        }
+      }
+    },
+    "Background" : {
+      "comment" : "1.0.6:背景",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خلفية الواجهة الرئيسية"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fons de la interfície principal"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozadí hlavního rozhraní"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hovedgrænseflade baggrund"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hintergrund der Hauptschnittstelle"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κύριο φόντο διεπαφής"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fondo de la interfaz principal"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fondo de la interfaz principal"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pääkäyttöliittymän tausta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrière-plan de l'interface principale"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrière-plan de l'interface principale"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רקע ממשק ראשי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मुख्य इंटरफ़ेस पृष्ठभूमि"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozadina glavnog sučelja"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fő felület háttér"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latar belakang antarmuka utama"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sfondo dell'interfaccia principale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メインインターフェイスの背景"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메인 인터페이스 배경"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latar belakang antara muka utama"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hovedgrensesnittbakgrunn"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtergrond van de hoofdinterface"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Główne tło interfejsu"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundo da interface principal"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundo da interface principal"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundalul interfeței principale"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фон основного интерфейса"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozadie hlavného rozhrania"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huvudgränssnittets bakgrund"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พื้นหลังอินเทอร์เฟซหลัก"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ana arayüz arka planı"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основний фон інтерфейсу"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nền giao diện chính"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主介面背景"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主介面背景"
           }
         }
       }
@@ -13207,450 +13441,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "循環動畫"
-          }
-        }
-      }
-    },
-    "Main interface animation" : {
-      "comment" : "1.0.5:主界面动画",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "الرسوم المتحركة للواجهة الرئيسية"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animació de la interfície principal"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animace hlavního rozhraní"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Main interface animation"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animation der Hauptschnittstelle"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Κύρια κινούμενα σχέδια διεπαφής"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animación de la interfaz principal"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animación de la interfaz principal"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pääliittymän animaatio"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animation de l'interface principale"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animation de l'interface principale"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "אנימציית ממשק ראשי"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य इंटरफ़ेस एनीमेशन"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animacija glavnog sučelja"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A fő felület animációja"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animasi antarmuka utama"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animazione dell'interfaccia principale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メインインターフェイスのアニメーション"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "메인 인터페이스 애니메이션"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animasi antara muka utama"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hovedgrensesnittanimasjon"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animatie van de hoofdinterface"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animacja głównego interfejsu"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animação da interface principal"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animação da interface principal"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animație interfață principală"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Анимация основного интерфейса"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Animácia hlavného rozhrania"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Huvudgränssnittsanimation"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ภาพเคลื่อนไหวอินเทอร์เฟซหลัก"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ana arayüz animasyonu"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Основна анімація інтерфейсу"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoạt ảnh giao diện chính"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "主界面动画"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主介面動畫"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主介面動畫"
-          }
-        }
-      }
-    },
-    "Main interface background" : {
-      "comment" : "主界面背景",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "خلفية الواجهة الرئيسية"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fons de la interfície principal"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pozadí hlavního rozhraní"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hovedgrænseflade baggrund"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hintergrund der Hauptschnittstelle"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Κύριο φόντο διεπαφής"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fondo de la interfaz principal"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fondo de la interfaz principal"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pääkäyttöliittymän tausta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arrière-plan de l'interface principale"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arrière-plan de l'interface principale"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "רקע ממשק ראשי"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य इंटरफ़ेस पृष्ठभूमि"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pozadina glavnog sučelja"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fő felület háttér"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Latar belakang antarmuka utama"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sfondo dell'interfaccia principale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メインインターフェイスの背景"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "메인 인터페이스 배경"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Latar belakang antara muka utama"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hovedgrensesnittbakgrunn"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achtergrond van de hoofdinterface"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Główne tło interfejsu"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fundo da interface principal"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fundo da interface principal"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fundalul interfeței principale"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Фон основного интерфейса"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pozadie hlavného rozhrania"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Huvudgränssnittets bakgrund"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "พื้นหลังอินเทอร์เฟซหลัก"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ana arayüz arka planı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Основний фон інтерфейсу"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nền giao diện chính"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主界面背景"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主介面背景"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主介面背景"
           }
         }
       }
@@ -28741,6 +28531,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        }
+      }
+    },
+    "Silent Mode" : {
+      "comment" : "1.0.6：静默模式",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "静默模式"
           }
         }
       }

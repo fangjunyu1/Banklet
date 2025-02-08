@@ -110,7 +110,7 @@ struct MainInterfaceBackgroundView: View {
                     }
                     .frame(width: width)
                     .frame(maxWidth: .infinity,maxHeight: .infinity)
-                    .navigationTitle("Main interface background")
+                    .navigationTitle("Background")
                     .navigationBarTitleDisplayMode(.inline)
                 }
             }
