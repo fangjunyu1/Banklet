@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct GeneralView: View {
     @Environment(\.dismiss) var dismiss
@@ -16,6 +17,51 @@ struct GeneralView: View {
     @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
     // 静默模式
     @AppStorage("isSilentMode") var isSilentMode = false
+    // 提醒时间，设置提醒时间为true，否则为false
+    @AppStorage("isReminderTime") var isReminderTime = false
+    
+    @State private var reminderTime: Date = Date()
+    // 授权通知
+    func requestNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                print("授权失败：\(error.localizedDescription)")
+                // 如果授权失败，系统运行提醒权限设置为false
+                // 授权失败场景可能不常见，更多的是根据granted判断授权成功/失败
+            } else {
+                print("授权结果：\(granted ? "允许" : "拒绝")")
+                isReminderTime = granted
+                if granted {
+                    // 如果授权成功，执行调度本地通知的命令
+                    scheduleLocalNotification()
+                }
+            }
+        }
+    }
+    
+    // 设置调度本地通知
+    func scheduleLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Savings reminder", comment: "Title of the savings reminder notification")
+        content.body = NSLocalizedString("Accumulate today and reap tomorrow.", comment: "Body text of the savings reminder notification")
+        content.sound = .default
+        
+        // 创建触发条件，例如 5 秒后触发
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // 创建通知请求
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        // 将通知添加到通知中心
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("通知调度失败：\(error.localizedDescription)")
+            } else {
+                print("通知调度成功")
+            }
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -111,18 +157,65 @@ struct GeneralView: View {
                             }
                             .padding(10)
                             
-                            // 人脸识别
-                            SettingView(content: {
-                                Image(systemName: "faceid")
-                                    .padding(.horizontal,5)
-                                Text("Password protection")
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.8)
-                                Spacer()
-                                Toggle("",isOn: $isBiometricEnabled)  // iCloud开关
-                                    .frame(height:0)
-                            })
+                            // 提醒时间和密码保护
+                            VStack(spacing: 0) {
+                                // 提醒时间
+                                SettingView(content: {
+                                    Image(systemName: "bell")
+                                        .padding(.horizontal,5)
+                                    Text("Reminder time")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    if isReminderTime {
+                                        DatePicker("",
+                                                   selection: $reminderTime,
+                                                   displayedComponents: .hourAndMinute
+                                        )
+                                        .datePickerStyle(DefaultDatePickerStyle()) // 日期选择器样式
+                                        .frame(width: 60,height: 0)
+                                        .multilineTextAlignment(.trailing)
+                                    }
+                                    // 提示时间
+                                    Toggle("",isOn: Binding (
+                                        get: {
+                                            isReminderTime
+                                        },
+                                        set: { newValue in
+                                            if newValue {
+                                                // 检查权限，首次弹出消息提示
+                                                requestNotificationPermission()
+                                            } else {
+                                                isReminderTime = false
+                                            }
+                                        }
+                                    ))  // 提醒时间
+                                    .frame(width:70, height:0)
+                                })
+                                
+                                // 分割线
+                                Rectangle()
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 0.5)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 60)
+                                // 人脸识别
+                                SettingView(content: {
+                                    Image(systemName: "faceid")
+                                        .padding(.horizontal,5)
+                                    Text("Password protection")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: $isBiometricEnabled)  // iCloud开关
+                                        .frame(height:0)
+                                })
+                            }
+                            .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
+                            .cornerRadius(10)
                             .padding(10)
+                            
+                            
                         }
                         
                     }
@@ -133,11 +226,19 @@ struct GeneralView: View {
                 }
             }
         }
+        .onAppear {
+            // 为了检查应用的权限是否在后台关闭
+            // 调用消息授权方法重新校验，如果提醒时间字段为true
+            if isReminderTime {
+                // 重新执行授权通知进行校验
+                requestNotificationPermission()
+            }
+        }
     }
 }
 
 
 #Preview {
     GeneralView()
-//        .environment(\.locale, .init(identifier: "de"))
+    //        .environment(\.locale, .init(identifier: "de"))
 }

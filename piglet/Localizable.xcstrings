@@ -1391,6 +1391,18 @@
         }
       }
     },
+    "Accumulate today and reap tomorrow." : {
+      "comment" : "1.0.6:积累今天，收获明天。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "积累今天，收获明天。"
+          }
+        }
+      }
+    },
     "Add more information to the piggy bank." : {
       "comment" : "进一步完善存钱罐的信息。",
       "extractionState" : "manual",
@@ -25427,6 +25439,18 @@
         }
       }
     },
+    "Reminder time" : {
+      "comment" : "1.0.6:提醒时间",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提醒时间"
+          }
+        }
+      }
+    },
     "Restore Purchases" : {
       "comment" : "恢复购买",
       "extractionState" : "manual",
@@ -26311,6 +26335,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "存錢進度"
+          }
+        }
+      }
+    },
+    "Savings reminder" : {
+      "comment" : "1.0.6:存钱提醒",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存钱提醒"
           }
         }
       }

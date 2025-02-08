@@ -45,7 +45,6 @@ struct Home: View {
     //    @AppStorage("isTestDetails") var isTestDetails = false
     // 静默模式
     @AppStorage("isSilentMode") var isSilentMode = false
-    
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
         let differenceNum = piggyBank[0].targetAmount - piggyBank[0].amount
@@ -90,51 +89,57 @@ struct Home: View {
     
     // 监测静默状态
     private func startSilentModeTimer() {
-        // 确保没有重复启动 Timer
-        timerCancellable?.cancel()
-        timerCancellable = nil
-        
-        timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
-            .autoconnect()
-            .sink { _ in
-                let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
-                if elapsedTime > 10 {
-                    print("elapsedTime:\(elapsedTime)")
-                    DispatchQueue.main.async {
-                        print("进入静默模式")
-                        withAnimation(.easeInOut(duration: 1)) {
-                            isSilentModeActive = true
+        if isSilentMode {
+            // 确保没有重复启动 Timer
+            timerCancellable?.cancel()
+            timerCancellable = nil
+            
+            timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
+                .autoconnect()
+                .sink { _ in
+                    let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
+                    if elapsedTime > 10 {
+                        print("elapsedTime:\(elapsedTime)")
+                        DispatchQueue.main.async {
+                            print("进入静默模式")
+                            withAnimation(.easeInOut(duration: 1)) {
+                                isSilentModeActive = true
+                            }
                         }
+                    } else if elapsedTime <= 10 {
+                        print("elapsedTime:\(elapsedTime)")
                     }
-                } else if elapsedTime <= 10 {
-                    print("elapsedTime:\(elapsedTime)")
                 }
-            }
+        }
     }
     
     
     // 处理 Sheet 或 Navigation 状态变化
     private func handleStateChange() {
-        // 如果显示Sheet或者其他弹窗内容，暂停计时
-        if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView {
-            timerCancellable?.cancel()
-            timerCancellable = nil
-            print("暂停计时")
-        } else {
-            resetSilentMode() // 关闭后重置计时
-            print("重置计时")
+        if isSilentMode {
+            // 如果显示Sheet或者其他弹窗内容，暂停计时
+            if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView {
+                timerCancellable?.cancel()
+                timerCancellable = nil
+                print("暂停计时")
+            } else {
+                resetSilentMode() // 关闭后重置计时
+                print("重置计时")
+            }
         }
     }
     
     // 用户交互时重置静默模式
     private func resetSilentMode() {
-        print("退出静默模式")
-        lastInteractionTime = Date()
-        withAnimation(.easeInOut(duration: 1)) {
-            // 恢复按钮等视图的显示
-            isSilentModeActive = false
+        if isSilentMode {
+            print("退出静默模式")
+            lastInteractionTime = Date()
+            withAnimation(.easeInOut(duration: 1)) {
+                // 恢复按钮等视图的显示
+                isSilentModeActive = false
+            }
+            startSilentModeTimer() // 重新启动计时
         }
-        startSilentModeTimer() // 重新启动计时
     }
     
     @ViewBuilder
@@ -149,8 +154,6 @@ struct Home: View {
             EmptyView()
         }
     }
-    
-    
     
     var body: some View {
         
@@ -553,22 +556,34 @@ struct Home: View {
             }
         }
         .onChange(of: isDisplaySettings) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
         .onChange(of: showDepositAndWithdrawView) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
         .onChange(of: showAccessRecordsView) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
         .onChange(of: showMoreInformationView) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
         .onChange(of: showManagingView) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
         .onChange(of: showDetailView) { _,_ in
-            handleStateChange()
+            if isSilentMode {
+                handleStateChange()
+            }
         }
     }
 }
