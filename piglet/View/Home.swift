@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Combine
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -19,7 +20,7 @@ struct Home: View {
     
     @State private var isPlaying = false
     @State private var isReversed = false   // 取出操作时，为false
-    @State private var isProverb = true    // true,可以点击动画输出谚语
+    @State private var isProverb = true    // true,显示谚语时，变量为false表示动画不可点击
     @State private var isDisplayedProverb = false // true，显示谚语
     //    @State private var isInfo = false   // true，显示详细信息
     @State private var currentProverb: String = ""
@@ -34,6 +35,8 @@ struct Home: View {
     @State private var isSilentModeActive = false
     // 上次交互时间，超过设定的时间显示静默模式
     @State private var lastInteractionTime = Date()
+    // 静默模式计时器
+    @State private var timerCancellable: Cancellable? // 用于控制 Timer 的生命周期
     
     @AppStorage("pageSteps") var pageSteps: Int = 1
     @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
@@ -87,9 +90,13 @@ struct Home: View {
     
     // 监测静默状态
     private func startSilentModeTimer() {
-        Task {
-            while true {
-                try await Task.sleep(nanoseconds: 1_000_000_000) // 1秒
+        // 确保没有重复启动 Timer
+        timerCancellable?.cancel()
+        timerCancellable = nil
+        
+        timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
                 let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
                 if elapsedTime > 10 {
                     print("elapsedTime:\(elapsedTime)")
@@ -99,10 +106,23 @@ struct Home: View {
                             isSilentModeActive = true
                         }
                     }
-                } else {
+                } else if elapsedTime <= 10 {
                     print("elapsedTime:\(elapsedTime)")
                 }
             }
+    }
+    
+    
+    // 处理 Sheet 或 Navigation 状态变化
+    private func handleStateChange() {
+        // 如果显示Sheet或者其他弹窗内容，暂停计时
+        if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView {
+            timerCancellable?.cancel()
+            timerCancellable = nil
+            print("暂停计时")
+        } else {
+            resetSilentMode() // 关闭后重置计时
+            print("重置计时")
         }
     }
     
@@ -111,8 +131,10 @@ struct Home: View {
         print("退出静默模式")
         lastInteractionTime = Date()
         withAnimation(.easeInOut(duration: 1)) {
+            // 恢复按钮等视图的显示
             isSilentModeActive = false
         }
+        startSilentModeTimer() // 重新启动计时
     }
     
     @ViewBuilder
@@ -470,7 +492,7 @@ struct Home: View {
                     //                            isInfo = false
                     //                        }
                     //                    }
-                    .navigationTitle("Banklet")
+                    .navigationTitle(isSilentModeActive ? "" : "Banklet")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         // 左上角管理按钮
@@ -494,6 +516,7 @@ struct Home: View {
                                     .frame(width: 40)
                                     .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                             })
+                            .opacity(isSilentModeActive ? 0 : 1)
                         }
                         // 右上角设置按钮
                         ToolbarItem(placement: .topBarTrailing) {
@@ -505,6 +528,7 @@ struct Home: View {
                                     .scaledToFit()
                                     .foregroundColor(colorScheme == .light ? .black : .white)
                             })
+                            .opacity(isSilentModeActive ? 0 : 1)
                         }
                     }
                 }
@@ -519,10 +543,32 @@ struct Home: View {
                 startSilentModeTimer()
             }
         }
+        .onDisappear {
+            timerCancellable?.cancel()
+            timerCancellable = nil // 确保页面消失时停止计时
+        }
         .onTapGesture {
             if isSilentMode {
                 resetSilentMode()
             }
+        }
+        .onChange(of: isDisplaySettings) { _,_ in
+            handleStateChange()
+        }
+        .onChange(of: showDepositAndWithdrawView) { _,_ in
+            handleStateChange()
+        }
+        .onChange(of: showAccessRecordsView) { _,_ in
+            handleStateChange()
+        }
+        .onChange(of: showMoreInformationView) { _,_ in
+            handleStateChange()
+        }
+        .onChange(of: showManagingView) { _,_ in
+            handleStateChange()
+        }
+        .onChange(of: showDetailView) { _,_ in
+            handleStateChange()
         }
     }
 }

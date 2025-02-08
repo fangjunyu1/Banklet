@@ -126,11 +126,11 @@ struct GeneralView: View {
                         }
                         
                     }
+                    .frame(width: width)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity)
+                    .navigationTitle("General")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
-                .frame(width: width)
-                .frame(maxWidth: .infinity,maxHeight: .infinity)
-                .navigationTitle("General")
-                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
