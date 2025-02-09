@@ -350,7 +350,7 @@ struct Home: View {
                                         LottieView(filename: LoopAnimation,isPlaying: isLoopAnimation ? true : isPlaying, playCount: isLoopAnimation ? 0 : 1, isReversed: isLoopAnimation ? false : isReversed)
                                             .id(LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
                                             .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(LoopAnimation)")) // 水平翻转视图
-                                            .offset(y: BackgroundImage == "Home0" ? -20 : 0)
+                                            .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: BackgroundImage == "Home0" ? -20 : 0)
                                             .opacity(colorScheme == .light ? 1 : 0.8)
                                             .disabled(isProverb)
                                             .frame(width: 160, height: 160)
