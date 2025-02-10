@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */; };
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400AF2D30F15700DC51C0 /* ThanksView.swift */; };
@@ -81,6 +82,7 @@
 		1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */; };
 		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
+		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */; };
 		1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */; };
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
@@ -136,6 +138,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolView.swift; sourceTree = "<group>"; };
 		1D0D91202D472E7E00F287DA /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triggerNetworkRequest.swift; sourceTree = "<group>"; };
 		1D0FA6E32D225A6F00ABF5F6 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -244,6 +247,7 @@
 		1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredAppsView.swift; sourceTree = "<group>"; };
 		1D7D4D3E2D224F45001EE006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D7D4D402D224F4F001EE006 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -357,6 +361,7 @@
 				1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
 				1D89C54E2D506254000DECFF /* DetailView.swift */,
+				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */,
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
+				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -765,6 +771,7 @@
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
 				1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */,
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
+				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* appVersion.swift in Sources */,
 				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
 				1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */,
@@ -778,6 +785,7 @@
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
+				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* DoubleExtension.swift in Sources */,
 				1D214F592D2F999E007F1D0E /* Settings.swift in Sources */,

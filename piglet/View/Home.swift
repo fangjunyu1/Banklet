@@ -45,6 +45,9 @@ struct Home: View {
     //    @AppStorage("isTestDetails") var isTestDetails = false
     // 静默模式
     @AppStorage("isSilentMode") var isSilentMode = false
+    // 货币符号
+    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
         let differenceNum = piggyBank[0].targetAmount - piggyBank[0].amount
@@ -197,7 +200,7 @@ struct Home: View {
                                                 .font(.title2)
                                                 .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                         } else {
-                                            Text("$ \(difference.formattedWithTwoDecimalPlaces())")
+                                            Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
                                                 .font(.title2)
                                                 .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                         }
@@ -593,5 +596,5 @@ struct Home: View {
     return Home()
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
+//        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
 }

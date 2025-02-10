@@ -13,6 +13,10 @@ struct DetailView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    
+    // 货币符号
+    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    
     var CurrentAmount: Double
     var TargetAmount: Double
     var SavingProgress:Double {
@@ -52,7 +56,7 @@ struct DetailView: View {
                             VStack(alignment: .leading) {
                                 Text("Current amount")
                                     .font(.footnote)
-                                Text("$")
+                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")")
                                     .font(.footnote)
                                 + Text(" ") +
                                 Text(CurrentAmount.formattedWithTwoDecimalPlaces())
@@ -74,7 +78,7 @@ struct DetailView: View {
                             VStack(alignment: .leading) {
                                 Text("Target amount")
                                     .font(.footnote)
-                                Text("$")
+                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")")
                                     .font(.footnote)
                                 + Text(" ") + Text(TargetAmount.formattedWithTwoDecimalPlaces())
                                     .font(.title3)

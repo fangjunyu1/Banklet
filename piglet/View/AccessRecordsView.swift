@@ -14,6 +14,9 @@ struct AccessRecordsView: View {
     @Environment(\.colorScheme) var colorScheme
     var piggyBank: PiggyBank
     
+    // 货币符号
+    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    
     // 删除存取记录
     func removeRows(at offsets: IndexSet) {
         guard let records = piggyBank.records else { return }
@@ -92,7 +95,7 @@ struct AccessRecordsView: View {
                                                 }
                                                 Spacer()
                                                 Group {
-                                                    Text("$ ") + Text(record.amount.formattedWithTwoDecimalPlaces())
+                                                    Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")") + Text(" ") + Text(record.amount.formattedWithTwoDecimalPlaces())
                                                 }
                                                     .foregroundColor(record.saveMoney == true ? .green : .red)
                                                     .fontWeight(.bold)

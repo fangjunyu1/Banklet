@@ -165,6 +165,25 @@ struct GeneralView: View {
                             }
                             .padding(10)
                             
+                            // 货币符号
+                            VStack {
+                                NavigationLink(destination: CurrencySymbolView()){
+                                    SettingView(content: {
+                                        Image(systemName: "dollarsign")
+                                            .padding(.horizontal,5)
+                                        Text("Currency Symbol")
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.8)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(Color(hex:"D8D8D8"))
+                                    })
+                                }
+                            }
+                            .padding(10)
+                            
+                            
+                            
                             // 提醒时间和密码保护
                             VStack(spacing: 0) {
                                 // 提醒时间

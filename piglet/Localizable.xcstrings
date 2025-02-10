@@ -44,15 +44,6 @@
     "%lld" : {
 
     },
-    "$" : {
-
-    },
-    "$ " : {
-
-    },
-    "$ %@" : {
-
-    },
     "0.0" : {
 
     },
@@ -1625,6 +1616,18 @@
         }
       }
     },
+    "AED" : {
+      "comment" : "1.0.6:迪拉姆",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迪拉姆"
+          }
+        }
+      }
+    },
     "After waiting for 10 seconds, hide the main view buttons and only show the animation." : {
       "comment" : "1.0.6：等待10秒后，隐藏主视图按钮，仅显示动画。",
       "extractionState" : "manual",
@@ -2969,6 +2972,30 @@
         }
       }
     },
+    "ARS" : {
+      "comment" : "1.0.6:阿根廷比索",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阿根廷比索"
+          }
+        }
+      }
+    },
+    "AUD" : {
+      "comment" : "1.0.6:澳元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳元"
+          }
+        }
+      }
+    },
     "Background" : {
       "comment" : "1.0.6:背景",
       "extractionState" : "manual",
@@ -3215,6 +3242,18 @@
         }
       }
     },
+    "BRL" : {
+      "comment" : "1.0.6:巴西里亚尔",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴西里亚尔"
+          }
+        }
+      }
+    },
     "By default, the most recent 50 records are displayed." : {
       "comment" : "默认显示最近的50条记录。",
       "extractionState" : "manual",
@@ -3440,6 +3479,18 @@
     "by Lottiefiles" : {
       "comment" : "by Lottiefiles",
       "extractionState" : "manual"
+    },
+    "CAD" : {
+      "comment" : "1.0.6:加元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加元"
+          }
+        }
+      }
     },
     "Cancel" : {
       "comment" : "取消",
@@ -3885,6 +3936,18 @@
         }
       }
     },
+    "CHF" : {
+      "comment" : "1.0.6:瑞士法郎",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞士法郎"
+          }
+        }
+      }
+    },
     "Close to the goal" : {
       "comment" : "接近目标（80%）",
       "extractionState" : "manual",
@@ -4325,6 +4388,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉"
+          }
+        }
+      }
+    },
+    "CNY" : {
+      "comment" : "1.0.6:人民币",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人民币"
           }
         }
       }
@@ -6327,6 +6402,18 @@
         }
       }
     },
+    "Currency Symbol" : {
+      "comment" : "1.0.6:Currency Symbol",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "货币符号"
+          }
+        }
+      }
+    },
     "Current amount" : {
       "comment" : "当前金额",
       "extractionState" : "manual",
@@ -6545,6 +6632,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前金額"
+          }
+        }
+      }
+    },
+    "CZK" : {
+      "comment" : "1.0.6:捷克克朗",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "捷克克朗"
           }
         }
       }
@@ -8769,6 +8868,18 @@
         }
       }
     },
+    "DKK" : {
+      "comment" : "1.0.6:丹麦克朗",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "丹麦克朗"
+          }
+        }
+      }
+    },
     "Edit" : {
       "comment" : "编辑",
       "extractionState" : "manual",
@@ -9435,6 +9546,18 @@
         }
       }
     },
+    "EUR" : {
+      "comment" : "1.0.6:欧元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧元"
+          }
+        }
+      }
+    },
     "Expiration date" : {
       "comment" : "截止日期",
       "extractionState" : "manual",
@@ -10097,6 +10220,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "提供的免費圖片或動畫素材。"
+          }
+        }
+      }
+    },
+    "GBP" : {
+      "comment" : "1.0.6：英镑",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英镑"
           }
         }
       }
@@ -10993,8 +11128,32 @@
         }
       }
     },
+    "HKD" : {
+      "comment" : "1.0.6：港元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "港元"
+          }
+        }
+      }
+    },
     "https://github.com/fangjunyu1/Banklet" : {
 
+    },
+    "HUF" : {
+      "comment" : "1.0.6:匈牙利福林",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匈牙利福林"
+          }
+        }
+      }
     },
     "iCloud is in beta, so please be careful when switching on and off." : {
       "comment" : "iCloud处于测试阶段，请谨慎切换开关。",
@@ -11440,6 +11599,18 @@
         }
       }
     },
+    "IDR" : {
+      "comment" : "1.0.6:印尼盾",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "印尼盾"
+          }
+        }
+      }
+    },
     "If you are satisfied with our app, we hope you can sponsor us through in-app purchases to help us develop more and better apps." : {
       "comment" : "如果您对我们的应用满意，希望您通过内购的形式赞助我们，以帮助我们开发更多更好的应用。",
       "extractionState" : "manual",
@@ -11658,6 +11829,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "如果您對我們的應用程式滿意，希望您透過內購的形式贊助我們，以幫助我們開發更多更好的應用程式。"
+          }
+        }
+      }
+    },
+    "ILS" : {
+      "comment" : "1.0.6:以色列新谢克尔",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以色列新谢克尔"
           }
         }
       }
@@ -12331,6 +12514,30 @@
         }
       }
     },
+    "INR" : {
+      "comment" : "1.0.6:印度卢比",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "印度卢比"
+          }
+        }
+      }
+    },
+    "JPY" : {
+      "comment" : "1.0.6:日元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日元"
+          }
+        }
+      }
+    },
     "Just started" : {
       "comment" : "刚刚起步（0%）",
       "extractionState" : "manual",
@@ -12549,6 +12756,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "剛起步"
+          }
+        }
+      }
+    },
+    "KRW" : {
+      "comment" : "1.0.6:韩元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "韩元"
           }
         }
       }
@@ -14123,6 +14342,42 @@
         }
       }
     },
+    "MOP" : {
+      "comment" : "1.0.6:澳门元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳门元"
+          }
+        }
+      }
+    },
+    "MXN" : {
+      "comment" : "1.0.6:墨西哥比索",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨西哥比索"
+          }
+        }
+      }
+    },
+    "MYR" : {
+      "comment" : "1.0.6:马来西亚林吉特",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "马来西亚林吉特"
+          }
+        }
+      }
+    },
     "Name" : {
       "comment" : "名称",
       "extractionState" : "manual",
@@ -15011,6 +15266,18 @@
         }
       }
     },
+    "NOK" : {
+      "comment" : "1.0.6:挪威克朗",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "挪威克朗"
+          }
+        }
+      }
+    },
     "Non-consumable items" : {
       "comment" : "非消耗型项目",
       "extractionState" : "manual",
@@ -15451,6 +15718,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備註"
+          }
+        }
+      }
+    },
+    "NZD" : {
+      "comment" : "1.0.6:新西兰元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新西兰元"
           }
         }
       }
@@ -17227,6 +17506,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請輸入取出金額"
+          }
+        }
+      }
+    },
+    "PLN" : {
+      "comment" : "1.0.6:波兰兹罗提",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "波兰兹罗提"
           }
         }
       }
@@ -25673,6 +25964,42 @@
         }
       }
     },
+    "RON" : {
+      "comment" : "1.0.6:罗马尼亚列伊",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "罗马尼亚列伊"
+          }
+        }
+      }
+    },
+    "RUB" : {
+      "comment" : "1.0.6:俄罗斯卢布",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "俄罗斯卢布"
+          }
+        }
+      }
+    },
+    "SAR" : {
+      "comment" : "1.0.6:沙特里亚尔",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙特里亚尔"
+          }
+        }
+      }
+    },
     "Save every dream" : {
       "comment" : "储蓄每一个梦想",
       "extractionState" : "manual",
@@ -26791,6 +27118,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "安全校驗"
+          }
+        }
+      }
+    },
+    "SEK" : {
+      "comment" : "1.0.6:瑞典克朗",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞典克朗"
           }
         }
       }
@@ -28567,6 +28906,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        }
+      }
+    },
+    "SGD" : {
+      "comment" : "1.0.6:新加坡元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新加坡元"
           }
         }
       }
@@ -33707,6 +34058,18 @@
         }
       }
     },
+    "THB" : {
+      "comment" : "1.0.6:泰铢",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "泰铢"
+          }
+        }
+      }
+    },
     "This is empty." : {
       "comment" : "这里是空的。",
       "extractionState" : "manual",
@@ -33925,6 +34288,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這裡是空的。"
+          }
+        }
+      }
+    },
+    "TRY" : {
+      "comment" : "1.0.6:土耳其里拉",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "土耳其里拉"
+          }
+        }
+      }
+    },
+    "UAH" : {
+      "comment" : "1.0.6:乌克兰格里夫纳",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "乌克兰格里夫纳"
           }
         }
       }
@@ -34369,6 +34756,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "解鎖失敗，請重新嘗試。"
+          }
+        }
+      }
+    },
+    "USD" : {
+      "comment" : "1.0.6:美元",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美元"
           }
         }
       }
@@ -34843,6 +35242,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "版本號"
+          }
+        }
+      }
+    },
+    "VND" : {
+      "comment" : "1.0.6:越南盾",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "越南盾"
           }
         }
       }
@@ -37285,6 +37696,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你的存錢筒。"
+          }
+        }
+      }
+    },
+    "ZAR" : {
+      "comment" : "1.0.6:南非兰特",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "南非兰特"
           }
         }
       }
