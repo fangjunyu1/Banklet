@@ -69,7 +69,7 @@ struct MainInterfaceAnimationView: View {
                                         LottieView(filename: "Home\(index)", isPlaying: isLoopAnimation ? true : false, playCount: 0, isReversed: false)
                                             .id(LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
                                             .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "Home\(index)") : -AnimationScaleConfig.scale(for: "Home\(index)"),
-                                                y: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "Home\(index)") : -AnimationScaleConfig.scale(for: "Home\(index)"))// 水平翻转视图
+                                                y:  AnimationScaleConfig.scale(for: "Home\(index)"))// 水平翻转视图
                                             .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
                                             .background(colorScheme == .light ? .white : Color(hex: "2C2B2D"))
                                             .cornerRadius(10)
@@ -108,4 +108,5 @@ struct MainInterfaceAnimationView: View {
 
 #Preview {
     MainInterfaceAnimationView()
+            .environment(\.locale, .init(identifier: "ar"))
 }

@@ -29378,6 +29378,18 @@
         }
       }
     },
+    "Statistics" : {
+      "comment" : "1.0.6:统计",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "统计"
+          }
+        }
+      }
+    },
     "Steady growth" : {
       "comment" : "稳步增长（60%）",
       "extractionState" : "manual",

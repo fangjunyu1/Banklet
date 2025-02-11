@@ -30,6 +30,7 @@ struct Home: View {
     @State private var showAccessRecordsView = false    // 显示存取记录视图
     @State private var showMoreInformationView = false  // 显示详细信息视图
     @State private var showManagingView = false // 显示通用视图
+    @State private var showStatistics = false   // 显示统计视图
     @State private var showDetailView = false
     // 静默模式
     @State private var isSilentModeActive = false
@@ -471,6 +472,9 @@ struct Home: View {
                     .sheet(isPresented: $isDisplaySettings) {
                         Settings()
                     }
+                    .sheet(isPresented: $showStatistics) {
+                        StatisticsView()
+                    }
                     .sheet(isPresented: $showAccessRecordsView) {
                         AccessRecordsView(piggyBank: piggyBank[0])
                     }
@@ -501,9 +505,11 @@ struct Home: View {
                     .navigationTitle(isSilentModeActive ? "" : "Banklet")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
-                        // 左上角管理按钮
+                        // 左上角 Menu 按钮
                         ToolbarItem(placement:.topBarLeading) {
+                            
                             Menu(content: {
+                                // 管理按钮
                                 Button(action: {
                                     withAnimation(.easeInOut(duration: 1)) {
                                         showManagingView.toggle()
@@ -513,6 +519,18 @@ struct Home: View {
                                         Text("Manage")
                                         Spacer()
                                         Image(systemName: "pin")
+                                    }
+                                })
+                                // 统计按钮
+                                Button(action: {
+                                    withAnimation(.easeInOut(duration: 1)) {
+                                        showStatistics.toggle()
+                                    }
+                                }, label: {
+                                    HStack {
+                                        Text("Statistics")
+                                        Spacer()
+                                        Image(systemName: "chart.xyaxis.line")
                                     }
                                 })
                             }, label: {
@@ -588,6 +606,11 @@ struct Home: View {
                 handleStateChange()
             }
         }
+        .onChange(of: showStatistics) { _,_ in
+            if isSilentMode {
+                handleStateChange()
+            }
+        }
     }
 }
 
@@ -596,5 +619,5 @@ struct Home: View {
     return Home()
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-//        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
+    //        .environmentObject(iapManager).environment(\.locale, .init(identifier: "de"))
 }
