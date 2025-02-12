@@ -43,6 +43,7 @@ struct CurrencySymbolView: View {
                 }
                 .navigationTitle("Currency Symbol")
                 .navigationBarTitleDisplayMode(.inline)
+                .scrollIndicators(.hidden) // 隐藏滚动条
             }
         }
         .onAppear {

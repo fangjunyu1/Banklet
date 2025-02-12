@@ -49,7 +49,7 @@ struct SponsoredAppsView: View {
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
-                    .lineLimit(2)
+                    .lineLimit(4)
                     .minimumScaleFactor(0.8)
                     .multilineTextAlignment(.center)
                     
@@ -84,6 +84,8 @@ struct SponsoredAppsView: View {
                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                             Text("Get more pictures and animations.")
                                 .font(.footnote)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
                             Spacer()
                         }
                     }

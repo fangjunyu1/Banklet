@@ -45,18 +45,18 @@ class PiggyBank {
                 configurations: ModelConfiguration(isStoredInMemoryOnly: true,cloudKitDatabase: .none)
             )
             let context = container.mainContext
-//            for piggyBank in PiggyBanks {
-//                context.insert(piggyBank)
-//                // 如果需要，手动插入 SavingsRecord
-//                let records = [
-//                    SavingsRecord(amount: 18,saveMoney: true,piggyBank:piggyBank),
-//                    SavingsRecord(amount: 20,saveMoney: false,piggyBank:piggyBank),
-//                    SavingsRecord(amount: 36,saveMoney: false,piggyBank:piggyBank)
-//                ]
-//                for record in records {
-//                    piggyBank.records?.append(record) // 通过关系自动管理
-//                }
-//            }
+            for piggyBank in PiggyBanks {
+                context.insert(piggyBank)
+                // 如果需要，手动插入 SavingsRecord
+                let records = [
+                    SavingsRecord(amount: 18,saveMoney: true,piggyBank:piggyBank),
+                    SavingsRecord(amount: 20,saveMoney: false,piggyBank:piggyBank),
+                    SavingsRecord(amount: 36,saveMoney: false,piggyBank:piggyBank)
+                ]
+                for record in records {
+                    piggyBank.records?.append(record) // 通过关系自动管理
+                }
+            }
             try context.save()
             return container
         } catch {

@@ -9,6 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct GeneralView: View {
+    @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
@@ -96,7 +97,7 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                     // 分割线
@@ -116,7 +117,7 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                     // 分割线
@@ -134,7 +135,7 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                 }
@@ -176,7 +177,7 @@ struct GeneralView: View {
                                             .minimumScaleFactor(0.8)
                                         Spacer()
                                         Image(systemName: "chevron.right")
-                                            .foregroundColor(Color(hex:"D8D8D8"))
+                                            .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                     })
                                 }
                             }

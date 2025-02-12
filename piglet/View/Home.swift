@@ -210,7 +210,11 @@ struct Home: View {
                                             if  piggyBank[0].amount == piggyBank[0].targetAmount {
                                                 Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
                                             } else {
-                                                Text("Distance")+Text(" \(piggyBank[0].name) ") + Text("Need")
+                                                Group {
+                                                    Text("Distance")+Text(" \(piggyBank[0].name) ") + Text("Need")
+                                                }
+                                                .lineLimit(2)
+                                                .minimumScaleFactor(0.5)
                                             }
                                         }
                                         .font(.footnote)
@@ -621,5 +625,5 @@ struct Home: View {
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(iapManager)
-        .environment(\.locale, .init(identifier: "ar"))
+        .environment(\.locale, .init(identifier: "ru"))
 }
