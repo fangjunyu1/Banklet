@@ -82,7 +82,7 @@ struct SponsoredAppsView: View {
                                 .scaledToFit()
                                 .frame(height: 30)
                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                            Text("Get more pictures and experience new features.")
+                            Text("Get more pictures and animations.")
                                 .font(.footnote)
                             Spacer()
                         }

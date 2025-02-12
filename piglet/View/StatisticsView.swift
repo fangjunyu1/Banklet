@@ -178,6 +178,9 @@ struct StatisticsView: View {
                                 Text("Cumulative deposit amount")
                                     .font(.footnote)
                                     .foregroundColor(.gray)
+                                    .multilineTextAlignment(.center)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(0.5)
                                 
                                 Spacer().frame(height: 10)
                                 
@@ -204,7 +207,7 @@ struct StatisticsView: View {
                                         .opacity(colorScheme == .light ? 1 : 0.8)
                                     
                                     VStack {
-                                        Text("Total number of deposits and withdrawals")
+                                        Text("Total access times")
                                         Spacer().frame(height: 10)
                                         Text("\(savingRecordsTimes)")
                                     }
@@ -225,12 +228,14 @@ struct StatisticsView: View {
                                 }
                             }
                             .font(.footnote)
-                            .frame(width: width * 0.48,height: 80)
-                            .lineLimit(1)
+                            .frame(width: width * 0.45,height: 80)
+                            .padding(5)
+                            .lineLimit(2)
                             .minimumScaleFactor(0.5)
+                            .multilineTextAlignment(.center)
                             .background(colorScheme == .light ?  .white : Color(hex:"2C2B2D"))
                             .cornerRadius(10)
-                            .padding(.horizontal, width * 0.012)
+                            .padding(.horizontal, width * 0.005)
                         }
                         Spacer().frame(height: 30)
                         // 网格统计视图
@@ -304,4 +309,5 @@ struct StatisticsView: View {
 #Preview {
     StatisticsView()
         .modelContainer(PiggyBank.preview)
+        .environment(\.locale, .init(identifier: "de"))
 }
