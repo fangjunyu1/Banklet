@@ -9,7 +9,6 @@ import SwiftUI
 import Charts
 
 struct DetailView: View {
-    
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme

@@ -716,6 +716,18 @@
         }
       }
     },
+    "Access grid" : {
+      "comment" : "1.0.6:存取方格",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取方格"
+          }
+        }
+      }
+    },
     "Access records" : {
       "comment" : "存取记录",
       "extractionState" : "manual",
@@ -6398,6 +6410,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "建立日期"
+          }
+        }
+      }
+    },
+    "Cumulative deposit amount" : {
+      "comment" : "1.0.6:累计存款金额",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "累计存款金额"
           }
         }
       }
@@ -15722,6 +15746,18 @@
         }
       }
     },
+    "Number of piggy banks" : {
+      "comment" : "1.0.6:存钱罐数量",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存钱罐数量"
+          }
+        }
+      }
+    },
     "NZD" : {
       "comment" : "1.0.6:新西兰元",
       "extractionState" : "manual",
@@ -17065,6 +17101,9 @@
           }
         }
       }
+    },
+    "PiggyBank" : {
+
     },
     "Please enter deposit amount" : {
       "comment" : "请输入存入金额",
@@ -34300,6 +34339,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這裡是空的。"
+          }
+        }
+      }
+    },
+    "Total number of deposits and withdrawals" : {
+      "comment" : "1.0.6:存取总次数",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取总次数"
           }
         }
       }

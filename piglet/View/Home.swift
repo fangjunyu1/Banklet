@@ -93,7 +93,7 @@ struct Home: View {
     
     // 监测静默状态
     private func startSilentModeTimer() {
-        if isSilentMode {
+        if isSilentMode && !allPiggyBank.isEmpty {
             // 确保没有重复启动 Timer
             timerCancellable?.cancel()
             timerCancellable = nil
@@ -122,7 +122,7 @@ struct Home: View {
     private func handleStateChange() {
         if isSilentMode {
             // 如果显示Sheet或者其他弹窗内容，暂停计时
-            if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView {
+            if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView || showStatistics {
                 timerCancellable?.cancel()
                 timerCancellable = nil
                 print("暂停计时")
@@ -158,6 +158,7 @@ struct Home: View {
             EmptyView()
         }
     }
+    
     
     var body: some View {
         
@@ -465,15 +466,16 @@ struct Home: View {
                         }
                         
                     }
-                    
                     .sheet(isPresented: $showMoreInformationView, content: {
                         MoreInformationView()
                     })
                     .sheet(isPresented: $isDisplaySettings) {
                         Settings()
                     }
+                    // 统计视图
                     .sheet(isPresented: $showStatistics) {
                         StatisticsView()
+                            .presentationDetents([.height(500)])
                     }
                     .sheet(isPresented: $showAccessRecordsView) {
                         AccessRecordsView(piggyBank: piggyBank[0])
@@ -555,11 +557,11 @@ struct Home: View {
                             .opacity(isSilentModeActive ? 0 : 1)
                         }
                     }
+                    .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
+                    .background(
+                        backgroundImageView()
+                    )
                 }
-                .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
-                .background(
-                    backgroundImageView()
-                )
             }
         }
         .onAppear {
@@ -613,7 +615,6 @@ struct Home: View {
         }
     }
 }
-
 #Preview {
     @StateObject var iapManager = IAPManager.shared
     return Home()

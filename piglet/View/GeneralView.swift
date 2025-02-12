@@ -219,6 +219,8 @@ struct GeneralView: View {
                                                 // 检查权限，首次弹出消息提示
                                                 requestNotificationPermission()
                                             } else {
+                                                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                                                print("所有未触发的通知已清除")
                                                 isReminderTime = false
                                             }
                                         }
