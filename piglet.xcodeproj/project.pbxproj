@@ -112,6 +112,14 @@
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
+		1DEB96C62D5D9D6C00A68C21 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */; };
+		1DEB96C72D5D9D6C00A68C21 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */; };
+		1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */; };
+		1DEB96CC2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */; };
+		1DEB96CE2D5D9D6C00A68C21 /* BankletWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */; };
+		1DEB96D02D5D9D6C00A68C21 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */; };
+		1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
+		1DEB96D62D5D9D6D00A68C21 /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DEC98802C10315500BEECFF /* appVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC987F2C10315500BEECFF /* appVersion.swift */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
@@ -122,6 +130,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1DEB96D42D5D9D6D00A68C21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DEB96C42D5D9D6B00A68C21;
+			remoteInfo = BankletWidgetExtension;
+		};
 		1DF555822BF60B1200BF0DE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
@@ -137,6 +152,20 @@
 			remoteInfo = piglet;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DD140002D5D842100CC6F23 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1DEB96D62D5D9D6D00A68C21 /* BankletWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolView.swift; sourceTree = "<group>"; };
@@ -262,8 +291,6 @@
 		1D7FE03E2D20D5120065AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1D80E7CD2C0BC72400A79B96 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		1D845F422D23D6B200EDE480 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D845F432D23D6B200EDE480 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage2.swift; sourceTree = "<group>"; };
 		1D845F4D2D23F3C000EDE480 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1D88545A2D244B27009DE7AE /* Completed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completed.swift; sourceTree = "<group>"; };
@@ -271,6 +298,9 @@
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
 		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
+		1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankletWidgetExtension.entitlements; sourceTree = "<group>"; };
 		1DB13A332D22E9740006B0A2 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPage.swift; sourceTree = "<group>"; };
 		1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
@@ -283,12 +313,21 @@
 		1DCB0C542D3759D00037153C /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceBackgroundView.swift; sourceTree = "<group>"; };
 		1DCB0C5A2D37B12A0037153C /* ManagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagingView.swift; sourceTree = "<group>"; };
+		1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		1DD151C02D25B042004B0936 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
 		1DD151C22D264209004B0936 /* PiggyBankData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankData.swift; sourceTree = "<group>"; };
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
+		1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetBundle.swift; sourceTree = "<group>"; };
+		1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidget.swift; sourceTree = "<group>"; };
+		1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DEB96D32D5D9D6D00A68C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEC987F2C10315500BEECFF /* appVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appVersion.swift; sourceTree = "<group>"; };
 		1DF555742BF60B1000BF0DE5 /* pigletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletApp.swift; sourceTree = "<group>"; };
 		1DF555782BF60B1200BF0DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -299,6 +338,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1DEB96C22D5D9D6B00A68C21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEB96C72D5D9D6C00A68C21 /* SwiftUI.framework in Frameworks */,
+				1DEB96C62D5D9D6C00A68C21 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF5556E2BF60B1000BF0DE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +422,8 @@
 			children = (
 				1DC2617B2C1093EA00A5E311 /* MessageUI.framework */,
 				1D601B852C0747FD00052528 /* StoreKit.framework */,
+				1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */,
+				1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -480,16 +530,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1DEB96C82D5D9D6C00A68C21 /* BankletWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */,
+				1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */,
+				1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */,
+				1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */,
+				1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */,
+				1DEB96D32D5D9D6D00A68C21 /* Info.plist */,
+			);
+			path = BankletWidget;
+			sourceTree = "<group>";
+		};
 		1DF555682BF60B1000BF0DE5 = {
 			isa = PBXGroup;
 			children = (
+				1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */,
 				1DF555732BF60B1000BF0DE5 /* piglet */,
 				1DF555842BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558E2BF60B1200BF0DE5 /* pigletUITests */,
+				1DEB96C82D5D9D6C00A68C21 /* BankletWidget */,
 				1D601B842C0747FC00052528 /* Frameworks */,
 				1DB13A332D22E9740006B0A2 /* piglet.app */,
-				1D845F422D23D6B200EDE480 /* pigletTests.xctest */,
-				1D845F432D23D6B200EDE480 /* pigletUITests.xctest */,
+				1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */,
+				1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */,
+				1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -532,6 +598,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB96D72D5D9D6D00A68C21 /* Build configuration list for PBXNativeTarget "BankletWidgetExtension" */;
+			buildPhases = (
+				1DEB96C12D5D9D6B00A68C21 /* Sources */,
+				1DEB96C22D5D9D6B00A68C21 /* Frameworks */,
+				1DEB96C32D5D9D6B00A68C21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankletWidgetExtension;
+			productName = BankletWidgetExtension;
+			productReference = 1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1DF555702BF60B1000BF0DE5 /* piglet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DF555952BF60B1200BF0DE5 /* Build configuration list for PBXNativeTarget "piglet" */;
@@ -539,10 +622,12 @@
 				1DF5556D2BF60B1000BF0DE5 /* Sources */,
 				1DF5556E2BF60B1000BF0DE5 /* Frameworks */,
 				1DF5556F2BF60B1000BF0DE5 /* Resources */,
+				1DD140002D5D842100CC6F23 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */,
 			);
 			name = piglet;
 			packageProductDependencies = (
@@ -567,7 +652,7 @@
 			);
 			name = pigletTests;
 			productName = pigletTests;
-			productReference = 1D845F422D23D6B200EDE480 /* pigletTests.xctest */;
+			productReference = 1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1DF5558A2BF60B1200BF0DE5 /* pigletUITests */ = {
@@ -585,7 +670,7 @@
 			);
 			name = pigletUITests;
 			productName = pigletUITests;
-			productReference = 1D845F432D23D6B200EDE480 /* pigletUITests.xctest */;
+			productReference = 1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -598,6 +683,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					1DEB96C42D5D9D6B00A68C21 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					1DF555702BF60B1000BF0DE5 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -670,11 +758,20 @@
 				1DF555702BF60B1000BF0DE5 /* piglet */,
 				1DF555802BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558A2BF60B1200BF0DE5 /* pigletUITests */,
+				1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1DEB96C32D5D9D6B00A68C21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF5556F2BF60B1000BF0DE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,6 +859,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1DEB96C12D5D9D6B00A68C21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DEB96CC2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift in Sources */,
+				1DEB96D02D5D9D6C00A68C21 /* AppIntent.swift in Sources */,
+				1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */,
+				1DEB96CE2D5D9D6C00A68C21 /* BankletWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DF5556D2BF60B1000BF0DE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -832,6 +940,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */;
+			targetProxy = 1DEB96D42D5D9D6D00A68C21 /* PBXContainerItemProxy */;
+		};
 		1DF555832BF60B1200BF0DE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1DF555702BF60B1000BF0DE5 /* piglet */;
@@ -896,6 +1009,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1DEB96D82D5D9D6D00A68C21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BankletWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BankletWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet.BankletWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DEB96D92D5D9D6D00A68C21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BankletWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BankletWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet.BankletWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1DF555932BF60B1200BF0DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1024,6 +1197,7 @@
 		1DF555962BF60B1200BF0DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
@@ -1061,6 +1235,7 @@
 		1DF555972BF60B1200BF0DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
@@ -1192,6 +1367,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1DEB96D72D5D9D6D00A68C21 /* Build configuration list for PBXNativeTarget "BankletWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB96D82D5D9D6D00A68C21 /* Debug */,
+				1DEB96D92D5D9D6D00A68C21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DF5556C2BF60B1000BF0DE5 /* Build configuration list for PBXProject "piglet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

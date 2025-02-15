@@ -159,6 +159,17 @@ struct Home: View {
         }
     }
     
+    func saveWidgetData() {
+        let userDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet")
+        // 存储存钱罐数据
+            userDefaults?.set(piggyBank[0].icon, forKey: "piggyBankIcon")
+            userDefaults?.set(piggyBank[0].name, forKey: "piggyBankName")
+            userDefaults?.set(piggyBank[0].amount, forKey: "piggyBankAmount")
+            userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
+            userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
+        userDefaults?.set(BackgroundImage, forKey: "background")
+    }
+    
     
     var body: some View {
         
@@ -576,6 +587,7 @@ struct Home: View {
         .onDisappear {
             timerCancellable?.cancel()
             timerCancellable = nil // 确保页面消失时停止计时
+            saveWidgetData()
         }
         .onTapGesture {
             if isSilentMode {
