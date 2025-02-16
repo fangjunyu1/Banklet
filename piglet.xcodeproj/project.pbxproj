@@ -77,7 +77,6 @@
 		1D3E14332D4A5D7000747D20 /* Home43.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14272D4A5D7000747D20 /* Home43.json */; };
 		1D3E14342D4A5D7000747D20 /* Home50.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14282D4A5D7000747D20 /* Home50.json */; };
 		1D3E143B2D4A631700747D20 /* Home12.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E143A2D4A631700747D20 /* Home12.json */; };
-		1D3E14412D4A743900747D20 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
 		1D4D1F3D2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */; };
 		1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */; };
 		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
@@ -110,6 +109,8 @@
 		1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C22D264209004B0936 /* PiggyBankData.swift */; };
 		1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */; };
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
+		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
+		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
 		1DEB96C62D5D9D6C00A68C21 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */; };
@@ -319,6 +320,7 @@
 		1DD151C22D264209004B0936 /* PiggyBankData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankData.swift; sourceTree = "<group>"; };
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
+		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
 		1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -539,6 +541,7 @@
 				1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */,
 				1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */,
 				1DEB96D32D5D9D6D00A68C21 /* Info.plist */,
+				1DE25D6C2D622D8700482673 /* Localizable.xcstrings */,
 			);
 			path = BankletWidget;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */,
 				1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +896,7 @@
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
+				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
@@ -904,7 +909,6 @@
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,
 				1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */,
-				1D3E14412D4A743900747D20 /* AnimationScaleConfig.swift in Sources */,
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,

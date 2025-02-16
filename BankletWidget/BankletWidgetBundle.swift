@@ -13,6 +13,6 @@ struct BankletWidgetBundle: WidgetBundle {
     var body: some Widget {
         BankletWidget()
         BankletWidgetBackground()
-        BankletWidgetLiveActivity()
+//        BankletWidgetLiveActivity()
     }
 }

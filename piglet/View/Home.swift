@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import Combine
+import WidgetKit
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -168,6 +169,13 @@ struct Home: View {
             userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
             userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
         userDefaults?.set(BackgroundImage, forKey: "background")
+        
+        
+        // 然后手动触发 Widget 刷新
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidget")
+            WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidgetBackground")
+        }
     }
     
     

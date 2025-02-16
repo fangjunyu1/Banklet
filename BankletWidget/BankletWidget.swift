@@ -7,7 +7,24 @@
 
 import WidgetKit
 import SwiftUI
-
+// 不需要配置的小组件
+struct SimpleProvider: TimelineProvider {
+    func placeholder(in context: Context) -> SimpleProviderEntry {
+        SimpleProviderEntry(date: Date())
+    }
+    
+    func getSnapshot(in context: Context, completion: @escaping (SimpleProviderEntry) -> ()) {
+        let entry = SimpleProviderEntry(date: Date())
+        completion(entry)
+    }
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleProviderEntry>) -> ()) {
+        let entry = SimpleProviderEntry(date: Date())
+        let timeline = Timeline(entries: [entry], policy: .atEnd)
+        completion(timeline)
+    }
+}
+// 不需要配置的小组件
 struct Provider: AppIntentTimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
@@ -32,7 +49,11 @@ struct Provider: AppIntentTimelineProvider {
         return Timeline(entries: entries, policy: .atEnd)
     }
 }
-
+// 不需要配置的小组件
+struct SimpleProviderEntry: TimelineEntry {
+    let date: Date
+}
+// 需要配置的小组件
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
@@ -88,7 +109,7 @@ struct BankletWidgetEntryView : View {
     @State private var piggyBankTargetAmount: Double = 0.0
     @State private var LoopAnimation: String = ""
     
-    var entry: Provider.Entry
+    var entry: SimpleProvider.Entry
     
     var SavingProgress:Double {
         // 防止除以零的错误
@@ -116,11 +137,13 @@ struct BankletWidgetEntryView : View {
                     // 读取主应用存储的存钱罐数据
                     Text("\(piggyBankName)")
                         .foregroundColor(.white)
+                        .widgetAccentable()
                 }
                 .frame(height: height)
                 .frame(maxWidth: .infinity)
                 Spacer()
                 HStack(spacing: 0) {
+                    // 使用 Link 替代 widgetURL
                     Rectangle()
                         .frame(width: 60, height: 40)
                         .foregroundColor(Color(hex:"FF4B00"))
@@ -129,6 +152,7 @@ struct BankletWidgetEntryView : View {
                             Text("\(SavingProgress.formattedWithTwoDecimalPlaces()) %")
                                 .foregroundColor(.white)
                         }
+                    
                     RightTriangle()
                         .frame(width: 10,height:10)
                         .foregroundColor(Color(hex:"FF4B00"))
@@ -155,72 +179,65 @@ struct BankletWidgetEntryView : View {
 }
 
 struct BankletWidgetBackgroundView : View {
-    var entry: Provider.Entry
+    
+    @State private var background: String = "bg0"
+    var entry: SimpleProvider.Entry
     
     var body: some View {
-        VStack {
-            
+        ZStack {
+            Image(background)
+                .resizable()
+                .scaledToFill()
+        }
+        .onAppear {
+            // 读取存钱罐背景
+            let userDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet")
+            background = userDefaults?.string(forKey: "background") ?? "bg0"
         }
     }
 }
-    
+
 struct BankletWidget: Widget {
     @State private var background: String = "bg0"
     let kind: String = "BankletWidget"
     
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: SimpleProvider()) { entry in
             BankletWidgetEntryView(entry: entry)
                 .containerBackground(for: .widget) {
                     Image("WidgetBackground")
                 }
+            
         }
         .supportedFamilies([.systemSmall]) // 支持小尺寸
+        .configurationDisplayName("Progress widget") // 小组件的显示名称
+        .description("Shows the current progress percentage of the piggy bank.") // 小组件的描述
     }
 }
 
 struct BankletWidgetBackground: Widget {
-    @State private var background: String = "bg0"
     let kind: String = "BankletWidgetBackground"
     
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: SimpleProvider()) { entry in
             BankletWidgetBackgroundView(entry: entry)
-                .containerBackground(for: .widget) {
-                    Image(background)
-                        .resizable()
-                        .scaledToFill()
-                }
-                .onAppear {
-                    // 读取存钱罐背景
-                    let userDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet")
-                    background = userDefaults?.string(forKey: "background") ?? "bg0"
-                }
+                .containerBackground(Color.clear,for: .widget)
         }
         .supportedFamilies([.systemSmall]) // 支持小尺寸
+        .configurationDisplayName("Small window background image") // 小组件的显示名称
+        .description("Shows the background image in the application in a small size.") // 小组件的描述
+        .contentMarginsDisabled()
     }
 }
 
-//extension ConfigurationAppIntent {
-//    fileprivate static var smiley: ConfigurationAppIntent {
-//        let intent = ConfigurationAppIntent()
-//        intent.favoriteEmoji = "😀"
-//        return intent
-//    }
-//}
-
 #Preview(as: .systemSmall) {
     BankletWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: ConfigurationAppIntent())
+    SimpleProviderEntry(date: .now)
 }
+
 #Preview(as: .systemSmall) {
     BankletWidgetBackground()
 } timeline: {
-    SimpleEntry(date: .now, configuration: ConfigurationAppIntent())
-}
-#Preview(as: .systemMedium) {
-    BankletWidget()
-} timeline: {
-    SimpleEntry(date: .now, configuration: ConfigurationAppIntent())
+    SimpleProviderEntry(date: .now)
 }
