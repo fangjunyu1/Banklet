@@ -100,6 +100,14 @@
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
+		1DC39C762D6365C00034D24E /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C752D6365C00034D24E /* BankletWatchApp.swift */; };
+		1DC39C782D6365C00034D24E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C772D6365C00034D24E /* ContentView.swift */; };
+		1DC39C7A2D6365C20034D24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC39C792D6365C20034D24E /* Assets.xcassets */; };
+		1DC39C7D2D6365C20034D24E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */; };
+		1DC39C872D6365C20034D24E /* BankletWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */; };
+		1DC39C912D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */; };
+		1DC39C932D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */; };
+		1DC39C962D6365C20034D24E /* BankletWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
@@ -131,6 +139,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1DC39C832D6365C20034D24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteInfo = "BankletWatch Watch App";
+		};
+		1DC39C8D2D6365C20034D24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteInfo = "BankletWatch Watch App";
+		};
+		1DC39C942D6365C20034D24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteInfo = "BankletWatch Watch App";
+		};
 		1DEB96D42D5D9D6D00A68C21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
@@ -155,6 +184,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1DC39C972D6365C20034D24E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1DC39C962D6365C20034D24E /* BankletWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DD140002D5D842100CC6F23 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +348,16 @@
 		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
 		1DC2617A2C10936300A5E311 /* pigletRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pigletRelease.entitlements; sourceTree = "<group>"; };
 		1DC2617B2C1093EA00A5E311 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC39C752D6365C00034D24E /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
+		1DC39C772D6365C00034D24E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1DC39C792D6365C20034D24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
 		1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piglet.entitlements; sourceTree = "<group>"; };
 		1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecordsView.swift; sourceTree = "<group>"; };
@@ -340,6 +390,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1DC39C702D6365C00034D24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C7F2D6365C20034D24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C892D6365C20034D24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DEB96C22D5D9D6B00A68C21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,6 +573,42 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		1DC39C742D6365C00034D24E /* BankletWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				1DC39C752D6365C00034D24E /* BankletWatchApp.swift */,
+				1DC39C772D6365C00034D24E /* ContentView.swift */,
+				1DC39C792D6365C20034D24E /* Assets.xcassets */,
+				1DC39C7B2D6365C20034D24E /* Preview Content */,
+			);
+			path = "BankletWatch Watch App";
+			sourceTree = "<group>";
+		};
+		1DC39C7B2D6365C20034D24E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1DC39C852D6365C20034D24E /* BankletWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */,
+			);
+			path = "BankletWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		1DC39C8F2D6365C20034D24E /* BankletWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */,
+				1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "BankletWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,11 +661,17 @@
 				1DF555842BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558E2BF60B1200BF0DE5 /* pigletUITests */,
 				1DEB96C82D5D9D6C00A68C21 /* BankletWidget */,
+				1DC39C742D6365C00034D24E /* BankletWatch Watch App */,
+				1DC39C852D6365C20034D24E /* BankletWatch Watch AppTests */,
+				1DC39C8F2D6365C20034D24E /* BankletWatch Watch AppUITests */,
 				1D601B842C0747FC00052528 /* Frameworks */,
 				1DB13A332D22E9740006B0A2 /* piglet.app */,
 				1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */,
 				1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */,
 				1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */,
+				1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */,
+				1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */,
+				1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -601,6 +714,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1DC39C722D6365C00034D24E /* BankletWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC39C9E2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */;
+			buildPhases = (
+				1DC39C6F2D6365C00034D24E /* Sources */,
+				1DC39C702D6365C00034D24E /* Frameworks */,
+				1DC39C712D6365C00034D24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BankletWatch Watch App";
+			productName = "BankletWatch Watch App";
+			productReference = 1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DC39C812D6365C20034D24E /* BankletWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC39C9F2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */;
+			buildPhases = (
+				1DC39C7E2D6365C20034D24E /* Sources */,
+				1DC39C7F2D6365C20034D24E /* Frameworks */,
+				1DC39C802D6365C20034D24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC39C842D6365C20034D24E /* PBXTargetDependency */,
+			);
+			name = "BankletWatch Watch AppTests";
+			productName = "BankletWatch Watch AppTests";
+			productReference = 1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DC39C8B2D6365C20034D24E /* BankletWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC39CA02D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */;
+			buildPhases = (
+				1DC39C882D6365C20034D24E /* Sources */,
+				1DC39C892D6365C20034D24E /* Frameworks */,
+				1DC39C8A2D6365C20034D24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC39C8E2D6365C20034D24E /* PBXTargetDependency */,
+			);
+			name = "BankletWatch Watch AppUITests";
+			productName = "BankletWatch Watch AppUITests";
+			productReference = 1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB96D72D5D9D6D00A68C21 /* Build configuration list for PBXNativeTarget "BankletWidgetExtension" */;
@@ -626,11 +792,13 @@
 				1DF5556E2BF60B1000BF0DE5 /* Frameworks */,
 				1DF5556F2BF60B1000BF0DE5 /* Resources */,
 				1DD140002D5D842100CC6F23 /* Embed Foundation Extensions */,
+				1DC39C972D6365C20034D24E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */,
+				1DC39C952D6365C20034D24E /* PBXTargetDependency */,
 			);
 			name = piglet;
 			packageProductDependencies = (
@@ -686,6 +854,17 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					1DC39C722D6365C00034D24E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					1DC39C812D6365C20034D24E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 1DC39C722D6365C00034D24E;
+					};
+					1DC39C8B2D6365C20034D24E = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 1DC39C722D6365C00034D24E;
+					};
 					1DEB96C42D5D9D6B00A68C21 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -762,11 +941,37 @@
 				1DF555802BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558A2BF60B1200BF0DE5 /* pigletUITests */,
 				1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */,
+				1DC39C722D6365C00034D24E /* BankletWatch Watch App */,
+				1DC39C812D6365C20034D24E /* BankletWatch Watch AppTests */,
+				1DC39C8B2D6365C20034D24E /* BankletWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1DC39C712D6365C00034D24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC39C7D2D6365C20034D24E /* Preview Assets.xcassets in Resources */,
+				1DC39C7A2D6365C20034D24E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C802D6365C20034D24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C8A2D6365C20034D24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DEB96C32D5D9D6B00A68C21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -863,6 +1068,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1DC39C6F2D6365C00034D24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC39C782D6365C00034D24E /* ContentView.swift in Sources */,
+				1DC39C762D6365C00034D24E /* BankletWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C7E2D6365C20034D24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC39C872D6365C20034D24E /* BankletWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC39C882D6365C20034D24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC39C932D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+				1DC39C912D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DEB96C12D5D9D6B00A68C21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -944,6 +1175,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1DC39C842D6365C20034D24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
+			targetProxy = 1DC39C832D6365C20034D24E /* PBXContainerItemProxy */;
+		};
+		1DC39C8E2D6365C20034D24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
+			targetProxy = 1DC39C8D2D6365C20034D24E /* PBXContainerItemProxy */;
+		};
+		1DC39C952D6365C20034D24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
+			targetProxy = 1DC39C942D6365C20034D24E /* PBXContainerItemProxy */;
+		};
 		1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */;
@@ -1013,6 +1259,150 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1DC39C982D6365C20034D24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BankletWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BankletWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fangjunyu.piglet;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		1DC39C992D6365C20034D24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BankletWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BankletWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fangjunyu.piglet;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		1DC39C9A2D6365C20034D24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangjunyu.BankletWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankletWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankletWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		1DC39C9B2D6365C20034D24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangjunyu.BankletWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankletWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankletWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		1DC39C9C2D6365C20034D24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangjunyu.BankletWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "BankletWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		1DC39C9D2D6365C20034D24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fangjunyu.BankletWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "BankletWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 		1DEB96D82D5D9D6D00A68C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1371,6 +1761,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1DC39C9E2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC39C982D6365C20034D24E /* Debug */,
+				1DC39C992D6365C20034D24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC39C9F2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC39C9A2D6365C20034D24E /* Debug */,
+				1DC39C9B2D6365C20034D24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC39CA02D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC39C9C2D6365C20034D24E /* Debug */,
+				1DC39C9D2D6365C20034D24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB96D72D5D9D6D00A68C21 /* Build configuration list for PBXNativeTarget "BankletWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
