@@ -106,6 +106,7 @@
 		1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */; };
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
+		1DBF907D2D65AF4D00A50064 /* BankletWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */; };
@@ -114,6 +115,7 @@
 		1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C5A2D37B12A0037153C /* ManagingView.swift */; };
 		1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C02D25B042004B0936 /* PiggyBank.swift */; };
 		1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C22D264209004B0936 /* PiggyBankData.swift */; };
+		1DD3E0792D65CEC800867D4F /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */; };
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
@@ -124,7 +126,6 @@
 		1DEB96C72D5D9D6C00A68C21 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */; };
 		1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */; };
 		1DEB96CC2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */; };
-		1DEB96CE2D5D9D6C00A68C21 /* BankletWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */; };
 		1DEB96D02D5D9D6C00A68C21 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */; };
 		1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DEC98802C10315500BEECFF /* appVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC987F2C10315500BEECFF /* appVersion.swift */; };
@@ -200,6 +201,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				1DD3E0792D65CEC800867D4F /* BankletWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1101,7 +1103,7 @@
 				1DEB96CC2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift in Sources */,
 				1DEB96D02D5D9D6C00A68C21 /* AppIntent.swift in Sources */,
 				1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */,
-				1DEB96CE2D5D9D6C00A68C21 /* BankletWidget.swift in Sources */,
+				1DBF907D2D65AF4D00A50064 /* BankletWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1417,7 +1419,7 @@
 				INFOPLIST_FILE = BankletWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1447,7 +1449,7 @@
 				INFOPLIST_FILE = BankletWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
