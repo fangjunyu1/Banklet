@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Lottie
+
 struct AboutUsView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss

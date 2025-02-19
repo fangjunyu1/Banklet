@@ -81,6 +81,14 @@
 		1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */; };
 		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
+		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
+		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
+		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
+		1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359742D6425F900F7D599 /* Preview Assets.xcassets */; };
+		1D73597F2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */; };
+		1D7359892D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */; };
+		1D73598B2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */; };
+		1D73598E2D6425F900F7D599 /* BankletWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
 		1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */; };
@@ -88,7 +96,6 @@
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
 		1D80E7C92C0BC0D300A79B96 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
-		1D845F462D23DC2B00EDE480 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D845F452D23DC2B00EDE480 /* Lottie */; };
 		1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */; };
 		1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4D2D23F3C000EDE480 /* Home.swift */; };
 		1D88545B2D244B27009DE7AE /* Completed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88545A2D244B27009DE7AE /* Completed.swift */; };
@@ -100,14 +107,6 @@
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
-		1DC39C762D6365C00034D24E /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C752D6365C00034D24E /* BankletWatchApp.swift */; };
-		1DC39C782D6365C00034D24E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C772D6365C00034D24E /* ContentView.swift */; };
-		1DC39C7A2D6365C20034D24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC39C792D6365C20034D24E /* Assets.xcassets */; };
-		1DC39C7D2D6365C20034D24E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */; };
-		1DC39C872D6365C20034D24E /* BankletWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */; };
-		1DC39C912D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */; };
-		1DC39C932D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */; };
-		1DC39C962D6365C20034D24E /* BankletWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
@@ -128,8 +127,8 @@
 		1DEB96CE2D5D9D6C00A68C21 /* BankletWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */; };
 		1DEB96D02D5D9D6C00A68C21 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CF2D5D9D6C00A68C21 /* AppIntent.swift */; };
 		1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
-		1DEB96D62D5D9D6D00A68C21 /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DEC98802C10315500BEECFF /* appVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC987F2C10315500BEECFF /* appVersion.swift */; };
+		1DF329332D6442B8005FBCE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1DF329322D6442B8005FBCE5 /* Lottie */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
 		1DF555862BF60B1200BF0DE5 /* pigletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555852BF60B1200BF0DE5 /* pigletTests.swift */; };
@@ -139,25 +138,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1DC39C832D6365C20034D24E /* PBXContainerItemProxy */ = {
+		1D73597B2D6425F900F7D599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteGlobalIDString = 1D73596A2D6425F700F7D599;
 			remoteInfo = "BankletWatch Watch App";
 		};
-		1DC39C8D2D6365C20034D24E /* PBXContainerItemProxy */ = {
+		1D7359852D6425F900F7D599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteGlobalIDString = 1D73596A2D6425F700F7D599;
 			remoteInfo = "BankletWatch Watch App";
 		};
-		1DC39C942D6365C20034D24E /* PBXContainerItemProxy */ = {
+		1D73598C2D6425F900F7D599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1DF555692BF60B1000BF0DE5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DC39C722D6365C00034D24E;
+			remoteGlobalIDString = 1D73596A2D6425F700F7D599;
 			remoteInfo = "BankletWatch Watch App";
 		};
 		1DEB96D42D5D9D6D00A68C21 /* PBXContainerItemProxy */ = {
@@ -190,7 +189,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				1DC39C962D6365C20034D24E /* BankletWatch Watch App.app in Embed Watch Content */,
+				1D73598E2D6425F900F7D599 /* BankletWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +200,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1DEB96D62D5D9D6D00A68C21 /* BankletWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,8 +314,23 @@
 		1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseSimplifiedView.storyboard; sourceTree = "<group>"; };
 		1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseTraditionalView.storyboard; sourceTree = "<group>"; };
 		1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
+		1D585B462D63856700ABABB0 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D585B482D63856700ABABB0 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D585B492D63856700ABABB0 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
+		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D7359742D6425F900F7D599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D7359982D6428A200F7D599 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.5.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredAppsView.swift; sourceTree = "<group>"; };
@@ -339,25 +352,12 @@
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
 		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
-		1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankletWidgetExtension.entitlements; sourceTree = "<group>"; };
-		1DB13A332D22E9740006B0A2 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPage.swift; sourceTree = "<group>"; };
 		1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
 		1DC2617A2C10936300A5E311 /* pigletRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pigletRelease.entitlements; sourceTree = "<group>"; };
 		1DC2617B2C1093EA00A5E311 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC39C752D6365C00034D24E /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
-		1DC39C772D6365C00034D24E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1DC39C792D6365C20034D24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
-		1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
 		1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piglet.entitlements; sourceTree = "<group>"; };
 		1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessRecordsView.swift; sourceTree = "<group>"; };
@@ -373,7 +373,6 @@
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
-		1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetBundle.swift; sourceTree = "<group>"; };
 		1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidget.swift; sourceTree = "<group>"; };
@@ -390,21 +389,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1DC39C702D6365C00034D24E /* Frameworks */ = {
+		1D7359682D6425F700F7D599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C7F2D6365C20034D24E /* Frameworks */ = {
+		1D7359772D6425F900F7D599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C892D6365C20034D24E /* Frameworks */ = {
+		1D7359812D6425F900F7D599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,7 +425,7 @@
 			files = (
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
-				1D845F462D23DC2B00EDE480 /* Lottie in Frameworks */,
+				1DF329332D6442B8005FBCE5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +492,7 @@
 		1D601B842C0747FC00052528 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D7359982D6428A200F7D599 /* WatchKit.framework */,
 				1DC2617B2C1093EA00A5E311 /* MessageUI.framework */,
 				1D601B852C0747FD00052528 /* StoreKit.framework */,
 				1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */,
@@ -507,6 +507,42 @@
 				1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		1D73596C2D6425F700F7D599 /* BankletWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */,
+				1D73596F2D6425F700F7D599 /* ContentView.swift */,
+				1D7359712D6425F900F7D599 /* Assets.xcassets */,
+				1D7359732D6425F900F7D599 /* Preview Content */,
+			);
+			path = "BankletWatch Watch App";
+			sourceTree = "<group>";
+		};
+		1D7359732D6425F900F7D599 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1D7359742D6425F900F7D599 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1D73597D2D6425F900F7D599 /* BankletWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */,
+			);
+			path = "BankletWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		1D7359872D6425F900F7D599 /* BankletWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */,
+				1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "BankletWatch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
@@ -573,42 +609,6 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		1DC39C742D6365C00034D24E /* BankletWatch Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				1DC39C752D6365C00034D24E /* BankletWatchApp.swift */,
-				1DC39C772D6365C00034D24E /* ContentView.swift */,
-				1DC39C792D6365C20034D24E /* Assets.xcassets */,
-				1DC39C7B2D6365C20034D24E /* Preview Content */,
-			);
-			path = "BankletWatch Watch App";
-			sourceTree = "<group>";
-		};
-		1DC39C7B2D6365C20034D24E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1DC39C7C2D6365C20034D24E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1DC39C852D6365C20034D24E /* BankletWatch Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				1DC39C862D6365C20034D24E /* BankletWatch_Watch_AppTests.swift */,
-			);
-			path = "BankletWatch Watch AppTests";
-			sourceTree = "<group>";
-		};
-		1DC39C8F2D6365C20034D24E /* BankletWatch Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1DC39C902D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift */,
-				1DC39C922D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "BankletWatch Watch AppUITests";
-			sourceTree = "<group>";
-		};
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,17 +661,17 @@
 				1DF555842BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558E2BF60B1200BF0DE5 /* pigletUITests */,
 				1DEB96C82D5D9D6C00A68C21 /* BankletWidget */,
-				1DC39C742D6365C00034D24E /* BankletWatch Watch App */,
-				1DC39C852D6365C20034D24E /* BankletWatch Watch AppTests */,
-				1DC39C8F2D6365C20034D24E /* BankletWatch Watch AppUITests */,
+				1D73596C2D6425F700F7D599 /* BankletWatch Watch App */,
+				1D73597D2D6425F900F7D599 /* BankletWatch Watch AppTests */,
+				1D7359872D6425F900F7D599 /* BankletWatch Watch AppUITests */,
 				1D601B842C0747FC00052528 /* Frameworks */,
-				1DB13A332D22E9740006B0A2 /* piglet.app */,
-				1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */,
-				1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */,
-				1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */,
-				1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */,
-				1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */,
-				1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */,
+				1D585B462D63856700ABABB0 /* piglet.app */,
+				1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */,
+				1D585B482D63856700ABABB0 /* pigletTests.xctest */,
+				1D585B492D63856700ABABB0 /* pigletUITests.xctest */,
+				1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */,
+				1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */,
+				1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -714,13 +714,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DC39C722D6365C00034D24E /* BankletWatch Watch App */ = {
+		1D73596A2D6425F700F7D599 /* BankletWatch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC39C9E2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */;
+			buildConfigurationList = 1D73598F2D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */;
 			buildPhases = (
-				1DC39C6F2D6365C00034D24E /* Sources */,
-				1DC39C702D6365C00034D24E /* Frameworks */,
-				1DC39C712D6365C00034D24E /* Resources */,
+				1D7359672D6425F700F7D599 /* Sources */,
+				1D7359682D6425F700F7D599 /* Frameworks */,
+				1D7359692D6425F700F7D599 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -728,43 +728,43 @@
 			);
 			name = "BankletWatch Watch App";
 			productName = "BankletWatch Watch App";
-			productReference = 1DC39C732D6365C00034D24E /* BankletWatch Watch App.app */;
+			productReference = 1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1DC39C812D6365C20034D24E /* BankletWatch Watch AppTests */ = {
+		1D7359792D6425F900F7D599 /* BankletWatch Watch AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC39C9F2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */;
+			buildConfigurationList = 1D7359922D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */;
 			buildPhases = (
-				1DC39C7E2D6365C20034D24E /* Sources */,
-				1DC39C7F2D6365C20034D24E /* Frameworks */,
-				1DC39C802D6365C20034D24E /* Resources */,
+				1D7359762D6425F900F7D599 /* Sources */,
+				1D7359772D6425F900F7D599 /* Frameworks */,
+				1D7359782D6425F900F7D599 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1DC39C842D6365C20034D24E /* PBXTargetDependency */,
+				1D73597C2D6425F900F7D599 /* PBXTargetDependency */,
 			);
 			name = "BankletWatch Watch AppTests";
 			productName = "BankletWatch Watch AppTests";
-			productReference = 1DC39C822D6365C20034D24E /* BankletWatch Watch AppTests.xctest */;
+			productReference = 1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1DC39C8B2D6365C20034D24E /* BankletWatch Watch AppUITests */ = {
+		1D7359832D6425F900F7D599 /* BankletWatch Watch AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC39CA02D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */;
+			buildConfigurationList = 1D7359952D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */;
 			buildPhases = (
-				1DC39C882D6365C20034D24E /* Sources */,
-				1DC39C892D6365C20034D24E /* Frameworks */,
-				1DC39C8A2D6365C20034D24E /* Resources */,
+				1D7359802D6425F900F7D599 /* Sources */,
+				1D7359812D6425F900F7D599 /* Frameworks */,
+				1D7359822D6425F900F7D599 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1DC39C8E2D6365C20034D24E /* PBXTargetDependency */,
+				1D7359862D6425F900F7D599 /* PBXTargetDependency */,
 			);
 			name = "BankletWatch Watch AppUITests";
 			productName = "BankletWatch Watch AppUITests";
-			productReference = 1DC39C8C2D6365C20034D24E /* BankletWatch Watch AppUITests.xctest */;
+			productReference = 1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */ = {
@@ -781,7 +781,7 @@
 			);
 			name = BankletWidgetExtension;
 			productName = BankletWidgetExtension;
-			productReference = 1DEB96C52D5D9D6B00A68C21 /* BankletWidgetExtension.appex */;
+			productReference = 1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		1DF555702BF60B1000BF0DE5 /* piglet */ = {
@@ -798,14 +798,14 @@
 			);
 			dependencies = (
 				1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */,
-				1DC39C952D6365C20034D24E /* PBXTargetDependency */,
+				1D73598D2D6425F900F7D599 /* PBXTargetDependency */,
 			);
 			name = piglet;
 			packageProductDependencies = (
-				1D845F452D23DC2B00EDE480 /* Lottie */,
+				1DF329322D6442B8005FBCE5 /* Lottie */,
 			);
 			productName = piglet;
-			productReference = 1DB13A332D22E9740006B0A2 /* piglet.app */;
+			productReference = 1D585B462D63856700ABABB0 /* piglet.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1DF555802BF60B1200BF0DE5 /* pigletTests */ = {
@@ -823,7 +823,7 @@
 			);
 			name = pigletTests;
 			productName = pigletTests;
-			productReference = 1DAB2FE62D5F2E3E00573E70 /* pigletTests.xctest */;
+			productReference = 1D585B482D63856700ABABB0 /* pigletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1DF5558A2BF60B1200BF0DE5 /* pigletUITests */ = {
@@ -841,7 +841,7 @@
 			);
 			name = pigletUITests;
 			productName = pigletUITests;
-			productReference = 1DAB2FE72D5F2E3E00573E70 /* pigletUITests.xctest */;
+			productReference = 1D585B492D63856700ABABB0 /* pigletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -854,16 +854,16 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					1DC39C722D6365C00034D24E = {
+					1D73596A2D6425F700F7D599 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					1DC39C812D6365C20034D24E = {
+					1D7359792D6425F900F7D599 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 1DC39C722D6365C00034D24E;
+						TestTargetID = 1D73596A2D6425F700F7D599;
 					};
-					1DC39C8B2D6365C20034D24E = {
+					1D7359832D6425F900F7D599 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 1DC39C722D6365C00034D24E;
+						TestTargetID = 1D73596A2D6425F700F7D599;
 					};
 					1DEB96C42D5D9D6B00A68C21 = {
 						CreatedOnToolsVersion = 15.4;
@@ -931,7 +931,7 @@
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
-				1D845F442D23DC2B00EDE480 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 1DF555682BF60B1000BF0DE5;
 			projectDirPath = "";
@@ -941,31 +941,31 @@
 				1DF555802BF60B1200BF0DE5 /* pigletTests */,
 				1DF5558A2BF60B1200BF0DE5 /* pigletUITests */,
 				1DEB96C42D5D9D6B00A68C21 /* BankletWidgetExtension */,
-				1DC39C722D6365C00034D24E /* BankletWatch Watch App */,
-				1DC39C812D6365C20034D24E /* BankletWatch Watch AppTests */,
-				1DC39C8B2D6365C20034D24E /* BankletWatch Watch AppUITests */,
+				1D73596A2D6425F700F7D599 /* BankletWatch Watch App */,
+				1D7359792D6425F900F7D599 /* BankletWatch Watch AppTests */,
+				1D7359832D6425F900F7D599 /* BankletWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1DC39C712D6365C00034D24E /* Resources */ = {
+		1D7359692D6425F700F7D599 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC39C7D2D6365C20034D24E /* Preview Assets.xcassets in Resources */,
-				1DC39C7A2D6365C20034D24E /* Assets.xcassets in Resources */,
+				1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */,
+				1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C802D6365C20034D24E /* Resources */ = {
+		1D7359782D6425F900F7D599 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C8A2D6365C20034D24E /* Resources */ = {
+		1D7359822D6425F900F7D599 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1068,29 +1068,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DC39C6F2D6365C00034D24E /* Sources */ = {
+		1D7359672D6425F700F7D599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC39C782D6365C00034D24E /* ContentView.swift in Sources */,
-				1DC39C762D6365C00034D24E /* BankletWatchApp.swift in Sources */,
+				1D7359702D6425F700F7D599 /* ContentView.swift in Sources */,
+				1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C7E2D6365C20034D24E /* Sources */ = {
+		1D7359762D6425F900F7D599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC39C872D6365C20034D24E /* BankletWatch_Watch_AppTests.swift in Sources */,
+				1D73597F2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC39C882D6365C20034D24E /* Sources */ = {
+		1D7359802D6425F900F7D599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC39C932D6365C20034D24E /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
-				1DC39C912D6365C20034D24E /* BankletWatch_Watch_AppUITests.swift in Sources */,
+				1D73598B2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+				1D7359892D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,20 +1175,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1DC39C842D6365C20034D24E /* PBXTargetDependency */ = {
+		1D73597C2D6425F900F7D599 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
-			targetProxy = 1DC39C832D6365C20034D24E /* PBXContainerItemProxy */;
+			target = 1D73596A2D6425F700F7D599 /* BankletWatch Watch App */;
+			targetProxy = 1D73597B2D6425F900F7D599 /* PBXContainerItemProxy */;
 		};
-		1DC39C8E2D6365C20034D24E /* PBXTargetDependency */ = {
+		1D7359862D6425F900F7D599 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
-			targetProxy = 1DC39C8D2D6365C20034D24E /* PBXContainerItemProxy */;
+			target = 1D73596A2D6425F700F7D599 /* BankletWatch Watch App */;
+			targetProxy = 1D7359852D6425F900F7D599 /* PBXContainerItemProxy */;
 		};
-		1DC39C952D6365C20034D24E /* PBXTargetDependency */ = {
+		1D73598D2D6425F900F7D599 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1DC39C722D6365C00034D24E /* BankletWatch Watch App */;
-			targetProxy = 1DC39C942D6365C20034D24E /* PBXContainerItemProxy */;
+			target = 1D73596A2D6425F700F7D599 /* BankletWatch Watch App */;
+			targetProxy = 1D73598C2D6425F900F7D599 /* PBXContainerItemProxy */;
 		};
 		1DEB96D52D5D9D6D00A68C21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1259,7 +1259,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DC39C982D6365C20034D24E /* Debug */ = {
+		1D7359902D6425F900F7D599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1290,7 +1290,7 @@
 			};
 			name = Debug;
 		};
-		1DC39C992D6365C20034D24E /* Release */ = {
+		1D7359912D6425F900F7D599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1321,7 +1321,7 @@
 			};
 			name = Release;
 		};
-		1DC39C9A2D6365C20034D24E /* Debug */ = {
+		1D7359932D6425F900F7D599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1342,7 +1342,7 @@
 			};
 			name = Debug;
 		};
-		1DC39C9B2D6365C20034D24E /* Release */ = {
+		1D7359942D6425F900F7D599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1363,7 +1363,7 @@
 			};
 			name = Release;
 		};
-		1DC39C9C2D6365C20034D24E /* Debug */ = {
+		1D7359962D6425F900F7D599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1383,7 +1383,7 @@
 			};
 			name = Debug;
 		};
-		1DC39C9D2D6365C20034D24E /* Release */ = {
+		1D7359972D6425F900F7D599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1761,29 +1761,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DC39C9E2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */ = {
+		1D73598F2D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC39C982D6365C20034D24E /* Debug */,
-				1DC39C992D6365C20034D24E /* Release */,
+				1D7359902D6425F900F7D599 /* Debug */,
+				1D7359912D6425F900F7D599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DC39C9F2D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */ = {
+		1D7359922D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC39C9A2D6365C20034D24E /* Debug */,
-				1DC39C9B2D6365C20034D24E /* Release */,
+				1D7359932D6425F900F7D599 /* Debug */,
+				1D7359942D6425F900F7D599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DC39CA02D6365C20034D24E /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */ = {
+		1D7359952D6425F900F7D599 /* Build configuration list for PBXNativeTarget "BankletWatch Watch AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC39C9C2D6365C20034D24E /* Debug */,
-				1DC39C9D2D6365C20034D24E /* Release */,
+				1D7359962D6425F900F7D599 /* Debug */,
+				1D7359972D6425F900F7D599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1836,20 +1836,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1D845F442D23DC2B00EDE480 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.0;
+				minimumVersion = 4.5.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1D845F452D23DC2B00EDE480 /* Lottie */ = {
+		1DF329322D6442B8005FBCE5 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1D845F442D23DC2B00EDE480 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

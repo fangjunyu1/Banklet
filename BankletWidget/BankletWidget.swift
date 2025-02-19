@@ -27,9 +27,9 @@ struct BankletWidgetProvider: TimelineProvider {
         let currentDate = Date()
         
         // 仅生成当前时间点的条目
-            var entry = loadBankletData()
-            entry.date = currentDate
-            entries.append(entry)
+        var entry = loadBankletData()
+        entry.date = currentDate
+        entries.append(entry)
 
         // 定义更新时间策略为“每次到期后”更新
         let timeline = Timeline(entries: entries, policy: .after(Date().addingTimeInterval(3600)))

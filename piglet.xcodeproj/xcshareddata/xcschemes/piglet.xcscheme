@@ -52,6 +52,28 @@
                ReferencedContainer = "container:piglet.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1D7359792D6425F900F7D599"
+               BuildableName = "BankletWatch Watch AppTests.xctest"
+               BlueprintName = "BankletWatch Watch AppTests"
+               ReferencedContainer = "container:piglet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1D7359832D6425F900F7D599"
+               BuildableName = "BankletWatch Watch AppUITests.xctest"
+               BlueprintName = "BankletWatch Watch AppUITests"
+               ReferencedContainer = "container:piglet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -68,12 +90,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1D73596A2D6425F700F7D599"
+            BuildableName = "BankletWatch Watch App.app"
+            BlueprintName = "BankletWatch Watch App"
+            ReferencedContainer = "container:piglet.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
             BlueprintIdentifier = "1DF555702BF60B1000BF0DE5"
             BuildableName = "piglet.app"
             BlueprintName = "piglet"
             ReferencedContainer = "container:piglet.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "IDEPreferLogStreaming"
