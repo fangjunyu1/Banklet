@@ -11,15 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView {
-                Text("Tab 1")
-                    .tabItem {
-                        Text("First")
-                    }
-                Text("Tab 2")
-                    .tabItem {
-                        Text("Second")
-                    }
+                Home()
+                ProverbView()
+                List()
             }
+            
         }
         .padding()
     }
@@ -27,4 +23,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(WatchSessionDelegate())
 }

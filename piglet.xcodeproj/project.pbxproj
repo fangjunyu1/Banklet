@@ -10,6 +10,9 @@
 		1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */; };
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
+		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
+		1D12F0762D67460600EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0752D67460600EEF511 /* WatchConnectivity.framework */; };
+		1D12F0772D67477100EEF511 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7359982D6428A200F7D599 /* WatchKit.framework */; };
 		1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400AF2D30F15700DC51C0 /* ThanksView.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
 		1D1400B42D31119E00DC51C0 /* Thanks2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B32D31119E00DC51C0 /* Thanks2View.swift */; };
@@ -120,8 +123,12 @@
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
 		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
+		1DE3F8852D66D37B0018F233 /* WCSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
+		1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8D82D66F0BA009F4C50 /* Home.swift */; };
+		1DE7E8DB2D66F0E9009F4C50 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */; };
+		1DE7E8DE2D66F102009F4C50 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8DD2D66F102009F4C50 /* List.swift */; };
 		1DEB96C62D5D9D6C00A68C21 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */; };
 		1DEB96C72D5D9D6C00A68C21 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */; };
 		1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */; };
@@ -246,6 +253,8 @@
 		1D0FA7032D225A9C00ABF5F6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7042D225A9D00ABF5F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		1D12F0752D67460600EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		1D1400AF2D30F15700DC51C0 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		1D1400B32D31119E00DC51C0 /* Thanks2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thanks2View.swift; sourceTree = "<group>"; };
@@ -373,8 +382,12 @@
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
+		1DE7E8D82D66F0BA009F4C50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
+		1DE7E8DD2D66F102009F4C50 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetBundle.swift; sourceTree = "<group>"; };
 		1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		1DEB96CD2D5D9D6C00A68C21 /* BankletWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidget.swift; sourceTree = "<group>"; };
@@ -395,6 +408,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D12F0762D67460600EEF511 /* WatchConnectivity.framework in Frameworks */,
+				1D12F0772D67477100EEF511 /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
+				1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
 				1DF329332D6442B8005FBCE5 /* Lottie in Frameworks */,
 			);
@@ -494,6 +510,8 @@
 		1D601B842C0747FC00052528 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */,
+				1D12F0752D67460600EEF511 /* WatchConnectivity.framework */,
 				1D7359982D6428A200F7D599 /* WatchKit.framework */,
 				1DC2617B2C1093EA00A5E311 /* MessageUI.framework */,
 				1D601B852C0747FD00052528 /* StoreKit.framework */,
@@ -514,6 +532,7 @@
 		1D73596C2D6425F700F7D599 /* BankletWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				1DE7E8DC2D66F0EF009F4C50 /* View */,
 				1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */,
 				1D73596F2D6425F700F7D599 /* ContentView.swift */,
 				1D7359712D6425F900F7D599 /* Assets.xcassets */,
@@ -626,6 +645,7 @@
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
+				1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -639,6 +659,16 @@
 				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DE7E8DC2D66F0EF009F4C50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7E8D82D66F0BA009F4C50 /* Home.swift */,
+				1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */,
+				1DE7E8DD2D66F102009F4C50 /* List.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1DEB96C82D5D9D6C00A68C21 /* BankletWidget */ = {
@@ -1075,7 +1105,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7359702D6425F700F7D599 /* ContentView.swift in Sources */,
+				1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */,
 				1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */,
+				1DE7E8DE2D66F102009F4C50 /* List.swift in Sources */,
+				1DE7E8DB2D66F0E9009F4C50 /* ProverbView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,6 +1177,7 @@
 				1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */,
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
+				1DE3F8852D66D37B0018F233 /* WCSessionDelegateImpl.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
@@ -1605,9 +1639,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1643,9 +1679,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

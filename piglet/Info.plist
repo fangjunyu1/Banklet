@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
-	<key>NSFaceIDUsageDescription</key>
-	<string></string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreenView</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -20,6 +12,11 @@
 				<string>Banklet</string>
 			</array>
 		</dict>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
 	</array>
 </dict>
 </plist>

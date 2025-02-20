@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import Combine
 import WidgetKit
+import WatchConnectivity
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -178,9 +179,35 @@ struct Home: View {
         }
     }
     
+    // 将 PiggyBank 数据发送到 WatchOS
+    func sendPiggyBankDataToWatch() {
+        print("进入：sendPiggyBankDataToWatch")
+        // 确保 WCSession 激活
+        if WCSession.default.isReachable {
+            print("iOS与Watch链接成功")
+            // 创建存钱罐数据字典
+            let piggyBankData: [[String: Any]] = allPiggyBank.map { bank in
+                return [
+                    "name": bank.name,
+                    "icon": bank.icon,
+                    "amount": bank.amount,
+                    "targetAmount": bank.targetAmount,
+                    "isPrimary": bank.isPrimary
+                ]
+            }
+            print("piggyBankData:\(piggyBankData)")
+            print("发送数据到 WatchOS")
+            // 将数组包装在字典中
+            let wcSessionPiggyBanks: [String: Any] = ["piggyBanks": piggyBankData]
+            WCSession.default.transferUserInfo(wcSessionPiggyBanks)
+            print("Data sent: \(wcSessionPiggyBanks)")
+        } else {
+            print("iOS与Watch未连接，isReachable = false")
+        }
+    }
+    
     
     var body: some View {
-        
         NavigationStack {
             GeometryReader { geometry in
                 // 通过 `geometry` 获取布局信息
@@ -584,6 +611,10 @@ struct Home: View {
                     .background(
                         backgroundImageView()
                     )
+                    .onTapGesture {
+                        // 将数据发送到Watch
+                        sendPiggyBankDataToWatch()
+                    }
                 }
             }
         }
