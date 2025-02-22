@@ -7,23 +7,11 @@
 
 import SwiftUI
 import SwiftData
-import WatchConnectivity
 
 @main
 struct pigletApp: App {
     @StateObject var iapManager = IAPManager.shared
     @State private var modelConfigManager = ModelConfigManager()
-    @State private var wcSessionDelegateImpl = WCSessionDelegateImpl()
-    
-    init() {
-        if WCSession.isSupported() {
-            print("当前设备支持 WCSession 。")
-            WCSession.default.delegate = wcSessionDelegateImpl // 设置 WCSessionDelegate
-            WCSession.default.activate()
-        } else {
-            print("当前设备不支持 WCSession.")
-        }
-    }
     
     
     var body: some Scene {
@@ -37,7 +25,6 @@ struct pigletApp: App {
         }
         .environment(modelConfigManager)
         .environmentObject(iapManager)
-        .environment(wcSessionDelegateImpl)
         .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
     }
 }

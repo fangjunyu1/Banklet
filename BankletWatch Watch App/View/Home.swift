@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WatchConnectivity
 
 struct CircularProgressBar: View {
     var progress: CGFloat  // 进度值，范围从 0 到 1
@@ -31,15 +30,13 @@ struct CircularProgressBar: View {
 }
 
 struct Home: View {
-    @Environment(WatchSessionDelegate.self) var wcSessionDelegateImpl // 从环境中读取 Person
     
-    
+    @Environment(PiggyBankViewModel.self) var piggyBank
     var body: some View {
         VStack {
-            
-            if !wcSessionDelegateImpl.piggyBanks.isEmpty {
+            if !piggyBank.piggyBanks.isEmpty {
                 var mainPiggyBank: PiggyBank {
-                    return wcSessionDelegateImpl.piggyBanks.filter({ $0.isPrimary == true }).first!
+                    return piggyBank.piggyBanks.filter({ $0.isPrimary == true }).first!
                 }
                 var SavingPercentage: Double {
                     // 使用 if let 来解包 optional 值
@@ -62,13 +59,6 @@ struct Home: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100)
-                    .onTapGesture {
-                        if WCSession.default.isReachable {
-                            print("iOS与Watch链接成功")
-                        } else {
-                            print("iOS与Watch未连接")
-                        }
-                    }
             }
         }
     }
@@ -76,5 +66,5 @@ struct Home: View {
 
 #Preview {
     Home()
-        .environment(WatchSessionDelegate())
+        .environment(PiggyBankViewModel())
 }

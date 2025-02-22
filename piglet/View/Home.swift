@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 import Combine
 import WidgetKit
-import WatchConnectivity
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -170,8 +169,7 @@ struct Home: View {
         userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
         userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
         userDefaults?.set(BackgroundImage, forKey: "background")
-        
-        
+                
         // 然后手动触发 Widget 刷新
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidget")
@@ -179,33 +177,16 @@ struct Home: View {
         }
     }
     
-    // 将 PiggyBank 数据发送到 WatchOS
-    func sendPiggyBankDataToWatch() {
-        print("进入：sendPiggyBankDataToWatch")
-        // 确保 WCSession 激活
-        if WCSession.default.isReachable {
-            print("iOS与Watch链接成功")
-            // 创建存钱罐数据字典
-            let piggyBankData: [[String: Any]] = allPiggyBank.map { bank in
-                return [
-                    "name": bank.name,
-                    "icon": bank.icon,
-                    "amount": bank.amount,
-                    "targetAmount": bank.targetAmount,
-                    "isPrimary": bank.isPrimary
-                ]
-            }
-            print("piggyBankData:\(piggyBankData)")
-            print("发送数据到 WatchOS")
-            // 将数组包装在字典中
-            let wcSessionPiggyBanks: [String: Any] = ["piggyBanks": piggyBankData]
-            WCSession.default.transferUserInfo(wcSessionPiggyBanks)
-            print("Data sent: \(wcSessionPiggyBanks)")
-        } else {
-            print("iOS与Watch未连接，isReachable = false")
+    func checkStoredData() {
+        print("group.com.fangjunyu.piglet")
+        if let appGroupDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet") {
+            let storedData = appGroupDefaults.array(forKey: "piggyBanks")
+            print("存储的数据：\(storedData ?? [])")
+            
+            let watchData = appGroupDefaults.string(forKey: "Watch")
+            print("测试Watch单值存储的数据：\(watchData)")
         }
     }
-    
     
     var body: some View {
         NavigationStack {
@@ -611,10 +592,6 @@ struct Home: View {
                     .background(
                         backgroundImageView()
                     )
-                    .onTapGesture {
-                        // 将数据发送到Watch
-                        sendPiggyBankDataToWatch()
-                    }
                 }
             }
         }

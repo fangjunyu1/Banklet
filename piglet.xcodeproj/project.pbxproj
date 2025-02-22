@@ -84,6 +84,8 @@
 		1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */; };
 		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
+		1D6445CD2D6833A800D3BF8F /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6445CC2D6833A800D3BF8F /* PiggyBank.swift */; };
+		1D6445D02D6836C100D3BF8F /* PiggyBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6445CF2D6836C000D3BF8F /* PiggyBankViewModel.swift */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
@@ -123,7 +125,6 @@
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
 		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
-		1DE3F8852D66D37B0018F233 /* WCSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
 		1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8D82D66F0BA009F4C50 /* Home.swift */; };
@@ -331,6 +332,9 @@
 		1D585B492D63856700ABABB0 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1D6445CA2D68312900D3BF8F /* BankletWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BankletWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		1D6445CC2D6833A800D3BF8F /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
+		1D6445CF2D6836C000D3BF8F /* PiggyBankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankViewModel.swift; sourceTree = "<group>"; };
 		1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -382,7 +386,6 @@
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
 		1DE7E8D82D66F0BA009F4C50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -521,6 +524,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1D6445CB2D68339900D3BF8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D6445CC2D6833A800D3BF8F /* PiggyBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D6445CE2D6836AD00D3BF8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D6445CF2D6836C000D3BF8F /* PiggyBankViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1D64EFD22D21661F00832FB4 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +551,9 @@
 		1D73596C2D6425F700F7D599 /* BankletWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				1D6445CA2D68312900D3BF8F /* BankletWatch Watch App.entitlements */,
+				1D6445CE2D6836AD00D3BF8F /* ViewModel */,
+				1D6445CB2D68339900D3BF8F /* Model */,
 				1DE7E8DC2D66F0EF009F4C50 /* View */,
 				1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */,
 				1D73596F2D6425F700F7D599 /* ContentView.swift */,
@@ -645,7 +667,6 @@
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
-				1DE3F8842D66D37B0018F233 /* WCSessionDelegateImpl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1106,8 +1127,10 @@
 			files = (
 				1D7359702D6425F700F7D599 /* ContentView.swift in Sources */,
 				1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */,
+				1D6445CD2D6833A800D3BF8F /* PiggyBank.swift in Sources */,
 				1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */,
 				1DE7E8DE2D66F102009F4C50 /* List.swift in Sources */,
+				1D6445D02D6836C100D3BF8F /* PiggyBankViewModel.swift in Sources */,
 				1DE7E8DB2D66F0E9009F4C50 /* ProverbView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1177,7 +1200,6 @@
 				1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */,
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
-				1DE3F8852D66D37B0018F233 /* WCSessionDelegateImpl.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
@@ -1300,6 +1322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BankletWatch Watch App/BankletWatch Watch App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1331,6 +1354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BankletWatch Watch App/BankletWatch Watch App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
