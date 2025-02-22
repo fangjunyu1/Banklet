@@ -163,28 +163,19 @@ struct Home: View {
     func saveWidgetData() {
         let userDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet")
         // 存储存钱罐数据
-        userDefaults?.set(piggyBank[0].icon, forKey: "piggyBankIcon")
-        userDefaults?.set(piggyBank[0].name, forKey: "piggyBankName")
-        userDefaults?.set(piggyBank[0].amount, forKey: "piggyBankAmount")
-        userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
-        userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
-        userDefaults?.set(BackgroundImage, forKey: "background")
-                
-        // 然后手动触发 Widget 刷新
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidget")
-            WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidgetBackground")
-        }
-    }
-    
-    func checkStoredData() {
-        print("group.com.fangjunyu.piglet")
-        if let appGroupDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet") {
-            let storedData = appGroupDefaults.array(forKey: "piggyBanks")
-            print("存储的数据：\(storedData ?? [])")
-            
-            let watchData = appGroupDefaults.string(forKey: "Watch")
-            print("测试Watch单值存储的数据：\(watchData)")
+        if !piggyBank.isEmpty {
+            userDefaults?.set(piggyBank[0].icon, forKey: "piggyBankIcon")
+            userDefaults?.set(piggyBank[0].name, forKey: "piggyBankName")
+            userDefaults?.set(piggyBank[0].amount, forKey: "piggyBankAmount")
+            userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
+            userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
+            userDefaults?.set(BackgroundImage, forKey: "background")
+                    
+            // 然后手动触发 Widget 刷新
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidget")
+                WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidgetBackground")
+            }
         }
     }
     

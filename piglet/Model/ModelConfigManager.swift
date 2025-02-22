@@ -7,14 +7,18 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
+
 //@AppStorage("isSynciCloud") private var isSynciCloud:Bool =
 @Observable
 class ModelConfigManager {
+    
     var cloudKitMode: CloudKitMode = .privateDatabase {
         didSet {
             updateConfiguration()
         }
     }
+    
     var currentConfiguration: ModelConfiguration = ModelConfiguration(
         "PrivateDatabaseContainer",
         cloudKitDatabase: .private("iCloud.com.fangjunyu.piglet")

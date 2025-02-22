@@ -349,6 +349,7 @@
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredAppsView.swift; sourceTree = "<group>"; };
+		1D7A6B682D6A0B2E00C474C0 /* BankletWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BankletWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1D7D4D3E2D224F45001EE006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D7D4D402D224F4F001EE006 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D7D4D412D224F50001EE006 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -551,6 +552,7 @@
 		1D73596C2D6425F700F7D599 /* BankletWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				1D7A6B682D6A0B2E00C474C0 /* BankletWatch-Watch-App-Info.plist */,
 				1D6445CA2D68312900D3BF8F /* BankletWatch Watch App.entitlements */,
 				1D6445CE2D6836AD00D3BF8F /* ViewModel */,
 				1D6445CB2D68339900D3BF8F /* Model */,
@@ -1330,6 +1332,7 @@
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BankletWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fangjunyu.piglet;
@@ -1362,6 +1365,7 @@
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BankletWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fangjunyu.piglet;

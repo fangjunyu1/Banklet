@@ -21,13 +21,10 @@ struct Settings: View {
     @State private var showGeneral = false
     @State private var showOpenSource = false // 显示开源视图
     @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    @AppStorage("isShowAboutUs") var isShowAboutUs = true
-    // false表示隐藏
-    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true
-    // 控制内购按钮，false表示隐藏
-    @AppStorage("isShowThanks") var isShowThanks = true
-    // 控制鸣谢页面，false表示隐藏
-    
+    @AppStorage("isShowAboutUs") var isShowAboutUs = true   // false表示隐藏
+    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true   // 控制内购按钮，false表示隐藏
+    @AppStorage("isShowThanks") var isShowThanks = true // 控制鸣谢页面，false表示隐藏
+    @AppStorage("isModelConfigManager") var isModelConfigManager = true
     
     
     func sendEmail() {
@@ -127,12 +124,24 @@ struct Settings: View {
                                             .lineLimit(1)
                                             .minimumScaleFactor(0.5) // 最小缩放到 50%
                                         Spacer()
-                                        Toggle("",isOn: Binding(get: {
-                                            modelConfigManager.cloudKitMode == .privateDatabase
-                                        }, set: {
-                                            modelConfigManager.cloudKitMode = $0 ? .privateDatabase : .none
-                                        }))  // iCloud开关
-                                        .frame(height:0)
+                                        //                                        Toggle("",isOn: Binding(get: {
+                                        //                                            modelConfigManager.cloudKitMode == .privateDatabase
+                                        //                                        }, set: {
+                                        //                                            modelConfigManager.cloudKitMode = $0 ? .privateDatabase : .none
+                                        //                                        }))  // iCloud开关
+                                        Toggle("",isOn: $isModelConfigManager)  // iCloud开关
+                                            .onChange(of: isModelConfigManager) {  oldValue, newValue in
+                                                if newValue {
+                                                    print("newValue:\(newValue),oldValue:\(oldValue)")
+                                                    // isModelConfigManager为 true 时，设置为私有iCloud
+                                                    modelConfigManager.cloudKitMode = .privateDatabase
+                                                } else {
+                                                    print("newValue:\(newValue),oldValue:\(oldValue)")
+                                                    // isModelConfigManager为 false 时，设置为空
+                                                    modelConfigManager.cloudKitMode = .none
+                                                }
+                                            }
+                                            .frame(height:0)
                                     })
                                     // 分割线
                                     Rectangle()
@@ -386,6 +395,6 @@ struct Settings: View {
     return Settings()
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(iapManager)
-//        .environment(\.locale, .init(identifier: "de"))
+    //        .environment(\.locale, .init(identifier: "de"))
 }
 
