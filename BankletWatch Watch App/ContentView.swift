@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    // 存储接收到的数据
-    @State private var piggyBanks = PiggyBankViewModel()
-    
+struct ContentView: View {    
     var body: some View {
         VStack(spacing: 0) {
             TabView {
@@ -18,12 +15,6 @@ struct ContentView: View {
                 ProverbView()
                 List()
             }
-            .environment(piggyBanks)
-        }
-        .onAppear {
-            // 从UserDefaults中获取iOS数据
-            print("从UserDefaults中获取iOS数据")
-            piggyBanks.loadPiggyBankDataFromAppGroup()
         }
     }
 }

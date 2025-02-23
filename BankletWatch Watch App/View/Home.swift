@@ -6,65 +6,47 @@
 //
 
 import SwiftUI
-
-struct CircularProgressBar: View {
-    var progress: CGFloat  // 进度值，范围从 0 到 1
-    
-    var body: some View {
-        ZStack {
-            // 背景圆圈
-            Circle()
-                .stroke(lineWidth: 10)
-                .foregroundColor(Color.gray.opacity(0.3))
-            
-            // 进度圆圈
-            Circle()
-                .trim(from: 0, to: progress)  // 根据进度值裁剪
-                .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
-                .foregroundColor(.white)
-                .rotationEffect(Angle(degrees: -90))  // 使圆圈从顶部开始
-                .animation(.easeInOut, value: progress)
-        }
-        .frame(width: 80, height: 80)  // 设置圆形大小
-    }
-}
+import SwiftData
 
 struct Home: View {
-    
-    @Environment(PiggyBankViewModel.self) var piggyBank
+    @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true },
+           sort: [SortDescriptor(\.creationDate, order: .reverse)]) var piggyBank: [PiggyBank]
     var body: some View {
-        VStack {
-            if !piggyBank.piggyBanks.isEmpty {
-                var mainPiggyBank: PiggyBank {
-                    return piggyBank.piggyBanks.filter({ $0.isPrimary == true }).first!
-                }
-                var SavingPercentage: Double {
-                    // 使用 if let 来解包 optional 值
-                    return mainPiggyBank.amount / mainPiggyBank.targetAmount  // 两个非 optional 的值可以进行运算
-                }
-                CircularProgressBar(progress: SavingPercentage)
-                    .overlay {
-                        VStack {
-                            Image(systemName: "\( mainPiggyBank.icon)")
-                            Spacer().frame(height: 10)
-                            Text(SavingPercentage, format: .percent.precision(.fractionLength(2)))
+        GeometryReader { geometry in
+            // 通过 `geometry` 获取布局信息
+            let width = geometry.size.width * 0.8
+            let height = geometry.size.height * 0.8
+            VStack {
+                if let firstPiggyBank = piggyBank.first {
+                    let SavingPercentage: Double = firstPiggyBank.amount / firstPiggyBank.targetAmount
+                    
+                    CircularProgressBar(progress: SavingPercentage)
+                        .overlay {
+                            VStack {
+                                Image(systemName: "\(firstPiggyBank.icon)")
+                                    .font(.title3)
+                                Spacer().frame(height: height * 0.1)
+                                Text(SavingPercentage, format: .percent.precision(.fractionLength(2)))
+                            }
+                            .font(.footnote)
                         }
+                        .frame(width: width * 0.7)
+                    Spacer().frame(height: height * 0.2)
+                    Text("\(firstPiggyBank.name)")
                         .font(.footnote)
-                    }
-                Spacer().frame(height: 10)
-                Text("\(mainPiggyBank.name)")
-                    .font(.footnote)
-            } else {
-                Image("emptyBox")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100)
+                } else {
+                    Image("emptyBox")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: width)
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
 
 #Preview {
     Home()
-        .environment(PiggyBankViewModel())
+        .modelContainer(PiggyBank.preview)
 }
