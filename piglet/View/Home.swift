@@ -205,12 +205,12 @@ struct Home: View {
                                     // 外圈进度条
                                     CircularProgressBar(progress: progress)
                                         .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                    Circle().fill(Color(hex:"FF4B00"))
+                                    Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                                         .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
                                         .overlay {
                                             Image(systemName: piggyBank[0].icon)
                                                 .font(isCompactScreen ? .footnote : .title3)
-                                                .foregroundColor(colorScheme == .light ? .white : Color(hex:"2C2B2D"))
+                                                .foregroundColor(.white)
                                         }
                                         .padding(.horizontal,10)
                                         .contentShape(Circle())
