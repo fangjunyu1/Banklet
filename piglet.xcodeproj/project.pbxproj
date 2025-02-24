@@ -106,6 +106,7 @@
 		1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8854602D244FB9009DE7AE /* Fireworks2.json */; };
 		1D89C54F2D506254000DECFF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C54E2D506254000DECFF /* DetailView.swift */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
+		1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */; };
 		1DA7C39C2D6AA57000FA6CA3 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3992D6AA57000FA6CA3 /* ModelConfigManager.swift */; };
 		1DA7C39D2D6AA57000FA6CA3 /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C39A2D6AA57000FA6CA3 /* SavingsRecord.swift */; };
 		1DA7C3A12D6AA60200FA6CA3 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A02D6AA60200FA6CA3 /* PiggyBank.swift */; };
@@ -372,6 +373,7 @@
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
 		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
+		1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		1DA7C3992D6AA57000FA6CA3 /* ModelConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DA7C39A2D6AA57000FA6CA3 /* SavingsRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DA7C3A02D6AA60200FA6CA3 /* PiggyBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
@@ -734,6 +736,7 @@
 		1DCBEDC22C02B776005BFFFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
 				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
 				1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */,
 				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
@@ -1260,6 +1263,7 @@
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* DoubleExtension.swift in Sources */,
+				1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */,
 				1D214F592D2F999E007F1D0E /* Settings.swift in Sources */,
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,

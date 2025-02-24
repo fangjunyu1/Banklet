@@ -49,12 +49,20 @@ struct Home: View {
     @AppStorage("isSilentMode") var isSilentMode = false
     // 货币符号
     @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    // 存钱罐首页显示样式，为true则显示已存入的金额
+    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
     
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
         let differenceNum = piggyBank[0].targetAmount - piggyBank[0].amount
         return differenceNum > 0 ? differenceNum : 0.0
     }
+    
+    var progress: Double {
+        let progressNum =  piggyBank[0].amount / piggyBank[0].targetAmount
+        return progressNum
+    }
+    
     var savingsProgress: String {
         if piggyBank[0].amount < piggyBank[0].targetAmount * 0.2 {
             // 存入金额小于目标金额的20%，刚刚起步
@@ -193,25 +201,31 @@ struct Home: View {
                             Spacer().frame(height: height * 0.05)
                             // 顶部存钱罐左侧的图标
                             HStack(spacing: 0) {
-                                Circle().fill(.white)
-                                    .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                    .overlay {
-                                        Image(systemName: piggyBank[0].icon)
-                                            .font(isCompactScreen ? .footnote : .title3)
-                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                    }
-                                    .padding(.horizontal,10)
-                                    .contentShape(Circle())
-                                    .onTapGesture {
-                                        showMoreInformationView.toggle()
-                                    }
-                                    .contextMenu {
-                                        Button(action: {
+                                ZStack {
+                                    // 外圈进度条
+                                    CircularProgressBar(progress: progress)
+                                        .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                    Circle().fill(Color(hex:"FF4B00"))
+                                        .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                        .overlay {
+                                            Image(systemName: piggyBank[0].icon)
+                                                .font(isCompactScreen ? .footnote : .title3)
+                                                .foregroundColor(colorScheme == .light ? .white : Color(hex:"2C2B2D"))
+                                        }
+                                        .padding(.horizontal,10)
+                                        .contentShape(Circle())
+                                        .onTapGesture {
                                             showMoreInformationView.toggle()
-                                        }, label: {
-                                            Label("Details",systemImage:"list.clipboard")
-                                        })
-                                    }
+                                        }
+                                        .contextMenu {
+                                            Button(action: {
+                                                showMoreInformationView.toggle()
+                                            }, label: {
+                                                Label("Details",systemImage:"list.clipboard")
+                                            })
+                                        }
+                                }
+                                Spacer().frame(width: 10)
                                 // 顶部存钱罐右侧储蓄信息
                                 VStack(alignment: .leading) {
                                     Group {
@@ -220,19 +234,36 @@ struct Home: View {
                                                 .font(.title2)
                                                 .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                         } else {
-                                            Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
-                                                .font(.title2)
-                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                            if SwitchTopStyle {
+                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                                    .font(.title2)
+                                                    .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                            } else {
+                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
+                                                    .font(.title2)
+                                                    .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                            }
                                         }
                                         Group {
                                             if  piggyBank[0].amount == piggyBank[0].targetAmount {
                                                 Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
                                             } else {
-                                                Group {
-                                                    Text("Distance")+Text(" \(piggyBank[0].name) ") + Text("Need")
+                                                if SwitchTopStyle {
+                                                    HStack {
+                                                        Text(piggyBank[0].name)
+                                                        Text("Deposited")
+                                                    }
+                                                    .lineLimit(2)
+                                                    .minimumScaleFactor(0.5)
+                                                } else {
+                                                    HStack {
+                                                        Text("Distance")
+                                                        Text(piggyBank[0].name)
+                                                        Text("Need")
+                                                    }
+                                                    .lineLimit(2)
+                                                    .minimumScaleFactor(0.5)
                                                 }
-                                                .lineLimit(2)
-                                                .minimumScaleFactor(0.5)
                                             }
                                         }
                                         .font(.footnote)
@@ -251,6 +282,9 @@ struct Home: View {
                             .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                             .cornerRadius(10)
                             .opacity(isSilentModeActive ? 0 : 1)
+                            .onTapGesture {
+                                SwitchTopStyle.toggle()
+                            }
                             
                             Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
                             SpacedContainer(isCompactScreen: isCompactScreen) {
@@ -262,12 +296,9 @@ struct Home: View {
                                             Button(action: {
                                                 withAnimation(.easeInOut(duration:0.5)) {
                                                     showDetailView.toggle()
-                                                    //                                                    isTestDetails ? showDetailView.toggle() : isInfo.toggle()
                                                 }
                                             }, label: {
                                                 VStack {
-                                                    // 图标修改为统计图标
-                                                    //                                                    Image(systemName: isTestDetails ? "chart.pie" : piggyBank[0].icon)
                                                     Image(systemName: "chart.pie")
                                                         .resizable()
                                                         .scaledToFit()
@@ -297,50 +328,6 @@ struct Home: View {
                                     .foregroundColor(.white)
                                     .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                                     .cornerRadius(10)
-                                    
-                                    // 隐藏1.0.5版本以前的左侧详细信息内容
-                                    // 对话内容
-                                    //                                    HStack(spacing: 0) {
-                                    //                                        // 左边的三角
-                                    //                                        LeftTriangle()
-                                    //                                            .frame(width: 10,height:10)
-                                    //                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                    //                                        // 三角旁边的详细信息框
-                                    //                                        VStack(alignment:.leading){
-                                    //                                            Group {
-                                    //                                                HStack(spacing:3) {
-                                    //                                                    Text("Target amount")
-                                    //                                                    Text(":")
-                                    //                                                    Text("$ \(piggyBank[0].targetAmount.formattedWithTwoDecimalPlaces())")
-                                    //                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].targetAmount)
-                                    //                                                }
-                                    //                                                HStack(spacing:3) {
-                                    //                                                    Text("Current amount")
-                                    //                                                    Text(":")
-                                    //                                                    Text("$ \(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
-                                    //                                                        .animation(.easeInOut(duration: 0.5), value: piggyBank[0].amount)
-                                    //                                                }
-                                    //                                                HStack(spacing:3) {
-                                    //                                                    Text("Saving progress")
-                                    //                                                    Text(":")
-                                    //                                                    Text(LocalizedStringKey(savingsProgress))
-                                    //                                                        .animation(.easeInOut(duration: 0.5), value: savingsProgress)
-                                    //                                                }
-                                    //                                            }
-                                    //                                            .lineLimit(1)
-                                    //                                            .minimumScaleFactor(0.3)
-                                    //                                            .font(isCompactScreen ? .footnote : .body)
-                                    //                                            .fontWeight(.bold)
-                                    //                                            .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
-                                    //                                        }
-                                    //                                        .padding(.vertical,10)
-                                    //                                        .padding(.horizontal,20)
-                                    //                                        .foregroundColor(.white)
-                                    //                                        .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                    //                                        .cornerRadius(10)
-                                    //                                    }
-                                    //                                    .offset(y: -30)
-                                    //                                    .opacity(isInfo == true ? 1 : 0)
                                     Spacer()
                                 }
                                 .opacity(isSilentModeActive ? 0 : 1)
@@ -401,7 +388,7 @@ struct Home: View {
                                             HStack{
                                                 Group {
                                                     Image(systemName: "calendar")
-                                                    Spacer().frame(width: 20)
+                                                    Spacer().frame(width: 10)
                                                     Text(piggyBank[0].expirationDate,format: .dateTime.year().month().day())
                                                         .fixedSize(horizontal: true, vertical: false) // 自动扩展宽度
                                                 }
@@ -521,11 +508,6 @@ struct Home: View {
                             }
                         }
                     })
-                    //                    .onTapGesture {
-                    //                        withAnimation(.easeInOut(duration:0.5)) {
-                    //                            isInfo = false
-                    //                        }
-                    //                    }
                     .navigationTitle(isSilentModeActive ? "" : "Banklet")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
@@ -655,5 +637,5 @@ struct Home: View {
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(iapManager)
-        .environment(\.locale, .init(identifier: "ru"))
+//        .environment(\.locale, .init(identifier: "ru"))
 }
