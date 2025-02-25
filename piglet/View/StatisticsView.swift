@@ -32,7 +32,7 @@ struct StatisticsView: View {
     
     // 统计图表
     private var data: [(PiggyBank: String, value: Double)] {
-        if allPiggyBank.isEmpty {
+        if allPiggyBank.allSatisfy({ $0.amount == 0}) {
             return [("Empty",1.0)]
         } else {
             return allPiggyBank.map{ ($0.name, $0.amount) }
