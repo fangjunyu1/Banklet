@@ -9,8 +9,10 @@ import SwiftUI
 import SwiftData
 import Combine
 import WidgetKit
+import StoreKit
 
 struct Home: View {
+    @Environment(\.requestReview) var requestReview
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.modelContext) var modelContext
@@ -51,6 +53,8 @@ struct Home: View {
     @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
     // 存钱罐首页显示样式，为true则显示已存入的金额
     @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
+    // 请求评分
+    @AppStorage("RatingClicks") var RatingClicks: Int = 0
     
     let maxHistorySize = 3 // 历史记录长度
     var difference: Double {
@@ -112,15 +116,15 @@ struct Home: View {
                 .sink { _ in
                     let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
                     if elapsedTime > 10 {
-                        print("elapsedTime:\(elapsedTime)")
+//                        print("elapsedTime:\(elapsedTime)")
                         DispatchQueue.main.async {
-                            print("进入静默模式")
+//                            print("进入静默模式")
                             withAnimation(.easeInOut(duration: 1)) {
                                 isSilentModeActive = true
                             }
                         }
                     } else if elapsedTime <= 10 {
-                        print("elapsedTime:\(elapsedTime)")
+//                        print("elapsedTime:\(elapsedTime)")
                     }
                 }
         }
@@ -592,6 +596,13 @@ struct Home: View {
         .onTapGesture {
             if isSilentMode {
                 resetSilentMode()
+            }
+            // 新增点击次数统计，用于激活评分
+            print("点击了动画，当前评分点击次数为：\(RatingClicks)")
+            RatingClicks += 1
+            // 当评分点击次数为 100 次时，激活评分。
+            if RatingClicks == 100 {
+                requestReview()
             }
         }
         .onChange(of: isDisplaySettings) { _,_ in
