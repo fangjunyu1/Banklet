@@ -107,8 +107,7 @@ struct GeneralView: View {
                                         .foregroundColor(.gray)
                                         .padding(.leading, 60)
                                     // 主界面动画
-                                    NavigationLink(destination:
-                                                    MainInterfaceAnimationView()){
+                                    NavigationLink(destination:MainInterfaceAnimationView()){
                                         SettingView(content: {
                                             Image(systemName: "film.stack")
                                                 .padding(.horizontal,5)

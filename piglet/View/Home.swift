@@ -9,10 +9,8 @@ import SwiftUI
 import SwiftData
 import Combine
 import WidgetKit
-import StoreKit
 
 struct Home: View {
-    @Environment(\.requestReview) var requestReview
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.modelContext) var modelContext
@@ -466,6 +464,14 @@ struct Home: View {
                             })
                             Spacer().frame(height: height * 0.05)
                         }
+                        // 当评分点击次数为 100 次时，激活评分。
+                        // 测试，每三次显示一次提示。
+                        if RatingClicks == 100 {
+                            RequestReviewView()
+                                .onAppear{
+                                    RatingClicks += 1
+                                }
+                        }
                     }
                     .frame(width: width)
                     .onOpenURL { url in
@@ -598,11 +604,9 @@ struct Home: View {
                 resetSilentMode()
             }
             // 新增点击次数统计，用于激活评分
-            print("点击了动画，当前评分点击次数为：\(RatingClicks)")
-            RatingClicks += 1
-            // 当评分点击次数为 100 次时，激活评分。
-            if RatingClicks == 100 {
-                requestReview()
+            guard RatingClicks > 100 else {
+                RatingClicks += 1
+                return
             }
         }
         .onChange(of: isDisplaySettings) { _,_ in

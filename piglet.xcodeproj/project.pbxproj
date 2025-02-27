@@ -127,6 +127,7 @@
 		1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C5A2D37B12A0037153C /* ManagingView.swift */; };
 		1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C02D25B042004B0936 /* PiggyBank.swift */; };
 		1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C22D264209004B0936 /* PiggyBankData.swift */; };
+		1DD2F9E42D704C4F00B7E600 /* RequestReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2F9E32D704C4F00B7E600 /* RequestReviewView.swift */; };
 		1DD3E0792D65CEC800867D4F /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */; };
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
@@ -438,6 +439,7 @@
 		1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		1DD151C02D25B042004B0936 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
 		1DD151C22D264209004B0936 /* PiggyBankData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankData.swift; sourceTree = "<group>"; };
+		1DD2F9E32D704C4F00B7E600 /* RequestReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReviewView.swift; sourceTree = "<group>"; };
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				1D89C54E2D506254000DECFF /* DetailView.swift */,
 				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
+				1DD2F9E32D704C4F00B7E600 /* RequestReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1243,6 +1246,7 @@
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
 				1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */,
+				1DD2F9E42D704C4F00B7E600 /* RequestReviewView.swift in Sources */,
 				1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */,
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
 				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
