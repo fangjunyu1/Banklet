@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import Combine
 import WidgetKit
+import StoreKit
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -402,10 +403,7 @@ struct Home: View {
                                     }
                                 }
                             }
-                            
-                            
                             Spacer()
-                            
                             // 存入取出按钮
                             Button(action: {
                                 showDepositAndWithdrawView.toggle()
@@ -463,14 +461,6 @@ struct Home: View {
                                     .cornerRadius(10)
                             })
                             Spacer().frame(height: height * 0.05)
-                        }
-                        // 当评分点击次数为 100 次时，激活评分。
-                        // 测试，每三次显示一次提示。
-                        if RatingClicks == 100 {
-                            RequestReviewView()
-                                .onAppear{
-                                    RatingClicks += 1
-                                }
                         }
                     }
                     .frame(width: width)
@@ -604,9 +594,11 @@ struct Home: View {
                 resetSilentMode()
             }
             // 新增点击次数统计，用于激活评分
-            guard RatingClicks > 100 else {
-                RatingClicks += 1
-                return
+            print("RatingClicks:\(RatingClicks)")
+            RatingClicks += 1
+            if RatingClicks == 100 {
+                print("调用获取评分请求")
+                SKStoreReviewController.requestReview()
             }
         }
         .onChange(of: isDisplaySettings) { _,_ in
