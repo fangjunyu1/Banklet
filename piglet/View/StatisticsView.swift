@@ -25,7 +25,7 @@ struct StatisticsView: View {
     // 货币符号
     @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
     // 清理1.0.6以前可能存在的孤立存取数据
-    @AppStorage("CleanUpOrphanAccessData") var CleanUpOrphanAccessData = false
+//    @AppStorage("CleanUpOrphanAccessData") var CleanUpOrphanAccessData = false
     
     private let rows = [GridItem(.adaptive(minimum: 20))] // 网格行的设置
     private let calendar = Calendar.current // current表示默认日历
@@ -112,10 +112,10 @@ struct StatisticsView: View {
     
     // 1.0.6版本更新，清理孤立的存取记录
     func cleanupOrphanedRecords() {
-        guard !CleanUpOrphanAccessData else {
-            print("已经清理过存取记录")
-            return
-        }
+//        guard !CleanUpOrphanAccessData else {
+//            print("已经清理过存取记录")
+//            return
+//        }
         print("进入cleanupOrphanedRecords方法，执行清理任务")
         do {
             // 获取所有 SavingsRecord
@@ -135,7 +135,7 @@ struct StatisticsView: View {
             } else {
                 print("没有孤立的存取记录")
             }
-            CleanUpOrphanAccessData = true
+//            CleanUpOrphanAccessData = true
         } catch {
             print("清理失败: \(error)")
         }
