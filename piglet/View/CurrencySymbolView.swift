@@ -12,7 +12,9 @@ struct CurrencySymbolView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     // 货币符号
-    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
     
     var body: some View {
         NavigationStack {
@@ -22,8 +24,8 @@ struct CurrencySymbolView: View {
                 List {
                     ForEach(currencySymbolList.sorted(by: {$0.currencyAbbreviation < $1.currencyAbbreviation}), id: \.self) { currency in
                         Button(action: {
-                            CurrencySymbol = currency.currencyAbbreviation
-                            print("当前货币符号:\(CurrencySymbol)")
+                            appStorage.CurrencySymbol = currency.currencyAbbreviation
+                            print("当前货币符号:\(appStorage.CurrencySymbol)")
                         }, label: {
                             HStack{
                                 Image(currency.currencyAbbreviation)
@@ -33,7 +35,7 @@ struct CurrencySymbolView: View {
                                 Text(LocalizedStringKey(currency.currencyAbbreviation))
                                 Text(currency.currencyAbbreviation)
                                 Spacer()
-                                if CurrencySymbol == currency.currencyAbbreviation {
+                                if appStorage.CurrencySymbol == currency.currencyAbbreviation {
                                     Image(systemName: "checkmark")
                                 }
                             }
@@ -47,7 +49,7 @@ struct CurrencySymbolView: View {
             }
         }
         .onAppear {
-            print("当前货币符号:\(CurrencySymbol)")
+            print("当前货币符号:\(appStorage.CurrencySymbol)")
         }
     }
 }

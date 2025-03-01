@@ -10,8 +10,11 @@ import SwiftUI
 struct MainInterfaceBackgroundView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
+//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+//    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
+    
     let columns = [
         GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
         GridItem(.adaptive(minimum: 130, maximum: 200))
@@ -23,7 +26,7 @@ struct MainInterfaceBackgroundView: View {
     ]
     
         var backgroundRange: [Int] {
-            Array(isInAppPurchase ? 0..<39 : 0..<7)
+            Array(appStorage.isInAppPurchase ? 0..<39 : 0..<7)
         }
     
     var body: some View {
@@ -39,17 +42,17 @@ struct MainInterfaceBackgroundView: View {
                     ScrollView(showsIndicators: false) {
                             LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                                 Button(action: {
-                                    BackgroundImage = ""
+                                    appStorage.BackgroundImage = ""
                                 }, label: {
                                     Rectangle()
-                                        .strokeBorder(BackgroundImage.isEmpty ?  .blue : .clear, lineWidth: 5)
+                                        .strokeBorder(appStorage.BackgroundImage.isEmpty ?  .blue : .clear, lineWidth: 5)
                                         .overlay {
                                             Rectangle()
                                                 .cornerRadius(10)
                                                 .frame(width: isPadScreen ? 270 : 136,height: isPadScreen ? 170 : 96)
                                                 .foregroundColor(colorScheme == .light ? .white : Color(hex:"2C2B2D") )
                                                 .overlay {
-                                                    if BackgroundImage.isEmpty {
+                                                    if appStorage.BackgroundImage.isEmpty {
                                                         VStack {
                                                             Spacer()
                                                             HStack {
@@ -70,10 +73,10 @@ struct MainInterfaceBackgroundView: View {
                                 })
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {
-                                        BackgroundImage = "bg\(index)"
+                                        appStorage.BackgroundImage = "bg\(index)"
                                     }, label: {
                                         Rectangle()
-                                            .strokeBorder(BackgroundImage == "bg\(index)" ? .blue : .clear, lineWidth: 5)
+                                            .strokeBorder(appStorage.BackgroundImage == "bg\(index)" ? .blue : .clear, lineWidth: 5)
                                             .foregroundColor(.white)
                                             .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
                                             .cornerRadius(10)
@@ -86,7 +89,7 @@ struct MainInterfaceBackgroundView: View {
                                                     .cornerRadius(10)
                                                     .clipped()
                                                     .overlay {
-                                                        if BackgroundImage == "bg\(index)" {
+                                                        if appStorage.BackgroundImage == "bg\(index)" {
                                                             VStack {
                                                                 Spacer()
                                                                 HStack {

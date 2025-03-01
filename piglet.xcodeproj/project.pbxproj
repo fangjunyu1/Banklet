@@ -25,6 +25,7 @@
 		1D2386762D2E4B3F0033FBBA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* DoubleExtension.swift */; };
 		1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D601B852C0747FD00052528 /* StoreKit.framework */; };
 		1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33A19A2C077E2C0073320F /* IAPManager.swift */; };
+		1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3663E72D72FD34003C1052 /* AppStorageManager.swift */; };
 		1D3E13C72D49AD5400747D20 /* Home0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C62D49AD5400747D20 /* Home0.json */; };
 		1D3E13CF2D49AD7A00747D20 /* Home3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C82D49AD7A00747D20 /* Home3.json */; };
 		1D3E13D02D49AD7A00747D20 /* Home1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C92D49AD7A00747D20 /* Home1.json */; };
@@ -274,6 +275,7 @@
 		1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		1D33A19A2C077E2C0073320F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		1D3663E72D72FD34003C1052 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
 		1D3E13C62D49AD5400747D20 /* Home0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home0.json; sourceTree = "<group>"; };
 		1D3E13C82D49AD7A00747D20 /* Home3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home3.json; sourceTree = "<group>"; };
 		1D3E13C92D49AD7A00747D20 /* Home1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home1.json; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
+				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1245,6 +1248,7 @@
 				1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */,
 				1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */,
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
+				1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */,
 				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* appVersion.swift in Sources */,
 				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
@@ -1777,7 +1781,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
@@ -1794,7 +1798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1817,7 +1821,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
@@ -1834,7 +1838,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

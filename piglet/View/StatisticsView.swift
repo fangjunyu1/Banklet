@@ -23,9 +23,11 @@ struct StatisticsView: View {
     @State private var months: [Date] = []
     
     // 货币符号
-    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
     // 清理1.0.6以前可能存在的孤立存取数据
 //    @AppStorage("CleanUpOrphanAccessData") var CleanUpOrphanAccessData = false
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
     
     private let rows = [GridItem(.adaptive(minimum: 20))] // 网格行的设置
     private let calendar = Calendar.current // current表示默认日历
@@ -184,7 +186,7 @@ struct StatisticsView: View {
                                 
                                 Spacer().frame(height: 10)
                                 
-                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(savingRecordsCount)")
+                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(savingRecordsCount)")
                                 
                             }
                         }

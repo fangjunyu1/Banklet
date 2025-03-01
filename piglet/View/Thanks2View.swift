@@ -11,8 +11,6 @@ struct Thanks2View: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    // 鸣谢页面
-    @AppStorage("isShowThanks") var isShowThanks = true
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in

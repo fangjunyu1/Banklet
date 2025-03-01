@@ -12,9 +12,12 @@ struct MainInterfaceAnimationView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
-    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
+//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+//    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
+//    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
+    
     let columns = [
         GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
         GridItem(.adaptive(minimum: 130, maximum: 200))
@@ -26,7 +29,7 @@ struct MainInterfaceAnimationView: View {
     ]
     
     var backgroundRange: [Int] {
-        Array(isInAppPurchase ? 0..<54 : 0..<8)
+        Array(appStorage.isInAppPurchase ? 0..<54 : 0..<8)
     }
 
     var body: some View {
@@ -54,7 +57,11 @@ struct MainInterfaceAnimationView: View {
                                     .lineLimit(1)
                                     .minimumScaleFactor(0.8)
                                 Spacer()
-                                Toggle("",isOn: $isLoopAnimation)  // 循环开关
+                                Toggle("",isOn: Binding(get: {
+                                    appStorage.isLoopAnimation
+                                }, set: {
+                                    appStorage.isLoopAnimation = $0
+                                }))  // 循环开关
                                     .frame(height:0)
                             })
                         }
@@ -63,18 +70,18 @@ struct MainInterfaceAnimationView: View {
                             LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {
-                                        LoopAnimation = "Home\(index)"
-                                        print("LoopAnimation:\(LoopAnimation)")
+                                        appStorage.LoopAnimation = "Home\(index)"
+                                        print("LoopAnimation:\(appStorage.LoopAnimation)")
                                     }, label: {
-                                        LottieView(filename: "Home\(index)", isPlaying: isLoopAnimation ? true : false, playCount: 0, isReversed: false)
-                                            .id(LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
+                                        LottieView(filename: "Home\(index)", isPlaying: appStorage.isLoopAnimation ? true : false, playCount: 0, isReversed: false)
+                                            .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
                                             .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "Home\(index)") : -AnimationScaleConfig.scale(for: "Home\(index)"),
                                                 y:  AnimationScaleConfig.scale(for: "Home\(index)"))// 水平翻转视图
                                             .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
                                             .background(colorScheme == .light ? .white : Color(hex: "2C2B2D"))
                                             .cornerRadius(10)
                                             .overlay {
-                                                if LoopAnimation == "Home\(index)" {
+                                                if appStorage.LoopAnimation == "Home\(index)" {
                                                     VStack {
                                                         Spacer()
                                                         HStack {

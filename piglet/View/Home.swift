@@ -41,21 +41,24 @@ struct Home: View {
     // 静默模式计时器
     @State private var timerCancellable: Cancellable? // 用于控制 Timer 的生命周期
     
-    @AppStorage("pageSteps") var pageSteps: Int = 1
-    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
-    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
-    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
-    //    @AppStorage("isTestDetails") var isTestDetails = false
-    // 静默模式
-    @AppStorage("isSilentMode") var isSilentMode = false
-    // 货币符号
-    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
-    // 存钱罐首页显示样式，为true则显示已存入的金额
-    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
-    // 请求评分
-    @AppStorage("RatingClicks") var RatingClicks: Int = 0
+//    @AppStorage("pageSteps") var pageSteps: Int = 1
+//    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
+//    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
+//    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
+//    //    @AppStorage("isTestDetails") var isTestDetails = false
+//    // 静默模式
+//    @AppStorage("isSilentMode") var isSilentMode = false
+//    // 货币符号
+//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+//    // 存钱罐首页显示样式，为true则显示已存入的金额
+//    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
+//    // 请求评分
+//    @AppStorage("RatingClicks") var RatingClicks: Int = 0
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
     
     let maxHistorySize = 3 // 历史记录长度
+    
     var difference: Double {
         let differenceNum = piggyBank[0].targetAmount - piggyBank[0].amount
         return differenceNum > 0 ? differenceNum : 0.0
@@ -105,7 +108,7 @@ struct Home: View {
     
     // 监测静默状态
     private func startSilentModeTimer() {
-        if isSilentMode && !allPiggyBank.isEmpty {
+        if appStorage.isSilentMode && !allPiggyBank.isEmpty {
             // 确保没有重复启动 Timer
             timerCancellable?.cancel()
             timerCancellable = nil
@@ -132,7 +135,7 @@ struct Home: View {
     
     // 处理 Sheet 或 Navigation 状态变化
     private func handleStateChange() {
-        if isSilentMode {
+        if appStorage.isSilentMode {
             // 如果显示Sheet或者其他弹窗内容，暂停计时
             if isDisplaySettings || showDepositAndWithdrawView || showAccessRecordsView || showMoreInformationView || showManagingView || showDetailView || showStatistics {
                 timerCancellable?.cancel()
@@ -147,7 +150,7 @@ struct Home: View {
     
     // 用户交互时重置静默模式
     private func resetSilentMode() {
-        if isSilentMode {
+        if appStorage.isSilentMode {
             print("退出静默模式")
             lastInteractionTime = Date()
             withAnimation(.easeInOut(duration: 1)) {
@@ -160,8 +163,8 @@ struct Home: View {
     
     @ViewBuilder
     private func backgroundImageView() -> some View {
-        if !BackgroundImage.isEmpty {
-            Image(BackgroundImage)
+        if !appStorage.BackgroundImage.isEmpty {
+            Image(appStorage.BackgroundImage)
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
@@ -179,8 +182,8 @@ struct Home: View {
             userDefaults?.set(piggyBank[0].name, forKey: "piggyBankName")
             userDefaults?.set(piggyBank[0].amount, forKey: "piggyBankAmount")
             userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
-            userDefaults?.set(LoopAnimation, forKey: "LoopAnimation")
-            userDefaults?.set(BackgroundImage, forKey: "background")
+            userDefaults?.set(appStorage.LoopAnimation, forKey: "LoopAnimation")
+            userDefaults?.set(appStorage.BackgroundImage, forKey: "background")
                     
             // 然后手动触发 Widget 刷新
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -237,12 +240,12 @@ struct Home: View {
                                                 .font(.title2)
                                                 .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                         } else {
-                                            if SwitchTopStyle {
-                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                            if appStorage.SwitchTopStyle {
+                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
                                                     .font(.title2)
                                                     .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                             } else {
-                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
+                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
                                                     .font(.title2)
                                                     .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                             }
@@ -251,7 +254,7 @@ struct Home: View {
                                             if  piggyBank[0].amount == piggyBank[0].targetAmount {
                                                 Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
                                             } else {
-                                                if SwitchTopStyle {
+                                                if appStorage.SwitchTopStyle {
                                                     HStack {
                                                         Text(piggyBank[0].name)
                                                         Text("Deposited")
@@ -286,7 +289,7 @@ struct Home: View {
                             .cornerRadius(10)
                             .opacity(isSilentModeActive ? 0 : 1)
                             .onTapGesture {
-                                SwitchTopStyle.toggle()
+                                appStorage.SwitchTopStyle.toggle()
                             }
                             
                             Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
@@ -364,10 +367,10 @@ struct Home: View {
                                     }
                                     VStack {
                                         // 存钱猪猪动画
-                                        LottieView(filename: LoopAnimation,isPlaying: isLoopAnimation ? true : isPlaying, playCount: isLoopAnimation ? 0 : 1, isReversed: isLoopAnimation ? false : isReversed)
-                                            .id(LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(LoopAnimation)")) // 水平翻转视图
-                                            .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: BackgroundImage == "Home0" ? -20 : 0)
+                                        LottieView(filename: appStorage.LoopAnimation,isPlaying: appStorage.isLoopAnimation ? true : isPlaying, playCount: appStorage.isLoopAnimation ? 0 : 1, isReversed: appStorage.isLoopAnimation ? false : isReversed)
+                                            .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)")) // 水平翻转视图
+                                            .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: appStorage.BackgroundImage == "Home0" ? -20 : 0)
                                             .opacity(colorScheme == .light ? 1 : 0.8)
                                             .disabled(isProverb)
                                             .frame(width: 160, height: 160)
@@ -385,9 +388,9 @@ struct Home: View {
                                                 }
                                                 
                                                 // 新增点击次数统计，用于激活评分
-                                                print("RatingClicks:\(RatingClicks)")
-                                                RatingClicks += 1
-                                                if RatingClicks == 2 {
+                                                print("RatingClicks:\(appStorage.RatingClicks)")
+                                                appStorage.RatingClicks += 1
+                                                if appStorage.RatingClicks == 2 {
                                                     print("调用获取评分请求")
                                                     SKStoreReviewController.requestReview()
                                                 }
@@ -460,7 +463,7 @@ struct Home: View {
                             Spacer()
                             Button(action: {
                                 // 跳转到创建视图
-                                pageSteps = 3
+                                appStorage.pageSteps = 3
                             }, label: {
                                 Text("Create")
                                     .frame(width: 320,height: 60)
@@ -577,7 +580,7 @@ struct Home: View {
             }
         }
         .onAppear {
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 startSilentModeTimer()
             }
         }
@@ -598,42 +601,42 @@ struct Home: View {
             }
         }
         .onTapGesture {
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 resetSilentMode()
             }
         }
         .onChange(of: isDisplaySettings) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showDepositAndWithdrawView) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showAccessRecordsView) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showMoreInformationView) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showManagingView) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showDetailView) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }
         .onChange(of: showStatistics) { _,_ in
-            if isSilentMode {
+            if appStorage.isSilentMode {
                 handleStateChange()
             }
         }

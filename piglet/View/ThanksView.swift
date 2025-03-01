@@ -11,7 +11,6 @@ struct ThanksView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     // isShowInAppPurchase：true表示显示，false表示隐藏
-    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in

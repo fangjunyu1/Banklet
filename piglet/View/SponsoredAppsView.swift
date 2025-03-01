@@ -12,9 +12,12 @@ struct SponsoredAppsView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("20240523") var isInAppPurchase = false
+//    @AppStorage("20240523") var isInAppPurchase = false
     @EnvironmentObject var iapManager: IAPManager
     @State private var endOfWait = false    // 为true时，显示结束等待按钮
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
+    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -107,7 +110,7 @@ struct SponsoredAppsView: View {
                     
                     // 内购按钮
                     Group {
-                        if isInAppPurchase {
+                        if appStorage.isInAppPurchase {
                             Rectangle()
                                 .foregroundColor(colorScheme == .light ? Color(hex:"EE2B00") : Color(hex:"1c1c1c"))
                                 .frame(width: 180,height: 60)

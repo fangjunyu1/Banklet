@@ -14,7 +14,9 @@ struct DetailView: View {
     @Environment(\.colorScheme) var colorScheme
     
     // 货币符号
-    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
     
     var CurrentAmount: Double
     var TargetAmount: Double
@@ -55,7 +57,7 @@ struct DetailView: View {
                             VStack(alignment: .leading) {
                                 Text("Current amount")
                                     .font(.footnote)
-                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")")
+                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$")")
                                     .font(.footnote)
                                 + Text(" ") +
                                 Text(CurrentAmount.formattedWithTwoDecimalPlaces())
@@ -77,7 +79,7 @@ struct DetailView: View {
                             VStack(alignment: .leading) {
                                 Text("Target amount")
                                     .font(.footnote)
-                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")")
+                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$")")
                                     .font(.footnote)
                                 + Text(" ") + Text(TargetAmount.formattedWithTwoDecimalPlaces())
                                     .font(.title3)

@@ -20,12 +20,13 @@ struct Settings: View {
     @State private var showThanks = false
     @State private var showGeneral = false
     @State private var showOpenSource = false // 显示开源视图
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    @AppStorage("isShowAboutUs") var isShowAboutUs = true   // false表示隐藏
-    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true   // 控制内购按钮，false表示隐藏
-    @AppStorage("isShowThanks") var isShowThanks = true // 控制鸣谢页面，false表示隐藏
-    @AppStorage("isModelConfigManager") var isModelConfigManager = true
+//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+//    @AppStorage("isShowAboutUs") var isShowAboutUs = true   // false表示隐藏
+//    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true   // 控制内购按钮，false表示隐藏
+//    @AppStorage("isShowThanks") var isShowThanks = true // 控制鸣谢页面，false表示隐藏
+//    @AppStorage("isModelConfigManager") var isModelConfigManager = true
     
+    var appStorage = AppStorageManager.shared  // 共享实例
     
     func sendEmail() {
         let email = "fangjunyu.com@gmail.com"
@@ -61,10 +62,10 @@ struct Settings: View {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing:0) {
                             // 第一组：赞助应用
-                            if isShowInAppPurchase {
+                            if appStorage.isShowInAppPurchase {
                                 VStack(spacing: 0) {
                                     // 内购完成
-                                    if isInAppPurchase {
+                                    if appStorage.isInAppPurchase {
                                         InAppPurchaseCompletionButton(action: {
                                             showThanksView.toggle()
                                         }, content: {
@@ -129,10 +130,13 @@ struct Settings: View {
                                         //                                        }, set: {
                                         //                                            modelConfigManager.cloudKitMode = $0 ? .privateDatabase : .none
                                         //                                        }))  // iCloud开关
-                                        Toggle("",isOn: $isModelConfigManager)  // iCloud开关
-                                            .onChange(of: isModelConfigManager) {  oldValue, newValue in
+                                        Toggle("",isOn: Binding(get: {
+                                            appStorage.isModelConfigManager
+                                        }, set: {
+                                            appStorage.isModelConfigManager = $0
+                                        }))  // iCloud开关
+                                            .onChange(of: appStorage.isModelConfigManager) {  oldValue, newValue in
                                                 if newValue {
-                                                    print("newValue:\(newValue),oldValue:\(oldValue)")
                                                     // isModelConfigManager为 true 时，设置为私有iCloud
                                                     modelConfigManager.cloudKitMode = .privateDatabase
                                                 } else {
@@ -265,8 +269,7 @@ struct Settings: View {
                             // 第四组：关于我们、鸣谢
                             VStack(spacing: 0) {
                                 // 关于我们
-                                if isShowAboutUs {
-                                    
+                                if appStorage.isShowAboutUs {
                                     SettingButton(action: {
                                         showAboutUs.toggle()
                                     }, content: {
@@ -284,7 +287,7 @@ struct Settings: View {
                                     })
                                     
                                 }
-                                if isShowThanks && isShowAboutUs {
+                                if appStorage.isShowThanks && appStorage.isShowAboutUs {
                                     
                                     // 分割线
                                     Rectangle()
@@ -293,7 +296,7 @@ struct Settings: View {
                                         .foregroundColor(.gray)
                                         .padding(.leading, 60)
                                 }
-                                if isShowThanks {
+                                if appStorage.isShowThanks {
                                     // 鸣谢
                                     SettingButton(action: {
                                         showThanks.toggle()
@@ -343,10 +346,9 @@ struct Settings: View {
                             }
                             .foregroundColor(Color(hex: "D6D6D7"))
                             .font(.footnote)
-                            
                             .onTapGesture(count: 2) {
-                                if isInAppPurchase {
-                                    isShowInAppPurchase.toggle()
+                                if appStorage.isInAppPurchase {
+                                    appStorage.isShowInAppPurchase.toggle()
                                 }
                             }
                             Spacer()

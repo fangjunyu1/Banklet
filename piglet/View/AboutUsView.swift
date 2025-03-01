@@ -12,7 +12,6 @@ struct AboutUsView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("isShowAboutUs") var isShowAboutUs = true
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in

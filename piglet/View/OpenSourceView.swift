@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OpenSourceView: View {
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme

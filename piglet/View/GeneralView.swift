@@ -12,16 +12,20 @@ struct GeneralView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
-    // 测试详细信息
-    //    @AppStorage("isTestDetails") var isTestDetails = false
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-    // 静默模式
-    @AppStorage("isSilentMode") var isSilentMode = false
-    // 提醒时间，设置提醒时间为true，否则为false
-    @AppStorage("isReminderTime") var isReminderTime = false
-    // 存储用户设定的提醒时间
-    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
+//    @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
+//    // 测试详细信息
+//    //    @AppStorage("isTestDetails") var isTestDetails = false
+//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+//    // 静默模式
+//    @AppStorage("isSilentMode") var isSilentMode = false
+//    // 提醒时间，设置提醒时间为true，否则为false
+//    @AppStorage("isReminderTime") var isReminderTime = false
+//    // 存储用户设定的提醒时间
+//    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
+    
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
+    
     // 授权通知
     func requestNotificationPermission() {
         let center = UNUserNotificationCenter.current()
@@ -32,7 +36,7 @@ struct GeneralView: View {
                 // 授权失败场景可能不常见，更多的是根据granted判断授权成功/失败
             } else {
                 print("授权结果：\(granted ? "允许" : "拒绝")")
-                isReminderTime = granted
+                appStorage.isReminderTime = granted
                 if granted {
                     // 清除所有通知
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -54,7 +58,7 @@ struct GeneralView: View {
         
         // 创建日期和时间组件
         let calendar = Calendar.current
-        let dateComponents = calendar.dateComponents([.hour, .minute], from: Date(timeIntervalSince1970: reminderTime))
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: Date(timeIntervalSince1970: appStorage.reminderTime))
 
         // 创建日期触发器
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -159,7 +163,11 @@ struct GeneralView: View {
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.8)
                                     Spacer()
-                                    Toggle("",isOn: $isSilentMode)  // 测试功能，详细信息
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.isSilentMode
+                                    }, set: {
+                                        appStorage.isSilentMode = $0
+                                    }))  // 测试功能，详细信息
                                         .frame(height:0)
                                 })
                             }
@@ -194,13 +202,13 @@ struct GeneralView: View {
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.8)
                                     Spacer()
-                                    if isReminderTime {
+                                    if appStorage.isReminderTime {
                                         // 日期选择器
                                         DatePicker("",
                                                    selection: Binding(get: {
-                                            Date(timeIntervalSince1970: reminderTime)
+                                            Date(timeIntervalSince1970: appStorage.reminderTime)
                                         }, set: {
-                                            reminderTime = $0.timeIntervalSince1970
+                                            appStorage.reminderTime = $0.timeIntervalSince1970
                                             // 选择日期后，更新调度通知
                                             scheduleLocalNotification()
                                         }),
@@ -212,7 +220,7 @@ struct GeneralView: View {
                                     // 提示时间
                                     Toggle("",isOn: Binding (
                                         get: {
-                                            isReminderTime
+                                            appStorage.isReminderTime
                                         },
                                         set: { newValue in
                                             if newValue {
@@ -221,7 +229,7 @@ struct GeneralView: View {
                                             } else {
                                                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                                                 print("所有未触发的通知已清除")
-                                                isReminderTime = false
+                                                appStorage.isReminderTime = false
                                             }
                                         }
                                     ))  // 提醒时间
@@ -242,7 +250,11 @@ struct GeneralView: View {
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.8)
                                     Spacer()
-                                    Toggle("",isOn: $isBiometricEnabled)  // iCloud开关
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.isBiometricEnabled
+                                    }, set: {
+                                        appStorage.isBiometricEnabled = $0
+                                    }))  // iCloud开关
                                         .frame(height:0)
                                 })
                             }
@@ -264,7 +276,7 @@ struct GeneralView: View {
         .onAppear {
             // 为了检查应用的权限是否在后台关闭
             // 调用消息授权方法重新校验，如果提醒时间字段为true
-            if isReminderTime {
+            if appStorage.isReminderTime {
                 // 重新执行授权通知进行校验
                 requestNotificationPermission()
             }

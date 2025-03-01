@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct AppIconView: View {
-    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
+//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-
+    
+    var appStorage = AppStorageManager.shared  // 共享实例
+    
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 120)), // 控制列宽范围
         GridItem(.adaptive(minimum: 100, maximum: 120)),
@@ -26,7 +28,7 @@ struct AppIconView: View {
     ]
     
     var appIcon: [Int] {
-        Array(isInAppPurchase ? 0..<36 : 0..<6)
+        Array(appStorage.isInAppPurchase ? 0..<36 : 0..<6)
     }
     // 1.0.5版本应用图标名称： AppIcon3
     var AlternateIconName: String {
