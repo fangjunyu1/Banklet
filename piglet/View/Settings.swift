@@ -62,7 +62,7 @@ struct Settings: View {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing:0) {
                             // 第一组：赞助应用
-                            if appStorage.isShowInAppPurchase {
+//                            if appStorage.isShowInAppPurchase {
                                 VStack(spacing: 0) {
                                     // 内购完成
                                     if appStorage.isInAppPurchase {
@@ -100,7 +100,7 @@ struct Settings: View {
                                     }
                                 }
                                 .padding(10)
-                            }
+//                            }
                             
                             // 第二组：启用iCloud、通用、辅助功能
                             // 功能不完善、临时隐藏
@@ -269,50 +269,45 @@ struct Settings: View {
                             // 第四组：关于我们、鸣谢
                             VStack(spacing: 0) {
                                 // 关于我们
-                                if appStorage.isShowAboutUs {
-                                    SettingButton(action: {
-                                        showAboutUs.toggle()
-                                    }, content: {
-                                        Image(systemName: "figure.2")
-                                            .font(.caption)
-                                            .padding(.horizontal,5)
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        Text("About Us")
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.8)
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(Color(hex:"D8D8D8"))
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                    })
-                                    
-                                }
-                                if appStorage.isShowThanks && appStorage.isShowAboutUs {
-                                    
-                                    // 分割线
-                                    Rectangle()
-                                        .frame(maxWidth:.infinity)
-                                        .frame(height: 0.5)
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 60)
-                                }
-                                if appStorage.isShowThanks {
-                                    // 鸣谢
-                                    SettingButton(action: {
-                                        showThanks.toggle()
-                                    }, content: {
-                                        Image(systemName: "questionmark.circle")
-                                            .padding(.horizontal,5)
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        Text("Thanks")
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.8)
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .foregroundColor(Color(hex:"C1C1C1"))
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                    })
-                                }
+                                SettingButton(action: {
+                                    showAboutUs.toggle()
+                                }, content: {
+                                    Image(systemName: "figure.2")
+                                        .font(.caption)
+                                        .padding(.horizontal,5)
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                    Text("About Us")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(Color(hex:"D8D8D8"))
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                })
+//                                if appStorage.isShowAboutUs { }
+                                // 分割线
+                                Rectangle()
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 0.5)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 60)
+//                                if appStorage.isShowThanks && appStorage.isShowAboutUs {    }
+                                // 鸣谢
+                                SettingButton(action: {
+                                    showThanks.toggle()
+                                }, content: {
+                                    Image(systemName: "questionmark.circle")
+                                        .padding(.horizontal,5)
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                    Text("Thanks")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(Color(hex:"C1C1C1"))
+                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                })
+//                                if appStorage.isShowThanks {}
                                 // 分割线
                                 Rectangle()
                                     .frame(maxWidth:.infinity)
@@ -346,11 +341,11 @@ struct Settings: View {
                             }
                             .foregroundColor(Color(hex: "D6D6D7"))
                             .font(.footnote)
-                            .onTapGesture(count: 2) {
-                                if appStorage.isInAppPurchase {
-                                    appStorage.isShowInAppPurchase.toggle()
-                                }
-                            }
+//                            .onTapGesture(count: 2) {
+//                                if appStorage.isInAppPurchase {
+//                                    appStorage.isShowInAppPurchase.toggle()
+//                                }
+//                            }
                             Spacer()
                             
                         }

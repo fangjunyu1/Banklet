@@ -25,22 +25,165 @@ class AppStorageManager {
         observeAppLifecycle()
     }
     
-    var pageSteps: Int = 1  // 视图步骤
-    var isBiometricEnabled: Bool = false    // 密码保护
-    var BackgroundImage = "" // 背景照片
-    var LoopAnimation = "Home0" // Lottie动画
-    var isLoopAnimation = false // 循环动画
-    var isSilentMode = false    // 静默模式
-    var CurrencySymbol = "USD"  // 货币符号
-    var SwitchTopStyle: Bool = false    // 存钱罐首页显示样式，为true则显示已存入的金额
-    var RatingClicks: Int = 0   // 请求评分
-    var isInAppPurchase = false /// 内购完成后，设置为true，@AppStorage("20240523")
-    var isShowAboutUs = true   // false表示隐藏
-    var isShowInAppPurchase = true   // 控制内购按钮，false表示隐藏
-    var isShowThanks = true // 控制鸣谢页面，false表示隐藏
-    var isModelConfigManager = true // ModelConfig配置
-    var isReminderTime = false  // 提醒时间，设置提醒时间为true，否则为false
-    var reminderTime: Double = Date().timeIntervalSince1970 // 存储用户设定的提醒时间
+    // 视图步骤
+    var pageSteps: Int = 1 {
+        didSet {
+            if pageSteps != oldValue {
+                UserDefaults.standard.set(pageSteps, forKey: "pageSteps")
+                syncToiCloud()
+            }
+        }
+    }
+
+    // 密码保护
+    var isBiometricEnabled: Bool = false  {
+        didSet {
+            if isBiometricEnabled != oldValue {
+                UserDefaults.standard.set(isBiometricEnabled, forKey: "isBiometricEnabled")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 背景照片
+    var BackgroundImage = "" {
+        didSet {
+            if BackgroundImage != oldValue {
+                UserDefaults.standard.set(BackgroundImage, forKey: "BackgroundImage")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // Lottie动画
+    var LoopAnimation = "Home0" {
+        didSet {
+            if LoopAnimation != oldValue {
+                UserDefaults.standard.set(LoopAnimation, forKey: "LoopAnimation")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 循环动画
+    var isLoopAnimation = false {
+        didSet {
+            if isLoopAnimation != oldValue {
+                UserDefaults.standard.set(isLoopAnimation, forKey: "isLoopAnimation")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 静默模式
+    var isSilentMode = false  {
+        didSet {
+            if isSilentMode != oldValue {
+                UserDefaults.standard.set(isSilentMode, forKey: "isSilentMode")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 货币符号
+    var CurrencySymbol = "USD" {
+        didSet {
+            if CurrencySymbol != oldValue {
+                UserDefaults.standard.set(CurrencySymbol, forKey: "CurrencySymbol")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 存钱罐首页显示样式，为true则显示已存入的金额
+    var SwitchTopStyle: Bool = false  {
+        didSet {
+            if SwitchTopStyle != oldValue {
+                UserDefaults.standard.set(SwitchTopStyle, forKey: "SwitchTopStyle")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 请求评分
+    var RatingClicks: Int = 0  {
+        didSet {
+            if RatingClicks != oldValue {
+                UserDefaults.standard.set(RatingClicks, forKey: "RatingClicks")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    /// 内购完成后，设置为true，@AppStorage("20240523")
+    var isInAppPurchase = false {
+        didSet {
+            if isInAppPurchase != oldValue {
+                UserDefaults.standard.set(isInAppPurchase, forKey: "20240523")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // false表示隐藏
+    var isShowAboutUs = true  {
+        didSet {
+            if isShowAboutUs != oldValue {
+                UserDefaults.standard.set(isShowAboutUs, forKey: "isShowAboutUs")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 控制内购按钮，false表示隐藏
+    var isShowInAppPurchase = true  {
+        didSet {
+            if isShowInAppPurchase != oldValue {
+                UserDefaults.standard.set(isShowInAppPurchase, forKey: "isShowInAppPurchase")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 控制鸣谢页面，false表示隐藏
+    var isShowThanks = true {
+        didSet {
+            if isShowThanks != oldValue {
+                UserDefaults.standard.set(isShowThanks, forKey: "isShowThanks")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // ModelConfig配置
+    var isModelConfigManager = true {
+        didSet {
+            if isModelConfigManager != oldValue {
+                UserDefaults.standard.set(isModelConfigManager, forKey: "isModelConfigManager")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 提醒时间，设置提醒时间为true，否则为false
+    var isReminderTime = false {
+        didSet {
+            if isReminderTime != oldValue {
+                UserDefaults.standard.set(isReminderTime, forKey: "isReminderTime")
+                syncToiCloud()
+            }
+        }
+    }
+    
+    // 存储用户设定的提醒时间
+    var reminderTime: Double = Date().timeIntervalSince1970 {
+        didSet {
+            if reminderTime != oldValue {
+                UserDefaults.standard.set(reminderTime, forKey: "reminderTime")
+                syncToiCloud()
+            }
+        }
+    }
     
     // 从UserDefaults加载数据
     private func loadUserDefault() {
@@ -70,57 +213,100 @@ class AppStorageManager {
         // 读取整数值
         if let storedPageSteps = store.object(forKey: "pageSteps") as? Int {
             pageSteps = storedPageSteps
+        } else {
+            store.set(pageSteps, forKey: "pageSteps")
         }
+        
         if let storedRatingClicks = store.object(forKey: "RatingClicks") as? Int {
             RatingClicks = storedRatingClicks
+        } else {
+            store.set(RatingClicks, forKey: "RatingClicks")
         }
 
         // 读取双精度值
         if store.object(forKey: "reminderTime") != nil {
             reminderTime = store.double(forKey: "reminderTime")
+        } else {
+            store.set(reminderTime, forKey: "reminderTime")
         }
         
         // 读取布尔值
         if store.object(forKey: "isBiometricEnabled") != nil {
             isBiometricEnabled = store.bool(forKey: "isBiometricEnabled")
+        } else {
+            store.set(isBiometricEnabled, forKey: "isBiometricEnabled")
         }
+        
         if store.object(forKey: "isLoopAnimation") != nil {
             isLoopAnimation = store.bool(forKey: "isLoopAnimation")
+        } else {
+            store.set(isLoopAnimation, forKey: "isLoopAnimation")
         }
+        
         if store.object(forKey: "isSilentMode") != nil {
             isSilentMode = store.bool(forKey: "isSilentMode")
+        } else {
+            store.set(isSilentMode, forKey: "isSilentMode")
         }
+        
         if store.object(forKey: "SwitchTopStyle") != nil {
             SwitchTopStyle = store.bool(forKey: "SwitchTopStyle")
+        } else {
+            store.set(SwitchTopStyle, forKey: "SwitchTopStyle")
         }
+        
         if store.object(forKey: "20240523") != nil {
             isInAppPurchase = store.bool(forKey: "20240523")
+        } else {
+            store.set(isInAppPurchase, forKey: "20240523")
         }
+        
         if store.object(forKey: "isShowAboutUs") != nil {
             isShowAboutUs = store.bool(forKey: "isShowAboutUs")
+        } else {
+            store.set(isShowAboutUs, forKey: "isShowAboutUs")
         }
         if store.object(forKey: "isShowInAppPurchase") != nil {
             isShowInAppPurchase = store.bool(forKey: "isShowInAppPurchase")
+        } else {
+            store.set(isShowInAppPurchase, forKey: "isShowInAppPurchase")
         }
+        
         if store.object(forKey: "isShowThanks") != nil {
             isShowThanks = store.bool(forKey: "isShowThanks")
+        } else {
+            store.set(isShowThanks, forKey: "isShowThanks")
         }
+        
         if store.object(forKey: "isModelConfigManager") != nil {
             isModelConfigManager = store.bool(forKey: "isModelConfigManager")
+        } else {
+            store.set(isModelConfigManager, forKey: "isModelConfigManager")
         }
+        
         if store.object(forKey: "isReminderTime") != nil {
             isReminderTime = store.bool(forKey: "isReminderTime")
+        } else {
+            store.set(isReminderTime, forKey: "isReminderTime")
         }
 
         // 读取字符串值
         if let storedBackgroundImage = store.string(forKey: "BackgroundImage") {
             BackgroundImage = storedBackgroundImage
+        } else {
+            store.set(BackgroundImage, forKey: "BackgroundImage")
         }
+        
         if let storedLoopAnimation = store.string(forKey: "LoopAnimation") {
             LoopAnimation = storedLoopAnimation
+        } else {
+            store.set(LoopAnimation, forKey: "LoopAnimation")
         }
+        
         if let storedCurrencySymbol = store.string(forKey: "CurrencySymbol") {
             CurrencySymbol = storedCurrencySymbol
+        } else {
+            store.set(CurrencySymbol, forKey: "CurrencySymbol")
         }
 
         print("完成 loadFromiCloud 方法的读取")
@@ -139,6 +325,8 @@ class AppStorageManager {
         print("isShowThanks: \(isShowThanks)")
         print("isModelConfigManager: \(isModelConfigManager)")
         print("isReminderTime:\(isReminderTime)")
+        store.synchronize() // 强制触发数据同步
+
     }
     
     /// 数据变化时，**同步到 iCloud**
