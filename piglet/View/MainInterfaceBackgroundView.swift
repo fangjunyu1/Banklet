@@ -25,9 +25,10 @@ struct MainInterfaceBackgroundView: View {
     ]
     
         var backgroundRange: [Int] {
-            Array(appStorage.isInAppPurchase ? 0..<39 : 0..<7)
+//            Array(appStorage.isInAppPurchase ? 0..<39 : 0..<7)
+            Array(0..<39)
         }
-    
+    var backgroundLimit: Int = 7
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -103,6 +104,24 @@ struct MainInterfaceBackgroundView: View {
                                                     }
                                             }
                                     })
+                                    .overlay {
+                                        if !appStorage.isInAppPurchase && index >= backgroundLimit {
+                                            ZStack {
+                                                Color.black.opacity(0.3)
+                                                    .cornerRadius(10)
+                                                VStack {
+                                                    Spacer()
+                                                    HStack {
+                                                        Spacer()
+                                                        Image(systemName: "lock.fill")
+                                                            .imageScale(.large)
+                                                            .padding(10)
+                                                            .foregroundColor(.white)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         .padding(.vertical,20)

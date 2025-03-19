@@ -29,8 +29,11 @@ struct AppIconView: View {
     ]
     
     var appIcon: [Int] {
-        Array(appStorage.isInAppPurchase ? 0..<36 : 0..<6)
+//        Array(appStorage.isInAppPurchase ? 0..<36 : 0..<6)
+        Array(0..<36)
     }
+    
+    var appIconLimit: Int = 6
     // 1.0.5版本应用图标名称： AppIcon3
 //    var AlternateIconName: String {
 //        UIApplication.shared.alternateIconName ?? "AppIcon 2"
@@ -96,6 +99,24 @@ struct AppIconView: View {
                                                 }
                                         }
                                 })
+                                .overlay {
+                                    if !appStorage.isInAppPurchase && index >= appIconLimit {
+                                        ZStack {
+                                            Color.black.opacity(0.3)
+                                                .cornerRadius(10)
+                                            VStack {
+                                                Spacer()
+                                                HStack {
+                                                    Spacer()
+                                                    Image(systemName: "lock.fill")
+                                                        .imageScale(.large)
+                                                        .padding(10)
+                                                        .foregroundColor(.white)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             
                         }

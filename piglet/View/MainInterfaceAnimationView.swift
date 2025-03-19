@@ -28,8 +28,11 @@ struct MainInterfaceAnimationView: View {
     ]
     
     var backgroundRange: [Int] {
-        Array(appStorage.isInAppPurchase ? 0..<54 : 0..<8)
+//        Array(appStorage.isInAppPurchase ? 0..<54 : 0..<8)
+        Array(0..<54)
     }
+    
+    var backgroundRangeLimit: Int = 8
 
     var body: some View {
         NavigationStack {
@@ -94,6 +97,24 @@ struct MainInterfaceAnimationView: View {
                                                 }
                                             }
                                     })
+                                    .overlay {
+                                        if !appStorage.isInAppPurchase && index >= backgroundRangeLimit {
+                                            ZStack {
+                                                Color.black.opacity(0.3)
+                                                    .cornerRadius(10)
+                                                VStack {
+                                                    Spacer()
+                                                    HStack {
+                                                        Spacer()
+                                                        Image(systemName: "lock.fill")
+                                                            .imageScale(.large)
+                                                            .padding(10)
+                                                            .foregroundColor(.white)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             Text("by Lottiefiles")
