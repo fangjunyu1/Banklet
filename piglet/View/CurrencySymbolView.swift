@@ -11,10 +11,9 @@ struct CurrencySymbolView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     // 货币符号
 //    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     var body: some View {
         NavigationStack {
@@ -56,4 +55,5 @@ struct CurrencySymbolView: View {
 
 #Preview {
     CurrencySymbolView()
+        .environment(AppStorageManager.shared)
 }

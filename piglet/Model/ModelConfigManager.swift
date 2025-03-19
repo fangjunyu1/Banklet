@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-//@AppStorage("isSynciCloud") private var isSynciCloud:Bool =
 @Observable
 class ModelConfigManager {
     

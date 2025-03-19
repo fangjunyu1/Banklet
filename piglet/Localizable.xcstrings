@@ -935,6 +935,18 @@
         }
       }
     },
+    "Access Notes" : {
+      "comment" : "1.0.10",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取备注"
+          }
+        }
+      }
+    },
     "Access records" : {
       "comment" : "存取记录",
       "extractionState" : "manual",
@@ -24316,6 +24328,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請輸入存入金額"
+          }
+        }
+      }
+    },
+    "Please enter notes" : {
+      "comment" : "1.0.10请输入备注",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入备注"
           }
         }
       }

@@ -15,8 +15,7 @@ struct ContentView: View {
     @State private var showContentView = false
     @State private var isErrorMessage = false
     @State private var ZoomMainView = false
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
+    @Environment(AppStorageManager.self) var appStorage
     
     // 密码保护方法
     func authenticate() {
@@ -95,9 +94,9 @@ struct ContentView: View {
 }
 
 #Preview {
-    @StateObject var iapManager = IAPManager.shared
-    return ContentView()
+    ContentView()
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(iapManager)
+        .environment(AppStorageManager.shared)
+        .environmentObject(IAPManager.shared)
 }

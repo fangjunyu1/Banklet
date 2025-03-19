@@ -16,6 +16,7 @@ struct Home: View {
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true },
            sort: [SortDescriptor(\.creationDate, order: .reverse)]) var piggyBank: [PiggyBank]
     @Query var allPiggyBank: [PiggyBank]
@@ -55,7 +56,6 @@ struct Home: View {
 //    // 请求评分
 //    @AppStorage("RatingClicks") var RatingClicks: Int = 0
     
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     let maxHistorySize = 3 // 历史记录长度
     
@@ -643,10 +643,10 @@ struct Home: View {
     }
 }
 #Preview {
-    @StateObject var iapManager = IAPManager.shared
-    return Home()
+    Home()
         .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(iapManager)
+        .environmentObject(IAPManager.shared)
 //        .environment(\.locale, .init(identifier: "ru"))
 }

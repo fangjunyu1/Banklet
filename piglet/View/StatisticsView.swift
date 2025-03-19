@@ -14,6 +14,7 @@ struct StatisticsView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     
     @Query var allPiggyBank: [PiggyBank]
     @Query var savingsRecords: [SavingsRecord]
@@ -26,8 +27,6 @@ struct StatisticsView: View {
 //    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
     // 清理1.0.6以前可能存在的孤立存取数据
 //    @AppStorage("CleanUpOrphanAccessData") var CleanUpOrphanAccessData = false
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     private let rows = [GridItem(.adaptive(minimum: 20))] // 网格行的设置
     private let calendar = Calendar.current // current表示默认日历
@@ -312,4 +311,5 @@ struct StatisticsView: View {
     StatisticsView()
         .modelContainer(PiggyBank.preview)
         .environment(\.locale, .init(identifier: "de"))
+        .environment(AppStorageManager.shared)
 }

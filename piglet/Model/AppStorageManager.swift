@@ -185,6 +185,16 @@ class AppStorageManager {
         }
     }
     
+    // 存取信息的存取备注
+    var accessNotes = false {
+        didSet {
+            if accessNotes != oldValue {
+                UserDefaults.standard.set(accessNotes, forKey: "accessNotes")
+                syncToiCloud()
+            }
+        }
+    }
+    
     // 从UserDefaults加载数据
     private func loadUserDefault() {
         pageSteps = UserDefaults.standard.integer(forKey: "pageSteps")  // 视图步骤
@@ -203,6 +213,7 @@ class AppStorageManager {
         isModelConfigManager = UserDefaults.standard.bool(forKey: "isModelConfigManager")  // ModelConfig配置
         isReminderTime = UserDefaults.standard.bool(forKey: "isReminderTime")  // 提醒时间，设置提醒时间为true，否则为false
         reminderTime = UserDefaults.standard.double(forKey: "reminderTime") // 存储用户设定的提醒时间
+        accessNotes = UserDefaults.standard.bool(forKey: "accessNotes")  // 存取备注
     }
     
     /// 从 iCloud 读取数据
@@ -289,6 +300,12 @@ class AppStorageManager {
         } else {
             store.set(isReminderTime, forKey: "isReminderTime")
         }
+        
+        if store.object(forKey: "accessNotes") != nil {
+            accessNotes = store.bool(forKey: "accessNotes")
+        } else {
+            store.set(accessNotes, forKey: "accessNotes")
+        }
 
         // 读取字符串值
         if let storedBackgroundImage = store.string(forKey: "BackgroundImage") {
@@ -325,6 +342,7 @@ class AppStorageManager {
         print("isShowThanks: \(isShowThanks)")
         print("isModelConfigManager: \(isModelConfigManager)")
         print("isReminderTime:\(isReminderTime)")
+        print("accessNotes:\(accessNotes)")
         store.synchronize() // 强制触发数据同步
 
     }
@@ -348,6 +366,7 @@ class AppStorageManager {
         store.set(isModelConfigManager, forKey: "isModelConfigManager")
         store.set(isReminderTime, forKey: "isReminderTime")
         store.set(reminderTime, forKey: "reminderTime")
+        store.set(accessNotes, forKey: "accessNotes")
         store.synchronize() // 强制触发数据同步
     }
     

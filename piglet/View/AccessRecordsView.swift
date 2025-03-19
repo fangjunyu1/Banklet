@@ -12,10 +12,11 @@ struct AccessRecordsView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     var piggyBank: PiggyBank
     
     // 货币符号
-    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
     
     // 删除存取记录
     func removeRows(at offsets: IndexSet) {
@@ -95,7 +96,7 @@ struct AccessRecordsView: View {
                                                 }
                                                 Spacer()
                                                 Group {
-                                                    Text("\(currencySymbolList.first{ $0.currencyAbbreviation == CurrencySymbol}?.currencySymbol ?? "$")") + Text(" ") + Text(record.amount.formattedWithTwoDecimalPlaces())
+                                                    Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$")") + Text(" ") + Text(record.amount.formattedWithTwoDecimalPlaces())
                                                 }
                                                     .foregroundColor(record.saveMoney == true ? .green : .red)
                                                     .fontWeight(.bold)
@@ -141,4 +142,5 @@ struct AccessRecordsView: View {
     let places = try! context.fetch(FetchDescriptor<PiggyBank>()) // 从上下文中获取数据
     return AccessRecordsView(piggyBank: places[0])
         .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
 }

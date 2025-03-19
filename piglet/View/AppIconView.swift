@@ -12,8 +12,7 @@ struct AppIconView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
+    @Environment(AppStorageManager.self) var appStorage
     
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 120)), // 控制列宽范围
@@ -107,4 +106,5 @@ struct AppIconView: View {
 
 #Preview {
     AppIconView()
+        .environment(AppStorageManager.shared)
 }

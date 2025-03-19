@@ -11,10 +11,9 @@ import SwiftData
 @main
 struct pigletApp: App {
     @StateObject var iapManager = IAPManager.shared
+    @State var appStorage = AppStorageManager.shared
     @State private var modelConfigManager = ModelConfigManager()
     //    @AppStorage("isModelConfigManager") var isModelConfigManager = true // 控制iCloud
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     init() {
         if appStorage.isModelConfigManager {
@@ -35,6 +34,7 @@ struct pigletApp: App {
                 }
         }
         .environment(modelConfigManager)
+        .environment(appStorage)
         .environmentObject(iapManager)
         .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
         

@@ -12,6 +12,7 @@ struct GeneralView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
 //    @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
 //    // 测试详细信息
 //    //    @AppStorage("isTestDetails") var isTestDetails = false
@@ -22,9 +23,6 @@ struct GeneralView: View {
 //    @AppStorage("isReminderTime") var isReminderTime = false
 //    // 存储用户设定的提醒时间
 //    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
-    
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     // 授权通知
     func requestNotificationPermission() {
@@ -257,6 +255,27 @@ struct GeneralView: View {
                                     }))  // iCloud开关
                                         .frame(height:0)
                                 })
+                                // 分割线
+                                Rectangle()
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 0.5)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 60)
+                                // 存取备注
+                                SettingView(content: {
+                                    Image(systemName: "list.clipboard")
+                                        .padding(.horizontal,5)
+                                    Text("Access Notes")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.accessNotes
+                                    }, set: {
+                                        appStorage.accessNotes = $0
+                                    })) 
+                                        .frame(height:0)
+                                })
                             }
                             .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
                             .cornerRadius(10)
@@ -287,5 +306,6 @@ struct GeneralView: View {
 
 #Preview {
     GeneralView()
+        .environment(AppStorageManager.shared)
     //        .environment(\.locale, .init(identifier: "de"))
 }

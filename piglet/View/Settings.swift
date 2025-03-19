@@ -12,6 +12,7 @@ struct Settings: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(ModelConfigManager.self) var modelConfigManager    // 从环境中读取modelConfigManager
+    @Environment(AppStorageManager.self) var appStorage
     @Environment(\.dismiss) var dismiss
     @State private var showNonFunctionalView = false
     @State private var showSponsoredApps = false
@@ -26,7 +27,6 @@ struct Settings: View {
 //    @AppStorage("isShowThanks") var isShowThanks = true // 控制鸣谢页面，false表示隐藏
 //    @AppStorage("isModelConfigManager") var isModelConfigManager = true
     
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     func sendEmail() {
         let email = "fangjunyu.com@gmail.com"
@@ -388,10 +388,10 @@ struct Settings: View {
 }
 
 #Preview {
-    @StateObject var iapManager = IAPManager.shared
-    return Settings()
+    Settings()
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(iapManager)
+        .environmentObject(IAPManager.shared)
+        .environment(AppStorageManager.shared)
     //        .environment(\.locale, .init(identifier: "de"))
 }
 

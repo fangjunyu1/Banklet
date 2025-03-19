@@ -18,6 +18,7 @@ struct DepositAndWithdrawView: View {
     @State private var deposit = true
     @State private var selectedOption = "Deposit"
     @State private var EnterAmount: Double = 0.0    // 输入框的金额
+    @State private var notes = ""
     @Binding var isReversed: Bool
     let options = ["Deposit","Withdraw"]
     // 新增 onComplete 回调
@@ -67,7 +68,35 @@ struct DepositAndWithdrawView: View {
                             .padding(.trailing,20)
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
-                            
+                        }
+                        .frame(width: width,height: 66)
+                        .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
+                        .cornerRadius(10)
+                        Spacer().frame(height:20)
+                        // 存取备注
+                        HStack {
+                            Text(selectedOption == "Deposit" ?  LocalizedStringKey("Deposit amount") : LocalizedStringKey("Withdraw amount"))
+                                .padding(.horizontal,20)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.8)
+                                .onTapGesture {
+                                    isFocus = false
+                                }
+                            TextField(selectedOption == "Deposit" ?  LocalizedStringKey("Please enter deposit amount") : LocalizedStringKey("Please enter withdrawal amount"), text: Binding(
+                                get: {
+                                    EnterAmount == 0 ? "" : String(EnterAmount.formattedWithTwoDecimalPlaces())
+                                },
+                                set: { newValue in
+                                    let userInput = parseInput(newValue)
+                                    EnterAmount = Double(userInput)
+                                }
+                            ))
+                            .focused($isFocus)
+                            .keyboardType(.decimalPad)
+                            .submitLabel(.continue)
+                            .padding(.trailing,20)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
                         }
                         .frame(width: width,height: 66)
                         .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))

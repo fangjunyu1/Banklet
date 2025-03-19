@@ -12,11 +12,10 @@ struct MainInterfaceAnimationView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
 //    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
 //    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
 //    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
-    
-    var appStorage = AppStorageManager.shared  // 共享实例
     
     let columns = [
         GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
@@ -116,4 +115,5 @@ struct MainInterfaceAnimationView: View {
 #Preview {
     MainInterfaceAnimationView()
             .environment(\.locale, .init(identifier: "ar"))
+            .environment(AppStorageManager.shared)
 }

@@ -9,10 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ManagingView: View {
-    @AppStorage("pageSteps") var pageSteps: Int = 1
+//    @AppStorage("pageSteps") var pageSteps: Int = 1
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
+    @Environment(AppStorageManager.self) var appStorage
     @Query var piggyBank: [PiggyBank]
     @State private var itemToDelete: PiggyBank? // 新增状态变量，用于存储要删除的存钱罐
     //    @State private var currentIndex = 0
@@ -41,7 +42,7 @@ struct ManagingView: View {
                             HStack {
                                 Button(action: {
                                     // 跳转到创建视图
-                                    pageSteps = 3
+                                    appStorage.pageSteps = 3
                                 }, label: {
                                     VStack {
                                         Image(systemName: "plus")
@@ -211,5 +212,6 @@ struct ManagingView: View {
 #Preview {
     ManagingView()
         .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
     //        .environment(\.locale, .init(identifier: "de"))
 }
