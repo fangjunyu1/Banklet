@@ -46,7 +46,6 @@ struct AccessRecordsView: View {
                         Image("emptyBox")
                             .resizable()
                             .scaledToFit()
-                        
                             .frame(width: 0.8 * width)
                         Text("Image by freepik")
                             .font(.footnote)
@@ -70,6 +69,7 @@ struct AccessRecordsView: View {
                                             Rectangle()
                                                 .frame(height: 0.5)
                                                 .foregroundColor(.gray)
+                                                .padding(.bottom,5)
                                             HStack {
                                                 (record.saveMoney == true ?
                                                  Image(systemName: "arrowshape.down")
@@ -101,6 +101,23 @@ struct AccessRecordsView: View {
                                                     .foregroundColor(record.saveMoney == true ? .green : .red)
                                                     .fontWeight(.bold)
                                             }
+                                            if let note = record.note,!note.isEmpty {
+                                                Rectangle()
+                                                    .frame(height: 0.5)
+                                                    .foregroundColor(.gray)
+                                                    .font(.footnote)
+                                                    .padding(.bottom,5)
+                                                HStack {
+                                                    Text("Notes")
+                                                        .fontWeight(.bold)
+                                                        .font(.footnote)
+                                                    Text("\(note)")
+                                                        .foregroundColor(.gray)
+                                                        .font(.footnote)
+                                                    Spacer()
+                                                }
+                                            }
+                                            
                                         }
                                         .padding(10)
                                     }

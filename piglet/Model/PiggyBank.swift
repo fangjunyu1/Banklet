@@ -51,7 +51,7 @@ class PiggyBank {
                 let records = [
                     SavingsRecord(amount: 18,saveMoney: true,piggyBank:piggyBank),
                     SavingsRecord(amount: 20,saveMoney: false,piggyBank:piggyBank),
-                    SavingsRecord(amount: 36,saveMoney: false,piggyBank:piggyBank)
+                    SavingsRecord(amount: 36,saveMoney: false,note: "fangjunyu.com",piggyBank:piggyBank)
                 ]
                 for record in records {
                     piggyBank.records?.append(record) // 通过关系自动管理

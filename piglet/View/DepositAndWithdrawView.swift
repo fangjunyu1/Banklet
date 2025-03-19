@@ -12,17 +12,28 @@ struct DepositAndWithdrawView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
+    @Environment(AppStorageManager.self) var appStorage
+    
     @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true })
     var piggyBank: [PiggyBank]
-    @FocusState private var isFocus: Bool
+    
+    @FocusState private var isFocus: Field?
+    
     @State private var deposit = true
     @State private var selectedOption = "Deposit"
     @State private var EnterAmount: Double = 0.0    // 输入框的金额
     @State private var notes = ""
+    
     @Binding var isReversed: Bool
+    
     let options = ["Deposit","Withdraw"]
     // 新增 onComplete 回调
     var onComplete: () -> Void = {}
+    
+    enum Field: Hashable {
+            case amountField
+            case remarksField
+    }
     
     var body: some View {
         NavigationStack {
@@ -33,7 +44,7 @@ struct DepositAndWithdrawView: View {
                     Color(hex: colorScheme == .light ?  "f0f0f0" : "0E0E0E")
                         .ignoresSafeArea()
                         .onTapGesture {
-                            isFocus = false
+                            isFocus = nil
                         }
                     VStack {
                         // 选取
@@ -49,9 +60,9 @@ struct DepositAndWithdrawView: View {
                             Text(selectedOption == "Deposit" ?  LocalizedStringKey("Deposit amount") : LocalizedStringKey("Withdraw amount"))
                                 .padding(.horizontal,20)
                                 .lineLimit(1)
-                                .minimumScaleFactor(0.8)
+                                .minimumScaleFactor(0.5)
                                 .onTapGesture {
-                                    isFocus = false
+                                    isFocus = nil
                                 }
                             TextField(selectedOption == "Deposit" ?  LocalizedStringKey("Please enter deposit amount") : LocalizedStringKey("Please enter withdrawal amount"), text: Binding(
                                 get: {
@@ -62,45 +73,38 @@ struct DepositAndWithdrawView: View {
                                     EnterAmount = Double(userInput)
                                 }
                             ))
-                            .focused($isFocus)
+                            .focused($isFocus, equals: .amountField)
                             .keyboardType(.decimalPad)
                             .submitLabel(.continue)
                             .padding(.trailing,20)
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
                         }
-                        .frame(width: width,height: 66)
+                        .frame(width: width)
+                        .padding(.vertical,20)
                         .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
                         .cornerRadius(10)
                         Spacer().frame(height:20)
                         // 存取备注
-                        HStack {
-                            Text(selectedOption == "Deposit" ?  LocalizedStringKey("Deposit amount") : LocalizedStringKey("Withdraw amount"))
-                                .padding(.horizontal,20)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.8)
-                                .onTapGesture {
-                                    isFocus = false
-                                }
-                            TextField(selectedOption == "Deposit" ?  LocalizedStringKey("Please enter deposit amount") : LocalizedStringKey("Please enter withdrawal amount"), text: Binding(
-                                get: {
-                                    EnterAmount == 0 ? "" : String(EnterAmount.formattedWithTwoDecimalPlaces())
-                                },
-                                set: { newValue in
-                                    let userInput = parseInput(newValue)
-                                    EnterAmount = Double(userInput)
-                                }
-                            ))
-                            .focused($isFocus)
-                            .keyboardType(.decimalPad)
-                            .submitLabel(.continue)
-                            .padding(.trailing,20)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
+                        if !appStorage.accessNotes {
+                            HStack {
+                                Text(LocalizedStringKey("Notes"))
+                                    .padding(.horizontal,20)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.8)
+                                    .onTapGesture {
+                                        isFocus = nil
+                                    }
+                                TextField(LocalizedStringKey("Please enter notes"), text: $notes)
+                                    .focused($isFocus, equals: .remarksField)
+                                .submitLabel(.continue)
+                                .padding(.trailing,20)
+                            }
+                            .frame(width: width)
+                            .padding(.vertical,20)
+                            .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
+                            .cornerRadius(10)
                         }
-                        .frame(width: width,height: 66)
-                        .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
-                        .cornerRadius(10)
                         Spacer().frame(height:20)
                         // 存取按钮
                         Button(action: {
@@ -126,7 +130,7 @@ struct DepositAndWithdrawView: View {
                                         }
                                         // 新增存取记录为，目标金额 - 当前金额 = 本次存满的差额。
                                         // 存取记录的金额为存满的差额
-                                        let savingRecord = SavingsRecord(amount: piggyBank[0].targetAmount - piggyBank[0].amount, saveMoney: true,piggyBank: piggyBank[0])
+                                        let savingRecord = SavingsRecord(amount: piggyBank[0].targetAmount - piggyBank[0].amount, saveMoney: true,note: notes,piggyBank: piggyBank[0])
                                         modelContext.insert(savingRecord)
                                         // 新增存取记录
                                         
@@ -137,7 +141,7 @@ struct DepositAndWithdrawView: View {
                                         
                                     } else {
                                         // 新增存取记录为： 存入金额
-                                        let savingRecord = SavingsRecord(amount: EnterAmount, saveMoney: true,piggyBank: piggyBank[0])
+                                        let savingRecord = SavingsRecord(amount: EnterAmount, saveMoney: true,note: notes,piggyBank: piggyBank[0])
                                         modelContext.insert(savingRecord)
                                         
                                         // 否则，当前金额 = 当前金额 + 存入金额
@@ -148,7 +152,7 @@ struct DepositAndWithdrawView: View {
                                     // 取出金额的情况
                                     if EnterAmount >= piggyBank[0].amount {
                                         // 新增取出记录为： 取出金额为当前的所有金额
-                                        let savingRecord = SavingsRecord(amount: piggyBank[0].amount, saveMoney: false,piggyBank: piggyBank[0])
+                                        let savingRecord = SavingsRecord(amount: piggyBank[0].amount, saveMoney: false,note: notes,piggyBank: piggyBank[0])
                                         modelContext.insert(savingRecord)
                                         
                                         
@@ -157,7 +161,7 @@ struct DepositAndWithdrawView: View {
                                         piggyBank[0].amount = 0
                                     } else {
                                         // 新增取出记录为： 取出金额为本次取出的金额
-                                        let savingRecord = SavingsRecord(amount: EnterAmount, saveMoney: false,piggyBank: piggyBank[0])
+                                        let savingRecord = SavingsRecord(amount: EnterAmount, saveMoney: false,note: notes,piggyBank: piggyBank[0])
                                         modelContext.insert(savingRecord)
                                         
                                         
@@ -214,5 +218,6 @@ struct DepositAndWithdrawView: View {
 #Preview {
     DepositAndWithdrawView(isReversed: .constant(true))
         .modelContainer(PiggyBank.preview)
-        .environment(\.locale, .init(identifier: "de"))
+        .environment(AppStorageManager.shared)
+//        .environment(\.locale, .init(identifier: "de"))
 }
