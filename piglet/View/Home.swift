@@ -203,7 +203,7 @@ struct Home: View {
                         //  存钱罐显示内容
                         if piggyBank.count != 0 {
                             
-                            ScrollView {
+                            ScrollView(showsIndicators: false) {
                                 VStack {
                                     Spacer().frame(height: height * 0.05)
                                     // 顶部存钱罐左侧的图标
@@ -446,7 +446,7 @@ struct Home: View {
                                 // 底部留白为50高度
                                 Spacer().frame(height: height * 0.05)
                                 }
-                                .frame(width:width,height:height)                      
+                                .frame(height:height)
                             }
                             .refreshable {
                                 // 刷新代码
