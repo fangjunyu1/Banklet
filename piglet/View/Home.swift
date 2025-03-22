@@ -42,19 +42,19 @@ struct Home: View {
     // 静默模式计时器
     @State private var timerCancellable: Cancellable? // 用于控制 Timer 的生命周期
     
-//    @AppStorage("pageSteps") var pageSteps: Int = 1
-//    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
-//    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
-//    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
-//    //    @AppStorage("isTestDetails") var isTestDetails = false
-//    // 静默模式
-//    @AppStorage("isSilentMode") var isSilentMode = false
-//    // 货币符号
-//    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
-//    // 存钱罐首页显示样式，为true则显示已存入的金额
-//    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
-//    // 请求评分
-//    @AppStorage("RatingClicks") var RatingClicks: Int = 0
+    //    @AppStorage("pageSteps") var pageSteps: Int = 1
+    //    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
+    //    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
+    //    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
+    //    //    @AppStorage("isTestDetails") var isTestDetails = false
+    //    // 静默模式
+    //    @AppStorage("isSilentMode") var isSilentMode = false
+    //    // 货币符号
+    //    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
+    //    // 存钱罐首页显示样式，为true则显示已存入的金额
+    //    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
+    //    // 请求评分
+    //    @AppStorage("RatingClicks") var RatingClicks: Int = 0
     
     
     let maxHistorySize = 3 // 历史记录长度
@@ -118,15 +118,15 @@ struct Home: View {
                 .sink { _ in
                     let elapsedTime = Date().timeIntervalSince(lastInteractionTime)
                     if elapsedTime > 10 {
-//                        print("elapsedTime:\(elapsedTime)")
+                        //                        print("elapsedTime:\(elapsedTime)")
                         DispatchQueue.main.async {
-//                            print("进入静默模式")
+                            //                            print("进入静默模式")
                             withAnimation(.easeInOut(duration: 1)) {
                                 isSilentModeActive = true
                             }
                         }
                     } else if elapsedTime <= 10 {
-//                        print("elapsedTime:\(elapsedTime)")
+                        //                        print("elapsedTime:\(elapsedTime)")
                     }
                 }
         }
@@ -184,7 +184,7 @@ struct Home: View {
             userDefaults?.set(piggyBank[0].targetAmount, forKey: "piggyBankTargetAmount")
             userDefaults?.set(appStorage.LoopAnimation, forKey: "LoopAnimation")
             userDefaults?.set(appStorage.BackgroundImage, forKey: "background")
-                    
+            
             // 然后手动触发 Widget 刷新
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 WidgetCenter.shared.reloadTimelines(ofKind: "BankletWidget")
@@ -199,235 +199,258 @@ struct Home: View {
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.85
                 let height = geometry.size.height
-                ZStack {
-                    // 如果有数据
-                    VStack {
+                VStack {
                         //  存钱罐显示内容
                         if piggyBank.count != 0 {
-                            Spacer().frame(height: height * 0.05)
-                            // 顶部存钱罐左侧的图标
-                            HStack(spacing: 0) {
-                                ZStack {
-                                    // 外圈进度条
-                                    CircularProgressBar(progress: progress)
-                                        .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                    Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                        .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                        .overlay {
-                                            Image(systemName: piggyBank[0].icon)
-                                                .font(isCompactScreen ? .footnote : .title3)
-                                                .foregroundColor(.white)
-                                        }
-                                        .padding(.horizontal,10)
-                                        .contentShape(Circle())
-                                        .onTapGesture {
-                                            showMoreInformationView.toggle()
-                                        }
-                                        .contextMenu {
-                                            Button(action: {
-                                                showMoreInformationView.toggle()
-                                            }, label: {
-                                                Label("Details",systemImage:"list.clipboard")
-                                            })
-                                        }
-                                }
-                                Spacer().frame(width: 10)
-                                // 顶部存钱罐右侧储蓄信息
-                                VStack(alignment: .leading) {
-                                    Group {
-                                        if piggyBank[0].amount == piggyBank[0].targetAmount {
-                                            Text("Piggy bank full")
-                                                .font(.title2)
-                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                        } else {
-                                            if appStorage.SwitchTopStyle {
-                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
-                                                    .font(.title2)
-                                                    .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                            } else {
-                                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
-                                                    .font(.title2)
-                                                    .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                            }
-                                        }
-                                        Group {
-                                            if  piggyBank[0].amount == piggyBank[0].targetAmount {
-                                                Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
-                                            } else {
-                                                if appStorage.SwitchTopStyle {
-                                                    HStack {
-                                                        Text(piggyBank[0].name)
-                                                        Text("Deposited")
-                                                    }
-                                                    .lineLimit(2)
-                                                    .minimumScaleFactor(0.5)
-                                                } else {
-                                                    HStack {
-                                                        Text("Distance")
-                                                        Text(piggyBank[0].name)
-                                                        Text("Need")
-                                                    }
-                                                    .lineLimit(2)
-                                                    .minimumScaleFactor(0.5)
-                                                }
-                                            }
-                                        }
-                                        .font(.footnote)
-                                        .fontWeight(.bold)
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.8)
-                                    }
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity,alignment: .leading)
-                                    .lineLimit(2)
-                                    .minimumScaleFactor(0.8)
-                                }
-                            }
-                            .padding(10)
-                            .frame(width: width, height: isLandscape ? isPadScreen ? height * 0.14 : height * 0.2 : isPadScreen ? height * 0.08: isCompactScreen ? height * 0.15 : height * 0.12)
-                            .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                            .cornerRadius(10)
-                            .opacity(isSilentModeActive ? 0 : 1)
-                            .onTapGesture {
-                                appStorage.SwitchTopStyle.toggle()
-                            }
                             
-                            Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
-                            SpacedContainer(isCompactScreen: isCompactScreen) {
-                                // 左侧详细信息和存钱记录
-                                HStack {
-                                    VStack(spacing: 0) {
-                                        Group {
-                                            // 显示详细信息的按钮
-                                            Button(action: {
-                                                withAnimation(.easeInOut(duration:0.5)) {
-                                                    showDetailView.toggle()
-                                                }
-                                            }, label: {
-                                                VStack {
-                                                    Image(systemName: "chart.pie")
-                                                        .resizable()
-                                                        .scaledToFit()
-                                                        .frame(width:20, height: 20)
-                                                }
-                                                .frame(width: 40, height: 40)
-                                            })
-                                            Rectangle()
-                                                .fill(.white)
-                                                .frame(width: 30, height: 1) // 自定义宽度和高度
-                                            
-                                            // 显示存取记录的按钮
-                                            Button(action: {
-                                                showAccessRecordsView.toggle()
-                                            }, label: {
-                                                VStack {
-                                                    Image(systemName: "clock.arrow.circlepath")
-                                                        .resizable()
-                                                        .scaledToFit()
-                                                        .frame(width: 20,height: 20)
-                                                }
-                                                .frame(width: 40, height: 40)
-                                            })
-                                        }
-                                    }
-                                    .frame(width: 40,height: 81)
-                                    .foregroundColor(.white)
-                                    .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                    .cornerRadius(10)
-                                    Spacer()
-                                }
-                                .opacity(isSilentModeActive ? 0 : 1)
-                                Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
-                                // 存取猪猪动画
-                                HStack {
-                                    // 谚语
-                                    if isDisplayedProverb {
-                                        // 谚语
-                                        Spacer()
-                                        VStack {
-                                            HStack(spacing: 0) {
-                                                Group {
-                                                    Text(LocalizedStringKey(currentProverb))
-                                                        .padding(10)
+                            ScrollView {
+                                VStack {
+                                    Spacer().frame(height: height * 0.05)
+                                    // 顶部存钱罐左侧的图标
+                                    HStack(spacing: 0) {
+                                        ZStack {
+                                            // 外圈进度条
+                                            CircularProgressBar(progress: progress)
+                                                .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                            Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                                .overlay {
+                                                    Image(systemName: piggyBank[0].icon)
+                                                        .font(isCompactScreen ? .footnote : .title3)
                                                         .foregroundColor(.white)
-                                                        .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                                        .cornerRadius(10)
-                                                        .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
-                                                        .lineLimit(7)
-                                                        .minimumScaleFactor(0.6)
-                                                    RightTriangle()
-                                                        .frame(width: 10,height:10)
-                                                        .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
                                                 }
-                                            }
+                                                .padding(.horizontal,10)
+                                                .contentShape(Circle())
+                                                .onTapGesture {
+                                                    showMoreInformationView.toggle()
+                                                }
+                                                .contextMenu {
+                                                    Button(action: {
+                                                        showMoreInformationView.toggle()
+                                                    }, label: {
+                                                        Label("Details",systemImage:"list.clipboard")
+                                                    })
+                                                }
                                         }
-                                        .frame(maxWidth: 300,maxHeight: 50)
-                                    } else {
-                                        Spacer()
-                                    }
-                                    VStack {
-                                        // 存钱猪猪动画
-                                        LottieView(filename: appStorage.LoopAnimation,isPlaying: appStorage.isLoopAnimation ? true : isPlaying, playCount: appStorage.isLoopAnimation ? 0 : 1, isReversed: appStorage.isLoopAnimation ? false : isReversed)
-                                            .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)")) // 水平翻转视图
-                                            .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: appStorage.BackgroundImage == "Home0" ? -20 : 0)
-                                            .opacity(colorScheme == .light ? 1 : 0.8)
-                                            .disabled(isProverb)
-                                            .frame(width: 160, height: 160)
-                                            .contentShape(Circle())
-                                            .onTapGesture {
-                                                // 点击动画时刷新谚语
-                                                currentProverb = generateUniqueRandomProverb()
-                                                withAnimation(.easeInOut(duration: 0.5)) {
-                                                    isDisplayedProverb = true
-                                                    isProverb = false
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                                        isDisplayedProverb = false
-                                                        isProverb = true
+                                        Spacer().frame(width: 10)
+                                        // 顶部存钱罐右侧储蓄信息
+                                        VStack(alignment: .leading) {
+                                            Group {
+                                                if piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                    Text("Piggy bank full")
+                                                        .font(.title2)
+                                                        .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                                } else {
+                                                    if appStorage.SwitchTopStyle {
+                                                        Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                                            .font(.title2)
+                                                            .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                                    } else {
+                                                        Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(difference.formattedWithTwoDecimalPlaces())")
+                                                            .font(.title2)
+                                                            .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                                     }
                                                 }
-                                                
-                                                // 新增点击次数统计，用于激活评分
-                                                print("RatingClicks:\(appStorage.RatingClicks)")
-                                                appStorage.RatingClicks += 1
-                                                if appStorage.RatingClicks == 2 {
-                                                    print("调用获取评分请求")
-                                                    SKStoreReviewController.requestReview()
-                                                }
-                                            }
-                                            .allowsHitTesting(isProverb)
-                                        
-                                        // 存钱罐日期
-                                        if piggyBank[0].isExpirationDateEnabled {
-                                            HStack{
                                                 Group {
-                                                    Image(systemName: "calendar")
-                                                    Spacer().frame(width: 10)
-                                                    Text(piggyBank[0].expirationDate,format: .dateTime.year().month().day())
-                                                        .fixedSize(horizontal: true, vertical: false) // 自动扩展宽度
+                                                    if  piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                        Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
+                                                    } else {
+                                                        if appStorage.SwitchTopStyle {
+                                                            HStack {
+                                                                Text(piggyBank[0].name)
+                                                                Text("Deposited")
+                                                            }
+                                                            .lineLimit(2)
+                                                            .minimumScaleFactor(0.5)
+                                                        } else {
+                                                            HStack {
+                                                                Text("Distance")
+                                                                Text(piggyBank[0].name)
+                                                                Text("Need")
+                                                            }
+                                                            .lineLimit(2)
+                                                            .minimumScaleFactor(0.5)
+                                                        }
+                                                    }
                                                 }
                                                 .font(.footnote)
-                                                .foregroundColor(.gray)
+                                                .fontWeight(.bold)
+                                                .lineLimit(1)
+                                                .minimumScaleFactor(0.8)
                                             }
-                                            .opacity(isSilentModeActive ? 0 : 1)
+                                            .foregroundColor(.white)
+                                            .frame(maxWidth: .infinity,alignment: .leading)
+                                            .lineLimit(2)
+                                            .minimumScaleFactor(0.8)
+                                        }
+                                    }
+                                    .padding(10)
+                                    .frame(width: width, height: isLandscape ? isPadScreen ? height * 0.14 : height * 0.2 : isPadScreen ? height * 0.08: isCompactScreen ? height * 0.15 : height * 0.12)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    )
+                                    .cornerRadius(10)
+                                    .opacity(isSilentModeActive ? 0 : 1)
+                                    .onTapGesture {
+                                        appStorage.SwitchTopStyle.toggle()
+                                    }
+                                
+                                Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
+                                SpacedContainer(isCompactScreen: isCompactScreen) {
+                                    // 左侧详细信息和存钱记录
+                                    HStack {
+                                        VStack(spacing: 0) {
+                                            Group {
+                                                // 显示详细信息的按钮
+                                                Button(action: {
+                                                    withAnimation(.easeInOut(duration:0.5)) {
+                                                        showDetailView.toggle()
+                                                    }
+                                                }, label: {
+                                                    VStack {
+                                                        Image(systemName: "chart.pie")
+                                                            .resizable()
+                                                            .scaledToFit()
+                                                            .frame(width:20, height: 20)
+                                                    }
+                                                    .frame(width: 40, height: 40)
+                                                })
+                                                Rectangle()
+                                                    .fill(.white)
+                                                    .frame(width: 30, height: 1) // 自定义宽度和高度
+                                                
+                                                // 显示存取记录的按钮
+                                                Button(action: {
+                                                    showAccessRecordsView.toggle()
+                                                }, label: {
+                                                    VStack {
+                                                        Image(systemName: "clock.arrow.circlepath")
+                                                            .resizable()
+                                                            .scaledToFit()
+                                                            .frame(width: 20,height: 20)
+                                                    }
+                                                    .frame(width: 40, height: 40)
+                                                })
+                                            }
+                                        }
+                                        .frame(width: 40,height: 81)
+                                        .foregroundColor(.white)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        )
+                                        .cornerRadius(10)
+                                        Spacer()
+                                    }
+                                    .opacity(isSilentModeActive ? 0 : 1)
+                                    Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
+                                    // 存取猪猪动画
+                                    HStack {
+                                        // 谚语
+                                        if isDisplayedProverb {
+                                            // 谚语
+                                            Spacer()
+                                            VStack {
+                                                HStack(spacing: 0) {
+                                                    Group {
+                                                        Text(LocalizedStringKey(currentProverb))
+                                                            .padding(10)
+                                                            .foregroundColor(.white)
+                                                            .background(
+                                                                RoundedRectangle(cornerRadius: 10)
+                                                                    .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                                            )
+                                                            .cornerRadius(10)
+                                                            .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
+                                                            .lineLimit(7)
+                                                            .minimumScaleFactor(0.6)
+                                                        RightTriangle()
+                                                            .frame(width: 10,height:10)
+                                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                    }
+                                                }
+                                            }
+                                            .frame(maxWidth: 300,maxHeight: 50)
+                                        } else {
+                                            Spacer()
+                                        }
+                                        VStack {
+                                            // 存钱猪猪动画
+                                            LottieView(filename: appStorage.LoopAnimation,isPlaying: appStorage.isLoopAnimation ? true : isPlaying, playCount: appStorage.isLoopAnimation ? 0 : 1, isReversed: appStorage.isLoopAnimation ? false : isReversed)
+                                                .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
+                                                .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)")) // 水平翻转视图
+                                                .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: appStorage.BackgroundImage == "Home0" ? -20 : 0)
+                                                .opacity(colorScheme == .light ? 1 : 0.8)
+                                                .disabled(isProverb)
+                                                .frame(width: 160, height: 160)
+                                                .contentShape(Circle())
+                                                .onTapGesture {
+                                                    // 点击动画时刷新谚语
+                                                    currentProverb = generateUniqueRandomProverb()
+                                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                                        isDisplayedProverb = true
+                                                        isProverb = false
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                                            isDisplayedProverb = false
+                                                            isProverb = true
+                                                        }
+                                                    }
+                                                    
+                                                    // 新增点击次数统计，用于激活评分
+                                                    print("RatingClicks:\(appStorage.RatingClicks)")
+                                                    appStorage.RatingClicks += 1
+                                                    if appStorage.RatingClicks == 2 {
+                                                        print("调用获取评分请求")
+                                                        SKStoreReviewController.requestReview()
+                                                    }
+                                                }
+                                                .allowsHitTesting(isProverb)
+                                            
+                                            // 存钱罐日期
+                                            if piggyBank[0].isExpirationDateEnabled {
+                                                HStack{
+                                                    Group {
+                                                        Image(systemName: "calendar")
+                                                        Spacer().frame(width: 10)
+                                                        Text(piggyBank[0].expirationDate,format: .dateTime.year().month().day())
+                                                            .fixedSize(horizontal: true, vertical: false) // 自动扩展宽度
+                                                    }
+                                                    .font(.footnote)
+                                                    .foregroundColor(.gray)
+                                                }
+                                                .opacity(isSilentModeActive ? 0 : 1)
+                                            }
                                         }
                                     }
                                 }
+                                Spacer()
+                                // 存入取出按钮
+                                Button(action: {
+                                    showDepositAndWithdrawView.toggle()
+                                }, label: {
+                                    Text("Deposit/withdraw")
+                                        .frame(width: 320,height: 60)
+                                        .foregroundColor(Color.white)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        )
+                                        .cornerRadius(10)
+                                })
+                                .opacity(isSilentModeActive ? 0 : 1)
+                                // 底部留白为50高度
+                                Spacer().frame(height: height * 0.05)
+                                }
+                                .frame(width:width,height:height)                      
                             }
-                            Spacer()
-                            // 存入取出按钮
-                            Button(action: {
-                                showDepositAndWithdrawView.toggle()
-                            }, label: {
-                                Text("Deposit/withdraw")
-                                    .frame(width: 320,height: 60)
-                                    .foregroundColor(Color.white)
-                                    .background(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                    .cornerRadius(10)
-                            })
-                            .opacity(isSilentModeActive ? 0 : 1)
-                            // 底部留白为50高度
-                            Spacer().frame(height: height * 0.05)
+                            .refreshable {
+                                // 刷新代码
+                            }
                         }  else {
                             // 空白占位符
                             Spacer()
@@ -468,114 +491,117 @@ struct Home: View {
                                 Text("Create")
                                     .frame(width: 320,height: 60)
                                     .foregroundColor(Color.white)
-                                    .background(Color(hex: "#FF4B00"))
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color(hex:"FF4B00"))
+                                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    )
                                     .cornerRadius(10)
                             })
                             Spacer().frame(height: height * 0.05)
                         }
+                }
+                .frame(width: width)
+                .onOpenURL { url in
+                    // 测试深层链接
+                    // 定义处理 Universal Link 的函数
+                    print("Universal Link opened: \(url)")
+                    // 如果 path = "/Settings"
+                    if url.path == "/Settings" {
+                        // 显示设置视图
+                        isDisplaySettings.toggle()
                     }
-                    .frame(width: width)
-                    .onOpenURL { url in
-                        // 测试深层链接
-                        // 定义处理 Universal Link 的函数
-                        print("Universal Link opened: \(url)")
-                        // 如果 path = "/Settings"
-                        if url.path == "/Settings" {
-                            // 显示设置视图
-                            isDisplaySettings.toggle()
-                        }
-                        
-                    }
-                    .sheet(isPresented: $showMoreInformationView, content: {
-                        MoreInformationView()
-                    })
-                    .sheet(isPresented: $isDisplaySettings) {
-                        Settings()
-                    }
-                    // 统计视图
-                    .sheet(isPresented: $showStatistics) {
-                        StatisticsView()
-                            .presentationDetents([.height(500)])
-                    }
-                    .sheet(isPresented: $showAccessRecordsView) {
-                        AccessRecordsView(piggyBank: piggyBank[0])
-                    }
-                    // 管理视图
-                    .sheet(isPresented: $showManagingView, content: {
-                        ManagingView()
-                            .presentationDetents([.height(260)])
-                    })
                     
-                    // 详细信息（缩略）视图
-                    .sheet(isPresented: $showDetailView, content: {
-                        DetailView(CurrentAmount: piggyBank[0].amount, TargetAmount: piggyBank[0].targetAmount)
-                            .presentationDetents([.height(300)])
-                    })
-                    .sheet(isPresented: $showDepositAndWithdrawView, content: {
-                        DepositAndWithdrawView(isReversed: $isReversed) {
-                            isPlaying = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                isPlaying = false
-                            }
-                        }
-                    })
-                    .navigationTitle(isSilentModeActive ? "" : "Banklet")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        // 左上角 Menu 按钮
-                        ToolbarItem(placement:.topBarLeading) {
-                            
-                            Menu(content: {
-                                // 管理按钮
-                                Button(action: {
-                                    withAnimation(.easeInOut(duration: 1)) {
-                                        showManagingView.toggle()
-                                    }
-                                }, label: {
-                                    HStack {
-                                        Text("Manage")
-                                        Spacer()
-                                        Image(systemName: "pin")
-                                    }
-                                })
-                                // 统计按钮
-                                Button(action: {
-                                    withAnimation(.easeInOut(duration: 1)) {
-                                        showStatistics.toggle()
-                                    }
-                                }, label: {
-                                    HStack {
-                                        Text("Statistics")
-                                        Spacer()
-                                        Image(systemName: "chart.xyaxis.line")
-                                    }
-                                })
-                            }, label: {
-                                Image(colorScheme == .light ? "iconWhite" : "iconWhiteDark")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40)
-                                    .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                            })
-                            .opacity(isSilentModeActive ? 0 : 1)
-                        }
-                        // 右上角设置按钮
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: {
-                                isDisplaySettings.toggle()
-                            }, label: {
-                                Image(systemName: "gearshape")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(colorScheme == .light ? .black : .white)
-                            })
-                            .opacity(isSilentModeActive ? 0 : 1)
+                }
+                .sheet(isPresented: $showMoreInformationView, content: {
+                    MoreInformationView()
+                })
+                .sheet(isPresented: $isDisplaySettings) {
+                    Settings()
+                }
+                // 统计视图
+                .sheet(isPresented: $showStatistics) {
+                    StatisticsView()
+                        .presentationDetents([.height(500)])
+                }
+                .sheet(isPresented: $showAccessRecordsView) {
+                    AccessRecordsView(piggyBank: piggyBank[0])
+                }
+                // 管理视图
+                .sheet(isPresented: $showManagingView, content: {
+                    ManagingView()
+                        .presentationDetents([.height(260)])
+                })
+                
+                // 详细信息（缩略）视图
+                .sheet(isPresented: $showDetailView, content: {
+                    DetailView(CurrentAmount: piggyBank[0].amount, TargetAmount: piggyBank[0].targetAmount)
+                        .presentationDetents([.height(300)])
+                })
+                .sheet(isPresented: $showDepositAndWithdrawView, content: {
+                    DepositAndWithdrawView(isReversed: $isReversed) {
+                        isPlaying = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            isPlaying = false
                         }
                     }
-                    .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
-                    .background(
-                        backgroundImageView()
-                    )
+                })
+                .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
+                .background(
+                    backgroundImageView()
+                )
+                .navigationTitle(isSilentModeActive ? "" : "Banklet")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    // 左上角 Menu 按钮
+                    ToolbarItem(placement:.topBarLeading) {
+                        
+                        Menu(content: {
+                            // 管理按钮
+                            Button(action: {
+                                withAnimation(.easeInOut(duration: 1)) {
+                                    showManagingView.toggle()
+                                }
+                            }, label: {
+                                HStack {
+                                    Text("Manage")
+                                    Spacer()
+                                    Image(systemName: "pin")
+                                }
+                            })
+                            // 统计按钮
+                            Button(action: {
+                                withAnimation(.easeInOut(duration: 1)) {
+                                    showStatistics.toggle()
+                                }
+                            }, label: {
+                                HStack {
+                                    Text("Statistics")
+                                    Spacer()
+                                    Image(systemName: "chart.xyaxis.line")
+                                }
+                            })
+                        }, label: {
+                            Image(colorScheme == .light ? "iconWhite" : "iconWhiteDark")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40)
+                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                        })
+                        .opacity(isSilentModeActive ? 0 : 1)
+                    }
+                    // 右上角设置按钮
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            isDisplaySettings.toggle()
+                        }, label: {
+                            Image(systemName: "gearshape")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(colorScheme == .light ? .black : .white)
+                        })
+                        .opacity(isSilentModeActive ? 0 : 1)
+                    }
                 }
             }
         }
@@ -648,5 +674,5 @@ struct Home: View {
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
-//        .environment(\.locale, .init(identifier: "ru"))
+    //        .environment(\.locale, .init(identifier: "ru"))
 }
