@@ -210,6 +210,10 @@ class AppStorageManager {
         isShowAboutUs = UserDefaults.standard.bool(forKey: "isShowAboutUs")  // false表示隐藏
         isShowInAppPurchase = UserDefaults.standard.bool(forKey: "isShowInAppPurchase")  // 控制内购按钮，false表示隐藏
         isShowThanks = UserDefaults.standard.bool(forKey: "isShowThanks")  // 控制鸣谢页面，false表示隐藏
+        if UserDefaults.standard.object(forKey: "isModelConfigManager") == nil {
+            // 设置默认值为 true
+            UserDefaults.standard.set(true, forKey: "isModelConfigManager")
+        }
         isModelConfigManager = UserDefaults.standard.bool(forKey: "isModelConfigManager")  // ModelConfig配置
         isReminderTime = UserDefaults.standard.bool(forKey: "isReminderTime")  // 提醒时间，设置提醒时间为true，否则为false
         reminderTime = UserDefaults.standard.double(forKey: "reminderTime") // 存储用户设定的提醒时间

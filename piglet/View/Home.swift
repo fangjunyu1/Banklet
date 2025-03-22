@@ -204,6 +204,7 @@ struct Home: View {
                         if piggyBank.count != 0 {
                             
                             ScrollView(showsIndicators: false) {
+                                
                                 VStack {
                                     Spacer().frame(height: height * 0.05)
                                     // 顶部存钱罐左侧的图标
@@ -446,7 +447,7 @@ struct Home: View {
                                 // 底部留白为50高度
                                 Spacer().frame(height: height * 0.05)
                                 }
-                                .frame(height:height)
+                                .frame(height: height)
                             }
                             .refreshable {
                                 // 刷新代码
@@ -676,3 +677,4 @@ struct Home: View {
         .environmentObject(IAPManager.shared)
     //        .environment(\.locale, .init(identifier: "ru"))
 }
+
