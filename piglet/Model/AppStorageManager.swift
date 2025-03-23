@@ -195,6 +195,15 @@ class AppStorageManager {
         }
     }
     
+    // 活动入口
+    var isShowActivity = true {
+        didSet {
+            if isShowActivity != oldValue {
+                UserDefaults.standard.set(isShowActivity, forKey: "isShowActivity")
+                syncToiCloud()
+            }
+        }
+    }
     // 从UserDefaults加载数据
     private func loadUserDefault() {
         pageSteps = UserDefaults.standard.integer(forKey: "pageSteps")  // 视图步骤
@@ -218,6 +227,11 @@ class AppStorageManager {
         isReminderTime = UserDefaults.standard.bool(forKey: "isReminderTime")  // 提醒时间，设置提醒时间为true，否则为false
         reminderTime = UserDefaults.standard.double(forKey: "reminderTime") // 存储用户设定的提醒时间
         accessNotes = UserDefaults.standard.bool(forKey: "accessNotes")  // 存取备注
+        if UserDefaults.standard.object(forKey: "isShowActivity") == nil {
+            // 设置默认值为 true
+            UserDefaults.standard.set(true, forKey: "isShowActivity")
+        }
+        isShowActivity = UserDefaults.standard.bool(forKey: "isShowActivity")  // 活动入口
     }
     
     /// 从 iCloud 读取数据
@@ -281,6 +295,7 @@ class AppStorageManager {
         } else {
             store.set(isShowAboutUs, forKey: "isShowAboutUs")
         }
+        
         if store.object(forKey: "isShowInAppPurchase") != nil {
             isShowInAppPurchase = store.bool(forKey: "isShowInAppPurchase")
         } else {
@@ -309,6 +324,12 @@ class AppStorageManager {
             accessNotes = store.bool(forKey: "accessNotes")
         } else {
             store.set(accessNotes, forKey: "accessNotes")
+        }
+        
+        if store.object(forKey: "isShowActivity") != nil {
+            isShowActivity = store.bool(forKey: "isShowActivity")
+        } else {
+            store.set(isShowActivity, forKey: "isShowActivity")
         }
 
         // 读取字符串值
@@ -347,6 +368,7 @@ class AppStorageManager {
         print("isModelConfigManager: \(isModelConfigManager)")
         print("isReminderTime:\(isReminderTime)")
         print("accessNotes:\(accessNotes)")
+        print("isShowActivity:\(isShowActivity)")
         store.synchronize() // 强制触发数据同步
 
     }
@@ -371,6 +393,7 @@ class AppStorageManager {
         store.set(isReminderTime, forKey: "isReminderTime")
         store.set(reminderTime, forKey: "reminderTime")
         store.set(accessNotes, forKey: "accessNotes")
+        store.set(isShowActivity, forKey: "isShowActivity")
         store.synchronize() // 强制触发数据同步
     }
     

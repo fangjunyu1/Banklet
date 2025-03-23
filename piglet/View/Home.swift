@@ -35,6 +35,7 @@ struct Home: View {
     @State private var showManagingView = false // 显示通用视图
     @State private var showStatistics = false   // 显示统计视图
     @State private var showDetailView = false
+    @State private var showActivity = false // 显示活动视图
     // 静默模式
     @State private var isSilentModeActive = false
     // 上次交互时间，超过设定的时间显示静默模式
@@ -547,6 +548,9 @@ struct Home: View {
                         }
                     }
                 })
+                .sheet(isPresented: $showActivity, content: {
+                    ActivityView()
+                })
                 .frame(maxWidth:  geometry.size.width,maxHeight: geometry.size.height)
                 .background(
                     backgroundImageView()
@@ -582,6 +586,20 @@ struct Home: View {
                                     Image(systemName: "chart.xyaxis.line")
                                 }
                             })
+                            if appStorage.isShowActivity {
+                                // 活动入口
+                                Button(action: {
+                                    withAnimation(.easeInOut(duration: 1)) {
+                                        showActivity.toggle()
+                                    }
+                                }, label: {
+                                    HStack {
+                                        Text("Activity")
+                                        Spacer()
+                                        Image(systemName: "flag")
+                                    }
+                                })
+                            }
                         }, label: {
                             Image(colorScheme == .light ? "iconWhite" : "iconWhiteDark")
                                 .resizable()

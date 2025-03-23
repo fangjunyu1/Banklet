@@ -276,6 +276,27 @@ struct GeneralView: View {
                                     })) 
                                         .frame(height:0)
                                 })
+                                // 分割线
+                                Rectangle()
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 0.5)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 60)
+                                // 活动
+                                SettingView(content: {
+                                    Image(systemName: "party.popper")
+                                        .padding(.horizontal,5)
+                                    Text("Activity")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.isShowActivity
+                                    }, set: {
+                                        appStorage.isShowActivity = $0
+                                    }))
+                                        .frame(height:0)
+                                })
                             }
                             .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
                             .cornerRadius(10)

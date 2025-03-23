@@ -151,6 +151,7 @@
 		1DF555862BF60B1200BF0DE5 /* pigletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555852BF60B1200BF0DE5 /* pigletTests.swift */; };
 		1DF555902BF60B1200BF0DE5 /* pigletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5558F2BF60B1200BF0DE5 /* pigletUITests.swift */; };
 		1DF555922BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555912BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift */; };
+		1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */; };
 		1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
@@ -460,6 +461,7 @@
 		1DF555852BF60B1200BF0DE5 /* pigletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletTests.swift; sourceTree = "<group>"; };
 		1DF5558F2BF60B1200BF0DE5 /* pigletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletUITests.swift; sourceTree = "<group>"; };
 		1DF555912BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -563,6 +565,7 @@
 				1D89C54E2D506254000DECFF /* DetailView.swift */,
 				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
+				1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				1D89C54F2D506254000DECFF /* DetailView.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* ColorExtensions.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
+				1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */,
 				1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */,
 				1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */,
 				1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */,
