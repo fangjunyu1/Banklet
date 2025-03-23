@@ -15295,9 +15295,6 @@
         }
       }
     },
-    "Hello, World!" : {
-
-    },
     "HKD" : {
       "comment" : "1.0.6：港元",
       "extractionState" : "manual",
@@ -22582,6 +22579,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備註"
+          }
+        }
+      }
+    },
+    "Nothing happened" : {
+      "comment" : "1.0.10 什么都没有发生",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "什么都没有发生"
           }
         }
       }
