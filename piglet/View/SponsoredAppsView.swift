@@ -164,8 +164,17 @@ struct SponsoredAppsView: View {
                                                 VStack {
                                                     Text("Sponsored Apps")
                                                         .fontWeight(.bold)
-                                                    Text("1 USD")
-                                                        .font(.footnote)
+                                                    if !iapManager.products.isEmpty {
+                                                        Text("\(iapManager.products.first?.displayPrice ?? "N/A")")
+                                                            .font(.footnote)
+                                                            .lineLimit(1) // 限制文本为一行
+                                                            .minimumScaleFactor(0.5) // 最小缩放比例
+                                                    } else {
+                                                        Text("$ --")
+                                                            .font(.footnote)
+                                                            .lineLimit(1) // 限制文本为一行
+                                                            .minimumScaleFactor(0.5) // 最小缩放比例
+                                                    }
                                                 }
                                                 .offset(y: -10)
                                                 .foregroundColor(.white)
