@@ -13,6 +13,9 @@
     "  " : {
 
     },
+    "    " : {
+
+    },
     " : " : {
 
     },
@@ -24,6 +27,26 @@
     },
     "%@" : {
 
+    },
+    "%@  %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@  %2$@"
+          }
+        }
+      }
+    },
+    "%@  %@  %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@  %2$@  %3$@"
+          }
+        }
+      }
     },
     "%@ %%" : {
 
@@ -2753,6 +2776,18 @@
         }
       }
     },
+    "Age" : {
+      "comment" : "1.0.10:年龄",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年龄"
+          }
+        }
+      }
+    },
     "Amount" : {
       "comment" : "金额",
       "extractionState" : "manual",
@@ -3415,6 +3450,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "動畫"
+          }
+        }
+      }
+    },
+    "Annual salary" : {
+      "comment" : "1.0.10:年薪",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年薪"
           }
         }
       }
@@ -4831,6 +4878,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "存錢豬豬"
+          }
+        }
+      }
+    },
+    "Based on your current age and current salary, automatically calculate your career starting point, retirement age and salary growth rate, and calculate your lifetime income." : {
+      "comment" : "1.0.10:根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算出一生收入。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算出一生收入。"
           }
         }
       }
@@ -15295,6 +15354,18 @@
         }
       }
     },
+    "Have you ever thought about how much wealth you can get from working for your entire life? The life piggy bank is designed for this purpose. From the beginning of your career to retirement, you can accumulate your lifetime income and make a comprehensive wealth plan for the future." : {
+      "comment" : "1.0.10 : 你是否想过，整个人生的工作时间会带来多少财富？人生存钱罐正是为此而生，从职业生涯的起点到退休，将你一生的收入积累在一起，为未来做好全面的财富规划。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你是否想过，整个人生的工作时间会带来多少财富？人生存钱罐正是为此而生，从职业生涯的起点到退休，将你一生的收入积累在一起，为未来做好全面的财富规划。"
+          }
+        }
+      }
+    },
     "HKD" : {
       "comment" : "1.0.6：港元",
       "extractionState" : "manual",
@@ -23065,6 +23136,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "紐西蘭元"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "comment" : "1.0.10:好的",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好的"
           }
         }
       }
@@ -32210,6 +32293,18 @@
         }
       }
     },
+    "Quickly calculate lifetime wealth" : {
+      "comment" : "1.0.10:快速计算一生财富",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速计算一生财富"
+          }
+        }
+      }
+    },
     "Re-create" : {
       "comment" : "重新创建",
       "extractionState" : "manual",
@@ -38798,6 +38893,18 @@
         }
       }
     },
+    "Start calculation" : {
+      "comment" : "1.0.10:开始计算",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始计算"
+          }
+        }
+      }
+    },
     "Statistics" : {
       "comment" : "1.0.6:统计",
       "extractionState" : "manual",
@@ -43952,6 +44059,30 @@
         }
       }
     },
+    "The default working age is 18, the annual salary requirement is greater than 10, the retirement age is 65, and the salary growth rate is 5%." : {
+      "comment" : "1.0.10:默认参加工作年龄为18岁，年薪要求大于10，退休年龄为65岁，薪资增长率为5%。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认参加工作年龄为18岁，年薪要求大于10，退休年龄为65岁，薪资增长率为5%。"
+          }
+        }
+      }
+    },
+    "The input information is incorrect" : {
+      "comment" : "1.0.10:输入的信息有误",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "输入的信息有误"
+          }
+        }
+      }
+    },
     "This is empty." : {
       "comment" : "这里是空的。",
       "extractionState" : "manual",
@@ -45592,6 +45723,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "美元"
+          }
+        }
+      }
+    },
+    "Use your lifetime salary income to plan your future" : {
+      "comment" : "1.0.10:用一生的薪资收入规划未来",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用一生的薪资收入规划未来"
           }
         }
       }

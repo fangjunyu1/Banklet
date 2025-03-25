@@ -25,52 +25,57 @@ struct ActivityView: View {
                         .ignoresSafeArea()
                     ScrollView(showsIndicators: false) {
                         Spacer().frame(height: 20)
-                        ZStack {
-                            Image("life")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 180)
-                            // 长期、限时标识
-                            VStack {
-                                HStack {
+                        // 人生存钱罐
+                        NavigationLink(destination: {
+                            LifeSavingsJarView()
+                        }, label: {
+                            ZStack {
+                                Image("life")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(height: 180)
+                                // 长期、限时标识
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        HStack {
+                                            Image(systemName: "hourglass")
+                                            Text("long-term")
+                                        }
+                                        .padding(.vertical,5)
+                                        .padding(.horizontal,10)
+                                        .foregroundColor(.white)
+                                        .background(Color(hex: "FF4B00"))
+                                        .cornerRadius(5)
+                                    }
+                                    .padding(10)
+                                    Spacer()
+                                }
+                                // 底部文字标识
+                                VStack {
                                     Spacer()
                                     HStack {
-                                        Image(systemName: "hourglass")
-                                        Text("long-term")
+                                        Text("Life savings jar")
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.6)
+                                        Spacer()
+                                        Text("lifetime wealth planning")
+                                            .font(.footnote)
+                                            .foregroundColor(.gray)
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.6)
                                     }
-                                    .padding(.vertical,5)
-                                    .padding(.horizontal,10)
-                                    .foregroundColor(.white)
-                                    .background(Color(hex: "FF4B00"))
+                                    .frame(height: 40)
+                                    .padding(.horizontal,20)
+                                    .foregroundColor(.black)
+                                    .background(Color.white.opacity(0.95))
                                     .cornerRadius(5)
                                 }
-                                .padding(10)
-                                Spacer()
                             }
-                            // 底部文字标识
-                            VStack {
-                                Spacer()
-                                HStack {
-                                    Text("Life savings jar")
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.6)
-                                    Spacer()
-                                    Text("lifetime wealth planning")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.6)
-                                }
-                                .frame(height: 40)
-                                .padding(.horizontal,20)
-                                .foregroundColor(.black)
-                                .background(Color.white.opacity(0.95))
-                                .cornerRadius(5)
-                            }
-                        }
-                        .frame(height: 180)
-                        .frame(maxWidth: .infinity)
-                        .cornerRadius(10)
+                            .frame(height: 180)
+                            .frame(maxWidth: .infinity)
+                            .cornerRadius(10)
+                        })
                     }
                     .frame(width: width)
                     .frame(maxWidth: .infinity,maxHeight: .infinity)
@@ -81,7 +86,7 @@ struct ActivityView: View {
                             Button(action: {
                                 dismiss()
                             }, label: {
-                                Text("Activity")
+                                Text("Completed")
                                     .fontWeight(.bold)
                                     .foregroundColor(colorScheme == .light ? .black : .white)
                             })

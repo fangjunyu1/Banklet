@@ -51,7 +51,7 @@ struct MoreInformationView: View {
                             TextField("", text: Binding (
                                 get: {
                                     if EditName.isEmpty {
-                                        piggyBank[0].name
+                                        NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称")
                                     } else {
                                         EditName
                                     }

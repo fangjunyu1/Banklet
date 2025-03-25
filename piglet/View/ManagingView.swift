@@ -113,7 +113,7 @@ struct ManagingView: View {
                                         Spacer()
                                         VStack(alignment: .leading) {
                                             // 存钱罐名称
-                                            Text(piggyBank[index].name)
+                                            Text(NSLocalizedString(piggyBank[index].name, comment: "存钱罐名称"))
                                                 .font(.caption2)
                                                 .foregroundColor(piggyBank[index].isPrimary ? .white :.gray)
                                             // 存钱罐占比

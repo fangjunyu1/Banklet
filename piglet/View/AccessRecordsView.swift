@@ -60,7 +60,7 @@ struct AccessRecordsView: View {
                                     Section {
                                         VStack {
                                             HStack {
-                                                Text("\(piggyBank.name)")
+                                                Text("\(NSLocalizedString(piggyBank.name, comment: "存钱罐名称"))")
                                                     .fontWeight(.bold)
                                                 Spacer()
                                                 Image(systemName: "\(piggyBank.icon)")

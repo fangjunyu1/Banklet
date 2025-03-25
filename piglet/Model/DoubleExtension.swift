@@ -20,3 +20,4 @@ func parseInput(_ input: String) -> Double {
     let sanitizedInput = input.replacingOccurrences(of: ",", with: "") // 移除分隔符
     return Double(sanitizedInput) ?? 0
 }
+

@@ -287,16 +287,13 @@ struct Home: View {
                                                     } else {
                                                         if appStorage.SwitchTopStyle {
                                                             HStack {
-                                                                Text(piggyBank[0].name)
-                                                                Text("Deposited")
+                                                                Text("\(NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称"))  \(NSLocalizedString("Deposited", comment: "距离"))")
                                                             }
                                                             .lineLimit(2)
                                                             .minimumScaleFactor(0.5)
                                                         } else {
                                                             HStack {
-                                                                Text("Distance")
-                                                                Text(piggyBank[0].name)
-                                                                Text("Need")
+                                                                Text("\(NSLocalizedString("Distance", comment: "距离"))  \(NSLocalizedString(piggyBank[0].name, comment: ""))  \(NSLocalizedString("Need", comment: "还需要"))")
                                                             }
                                                             .lineLimit(2)
                                                             .minimumScaleFactor(0.5)
@@ -739,6 +736,6 @@ struct Home: View {
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
-    //        .environment(\.locale, .init(identifier: "ru"))
+            .environment(\.locale, .init(identifier: "ru"))
 }
 
