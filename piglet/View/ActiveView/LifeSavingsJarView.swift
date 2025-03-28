@@ -106,7 +106,7 @@ struct LifeSavingsJarView: View {
                                 Spacer().frame(width: 20)
                                 TextField("", value: $age, format: .number)
                                     .frame(width: 100)
-                                    .foregroundColor(age == 0 ? .gray : .black)
+                                    .foregroundColor(age == 0 ? .gray : colorScheme == .light ? .black : .white)
                                     .multilineTextAlignment(.center)
                                     .background {
                                         Rectangle().frame(width: .infinity,height: 4)
@@ -131,7 +131,7 @@ struct LifeSavingsJarView: View {
                                 Spacer().frame(width: 20)
                                 TextField("", value: $annualSalary, format: .number)
                                     .frame(width: 100)
-                                    .foregroundColor(annualSalary == 0 ? .gray : .black)
+                                    .foregroundColor(annualSalary == 0 ? .gray : colorScheme == .light ? .black : .white)
                                     .multilineTextAlignment(.center)
                                     .background {
                                         Rectangle().frame(width: .infinity,height: 4)
@@ -211,6 +211,7 @@ struct LifeSavingsJarView: View {
                                         Text("Life savings jar")
                                             .font(.title3)
                                             .fontWeight(.bold)
+                                            .foregroundColor(colorScheme == .light ? .black : Color(hex:"2C2B2D"))
                                         Spacer().frame(height:20)
                                         // 目标金额
                                         HStack {
@@ -315,6 +316,7 @@ struct LifeSavingsJarView: View {
                                         Text("The input information is incorrect")
                                             .fontWeight(.bold)
                                             .multilineTextAlignment(.center)
+                                            .foregroundColor(.black)
                                         Spacer().frame(height: 20)
                                         Button(action: {
                                             showLifePiggyBank = false

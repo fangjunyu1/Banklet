@@ -34,6 +34,7 @@ struct ActivityView: View {
                                     .resizable()
                                     .scaledToFill()
                                     .frame(height: 180)
+                                    .opacity(colorScheme == .light ? 1 : 0.8)
                                 // 长期、限时标识
                                 VStack {
                                     HStack {
@@ -58,6 +59,7 @@ struct ActivityView: View {
                                         Text("Life savings jar")
                                             .lineLimit(1)
                                             .minimumScaleFactor(0.6)
+                                            .foregroundColor(colorScheme == .light ? .black : .white)
                                         Spacer()
                                         Text("lifetime wealth planning")
                                             .font(.footnote)
@@ -67,8 +69,7 @@ struct ActivityView: View {
                                     }
                                     .frame(height: 40)
                                     .padding(.horizontal,20)
-                                    .foregroundColor(.black)
-                                    .background(Color.white.opacity(0.95))
+                                    .background(colorScheme == .light ? Color.white.opacity(0.95) : Color(hex:"2C2B2D"))
                                     .cornerRadius(5)
                                 }
                             }
