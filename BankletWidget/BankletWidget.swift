@@ -139,6 +139,15 @@ struct BankletWidgetBackgroundView : View {
             Image(entry.background)
                 .resizable()
                 .scaledToFill()
+                .onAppear {
+                    DispatchQueue.global().async {
+                        print("现在在哪？", Thread.isMainThread) // false
+
+                        Task {
+                            print("Task 在哪？", Thread.isMainThread) // false 仍在后台
+                        }
+                    }
+                }
         }
     }
 }

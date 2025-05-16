@@ -65,6 +65,10 @@ struct AppIconView: View {
                         .ignoresSafeArea()
                     ScrollView(showsIndicators: false ) {
                         LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
+                            Image(uiImage: UIImage(named: "AppIcon 0") ?? UIImage())
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100,height:100)
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
                                     setAlternateIconNameFunc(name: "AppIcon \(index)")
