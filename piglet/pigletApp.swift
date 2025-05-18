@@ -7,12 +7,14 @@
 
 import SwiftUI
 import SwiftData
+import WatchConnectivity
 
 @main
 struct pigletApp: App {
-    @StateObject var iapManager = IAPManager.shared
-    @State var appStorage = AppStorageManager.shared
+    @StateObject private var iapManager = IAPManager.shared
+    @State private var appStorage = AppStorageManager.shared
     @State private var modelConfigManager = ModelConfigManager()
+    @State private var wcSessionDelegateImpl = WCSessionDelegateImpl()
     //    @AppStorage("isModelConfigManager") var isModelConfigManager = true // 控制iCloud
     
     init() {
@@ -24,6 +26,7 @@ struct pigletApp: App {
             modelConfigManager.cloudKitMode = .none
         }
     }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -40,3 +43,4 @@ struct pigletApp: App {
         
     }
 }
+

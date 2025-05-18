@@ -41,6 +41,7 @@ struct AppIconView: View {
     
     // 更换图标方法
     func setAlternateIconNameFunc(name: String) {
+        appStorage.appIcon = name
         UIApplication.shared.setAlternateIconName(name) { error in
             if error == nil {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

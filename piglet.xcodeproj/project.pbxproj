@@ -109,6 +109,7 @@
 		1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8854602D244FB9009DE7AE /* Fireworks2.json */; };
 		1D89C54F2D506254000DECFF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C54E2D506254000DECFF /* DetailView.swift */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
+		1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */; };
 		1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */; };
 		1DA7C39C2D6AA57000FA6CA3 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3992D6AA57000FA6CA3 /* ModelConfigManager.swift */; };
 		1DA7C39D2D6AA57000FA6CA3 /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C39A2D6AA57000FA6CA3 /* SavingsRecord.swift */; };
@@ -380,6 +381,7 @@
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
 		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
+		1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		1DA7C3992D6AA57000FA6CA3 /* ModelConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DA7C39A2D6AA57000FA6CA3 /* SavingsRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 				1D5D778E2D91894F0044DEE5 /* IntExtension.swift */,
+				1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1257,6 +1260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1400B42D31119E00DC51C0 /* Thanks2View.swift in Sources */,
+				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* MainInterfaceAnimationView.swift in Sources */,
 				1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
