@@ -13,20 +13,20 @@ class AppStorageManager {
     static let shared = AppStorageManager()  // 全局单例
     private init() {
         // 获取iCloud上的数据
-        print("初始化，获取iCloud上的数据")
-        getAllData()
+//        print("初始化，获取iCloud上的数据")
+//        getAllData()
         
         // 初始化时同步本地存储
         loadUserDefault()
         
-        print("初始化本地同步存储，再次获取iCloud上的数据")
-        getAllData()
+//        print("初始化本地同步存储，再次获取iCloud上的数据")
+//        getAllData()
         
         // 从iCloud读取数据
         loadFromiCloud()
         
-        print("初始化从iCloud上读取数据，再次获取iCloud上的数据")
-        getAllData()
+//        print("初始化从iCloud上读取数据，再次获取iCloud上的数据")
+//        getAllData()
         
         // 监听 iCloud 变化，同步到本地
         observeiCloudChanges()
@@ -453,7 +453,7 @@ class AppStorageManager {
         print("完成 loadFromiCloud 方法的读取")
         store.synchronize() // 强制触发数据同步
         
-        getAllData()
+//        getAllData()
 
     }
     
@@ -518,129 +518,129 @@ class AppStorageManager {
 //        syncToiCloud()
 //    }
     
-    func getAllData() {
-        print("进入 getICloudData 方法")
-        
-        let store = NSUbiquitousKeyValueStore.default
-        
-        if let storedPageSteps = store.object(forKey: "pageSteps") as? Int {
-            print("iCloud 上的 pageSteps:\(storedPageSteps),本机的 pageSteps:\(pageSteps)")
-        } else {
-            print("无法从iCloud加载 pageSteps 内容，将当前变量同步到iCloud")
-        }
-        if let storedRatingClicks = store.object(forKey: "RatingClicks") as? Int {
-            print("iCloud 上的 RatingClicks:\(storedRatingClicks),本机的 RatingClicks:\(RatingClicks)")
-        } else {
-            print("无法从iCloud加载 RatingClicks 内容")
-        }
-
-        // 读取双精度值
-        if store.object(forKey: "reminderTime") != nil {
-            print("iCloud 上的 reminderTime:\(store.object(forKey: "reminderTime") ?? 0.0),本机的 reminderTime:\(reminderTime)")
-        } else {
-            print("无法从iCloud加载 pageSteps 内容")
-        }
-
-        // 读取布尔值
-        if store.object(forKey: "isBiometricEnabled") != nil {
-            print("iCloud 上的 isBiometricEnabled:\(store.object(forKey: "isBiometricEnabled") ?? false),本机的 isBiometricEnabled:\(isBiometricEnabled)")
-        } else {
-            print("无法从iCloud加载 isBiometricEnabled 内容")
-        }
-
-        if store.object(forKey: "isLoopAnimation") != nil {
-            print("iCloud 上的 isLoopAnimation:\(store.object(forKey: "isLoopAnimation") ?? false),本机的 isLoopAnimation:\(isLoopAnimation)")
-        } else {
-            print("无法从iCloud加载 isLoopAnimation 内容")
-        }
-
-        if store.object(forKey: "isSilentMode") != nil {
-            print("iCloud 上的 isSilentMode:\(store.object(forKey: "isSilentMode") ?? false),本机的 isSilentMode:\(isSilentMode)")
-        } else {
-            print("无法从iCloud加载 isSilentMode 内容")
-        }
-
-        if store.object(forKey: "SwitchTopStyle") != nil {
-            print("iCloud 上的 SwitchTopStyle:\(store.object(forKey: "SwitchTopStyle") ?? false),本机的 SwitchTopStyle:\(SwitchTopStyle)")
-        } else {
-            print("无法从iCloud加载 SwitchTopStyle 内容")
-        }
-
-        if store.object(forKey: "20240523") != nil {
-            print("iCloud 上的 isInAppPurchase:\(store.object(forKey: "20240523") ?? false),本机的 isInAppPurchase:\(isInAppPurchase)")
-        } else {
-            print("无法从iCloud加载 isInAppPurchase 内容")
-        }
-
-        if store.object(forKey: "isShowAboutUs") != nil {
-            print("iCloud 上的 isShowAboutUs:\(store.object(forKey: "isShowAboutUs") ?? false),本机的 isShowAboutUs:\(isShowAboutUs)")
-        } else {
-            print("无法从iCloud加载 isShowAboutUs 内容")
-        }
-
-        if store.object(forKey: "isShowInAppPurchase") != nil {
-            print("iCloud 上的 isShowInAppPurchase:\(store.object(forKey: "isShowInAppPurchase") ?? false),本机的 isShowInAppPurchase:\(isShowInAppPurchase)")
-        } else {
-            print("无法从iCloud加载 isShowInAppPurchase 内容")
-        }
-
-        if store.object(forKey: "isShowThanks") != nil {
-            print("iCloud 上的 isShowThanks:\(store.object(forKey: "isShowThanks") ?? false),本机的 isShowThanks:\(isShowThanks)")
-        } else {
-            print("无法从iCloud加载 isShowThanks 内容")
-        }
-
-        if store.object(forKey: "isModelConfigManager") != nil {
-            print("iCloud 上的 isModelConfigManager:\(store.object(forKey: "isModelConfigManager") ?? false),本机的 isModelConfigManager:\(isModelConfigManager)")
-        } else {
-            print("无法从iCloud加载 isModelConfigManager 内容")
-        }
-
-        if store.object(forKey: "isReminderTime") != nil {
-            print("iCloud 上的 isReminderTime:\(store.object(forKey: "isReminderTime") ?? false),本机的 isReminderTime:\(isReminderTime)")
-        } else {
-            print("无法从iCloud加载 isReminderTime 内容")
-        }
-
-        if store.object(forKey: "accessNotes") != nil {
-            print("iCloud 上的 accessNotes:\(store.object(forKey: "accessNotes") ?? false),本机的 accessNotes:\(accessNotes)")
-        } else {
-            print("无法从iCloud加载 accessNotes 内容")
-        }
-
-        if store.object(forKey: "isShowActivity") != nil {
-            print("iCloud 上的 isShowActivity:\(store.object(forKey: "isShowActivity") ?? false),本机的 isShowActivity:\(isShowActivity)")
-        } else {
-            print("无法从iCloud加载 isShowActivity 内容")
-        }
-
-        // 读取字符串值
-        if let storedBackgroundImage = store.string(forKey: "BackgroundImage") {
-            print("iCloud 上的 BackgroundImage:\(storedBackgroundImage),本机的 BackgroundImage:\(BackgroundImage)")
-        } else {
-            print("无法从iCloud加载 BackgroundImage 内容")
-        }
-
-        if let storedLoopAnimation = store.string(forKey: "LoopAnimation") {
-            print("iCloud 上的 LoopAnimation:\(storedLoopAnimation),本机的 LoopAnimation:\(LoopAnimation)")
-        } else {
-            print("无法从iCloud加载 LoopAnimation 内容")
-        }
-
-        if let storedCurrencySymbol = store.string(forKey: "CurrencySymbol") {
-            print("iCloud 上的 CurrencySymbol:\(storedCurrencySymbol),本机的 CurrencySymbol:\(CurrencySymbol)")
-        } else {
-            print("无法从iCloud加载 CurrencySymbol 内容")
-        }
-        
-        if let storedAppIcon = store.string(forKey: "appIcon") {
-            print("iCloud 上的 appIcon:\(appIcon),本机的 appIcon:\(appIcon)")
-        } else {
-            print("无法从iCloud加载 appIcon 内容")
-        }
-        
-        print("完成 getICloudData 方法")
-    }
+//    func getAllData() {
+//        print("进入 getICloudData 方法")
+//        
+//        let store = NSUbiquitousKeyValueStore.default
+//        
+//        if let storedPageSteps = store.object(forKey: "pageSteps") as? Int {
+//            print("iCloud 上的 pageSteps:\(storedPageSteps),本机的 pageSteps:\(pageSteps)")
+//        } else {
+//            print("无法从iCloud加载 pageSteps 内容，将当前变量同步到iCloud")
+//        }
+//        if let storedRatingClicks = store.object(forKey: "RatingClicks") as? Int {
+//            print("iCloud 上的 RatingClicks:\(storedRatingClicks),本机的 RatingClicks:\(RatingClicks)")
+//        } else {
+//            print("无法从iCloud加载 RatingClicks 内容")
+//        }
+//
+//        // 读取双精度值
+//        if store.object(forKey: "reminderTime") != nil {
+//            print("iCloud 上的 reminderTime:\(store.object(forKey: "reminderTime") ?? 0.0),本机的 reminderTime:\(reminderTime)")
+//        } else {
+//            print("无法从iCloud加载 pageSteps 内容")
+//        }
+//
+//        // 读取布尔值
+//        if store.object(forKey: "isBiometricEnabled") != nil {
+//            print("iCloud 上的 isBiometricEnabled:\(store.object(forKey: "isBiometricEnabled") ?? false),本机的 isBiometricEnabled:\(isBiometricEnabled)")
+//        } else {
+//            print("无法从iCloud加载 isBiometricEnabled 内容")
+//        }
+//
+//        if store.object(forKey: "isLoopAnimation") != nil {
+//            print("iCloud 上的 isLoopAnimation:\(store.object(forKey: "isLoopAnimation") ?? false),本机的 isLoopAnimation:\(isLoopAnimation)")
+//        } else {
+//            print("无法从iCloud加载 isLoopAnimation 内容")
+//        }
+//
+//        if store.object(forKey: "isSilentMode") != nil {
+//            print("iCloud 上的 isSilentMode:\(store.object(forKey: "isSilentMode") ?? false),本机的 isSilentMode:\(isSilentMode)")
+//        } else {
+//            print("无法从iCloud加载 isSilentMode 内容")
+//        }
+//
+//        if store.object(forKey: "SwitchTopStyle") != nil {
+//            print("iCloud 上的 SwitchTopStyle:\(store.object(forKey: "SwitchTopStyle") ?? false),本机的 SwitchTopStyle:\(SwitchTopStyle)")
+//        } else {
+//            print("无法从iCloud加载 SwitchTopStyle 内容")
+//        }
+//
+//        if store.object(forKey: "20240523") != nil {
+//            print("iCloud 上的 isInAppPurchase:\(store.object(forKey: "20240523") ?? false),本机的 isInAppPurchase:\(isInAppPurchase)")
+//        } else {
+//            print("无法从iCloud加载 isInAppPurchase 内容")
+//        }
+//
+//        if store.object(forKey: "isShowAboutUs") != nil {
+//            print("iCloud 上的 isShowAboutUs:\(store.object(forKey: "isShowAboutUs") ?? false),本机的 isShowAboutUs:\(isShowAboutUs)")
+//        } else {
+//            print("无法从iCloud加载 isShowAboutUs 内容")
+//        }
+//
+//        if store.object(forKey: "isShowInAppPurchase") != nil {
+//            print("iCloud 上的 isShowInAppPurchase:\(store.object(forKey: "isShowInAppPurchase") ?? false),本机的 isShowInAppPurchase:\(isShowInAppPurchase)")
+//        } else {
+//            print("无法从iCloud加载 isShowInAppPurchase 内容")
+//        }
+//
+//        if store.object(forKey: "isShowThanks") != nil {
+//            print("iCloud 上的 isShowThanks:\(store.object(forKey: "isShowThanks") ?? false),本机的 isShowThanks:\(isShowThanks)")
+//        } else {
+//            print("无法从iCloud加载 isShowThanks 内容")
+//        }
+//
+//        if store.object(forKey: "isModelConfigManager") != nil {
+//            print("iCloud 上的 isModelConfigManager:\(store.object(forKey: "isModelConfigManager") ?? false),本机的 isModelConfigManager:\(isModelConfigManager)")
+//        } else {
+//            print("无法从iCloud加载 isModelConfigManager 内容")
+//        }
+//
+//        if store.object(forKey: "isReminderTime") != nil {
+//            print("iCloud 上的 isReminderTime:\(store.object(forKey: "isReminderTime") ?? false),本机的 isReminderTime:\(isReminderTime)")
+//        } else {
+//            print("无法从iCloud加载 isReminderTime 内容")
+//        }
+//
+//        if store.object(forKey: "accessNotes") != nil {
+//            print("iCloud 上的 accessNotes:\(store.object(forKey: "accessNotes") ?? false),本机的 accessNotes:\(accessNotes)")
+//        } else {
+//            print("无法从iCloud加载 accessNotes 内容")
+//        }
+//
+//        if store.object(forKey: "isShowActivity") != nil {
+//            print("iCloud 上的 isShowActivity:\(store.object(forKey: "isShowActivity") ?? false),本机的 isShowActivity:\(isShowActivity)")
+//        } else {
+//            print("无法从iCloud加载 isShowActivity 内容")
+//        }
+//
+//        // 读取字符串值
+//        if let storedBackgroundImage = store.string(forKey: "BackgroundImage") {
+//            print("iCloud 上的 BackgroundImage:\(storedBackgroundImage),本机的 BackgroundImage:\(BackgroundImage)")
+//        } else {
+//            print("无法从iCloud加载 BackgroundImage 内容")
+//        }
+//
+//        if let storedLoopAnimation = store.string(forKey: "LoopAnimation") {
+//            print("iCloud 上的 LoopAnimation:\(storedLoopAnimation),本机的 LoopAnimation:\(LoopAnimation)")
+//        } else {
+//            print("无法从iCloud加载 LoopAnimation 内容")
+//        }
+//
+//        if let storedCurrencySymbol = store.string(forKey: "CurrencySymbol") {
+//            print("iCloud 上的 CurrencySymbol:\(storedCurrencySymbol),本机的 CurrencySymbol:\(CurrencySymbol)")
+//        } else {
+//            print("无法从iCloud加载 CurrencySymbol 内容")
+//        }
+//        
+//        if let storedAppIcon = store.string(forKey: "appIcon") {
+//            print("iCloud 上的 appIcon:\(appIcon),本机的 appIcon:\(appIcon)")
+//        } else {
+//            print("无法从iCloud加载 appIcon 内容")
+//        }
+//        
+//        print("完成 getICloudData 方法")
+//    }
     /// 防止内存泄漏
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
