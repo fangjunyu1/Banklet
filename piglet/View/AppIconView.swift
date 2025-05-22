@@ -9,41 +9,37 @@ import SwiftUI
 
 class TransparentViewController: UIViewController {
     override func viewDidLoad() {
-        print("进入viewDidLoad方法")
+        print("进入到 TransparentViewController 的 viewDidLoad方法")
         super.viewDidLoad()
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.0) // 完全透明
         backgroundView.frame = view.bounds
         view.addSubview(backgroundView)
-        print("完成 backgroundView 的添加")
     }
     
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
         print("进入 present 方法")
         if viewControllerToPresent is UIAlertController {
             print("拦截了系统弹窗")
+             dismiss(animated: false)
             completion?()
-            dismiss(animated: false)
         } else {
-            print("不是系统弹窗，执行 dismiss")
-            completion?()
-            dismiss(animated: false)
+            super.present(viewControllerToPresent, animated: flag,completion: completion)
         }
         print("完成 present 方法")
     }
 }
 
 class IconChanger {
-    static func changeIconSilently(to name: String?,completion: @escaping(Bool) -> Void) {
+    static func changeIconSilently(to name: String?,selected: Binding<String>) {
         print("进入 changeIconSilently 方法")
         guard let windowScene = UIApplication.shared.connectedScenes
-                .compactMap({ $0 as? UIWindowScene })
-                .first(where: { $0.activationState == .foregroundActive }),
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive }),
               let rootVC = windowScene.windows.first?.rootViewController else {
             // 安全地拿到当前活跃窗口的根控制器
-               print("无法找到 rootVC，退出方法")
-               completion(false)
-               return
+            print("无法找到 rootVC，退出方法")
+            return
         }
         
         print("当前的 rootVC 是：\(type(of: rootVC))")
@@ -56,26 +52,27 @@ class IconChanger {
         transparentVC.modalPresentationStyle = .overFullScreen
         
         if !(topVC is TransparentViewController) && !(topVC is UIAlertController) {
-            topVC.present(transparentVC, animated: false) {
-                UIApplication.shared.setAlternateIconName(name) { error in
-                    DispatchQueue.main.async {
-                        print("进入主线程闭包")
-                        transparentVC.dismiss(animated: false) // 主动关闭
-                        print("进入主线程闭包的判断")
-                        if error == nil {
-                            print("设置 App Icon成功！！")
-                            completion(true)
-                        } else {
-                            print("设置 App Icon 出错：\(error?.localizedDescription ?? "")！！")
-                            completion(false)
-                        }
-                    }
+            topVC.present(transparentVC, animated: false)
+            print("TransparentViewController 已呈现，准备设置图标")
+            if UIApplication.shared.supportsAlternateIcons {
+                print("支持功能图标的功能")
+                UIApplication.shared.setAlternateIconName(name)
+                DispatchQueue.main.async {
+                    print("进入主线程闭包")
+                    print("进入主线程，获取最新的UIViewController层级")
+//                    transparentVC.dismiss(animated: false) // 主动关闭
+                    print("关闭自定义模态弹窗口，获取最新的UIViewController层级。")
+                    AppStorageManager.shared.appIcon = name ?? "AppIcon 2"
+                    selected.wrappedValue = AppStorageManager.shared.appIcon
+                    print("设置了\(name ?? "AppIcon None")为图标")
                 }
+            } else {
+                print("不支持更换图标功能")
             }
+            print("完成 present 闭包")
         } else {
             // 已有其他控制器，无法静默处理
             print("topVC 判断出错，设置 App Icon 出错")
-            completion(false)
         }
     }
 }
@@ -108,17 +105,6 @@ struct AppIconView: View {
     
     var appIconLimit: Int = 6
     
-    // 更换图标方法
-    func setAlternateIconNameFunc(name: String) {
-        IconChanger.changeIconSilently(to: name) { success in
-            if success {
-                appStorage.appIcon = name ?? "AppIcon 2"
-                selectedIconName = name
-                print("设置了\(name)为图标")
-            }
-        }
-    }
-    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -133,7 +119,7 @@ struct AppIconView: View {
                         LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
-                                    setAlternateIconNameFunc(name: "AppIcon \(index)")
+                                    IconChanger.changeIconSilently(to: "AppIcon \(index)",selected: $selectedIconName)
                                     print("点击了:AppIcon \(index)")
                                 }, label: {
                                     Rectangle()
