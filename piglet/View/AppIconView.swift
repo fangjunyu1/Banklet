@@ -8,31 +8,19 @@
 import SwiftUI
 
 class TransparentViewController: UIViewController {
-    override func viewDidLoad() {
-        print("进入到 TransparentViewController 的 viewDidLoad方法")
-        super.viewDidLoad()
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.0) // 完全透明
-        backgroundView.frame = view.bounds
-        view.addSubview(backgroundView)
-    }
-    
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        print("进入 present 方法")
         if viewControllerToPresent is UIAlertController {
             print("拦截了系统弹窗")
              dismiss(animated: false)
-            completion?()
+//            completion?()
         } else {
             super.present(viewControllerToPresent, animated: flag,completion: completion)
         }
-        print("完成 present 方法")
     }
 }
 
 class IconChanger {
     static func changeIconSilently(to name: String?,selected: Binding<String>) {
-        print("进入 changeIconSilently 方法")
         guard let windowScene = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first(where: { $0.activationState == .foregroundActive }),
@@ -42,7 +30,6 @@ class IconChanger {
             return
         }
         
-        print("当前的 rootVC 是：\(type(of: rootVC))")
         var topVC = rootVC
         while let presented = topVC.presentedViewController {
             topVC = presented
@@ -53,23 +40,17 @@ class IconChanger {
         
         if !(topVC is TransparentViewController) && !(topVC is UIAlertController) {
             topVC.present(transparentVC, animated: false)
-            print("TransparentViewController 已呈现，准备设置图标")
             if UIApplication.shared.supportsAlternateIcons {
                 print("支持功能图标的功能")
                 UIApplication.shared.setAlternateIconName(name)
                 DispatchQueue.main.async {
-                    print("进入主线程闭包")
-                    print("进入主线程，获取最新的UIViewController层级")
-//                    transparentVC.dismiss(animated: false) // 主动关闭
-                    print("关闭自定义模态弹窗口，获取最新的UIViewController层级。")
+                    // 修改存储的图标名称
                     AppStorageManager.shared.appIcon = name ?? "AppIcon 2"
                     selected.wrappedValue = AppStorageManager.shared.appIcon
-                    print("设置了\(name ?? "AppIcon None")为图标")
                 }
             } else {
                 print("不支持更换图标功能")
             }
-            print("完成 present 闭包")
         } else {
             // 已有其他控制器，无法静默处理
             print("topVC 判断出错，设置 App Icon 出错")

@@ -10,6 +10,7 @@ import SwiftData
 import Combine
 import WidgetKit
 import StoreKit
+import WatchConnectivity
 
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
@@ -47,21 +48,6 @@ struct Home: View {
     @State private var messageOffset: CGFloat = 0
     @State private var messageOpacity: Double = 0
     @State private var isRefreshing = false
-    
-    //    @AppStorage("pageSteps") var pageSteps: Int = 1
-    //    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
-    //    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
-    //    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
-    //    //    @AppStorage("isTestDetails") var isTestDetails = false
-    //    // 静默模式
-    //    @AppStorage("isSilentMode") var isSilentMode = false
-    //    // 货币符号
-    //    @AppStorage("CurrencySymbol") var CurrencySymbol = "USD"
-    //    // 存钱罐首页显示样式，为true则显示已存入的金额
-    //    @AppStorage("SwitchTopStyle") var SwitchTopStyle: Bool = false
-    //    // 请求评分
-    //    @AppStorage("RatingClicks") var RatingClicks: Int = 0
-    
     
     let maxHistorySize = 3 // 历史记录长度
     

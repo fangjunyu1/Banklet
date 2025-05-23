@@ -87,6 +87,7 @@
 		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* IntExtension.swift */; };
+		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
@@ -348,6 +349,7 @@
 		1D5D778E2D91894F0044DEE5 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1D6445CA2D68312900D3BF8F /* BankletWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BankletWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wcSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 				1DA7C3A02D6AA60200FA6CA3 /* PiggyBank.swift */,
 				1DA7C3992D6AA57000FA6CA3 /* ModelConfigManager.swift */,
 				1DA7C39A2D6AA57000FA6CA3 /* SavingsRecord.swift */,
+				1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1214,6 +1217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7359702D6425F700F7D599 /* ContentView.swift in Sources */,
+				1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */,
 				1DA7C3A52D6AA67C00FA6CA3 /* ColorExtensions.swift in Sources */,
 				1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */,
 				1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */,

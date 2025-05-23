@@ -7,8 +7,8 @@
 import Foundation
 import WatchConnectivity
 
-// 定义 WCSessionDelegateImpl 来处理 WatchConnectivity 的代理方法
 @Observable
+// 定义 WCSessionDelegateImpl 来处理 WatchConnectivity 的代理方法
 class WCSessionDelegateImpl: NSObject, WCSessionDelegate {
     
     override init() {
@@ -21,6 +21,7 @@ class WCSessionDelegateImpl: NSObject, WCSessionDelegate {
             print("当前设备不支持 WCSession.")
         }
     }
+
     // 激活完成后的处理
     func session(_ session: WCSession, activationDidCompleteWith state: WCSessionActivationState, error: Error?) {
         if state == .activated {

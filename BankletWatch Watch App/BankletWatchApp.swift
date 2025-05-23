@@ -7,12 +7,24 @@
 
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 @main
 struct BankletWatch_Watch_AppApp: App {
     
     @State private var modelConfigManager = ModelConfigManager()
     @AppStorage("isModelConfigManager") var isModelConfigManager = true // 控制iCloud
+    
+    init() {
+        let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                if let error = error {
+                    print("授权失败：\(error.localizedDescription)")
+                } else {
+                    print("授权结果：\(granted ? "允许" : "拒绝")")
+                }
+            }
+    }
     
     var body: some Scene {
         
