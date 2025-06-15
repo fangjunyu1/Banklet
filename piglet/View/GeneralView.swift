@@ -24,6 +24,7 @@ struct GeneralView: View {
 //    // 存储用户设定的提醒时间
 //    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
     
+    @State private var Notification = false
     // 授权通知
     func requestNotificationPermission() {
         let center = UNUserNotificationCenter.current()
@@ -35,6 +36,20 @@ struct GeneralView: View {
             } else {
                 print("授权结果：\(granted ? "允许" : "拒绝")")
                 appStorage.isReminderTime = granted
+                // 如果当前提示时间为false并且授权结构为false，弹出吐司提示，告知用户可能是通知未授权导致的问题
+                if !appStorage.isReminderTime && !granted {
+                    print("当前应用未授权通知功能")
+                    withAnimation(.easeInOut(duration: 1)){
+                        Notification = true
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        withAnimation(.easeInOut(duration: 1)){
+                            Notification = false
+                        }
+                    }
+                    
+                }
                 if granted {
                     // 清除所有通知
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -310,6 +325,17 @@ struct GeneralView: View {
                     .frame(maxWidth: .infinity,maxHeight: .infinity)
                     .navigationTitle("General")
                     .navigationBarTitleDisplayMode(.inline)
+                    // 无通知权限
+                    VStack {
+                        Spacer()
+                        Text("No notification permission")
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(.gray)
+                            .cornerRadius(6)
+                        Spacer().frame(height:40)
+                    }
+                    .opacity(Notification ? 1 : 0)
                 }
             }
         }

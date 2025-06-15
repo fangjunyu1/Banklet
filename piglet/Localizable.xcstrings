@@ -24058,6 +24058,18 @@
         }
       }
     },
+    "No notification permission" : {
+      "comment" : "1.0.10:无通知权限",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无通知权限"
+          }
+        }
+      }
+    },
     "NOK" : {
       "comment" : "1.0.6:挪威克朗",
       "extractionState" : "manual",

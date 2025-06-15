@@ -402,6 +402,7 @@ struct Home: View {
                                                     .frame(width: 160, height: 160)
                                                     .contentShape(Circle())
                                                     .onTapGesture {
+                                                        print("点击了动画")
                                                         // 点击动画时刷新谚语
                                                         currentProverb = generateUniqueRandomProverb()
                                                         withAnimation(.easeInOut(duration: 0.5)) {
@@ -722,6 +723,6 @@ struct Home: View {
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
-            .environment(\.locale, .init(identifier: "ru"))
+        // .environment(\.locale, .init(identifier: "ru"))
 }
 
