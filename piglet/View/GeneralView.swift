@@ -222,6 +222,7 @@ struct GeneralView: View {
                                 // 振动
                                 SettingView(content: {
                                     Image(systemName: "bell.and.waves.left.and.right")
+                                        .frame(width:24)
                                         .padding(.horizontal,5)
                                     Text("Vibration")
                                         .lineLimit(1)
@@ -242,10 +243,11 @@ struct GeneralView: View {
                                 SettingView(content: {
                                     if appStorage.isReminderTime {
                                         Image(systemName: "bell.badge")
+                                            .padding(.horizontal,5)
                                     } else {
                                         Image(systemName: "bell")
+                                            .padding(.horizontal,5)
                                     }
-                                        .padding(.horizontal,5)
                                     Text("Reminder time")
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.8)

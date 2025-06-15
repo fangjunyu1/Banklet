@@ -50,6 +50,8 @@ struct Home: View {
     @State private var messageOpacity: Double = 0
     @State private var isRefreshing = false
     
+    let generator = UISelectionFeedbackGenerator()
+    
     let maxHistorySize = 3 // 历史记录长度
     
     var difference: Double {
@@ -225,41 +227,38 @@ struct Home: View {
                                     Spacer().frame(height: height * 0.05)
                                     // 顶部存钱罐左侧的图标
                                     HStack(spacing: 0) {
-                                        ZStack {
-                                            // 外圈进度条
-                                            CircularProgressBar(progress: progress)
-                                                .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                            Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                                .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
-                                                .overlay {
-                                                    Image(systemName: piggyBank[0].icon)
-                                                        .font(isCompactScreen ? .footnote : .title3)
-                                                        .foregroundColor(.white)
-                                                }
-                                                .padding(.horizontal,10)
-                                                .contentShape(Circle())
-                                                .onTapGesture {
-                                                    showMoreInformationView.toggle()
-                                                }
-                                                .contextMenu {
-                                                    Button(action: {
+                                        // 如果 Swich切换状态为 true，显示进度条和差额。
+                                        if appStorage.SwitchTopStyle {
+                                            ZStack {
+                                                // 外圈进度条
+                                                CircularProgressBar(progress: progress)
+                                                    .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                                Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                    .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                                    .overlay {
+                                                        Image(systemName: piggyBank[0].icon)
+                                                            .font(isCompactScreen ? .footnote : .title3)
+                                                            .foregroundColor(.white)
+                                                    }
+                                                    .padding(.horizontal,10)
+                                                    .contentShape(Circle())
+                                                    .onTapGesture {
                                                         showMoreInformationView.toggle()
-                                                    }, label: {
-                                                        Label("Details",systemImage:"list.clipboard")
-                                                    })
-                                                }
-                                        }
-                                        Spacer().frame(width: 10)
-                                        // 顶部存钱罐右侧储蓄信息
-                                        VStack(alignment: .leading) {
-                                            Group {
-                                                if piggyBank[0].amount == piggyBank[0].targetAmount {
-                                                    Text("Piggy bank full")
-                                                        .font(.title2)
-                                                        .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                                } else {
-                                                    if appStorage.SwitchTopStyle {
-                                                        Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                                    }
+                                                    .contextMenu {
+                                                        Button(action: {
+                                                            showMoreInformationView.toggle()
+                                                        }, label: {
+                                                            Label("Details",systemImage:"list.clipboard")
+                                                        })
+                                                    }
+                                            }
+                                            Spacer().frame(width: 10)
+                                            // 如果 Swich切换状态为 false，仅显示存入金额。
+                                            VStack(alignment: .leading) {
+                                                Group {
+                                                    if piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                        Text("Piggy bank full")
                                                             .font(.title2)
                                                             .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                                     } else {
@@ -267,17 +266,9 @@ struct Home: View {
                                                             .font(.title2)
                                                             .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                                     }
-                                                }
-                                                Group {
-                                                    if  piggyBank[0].amount == piggyBank[0].targetAmount {
-                                                        Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
-                                                    } else {
-                                                        if appStorage.SwitchTopStyle {
-                                                            HStack {
-                                                                Text("\(NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称"))  \(NSLocalizedString("Deposited", comment: "距离"))")
-                                                            }
-                                                            .lineLimit(2)
-                                                            .minimumScaleFactor(0.5)
+                                                    Group {
+                                                        if  piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                            Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
                                                         } else {
                                                             HStack {
                                                                 Text("\(NSLocalizedString("Distance", comment: "距离"))  \(NSLocalizedString(piggyBank[0].name, comment: ""))  \(NSLocalizedString("Need", comment: "还需要"))")
@@ -286,16 +277,60 @@ struct Home: View {
                                                             .minimumScaleFactor(0.5)
                                                         }
                                                     }
+                                                    .font(.footnote)
+                                                    .fontWeight(.bold)
+                                                    .lineLimit(1)
+                                                    .minimumScaleFactor(0.8)
                                                 }
-                                                .font(.footnote)
-                                                .fontWeight(.bold)
-                                                .lineLimit(1)
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity,alignment: .leading)
+                                                .lineLimit(2)
                                                 .minimumScaleFactor(0.8)
                                             }
-                                            .foregroundColor(.white)
-                                            .frame(maxWidth: .infinity,alignment: .leading)
-                                            .lineLimit(2)
-                                            .minimumScaleFactor(0.8)
+                                        } else {
+                                            // 如果 Swich切换状态为 false，仅显示存入金额。
+                                            ZStack {
+                                                VStack {
+                                                    HStack {
+                                                        Image(systemName: piggyBank[0].icon)
+                                                            .font(isCompactScreen ? .footnote : .largeTitle)
+                                                            .foregroundColor(.white)
+                                                            .opacity(0.6)
+                                                        Spacer()
+                                                    }
+                                                }
+                                                VStack {
+                                                        if piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                            Text("Piggy bank full")
+                                                                .font(.system(size: 30))
+                                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                                        } else {
+                                                            Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                                                .font(.system(size: 33))
+                                                                .scaleEffect(0.9)
+                                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                                        }
+                                                        Group {
+                                                            if  piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                                Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
+                                                            } else {
+                                                                HStack {
+                                                                    Text("\(NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称"))  \(NSLocalizedString("Deposited", comment: "距离"))")
+                                                                }
+                                                                .lineLimit(2)
+                                                                .minimumScaleFactor(0.5)
+                                                            }
+                                                        }
+                                                        .font(.footnote)
+                                                        .fontWeight(.bold)
+                                                        .lineLimit(1)
+                                                        .minimumScaleFactor(0.8)
+                                                    }
+                                                    .foregroundColor(.white)
+                                                    .frame(maxWidth: .infinity)
+                                                    .lineLimit(2)
+                                                    .minimumScaleFactor(0.8)
+                                            }
                                         }
                                     }
                                     .padding(10)
@@ -308,6 +343,13 @@ struct Home: View {
                                     .cornerRadius(10)
                                     .opacity(isSilentModeActive ? 0 : 1)
                                     .onTapGesture {
+                                        // 点击顶部的金额视图
+                                        if appStorage.isVibration {
+                                            // 发生振动
+                                            generator.prepare()
+                                            generator.selectionChanged()
+                                        }
+                                        
                                         appStorage.SwitchTopStyle.toggle()
                                     }
                                     
@@ -319,6 +361,12 @@ struct Home: View {
                                                 Group {
                                                     // 显示详细信息的按钮
                                                     Button(action: {
+                                                        // 点击顶部的金额视图
+                                                        if appStorage.isVibration {
+                                                            // 发生振动
+                                                            generator.prepare()
+                                                            generator.selectionChanged()
+                                                        }
                                                         withAnimation(.easeInOut(duration:0.5)) {
                                                             showDetailView.toggle()
                                                         }
@@ -337,6 +385,12 @@ struct Home: View {
                                                     
                                                     // 显示存取记录的按钮
                                                     Button(action: {
+                                                        // 点击顶部的金额视图
+                                                        if appStorage.isVibration {
+                                                            // 发生振动
+                                                            generator.prepare()
+                                                            generator.selectionChanged()
+                                                        }
                                                         showAccessRecordsView.toggle()
                                                     }, label: {
                                                         VStack {
@@ -403,6 +457,12 @@ struct Home: View {
                                                     .frame(width: 160, height: 160)
                                                     .contentShape(Circle())
                                                     .onTapGesture {
+                                                        // 点击顶部的金额视图
+                                                        if appStorage.isVibration {
+                                                            // 发生振动
+                                                            generator.prepare()
+                                                            generator.selectionChanged()
+                                                        }
                                                         print("点击了动画")
                                                         // 点击动画时刷新谚语
                                                         currentProverb = generateUniqueRandomProverb()
@@ -445,6 +505,13 @@ struct Home: View {
                                     Spacer()
                                     // 存入取出按钮
                                     Button(action: {
+                                        // 点击顶部的金额视图
+                                        if appStorage.isVibration {
+                                            // 发生振动
+                                            generator.prepare()
+                                            generator.selectionChanged()
+                                        }
+                                        // 打开存取视图
                                         showDepositAndWithdrawView.toggle()
                                     }, label: {
                                         Text("Deposit/withdraw")
