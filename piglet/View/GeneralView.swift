@@ -114,15 +114,12 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                                .imageScale(.small)
+                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                     // 分割线
-                                    Rectangle()
-                                        .frame(maxWidth:.infinity)
-                                        .frame(height: 0.5)
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 60)
+                                    Divider().padding(.leading,50)
                                     // 主界面动画
                                     NavigationLink(destination:MainInterfaceAnimationView()){
                                         SettingView(content: {
@@ -133,15 +130,12 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                                .imageScale(.small)
+                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                     // 分割线
-                                    Rectangle()
-                                        .frame(maxWidth:.infinity)
-                                        .frame(height: 0.5)
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 60)
+                                    Divider().padding(.leading,50)
                                     NavigationLink(destination: AppIconView()){
                                         SettingView(content: {
                                             Image(systemName: "photo.fill")
@@ -151,7 +145,8 @@ struct GeneralView: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                                .imageScale(.small)
+                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
                                 }
@@ -196,7 +191,8 @@ struct GeneralView: View {
                                             .minimumScaleFactor(0.8)
                                         Spacer()
                                         Image(systemName: "chevron.right")
-                                            .foregroundColor(Color(hex:"D8D8D8")).scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                            .imageScale(.small)
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                     })
                                 }
                             }
@@ -249,11 +245,7 @@ struct GeneralView: View {
                                 })
                                 
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 // 人脸识别
                                 SettingView(content: {
                                     Image(systemName: "faceid")
@@ -270,11 +262,7 @@ struct GeneralView: View {
                                         .frame(height:0)
                                 })
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 // 存取备注
                                 SettingView(content: {
                                     Image(systemName: "list.clipboard")
@@ -291,11 +279,7 @@ struct GeneralView: View {
                                         .frame(height:0)
                                 })
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 // 活动
                                 SettingView(content: {
                                     Image(systemName: "party.popper")

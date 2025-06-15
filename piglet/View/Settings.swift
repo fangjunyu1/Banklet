@@ -77,7 +77,7 @@ struct Settings: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .imageScale(.small)
                                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     } else {
@@ -94,7 +94,7 @@ struct Settings: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .imageScale(.small)
                                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
@@ -148,11 +148,7 @@ struct Settings: View {
                                             .frame(height:0)
                                     })
                                     // 分割线
-                                    Rectangle()
-                                        .frame(maxWidth:.infinity)
-                                        .frame(height: 0.5)
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 60)
+                                    Divider().padding(.leading,50)
                                     // 通用功能
                                     NavigationLink(destination: GeneralView()){
                                         SettingView(content: {
@@ -164,7 +160,7 @@ struct Settings: View {
                                                 .minimumScaleFactor(0.8)
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .imageScale(.small)
                                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                     }
@@ -183,7 +179,7 @@ struct Settings: View {
                                                 .minimumScaleFactor(0.5) // 最小缩放到 50%
                                             Spacer()
                                             Image(systemName: "chevron.right")
-                                                .foregroundColor(Color(hex:"D8D8D8"))
+                                                .imageScale(.small)
                                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                         })
                                         
@@ -209,16 +205,12 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"D8D8D8"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
                                 
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 
                                 // 使用条款
                                 SettingButton(action: {
@@ -233,17 +225,13 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"D8D8D8"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
                                 
                                 
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 
                                 // 隐私政策
                                 SettingButton(action: {
@@ -257,7 +245,7 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"D8D8D8"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
                             }
@@ -281,16 +269,12 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"D8D8D8"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
 //                                if appStorage.isShowAboutUs { }
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
 //                                if appStorage.isShowThanks && appStorage.isShowAboutUs {    }
                                 // 鸣谢
                                 SettingButton(action: {
@@ -304,16 +288,12 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"C1C1C1"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
 //                                if appStorage.isShowThanks {}
                                 // 分割线
-                                Rectangle()
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 0.5)
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 60)
+                                Divider().padding(.leading,50)
                                 // 开源
                                 SettingButton(action: {
                                     showOpenSource.toggle()
@@ -327,7 +307,7 @@ struct Settings: View {
                                         .minimumScaleFactor(0.8)
                                     Spacer()
                                     Image(systemName: "chevron.right")
-                                        .foregroundColor(Color(hex:"C1C1C1"))
+                                        .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
                             }
