@@ -100,6 +100,8 @@
 		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
 		1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */; };
 		1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */; };
+		1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */; };
+		1D7ED6F72DFEE740000EB349 /* money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D7ED6F62DFEE740000EB349 /* money.mp3 */; };
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
 		1D80E7C92C0BC0D300A79B96 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
@@ -372,6 +374,8 @@
 		1D7D4D432D224F52001EE006 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1D7D4D442D224F53001EE006 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1D7D4D452D224F55001EE006 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		1D7ED6F62DFEE740000EB349 /* money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = money.mp3; sourceTree = "<group>"; };
 		1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1D7FE03E2D20D5120065AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
@@ -673,6 +677,14 @@
 			path = "BankletWatch Watch AppUITests";
 			sourceTree = "<group>";
 		};
+		1D7ED6F12DFEE490000EB349 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				1D7ED6F62DFEE740000EB349 /* money.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +752,7 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
 				1D33A19A2C077E2C0073320F /* IAPManager.swift */,
 				1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */,
 				1DEC987F2C10315500BEECFF /* appVersion.swift */,
@@ -824,6 +837,7 @@
 				1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */,
 				1DF555742BF60B1000BF0DE5 /* pigletApp.swift */,
 				1DF555782BF60B1200BF0DE5 /* Assets.xcassets */,
+				1D7ED6F12DFEE490000EB349 /* Sound */,
 				1D214F512D2F7FA3007F1D0E /* JSON */,
 				1D64EFD22D21661F00832FB4 /* Strings */,
 				1D88545C2D244EC4009DE7AE /* Lottie */,
@@ -1179,6 +1193,7 @@
 				1D3E13CF2D49AD7A00747D20 /* Home3.json in Resources */,
 				1D3E141D2D4A3F0700747D20 /* Home41.json in Resources */,
 				1D3E141C2D4A3F0700747D20 /* Home40.json in Resources */,
+				1D7ED6F72DFEE740000EB349 /* money.mp3 in Resources */,
 				1D3E143B2D4A631700747D20 /* Home12.json in Resources */,
 				1D3E13E22D49E05300747D20 /* Home13.json in Resources */,
 				1D3E14142D4A35F600747D20 /* Home34.json in Resources */,
@@ -1302,6 +1317,7 @@
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
+				1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
 				1D89C54F2D506254000DECFF /* DetailView.swift in Sources */,

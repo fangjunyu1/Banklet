@@ -14,6 +14,7 @@ struct pigletApp: App {
     @StateObject private var iapManager = IAPManager.shared
     @State private var appStorage = AppStorageManager.shared
     @State private var modelConfigManager = ModelConfigManager()
+    @StateObject private var sound = SoundManager.shared
     
     init() {
         if appStorage.isModelConfigManager {
@@ -38,7 +39,7 @@ struct pigletApp: App {
         .environment(appStorage)
         .environmentObject(iapManager)
         .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
-        
+        .environmentObject(sound)
     }
 }
 

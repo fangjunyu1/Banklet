@@ -18,6 +18,7 @@ struct Home: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
+    @EnvironmentObject var sound: SoundManager  // 通过 Sound 注入
     @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true },
            sort: [SortDescriptor(\.creationDate, order: .reverse)]) var piggyBank: [PiggyBank]
     @Query var allPiggyBank: [PiggyBank]
@@ -572,9 +573,14 @@ struct Home: View {
                 })
                 .sheet(isPresented: $showDepositAndWithdrawView, content: {
                     DepositAndWithdrawView(isReversed: $isReversed) {
+                        // 回调闭包，执行存钱动画
                         isPlaying = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             isPlaying = false
+                        }
+                        // 如果启用音效，则调用存钱音效
+                        if appStorage.isSoundEffects {
+                            sound.playSound(named: "money")
                         }
                     }
                 })
@@ -723,6 +729,7 @@ struct Home: View {
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
         // .environment(\.locale, .init(identifier: "ru"))
 }
 
