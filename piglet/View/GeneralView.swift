@@ -198,10 +198,46 @@ struct GeneralView: View {
                             }
                             .padding(10)
                             
-                            
-                            
-                            // 提醒时间和密码保护
+                            // 提醒时间、密码保护、存取备注和活动
                             VStack(spacing: 0) {
+                                // 音效
+                                SettingView(content: {
+                                    Image(systemName: "music.quarternote.3")
+                                        .padding(.horizontal,5)
+                                    Text("Sound effects")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.isSoundEffects
+                                    }, set: {
+                                        appStorage.isSoundEffects = $0
+                                    }))  // iCloud开关
+                                        .frame(height:0)
+                                })
+                                
+                                // 分割线
+                                Divider().padding(.leading,50)
+                                
+                                // 振动
+                                SettingView(content: {
+                                    Image(systemName: "iphone.motion")
+                                        .padding(.horizontal,5)
+                                    Text("Vibration")
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.8)
+                                    Spacer()
+                                    Toggle("",isOn: Binding(get: {
+                                        appStorage.isVibration
+                                    }, set: {
+                                        appStorage.isVibration = $0
+                                    }))  // iCloud开关
+                                        .frame(height:0)
+                                })
+                                
+                                // 分割线
+                                Divider().padding(.leading,50)
+                                
                                 // 提醒时间
                                 SettingView(content: {
                                     Image(systemName: "bell")
