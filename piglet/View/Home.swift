@@ -50,6 +50,7 @@ struct Home: View {
     @State private var messageOpacity: Double = 0
     @State private var isRefreshing = false
     
+    
     let generator = UISelectionFeedbackGenerator()
     
     let maxHistorySize = 3 // 历史记录长度
@@ -213,6 +214,12 @@ struct Home: View {
         }
     
     var body: some View {
+        
+        // 判断iPhone或iPad
+        let idiom = UIDevice.current.userInterfaceIdiom
+        // 判断iPhone横屏状态
+        let showDetails = isLandscape && idiom == .phone
+        
         NavigationStack {
             GeometryReader { geometry in
                 // 通过 `geometry` 获取布局信息
@@ -225,19 +232,19 @@ struct Home: View {
                             ScrollView(showsIndicators: false) {
                                 VStack {
                                     Spacer().frame(height: height * 0.05)
-                                    // 顶部存钱罐左侧的图标
+                                    // 顶部存钱罐信息
                                     HStack(spacing: 0) {
                                         // 如果 Swich切换状态为 true，显示进度条和差额。
                                         if appStorage.SwitchTopStyle {
                                             ZStack {
                                                 // 外圈进度条
                                                 CircularProgressBar(progress: progress)
-                                                    .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                                    .frame(width: 40)
                                                 Circle().fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                                    .frame(width: isLandscape ? isPadScreen ? width * 0.06 : width * 0.05 : isPadScreen ? width * 0.08 : isCompactScreen ? width * 0.1 : width * 0.12)
+                                                    .frame(width: 40)
                                                     .overlay {
                                                         Image(systemName: piggyBank[0].icon)
-                                                            .font(isCompactScreen ? .footnote : .title3)
+                                                            .font(.title3)
                                                             .foregroundColor(.white)
                                                     }
                                                     .padding(.horizontal,10)
@@ -334,7 +341,7 @@ struct Home: View {
                                         }
                                     }
                                     .padding(10)
-                                    .frame(width: width, height: isLandscape ? isPadScreen ? height * 0.14 : height * 0.2 : isPadScreen ? height * 0.08: isCompactScreen ? height * 0.15 : height * 0.12)
+                                    .frame(width: width,height:80)
                                     .background(
                                         RoundedRectangle(cornerRadius: 10)
                                             .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
@@ -354,151 +361,154 @@ struct Home: View {
                                     }
                                     
                                     Spacer().frame(height: isCompactScreen ? 0.02 : height * 0.08)
-                                    SpacedContainer(isCompactScreen: isCompactScreen) {
-                                        // 左侧详细信息和存钱记录
-                                        HStack {
-                                            VStack(spacing: 0) {
-                                                Group {
-                                                    // 显示详细信息的按钮
-                                                    Button(action: {
-                                                        // 点击顶部的金额视图
-                                                        if appStorage.isVibration {
-                                                            // 发生振动
-                                                            generator.prepare()
-                                                            generator.selectionChanged()
-                                                        }
-                                                        withAnimation(.easeInOut(duration:0.5)) {
-                                                            showDetailView.toggle()
-                                                        }
-                                                    }, label: {
-                                                        VStack {
-                                                            Image(systemName: "chart.pie")
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .frame(width:20, height: 20)
-                                                        }
-                                                        .frame(width: 40, height: 40)
-                                                    })
-                                                    Rectangle()
-                                                        .fill(.white)
-                                                        .frame(width: 30, height: 1) // 自定义宽度和高度
-                                                    
-                                                    // 显示存取记录的按钮
-                                                    Button(action: {
-                                                        // 点击顶部的金额视图
-                                                        if appStorage.isVibration {
-                                                            // 发生振动
-                                                            generator.prepare()
-                                                            generator.selectionChanged()
-                                                        }
-                                                        showAccessRecordsView.toggle()
-                                                    }, label: {
-                                                        VStack {
-                                                            Image(systemName: "clock.arrow.circlepath")
-                                                                .resizable()
-                                                                .scaledToFit()
-                                                                .frame(width: 20,height: 20)
-                                                        }
-                                                        .frame(width: 40, height: 40)
-                                                    })
+                                    // 在手机非横屏的情况下，显示详细信息和存钱记录
+                                    if !showDetails {
+                                        SpacedContainer(isCompactScreen: isCompactScreen) {
+                                            // 左侧详细信息和存钱记录
+                                            HStack {
+                                                VStack(spacing: 0) {
+                                                    Group {
+                                                        // 显示详细信息的按钮
+                                                        Button(action: {
+                                                            // 点击顶部的金额视图
+                                                            if appStorage.isVibration {
+                                                                // 发生振动
+                                                                generator.prepare()
+                                                                generator.selectionChanged()
+                                                            }
+                                                            withAnimation(.easeInOut(duration:0.5)) {
+                                                                showDetailView.toggle()
+                                                            }
+                                                        }, label: {
+                                                            VStack {
+                                                                Image(systemName: "chart.pie")
+                                                                    .resizable()
+                                                                    .scaledToFit()
+                                                                    .frame(width:20, height: 20)
+                                                            }
+                                                            .frame(width: 40, height: 40)
+                                                        })
+                                                        Rectangle()
+                                                            .fill(.white)
+                                                            .frame(width: 30, height: 1) // 自定义宽度和高度
+                                                        
+                                                        // 显示存取记录的按钮
+                                                        Button(action: {
+                                                            // 点击顶部的金额视图
+                                                            if appStorage.isVibration {
+                                                                // 发生振动
+                                                                generator.prepare()
+                                                                generator.selectionChanged()
+                                                            }
+                                                            showAccessRecordsView.toggle()
+                                                        }, label: {
+                                                            VStack {
+                                                                Image(systemName: "clock.arrow.circlepath")
+                                                                    .resizable()
+                                                                    .scaledToFit()
+                                                                    .frame(width: 20,height: 20)
+                                                            }
+                                                            .frame(width: 40, height: 40)
+                                                        })
+                                                    }
+                                                }
+                                                .frame(width: 40,height: 81)
+                                                .foregroundColor(.white)
+                                                .background(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                                )
+                                                .cornerRadius(10)
+                                                Spacer()
+                                            }
+                                            .opacity(isSilentModeActive ? 0 : 1)
+                                            Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
+                                        }
+                                    }
+                                    // 存取猪猪动画
+                                    HStack {
+                                        // 谚语
+                                        if isDisplayedProverb {
+                                            // 谚语
+                                            Spacer()
+                                            VStack {
+                                                HStack(spacing: 0) {
+                                                    Group {
+                                                        Text(LocalizedStringKey(currentProverb))
+                                                            .padding(10)
+                                                            .foregroundColor(.white)
+                                                            .background(
+                                                                RoundedRectangle(cornerRadius: 10)
+                                                                    .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                                            )
+                                                            .cornerRadius(10)
+                                                            .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
+                                                            .lineLimit(7)
+                                                            .minimumScaleFactor(0.6)
+                                                        RightTriangle()
+                                                            .frame(width: 10,height:10)
+                                                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                                    }
                                                 }
                                             }
-                                            .frame(width: 40,height: 81)
-                                            .foregroundColor(.white)
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                            )
-                                            .cornerRadius(10)
+                                            .frame(maxWidth: 300,maxHeight: 50)
+                                        } else {
                                             Spacer()
                                         }
-                                        .opacity(isSilentModeActive ? 0 : 1)
-                                        Spacer().frame(width: 0,height: isLandscape ? 0 : height * 0.02)
-                                        // 存取猪猪动画
-                                        HStack {
-                                            // 谚语
-                                            if isDisplayedProverb {
-                                                // 谚语
-                                                Spacer()
-                                                VStack {
-                                                    HStack(spacing: 0) {
-                                                        Group {
-                                                            Text(LocalizedStringKey(currentProverb))
-                                                                .padding(10)
-                                                                .foregroundColor(.white)
-                                                                .background(
-                                                                    RoundedRectangle(cornerRadius: 10)
-                                                                        .fill(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                                                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                                                )
-                                                                .cornerRadius(10)
-                                                                .fixedSize(horizontal: false, vertical: true) // 自动扩展宽度
-                                                                .lineLimit(7)
-                                                                .minimumScaleFactor(0.6)
-                                                            RightTriangle()
-                                                                .frame(width: 10,height:10)
-                                                                .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
+                                        VStack {
+                                            // 存钱猪猪动画
+                                            LottieView(filename: appStorage.LoopAnimation,isPlaying: appStorage.isLoopAnimation ? true : isPlaying, playCount: appStorage.isLoopAnimation ? 0 : 1, isReversed: appStorage.isLoopAnimation ? false : isReversed)
+                                                .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
+                                                .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)")) // 水平翻转视图
+                                                .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: appStorage.BackgroundImage == "Home0" ? -20 : 0)
+                                                .opacity(colorScheme == .light ? 1 : 0.8)
+                                                .disabled(isProverb)
+                                                .frame(width: 160, height: 160)
+                                                .contentShape(Circle())
+                                                .onTapGesture {
+                                                    // 点击顶部的金额视图
+                                                    if appStorage.isVibration {
+                                                        // 发生振动
+                                                        generator.prepare()
+                                                        generator.selectionChanged()
+                                                    }
+                                                    print("点击了动画")
+                                                    // 点击动画时刷新谚语
+                                                    currentProverb = generateUniqueRandomProverb()
+                                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                                        isDisplayedProverb = true
+                                                        isProverb = false
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                                            isDisplayedProverb = false
+                                                            isProverb = true
                                                         }
+                                                    }
+                                                    
+                                                    // 新增点击次数统计，用于激活评分
+                                                    print("RatingClicks:\(appStorage.RatingClicks)")
+                                                    appStorage.RatingClicks += 1
+                                                    if appStorage.RatingClicks == 2 {
+                                                        print("调用获取评分请求")
+                                                        SKStoreReviewController.requestReview()
                                                     }
                                                 }
-                                                .frame(maxWidth: 300,maxHeight: 50)
-                                            } else {
-                                                Spacer()
-                                            }
-                                            VStack {
-                                                // 存钱猪猪动画
-                                                LottieView(filename: appStorage.LoopAnimation,isPlaying: appStorage.isLoopAnimation ? true : isPlaying, playCount: appStorage.isLoopAnimation ? 0 : 1, isReversed: appStorage.isLoopAnimation ? false : isReversed)
-                                                    .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
-                                                    .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)") : -AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)"), y: AnimationScaleConfig.scale(for: "\(appStorage.LoopAnimation)")) // 水平翻转视图
-                                                    .offset(x: isSilentModeActive ? width * -0.5 + 80 : 0,y: appStorage.BackgroundImage == "Home0" ? -20 : 0)
-                                                    .opacity(colorScheme == .light ? 1 : 0.8)
-                                                    .disabled(isProverb)
-                                                    .frame(width: 160, height: 160)
-                                                    .contentShape(Circle())
-                                                    .onTapGesture {
-                                                        // 点击顶部的金额视图
-                                                        if appStorage.isVibration {
-                                                            // 发生振动
-                                                            generator.prepare()
-                                                            generator.selectionChanged()
-                                                        }
-                                                        print("点击了动画")
-                                                        // 点击动画时刷新谚语
-                                                        currentProverb = generateUniqueRandomProverb()
-                                                        withAnimation(.easeInOut(duration: 0.5)) {
-                                                            isDisplayedProverb = true
-                                                            isProverb = false
-                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                                                isDisplayedProverb = false
-                                                                isProverb = true
-                                                            }
-                                                        }
-                                                        
-                                                        // 新增点击次数统计，用于激活评分
-                                                        print("RatingClicks:\(appStorage.RatingClicks)")
-                                                        appStorage.RatingClicks += 1
-                                                        if appStorage.RatingClicks == 2 {
-                                                            print("调用获取评分请求")
-                                                            SKStoreReviewController.requestReview()
-                                                        }
+                                                .allowsHitTesting(isProverb)
+                                            
+                                            // 存钱罐日期
+                                            if piggyBank[0].isExpirationDateEnabled {
+                                                HStack{
+                                                    Group {
+                                                        Image(systemName: "calendar")
+                                                        Spacer().frame(width: 10)
+                                                        Text(piggyBank[0].expirationDate,format: .dateTime.year().month().day())
+                                                            .fixedSize(horizontal: true, vertical: false) // 自动扩展宽度
                                                     }
-                                                    .allowsHitTesting(isProverb)
-                                                
-                                                // 存钱罐日期
-                                                if piggyBank[0].isExpirationDateEnabled {
-                                                    HStack{
-                                                        Group {
-                                                            Image(systemName: "calendar")
-                                                            Spacer().frame(width: 10)
-                                                            Text(piggyBank[0].expirationDate,format: .dateTime.year().month().day())
-                                                                .fixedSize(horizontal: true, vertical: false) // 自动扩展宽度
-                                                        }
-                                                        .font(.footnote)
-                                                        .foregroundColor(.gray)
-                                                    }
-                                                    .opacity(isSilentModeActive ? 0 : 1)
+                                                    .font(.footnote)
+                                                    .foregroundColor(.gray)
                                                 }
+                                                .opacity(isSilentModeActive ? 0 : 1)
                                             }
                                         }
                                     }
