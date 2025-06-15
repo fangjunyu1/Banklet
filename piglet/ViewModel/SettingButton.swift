@@ -75,3 +75,24 @@ struct InAppPurchaseCompletionButton<Content: View>: View {
         }
     }
 }
+
+// 设置页中的HStack
+struct SilentModeView<Content:View>: View {
+    @Environment(\.colorScheme) var colorScheme // 读取当前配色方案
+    let content: Content
+    
+    init(@ViewBuilder content:() -> Content) {
+        self.content = content()
+    }
+    
+    var body: some View {
+        HStack {
+            content
+        }
+        .padding(14)
+        .foregroundColor(AppStorageManager.shared.isSilentMode ? .white : colorScheme == .light ? .black : .white)
+        .background(AppStorageManager.shared.isSilentMode ? Color(hex: "0B8C16") : colorScheme == .light ? .white : Color(hex:"1f1f1f"))
+        .animation(.easeInOut(duration: 1), value: AppStorageManager.shared.isSilentMode)
+        .cornerRadius(10)
+    }
+}

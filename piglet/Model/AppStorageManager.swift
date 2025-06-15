@@ -12,21 +12,11 @@ import Observation
 class AppStorageManager {
     static let shared = AppStorageManager()  // 全局单例
     private init() {
-        // 获取iCloud上的数据
-//        print("初始化，获取iCloud上的数据")
-//        getAllData()
-        
         // 初始化时同步本地存储
         loadUserDefault()
         
-//        print("初始化本地同步存储，再次获取iCloud上的数据")
-//        getAllData()
-        
         // 从iCloud读取数据
         loadFromiCloud()
-        
-//        print("初始化从iCloud上读取数据，再次获取iCloud上的数据")
-//        getAllData()
         
         // 监听 iCloud 变化，同步到本地
         observeiCloudChanges()
@@ -245,6 +235,28 @@ class AppStorageManager {
             }
         }
     }
+    
+    // 音效
+    var isSoundEffects = true {
+        didSet {
+            if isSoundEffects != oldValue && !isLoading {
+                let store = NSUbiquitousKeyValueStore.default
+                store.set(isSoundEffects, forKey: "isSoundEffects")
+                store.synchronize() // 强制触发数据同步
+            }
+        }
+    }
+    
+    // 振动
+    var isVibration = true {
+        didSet {
+            if isVibration != oldValue && !isLoading {
+                let store = NSUbiquitousKeyValueStore.default
+                store.set(isVibration, forKey: "isVibration")
+                store.synchronize() // 强制触发数据同步
+            }
+        }
+    }
 
     // 从UserDefaults加载数据
     private func loadUserDefault() {
@@ -281,6 +293,17 @@ class AppStorageManager {
         }
         isShowActivity = UserDefaults.standard.bool(forKey: "isShowActivity")  // 活动入口
         appIcon = UserDefaults.standard.string(forKey: "appIcon") ?? "AppIcon 2"  // 应用图标
+        // 音效，默认配置为 true
+        if UserDefaults.standard.object(forKey: "isSoundEffects") == nil {
+            // 设置默认值为 true
+            UserDefaults.standard.set(true, forKey: "isSoundEffects")
+        }
+        // 振动，默认配置为 true
+        if UserDefaults.standard.object(forKey: "isVibration") == nil {
+            // 设置默认值为 true
+            UserDefaults.standard.set(true, forKey: "isVibration")
+        }
+        
     }
     
     /// 从 iCloud 读取数据
@@ -448,6 +471,24 @@ class AppStorageManager {
         } else {
             store.set(appIcon, forKey: "appIcon")
             print("无法从iCloud加载 appIcon 内容，将当前变量同步到iCloud")
+        }
+        
+        // 音效
+        if store.object(forKey: "isSoundEffects") != nil {
+            isSoundEffects = store.bool(forKey: "isSoundEffects")
+            print("isSoundEffects:\(isSoundEffects)")
+        } else {
+            store.set(isSoundEffects, forKey: "isSoundEffects")
+            print("无法从iCloud加载 isSoundEffects 内容，将当前变量同步到iCloud")
+        }
+        
+        // 振动
+        if store.object(forKey: "isVibration") != nil {
+            accessNotes = store.bool(forKey: "isVibration")
+            print("isVibration:\(isVibration)")
+        } else {
+            store.set(isVibration, forKey: "isVibration")
+            print("无法从iCloud加载 isVibration 内容，将当前变量同步到iCloud")
         }
         
         print("完成 loadFromiCloud 方法的读取")

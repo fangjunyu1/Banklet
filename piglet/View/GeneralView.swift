@@ -160,8 +160,7 @@ struct GeneralView: View {
                                 .padding(10)
                             }
                             
-                            // 测试功能
-                            // 内购情况下，显示测试功能
+                            // 静默模式
                             VStack {
                                 HStack {
                                     Text("After waiting for 10 seconds, hide the main view buttons and only show the animation.")
@@ -169,7 +168,7 @@ struct GeneralView: View {
                                         .foregroundColor(.gray)
                                     Spacer()
                                 }
-                                SettingView(content: {
+                                SilentModeView(content: {
                                     Image(systemName: "leaf")
                                         .padding(.horizontal,5)
                                     Text("Silent Mode")
