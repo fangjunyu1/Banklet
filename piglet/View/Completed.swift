@@ -12,9 +12,42 @@ struct CompletedView: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var modelContext
+    @Environment(AppStorageManager.self) var appStorage
     
+    let generator = UISelectionFeedbackGenerator()
+
     @Binding var pageSteps: Int
     @Binding var piggyBankData: PiggyBankData // 绑定 ContentView 中的 PiggyBankData
+    
+    func save() {
+        // Step 1: 查询所有存钱罐
+        let fetchRequest = FetchDescriptor<PiggyBank>()
+        let existingPiggyBanks = try? modelContext.fetch(fetchRequest)
+        
+        // Step 2: 将所有存钱罐的 isPrimary 设置为 false
+        existingPiggyBanks?.forEach { bank in
+            bank.isPrimary = false
+        }
+        // Step 3: 创建新的存钱罐并设置 isPrimary 为 true
+        let piggyBank = PiggyBank(name: piggyBankData.name == "" ? "Piggy Bank" : piggyBankData.name,
+                                  icon: piggyBankData.icon == "" ? "shadow" : piggyBankData.icon,
+                                  initialAmount:
+                                    piggyBankData.targetAmount == 0 ? 0 :
+                                    piggyBankData.initialAmount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.initialAmount,
+                                  targetAmount: piggyBankData.targetAmount == 0 ? 100.0 : piggyBankData.targetAmount,
+                                  amount:
+                                    piggyBankData.targetAmount == 0 ? 0 : piggyBankData.amount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.amount,
+                                  creationDate: piggyBankData.creationDate,
+                                  expirationDate: piggyBankData.expirationDate,
+                                  isExpirationDateEnabled: piggyBankData.isExpirationDateEnabled,
+                                  isPrimary: piggyBankData.isPrimary)
+        modelContext.insert(piggyBank) // 将对象插入到上下文中
+        do {
+            try modelContext.save() // 提交上下文中的所有更改
+        } catch {
+            print("保存失败: \(error)")
+        }
+    }
     var body: some View {
         
         GeometryReader { geometry in
@@ -67,35 +100,9 @@ struct CompletedView: View {
                 Spacer().frame(height: height * 0.02)
                 // 完成按钮
                 Button(action: {
-                    // Step 1: 查询所有存钱罐
-                    let fetchRequest = FetchDescriptor<PiggyBank>()
-                    let existingPiggyBanks = try? modelContext.fetch(fetchRequest)
-                    
-                    // Step 2: 将所有存钱罐的 isPrimary 设置为 false
-                    existingPiggyBanks?.forEach { bank in
-                        bank.isPrimary = false
-                    }
-                    // Step 3: 创建新的存钱罐并设置 isPrimary 为 true
-                    let piggyBank = PiggyBank(name: piggyBankData.name == "" ? "Piggy Bank" : piggyBankData.name,
-                                              icon: piggyBankData.icon == "" ? "shadow" : piggyBankData.icon,
-                                              initialAmount:
-                                                piggyBankData.targetAmount == 0 ? 0 :
-                                                piggyBankData.initialAmount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.initialAmount,
-                                              targetAmount: piggyBankData.targetAmount == 0 ? 100.0 : piggyBankData.targetAmount,
-                                              amount:
-                                                piggyBankData.targetAmount == 0 ? 0 : piggyBankData.amount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.amount,
-                                              creationDate: piggyBankData.creationDate,
-                                              expirationDate: piggyBankData.expirationDate,
-                                              isExpirationDateEnabled: piggyBankData.isExpirationDateEnabled,
-                                              isPrimary: piggyBankData.isPrimary)
-                    modelContext.insert(piggyBank) // 将对象插入到上下文中
-                    do {
-                        try modelContext.save() // 提交上下文中的所有更改
-                    } catch {
-                        print("保存失败: \(error)")
-                    }
-                    
+                    save()
                     pageSteps = 0
+                    // 重制存钱罐对象
                     piggyBankData = PiggyBankData()
                 }, label: {
                     Text("Completed")
@@ -122,6 +129,10 @@ struct CompletedView: View {
 
 #Preview {
     CompletedView(pageSteps: .constant(5),piggyBankData: .constant(PiggyBankData()))
-        .modelContainer(PiggyBank.preview)
         .environment(\.locale, .init(identifier: "de"))
+        .modelContainer(PiggyBank.preview)
+                .environment(AppStorageManager.shared)
+                .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+                .environmentObject(IAPManager.shared)
+                .environmentObject(SoundManager.shared)
 }

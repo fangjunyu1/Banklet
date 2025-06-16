@@ -350,7 +350,6 @@ struct Home: View {
                                     .cornerRadius(10)
                                     .opacity(isSilentModeActive ? 0 : 1)
                                     .onTapGesture {
-                                        // 点击顶部的金额视图
                                         if appStorage.isVibration {
                                             // 发生振动
                                             generator.prepare()
@@ -370,12 +369,6 @@ struct Home: View {
                                                     Group {
                                                         // 显示详细信息的按钮
                                                         Button(action: {
-                                                            // 点击顶部的金额视图
-                                                            if appStorage.isVibration {
-                                                                // 发生振动
-                                                                generator.prepare()
-                                                                generator.selectionChanged()
-                                                            }
                                                             withAnimation(.easeInOut(duration:0.5)) {
                                                                 showDetailView.toggle()
                                                             }
@@ -394,12 +387,6 @@ struct Home: View {
                                                         
                                                         // 显示存取记录的按钮
                                                         Button(action: {
-                                                            // 点击顶部的金额视图
-                                                            if appStorage.isVibration {
-                                                                // 发生振动
-                                                                generator.prepare()
-                                                                generator.selectionChanged()
-                                                            }
                                                             showAccessRecordsView.toggle()
                                                         }, label: {
                                                             VStack {
@@ -468,7 +455,6 @@ struct Home: View {
                                                 .frame(width: 160, height: 160)
                                                 .contentShape(Circle())
                                                 .onTapGesture {
-                                                    // 点击顶部的金额视图
                                                     if appStorage.isVibration {
                                                         // 发生振动
                                                         generator.prepare()
@@ -515,12 +501,6 @@ struct Home: View {
                                     Spacer()
                                     // 存入取出按钮
                                     Button(action: {
-                                        // 点击顶部的金额视图
-                                        if appStorage.isVibration {
-                                            // 发生振动
-                                            generator.prepare()
-                                            generator.selectionChanged()
-                                        }
                                         // 打开存取视图
                                         showDepositAndWithdrawView.toggle()
                                     }, label: {

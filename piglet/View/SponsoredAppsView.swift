@@ -17,6 +17,8 @@ struct SponsoredAppsView: View {
     @EnvironmentObject var iapManager: IAPManager
     @State private var endOfWait = false    // 为true时，显示结束等待按钮
     
+    let generator = UISelectionFeedbackGenerator()
+    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
@@ -131,6 +133,11 @@ struct SponsoredAppsView: View {
                             
                         } else {
                             Button(action: {
+                                if appStorage.isVibration {
+                                    // 发生振动
+                                    generator.prepare()
+                                    generator.selectionChanged()
+                                }
                                 if !iapManager.products.isEmpty {
                                     iapManager.loadPurchased = true // 显示加载动画
                                     // 将商品分配给一个变量
@@ -269,4 +276,7 @@ struct SponsoredAppsView: View {
         .environmentObject(IAPManager.shared)
         .environment(\.locale, .init(identifier: "de"))
         .environment(AppStorageManager.shared)
+        .modelContainer(PiggyBank.preview)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(SoundManager.shared)
 }

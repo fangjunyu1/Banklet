@@ -17,6 +17,8 @@ struct MainInterfaceAnimationView: View {
 //    @AppStorage("LoopAnimation") var LoopAnimation = "Home0" // Lottie动画
 //    @AppStorage("isLoopAnimation") var isLoopAnimation = false  // 循环动画
     
+    let generator = UISelectionFeedbackGenerator()
+    
     let columns = [
         GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
         GridItem(.adaptive(minimum: 130, maximum: 200))
@@ -72,6 +74,11 @@ struct MainInterfaceAnimationView: View {
                             LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {
+                                        if appStorage.isVibration {
+                                            // 发生振动
+                                            generator.prepare()
+                                            generator.selectionChanged()
+                                        }
                                         appStorage.LoopAnimation = "Home\(index)"
                                         print("LoopAnimation:\(appStorage.LoopAnimation)")
                                     }, label: {
@@ -137,4 +144,8 @@ struct MainInterfaceAnimationView: View {
     MainInterfaceAnimationView()
             .environment(\.locale, .init(identifier: "ar"))
             .environment(AppStorageManager.shared)
+            .modelContainer(PiggyBank.preview)
+            .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+            .environmentObject(IAPManager.shared)
+            .environmentObject(SoundManager.shared)
 }

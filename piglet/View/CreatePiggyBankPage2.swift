@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreatePiggyBankPage2: View {
+    @Environment(AppStorageManager.self) var appStorage
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var icon: String? = "pencil.tip"
@@ -19,6 +20,8 @@ struct CreatePiggyBankPage2: View {
     
     @Binding var pageSteps: Int
     @Binding var piggyBankData: PiggyBankData // 绑定 ContentView 中的 PiggyBankData
+    
+    let generator = UISelectionFeedbackGenerator()
     
     // 图标列表
     let iconArray: [String] = ["pencil.tip","books.vertical","graduationcap","dumbbell","soccerball","football","tennisball","trophy","location","camera","envelope","bag","creditcard","giftcard","briefcase","cross.case","suitcase.rolling","house","lightbulb.max","party.popper","popcorn","sofa","tent","mountain.2","building.2","map","laptopcomputer","iphone.gen2","ipad","visionpro","applewatch","headphones","airpodspro","beats.powerbeats","homepodmini","tv","airplane","car","tram","ferry","sailboat","bicycle","stroller","syringe","pills","dog","fish","teddybear","leaf","crown","tshirt","film","eye","photo","gamecontroller","birthday.cake","gift","list.bullet","dollarsign","apple.logo"]
@@ -296,4 +299,9 @@ struct CreatePiggyBankPage2: View {
 
 #Preview {
     CreatePiggyBankPage2(pageSteps: .constant(4),piggyBankData: .constant(PiggyBankData()))
+        .modelContainer(PiggyBank.preview)
+                .environment(AppStorageManager.shared)
+                .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+                .environmentObject(IAPManager.shared)
+                .environmentObject(SoundManager.shared)
 }

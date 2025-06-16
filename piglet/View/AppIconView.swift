@@ -67,6 +67,8 @@ struct AppIconView: View {
     
     @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 2"
     
+    let generator = UISelectionFeedbackGenerator()
+    
     let columns = [
         GridItem(.adaptive(minimum: 100, maximum: 120)), // 控制列宽范围
         GridItem(.adaptive(minimum: 100, maximum: 120)),
@@ -100,6 +102,11 @@ struct AppIconView: View {
                         LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
+                                    if appStorage.isVibration {
+                                        // 发生振动
+                                        generator.prepare()
+                                        generator.selectionChanged()
+                                    }
                                     IconChanger.changeIconSilently(to: "AppIcon \(index)",selected: $selectedIconName)
                                     print("点击了:AppIcon \(index)")
                                 }, label: {
@@ -171,4 +178,8 @@ struct AppIconView: View {
 #Preview {
     AppIconView()
         .environment(AppStorageManager.shared)
+        .modelContainer(PiggyBank.preview)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }

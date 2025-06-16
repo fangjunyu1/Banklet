@@ -11,11 +11,14 @@ import SwiftData
 struct CreatePiggyBankPage1: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     @State private var showAlert = false
     @FocusState private var isFocus: Field? // 使用枚举管理焦点
     
     @Binding var pageSteps: Int
     @Binding var piggyBankData: PiggyBankData // 绑定 ContentView 中的 PiggyBankData
+    
+    let generator = UISelectionFeedbackGenerator()
     
     var limitLength: Int = 30
     var nameLength: Int {
@@ -206,6 +209,10 @@ struct CreatePiggyBankPage1: View {
     CreatePiggyBankPage1(pageSteps: .constant(3),piggyBankData: .constant(PiggyBankData()))
         .modelContainer(PiggyBank.preview)
         .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }
 
 struct CreatingALeftProgressBar: Shape {

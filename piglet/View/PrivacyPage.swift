@@ -9,8 +9,12 @@ import SwiftUI
 
 struct PrivacyPage: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
+    @Environment(AppStorageManager.self) var appStorage
     @Environment(\.colorScheme) var colorScheme
     @Binding var pageSteps: Int
+    
+    let generator = UISelectionFeedbackGenerator()
+    
     var body: some View {
         
         NavigationStack {
@@ -66,4 +70,9 @@ struct PrivacyPage: View {
 #Preview {
     PrivacyPage(pageSteps: .constant(2))
         .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+        .modelContainer(PiggyBank.preview)
+                .environment(AppStorageManager.shared)
+                .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+                .environmentObject(IAPManager.shared)
+                .environmentObject(SoundManager.shared)
 }

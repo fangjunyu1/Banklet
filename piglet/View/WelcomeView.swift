@@ -14,8 +14,10 @@ struct WelcomeView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.modelContext) private var modelContext
     @Environment(\.colorScheme) var colorScheme
+    @Environment(AppStorageManager.self) var appStorage
     @Binding var pageSteps: Int
     
+    let generator = UISelectionFeedbackGenerator()
     
     // 1.0.1 使用UserDefault存储的内容，下面是迁移代码
     func migrateOldDataIfNeeded() {
@@ -218,4 +220,8 @@ struct WelcomeView: View {
     WelcomeView(pageSteps: .constant(1))
         .modelContainer(PiggyBank.preview)
         .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }

@@ -20,6 +20,7 @@ struct ManagingView: View {
     @State private var deletePrompt = false
     //    @State private var refreshID = UUID() // 新增刷新标识符
     
+    let generator = UISelectionFeedbackGenerator()
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
@@ -65,7 +66,11 @@ struct ManagingView: View {
                                                 guard !piggyBank[index].isPrimary else {
                                                     return
                                                 }
-                                                
+                                                if appStorage.isVibration {
+                                                    // 发生振动
+                                                    generator.prepare()
+                                                    generator.selectionChanged()
+                                                }
                                                 // Step 1: 查询所有存钱罐
                                                 let fetchRequest = FetchDescriptor<PiggyBank>()
                                                 let existingPiggyBanks = try? modelContext.fetch(fetchRequest)
@@ -213,5 +218,8 @@ struct ManagingView: View {
     ManagingView()
         .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
     //        .environment(\.locale, .init(identifier: "de"))
 }

@@ -14,6 +14,8 @@ struct MainInterfaceBackgroundView: View {
 //    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
 //    @AppStorage("BackgroundImage") var BackgroundImage = "" // 背景照片
     
+    let generator = UISelectionFeedbackGenerator()
+    
     let columns = [
         GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
         GridItem(.adaptive(minimum: 130, maximum: 200))
@@ -42,6 +44,11 @@ struct MainInterfaceBackgroundView: View {
                     ScrollView(showsIndicators: false) {
                             LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
                                 Button(action: {
+                                    if appStorage.isVibration {
+                                        // 发生振动
+                                        generator.prepare()
+                                        generator.selectionChanged()
+                                    }
                                     appStorage.BackgroundImage = ""
                                 }, label: {
                                     Rectangle()
@@ -73,6 +80,11 @@ struct MainInterfaceBackgroundView: View {
                                 })
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {
+                                        if appStorage.isVibration {
+                                            // 发生振动
+                                            generator.prepare()
+                                            generator.selectionChanged()
+                                        }
                                         appStorage.BackgroundImage = "bg\(index)"
                                     }, label: {
                                         Rectangle()
@@ -142,4 +154,8 @@ struct MainInterfaceBackgroundView: View {
 #Preview {
     MainInterfaceBackgroundView()
         .environment(AppStorageManager.shared)
+        .modelContainer(PiggyBank.preview)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }
