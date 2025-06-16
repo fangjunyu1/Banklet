@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */; };
+		1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */; };
+		1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */; };
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
@@ -233,6 +235,8 @@
 
 /* Begin PBXFileReference section */
 		1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolView.swift; sourceTree = "<group>"; };
+		1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconChanger.swift; sourceTree = "<group>"; };
+		1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentViewController.swift; sourceTree = "<group>"; };
 		1D0D91202D472E7E00F287DA /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triggerNetworkRequest.swift; sourceTree = "<group>"; };
 		1D0FA6E32D225A6F00ABF5F6 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -752,6 +756,8 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */,
+				1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
 				1D33A19A2C077E2C0073320F /* IAPManager.swift */,
 				1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */,
@@ -1293,6 +1299,7 @@
 				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* appVersion.swift in Sources */,
 				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
+				1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */,
 				1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
@@ -1300,6 +1307,7 @@
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
 				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
+				1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
@@ -1842,7 +1850,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1882,7 +1890,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.10;
+				MARKETING_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangjunyu.piglet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

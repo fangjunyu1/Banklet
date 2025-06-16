@@ -726,6 +726,10 @@ struct Home: View {
             timerCancellable = nil // 确保页面消失时停止计时
         }
         .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                    // App 进入活跃状态
+                print("App 进入活跃状态")
+            }
             if newPhase == .background {
                 // 在应用进入后台时保存数据
                 saveWidgetData()
