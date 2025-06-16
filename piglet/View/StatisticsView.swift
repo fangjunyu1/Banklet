@@ -20,7 +20,6 @@ struct StatisticsView: View {
     @Query var savingsRecords: [SavingsRecord]
     
     @State private var currentMonth: Date = Date() // 当前显示的月份
-    @State private var selectedTab: String = ""
     @State private var months: [Date] = []
     
     // 货币符号
@@ -28,7 +27,6 @@ struct StatisticsView: View {
     // 清理1.0.6以前可能存在的孤立存取数据
 //    @AppStorage("CleanUpOrphanAccessData") var CleanUpOrphanAccessData = false
     
-    private let rows = [GridItem(.adaptive(minimum: 20))] // 网格行的设置
     private let calendar = Calendar.current // current表示默认日历
     
     // 统计图表
@@ -57,44 +55,36 @@ struct StatisticsView: View {
     private var piggyBanksCount: Int {
         return allPiggyBank.count
     }
-    
-    // 获取 2025年1月 到当前月份的日期
+
+    // 当前年份
+    private func currentYear(for date: Date) -> String {
+        let nowYear = calendar.component(.year, from: date)
+        return String(nowYear)
+    }
+
+    // 获取今年的全部日期
     private func AllMouths(for date: Date) -> [Date]{
-        var calendar = Calendar.current // 当前日历
-        calendar.timeZone = TimeZone(abbreviation: "UTC")!
-        
-        // 2025年1月的起始日期
-        var components = DateComponents()
-        components.year = 2025
-        components.month = 1
-        components.day = 1
-        
-        // 获取起始日期
-        guard let startDate = calendar.date(from: components) else {
-            return [] // 如果 `startDate` 为空，则返回空数组
-        }
-        print("startDate:\(startDate)")  // 输出：2025-01-01 00:00:00 +0000 (UTC)
+        let nowYear = calendar.component(.year, from: date)
         
         // 设置存储的日期
         var months: [Date] = []
-        var currentAllMonth = startDate
         
-        // 循环到当前月份
-        while currentAllMonth <= date {
-            months.append(currentAllMonth)
-            if let nextMonth = calendar.date(byAdding: .month, value: 1, to: currentAllMonth) {
-                currentAllMonth = nextMonth
-            } else {
-                break
+        // 获取今年的全部月份
+        for month in 1...12 {
+            print("month")
+            let components = DateComponents(year: nowYear, month: month,day: 1)
+            if let date = calendar.date(from: components) {
+                print(date) // 转换成功后的具体日期
+                months.append(date)
             }
         }
         return months
     }
     
-    // 获取当前月份的标签（例如：2025-2）
+    // 获取当前月份的标签（例如：02）
     private func monthLabel(for date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM"
+        formatter.dateFormat = "MM"
         return formatter.string(from: date)
     }
     
@@ -109,7 +99,6 @@ struct StatisticsView: View {
         let targetDate = calendar.date(bySetting: .day, value: day, of: month)!
         return savingsRecords.contains { calendar.isDate($0.date, inSameDayAs: targetDate) }
     }
-    
     
     // 1.0.6版本更新，清理孤立的存取记录
     func cleanupOrphanedRecords() {
@@ -245,30 +234,28 @@ struct StatisticsView: View {
                             Text("Access grid")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity,alignment: .leading)
-                            Text("\(selectedTab)")
+                            Text("\(currentYear(for:Date()))")
                                 .font(.footnote)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity,alignment: .trailing)
-                            // 网格切换
-                            TabView(selection: $selectedTab) {
-                                // 遍历从2025年1月1日到现在的月份
-                                ForEach(months, id: \.self ) { month in
-                                    LazyVGrid(columns: rows, spacing: 5) {
-                                        ForEach(daysInMonth(for: month), id: \.self) { day in
-                                            Rectangle()
-                                                .cornerRadius(3)
-                                                .frame(width: 20, height: 20)
-                                                .foregroundColor( hasSavingRecord(for: day, in: month) ? colorScheme == .light ? Color(hex:"FF4B00") :  .white: colorScheme == .light ? Color(hex:"C7C7C7") : .gray)
-                                            
-                                        }
+                            // 遍历从当年的全部月份和日期
+                            ForEach(months, id: \.self ) { month in
+                                HStack(spacing:2) {
+                                    Text("\(monthLabel(for:month))")
+                                        .font(.caption2)
+                                        .foregroundColor(.gray)
+                                        .fixedSize()
+                                    Spacer().frame(width: 2)
+                                    ForEach(daysInMonth(for: month), id: \.self) { day in
+                                        Rectangle()
+                                            .frame(width: 8, height: 8)
+                                            .cornerRadius(1)
+                                            .foregroundColor( hasSavingRecord(for: day, in: month) ? colorScheme == .light ? Color(hex:"FF4B00") :  .white: colorScheme == .light ? Color(hex:"C7C7C7") : .gray)
+                                        
                                     }
-                                    .tag("\(monthLabel(for: month))")
-                                    .padding(10)
+                                    Spacer()
                                 }
                             }
-                            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                            .frame(height: 80)
-                            .id("\(selectedTab)")
                         }
                         Spacer()
                     }
@@ -288,18 +275,9 @@ struct StatisticsView: View {
                         }
                     }
                     .onAppear {
+                        // 清理旧的未关联数据
                         cleanupOrphanedRecords()
-                        if let lastMonth = AllMouths(for: Date()).last {
-                            selectedTab = monthLabel(for: lastMonth)
-                        }
                         months = AllMouths(for: Date()) // 仅在视图加载时计算一次
-                        for i in allPiggyBank {
-                            print("存钱罐名称:\(i.name)")
-                        }
-                        for i in savingsRecords {
-                            print("存取记录日期：\(i.date)")
-                            print("存取记录关联的存钱罐:\(i.piggyBank?.name)")
-                        }
                     }
                 }
             }
