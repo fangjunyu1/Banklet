@@ -612,7 +612,6 @@ struct Home: View {
                 // 统计视图
                 .sheet(isPresented: $showStatistics) {
                     StatisticsView()
-                        .presentationDetents([.height(500)])
                 }
                 .sheet(isPresented: $showAccessRecordsView) {
                     AccessRecordsView(piggyBank: piggyBank[0])
