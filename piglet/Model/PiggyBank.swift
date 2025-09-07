@@ -21,7 +21,7 @@ class PiggyBank {
     var isPrimary: Bool = false // 标记主要存钱罐
     var completionDate: Date = Date()    // 完成日期
     
-    // 与存钱记录的关系
+    /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade)
     var records: [SavingsRecord]?
     

@@ -94,9 +94,6 @@
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
 		1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359742D6425F900F7D599 /* Preview Assets.xcassets */; };
-		1D73597F2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */; };
-		1D7359892D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */; };
-		1D73598B2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */; };
 		1D73598E2D6425F900F7D599 /* BankletWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
@@ -156,9 +153,6 @@
 		1DF329332D6442B8005FBCE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1DF329322D6442B8005FBCE5 /* Lottie */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
-		1DF555862BF60B1200BF0DE5 /* pigletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555852BF60B1200BF0DE5 /* pigletTests.swift */; };
-		1DF555902BF60B1200BF0DE5 /* pigletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF5558F2BF60B1200BF0DE5 /* pigletUITests.swift */; };
-		1DF555922BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555912BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift */; };
 		1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */; };
 		1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */; };
 /* End PBXBuildFile section */
@@ -349,8 +343,8 @@
 		1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
 		1D585B462D63856700ABABB0 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D585B482D63856700ABABB0 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D585B492D63856700ABABB0 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pigletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D585B482D63856700ABABB0 /* pigletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = pigletTests.xctest; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-iphoneos/piglet.app/PlugIns/pigletTests.xctest"; sourceTree = "<absolute>"; };
+		1D585B492D63856700ABABB0 /* pigletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = pigletUITests.xctest; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-iphoneos/pigletUITests-Runner.app/PlugIns/pigletUITests.xctest"; sourceTree = "<absolute>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -361,11 +355,8 @@
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7359742D6425F900F7D599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
-		1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BankletWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "BankletWatch Watch AppTests.xctest"; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-watchos/BankletWatch Watch App.app/PlugIns/BankletWatch Watch AppTests.xctest"; sourceTree = "<absolute>"; };
+		1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "BankletWatch Watch AppUITests.xctest"; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-watchos/BankletWatch Watch AppUITests-Runner.app/PlugIns/BankletWatch Watch AppUITests.xctest"; sourceTree = "<absolute>"; };
 		1D7359982D6428A200F7D599 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.5.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -474,9 +465,6 @@
 		1DEC987F2C10315500BEECFF /* appVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appVersion.swift; sourceTree = "<group>"; };
 		1DF555742BF60B1000BF0DE5 /* pigletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletApp.swift; sourceTree = "<group>"; };
 		1DF555782BF60B1200BF0DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1DF555852BF60B1200BF0DE5 /* pigletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletTests.swift; sourceTree = "<group>"; };
-		1DF5558F2BF60B1200BF0DE5 /* pigletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletUITests.swift; sourceTree = "<group>"; };
-		1DF555912BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -664,23 +652,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1D73597D2D6425F900F7D599 /* BankletWatch Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				1D73597E2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift */,
-			);
-			path = "BankletWatch Watch AppTests";
-			sourceTree = "<group>";
-		};
-		1D7359872D6425F900F7D599 /* BankletWatch Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1D7359882D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift */,
-				1D73598A2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "BankletWatch Watch AppUITests";
-			sourceTree = "<group>";
-		};
 		1D7ED6F12DFEE490000EB349 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,20 +790,12 @@
 			children = (
 				1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */,
 				1DF555732BF60B1000BF0DE5 /* piglet */,
-				1DF555842BF60B1200BF0DE5 /* pigletTests */,
-				1DF5558E2BF60B1200BF0DE5 /* pigletUITests */,
 				1DEB96C82D5D9D6C00A68C21 /* BankletWidget */,
 				1D73596C2D6425F700F7D599 /* BankletWatch Watch App */,
-				1D73597D2D6425F900F7D599 /* BankletWatch Watch AppTests */,
-				1D7359872D6425F900F7D599 /* BankletWatch Watch AppUITests */,
 				1D601B842C0747FC00052528 /* Frameworks */,
 				1D585B462D63856700ABABB0 /* piglet.app */,
 				1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */,
-				1D585B482D63856700ABABB0 /* pigletTests.xctest */,
-				1D585B492D63856700ABABB0 /* pigletUITests.xctest */,
 				1D73596B2D6425F700F7D599 /* BankletWatch Watch App.app */,
-				1D73597A2D6425F900F7D599 /* BankletWatch Watch AppTests.xctest */,
-				1D7359842D6425F900F7D599 /* BankletWatch Watch AppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -854,23 +817,6 @@
 				1DE688042D21629500DB1AFA /* Localizable.xcstrings */,
 			);
 			path = piglet;
-			sourceTree = "<group>";
-		};
-		1DF555842BF60B1200BF0DE5 /* pigletTests */ = {
-			isa = PBXGroup;
-			children = (
-				1DF555852BF60B1200BF0DE5 /* pigletTests.swift */,
-			);
-			path = pigletTests;
-			sourceTree = "<group>";
-		};
-		1DF5558E2BF60B1200BF0DE5 /* pigletUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1DF5558F2BF60B1200BF0DE5 /* pigletUITests.swift */,
-				1DF555912BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift */,
-			);
-			path = pigletUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1256,7 +1202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D73597F2D6425F900F7D599 /* BankletWatch_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1264,8 +1209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D73598B2D6425F900F7D599 /* BankletWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
-				1D7359892D6425F900F7D599 /* BankletWatch_Watch_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1343,7 +1286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF555862BF60B1200BF0DE5 /* pigletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,8 +1293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF555902BF60B1200BF0DE5 /* pigletUITests.swift in Sources */,
-				1DF555922BF60B1200BF0DE5 /* pigletUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1560,7 +1500,6 @@
 		1D7359932D6425F900F7D599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1581,7 +1520,6 @@
 		1D7359942D6425F900F7D599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1602,7 +1540,6 @@
 		1D7359962D6425F900F7D599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RRMSD743UQ;
@@ -1622,7 +1559,6 @@
 		1D7359972D6425F900F7D599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RRMSD743UQ;
@@ -1827,7 +1763,6 @@
 		1DF555962BF60B1200BF0DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
@@ -1867,7 +1802,6 @@
 		1DF555972BF60B1200BF0DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
@@ -1907,7 +1841,6 @@
 		1DF555992BF60B1200BF0DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1931,7 +1864,6 @@
 		1DF5559A2BF60B1200BF0DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1955,7 +1887,6 @@
 		1DF5559C2BF60B1200BF0DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RRMSD743UQ;
@@ -1978,7 +1909,6 @@
 		1DF5559D2BF60B1200BF0DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RRMSD743UQ;
