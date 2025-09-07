@@ -32,7 +32,7 @@ struct Home: View {
                         }
                         .frame(width: width * 0.7)
                     Spacer().frame(height: height * 0.2)
-                    Text("\(firstPiggyBank.name)")
+                    Text("\(NSLocalizedString(firstPiggyBank.name, comment: ""))")
                         .font(.footnote)
                 } else {
                     Image("emptyBox")

@@ -35,7 +35,7 @@ struct List: View {
                             Spacer()
                                 .frame(width: width * 0.1)
                             VStack(alignment: .leading) {
-                                Text(item.name)
+                                Text("\(NSLocalizedString(item.name, comment: ""))")
                                     .font(.system(size: 10))
                                 Spacer()
                                     .frame(height: 6)
