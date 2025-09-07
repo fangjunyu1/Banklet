@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DeviceKit
 
 struct Settings: View {
     @Environment(\.openURL) var openURL
@@ -21,17 +22,26 @@ struct Settings: View {
     @State private var showThanks = false
     @State private var showGeneral = false
     @State private var showOpenSource = false // 显示开源视图
-//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-//    @AppStorage("isShowAboutUs") var isShowAboutUs = true   // false表示隐藏
-//    @AppStorage("isShowInAppPurchase") var isShowInAppPurchase = true   // 控制内购按钮，false表示隐藏
-//    @AppStorage("isShowThanks") var isShowThanks = true // 控制鸣谢页面，false表示隐藏
-//    @AppStorage("isModelConfigManager") var isModelConfigManager = true
-    
-    
+
     func sendEmail() {
         let email = "fangjunyu.com@gmail.com"
         let subject = "Banklet Feedback"
-        let body = "Hi fangjunyu,\n\n"
+        
+        // 收集设备和 App 信息
+        let systemVersion = UIDevice.current.systemVersion
+        let deviceModel = Device.current
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+        let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
+        
+        let body = """
+                ---
+                systemVersion: \(deviceModel)
+                iOS Version: \(systemVersion)
+                App Version: \(appVersion) (\(buildNumber))
+                ---
+                
+                
+                """
         
         // URL 编码参数
         let urlString = "mailto:\(email)?subject=\(subject)&body=\(body)"
@@ -62,45 +72,45 @@ struct Settings: View {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing:0) {
                             // 第一组：赞助应用
-//                            if appStorage.isShowInAppPurchase {
-                                VStack(spacing: 0) {
-                                    // 内购完成
-                                    if appStorage.isInAppPurchase {
-                                        InAppPurchaseCompletionButton(action: {
-                                            showThanksView.toggle()
-                                        }, content: {
-                                            Image(systemName: "checkmark.seal.fill")
-                                                .padding(.horizontal,5)
-                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                            Text("Thanks for your support")
-                                                .lineLimit(1)
-                                                .minimumScaleFactor(0.8)
-                                            Spacer()
-                                            Image(systemName: "chevron.right")
-                                                .imageScale(.small)
-                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        })
-                                    } else {
-                                        // 未完成内购的场景
-                                        // 赞助应用按钮
-                                        SettingButton(action: {
-                                            showSponsoredApps = true
-                                        }, content: {
-                                            Image(systemName: "checkmark.seal")
-                                                .padding(.horizontal,5)
-                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                            Text("Sponsored Apps")
-                                                .lineLimit(1)
-                                                .minimumScaleFactor(0.8)
-                                            Spacer()
-                                            Image(systemName: "chevron.right")
-                                                .imageScale(.small)
-                                                .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        })
-                                    }
+                            //                            if appStorage.isShowInAppPurchase {
+                            VStack(spacing: 0) {
+                                // 内购完成
+                                if appStorage.isInAppPurchase {
+                                    InAppPurchaseCompletionButton(action: {
+                                        showThanksView.toggle()
+                                    }, content: {
+                                        Image(systemName: "checkmark.seal.fill")
+                                            .padding(.horizontal,5)
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                        Text("Thanks for your support")
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.8)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .imageScale(.small)
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                    })
+                                } else {
+                                    // 未完成内购的场景
+                                    // 赞助应用按钮
+                                    SettingButton(action: {
+                                        showSponsoredApps = true
+                                    }, content: {
+                                        Image(systemName: "checkmark.seal")
+                                            .padding(.horizontal,5)
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                        Text("Sponsored Apps")
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.8)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .imageScale(.small)
+                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
+                                    })
                                 }
-                                .padding(10)
-//                            }
+                            }
+                            .padding(10)
+                            //                            }
                             
                             // 第二组：启用iCloud、通用、辅助功能
                             // 功能不完善、临时隐藏
@@ -135,17 +145,17 @@ struct Settings: View {
                                         }, set: {
                                             appStorage.isModelConfigManager = $0
                                         }))  // iCloud开关
-                                            .onChange(of: appStorage.isModelConfigManager) {  oldValue, newValue in
-                                                if newValue {
-                                                    // isModelConfigManager为 true 时，设置为私有iCloud
-                                                    modelConfigManager.cloudKitMode = .privateDatabase
-                                                } else {
-                                                    print("newValue:\(newValue),oldValue:\(oldValue)")
-                                                    // isModelConfigManager为 false 时，设置为空
-                                                    modelConfigManager.cloudKitMode = .none
-                                                }
+                                        .onChange(of: appStorage.isModelConfigManager) {  oldValue, newValue in
+                                            if newValue {
+                                                // isModelConfigManager为 true 时，设置为私有iCloud
+                                                modelConfigManager.cloudKitMode = .privateDatabase
+                                            } else {
+                                                print("newValue:\(newValue),oldValue:\(oldValue)")
+                                                // isModelConfigManager为 false 时，设置为空
+                                                modelConfigManager.cloudKitMode = .none
                                             }
-                                            .frame(height:0)
+                                        }
+                                        .frame(height:0)
                                     })
                                     // 分割线
                                     Divider().padding(.leading,50)
@@ -272,10 +282,10 @@ struct Settings: View {
                                         .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
-//                                if appStorage.isShowAboutUs { }
+                                //                                if appStorage.isShowAboutUs { }
                                 // 分割线
                                 Divider().padding(.leading,50)
-//                                if appStorage.isShowThanks && appStorage.isShowAboutUs {    }
+                                //                                if appStorage.isShowThanks && appStorage.isShowAboutUs {    }
                                 // 鸣谢
                                 SettingButton(action: {
                                     showThanks.toggle()
@@ -291,7 +301,7 @@ struct Settings: View {
                                         .imageScale(.small)
                                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                                 })
-//                                if appStorage.isShowThanks {}
+                                //                                if appStorage.isShowThanks {}
                                 // 分割线
                                 Divider().padding(.leading,50)
                                 // 开源
@@ -321,11 +331,11 @@ struct Settings: View {
                             }
                             .foregroundColor(Color(hex: "D6D6D7"))
                             .font(.footnote)
-//                            .onTapGesture(count: 2) {
-//                                if appStorage.isInAppPurchase {
-//                                    appStorage.isShowInAppPurchase.toggle()
-//                                }
-//                            }
+                            //                            .onTapGesture(count: 2) {
+                            //                                if appStorage.isInAppPurchase {
+                            //                                    appStorage.isShowInAppPurchase.toggle()
+                            //                                }
+                            //                            }
                             Spacer()
                             
                         }

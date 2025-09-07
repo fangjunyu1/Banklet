@@ -725,7 +725,7 @@ struct Home: View {
             timerCancellable?.cancel()
             timerCancellable = nil // 确保页面消失时停止计时
         }
-        .onChange(of: scenePhase) { newPhase in
+        .onChange(of: scenePhase) { _,newPhase in
             if newPhase == .active {
                     // App 进入活跃状态
                 print("App 进入活跃状态")

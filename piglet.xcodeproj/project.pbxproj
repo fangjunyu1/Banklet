@@ -102,6 +102,7 @@
 		1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */; };
 		1D7ED6F72DFEE740000EB349 /* money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D7ED6F62DFEE740000EB349 /* money.mp3 */; };
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
+		1D8081302E6D2E8200202985 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D80812F2E6D2E8200202985 /* DeviceKit */; };
 		1D80E7C92C0BC0D300A79B96 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* ColorExtensions.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
 		1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */; };
@@ -461,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
+				1D8081302E6D2E8200202985 /* DeviceKit in Frameworks */,
 				1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
 				1DF329332D6442B8005FBCE5 /* Lottie in Frameworks */,
@@ -815,6 +817,7 @@
 			name = piglet;
 			packageProductDependencies = (
 				1DF329322D6442B8005FBCE5 /* Lottie */,
+				1D80812F2E6D2E8200202985 /* DeviceKit */,
 			);
 			productName = piglet;
 			productReference = 1D585B462D63856700ABABB0 /* piglet.app */;
@@ -892,6 +895,7 @@
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
 				1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1D80812E2E6D2E8200202985 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 1DF555682BF60B1000BF0DE5;
 			projectDirPath = "";
@@ -1274,7 +1278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = BankletWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BankletWidget/BankletWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1304,7 +1308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = BankletWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BankletWidget/BankletWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1574,6 +1578,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1D80812E2E6D2E8200202985 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -1585,6 +1597,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1D80812F2E6D2E8200202985 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D80812E2E6D2E8200202985 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
 		1DF329322D6442B8005FBCE5 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DF329312D6442B8005FBCE5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
