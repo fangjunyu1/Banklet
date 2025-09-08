@@ -137,6 +137,7 @@
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
 		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
+		1DE6144E2E6E81860040FD65 /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
 		1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8D82D66F0BA009F4C50 /* Home.swift */; };
@@ -191,6 +192,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				1DE6144E2E6E81860040FD65 /* BankletWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,8 +313,6 @@
 		1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseSimplifiedView.storyboard; sourceTree = "<group>"; };
 		1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseTraditionalView.storyboard; sourceTree = "<group>"; };
 		1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
-		1D585B462D63856700ABABB0 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = piglet.app; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-iphoneos/piglet.app"; sourceTree = "<absolute>"; };
-		1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = BankletWidgetExtension.appex; path = "/Users/fangjunyu.com/Documents/Apple开发/iOS应用-存钱猪猪/存钱猪猪/build/Debug-iphoneos/BankletWidgetExtension.appex"; sourceTree = "<absolute>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -415,6 +415,8 @@
 		1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfigManager.swift; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1DE6144C2E6E708B0040FD65 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
 		1DE7E8D82D66F0BA009F4C50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -734,6 +736,8 @@
 				1D73596C2D6425F700F7D599 /* BankletWatch Watch App */,
 				1D601B842C0747FC00052528 /* Frameworks */,
 				1DF47D932E6D352A002B56C5 /* BankletWatch Watch App.app */,
+				1DE6144C2E6E708B0040FD65 /* piglet.app */,
+				1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -790,7 +794,7 @@
 			);
 			name = BankletWidgetExtension;
 			productName = BankletWidgetExtension;
-			productReference = 1D585B472D63856700ABABB0 /* BankletWidgetExtension.appex */;
+			productReference = 1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		1DF555702BF60B1000BF0DE5 /* piglet */ = {
@@ -815,7 +819,7 @@
 				1D80812F2E6D2E8200202985 /* DeviceKit */,
 			);
 			productName = piglet;
-			productReference = 1D585B462D63856700ABABB0 /* piglet.app */;
+			productReference = 1DE6144C2E6E708B0040FD65 /* piglet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

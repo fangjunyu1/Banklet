@@ -369,6 +369,7 @@ struct Home: View {
                                                     Group {
                                                         // 显示详细信息的按钮
                                                         Button(action: {
+                                                            print("BUtton查看详情按钮")
                                                             withAnimation(.easeInOut(duration:0.5)) {
                                                                 showDetailView.toggle()
                                                             }
@@ -381,6 +382,9 @@ struct Home: View {
                                                             }
                                                             .frame(width: 40, height: 40)
                                                         })
+                                                        .onTapGesture {
+                                                            print("点击了查看详情按钮")
+                                                        }
                                                         Rectangle()
                                                             .fill(.white)
                                                             .frame(width: 30, height: 1) // 自定义宽度和高度
@@ -455,6 +459,7 @@ struct Home: View {
                                                 .frame(width: 160, height: 160)
                                                 .contentShape(Circle())
                                                 .onTapGesture {
+                                                    print("点击了存钱猪猪动画，并触发震动")
                                                     if appStorage.isVibration {
                                                         // 发生振动
                                                         generator.prepare()
@@ -502,6 +507,7 @@ struct Home: View {
                                     // 存入取出按钮
                                     Button(action: {
                                         // 打开存取视图
+                                        print("点击了存入/取出按钮")
                                         showDepositAndWithdrawView.toggle()
                                     }, label: {
                                         Text("Deposit/withdraw")

@@ -1,3 +1,15 @@
+------- English instructions ---------
+
+<h1>iOS Piggy Bank App</h1>
+Chinese Name: 存钱猪猪, English Name: Banklet. <br/>
+Provides iCloud, wallpaper and icon changes, and the ability to create and manage piggy banks.
+<h1>Open Source Statement</h1>
+This app protects personal privacy. Personal data is stored in iCloud and on your local device and not on any third-party servers. Open source code is also intended to further disclose the app's data and provide users with greater transparency into its security.
+<h1>App Link</h1>
+<a href="https://apps.apple.com/cn/app/%E5%AD%98%E9%92%B1%E7%8C%AA%E7%8C%AA/id6503047096" target=_blank">Money Piggy</a>" is now available on iOS, iPad, and Watch, and all features are free to use. However, user-funded in-app purchases are still available, allowing users to increase the number of wallpapers and animations available for saving money, without affecting the user experience. Furthermore, aside from the in-app purchase button in the settings page, there is no in-app purchase intrusion.
+
+------- 中文说明 ---------
+
  <h1>iOS存钱罐应用</h1>
 中文名称：存钱猪猪，英文名称：Banklet。<br/>
 提供iCloud、更换壁纸、更换图标、创建和管理存钱罐的功能。
