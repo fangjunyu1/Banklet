@@ -83,8 +83,6 @@ struct ContentView: View {
                     Home()
                         .onAppear {
                             showContentView = true
-                            // 更新 1.0.6版本，清理1.0.5及以前版本中涉及“测试详细视图”的AppStorage
-                            UserDefaults.standard.removeObject(forKey: "isTestDetails")
                         }
                 }
             }

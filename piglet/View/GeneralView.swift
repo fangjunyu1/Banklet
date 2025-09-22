@@ -13,16 +13,6 @@ struct GeneralView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
-//    @AppStorage("isBiometricEnabled") var isBiometricEnabled = false
-//    // 测试详细信息
-//    //    @AppStorage("isTestDetails") var isTestDetails = false
-//    @AppStorage("20240523") var isInAppPurchase = false // 内购完成后，设置为true
-//    // 静默模式
-//    @AppStorage("isSilentMode") var isSilentMode = false
-//    // 提醒时间，设置提醒时间为true，否则为false
-//    @AppStorage("isReminderTime") var isReminderTime = false
-//    // 存储用户设定的提醒时间
-//    @AppStorage("reminderTime") private var reminderTime: Double = Date().timeIntervalSince1970 // 以时间戳存储
     
     @State private var Notification = false
     // 授权通知

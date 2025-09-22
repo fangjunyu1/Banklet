@@ -11,7 +11,15 @@ import Combine
 import WidgetKit
 import StoreKit
 import WatchConnectivity
-
+struct DetailViews: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .navigationTitle("详情")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
 struct Home: View {
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.scenePhase) var scenePhase
@@ -104,11 +112,15 @@ struct Home: View {
     
     // 监测静默状态
     private func startSilentModeTimer() {
+        print("进入静默模式检测")
         if appStorage.isSilentMode && !allPiggyBank.isEmpty {
+            print("当前启用静默模式并且存钱罐不为空")
+            print("清除当前的Timer")
             // 确保没有重复启动 Timer
             timerCancellable?.cancel()
             timerCancellable = nil
             
+            print("启用计时器，当前时间和上次静默时间超过10秒钟，进入静默模式")
             timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
                 .autoconnect()
                 .sink { _ in
@@ -149,10 +161,13 @@ struct Home: View {
         if appStorage.isSilentMode {
             print("退出静默模式")
             lastInteractionTime = Date()
+            print("退出时间:\(lastInteractionTime)")
             withAnimation(.easeInOut(duration: 1)) {
                 // 恢复按钮等视图的显示
+                print("恢复静默点击")
                 isSilentModeActive = false
             }
+            print("重新开始计时")
             startSilentModeTimer() // 重新启动计时
         }
     }
@@ -190,28 +205,28 @@ struct Home: View {
     }
     
     /// 模拟刷新数据并在完成后显示提示
-        func refreshPrompt() async {
-            print("进入refreshPrompt方法")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                // 显示提示
-                showMessage = true
-                // 显示提示
-                messageOffset = 0
+    func refreshPrompt() async {
+        print("进入refreshPrompt方法")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // 显示提示
+            showMessage = true
+            // 显示提示
+            messageOffset = 0
+            messageOpacity = 1
+            // 动画：1秒内向上浮动并渐渐消失
+            withAnimation(.easeInOut(duration: 3)) {
+                messageOffset = -30
                 messageOpacity = 1
-                // 动画：1秒内向上浮动并渐渐消失
-                withAnimation(.easeInOut(duration: 3)) {
-                    messageOffset = -30
-                    messageOpacity = 1
-                }
-                withAnimation(.easeInOut(duration: 4)) {
-                    messageOpacity = 0
-                }
             }
-            // 延迟 1 秒后隐藏
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                showMessage = false
+            withAnimation(.easeInOut(duration: 4)) {
+                messageOpacity = 0
             }
         }
+        // 延迟 1 秒后隐藏
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            showMessage = false
+        }
+    }
     
     var body: some View {
         
@@ -219,6 +234,7 @@ struct Home: View {
         let idiom = UIDevice.current.userInterfaceIdiom
         // 判断iPhone横屏状态
         let showDetails = isLandscape && idiom == .phone
+        
         
         NavigationStack {
             GeometryReader { geometry in
@@ -307,36 +323,36 @@ struct Home: View {
                                                     }
                                                 }
                                                 VStack {
-                                                        if piggyBank[0].amount == piggyBank[0].targetAmount {
-                                                            Text("Piggy bank full")
-                                                                .font(.system(size: 30))
-                                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                                        } else {
-                                                            Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
-                                                                .font(.system(size: 33))
-                                                                .scaleEffect(0.9)
-                                                                .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
-                                                        }
-                                                        Group {
-                                                            if  piggyBank[0].amount == piggyBank[0].targetAmount {
-                                                                Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
-                                                            } else {
-                                                                HStack {
-                                                                    Text("\(NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称"))  \(NSLocalizedString("Deposited", comment: "距离"))")
-                                                                }
-                                                                .lineLimit(2)
-                                                                .minimumScaleFactor(0.5)
-                                                            }
-                                                        }
-                                                        .font(.footnote)
-                                                        .fontWeight(.bold)
-                                                        .lineLimit(1)
-                                                        .minimumScaleFactor(0.8)
+                                                    if piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                        Text("Piggy bank full")
+                                                            .font(.system(size: 30))
+                                                            .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
+                                                    } else {
+                                                        Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )" + " " + "\(piggyBank[0].amount.formattedWithTwoDecimalPlaces())")
+                                                            .font(.system(size: 33))
+                                                            .scaleEffect(0.9)
+                                                            .fontWeight(.bold).animation(.easeInOut(duration: 0.5), value: difference)
                                                     }
-                                                    .foregroundColor(.white)
-                                                    .frame(maxWidth: .infinity)
-                                                    .lineLimit(2)
+                                                    Group {
+                                                        if  piggyBank[0].amount == piggyBank[0].targetAmount {
+                                                            Text("Completion date") + Text(piggyBank[0].completionDate,format: .dateTime.year().month().day())
+                                                        } else {
+                                                            HStack {
+                                                                Text("\(NSLocalizedString(piggyBank[0].name, comment: "存钱罐名称"))  \(NSLocalizedString("Deposited", comment: "距离"))")
+                                                            }
+                                                            .lineLimit(2)
+                                                            .minimumScaleFactor(0.5)
+                                                        }
+                                                    }
+                                                    .font(.footnote)
+                                                    .fontWeight(.bold)
+                                                    .lineLimit(1)
                                                     .minimumScaleFactor(0.8)
+                                                }
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity)
+                                                .lineLimit(2)
+                                                .minimumScaleFactor(0.8)
                                             }
                                         }
                                     }
@@ -733,7 +749,7 @@ struct Home: View {
         }
         .onChange(of: scenePhase) { _,newPhase in
             if newPhase == .active {
-                    // App 进入活跃状态
+                // App 进入活跃状态
                 print("App 进入活跃状态")
             }
             if newPhase == .background {
@@ -748,9 +764,12 @@ struct Home: View {
             }
         }
         .onTapGesture {
-            if appStorage.isSilentMode {
-                resetSilentMode()
-            }
+            print("点击了一下屏幕")
+        print("当前是否为静默模式:\(appStorage.isSilentMode)")
+        if appStorage.isSilentMode {
+            print("调用resetSilentMode方法")
+            resetSilentMode()
+        }
         }
         .onChange(of: isDisplaySettings) { _,_ in
             if appStorage.isSilentMode {
@@ -796,6 +815,6 @@ struct Home: View {
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
-        // .environment(\.locale, .init(identifier: "ru"))
+    // .environment(\.locale, .init(identifier: "ru"))
 }
 
