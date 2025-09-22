@@ -84,9 +84,6 @@
 		1D3E14332D4A5D7000747D20 /* Home43.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14272D4A5D7000747D20 /* Home43.json */; };
 		1D3E14342D4A5D7000747D20 /* Home50.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14282D4A5D7000747D20 /* Home50.json */; };
 		1D3E143B2D4A631700747D20 /* Home12.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E143A2D4A631700747D20 /* Home12.json */; };
-		1D4D1F3D2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */; };
-		1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */; };
-		1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* IntExtension.swift */; };
 		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
@@ -310,9 +307,6 @@
 		1D3E14282D4A5D7000747D20 /* Home50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home50.json; sourceTree = "<group>"; };
 		1D3E143A2D4A631700747D20 /* Home12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home12.json; sourceTree = "<group>"; };
 		1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationScaleConfig.swift; sourceTree = "<group>"; };
-		1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseSimplifiedView.storyboard; sourceTree = "<group>"; };
-		1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenChineseTraditionalView.storyboard; sourceTree = "<group>"; };
-		1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -511,9 +505,6 @@
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
 				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
 				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
-				1D4D1F402D48A50F00C4BFCC /* LaunchScreenView.storyboard */,
-				1D4D1F3C2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard */,
-				1D4D1F3E2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard */,
 				1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
 				1D89C54E2D506254000DECFF /* DetailView.swift */,
@@ -933,7 +924,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D4D1F412D48A50F00C4BFCC /* LaunchScreenView.storyboard in Resources */,
 				1D8854612D244FB9009DE7AE /* Fireworks1.json in Resources */,
 				1D3E141A2D4A3F0700747D20 /* Home42.json in Resources */,
 				1D3E13DC2D49DF3D00747D20 /* Home11.json in Resources */,
@@ -943,7 +933,6 @@
 				1D3E13D32D49AD7A00747D20 /* Home7.json in Resources */,
 				1D3E142D2D4A5D7000747D20 /* Home47.json in Resources */,
 				1D3E142A2D4A5D7000747D20 /* Home52.json in Resources */,
-				1D4D1F3F2D48999F00C4BFCC /* LaunchScreenChineseTraditionalView.storyboard in Resources */,
 				1D3E13ED2D4A0C8700747D20 /* Home18.json in Resources */,
 				1D3E140D2D4A35F600747D20 /* Home31.json in Resources */,
 				1D3E14032D4A178400747D20 /* Home29.json in Resources */,
@@ -959,7 +948,6 @@
 				1D3E13F42D4A0C8700747D20 /* Home22.json in Resources */,
 				1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */,
 				1D3E142B2D4A5D7000747D20 /* Home45.json in Resources */,
-				1D4D1F3D2D48998000C4BFCC /* LaunchScreenChineseSimplifiedView.storyboard in Resources */,
 				1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */,
 				1D3E14152D4A35F600747D20 /* Home38.json in Resources */,
 				1D3E13FC2D4A160E00747D20 /* Home26.json in Resources */,
@@ -1472,12 +1460,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1511,12 +1501,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
