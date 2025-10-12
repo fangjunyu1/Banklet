@@ -9,6 +9,7 @@ import WidgetKit
 import SwiftUI
 
 struct BankletWidgetEntryView : View {
+    @Environment(\.colorScheme) var color
     var entry: BankletWidgetEntry
     
     var SavingProgress:Double {
@@ -43,32 +44,31 @@ struct BankletWidgetEntryView : View {
                     .frame(width: 100)
                     .offset(y:25)
                 // 文本区域
-                VStack{
+                VStack(spacing: 0){
                     Spacer().frame(height:20)
                     GeometryReader { geometry in
                         
                         let width = geometry.size.width
                         ZStack {
-                            // 白色背景图
+                            // 背景图
                             Rectangle()
-                                .foregroundColor(Color(hex: "DDDDDD"))
+                                .foregroundColor(color == .light ? Color(hex: "DDDDDD") : .black)
                                 .cornerRadius(10)
-                            // 蓝色进度条
+                            // 进度条
                             HStack {
                                 Rectangle()
-                                    .foregroundColor(.blue.opacity(0.8))
-                                    .frame(width: width * SavingProgress * 0.01 + 10)
-                                    .offset(x: -10)
+                                    .foregroundColor(color == .light ? .blue.opacity(0.8) : .gray)
+                                    .frame(width: width * SavingProgress * 0.01)
                                     .cornerRadius(10)
                                     .blur(radius: 3)
                                 Spacer()
                             }
                             // 显示存钱罐图标
-                            VStack {
+                            VStack(spacing: 0) {
                                 HStack {
                                     Spacer().frame(width:12)
                                     ZStack {
-                                        Circle().foregroundColor(Color(hex: "EEEEEE"))
+                                        Circle().foregroundColor(color == .light ? Color(hex: "EEEEEE") : Color(hex: "2f2f2f"))
                                             .frame(width: 25)
                                             .opacity(0.8)
                                         Image(systemName: entry.piggyBankIcon)
@@ -77,7 +77,7 @@ struct BankletWidgetEntryView : View {
                                     Text(String(format:"%.0f",SavingProgress.formattedWithTwoDecimalPlaces())+"%")
                                         .font(.system(size: 10))
                                         .fontWeight(.bold)
-                                    Spacer().frame(width:10)
+                                    Spacer().frame(width:15)
                                 }
                             }
                         }
@@ -105,7 +105,7 @@ struct BankletWidget: Widget {
                     .resizable()
                     .scaledToFill()
                     .blur(radius: 3)
-                    .opacity(0.3)
+                    .opacity(0.5)
                 BankletWidgetEntryView(entry: entry)
                     .containerBackground(.clear, for: .widget)
             }
