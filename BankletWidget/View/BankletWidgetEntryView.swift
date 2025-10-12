@@ -19,23 +19,32 @@ struct BankletWidgetEntryView : View {
     
     var body: some View {
         GeometryReader { geometry in
+            let fullWidth = geometry.size.width
             // 通过 `geometry` 获取布局信息
             ZStack {
+                // 右下角标题
+                VStack {
+                    Spacer()
+                    HStack {
+                        Text("\(entry.piggyBankName)")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(hex: "888888"))
+                            .offset(x:10)
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: 150, alignment: .leading)
+//                .background(.red)
                 // 图片背景
                 Image("png_\(entry.loopAnimation)") // 显示存钱罐图标
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100)
-                    .offset(y:35)
+                    .offset(y:25)
                 // 文本区域
                 VStack{
-                    Spacer().frame(height:5)
-                    Text("\(entry.piggyBankName)")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(hex: "888888"))
-                    Spacer().frame(height:5)
-                    
+                    Spacer().frame(height:20)
                     GeometryReader { geometry in
                         
                         let width = geometry.size.width

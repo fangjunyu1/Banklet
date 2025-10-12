@@ -16,6 +16,16 @@ struct BankletWidgetBackgroundView : View {
             Image(entry.background)
                 .resizable()
                 .scaledToFill()
+            VStack(spacing: 2) {
+                Text(entry.date, format: .dateTime.day())
+                    .font(.system(size: 36, weight: .bold))
+                    .foregroundColor(Color(hex: "2F2F2F"))
+                Text(entry.date, format: .dateTime.weekday())
+                    .font(.caption)
+                    .foregroundColor(.black.opacity(0.8))
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
