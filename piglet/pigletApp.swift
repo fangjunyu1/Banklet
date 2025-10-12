@@ -19,8 +19,8 @@ struct pigletApp: App {
     init() {
         
         #if DEBUG
-        // 设置视图的步骤为 0，进入欢迎界面
-        appStorage.pageSteps = 0
+        // 设置视图的步骤为 1，进入欢迎界面
+        appStorage.pageSteps = 1
         #endif
         if appStorage.isModelConfigManager {
             // isModelConfigManager为 true 时，设置为私有iCloud

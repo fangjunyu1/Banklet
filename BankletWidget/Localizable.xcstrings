@@ -1,13 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ %%" : {
+    "%@" : {
 
     },
     "Bottom %@" : {
-
-    },
-    "Configuration" : {
 
     },
     "Hello %@" : {
@@ -910,13 +907,7 @@
     "T %@" : {
 
     },
-    "This is an example widget." : {
-
-    },
     "Trailing" : {
-
-    },
-    "User Name" : {
 
     }
   },
