@@ -24,6 +24,7 @@
 		1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */; };
 		1D21686D2D9049E600DC4376 /* LifeSavingsJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */; };
 		1D2386762D2E4B3F0033FBBA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* DoubleExtension.swift */; };
+		1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F922B2E9CA5240077A235 /* GifView.swift */; };
 		1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D601B852C0747FD00052528 /* StoreKit.framework */; };
 		1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33A19A2C077E2C0073320F /* IAPManager.swift */; };
 		1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3663E72D72FD34003C1052 /* AppStorageManager.swift */; };
@@ -120,7 +121,7 @@
 		1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */; };
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
-		1DBF907D2D65AF4D00A50064 /* BankletWidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BankletWidgetBackgroundView.swift */; };
+		1DBF907D2D65AF4D00A50064 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9D27F2D3365BB003A9DEA /* AccessRecordsView.swift */; };
@@ -156,7 +157,7 @@
 		1DFCED3B2E9BB4AC00F19FD3 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED3A2E9BB4AB00F19FD3 /* ExtensionColor.swift */; };
 		1DFCED3D2E9BB4CF00F19FD3 /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED3C2E9BB4CC00F19FD3 /* ExtensionDouble.swift */; };
 		1DFCED402E9BB4EC00F19FD3 /* RightTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED3F2E9BB4EC00F19FD3 /* RightTriangle.swift */; };
-		1DFCED422E9BB51D00F19FD3 /* BankletWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED412E9BB51900F19FD3 /* BankletWidgetEntryView.swift */; };
+		1DFCED422E9BB51D00F19FD3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED412E9BB51900F19FD3 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 		1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSavingsJarView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		1D2F922B2E9CA5240077A235 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		1D33A19A2C077E2C0073320F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		1D3663E72D72FD34003C1052 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
 		1D3E13C62D49AD5400747D20 /* Home0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home0.json; sourceTree = "<group>"; };
@@ -423,7 +425,7 @@
 		1DE7E8DD2D66F102009F4C50 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		1DEB96C92D5D9D6C00A68C21 /* BankletWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetBundle.swift; sourceTree = "<group>"; };
 		1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		1DEB96CD2D5D9D6C00A68C21 /* BankletWidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetBackgroundView.swift; sourceTree = "<group>"; };
+		1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DEB96D32D5D9D6D00A68C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEC987F2C10315500BEECFF /* appVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appVersion.swift; sourceTree = "<group>"; };
@@ -438,7 +440,7 @@
 		1DFCED3A2E9BB4AB00F19FD3 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		1DFCED3C2E9BB4CC00F19FD3 /* ExtensionDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
 		1DFCED3F2E9BB4EC00F19FD3 /* RightTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTriangle.swift; sourceTree = "<group>"; };
-		1DFCED412E9BB51900F19FD3 /* BankletWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetEntryView.swift; sourceTree = "<group>"; };
+		1DFCED412E9BB51900F19FD3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -565,8 +567,9 @@
 		1D6857BD2E98FC7D007D2894 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1DFCED412E9BB51900F19FD3 /* BankletWidgetEntryView.swift */,
-				1DEB96CD2D5D9D6C00A68C21 /* BankletWidgetBackgroundView.swift */,
+				1D2F922B2E9CA5240077A235 /* GifView.swift */,
+				1DFCED412E9BB51900F19FD3 /* ProgressView.swift */,
+				1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1066,10 +1069,11 @@
 				1DFCED362E9BB45500F19FD3 /* BankletWidgetEntry.swift in Sources */,
 				1D7D5A542E96A77800D776F4 /* FooObject.mm in Sources */,
 				1DFCED402E9BB4EC00F19FD3 /* RightTriangle.swift in Sources */,
-				1DFCED422E9BB51D00F19FD3 /* BankletWidgetEntryView.swift in Sources */,
+				1DFCED422E9BB51D00F19FD3 /* ProgressView.swift in Sources */,
 				1DEB96CA2D5D9D6C00A68C21 /* BankletWidgetBundle.swift in Sources */,
-				1DBF907D2D65AF4D00A50064 /* BankletWidgetBackgroundView.swift in Sources */,
+				1DBF907D2D65AF4D00A50064 /* BackgroundView.swift in Sources */,
 				1DFCED382E9BB48A00F19FD3 /* BankletWidgetProvider.swift in Sources */,
+				1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */,
 				1DFCED3B2E9BB4AC00F19FD3 /* ExtensionColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

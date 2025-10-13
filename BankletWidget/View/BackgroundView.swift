@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 
-struct BankletWidgetBackgroundView : View {
+struct BackgroundView : View {
     var entry: BankletWidgetEntry
     
     var body: some View {
@@ -30,12 +30,12 @@ struct BankletWidgetBackgroundView : View {
     }
 }
 
-struct BankletWidgetBackground: Widget {
+struct BackgroundWidget: Widget {
     let kind: String = "BankletWidgetBackground"
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: BankletWidgetProvider()) { entry in
-            BankletWidgetBackgroundView(entry: entry)
+            BackgroundView(entry: entry)
                 .containerBackground(Color.clear,for: .widget)
         }
         .supportedFamilies([.systemSmall]) // 支持小尺寸
@@ -47,7 +47,7 @@ struct BankletWidgetBackground: Widget {
 
 
 #Preview(as: .systemSmall) {
-    BankletWidgetBackground()
+    BackgroundWidget()
 } timeline: {
     BankletWidgetEntry(date: Date(), piggyBankIcon: "apple.logo", piggyBankName: "存钱罐", piggyBankAmount: 50, piggyBankTargetAmount: 100, loopAnimation: "Home49",background: "bg0")
 }

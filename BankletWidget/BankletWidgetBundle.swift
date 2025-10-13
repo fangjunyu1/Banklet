@@ -11,8 +11,8 @@ import SwiftUI
 @main
 struct BankletWidgetBundle: WidgetBundle {
     var body: some Widget {
-        BankletWidget()
-        BankletWidgetBackground()
+        ProgressWidget()
+        BackgroundWidget()
 //        BankletWidgetLiveActivity()
     }
 }
