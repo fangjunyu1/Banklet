@@ -23,20 +23,20 @@ struct BankletWidgetEntryView : View {
             let fullWidth = geometry.size.width
             // 通过 `geometry` 获取布局信息
             ZStack {
-                // 右下角标题
-                VStack {
-                    Spacer()
-                    HStack {
-                        Text("\(entry.piggyBankName)")
-                            .font(.footnote)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color(hex: "888888"))
-                            .offset(x:10)
-                        Spacer()
-                    }
-                }
-                .frame(maxWidth: 150, alignment: .leading)
-//                .background(.red)
+                // 存钱罐名称-标题
+//                VStack {
+//                    Spacer()
+//                    HStack {
+//                        Text("\(entry.piggyBankName)")
+//                            .font(.footnote)
+//                            .fontWeight(.bold)
+//                            .foregroundColor(Color(hex: "888888"))
+//                            .offset(x:10)
+//                        Spacer()
+//                    }
+//                }
+//                .frame(maxWidth: 150, alignment: .leading)
+                //                .background(.red)
                 // 图片背景
                 Image("png_\(entry.loopAnimation)") // 显示存钱罐图标
                     .resizable()
@@ -46,45 +46,59 @@ struct BankletWidgetEntryView : View {
                 // 文本区域
                 VStack(spacing: 0){
                     Spacer().frame(height:20)
-                    GeometryReader { geometry in
-                        
-                        let width = geometry.size.width
-                        ZStack {
-                            // 背景图
-                            Rectangle()
-                                .foregroundColor(color == .light ? Color(hex: "DDDDDD") : .black)
-                                .cornerRadius(10)
+                    
+                    ZStack {
+                        // 背景图
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundColor(color == .light ? Color(hex: "DDDDDD") : .black)
+                            .cornerRadius(10)
+                        GeometryReader { geometry in
+                            
+                            let width = geometry.size.width
+                            
                             // 进度条
                             HStack {
-                                Rectangle()
+                                RoundedRectangle(cornerRadius: 8)
                                     .foregroundColor(color == .light ? .blue.opacity(0.8) : .gray)
                                     .frame(width: width * SavingProgress * 0.01)
                                     .cornerRadius(10)
-                                    .blur(radius: 3)
                                 Spacer()
                             }
-                            // 显示存钱罐图标
-                            VStack(spacing: 0) {
-                                HStack {
-                                    Spacer().frame(width:12)
-                                    ZStack {
-                                        Circle().foregroundColor(color == .light ? Color(hex: "EEEEEE") : Color(hex: "2f2f2f"))
-                                            .frame(width: 25)
-                                            .opacity(0.8)
-                                        Image(systemName: entry.piggyBankIcon)
+                            VStack {
+                                Spacer()
+                                
+                                // 显示存钱罐图标
+                                VStack(spacing: 0) {
+                                    HStack {
+                                        Spacer().frame(width:12)
+                                        ZStack {
+                                            Circle().foregroundColor(color == .light ? Color(hex: "EEEEEE") : Color(hex: "2f2f2f"))
+                                                .frame(width: 20)
+                                                .opacity(0.8)
+                                            Image(systemName: entry.piggyBankIcon)
+                                        }
+                                        Spacer()
+                                        Text(String(format:"%.0f",SavingProgress.formattedWithTwoDecimalPlaces())+"%")
+                                            .font(.system(size: 10))
+                                            .fontWeight(.bold)
+                                        Spacer().frame(width:15)
                                     }
-                                    Spacer()
-                                    Text(String(format:"%.0f",SavingProgress.formattedWithTwoDecimalPlaces())+"%")
-                                        .font(.system(size: 10))
-                                        .fontWeight(.bold)
-                                    Spacer().frame(width:15)
                                 }
+                                Spacer()
                             }
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.green)
                     }
                     .frame(width:140,height:40)
                     .cornerRadius(10)
+                    .overlay {
+                        // 白色描边
+                        RoundedRectangle(cornerRadius: 8)
+                            .strokeBorder(.white, lineWidth: 5)
+                    }
                     .clipped()
+                    
                     Spacer()
                 }
             }
@@ -101,11 +115,8 @@ struct BankletWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: BankletWidgetProvider()) { entry in
             ZStack {
-                Image(entry.background)
-                    .resizable()
-                    .scaledToFill()
-                    .blur(radius: 3)
-                    .opacity(0.5)
+                // Color.red
+                
                 BankletWidgetEntryView(entry: entry)
                     .containerBackground(.clear, for: .widget)
             }
