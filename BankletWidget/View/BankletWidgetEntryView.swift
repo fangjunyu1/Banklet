@@ -76,6 +76,7 @@ struct BankletWidgetEntryView : View {
                                                 .frame(width: 20)
                                                 .opacity(0.8)
                                             Image(systemName: entry.piggyBankIcon)
+                                                .imageScale(.small)
                                         }
                                         Spacer()
                                         Text(String(format:"%.0f",SavingProgress.formattedWithTwoDecimalPlaces())+"%")
@@ -88,7 +89,6 @@ struct BankletWidgetEntryView : View {
                             }
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(.green)
                     }
                     .frame(width:140,height:40)
                     .cornerRadius(10)
