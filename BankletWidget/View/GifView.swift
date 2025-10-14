@@ -7,12 +7,37 @@
 
 import WidgetKit
 import SwiftUI
-//import ClockHandRotationKit
+import ClockHandRotationKit
 
-//func getGif(_ name: String) -> UIImage.GifResult? {
-//    guard let path = Bundle.main.path(forResource: name, ofType: "gif"),
-//          let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-//        return nil
-//    }
-//    return UIImage.decodeGIF(data)
-//}
+struct GifView : View {
+    var entry: GifWidgetEntry
+
+    var body: some View {
+        VStack {
+            GifImageView(gifName: "\(entry.loopAnimation)")
+                .onAppear {
+                    print("entry.loopAnimation:\(entry.loopAnimation)")
+                }
+        }
+    }
+}
+
+struct GifAnimateWidget: Widget {
+    let kind: String = "GifWidget"
+
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: GifWidgetProvider()) { entry in
+            GifView(entry: entry)
+                .containerBackground(.clear, for: .widget)
+        }
+        .configurationDisplayName("Animation Widget")
+        .description("Play animation on the desktop in a loop.")
+        .supportedFamilies([.systemSmall])
+    }
+}
+
+#Preview(as: .systemSmall) {
+    GifAnimateWidget()
+} timeline: {
+    GifWidgetEntry(date: Date(), loopAnimation: "Home0")
+}

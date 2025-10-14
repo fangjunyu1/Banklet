@@ -4,8 +4,32 @@
     "%@" : {
 
     },
+    "Animation Widget" : {
+      "comment" : "1.1.0:动画小组件",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "动画小组件"
+          }
+        }
+      }
+    },
     "Bottom %@" : {
 
+    },
+    "Featured Images" : {
+      "comment" : "1.1.0:精选图片",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精选图片"
+          }
+        }
+      }
     },
     "Hello %@" : {
 
@@ -15,6 +39,18 @@
     },
     "Leading" : {
 
+    },
+    "Play animation on the desktop in a loop." : {
+      "comment" : "1.1.0：在桌面循环播放动画。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在桌面循环播放动画。"
+          }
+        }
+      }
     },
     "Progress widget" : {
       "comment" : "进度小组件",
@@ -909,6 +945,18 @@
     },
     "Trailing" : {
 
+    },
+    "Turn your desktop into your own gallery." : {
+      "comment" : "1.1.0:让桌面成为你的画廊。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让桌面成为你的画廊。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

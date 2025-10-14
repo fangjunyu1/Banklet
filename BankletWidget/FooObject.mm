@@ -34,7 +34,7 @@
         for (id widgetDescriptor in widgetDescriptors) {
             NSString *kind = reinterpret_cast<id (*)(id, SEL)>(objc_msgSend)(widgetDescriptor, sel_registerName("kind"));
             
-            if ([kind isEqualToString:@"BankletWidget"]) {
+            if ([kind isEqualToString:@"BankletWidget"] || [kind isEqualToString:@"PlaceholderWidget"] || [kind isEqualToString:@"GifWidget"]) {
                 id mutableWidgetDescriptor = [widgetDescriptor mutableCopy];
                 reinterpret_cast<void (*)(id, SEL, BOOL)>(objc_msgSend)(mutableWidgetDescriptor, sel_registerName("setBackgroundRemovable:"), YES);
                 reinterpret_cast<void (*)(id, SEL, BOOL)>(objc_msgSend)(mutableWidgetDescriptor, sel_registerName("setTransparent:"), YES);

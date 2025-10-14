@@ -114,10 +114,16 @@ class IAPManager:ObservableObject {
             // 遍历当前所有已完成的交易
             do {
                 let transaction = try checkVerified(result) // 验证交易
-                print("transaction:\(transaction)")
+                print("当前已完成的交易:\(transaction)")
                 
-                // 处理交易，例如解锁内容
-                savePurchasedState(for: transaction.productID)
+                if !AppStorageManager.shared.isInAppPurchase {
+                    print("当前不是内购状态，但是内购已完成")
+                    print("当前是否在主线程？\(Thread.isMainThread)") // true or false
+                    // 处理交易，例如解锁内容
+                    savePurchasedState(for: transaction.productID)
+                } else {
+                    print("当前时内购状态，不需要重复设置")
+                }
                 await transaction.finish()
             } catch {
                 print("交易处理失败：\(error)")
@@ -178,6 +184,10 @@ class IAPManager:ObservableObject {
     // 保存购买状态到用户偏好设置或其他存储位置
     func savePurchasedState(for productID: String) {
         UserDefaults.standard.set(true, forKey: productID)
+        print("当前是否在主线程？\(Thread.isMainThread)") // true or false
+        DispatchQueue.main.async {
+            AppStorageManager.shared.isInAppPurchase = true
+        }
         print("保存购买状态: \(productID)")
     }
     // 移除内购状态

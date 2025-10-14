@@ -133,6 +133,7 @@ struct SponsoredAppsView: View {
                             
                         } else {
                             Button(action: {
+                                print("当前内购状态:\(appStorage.isInAppPurchase)")
                                 if appStorage.isVibration {
                                     // 发生振动
                                     generator.prepare()

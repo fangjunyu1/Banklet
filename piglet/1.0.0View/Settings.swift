@@ -22,7 +22,8 @@ struct Settings: View {
     @State private var showThanks = false
     @State private var showGeneral = false
     @State private var showOpenSource = false // 显示开源视图
-
+    @State private var showAlert = false    // 重制UserDefaults
+    
     func sendEmail() {
         let email = "fangjunyu.com@gmail.com"
         let subject = "Banklet Feedback"
@@ -328,6 +329,20 @@ struct Settings: View {
                             Spacer().frame(height: 40)
                             Group {
                                 Text(LocalizedStringKey("Version Number")) +  Text(" : ") +  Text("\(Bundle.main.appVersion).\(Bundle.main.appBuild)")
+#if DEBUG
+                                Spacer().frame(height:20)
+                                Button("重置内购标识") {
+                                    showAlert = true
+                                }
+                                .alert("是否重置内购标识？", isPresented: $showAlert) {
+                                    // 确定
+                                    Button("确定", role: .destructive) {
+                                        AppStorageManager.shared.isInAppPurchase = false
+                                    }
+                                } message: {
+                                    Text("是否重制内购标识？")
+                                }
+#endif
                             }
                             .foregroundColor(Color(hex: "D6D6D7"))
                             .font(.footnote)
