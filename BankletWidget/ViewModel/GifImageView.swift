@@ -35,7 +35,7 @@ struct GifImageView: View {
                     ForEach(1...gif.images.count, id: \.self) { index in
                         Image(uiImage: gif.images[(gif.images.count - 1) - (index - 1)])
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .mask(
                                 ArcView(arcStartAngle: angle * Double(index - 1),
                                         arcEndAngle: angle * Double(index),
