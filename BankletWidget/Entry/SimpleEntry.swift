@@ -11,4 +11,8 @@ import SwiftUI
 // Banklet显示的小组件条目
 struct SimpleEntry: TimelineEntry {
     var date: Date
+
+    init(date: Date = Date()) {
+        self.date = date
+    }
 }

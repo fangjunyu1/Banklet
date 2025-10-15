@@ -57,7 +57,6 @@ extension UIImage {
                 continue
             }
             
-            // CFDictionary的使用：https://www.jianshu.com/p/766acdbbe271
             guard let gifDicValue = CFDictionaryGetValue(proertyDic, Unmanaged.passRetained(kCGImagePropertyGIFDictionary).autorelease().toOpaque()) else {
                 duration += 0.1
                 continue

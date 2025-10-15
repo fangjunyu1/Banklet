@@ -15,9 +15,6 @@ struct GifView : View {
     var body: some View {
         VStack {
             GifImageView(gifName: "\(entry.loopAnimation)")
-                .onAppear {
-                    print("entry.loopAnimation:\(entry.loopAnimation)")
-                }
         }
     }
 }
@@ -39,5 +36,5 @@ struct GifAnimateWidget: Widget {
 #Preview(as: .systemSmall) {
     GifAnimateWidget()
 } timeline: {
-    GifWidgetEntry(date: Date(), loopAnimation: "Home0")
+    GifWidgetEntry(date: Date(), loopAnimation: "Home33")
 }
