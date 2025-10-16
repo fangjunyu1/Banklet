@@ -11,6 +11,7 @@ import Combine
 import WidgetKit
 import StoreKit
 import WatchConnectivity
+
 struct DetailViews: View {
     let text: String
     

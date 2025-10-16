@@ -35,18 +35,18 @@ struct GifImageView: View {
                     ForEach(1...gif.images.count, id: \.self) { index in
                         Image(uiImage: gif.images[(gif.images.count - 1) - (index - 1)])
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .mask(
                                 ArcView(arcStartAngle: angle * Double(index - 1),
                                         arcEndAngle: angle * Double(index),
                                         arcRadius: arcRadius)
                                 .stroke(style: .init(lineWidth: arcWidth, lineCap: .square, lineJoin: .miter))
-                                .clockHandRotationEffect(period: .custom(gif.duration * 2))
+                                .clockHandRotationEffect(period: .custom(gif.duration * 1.2))
                                 .offset(y: arcRadius)
                             )
                     }
                 }
-                .frame(width: width, height: height)
+                .frame(width: width * 1.1, height: height * 1.1)
             }
         } else {
             // 如果没有图片，显示空白占位符
