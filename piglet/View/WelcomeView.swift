@@ -99,13 +99,12 @@ struct WelcomeView: View {
                         .minimumScaleFactor(0.8) 
                     }
                     Spacer().frame(height: height * 0.05)
-                    if !isCompactScreen {
                         VStack {
                             // 应用图像
                             Image(colorScheme == .light ? "icon" : "iconDark")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: isLandscape ? width * 0.2 : width * 0.3)
+                                .frame(width: width * 0.3)
                                 .cornerRadius(10)
                                 .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                             Spacer().frame(height: height * 0.03)
@@ -119,7 +118,6 @@ struct WelcomeView: View {
                             // 列表显示区域
                             Spacer().frame(height: height * 0.05)
                         }
-                    }
                    
                     // 详细列表：储蓄愿望、记录生活、汇总账单
                     VStack(alignment: .leading) {

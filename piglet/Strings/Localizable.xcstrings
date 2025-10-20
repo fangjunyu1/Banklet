@@ -28,26 +28,6 @@
     "%@" : {
 
     },
-    "%@  %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@  %2$@"
-          }
-        }
-      }
-    },
-    "%@  %@  %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@  %2$@  %3$@"
-          }
-        }
-      }
-    },
     "%@ %%" : {
 
     },
@@ -16664,6 +16644,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "港幣"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "comment" : "首页",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首页"
           }
         }
       }
@@ -42500,6 +42492,9 @@
       }
     },
     "Statistics" : {
+
+    },
+    "Stats" : {
       "comment" : "1.0.6:统计",
       "extractionState" : "manual",
       "localizations" : {
@@ -53612,9 +53607,6 @@
 
     },
     "确定" : {
-
-    },
-    "详情" : {
 
     },
     "重置内购标识" : {

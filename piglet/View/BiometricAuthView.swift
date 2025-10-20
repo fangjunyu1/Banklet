@@ -31,15 +31,6 @@ struct BiometricAuthView: View {
                 .foregroundColor(.gray)
                 .font(.footnote)
                 .multilineTextAlignment(.center)
-            if isCompactScreen {
-                SpacedContainer(isCompactScreen: isCompactScreen) {
-                        Image("lock1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: width)
-                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                }
-            } else {
                 Image("lock")
                     .resizable()
                     .scaledToFit()
@@ -48,7 +39,6 @@ struct BiometricAuthView: View {
                 Text("Image by freepik")
                     .font(.footnote)
                     .foregroundColor(.gray)
-            }
             Spacer().frame(height: 20)
             Button(action: {
                 onAuthenticate() // 调用闭包执行认证

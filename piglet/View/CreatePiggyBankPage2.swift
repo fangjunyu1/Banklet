@@ -40,7 +40,7 @@ struct CreatePiggyBankPage2: View {
             let width = geometry.size.width * 0.85
             let height = geometry.size.height
             VStack {
-                Spacer().frame(height: isLandscape ? height * 0.05 : height * 0.02)
+                Spacer().frame(height:  height * 0.02)
                 // 存钱罐进度条
                 HStack {
                     Rectangle()
@@ -58,7 +58,7 @@ struct CreatePiggyBankPage2: View {
                 Spacer().frame(height: height * 0.05)
                 // 创建存钱罐
                 Text("Create a piggy bank")
-                    .font(isCompactScreen ? .title : .largeTitle)
+                    .font(.largeTitle)
                     .fontWeight(.semibold)
                     .lineLimit(1)
                     .minimumScaleFactor(0.8) 
@@ -74,7 +74,7 @@ struct CreatePiggyBankPage2: View {
                 Spacer().frame(height: 5)
                 
                 // 判断容器，紧凑视图为横屏
-                SpacedContainer(isCompactScreen: isCompactScreen) {
+                SpacedContainer(isCompactScreen: true) {
                     Image(systemName: piggyBankData.icon == "" ? "shadow" : piggyBankData.icon)
                         .font(.largeTitle)
                         .imageScale(.large)
@@ -92,7 +92,7 @@ struct CreatePiggyBankPage2: View {
                                     }
                                 }, label: {
                                     Image(systemName: item)
-                                        .font(isCompactScreen ? .subheadline : .title)
+                                        .font( .title)
                                         .foregroundColor(piggyBankData.icon == item ? .blue : .gray)
                                 })
                                 .frame(width: height * 0.08, height: height * 0.08)
@@ -102,7 +102,7 @@ struct CreatePiggyBankPage2: View {
                         }
                         .padding(10)
                     }
-                    .frame(height: isLandscape ? height * 0.2 : height * 0.15)
+                    .frame(height:  height * 0.15)
                     .cornerRadius(5)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
@@ -114,7 +114,7 @@ struct CreatePiggyBankPage2: View {
                     Text("Select the piggy bank icon.")
                         .font(.footnote)
                         .foregroundColor(Color.gray)
-                        .frame(maxWidth: .infinity, alignment: isCompactScreen ? .center : .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                 }
@@ -122,7 +122,7 @@ struct CreatePiggyBankPage2: View {
                 Spacer().frame(height: height * 0.02)
                 
                 // 判断容器，紧凑视图为横屏
-                SpacedContainer(isCompactScreen: isCompactScreen) {
+                SpacedContainer(isCompactScreen: true) {
                     Group {
                         // 设置存钱罐的初始金额
                         HStack {
@@ -141,7 +141,7 @@ struct CreatePiggyBankPage2: View {
                             .padding(.trailing,20)
                             
                         }
-                        .frame(height: isLandscape ? height * 0.12 : height * 0.1)
+                        .frame(height:  height * 0.1)
                         .cornerRadius(5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)
@@ -149,17 +149,15 @@ struct CreatePiggyBankPage2: View {
                         )
                         
                         // 设定存钱罐已经存入的初始金额。
-                        if !isCompactScreen {
-                            Spacer().frame(height: isCompactScreen ? height * 0.1 : height * 0.01)
-                            VStack(alignment: .leading) {
-                                Text("Set the initial amount of money already deposited in the piggy bank.")
-                                    .font(.footnote)
-                                    .foregroundColor(Color.gray)
-                                    .frame(maxWidth: .infinity, alignment: .leading) // 让 VStack 占满宽度，并左对齐
-                                    .lineLimit(2)
-                                    .minimumScaleFactor(0.8)
-                                    .frame(minHeight: 15)
-                            }
+                        Spacer().frame(height: height * 0.01)
+                        VStack(alignment: .leading) {
+                            Text("Set the initial amount of money already deposited in the piggy bank.")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                                .frame(maxWidth: .infinity, alignment: .leading) // 让 VStack 占满宽度，并左对齐
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
+                                .frame(minHeight: 15)
                         }
                     }
                     Spacer().frame(width: 10, height: 10)
@@ -243,24 +241,22 @@ struct CreatePiggyBankPage2: View {
                                 .padding(.horizontal,10)
                             
                         }
-                        .frame(height: isLandscape ? height * 0.12 : height * 0.1)
+                        .frame(height: height * 0.1)
                         .cornerRadius(5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color.gray, lineWidth: 1) // 设置边框颜色和宽度
                         )
                         // 设定存钱罐的截止日期。
-                        if !isCompactScreen {
-                            Spacer().frame(height: isCompactScreen ? height * 0.1 : height * 0.01)
-                            VStack(alignment: .leading) {
-                                Text("Set the expiration date of the piggy bank.")
-                                    .font(.footnote)
-                                    .foregroundColor(Color.gray)
-                                    .lineLimit(2)
-                                    .minimumScaleFactor(0.8)
-                                    .frame(maxWidth: .infinity, alignment: .leading) // 让 VStack 占满宽度，并左对齐
-                                    .frame(minHeight: 15)
-                            }
+                        Spacer().frame(height: height * 0.01)
+                        VStack(alignment: .leading) {
+                            Text("Set the expiration date of the piggy bank.")
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
+                                .frame(maxWidth: .infinity, alignment: .leading) // 让 VStack 占满宽度，并左对齐
+                                .frame(minHeight: 15)
                         }
                         
                     }
@@ -300,8 +296,8 @@ struct CreatePiggyBankPage2: View {
 #Preview {
     CreatePiggyBankPage2(pageSteps: .constant(4),piggyBankData: .constant(PiggyBankData()))
         .modelContainer(PiggyBank.preview)
-                .environment(AppStorageManager.shared)
-                .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-                .environmentObject(IAPManager.shared)
-                .environmentObject(SoundManager.shared)
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }

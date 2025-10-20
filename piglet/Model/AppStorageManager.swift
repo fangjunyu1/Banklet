@@ -29,6 +29,7 @@ class AppStorageManager {
     
     // 视图步骤
     var pageSteps: Int = 1 {
+        // 1:欢迎界面，2:隐私视图，其他:主视图
         didSet {
             if pageSteps != oldValue && !isLoading {
                 let store = NSUbiquitousKeyValueStore.default

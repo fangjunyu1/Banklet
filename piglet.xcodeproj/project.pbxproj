@@ -143,6 +143,7 @@
 		1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D601B852C0747FD00052528 /* StoreKit.framework */; };
 		1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33A19A2C077E2C0073320F /* IAPManager.swift */; };
 		1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3663E72D72FD34003C1052 /* AppStorageManager.swift */; };
+		1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39BB352EA3EB7C007C3017 /* AppColor.swift */; };
 		1D3E13C72D49AD5400747D20 /* Home0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C62D49AD5400747D20 /* Home0.json */; };
 		1D3E13CF2D49AD7A00747D20 /* Home3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C82D49AD7A00747D20 /* Home3.json */; };
 		1D3E13D02D49AD7A00747D20 /* Home1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C92D49AD7A00747D20 /* Home1.json */; };
@@ -240,6 +241,7 @@
 		1DB13A372D22F35F0006B0A2 /* PrivacyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A362D22F35F0006B0A2 /* PrivacyPage.swift */; };
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
+		1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */; };
 		1DBF907D2D65AF4D00A50064 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
@@ -433,6 +435,7 @@
 		1D2F92442E9D518E0077A235 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		1D33A19A2C077E2C0073320F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		1D3663E72D72FD34003C1052 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		1D39BB352EA3EB7C007C3017 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		1D3E13C62D49AD5400747D20 /* Home0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home0.json; sourceTree = "<group>"; };
 		1D3E13C82D49AD7A00747D20 /* Home3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home3.json; sourceTree = "<group>"; };
 		1D3E13C92D49AD7A00747D20 /* Home1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home1.json; sourceTree = "<group>"; };
@@ -610,6 +613,7 @@
 		1DBEC52A2EA0933A006152D3 /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DBEC52B2EA0933E006152D3 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DBEC52C2EA0933E006152D3 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFunction.swift; sourceTree = "<group>"; };
 		1DC2617A2C10936300A5E311 /* pigletRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pigletRelease.entitlements; sourceTree = "<group>"; };
 		1DC2617B2C1093EA00A5E311 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
@@ -746,6 +750,14 @@
 				1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1D39BB342EA3EB67007C3017 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D39BB352EA3EB7C007C3017 /* AppColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1D601B842C0747FC00052528 /* Frameworks */ = {
@@ -963,6 +975,7 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */,
 				1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */,
 				1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
@@ -1046,6 +1059,7 @@
 		1DF555732BF60B1000BF0DE5 /* piglet */ = {
 			isa = PBXGroup;
 			children = (
+				1D39BB342EA3EB67007C3017 /* Extensions */,
 				1DC2617A2C10936300A5E311 /* pigletRelease.entitlements */,
 				1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */,
 				1DF555742BF60B1000BF0DE5 /* pigletApp.swift */,
@@ -1520,6 +1534,7 @@
 				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
 				1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */,
 				1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */,
+				1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
@@ -1544,6 +1559,7 @@
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
+				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
 				1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,

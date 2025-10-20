@@ -45,7 +45,7 @@ struct CreatePiggyBankPage1: View {
                 let width = geometry.size.width * 0.85
                 let height = geometry.size.height
                 VStack {
-                    Spacer().frame(height: isLandscape ? height * 0.05 : height * 0.02)
+                    Spacer().frame(height: height * 0.02)
                     // 存钱罐进度条
                     HStack {
                         Rectangle()
@@ -63,7 +63,7 @@ struct CreatePiggyBankPage1: View {
                     Spacer().frame(height: height * 0.05)
                     // 创建存钱罐
                     Text("Create a piggy bank")
-                        .font(isCompactScreen ? .title : .largeTitle)
+                        .font(.largeTitle)
                         .fontWeight(.semibold)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
@@ -93,7 +93,7 @@ struct CreatePiggyBankPage1: View {
                                 .minimumScaleFactor(0.8)
                             
                         }
-                        .frame(width: width,height: isCompactScreen ? 40 : 60)
+                        .frame(width: width,height: 60)
                         .cornerRadius(5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)
@@ -133,7 +133,7 @@ struct CreatePiggyBankPage1: View {
                             .minimumScaleFactor(0.8)
                             
                         }
-                        .frame(width: width,height: isCompactScreen ? 40 : 60)
+                        .frame(width: width,height: 60)
                         .cornerRadius(5)
                         .overlay(
                             RoundedRectangle(cornerRadius: 5)
@@ -148,19 +148,17 @@ struct CreatePiggyBankPage1: View {
                                 .minimumScaleFactor(0.8)
                         }
                     }
-                    if !isCompactScreen {
                         Spacer()
                         Image("CreateAPiggyBank1")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: isLandscape ? width * 0.3 : width * 0.75)
+                            .frame(width: width * 0.75)
                             .animation(.easeInOut(duration: 1), value: isFocus)
                             .opacity(colorScheme == .light ? 1 : 0.8)
                             .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                         Text("Image by freepik")
                             .font(.footnote)
                             .foregroundColor(.gray)
-                    }
                     Spacer()
                     // 进入主界面
                     Button(action: {

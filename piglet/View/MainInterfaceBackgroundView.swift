@@ -42,7 +42,7 @@ struct MainInterfaceBackgroundView: View {
                         .ignoresSafeArea()
                     // 设置列表
                     ScrollView(showsIndicators: false) {
-                            LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
+                            LazyVGrid(columns: columns,spacing: 20) {
                                 Button(action: {
                                     if appStorage.isVibration {
                                         // 发生振动
@@ -56,7 +56,7 @@ struct MainInterfaceBackgroundView: View {
                                         .overlay {
                                             Rectangle()
                                                 .cornerRadius(10)
-                                                .frame(width: isPadScreen ? 270 : 136,height: isPadScreen ? 170 : 96)
+                                                .frame(width:  136,height: 96)
                                                 .foregroundColor(colorScheme == .light ? .white : Color(hex:"2C2B2D") )
                                                 .overlay {
                                                     if appStorage.BackgroundImage.isEmpty {
@@ -74,7 +74,7 @@ struct MainInterfaceBackgroundView: View {
                                                 }
                                         }
                                         .foregroundColor(.white)
-                                        .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
+                                        .frame(width: 140,height: 100)
                                         .cornerRadius(10)
                                         .clipped()
                                 })
@@ -90,14 +90,14 @@ struct MainInterfaceBackgroundView: View {
                                         Rectangle()
                                             .strokeBorder(appStorage.BackgroundImage == "bg\(index)" ? .blue : .clear, lineWidth: 5)
                                             .foregroundColor(.white)
-                                            .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
+                                            .frame(width: 140,height:  100)
                                             .cornerRadius(10)
                                             .clipped()
                                             .overlay {
                                                 Image("bg\(index)")
                                                     .resizable()
                                                     .scaledToFill()
-                                                    .frame(width: isPadScreen ? 270 : 136, height: isPadScreen ? 170 : 96)
+                                                    .frame(width:  136, height: 96)
                                                     .cornerRadius(10)
                                                     .clipped()
                                                     .overlay {

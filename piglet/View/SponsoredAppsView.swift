@@ -25,8 +25,6 @@ struct SponsoredAppsView: View {
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.85
                 VStack {
-                    // 上半部分内容
-                    if !isCompactScreen {
                         Group {
                             Image("supportWe")
                                 .resizable()
@@ -38,9 +36,7 @@ struct SponsoredAppsView: View {
                                 .font(.footnote)
                                 .foregroundColor(.gray)
                         }
-                        Spacer().frame(height: 16)
-                    }
-                    // 储蓄每一个梦想文字部分
+                        Spacer().frame(height: 16)                   // 储蓄每一个梦想文字部分
                     Group {
                         // 储蓄每一个梦想
                         Text("Save every dream")
@@ -100,14 +96,12 @@ struct SponsoredAppsView: View {
                     .shadow(radius: 5)
                     
                     // Apple汇率
-                    if !isCompactScreen {
-                        Group {
-                            Text("  ") +  Text("Apple will adjust the specific amount of the sponsorship amount based on the exchange rate/tax of the national currency.")
-                                .font(.footnote)
-                                .foregroundStyle(.gray)
-                        }
-                        .padding(.vertical, 8)
+                    Group {
+                        Text("  ") +  Text("Apple will adjust the specific amount of the sponsorship amount based on the exchange rate/tax of the national currency.")
+                            .font(.footnote)
+                            .foregroundStyle(.gray)
                     }
+                    .padding(.vertical, 8)
                     
                     // 内购按钮
                     Group {

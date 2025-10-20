@@ -48,7 +48,7 @@ struct AppIconView: View {
                     Color(hex: colorScheme == .light ?  "f0f0f0" : "0E0E0E")
                         .ignoresSafeArea()
                     ScrollView(showsIndicators: false ) {
-                        LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
+                        LazyVGrid(columns:  columns,spacing: 20) {
                             ForEach(appIcon, id: \.self) { index in
                                 Button(action: {
                                     if appStorage.isVibration {
@@ -62,14 +62,14 @@ struct AppIconView: View {
                                     Rectangle()
                                         .strokeBorder(selectedIconName == "AppIcon \(index)" ? .blue : .clear, lineWidth: 5)
                                         .foregroundColor(.white)
-                                        .frame(width: isPadScreen ? 150 : 100,height: isPadScreen ? 150 : 100)
+                                        .frame(width: 100,height:  100)
                                         .cornerRadius(10)
                                         .clipped()
                                         .overlay {
                                             Image(uiImage: UIImage(named: "AppIcon \(index)") ?? UIImage())
                                                 .resizable()
                                                 .scaledToFill()
-                                                .frame(width: isPadScreen ? 140 : 95,height: isPadScreen ? 140 : 95)
+                                                .frame(width:  95,height: 95)
                                                 .cornerRadius(10)
                                                 .clipped()
                                                 .overlay {

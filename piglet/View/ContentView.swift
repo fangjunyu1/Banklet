@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @AppStorage("pageSteps") var pageSteps: Int = 1
-//    @AppStorage("isBiometricEnabled") var isBiometricEnabled = false   // true表示启用密码保护
     @State private var isAuthenticated = false  // false表示未通过人脸识别
     @State private var piggyBankData: PiggyBankData? =  PiggyBankData()
     @State private var showContentView = false
@@ -36,55 +34,30 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if appStorage.pageSteps == 1 {
+        switch appStorage.pageSteps {
+        case 1:
             WelcomeView(pageSteps: Binding(
                 get: { appStorage.pageSteps },
                 set: { appStorage.pageSteps = $0 }
             ))
-        } else if appStorage.pageSteps == 2 {
+            
+        case 2:
             PrivacyPage(pageSteps: Binding(
                 get: { appStorage.pageSteps },
                 set: { appStorage.pageSteps = $0 }
             ))
-        } else if appStorage.pageSteps == 3 {
-            CreatePiggyBankPage1(pageSteps: Binding(
-                get: { appStorage.pageSteps },
-                set: { appStorage.pageSteps = $0 }
-            ), piggyBankData: Binding(
-                get: { piggyBankData ?? PiggyBankData() },
-                set: { piggyBankData = $0 })
-            )
-        } else if appStorage.pageSteps == 4 {
-            CreatePiggyBankPage2(pageSteps: Binding(
-                get: { appStorage.pageSteps },
-                set: { appStorage.pageSteps = $0 }
-            ),piggyBankData: Binding(
-                get: { piggyBankData ?? PiggyBankData() },
-                set: { piggyBankData = $0 })
-            )
-        } else if appStorage.pageSteps == 5 {
-            CompletedView(pageSteps: Binding(
-                get: { appStorage.pageSteps },
-                set: { appStorage.pageSteps = $0 }
-            ),piggyBankData: Binding(
-                get: { piggyBankData ?? PiggyBankData() },
-                set: { piggyBankData = $0 })
-            )
-        }
-        else {
+            
+        // 如果 appStorage.pageSteps 不是1、2 等情况，则进入主界面
+        default:
             if appStorage.isBiometricEnabled && !isAuthenticated && !showContentView {
-                // 当设置人脸识别，并且人脸识别为false时显示验证视图
-                BiometricAuthView(isAuthenticated: $isAuthenticated,isErrorMessage:$isErrorMessage) {
+                BiometricAuthView(isAuthenticated: $isAuthenticated, isErrorMessage: $isErrorMessage) {
                     authenticate()
                 }
             } else {
-                ZStack {
-                    Color.black.edgesIgnoringSafeArea(.all)
-                    Home()
-                        .onAppear {
-                            showContentView = true
-                        }
-                }
+                Home()
+                    .onAppear {
+                        showContentView = true
+                    }
             }
         }
     }

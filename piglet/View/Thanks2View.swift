@@ -18,10 +18,7 @@ struct Thanks2View: View {
                 let width = geometry.size.width * 0.85
                 
                 ScrollView(showsIndicators: false ) {
-                    
-                        if !isCompactScreen {
-                            Spacer().frame(height: 30)
-                        }
+                    Spacer().frame(height: 30)
                     VStack {
                         // 感谢freepik和lottieFiles
                         Text("Thanks to freepik and lottieFiles")
@@ -37,17 +34,17 @@ struct Thanks2View: View {
                             .foregroundStyle(.gray)
                             .multilineTextAlignment(.center)
                         Spacer().frame(height: 10)
-                        SpacedContainer(isCompactScreen: isCompactScreen) {
+                        SpacedContainer(isCompactScreen: true) {
                             Image("freepik")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: isCompactScreen ? nil : width * 0.8)
+                                .frame(width: width * 0.8)
                                 .opacity(colorScheme == .light ? 1 : 0.8)
-                            Spacer().frame(width: isLandscape ? 10 : nil, height : isLandscape ? nil : 10)
+                            Spacer().frame(width: nil, height : 10)
                             Image("lottiefiles")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: isCompactScreen ? nil : width * 0.8)
+                                .frame(width: width * 0.8)
                                 .opacity(colorScheme == .light ? 1 : 0.8)
                         }
                         

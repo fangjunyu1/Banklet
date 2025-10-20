@@ -56,11 +56,10 @@ struct CompletedView: View {
             let height = geometry.size.height
             VStack {
                 Spacer().frame(height: height * 0.05)
-                if !isCompactScreen {
                     Image("finish")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: isLandscape ? width * 0.5 : width)
+                        .frame(width: width)
                         .opacity(colorScheme == .light ? 1 : 0.8)
                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                     Text("Image by freepik")
@@ -68,9 +67,6 @@ struct CompletedView: View {
                         .foregroundColor(.gray)
                         .offset(y: -16)
                     Spacer().frame(height: height * 0.05)
-                } else {
-                    Spacer()
-                }
                 // 恭喜你，创建完成首歌存钱罐
                 Group {
                     Text("Congratulations, you have created it")

@@ -16,10 +16,7 @@ struct OpenSourceView: View {
             GeometryReader { geometry in
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.85
-                VStack {
-                    if !isCompactScreen {
-                        Spacer().frame(height: 30)
-                    }
+                VStack {Spacer().frame(height: 30)
                     // 让代码展现在阳光下
                     Text("Let the code show in the sun")
                         .font(.title2)
@@ -41,18 +38,16 @@ struct OpenSourceView: View {
                             .opacity(colorScheme == .light ? 1 : 0.8)
                         Spacer().frame(height: 20)
                     
-                    if !isCompactScreen {
-                        Text("Project address")
-                            .font(.footnote)
-                            .foregroundStyle(.gray)
-                            .multilineTextAlignment(.center)
-                        Text("https://github.com/fangjunyu1/Banklet")
-                            .tint(.gray)
-                            .font(.footnote)
-                            .foregroundStyle(.gray)
-                            .multilineTextAlignment(.center)
-                        Spacer().frame(height: 30)
-                    }
+                    Text("Project address")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                        .multilineTextAlignment(.center)
+                    Text("https://github.com/fangjunyu1/Banklet")
+                        .tint(.gray)
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                        .multilineTextAlignment(.center)
+                    Spacer().frame(height: 30)
                     Link(destination: URL(string: "https://github.com/fangjunyu1/Banklet")!) {
                         VStack {
                             Text("GitHub")

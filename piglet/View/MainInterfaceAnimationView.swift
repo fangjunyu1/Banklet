@@ -71,7 +71,7 @@ struct MainInterfaceAnimationView: View {
                         }
                         .padding(10)
                         ScrollView(showsIndicators: false) {
-                            LazyVGrid(columns: isPadScreen ? columnsIpad : columns,spacing: 20) {
+                            LazyVGrid(columns: columns,spacing: 20) {
                                 ForEach(backgroundRange, id: \.self) { index in
                                     Button(action: {
                                         if appStorage.isVibration {
@@ -86,7 +86,7 @@ struct MainInterfaceAnimationView: View {
                                             .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
                                             .scaleEffect(x: layoutDirection == .leftToRight ? AnimationScaleConfig.scale(for: "Home\(index)") : -AnimationScaleConfig.scale(for: "Home\(index)"),
                                                 y:  AnimationScaleConfig.scale(for: "Home\(index)"))// 水平翻转视图
-                                            .frame(width: isPadScreen ? 280 : 140,height: isPadScreen ? 180 : 100)
+                                            .frame(width: 140,height: 100)
                                             .background(colorScheme == .light ? .white : Color(hex: "2C2B2D"))
                                             .cornerRadius(10)
                                             .overlay {

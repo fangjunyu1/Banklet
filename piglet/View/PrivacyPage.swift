@@ -28,7 +28,7 @@ struct PrivacyPage: View {
                     Image("privacypage")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: isLandscape ? width * 0.3 : width * 0.8)
+                        .frame(width:  width * 0.8)
                         .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
                     Text("Image by freepik")
                         .font(.footnote)
@@ -36,7 +36,7 @@ struct PrivacyPage: View {
                     Spacer().frame(height: height * 0.05)
                     // 隐私在您掌控之中
                     Text("Privacy is in your control")
-                        .font(isLandscape ? .title2 : .largeTitle)
+                        .font(.largeTitle)
                         .fontWeight(.semibold)
                         .lineLimit(2)
                         .minimumScaleFactor(0.6)
