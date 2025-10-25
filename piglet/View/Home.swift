@@ -610,16 +610,15 @@ struct Home: View {
                     }
                 }
                 .padding(.vertical,12)
-                .padding(.horizontal,26)
+                .padding(.horizontal,30)
                 .background(
                     HStack {
                         Rectangle()
                             .fill(.white)
-                        // .fill(.regularMaterial)
-                            .frame(width: 66,height: 50)
+                            .frame(width: 80,height: 60)
                             .cornerRadius(40)
-                            .offset(x:6)
-                            .offset(x: CGFloat(70) * CGFloat(selectedTab))
+                            .offset(x:5)
+                            .offset(x: CGFloat(75) * CGFloat(selectedTab))
                         
                         Spacer()
                     }
@@ -643,12 +642,13 @@ struct SingleTabView: View {
     @Binding var selectedTab: Int
     @State private var clicked = false
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: 0) {
             Image(systemName: HomeImage)
+                .imageScale(.large)
                 .symbolEffect(.bounce, value: clicked)
                 .foregroundColor(selectedTab == index ? .blue : .gray)
             Text(LocalizedStringKey(HomeText))
-                .font(.system(size: 8))
+                .textScale(.secondary)
                 .foregroundColor(selectedTab == index ? .blue : .gray)
         }
         .foregroundColor(AppColor.gray)
