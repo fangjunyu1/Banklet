@@ -28,7 +28,8 @@ struct WelcomeView: View {
         // Welcome 动画
         LottieView(filename:  LottieName, isPlaying: true, playCount: 0, isReversed: false)
             .id(LottieName)
-            .frame(maxHeight: 300)
+            .scaleEffect(step == .welcome ? 1 : 1.5)
+            .frame(maxHeight: 180)
             .frame(maxWidth: 500)
         Spacer().frame(height: 50)
         // 文字内容
@@ -39,6 +40,8 @@ struct WelcomeView: View {
                 .fontWeight(.bold)
             // 副标题
             Text(step == .welcome ? "Welcome to a brand new way of saving, where every penny shines in the future." : "Savings data is stored locally and synced with iCloud, ensuring security and transparency, and giving you complete control.")
+                .font(.footnote)
+                .padding(.horizontal,30)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
             // 圆形进度条
