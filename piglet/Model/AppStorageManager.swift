@@ -27,13 +27,12 @@ class AppStorageManager {
     
     private var isLoading = false
     
-    // 视图步骤
-    var pageSteps: Int = 1 {
-        // 1:欢迎界面，2:隐私视图，其他:主视图
+    // 是否完成欢迎视图
+    var hasCompletedWelcome: Bool = false {
         didSet {
-            if pageSteps != oldValue && !isLoading {
+            if hasCompletedWelcome != oldValue && !isLoading {
                 let store = NSUbiquitousKeyValueStore.default
-                store.set(pageSteps, forKey: "pageSteps")
+                store.set(hasCompletedWelcome, forKey: "hasCompletedWelcome")
                 store.synchronize() // 强制触发数据同步
             }
         }
@@ -259,7 +258,7 @@ class AppStorageManager {
             isLoading = false
             print("从 UserDefault 中加载完成数据")
         }  // 无论中间发生什么都能复原标志
-        pageSteps = UserDefaults.standard.integer(forKey: "pageSteps")  // 视图步骤
+        hasCompletedWelcome = UserDefaults.standard.bool(forKey: "hasCompletedWelcome")  // 视图步骤
         isBiometricEnabled = UserDefaults.standard.bool(forKey: "isBiometricEnabled")  // 密码保护
         BackgroundImage = UserDefaults.standard.string(forKey: "BackgroundImage") ?? ""  // 背景照片
         LoopAnimation = UserDefaults.standard.string(forKey: "LoopAnimation") ?? "Home0"  // Lottie动画
@@ -296,7 +295,6 @@ class AppStorageManager {
             // 设置默认值为 true
             UserDefaults.standard.set(true, forKey: "isVibration")
         }
-        
     }
     
     /// 从 iCloud 读取数据
@@ -305,14 +303,6 @@ class AppStorageManager {
         print("从iCloud读取数据")
 
         // 读取整数值
-        if let storedPageSteps = store.object(forKey: "pageSteps") as? Int {
-            pageSteps = storedPageSteps
-            print("pageSteps:\(pageSteps)")
-        } else {
-            store.set(pageSteps, forKey: "pageSteps")
-            print("无法从iCloud加载 pageSteps 内容，将当前变量同步到iCloud")
-        }
-        
         if let storedRatingClicks = store.object(forKey: "RatingClicks") as? Int {
             RatingClicks = storedRatingClicks
             print("RatingClicks:\(RatingClicks)")
@@ -331,6 +321,14 @@ class AppStorageManager {
         }
         
         // 读取布尔值
+        if store.object(forKey: "hasCompletedWelcome") != nil {
+            hasCompletedWelcome = store.bool(forKey: "hasCompletedWelcome")
+            print("hasCompletedWelcome:\(hasCompletedWelcome)")
+        } else {
+            store.set(hasCompletedWelcome, forKey: "hasCompletedWelcome")
+            print("无法从iCloud加载 hasCompletedWelcome 内容，将当前变量同步到iCloud")
+        }
+        
         if store.object(forKey: "isBiometricEnabled") != nil {
             isBiometricEnabled = store.bool(forKey: "isBiometricEnabled")
             print("isBiometricEnabled:\(isBiometricEnabled)")

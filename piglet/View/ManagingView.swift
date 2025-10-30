@@ -43,7 +43,7 @@ struct ManagingView: View {
                             HStack {
                                 Button(action: {
                                     // 跳转到创建视图
-                                    appStorage.pageSteps = 3
+                                    // 删除此处代码
                                 }, label: {
                                     VStack {
                                         Image(systemName: "plus")

@@ -38435,6 +38435,18 @@
         }
       }
     },
+    "Savings data is stored locally and synced with iCloud, ensuring security and transparency, and giving you complete control." : {
+      "comment" : "1.10 储蓄数据本地与 iCloud 同步保存，安全透明，由您自由掌控。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "储蓄数据本地与 iCloud 同步保存，安全透明，由您自由掌控。"
+          }
+        }
+      }
+    },
     "Savings reminder" : {
       "comment" : "1.0.6:存钱提醒",
       "extractionState" : "manual",
@@ -42269,6 +42281,18 @@
         }
       }
     },
+    "Start" : {
+      "comment" : "1.1.0 开始",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始"
+          }
+        }
+      }
+    },
     "Start calculation" : {
       "comment" : "1.0.10:开始计算",
       "extractionState" : "manual",
@@ -42487,6 +42511,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始計算"
+          }
+        }
+      }
+    },
+    "Start your savings journey" : {
+      "comment" : "1.1.0 开始你的储蓄之旅",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始你的储蓄之旅"
           }
         }
       }
@@ -51124,6 +51160,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我們會繼續努力開發更好的作品，供更多人免費使用。"
+          }
+        }
+      }
+    },
+    "Welcome to a brand new way of saving, where every penny shines in the future." : {
+      "comment" : "1.1.0 欢迎来到全新的储蓄方式，让每一笔小钱都在未来闪光。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎来到全新的储蓄方式，让每一笔小钱都在未来闪光。"
           }
         }
       }

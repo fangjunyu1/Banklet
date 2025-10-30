@@ -9,4 +9,6 @@ import SwiftUI
 
 enum AppColor {
     static let gray = Color(hex: "888888")
+    static let appColor = Color(hex: "216DFA")
+    static let appGrayColor = Color(hex: "2F2F2F")
 }

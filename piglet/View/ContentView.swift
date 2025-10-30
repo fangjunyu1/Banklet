@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAuthenticated = false  // false表示未通过人脸识别
     @State private var piggyBankData: PiggyBankData? =  PiggyBankData()
-    @State private var showContentView = false
+    @State private var showHomeView = false
     @State private var isErrorMessage = false
     @State private var ZoomMainView = false
     @Environment(AppStorageManager.self) var appStorage
@@ -34,29 +34,21 @@ struct ContentView: View {
     }
     
     var body: some View {
-        switch appStorage.pageSteps {
-        case 1:
-            WelcomeView(pageSteps: Binding(
-                get: { appStorage.pageSteps },
-                set: { appStorage.pageSteps = $0 }
-            ))
-            
-        case 2:
-            PrivacyPage(pageSteps: Binding(
-                get: { appStorage.pageSteps },
-                set: { appStorage.pageSteps = $0 }
-            ))
-            
-        // 如果 appStorage.pageSteps 不是1、2 等情况，则进入主界面
-        default:
-            if appStorage.isBiometricEnabled && !isAuthenticated && !showContentView {
+        if !appStorage.hasCompletedWelcome {
+            WelcomeView()
+        } else {
+            if appStorage.isBiometricEnabled && !isAuthenticated && !showHomeView {
                 BiometricAuthView(isAuthenticated: $isAuthenticated, isErrorMessage: $isErrorMessage) {
                     authenticate()
                 }
             } else {
                 Home()
                     .onAppear {
-                        showContentView = true
+                        // 该变量标识进入Home视图
+                        // 进入Home视图后，显示true
+                        // 防止在设置人脸识别功能后
+                        // 立即弹出人脸识别的功能
+                        showHomeView = true
                     }
             }
         }
