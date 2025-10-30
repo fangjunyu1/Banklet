@@ -10,10 +10,9 @@ import SwiftData
 import WidgetKit
 
 func saveWidgetData(_ piggyBank:[PiggyBank]) {
-    var appStorage:AppStorageManager {
-        return AppStorageManager.shared
-    }
+    let appStorage:AppStorageManager = AppStorageManager.shared
     let userDefaults = UserDefaults(suiteName: "group.com.fangjunyu.piglet")
+    
     // 存储存钱罐数据
     if !piggyBank.isEmpty {
         userDefaults?.set(piggyBank[0].icon, forKey: "piggyBankIcon")

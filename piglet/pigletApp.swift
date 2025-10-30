@@ -15,6 +15,7 @@ struct pigletApp: App {
     @State private var appStorage = AppStorageManager.shared
     @State private var modelConfigManager = ModelConfigManager()
     @StateObject private var sound = SoundManager.shared
+    @Environment(\.scenePhase) var scenePhase
     
     init() {
         if appStorage.isModelConfigManager {
