@@ -17,11 +17,15 @@ struct Home: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var sound: SoundManager  // 通过 Sound 注入
-    @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true },
-           sort: [SortDescriptor(\.creationDate, order: .reverse)]) var piggyBank: [PiggyBank]
+//    @Query(filter: #Predicate<PiggyBank> { $0.isPrimary == true },
+//           sort: [SortDescriptor(\.creationDate, order: .reverse)]) var mainPiggyBank: [PiggyBank]
     @Query var allPiggyBank: [PiggyBank]
     @State private var selectedTab = 0  // 当前选择的Tab
-    
+    @State private var searchText = ""  // 搜索框
+    // 获取第一个存钱罐
+    var primaryBanks: PiggyBank? {
+        allPiggyBank.filter { $0.isPrimary }.first
+    }
     // 振动
     let generator = UISelectionFeedbackGenerator()
     ///
@@ -33,14 +37,22 @@ struct Home: View {
     ///
     // 存钱罐差额
     var difference: Double {
-        let differenceNum = piggyBank[0].targetAmount - piggyBank[0].amount
-        return differenceNum > 0 ? differenceNum : 0.0
+        if let primaryBanks = primaryBanks {
+            let differenceNum = primaryBanks.targetAmount - primaryBanks.amount
+            return differenceNum > 0 ? differenceNum : 0.0
+        } else {
+            return 0.0
+        }
     }
     
     // 存钱罐进度
     var progress: Double {
-        let progressNum =  piggyBank[0].amount / piggyBank[0].targetAmount
-        return progressNum
+        if let primaryBanks = primaryBanks {
+            let progressNum =  primaryBanks.amount / primaryBanks.targetAmount
+            return progressNum
+        } else {
+            return 0.0
+        }
     }
     
     var body: some View {
@@ -50,18 +62,29 @@ struct Home: View {
                 HomeBackground()
                 // 主页视图
                 VStack {
-                    Text("123")
+                    // 如果有存钱罐
+                    if !allPiggyBank.isEmpty {
+                        
+                    } else {
+                        EmptyHomeView()
+                    }
                 }
                 .navigationTitle("Home")
                 .navigationBarTitleDisplayMode(.large)
+                .searchable(text: $searchText, prompt: "Search for piggy banks")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
                             // 新增按钮
                             print("点击了新增按钮")
                         }, label: {
-                            Image(systemName: "plus")
+                            Image("plus")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20,height: 20)
+                                .padding(5)
                                 .background(.white)
+                                .cornerRadius(5)
                         })
                     }
                 }
@@ -73,12 +96,12 @@ struct Home: View {
                     }
                     if newPhase == .background {
                         // 在应用进入后台时保存数据
-                        saveWidgetData(piggyBank)
+                        saveWidgetData(primaryBanks)
                         print("应用移入后台，调用Widget保存数据")
                     }
                     if newPhase == .inactive {
                         // 应用即将终止时保存数据（iOS 15+）
-                        saveWidgetData(piggyBank)
+                        saveWidgetData(primaryBanks)
                         print("非活跃状态，调用Widget保存数据")
                     }
                 }

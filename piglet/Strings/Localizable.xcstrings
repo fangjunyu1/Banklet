@@ -23399,6 +23399,18 @@
         }
       }
     },
+    "No piggy bank?" : {
+      "comment" : "没有存钱罐？",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有存钱罐？"
+          }
+        }
+      }
+    },
     "NOK" : {
       "comment" : "1.0.6:挪威克朗",
       "extractionState" : "manual",
@@ -38014,6 +38026,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "儲蓄願望"
+          }
+        }
+      }
+    },
+    "Search for piggy banks" : {
+      "comment" : "搜索存钱罐",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索存钱罐"
           }
         }
       }

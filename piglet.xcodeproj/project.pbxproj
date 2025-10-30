@@ -264,6 +264,8 @@
 		1DE45C6C2EB35A320079F76E /* HomeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6B2EB35A310079F76E /* HomeBackground.swift */; };
 		1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */; };
 		1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */; };
+		1DE45C722EB3A8180079F76E /* EmptyBanklet.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DE45C712EB3A8180079F76E /* EmptyBanklet.json */; };
+		1DE45C742EB3A9FE0079F76E /* EmptyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C732EB3A9E70079F76E /* EmptyHomeView.swift */; };
 		1DE6144E2E6E81860040FD65 /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
@@ -648,6 +650,8 @@
 		1DE45C6B2EB35A310079F76E /* HomeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackground.swift; sourceTree = "<group>"; };
 		1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundImageView.swift; sourceTree = "<group>"; };
 		1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateUniqueRandomProverb.swift; sourceTree = "<group>"; };
+		1DE45C712EB3A8180079F76E /* EmptyBanklet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyBanklet.json; sourceTree = "<group>"; };
+		1DE45C732EB3A9E70079F76E /* EmptyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHomeView.swift; sourceTree = "<group>"; };
 		1DE6144C2E6E708B0040FD65 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -800,6 +804,7 @@
 		1D2F9A5D2BFCA53C005C8676 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DE45C732EB3A9E70079F76E /* EmptyHomeView.swift */,
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
@@ -928,6 +933,7 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1DE45C712EB3A8180079F76E /* EmptyBanklet.json */,
 				1D1561AF2EB33C1E0041C0DD /* security.json */,
 				1D1561AD2EB33C110041C0DD /* lock.json */,
 				1D1400B52D3112BD00DC51C0 /* AboutUs.json */,
@@ -1481,6 +1487,7 @@
 				1D3E142C2D4A5D7000747D20 /* Home49.json in Resources */,
 				1D3E13F32D4A0C8700747D20 /* Home17.json in Resources */,
 				1D3E13D12D49AD7A00747D20 /* Home6.json in Resources */,
+				1DE45C722EB3A8180079F76E /* EmptyBanklet.json in Resources */,
 				1D3E14122D4A35F600747D20 /* Home32.json in Resources */,
 				1D3E13D02D49AD7A00747D20 /* Home1.json in Resources */,
 				1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */,
@@ -1590,6 +1597,7 @@
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
 				1DE45C6C2EB35A320079F76E /* HomeBackground.swift in Sources */,
+				1DE45C742EB3A9FE0079F76E /* EmptyHomeView.swift in Sources */,
 				1DE45C6A2EB355BB0079F76E /* HomeTabView.swift in Sources */,
 				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
 				1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */,
