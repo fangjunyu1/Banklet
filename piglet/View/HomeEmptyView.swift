@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyHomeView: View {
+struct HomeEmptyView: View {
     var body: some View {
         VStack {
             Spacer()

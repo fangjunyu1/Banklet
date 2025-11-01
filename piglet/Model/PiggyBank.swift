@@ -20,7 +20,24 @@ class PiggyBank {
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool = false // 标记主要存钱罐
     var completionDate: Date = Date()    // 完成日期
-    
+    @Transient
+    var progress: Double {  // 完成进度
+        guard targetAmount > 0 else { return 0 }
+        return amount / targetAmount
+    }
+    @Transient
+    var difference: Double {    // 差额
+        let differenceNum = targetAmount - amount
+        return differenceNum > 0 ? differenceNum : 0.0
+    }
+    @Transient
+    var amountText: String {    // 当前金额的String文本
+        currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
+    }
+    @Transient
+    var targetAmountText: String {  // 目标金额的String文本
+        currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
+    }
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade)
     var records: [SavingsRecord]?

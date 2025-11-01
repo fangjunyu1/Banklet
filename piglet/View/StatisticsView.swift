@@ -288,6 +288,6 @@ struct StatisticsView: View {
 #Preview {
     StatisticsView()
         .modelContainer(PiggyBank.preview)
-        .environment(\.locale, .init(identifier: "de"))
+        // .environment(\.locale, .init(identifier: "de"))
         .environment(AppStorageManager.shared)
 }

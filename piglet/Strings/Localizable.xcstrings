@@ -22,6 +22,9 @@
     " %lld " : {
 
     },
+    "/" : {
+
+    },
     "%" : {
 
     },
@@ -48,9 +51,6 @@
 
     },
     "0.0" : {
-
-    },
-    "123" : {
 
     },
     "A piggy bank is not just a container for coins, it’s a symbol of dreams and discipline." : {
@@ -17881,6 +17881,18 @@
         }
       }
     },
+    "Info" : {
+      "comment" : "信息",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "信息"
+          }
+        }
+      }
+    },
     "Initial amount" : {
       "comment" : "初始金额",
       "extractionState" : "manual",
@@ -22033,6 +22045,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "墨西哥比索"
+          }
+        }
+      }
+    },
+    "My piggy bank" : {
+      "comment" : "我的存钱罐",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的存钱罐"
           }
         }
       }
@@ -40540,6 +40564,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新加坡元"
+          }
+        }
+      }
+    },
+    "Show more" : {
+      "comment" : "显示更多",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示更多"
           }
         }
       }

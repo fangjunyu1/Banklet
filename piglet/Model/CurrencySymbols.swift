@@ -13,6 +13,11 @@ struct Currency: Hashable {
     var currencySymbol: String
 }
 
+// 当前货币
+var currencySymbol:String {
+    currencySymbolList.first{ $0.currencyAbbreviation == AppStorageManager.shared.CurrencySymbol}?.currencySymbol ?? "$"
+}
+
 // 货币符号列表
 let currencySymbolList: [Currency] = [
     // 阿联酋-迪拉姆
