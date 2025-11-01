@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomePrimaryBankView: View {
     var primaryBank: PiggyBank
-    var progress: Double
+    var progress: Double {
+        primaryBank.progress
+    }
     let buttonHeight = 50.0
     
     var body: some View {

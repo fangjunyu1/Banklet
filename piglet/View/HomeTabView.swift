@@ -9,22 +9,14 @@ import SwiftUI
 
 struct HomeTabView: View {
     @Environment(\.colorScheme) var colorScheme
-    @Binding var selectedTab: Int
-    // Tab元组
-    let tabs = [
-        ("house.fill", "Home"),
-        ("flag.fill", "Activity"),
-        ("chart.pie.fill", "Stats"),
-        ("gearshape.fill", "Settings")
-    ]
+    @Binding var selectedTab: HomeTab
     
     var body: some View {
         VStack {
             Spacer()
             HStack(spacing: 50) {
-                ForEach(tabs.indices, id: \.self) { index in
-                    let (image, tab) = tabs[index]
-                    SingleTabView(HomeImage: image, HomeText: tab,index: index, selectedTab: $selectedTab)
+                ForEach(HomeTab.allCases, id: \.self) { index in
+                    SingleTabView(tab: index, selectedTab: $selectedTab)
                 }
             }
             .padding(.vertical,12)
@@ -36,7 +28,7 @@ struct HomeTabView: View {
                         .frame(width: 80,height: 60)
                         .cornerRadius(40)
                         .offset(x:5)
-                        .offset(x: CGFloat(75) * CGFloat(selectedTab))
+                        .offset(x: CGFloat(75) * CGFloat(selectedTab.rawValue))
                     Spacer()
                 }
             )

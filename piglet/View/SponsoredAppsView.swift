@@ -233,7 +233,7 @@ struct SponsoredAppsView: View {
             .overlay {
                 if iapManager.loadPurchased == true {
                     ZStack {
-                        Color.black.opacity(0.3).edgesIgnoringSafeArea(.all)
+                        Color.black.opacity(0.3).ignoresSafeArea()
                         VStack {
                             // 加载条
                             ProgressView("loading...")

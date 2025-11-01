@@ -265,13 +265,18 @@
 		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
 		1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C672EB355A00079F76E /* SingleTabView.swift */; };
 		1DE45C6A2EB355BB0079F76E /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C692EB355BA0079F76E /* HomeTabView.swift */; };
-		1DE45C6C2EB35A320079F76E /* HomeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6B2EB35A310079F76E /* HomeBackground.swift */; };
 		1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */; };
 		1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */; };
 		1DE45C722EB3A8180079F76E /* EmptyBanklet.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DE45C712EB3A8180079F76E /* EmptyBanklet.json */; };
 		1DE45C742EB3A9FE0079F76E /* HomeEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE45C732EB3A9E70079F76E /* HomeEmptyView.swift */; };
 		1DE6144E2E6E81860040FD65 /* BankletWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1DE688052D21629500DB1AFA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE688042D21629500DB1AFA /* Localizable.xcstrings */; };
+		1DE736012EB64D2A00573C1A /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736002EB64D2400573C1A /* HomeMainView.swift */; };
+		1DE736032EB64D3000573C1A /* HomeActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736022EB64D2C00573C1A /* HomeActivityView.swift */; };
+		1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736042EB64D4000573C1A /* HomeStatsView.swift */; };
+		1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */; };
+		1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736082EB64ED700573C1A /* HomeTab.swift */; };
+		1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7360A2EB654B500573C1A /* ActivityTab.swift */; };
 		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
 		1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8D82D66F0BA009F4C50 /* Home.swift */; };
 		1DE7E8DB2D66F0E9009F4C50 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */; };
@@ -655,7 +660,6 @@
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE45C672EB355A00079F76E /* SingleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTabView.swift; sourceTree = "<group>"; };
 		1DE45C692EB355BA0079F76E /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
-		1DE45C6B2EB35A310079F76E /* HomeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackground.swift; sourceTree = "<group>"; };
 		1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundImageView.swift; sourceTree = "<group>"; };
 		1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateUniqueRandomProverb.swift; sourceTree = "<group>"; };
 		1DE45C712EB3A8180079F76E /* EmptyBanklet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyBanklet.json; sourceTree = "<group>"; };
@@ -663,6 +667,12 @@
 		1DE6144C2E6E708B0040FD65 /* piglet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = piglet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE6144D2E6E708B0040FD65 /* BankletWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BankletWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE688042D21629500DB1AFA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1DE736002EB64D2400573C1A /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
+		1DE736022EB64D2C00573C1A /* HomeActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityView.swift; sourceTree = "<group>"; };
+		1DE736042EB64D4000573C1A /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsView.swift; sourceTree = "<group>"; };
+		1DE736082EB64ED700573C1A /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		1DE7360A2EB654B500573C1A /* ActivityTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTab.swift; sourceTree = "<group>"; };
 		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
 		1DE7E8D82D66F0BA009F4C50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
@@ -816,9 +826,15 @@
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
 				1D845F4D2D23F3C000EDE480 /* Home.swift */,
+				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
+				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
 				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
 				1DE45C732EB3A9E70079F76E /* HomeEmptyView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
+				1DE736002EB64D2400573C1A /* HomeMainView.swift */,
+				1DE736022EB64D2C00573C1A /* HomeActivityView.swift */,
+				1DE736042EB64D4000573C1A /* HomeStatsView.swift */,
+				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
 				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
 				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
@@ -842,6 +858,7 @@
 				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
 				1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */,
+				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1024,6 +1041,8 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DE736082EB64ED700573C1A /* HomeTab.swift */,
+				1DE7360A2EB654B500573C1A /* ActivityTab.swift */,
 				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
 				1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */,
 				1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */,
@@ -1050,13 +1069,9 @@
 			children = (
 				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
 				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
-				1DE45C6B2EB35A310079F76E /* HomeBackground.swift */,
-				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
-				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
 				1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */,
 				1D80E7CD2C0BC72400A79B96 /* LottieView.swift */,
 				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
-				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
 				1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */,
 				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
 				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
@@ -1605,23 +1620,26 @@
 				1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */,
 				1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */,
 				1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */,
+				1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
-				1DE45C6C2EB35A320079F76E /* HomeBackground.swift in Sources */,
 				1DE45C742EB3A9FE0079F76E /* HomeEmptyView.swift in Sources */,
+				1DE736032EB64D3000573C1A /* HomeActivityView.swift in Sources */,
 				1DE45C6A2EB355BB0079F76E /* HomeTabView.swift in Sources */,
 				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
 				1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
+				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
 				1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */,
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
+				1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */,
 				1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */,
 				1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */,
@@ -1644,10 +1662,12 @@
 				1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */,
 				1DC9D2802D3365BB003A9DEA /* AccessRecordsView.swift in Sources */,
 				1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */,
+				1DE736012EB64D2A00573C1A /* HomeMainView.swift in Sources */,
 				1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */,
 				1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */,
 				1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */,
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
+				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
 				1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
