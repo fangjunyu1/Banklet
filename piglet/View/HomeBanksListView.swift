@@ -66,7 +66,7 @@ struct HomeBanksListView: View {
                             }
                             Spacer()
                             // 我的存钱罐进度
-                            Text("\(item.progress.formatted(.percent.precision(.fractionLength(0))))")
+                            Text(item.progressText)
                                 .font(.subheadline)
                                 .fontWeight(.medium)
                                 .foregroundColor(.black)

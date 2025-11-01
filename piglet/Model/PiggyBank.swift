@@ -23,6 +23,7 @@ class PiggyBank {
     @Transient
     var progress: Double {  // 完成进度
         guard targetAmount > 0 else { return 0 }
+        print("name:\(name),amount:\(amount),targetAmount:\(targetAmount),progress:\(amount / targetAmount)")
         return amount / targetAmount
     }
     @Transient
@@ -37,6 +38,11 @@ class PiggyBank {
     @Transient
     var targetAmountText: String {  // 目标金额的String文本
         currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
+    }
+    @Transient
+    var progressText: String {  // 当前进度的String文本
+        let truncated = floor(progress * 1000) / 1000
+        return truncated.formatted(.percent.precision(.fractionLength(0...1)))
     }
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade)

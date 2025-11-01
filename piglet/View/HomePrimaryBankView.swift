@@ -43,7 +43,7 @@ struct HomePrimaryBankView: View {
                 Spacer()
                 // 右上角的百分比进度
                 VStack {
-                    Text("\(progress.formatted(.percent.precision(.fractionLength(0))))")
+                    Text(primaryBank.progressText)
                         .font(.headline)
                         .fontWeight(.bold)
                     Spacer()
