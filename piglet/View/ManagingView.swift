@@ -24,7 +24,6 @@ struct ManagingView: View {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
-    var listColor: [Color] = [.blue, .green, .red , .purple, .cyan, .gray, .orange, .pink]
     
     var body: some View {
         NavigationStack {
@@ -85,11 +84,11 @@ struct ManagingView: View {
                                                 }
                                             }, label: {
                                                 Circle().frame(width: 50)
-                                                    .foregroundColor(piggyBank[index].isPrimary ? .white : listColor[index % 8])
+                                                    .foregroundColor(piggyBank[index].isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count])
                                                     .opacity(0.1)
                                                     .overlay {
                                                         Image(systemName: piggyBank[index].icon)
-                                                            .foregroundColor(piggyBank[index].isPrimary ? .white: listColor[index % 8])
+                                                            .foregroundColor(piggyBank[index].isPrimary ? .white: AppColor.bankList[index % AppColor.bankList.count])
                                                     }
                                             })
                                             Spacer()
@@ -134,7 +133,7 @@ struct ManagingView: View {
                                                     HStack {
                                                         Rectangle().frame(width: 110 * (piggyBank[index].amount / piggyBank[index].targetAmount), height: 5)
                                                             .cornerRadius(10)
-                                                            .foregroundColor(piggyBank[index].isPrimary ? .white : listColor[index % 8])
+                                                            .foregroundColor(piggyBank[index].isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count])
                                                         Spacer()
                                                     }
                                                 }
@@ -143,7 +142,7 @@ struct ManagingView: View {
                                     }
                                     .padding(10)
                                     .frame(width: 140, height: 200)
-                                    .background(piggyBank[index].isPrimary ? listColor[index % 8] : colorScheme == .light ? .white : Color(hex:"2C2B2D"))
+                                    .background(piggyBank[index].isPrimary ? AppColor.bankList[index % AppColor.bankList.count]: colorScheme == .light ? .white : Color(hex:"2C2B2D"))
                                     .opacity(colorScheme == .light ? 1 : 0.8)
                                     .cornerRadius(10)
                                     .shadow(radius: 0.5)

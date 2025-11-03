@@ -30,7 +30,7 @@ struct HomePrimaryBankView: View {
                 Spacer().frame(width: 10)
                 VStack(alignment: .leading,spacing: 10) {
                     // 存钱罐名称
-                    Text(primaryBank.name)
+                    Text(LocalizedStringKey(primaryBank.name))
                         .fontWeight(.semibold)
                     // 如果设置了截止日期，则显示截止日期
                     if primaryBank.isExpirationDateEnabled {
@@ -74,9 +74,9 @@ struct HomePrimaryBankView: View {
                     .progressViewStyle(CustomProgressViewStyle())
                     .cornerRadius(10)
             }
-            // 3、进度占比
+            // 3、进度占比-方格
             HStack {
-                GridProgressView(rows: 5, columns: 7)
+                GridProgressView(rows: 5, columns: 7,progress: progress,filledColor: .blue)
             }
             Spacer().frame(height: 5)
             // 4、信息、存入、取出、删除按钮

@@ -207,6 +207,7 @@
 		1D3E14332D4A5D7000747D20 /* Home43.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14272D4A5D7000747D20 /* Home43.json */; };
 		1D3E14342D4A5D7000747D20 /* Home50.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E14282D4A5D7000747D20 /* Home50.json */; };
 		1D3E143B2D4A631700747D20 /* Home12.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E143A2D4A631700747D20 /* Home12.json */; };
+		1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F72082EB703E7000DF62A /* StatisticsTab.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
 		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
@@ -520,6 +521,7 @@
 		1D3E14282D4A5D7000747D20 /* Home50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home50.json; sourceTree = "<group>"; };
 		1D3E143A2D4A631700747D20 /* Home12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home12.json; sourceTree = "<group>"; };
 		1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationScaleConfig.swift; sourceTree = "<group>"; };
+		1D3F72082EB703E7000DF62A /* StatisticsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTab.swift; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -1043,6 +1045,7 @@
 			children = (
 				1DE736082EB64ED700573C1A /* HomeTab.swift */,
 				1DE7360A2EB654B500573C1A /* ActivityTab.swift */,
+				1D3F72082EB703E7000DF62A /* StatisticsTab.swift */,
 				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
 				1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */,
 				1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */,
@@ -1649,6 +1652,7 @@
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,
 				1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */,
+				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,

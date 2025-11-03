@@ -10,8 +10,8 @@ import SwiftUI
 struct GridProgressView: View {
     var rows: Int
     var columns: Int
-    var progress = 0.54
-    var filledColor: Color = .blue
+    var progress: Double
+    var filledColor: Color
     var emptyColor: Color = .gray.opacity(0.2)
     let spacings = 5.0
     var total: Int {

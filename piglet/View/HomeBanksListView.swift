@@ -9,10 +9,6 @@ import SwiftUI
 
 struct HomeBanksListView: View {
     var allPiggyBank: [PiggyBank]
-    // 存钱罐颜色
-    let BanksListColor: [Color] = [
-        .blue, .purple, .cyan, .green, .orange
-    ]
     
     var body: some View {
         VStack {
@@ -39,10 +35,10 @@ struct HomeBanksListView: View {
                             // 我的存钱罐图标
                             Image(systemName:item.icon)
                                 .imageScale(.small)
-                                .foregroundColor(BanksListColor[index % BanksListColor.count])
+                                .foregroundColor(AppColor.bankList[index % AppColor.bankList.count])
                                 .background {
                                     Rectangle()
-                                        .fill(BanksListColor[index % BanksListColor.count])
+                                        .fill(AppColor.bankList[index % AppColor.bankList.count])
                                         .frame(width: 35, height: 35)
                                         .cornerRadius(5)
                                         .opacity(0.1)
@@ -50,7 +46,7 @@ struct HomeBanksListView: View {
                                 .frame(width: 35, height: 35)
                             // 我的存钱罐名称
                             VStack(alignment: .leading,spacing: 3) {
-                                Text(item.name)
+                                Text(LocalizedStringKey(item.name))
                                     .font(.footnote)
                                     .foregroundColor(.black)
                                 HStack(spacing:2) {

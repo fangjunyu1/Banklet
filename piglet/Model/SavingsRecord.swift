@@ -14,7 +14,10 @@ class SavingsRecord {
     var date: Date = Date()  // 存钱的日期
     var saveMoney: Bool = false // 存取为 true，取钱为 false
     var note: String? = nil  // 可选的备注信息
-    
+    @Transient
+    var amountText: String {    // 当前金额的String文本
+        currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
+    }
     // 反向关系：与 PiggyBank 关联
     @Relationship(inverse: \PiggyBank.records)
     var piggyBank: PiggyBank? 
