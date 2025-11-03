@@ -38,40 +38,43 @@ struct AccessTimesView: View {
     }
     
     // 删除存取记录
+    // 目前索引有问题，等主界面完善后，再优化该部分。
     func removeRows(at offsets: IndexSet) {
-        // 找到需要移除的元素
-        let itemsToRemove = offsets.map { filterRecords[$0] }
-        
         // 从原始数组中移除这些元素
-        withAnimation {
-            for item in itemsToRemove {
-                modelContext.delete(item)
-            }
-        }
-        try? modelContext.save()
+        // 这里 indexSet 是 ForEach 中显示的索引
+        //        print("offsets:\(offsets)")
+        //        let itemsToRemove = offsets.map { filterRecords[$0] }
+        //        withAnimation {
+        //            for item in itemsToRemove {
+        //                modelContext.delete(item)
+        //            }
+        //        }
+        //        try? modelContext.save()
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             // 1、全部、存钱罐名称
             ScrollView(.horizontal, showsIndicators: false) {
                 FilterTabs(allBanks: allPiggyBank, selectedBank: $selectedBank)
             }
-            // 存钱罐列表
+            // 2、存钱罐列表
             List {
                 ForEach(groupedRecords, id:\.date) { group in
-                    Section(header: groupRecordsHeader(group: group,collapsedDates: $collapsedDates).listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))) {
+                    Section(header: groupRecordsHeader(group: group,collapsedDates: $collapsedDates)) {
                         if !collapsedDates.contains(group.date) {
                             ForEach(group.records, id:\.self) { item in
                                 SavingsRecordRow(record: item)
-                                    .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
-                                    .listRowBackground(Color.clear) // 保证行之间显示背景间隔
-                                    .listRowSeparator(.hidden, edges: .all)
                             }
                         }
                     }
                 }
-                .onDelete(perform: removeRows)
+                .background(Color.clear)
+                .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
+                .listRowBackground(Color.clear) // 保证行之间显示背景间隔
+                .listRowSeparator(.hidden)
+                .background(Color.clear) // 为整个 List 设置您想要的背景色
+                //                .onDelete(perform: removeRows)
             }
             .listStyle(.plain)
         }
@@ -84,6 +87,7 @@ struct AccessTimesView: View {
                 .ignoresSafeArea()
         }
         .ignoresSafeArea(.container, edges: .bottom)
+        .listRowBackground(Color.clear)
     }
 }
 
@@ -113,6 +117,7 @@ private struct groupRecordsHeader: View {
                     .foregroundColor(.gray)
             })
         }
+        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
     }
 }
 private struct FilterTabs: View {
