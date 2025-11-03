@@ -15,6 +15,7 @@ struct Settings: View {
     @Environment(ModelConfigManager.self) var modelConfigManager    // 从环境中读取modelConfigManager
     @Environment(AppStorageManager.self) var appStorage
     @Environment(\.dismiss) var dismiss
+    
     @State private var showNonFunctionalView = false
     @State private var showSponsoredApps = false
     @State private var showThanksView = false
@@ -24,47 +25,11 @@ struct Settings: View {
     @State private var showOpenSource = false // 显示开源视图
     @State private var showAlert = false    // 重制UserDefaults
     
-    func sendEmail() {
-        let email = "fangjunyu.com@gmail.com"
-        let subject = "Banklet Feedback"
-        
-        // 收集设备和 App 信息
-        let systemVersion = UIDevice.current.systemVersion
-        let deviceModel = Device.current
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
-        let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
-        
-        let body = """
-                ---
-                systemVersion: \(deviceModel)
-                iOS Version: \(systemVersion)
-                App Version: \(appVersion) (\(buildNumber))
-                ---
-                
-                
-                """
-        
-        // URL 编码参数
-        let urlString = "mailto:\(email)?subject=\(subject)&body=\(body)"
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        
-        if let url = URL(string: urlString ?? "") {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url)
-            } else {
-                // 处理无法打开邮件应用的情况
-                print("Cannot open Mail app.")
-            }
-        }
-    }
-    
     var body: some View {
         NavigationStack {
             GeometryReader { geometry in
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.95
-                let height = geometry.size.height * 0.85
-                
                 ZStack {
                     Color(hex: colorScheme == .light ?  "f0f0f0" : "0E0E0E")
                         .ignoresSafeArea()
@@ -206,7 +171,7 @@ struct Settings: View {
                             VStack(spacing: 0) {
                                 // 问题反馈
                                 SettingButton(action: {
-                                    sendEmail()
+                                    EmailHelper.sendFeedbackEmail()
                                 }, content: {
                                     Image(systemName: "questionmark.circle")
                                         .padding(.horizontal,5)
@@ -372,21 +337,6 @@ struct Settings: View {
                         }
                     }
                 }
-                .fullScreenCover(isPresented: $showSponsoredApps, content: {
-                    SponsoredAppsView()
-                })
-                .fullScreenCover(isPresented: $showThanksView, content: {
-                    ThanksView()
-                })
-                .fullScreenCover(isPresented: $showAboutUs, content: {
-                    AboutUsView()
-                })
-                .fullScreenCover(isPresented: $showThanks, content: {
-                    Thanks2View()
-                })
-                .fullScreenCover(isPresented: $showOpenSource, content: {
-                    OpenSourceView()
-                })
             }
         }
     }

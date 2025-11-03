@@ -139,9 +139,9 @@ struct HomeStatsView: View {
                     }
                     Spacer()
                 }
-                // 3、存钱罐列表，最多显示三个
+                // 3、存钱罐列表
                 VStack {
-                    ForEach(Array(filteredBanks.prefix(3).enumerated()), id: \.offset) { index,item in
+                    ForEach(Array(filteredBanks.enumerated()), id: \.offset) { index,item in
                         // 每一个存钱罐的信息
                         BanksRow(bank: item, index: index)
                     }

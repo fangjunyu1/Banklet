@@ -1,8 +1,8 @@
 //
-//  EmptyBankView.swift
+//  HomeEmptyView.swift
 //  piglet
 //
-//  Created by 方君宇 on 2025/10/30.
+//  Created by 方君宇 on 2025/11/3.
 //
 
 import SwiftUI
