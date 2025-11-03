@@ -248,6 +248,9 @@
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
 		1DB13A3B2D238CA60006B0A2 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
+		1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */; };
+		1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */; };
+		1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4142EB8657900B85BF4 /* BanksRow.swift */; };
 		1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */; };
 		1DBF907D2D65AF4D00A50064 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */; };
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
@@ -571,6 +574,9 @@
 		1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetEntry.swift; sourceTree = "<group>"; };
 		1DB13A3A2D238CA60006B0A2 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
+		1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTimesView.swift; sourceTree = "<group>"; };
+		1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecordRow.swift; sourceTree = "<group>"; };
+		1DBCF4142EB8657900B85BF4 /* BanksRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRow.swift; sourceTree = "<group>"; };
 		1DBEC50F2EA092FD006152D3 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DBEC5112EA09309006152D3 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DBEC5132EA09312006152D3 /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -830,12 +836,15 @@
 				1D845F4D2D23F3C000EDE480 /* Home.swift */,
 				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
 				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
+				1DE736002EB64D2400573C1A /* HomeMainView.swift */,
 				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
 				1DE45C732EB3A9E70079F76E /* HomeEmptyView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
-				1DE736002EB64D2400573C1A /* HomeMainView.swift */,
 				1DE736022EB64D2C00573C1A /* HomeActivityView.swift */,
 				1DE736042EB64D4000573C1A /* HomeStatsView.swift */,
+				1DBCF4142EB8657900B85BF4 /* BanksRow.swift */,
+				1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */,
+				1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */,
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
 				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
@@ -1608,7 +1617,9 @@
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* MainInterfaceAnimationView.swift in Sources */,
 				1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */,
+				1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */,
 				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
+				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
@@ -1625,6 +1636,7 @@
 				1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */,
 				1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
+				1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */,
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,

@@ -14,7 +14,7 @@ struct HomeMainView: View {
     var appStorage = AppStorageManager.shared
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             // 如果有存钱罐
             if !allPiggyBank.isEmpty {
                 // 如果有主存钱罐

@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeActivityView: View {
     var activityTab = ActivityTab.livingAllowance
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
         }
         .navigationTitle("Activity")

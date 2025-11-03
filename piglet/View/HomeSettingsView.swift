@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeSettingsView: View {
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             
         }
         .navigationTitle("Settings")
-        .background {
-            AppColor.appBgGrayColor
-                .ignoresSafeArea()
-        }
     }
 }
