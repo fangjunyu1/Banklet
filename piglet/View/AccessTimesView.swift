@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct AccessTimesView: View {
+    @Environment(\.modelContext) var modelContext   // 容器上下文
     @Query(sort: \PiggyBank.creationDate)   // 所有存钱罐，按创建日期排序
     var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
@@ -33,46 +34,46 @@ struct AccessTimesView: View {
         // 返回按日期降序的数组
         return groups
             .map { (date: $0.key, records: $0.value) }
+            .sorted { $0.date > $1.date}
     }
+    
+    // 删除存取记录
+    func removeRows(at offsets: IndexSet) {
+        // 找到需要移除的元素
+        let itemsToRemove = offsets.map { filterRecords[$0] }
+        
+        // 从原始数组中移除这些元素
+        withAnimation {
+            for item in itemsToRemove {
+                modelContext.delete(item)
+            }
+        }
+        try? modelContext.save()
+    }
+    
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        VStack {
             // 1、全部、存钱罐名称
             ScrollView(.horizontal, showsIndicators: false) {
                 FilterTabs(allBanks: allPiggyBank, selectedBank: $selectedBank)
             }
-            Spacer().frame(height:20)   // 间隔
             // 存钱罐列表
-            LazyVStack(spacing: 10) {
+            List {
                 ForEach(groupedRecords, id:\.date) { group in
-                    // 分组标题
-                    HStack(spacing: 5) {
-                        let weekString = group.date.formatted(.dateTime.weekday(.wide))
-                        let dateString = group.date.formatted(.dateTime.year().month().day())
-                        Text(weekString + ",")
-                        Text(dateString)
-                        Spacer()
-                        Button(action: {
-                            withAnimation {
-                                if collapsedDates.contains(group.date) {
-                                    collapsedDates.remove(group.date)
-                                } else {
-                                    collapsedDates.insert(group.date)
-                                }
+                    Section(header: groupRecordsHeader(group: group,collapsedDates: $collapsedDates).listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))) {
+                        if !collapsedDates.contains(group.date) {
+                            ForEach(group.records, id:\.self) { item in
+                                SavingsRecordRow(record: item)
+                                    .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
+                                    .listRowBackground(Color.clear) // 保证行之间显示背景间隔
+                                    .listRowSeparator(.hidden, edges: .all)
                             }
-                        }, label: {
-                            Image(systemName: collapsedDates.contains(group.date) ? "chevron.up" : "chevron.down")
-                        })
-                    }
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                    .padding(.vertical,10)
-                    if !collapsedDates.contains(group.date) {
-                        ForEach(group.records, id:\.self) { item in
-                            SavingsRecordRow(record: item)
                         }
                     }
                 }
+                .onDelete(perform: removeRows)
             }
+            .listStyle(.plain)
         }
         .navigationTitle("Access times")
         .navigationBarTitleDisplayMode(.inline)
@@ -82,10 +83,38 @@ struct AccessTimesView: View {
             AppColor.appBgGrayColor
                 .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(.container, edges: .bottom)
     }
 }
 
+private struct groupRecordsHeader: View {
+    let group: (date: Date,records:[SavingsRecord])
+    @Binding var collapsedDates: Set<Date>
+    var weekString: String {
+        group.date.formatted(.dateTime.weekday(.wide))
+    }
+    var dateString: String {
+        group.date.formatted(.dateTime.year().month().day())
+    }
+    var body: some View {
+        HStack {
+            Text(weekString + "," + dateString).font(.caption2)
+            Spacer()
+            Button(action: {
+                withAnimation {
+                    if collapsedDates.contains(group.date) {
+                        collapsedDates.remove(group.date)
+                    } else {
+                        collapsedDates.insert(group.date)
+                    }
+                }
+            }, label: {
+                Image(systemName: collapsedDates.contains(group.date) ? "chevron.up" : "chevron.down")
+                    .foregroundColor(.gray)
+            })
+        }
+    }
+}
 private struct FilterTabs: View {
     let allBanks: [PiggyBank]
     @Binding var selectedBank: PiggyBank?
