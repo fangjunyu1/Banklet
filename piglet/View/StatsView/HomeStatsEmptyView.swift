@@ -12,8 +12,9 @@ struct HomeStatsEmptyView: View {
         VStack {
             Spacer()
                 .frame(height: 50)
-            LottieView(filename: "emptyStats", isPlaying: true, playCount: 0, isReversed: false)
+            LottieView(filename: "emptyStats2", isPlaying: true, playCount: 0, isReversed: false)
                 .scaledToFit()
+                .scaleEffect(1.5)
                 .frame(maxHeight: 180)
                 .frame(maxWidth: 500)
             Spacer().frame(height: 30)

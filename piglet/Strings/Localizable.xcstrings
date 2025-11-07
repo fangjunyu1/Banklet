@@ -12834,6 +12834,18 @@
         }
       }
     },
+    "E-mail not configured" : {
+      "comment" : "没有配置邮箱",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有配置邮箱"
+          }
+        }
+      }
+    },
     "Edit" : {
       "comment" : "编辑",
       "extractionState" : "manual",
@@ -52292,7 +52304,7 @@
     "确定" : {
 
     },
-    "重置内购和欢迎" : {
+    "重置内购和欢迎界面" : {
 
     },
     "重置内购标识" : {

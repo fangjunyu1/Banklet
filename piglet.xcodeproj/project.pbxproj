@@ -215,6 +215,11 @@
 		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
 		1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4CA2EBD9F2E00001CF5 /* HomeStatsEmptyView.swift */; };
 		1D66C4CD2EBDA02D00001CF5 /* emptyStats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */; };
+		1D66C4CF2EBDB2B400001CF5 /* emptyStats2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4CE2EBDB2B400001CF5 /* emptyStats2.json */; };
+		1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D02EBDB92900001CF5 /* WebView.swift */; };
+		1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D22EBDC61000001CF5 /* SafariView.swift */; };
+		1D66C4D52EBDD75C00001CF5 /* MailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */; };
+		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
@@ -538,6 +543,11 @@
 		1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wcSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1D66C4CA2EBD9F2E00001CF5 /* HomeStatsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsEmptyView.swift; sourceTree = "<group>"; };
 		1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyStats.json; sourceTree = "<group>"; };
+		1D66C4CE2EBDB2B400001CF5 /* emptyStats2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyStats2.json; sourceTree = "<group>"; };
+		1D66C4D02EBDB92900001CF5 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1D66C4D22EBDC61000001CF5 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposeViewController.swift; sourceTree = "<group>"; };
+		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -983,6 +993,7 @@
 				1D8854602D244FB9009DE7AE /* Fireworks2.json */,
 				1D1561A82EB2FC040041C0DD /* welcome.json */,
 				1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */,
+				1D66C4CE2EBDB2B400001CF5 /* emptyStats2.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1077,6 +1088,7 @@
 		1DBCF41B2EB8DA6600B85BF4 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
 			);
@@ -1114,6 +1126,9 @@
 		1DCBEDC22C02B776005BFFFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */,
+				1D66C4D22EBDC61000001CF5 /* SafariView.swift */,
+				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
 				1DBCF41C2EB8DB6300B85BF4 /* EmailHelper.swift */,
 				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
 				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
@@ -1589,6 +1604,7 @@
 				1D1400B62D3112BD00DC51C0 /* AboutUs.json in Resources */,
 				1D3E14302D4A5D7000747D20 /* Home46.json in Resources */,
 				1D3E13D22D49AD7A00747D20 /* Home4.json in Resources */,
+				1D66C4CF2EBDB2B400001CF5 /* emptyStats2.json in Resources */,
 				1D3E14102D4A35F600747D20 /* Home37.json in Resources */,
 				1D3E14312D4A5D7000747D20 /* Home53.json in Resources */,
 				1D3E14132D4A35F600747D20 /* Home30.json in Resources */,
@@ -1656,6 +1672,7 @@
 				1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */,
 				1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */,
 				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
+				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
@@ -1663,7 +1680,9 @@
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
 				1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */,
 				1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */,
+				1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */,
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
+				1D66C4D52EBDD75C00001CF5 /* MailComposeViewController.swift in Sources */,
 				1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */,
 				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* Bundle.swift in Sources */,
@@ -1724,6 +1743,7 @@
 				1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */,
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
+				1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */,
 				1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
