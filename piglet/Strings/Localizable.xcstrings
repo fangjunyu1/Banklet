@@ -7851,6 +7851,18 @@
         }
       }
     },
+    "Configure the application's background, animations, icons, and other related parameters." : {
+      "comment" : "配置应用的背景、动画、图标等相关参数信息。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配置应用的背景、动画、图标等相关参数信息。"
+          }
+        }
+      }
+    },
     "Confirm" : {
       "comment" : "确定",
       "extractionState" : "manual",
@@ -12810,6 +12822,18 @@
         }
       }
     },
+    "E-mail" : {
+      "comment" : "邮件",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "邮件"
+          }
+        }
+      }
+    },
     "Edit" : {
       "comment" : "编辑",
       "extractionState" : "manual",
@@ -15312,6 +15336,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "直接進入主介面"
+          }
+        }
+      }
+    },
+    "Have the statistics disappeared?" : {
+      "comment" : "统计数据消失了？",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "统计数据消失了？"
           }
         }
       }
@@ -19122,6 +19158,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "讓程式碼展現在陽光下"
+          }
+        }
+      }
+    },
+    "Let the data witness your every accumulation and change." : {
+      "comment" : "让数据见证你的每一次积累与变化。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让数据见证你的每一次积累与变化。"
           }
         }
       }
@@ -27115,6 +27163,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "波蘭茲羅提"
+          }
+        }
+      }
+    },
+    "Premium Member" : {
+      "comment" : "高级会员",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级会员"
           }
         }
       }
@@ -49028,6 +49088,9 @@
         }
       }
     },
+    "version: %@" : {
+
+    },
     "Vibration" : {
       "comment" : "1.0.11:振动",
       "extractionState" : "manual",
@@ -49720,6 +49783,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我們會繼續努力開發更好的作品，供更多人免費使用。"
+          }
+        }
+      }
+    },
+    "Web page" : {
+      "comment" : "网页",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "网页"
           }
         }
       }
@@ -52215,6 +52290,9 @@
 
     },
     "确定" : {
+
+    },
+    "重置内购和欢迎" : {
 
     },
     "重置内购标识" : {

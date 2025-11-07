@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 @Observable
-class AppStorageManager {
+class AppStorageManager: ObservableObject {
     static let shared = AppStorageManager()  // 全局单例
     private init() {
         // 初始化时同步本地存储
@@ -173,6 +173,7 @@ class AppStorageManager {
     // ModelConfig配置
     var isModelConfigManager = true {
         didSet {
+            print("isModelConfigManager:\(isModelConfigManager)")
             if isModelConfigManager != oldValue && !isLoading {
                 let store = NSUbiquitousKeyValueStore.default
                 store.set(isModelConfigManager, forKey: "isModelConfigManager")

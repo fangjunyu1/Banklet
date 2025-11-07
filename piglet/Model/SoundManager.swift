@@ -6,6 +6,7 @@
 //
 import AVFoundation
 
+@Observable
 class SoundManager:ObservableObject {
     static let shared = SoundManager() // 单例
     

@@ -8,14 +8,15 @@
 import StoreKit
 
 @available(iOS 15.0, *)
+@Observable
 class IAPManager:ObservableObject {
     static let shared = IAPManager()
     
     private init() {}
     
-    @Published var productID = ["20240523"]  //  需要内购的产品ID数组
-    @Published var products: [Product] = []    // 存储从 App Store 获取的内购商品信息
-    @Published var loadPurchased = false    // 如果开始内购流程，loadPurchased为true，View视图显示加载画布
+    var productID = ["20240523"]  //  需要内购的产品ID数组
+    var products: [Product] = []    // 存储从 App Store 获取的内购商品信息
+    var loadPurchased = false    // 如果开始内购流程，loadPurchased为true，View视图显示加载画布
     
     // 视图自动加载loadProduct()方法
     func loadProduct() async {

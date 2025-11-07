@@ -11,10 +11,10 @@ import WatchConnectivity
 
 @main
 struct pigletApp: App {
-    @StateObject private var iapManager = IAPManager.shared
+    @State private var iapManager = IAPManager.shared
     @State private var appStorage = AppStorageManager.shared
     @State private var modelConfigManager = ModelConfigManager()
-    @StateObject private var sound = SoundManager.shared
+    @State private var sound = SoundManager.shared
     @Environment(\.scenePhase) var scenePhase
     
     init() {
@@ -36,11 +36,11 @@ struct pigletApp: App {
                     await iapManager.handleTransactions()   // 加载内购交易更新
                 }
         }
-        .environment(modelConfigManager)
+        .environment(sound)
         .environment(appStorage)
-        .environmentObject(iapManager)
+        .environment(iapManager)
+        .environment(modelConfigManager)
         .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
-        .environmentObject(sound)
     }
 }
 

@@ -57,116 +57,124 @@ struct HomeStatsView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 20) {
-                // 1、统计顶部日期、存取次数、存款等信息
-                HStack(spacing:12) {
-                    // 日期图标、月份、周末
-                    VStack(alignment: .leading,spacing: 10) {
-                        HStack(spacing: 10) {
-                            Image(systemName: "calendar")
-                                .foregroundColor(Color(hex: "DC6054"))
-                            Text("\(formattedData)")
-                                .font(.footnote)
-                        }
-                        Text("\(formattedWeekday)")
-                            .font(.caption2)
-                            .foregroundColor(.gray)
-                    }
-                    // 分割线
-                    Divider().offset(x: 2)
-                    // 存取次数
-                    NavigationLink(destination: AccessTimesView(), label: {
+            // 如果统计数据（存钱罐）
+            if !allPiggyBank.isEmpty {
+                VStack(spacing: 20) {
+                    // 1、统计顶部日期、存取次数、存款等信息
+                    HStack(spacing:12) {
+                        // 日期图标、月份、周末
                         VStack(alignment: .leading,spacing: 10) {
                             HStack(spacing: 10) {
-                                Image(systemName: "square.and.arrow.down.on.square.fill")
-                                    .imageScale(.small)
-                                    .foregroundColor(.gray)
-                                Text("\(savingsRecords.count)")
+                                Image(systemName: "calendar")
+                                    .foregroundColor(Color(hex: "DC6054"))
+                                Text("\(formattedData)")
                                     .font(.footnote)
-                                    .foregroundColor(.black)
-                                    .frame(minWidth: 40,alignment: .leading)
                             }
-                            Text("Access times")
+                            Text("\(formattedWeekday)")
                                 .font(.caption2)
                                 .foregroundColor(.gray)
                         }
-                    })
-                    // 分割线
-                    Divider().offset(x: 2)
-                    // 存款金额
-                    VStack(alignment: .leading,spacing: 10) {
-                        HStack(spacing: 10) {
-                            Text(currencySymbol)
-                                .foregroundColor(.gray)
-                            Text(savingRecordsCount)
-                                .font(.footnote)
-                        }
-                        Text("Deposit Amount")
-                            .font(.caption2)
-                            .foregroundColor(.gray)
-                    }
-                    Spacer()
-                }
-                // 2、全部、进行中、完成，三个切换进度
-                HStack {
-                    HStack(spacing:8) {
-                        // 列表（显示最多三个）
-                        ForEach(StatisticsTab.allCases, id:\.self) { item in
-                            Button(action: {
-                                withAnimation { selectedTab1 = item }
-                            }, label: {
-                                Text(LocalizedStringKey(item.title))
+                        // 分割线
+                        Divider().offset(x: 2)
+                        // 存取次数
+                        NavigationLink(destination: AccessTimesView(), label: {
+                            VStack(alignment: .leading,spacing: 10) {
+                                HStack(spacing: 10) {
+                                    Image(systemName: "square.and.arrow.down.on.square.fill")
+                                        .imageScale(.small)
+                                        .foregroundColor(.gray)
+                                    Text("\(savingsRecords.count)")
+                                        .font(.footnote)
+                                        .foregroundColor(.black)
+                                        .frame(minWidth: 40,alignment: .leading)
+                                }
+                                Text("Access times")
+                                    .font(.caption2)
+                                    .foregroundColor(.gray)
+                            }
+                        })
+                        // 分割线
+                        Divider().offset(x: 2)
+                        // 存款金额
+                        VStack(alignment: .leading,spacing: 10) {
+                            HStack(spacing: 10) {
+                                Text(currencySymbol)
+                                    .foregroundColor(.gray)
+                                Text(savingRecordsCount)
                                     .font(.footnote)
-                                    .padding(.vertical, 12)
-                                    .padding(.horizontal, 20)
-                                    .frame(width: 80)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.5)
-                                    .foregroundColor(selectedTab1 == item ? .black : .gray)
+                            }
+                            Text("Deposit Amount")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                    }
+                    // 2、全部、进行中、完成，三个切换进度
+                    HStack {
+                        HStack(spacing:8) {
+                            // 列表（显示最多三个）
+                            ForEach(StatisticsTab.allCases, id:\.self) { item in
+                                Button(action: {
+                                    withAnimation { selectedTab1 = item }
+                                }, label: {
+                                    Text(LocalizedStringKey(item.title))
+                                        .font(.footnote)
+                                        .padding(.vertical, 12)
+                                        .padding(.horizontal, 20)
+                                        .frame(width: 80)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.5)
+                                        .foregroundColor(selectedTab1 == item ? .black : .gray)
+                                        .cornerRadius(20)
+                                })
+                            }
+                        }
+                        .background {
+                            HStack {
+                                Rectangle()
+                                    .frame(width:80,height:40)
+                                    .foregroundColor(.white)
                                     .cornerRadius(20)
+                                    .offset(x: CGFloat(selectedTab1.rawValue) * CGFloat(88))
+                                Spacer()
+                            }
+                        }
+                        Spacer()
+                    }
+                    // 3、存钱罐列表
+                    VStack {
+                        ForEach(Array(filteredBanks.enumerated()), id: \.offset) { index,item in
+                            // 每一个存钱罐的信息
+                            BanksRow(bank: item, index: index)
+                        }
+                    }
+                    // 4、存取次数，显示更多
+                    if !recentRecords.isEmpty {
+                        HStack {
+                            Text("Access times")
+                                .fontWeight(.medium)
+                            Spacer()
+                            NavigationLink(destination: AccessTimesView(), label: {
+                                Text("Show more")
+                                    .foregroundColor(AppColor.appColor)
+                                    .font(.footnote)
                             })
                         }
-                    }
-                    .background {
-                        HStack {
-                            Rectangle()
-                                .frame(width:80,height:40)
-                                .foregroundColor(.white)
-                                .cornerRadius(20)
-                                .offset(x: CGFloat(selectedTab1.rawValue) * CGFloat(88))
-                            Spacer()
+                        VStack {
+                            ForEach(recentRecords, id:\.self) { item in
+                                SavingsRecordRow(record: item)
+                            }
                         }
                     }
-                    Spacer()
                 }
-                // 3、存钱罐列表
-                VStack {
-                    ForEach(Array(filteredBanks.enumerated()), id: \.offset) { index,item in
-                        // 每一个存钱罐的信息
-                        BanksRow(bank: item, index: index)
-                    }
-                }
-                // 4、存取次数，显示更多
-                HStack {
-                    Text("Access times")
-                        .fontWeight(.medium)
-                    Spacer()
-                    NavigationLink(destination: AccessTimesView(), label: {
-                        Text("Show more")
-                            .foregroundColor(AppColor.appColor)
-                            .font(.footnote)
-                    })
-                }
-                VStack {
-                    ForEach(recentRecords, id:\.self) { item in
-                        SavingsRecordRow(record: item)
-                    }
-                }
+                Spacer().frame(height:70)   // 增加底部空白间隙
+            } else {
+                // 没有统计数据
+                HomeStatsEmptyView()
             }
-            Spacer().frame(height:70)   // 增加底部空白间隙
         }
         .navigationTitle("Stats")
-        .padding(20)
+        .padding(.horizontal,20)
     }
 }
 

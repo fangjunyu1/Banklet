@@ -92,37 +92,6 @@ struct Settings: View {
                                 .padding(.horizontal,15)
                                 .padding(.top,10)
                                 VStack(spacing: 0) {
-                                    // 启用iCloud按钮
-                                    SettingView(content: {
-                                        Image(systemName: "icloud")
-                                            .padding(.horizontal,5)
-                                            .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        Text("Enable iCloud")
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.5) // 最小缩放到 50%
-                                        Spacer()
-                                        //                                        Toggle("",isOn: Binding(get: {
-                                        //                                            modelConfigManager.cloudKitMode == .privateDatabase
-                                        //                                        }, set: {
-                                        //                                            modelConfigManager.cloudKitMode = $0 ? .privateDatabase : .none
-                                        //                                        }))  // iCloud开关
-                                        Toggle("",isOn: Binding(get: {
-                                            appStorage.isModelConfigManager
-                                        }, set: {
-                                            appStorage.isModelConfigManager = $0
-                                        }))  // iCloud开关
-                                        .onChange(of: appStorage.isModelConfigManager) {  oldValue, newValue in
-                                            if newValue {
-                                                // isModelConfigManager为 true 时，设置为私有iCloud
-                                                modelConfigManager.cloudKitMode = .privateDatabase
-                                            } else {
-                                                print("newValue:\(newValue),oldValue:\(oldValue)")
-                                                // isModelConfigManager为 false 时，设置为空
-                                                modelConfigManager.cloudKitMode = .none
-                                            }
-                                        }
-                                        .frame(height:0)
-                                    })
                                     // 分割线
                                     Divider().padding(.leading,50)
                                     // 通用功能
@@ -166,69 +135,6 @@ struct Settings: View {
                                 .cornerRadius(10)
                                 .padding(10)
                             }
-                            
-                            // 第三组：问题反馈、使用条款、隐私政策
-                            VStack(spacing: 0) {
-                                // 问题反馈
-                                SettingButton(action: {
-                                    EmailHelper.sendFeedbackEmail()
-                                }, content: {
-                                    Image(systemName: "questionmark.circle")
-                                        .padding(.horizontal,5)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                    Text("Problem Reporting")
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.8)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .imageScale(.small)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                })
-                                
-                                // 分割线
-                                Divider().padding(.leading,50)
-                                
-                                // 使用条款
-                                SettingButton(action: {
-                                    // 存钱猪猪使用条款
-                                    openURL(URL(string: "https://fangjunyu.com/2024/06/03/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e4%bd%bf%e7%94%a8%e6%9d%a1%e6%ac%be/")!)
-                                }, content: {
-                                    Image(systemName: "book.pages")
-                                        .padding(.horizontal,5)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                    Text("Terms of Use")
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.8)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .imageScale(.small)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                })
-                                
-                                
-                                // 分割线
-                                Divider().padding(.leading,50)
-                                
-                                // 隐私政策
-                                SettingButton(action: {
-                                    openURL(URL(string: "https://fangjunyu.com/2024/05/23/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/")!)
-                                }, content: {
-                                    Image(systemName: "lock.doc")
-                                        .padding(.horizontal,5)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                    Text("Privacy Policy")
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.8)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .imageScale(.small)
-                                        .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                })
-                            }
-                            .background(colorScheme == .light ? .white : Color(hex:"1f1f1f"))
-                            .cornerRadius(10)
-                            .padding(10)
-                            
                             
                             // 第四组：关于我们、鸣谢
                             VStack(spacing: 0) {
@@ -349,4 +255,3 @@ struct Settings: View {
         .environment(AppStorageManager.shared)
     //        .environment(\.locale, .init(identifier: "de"))
 }
-

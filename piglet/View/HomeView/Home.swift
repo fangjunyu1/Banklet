@@ -21,7 +21,7 @@ struct Home: View {
     var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数
-    @State private var selectedTab = HomeTab.stats  // 当前选择的Tab
+    @State private var selectedTab = HomeTab.home  // 当前选择的Tab
     @State private var searchText = ""  // 搜索框
     // 获取第一个存钱罐
     var primaryBank: PiggyBank? {

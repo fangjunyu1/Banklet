@@ -13,6 +13,7 @@ struct HomeEmptyView: View {
             Spacer()
                 .frame(height: 50)
             LottieView(filename: "EmptyBanklet", isPlaying: true, playCount: 0, isReversed: false)
+                .scaledToFit()
                 .frame(maxHeight: 180)
                 .frame(maxWidth: 500)
             Spacer().frame(height: 30)
@@ -39,4 +40,8 @@ struct HomeEmptyView: View {
             Spacer()
         }
     }
+}
+
+#Preview {
+    HomeEmptyView()
 }
