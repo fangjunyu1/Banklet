@@ -12,7 +12,7 @@ struct ThanksView: View {
     let platformList: [String] = ["ChatGPT","LottieFiles","iconfont","Pinterest","Dirbbble","GitHub", "px"]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             Spacer()
                 .frame(height: 20)
             VStack(spacing: 10) {
@@ -24,8 +24,8 @@ struct ThanksView: View {
             }
             // 致谢动画
             LottieView(filename: "ThanksDance", isPlaying: true, playCount: 0, isReversed: false)
-                .modifier(LottieModifier())
                 .scaleEffect(1.1)
+                .modifier(LottieModifier())
             
             // 资源与技术支持
             VStack(spacing: 10) {
@@ -54,9 +54,7 @@ struct ThanksView: View {
                     .frame(maxHeight: 200)
                     .frame(maxWidth: 500)
                 Spacer().frame(height:10)
-                Button(action: {
-                    showAppStore = true
-                }, label: {
+                Link(destination: URL(string: "https://apps.apple.com/cn/developer/%E5%90%9B%E5%AE%87-%E6%96%B9/id1746520472")!) {
                     Text("App Store")
                           .fontWeight(.medium)
                           .padding(.vertical,20)
@@ -65,10 +63,6 @@ struct ThanksView: View {
                           .background(AppColor.appColor)
                           .cornerRadius(16)
                           .shadow(radius: 5)
-                })
-                .sheet(isPresented: $showAppStore) {
-                    SafariView(url: URL(string: "https://apps.apple.com/cn/developer/%E5%90%9B%E5%AE%87-%E6%96%B9/id1746520472")!)
-                        .ignoresSafeArea()
                 }
             }
             Spacer().frame(height:50)

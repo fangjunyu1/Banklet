@@ -143,6 +143,7 @@
 		1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */; };
 		1D2A5EF82EBEE26A00C1F831 /* ThanksDance.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */; };
 		1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */; };
+		1D2A5EFC2EBF215100C1F831 /* WorkingCat.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2A5EFB2EBF215100C1F831 /* WorkingCat.json */; };
 		1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F922B2E9CA5240077A235 /* GifView.swift */; };
 		1D2F92332E9D2C340077A235 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92322E9D2C320077A235 /* PlaceholderView.swift */; };
 		1D2F92362E9D2F400077A235 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2F92352E9D2F400077A235 /* Lottie */; };
@@ -472,6 +473,7 @@
 		1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ThanksDance.json; sourceTree = "<group>"; };
 		1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		1D2A5EFB2EBF215100C1F831 /* WorkingCat.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WorkingCat.json; sourceTree = "<group>"; };
 		1D2F922B2E9CA5240077A235 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		1D2F92322E9D2C320077A235 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		1D2F923D2E9D4E030077A235 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -862,7 +864,6 @@
 				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
 				1D88545A2D244B27009DE7AE /* Completed.swift */,
 				1D214F582D2F999E007F1D0E /* Settings.swift */,
-				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
 				1D1400B32D31119E00DC51C0 /* Thanks2View.swift */,
 				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
@@ -982,6 +983,7 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1D2A5EFB2EBF215100C1F831 /* WorkingCat.json */,
 				1D66C4D82EBE2F0600001CF5 /* Sun.json */,
 				1D1561AC2EB33BEB0041C0DD /* HomeAnimation */,
 				1DE45C712EB3A8180079F76E /* EmptyBanklet.json */,
@@ -1091,6 +1093,7 @@
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
+				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
 				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
 				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 			);
@@ -1560,6 +1563,7 @@
 				1D0386F92EA0023600E9379F /* gif_Home50.gif in Resources */,
 				1D0386FA2EA0023600E9379F /* gif_Home26.gif in Resources */,
 				1D1561AE2EB33C110041C0DD /* lock.json in Resources */,
+				1D2A5EFC2EBF215100C1F831 /* WorkingCat.json in Resources */,
 				1D5354632EB9C06500738441 /* Home0.json in Resources */,
 				1D0386FB2EA0023600E9379F /* gif_Home47.gif in Resources */,
 				1D0386FC2EA0023600E9379F /* gif_Home19.gif in Resources */,

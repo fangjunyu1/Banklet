@@ -87,7 +87,11 @@ struct HomeSettingsView: View {
                 // 关于我们、鸣谢、开源
                 VStack(spacing: 0) {
                     // 关于我们
-                    HomeSettingRow(color: .color("226AD6"), icon: .sficon("person.2.fill"), title: "About Us",accessory: .none)
+                    NavigationLink(destination: {
+                        AboutUsView()
+                    }, label: {
+                        HomeSettingRow(color: .color("226AD6"), icon: .sficon("person.2.fill"), title: "About Us",accessory: .none)
+                    })
                     Divider().padding(.leading,60)
                     // 鸣谢
                     NavigationLink(destination: {

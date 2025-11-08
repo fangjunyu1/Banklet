@@ -41,7 +41,7 @@ struct WelcomeView: View {
             // 副标题
             Text(step == .welcome ? "Welcome to a brand new way of saving, where every penny shines in the future." : "Savings data is stored locally and synced with iCloud, ensuring security and transparency, and giving you complete control.")
                 .font(.footnote)
-                .padding(.horizontal,30)
+                .padding(.horizontal,20)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
             // 圆形进度条
