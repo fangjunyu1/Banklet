@@ -48,7 +48,7 @@ struct Settings: View {
                                         Image(systemName: "checkmark.seal.fill")
                                             .padding(.horizontal,5)
                                             .scaleEffect(x: layoutDirection == .leftToRight ? 1 : -1)
-                                        Text("Thanks for your support")
+                                        Text("A")
                                             .lineLimit(1)
                                             .minimumScaleFactor(0.8)
                                         Spacer()

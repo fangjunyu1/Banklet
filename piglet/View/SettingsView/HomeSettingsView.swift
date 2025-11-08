@@ -90,10 +90,17 @@ struct HomeSettingsView: View {
                     HomeSettingRow(color: .color("226AD6"), icon: .sficon("person.2.fill"), title: "About Us",accessory: .none)
                     Divider().padding(.leading,60)
                     // 鸣谢
-                    HomeSettingRow(color: .color("E45050"), icon: .sficon("heart.fill"), title: "Thanks",accessory: .none)
+                    NavigationLink(destination: {
+                        ThanksView()
+                    }, label: {                        HomeSettingRow(color: .color("E45050"), icon: .sficon("heart.fill"), title: "Thanks",accessory: .none)
+                    })
                     Divider().padding(.leading,60)
                     // 开源
-                    HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open source",accessory: .none)
+                    NavigationLink(destination: {
+                        OpenSourceView()
+                    }, label: {
+                        HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open source",accessory: .none)
+                    })
                 }
                 .background(colorScheme == .dark ? AppColor.appGrayColor : .white)
                 .cornerRadius(10)

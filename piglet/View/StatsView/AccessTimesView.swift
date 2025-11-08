@@ -79,15 +79,8 @@ struct AccessTimesView: View {
             .listStyle(.plain)
         }
         .navigationTitle("Access times")
-        .navigationBarTitleDisplayMode(.inline)
-        .padding(20)
-        .background {
-            // 设置默认的背景灰色，防止各视图切换时显示白色闪烁背景
-            AppColor.appBgGrayColor
-                .ignoresSafeArea()
-        }
-        .ignoresSafeArea(.container, edges: .bottom)
-        .listRowBackground(Color.clear)
+        .padding(.top, 20)
+        .modifier(BackgroundModifier())
     }
 }
 

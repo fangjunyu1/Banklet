@@ -7,9 +7,6 @@
     "\t" : {
 
     },
-    " " : {
-
-    },
     "  " : {
 
     },
@@ -23,9 +20,6 @@
 
     },
     "/" : {
-
-    },
-    "%" : {
 
     },
     "%@" : {
@@ -53,227 +47,11 @@
     "0.0" : {
 
     },
+    "A" : {
+
+    },
     "A piggy bank is not just a container for coins, it’s a symbol of dreams and discipline." : {
-      "comment" : "存钱罐不仅是装硬币的容器，更是梦想与自律的象征。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "إن الحصالة ليست مجرد حاوية للعملات المعدنية، ولكنها أيضًا رمز للأحلام والانضباط الذاتي."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La guardiola no només és un contenidor per a monedes, sinó també un símbol dels somnis i de l'autodisciplina."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prasátko není jen schránkou na mince, ale také symbolem snů a sebekázně."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spargrisen er ikke kun en beholder til mønter, men også et symbol på drømme og selvdisciplin."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das Sparschwein ist nicht nur ein Behälter für Münzen, sondern auch ein Symbol für Träume und Selbstdisziplin."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ο κουμπαράς δεν είναι μόνο ένα δοχείο για νομίσματα, αλλά και σύμβολο ονείρων και αυτοπειθαρχίας."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La alcancía no es sólo un contenedor para monedas, sino también un símbolo de sueños y autodisciplina."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La alcancía no es sólo un contenedor para monedas, sino también un símbolo de sueños y autodisciplina."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Säästöpossu ei ole vain kolikoiden säiliö, vaan myös unelmien ja itsekurin symboli."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La tirelire n'est pas seulement un contenant pour les pièces de monnaie, mais aussi un symbole de rêve et d'autodiscipline."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La tirelire n'est pas seulement un contenant pour les pièces de monnaie, mais aussi un symbole de rêve et d'autodiscipline."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "קופת החזירים היא לא רק מיכל למטבעות, אלא גם סמל לחלומות ומשמעת עצמית."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गुल्लक न केवल सिक्कों का एक कंटेनर है, बल्कि सपनों और आत्म-अनुशासन का भी प्रतीक है।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kasica prasica nije samo spremnik za novčiće, već i simbol snova i samodiscipline."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A malacpersely nem csak az érmék tárolója, hanem az álmok és az önfegyelem szimbóluma is."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Celengan tidak hanya sebagai wadah untuk menyimpan uang logam, tetapi juga merupakan simbol mimpi dan disiplin diri."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il salvadanaio non è solo un contenitore per monete, ma anche un simbolo di sogni e autodisciplina."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "貯金箱は小銭を入れる容器であるだけでなく、夢と自己規律の象徴でもあります。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "돼지 저금통은 동전을 담는 용기일 뿐만 아니라 꿈과 자기수양의 상징이기도 합니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Piggy bank bukan sahaja bekas syiling, tetapi juga simbol impian dan disiplin diri."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sparegrisen er ikke bare en beholder for mynter, men også et symbol på drømmer og selvdisiplin."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Het spaarvarken is niet alleen een houder voor munten, maar ook een symbool van dromen en zelfdiscipline."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skarbonka to nie tylko pojemnik na monety, ale także symbol marzeń i samodyscypliny."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O mealheiro não é apenas um recipiente para moedas, mas também um símbolo de sonhos e autodisciplina."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O mealheiro não é apenas um recipiente para moedas, mas também um símbolo de sonhos e autodisciplina."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pușculița nu este doar un recipient pentru monede, ci și un simbol al viselor și al autodisciplinei."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Копилка – это не только емкость для монет, но и символ мечты и самодисциплины."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prasiatko nie je len schránkou na mince, ale aj symbolom snov a sebadisciplíny."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spargrisen är inte bara en behållare för mynt, utan också en symbol för drömmar och självdisciplin."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "กระปุกออมสินไม่ได้เป็นเพียงภาชนะใส่เหรียญเท่านั้น แต่ยังเป็นสัญลักษณ์ของความฝันและความมีวินัยในตนเองอีกด้วย"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumbara sadece madeni paralar için bir kap değil, aynı zamanda hayallerin ve öz disiplinin sembolüdür."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скарбничка - це не тільки ємність для монет, а й символ мрії та самодисципліни."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Con heo đất không chỉ là nơi đựng tiền xu mà còn là biểu tượng của ước mơ và tính kỷ luật tự giác."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存钱罐不仅是装硬币的容器，更是梦想与自律的象征。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢筒不僅是裝硬幣的容器，更是夢想與自律的象徵。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢筒不僅是裝硬幣的容器，更是夢想與自律的象徵。"
-          }
-        }
-      }
+
     },
     "About Us" : {
       "comment" : "关于我们",
@@ -4090,6 +3868,9 @@
           }
         }
       }
+    },
+    "App Store" : {
+      "extractionState" : "manual"
     },
     "Apple will adjust the specific amount of the sponsorship amount based on the exchange rate/tax of the national currency." : {
       "comment" : "Apple会根据国家货币的汇率/税费调整赞助金额的具体数值。",
@@ -12348,6 +12129,18 @@
         }
       }
     },
+    "Developer's Acknowledgments" : {
+      "comment" : "开发者的致谢",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开发者的致谢"
+          }
+        }
+      }
+    },
     "Distance" : {
       "comment" : "距离",
       "extractionState" : "manual",
@@ -18232,6 +18025,18 @@
         }
       }
     },
+    "iOS & macOS app collection" : {
+      "comment" : "iOS & macOS 应用集合",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS & macOS 应用集合"
+          }
+        }
+      }
+    },
     "JPY" : {
       "comment" : "1.0.6:日元",
       "extractionState" : "manual",
@@ -21670,6 +21475,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "澳門元"
+          }
+        }
+      }
+    },
+    "More works" : {
+      "comment" : "更多作品",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多作品"
           }
         }
       }
@@ -28301,228 +28118,6 @@
         }
       }
     },
-    "Project address" : {
-      "comment" : "1.0.5:项目地址",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عنوان المشروع"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adreça del projecte"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresa projektu"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projektadresse"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projektadresse"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Διεύθυνση έργου"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dirección del proyecto"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dirección del proyecto"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projektin osoite"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresse du projet"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresse du projet"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "כתובת הפרויקט"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "परियोजना का पता"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresa projekta"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projekt címe"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alamat proyek"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indirizzo del progetto"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "プロジェクトアドレス"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "프로젝트 주소"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alamat projek"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prosjektadresse"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projectadres"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adres projektu"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Endereço do projeto"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Endereço do projeto"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresa proiectului"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адрес проекта"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresa projektu"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Projektadress"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ที่อยู่โครงการ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Proje adresi"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адреса проекту"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Địa chỉ dự án"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "项目地址"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "項目地址"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "項目地址"
-          }
-        }
-      }
-    },
     "proverb0" : {
       "comment" : "与其后悔没攒，不如现在开始。（谚语）",
       "extractionState" : "manual",
@@ -34512,226 +34107,7 @@
       }
     },
     "Re-create" : {
-      "comment" : "重新创建",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "إعادة إنشاء"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recrear"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Znovu vytvořit"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genskab"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neu erstellen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Αναδημιουργώ"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recrear"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recrear"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Luo uudelleen"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recréer"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recréer"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "צור מחדש"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "बहलाना"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ponovno stvoriti"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Újra létrehozása"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buat ulang"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ricreare"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "再作成"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "재창조"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buat semula"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gjenskape"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Herscheppen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odtwarzać"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recriar"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recriar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recrea"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Воссоздать"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Znovu vytvoriť"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Återskapa"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "สร้างใหม่"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeniden oluştur"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Відтворити"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tạo lại"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重新创建"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重新創建"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重新創建"
-          }
-        }
-      }
+
     },
     "Re-enter" : {
       "comment" : "重新填写",
@@ -35839,6 +35215,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "提醒時間"
+          }
+        }
+      }
+    },
+    "Resource and technical support" : {
+      "comment" : "资源与技术支持",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "资源与技术支持"
           }
         }
       }
@@ -42938,224 +42326,26 @@
         }
       }
     },
-    "Thank you for your support of our app." : {
-      "comment" : "感谢您对我们应用的支持。",
+    "Thank you to every user who downloaded and used our app, thank you to every user who made an in-app purchase for your support, and thank you to all our friends for your support." : {
+      "comment" : "感谢每一位用户的下载和使用，感谢每一位内购用户的支持，感谢身边朋友的支持。",
       "extractionState" : "manual",
       "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرا لدعم التطبيق لدينا."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies per donar suport a la nostra aplicació."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Děkujeme za podporu naší aplikace."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak fordi du støtter vores app."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank, dass Sie unsere App unterstützen."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Σας ευχαριστούμε που υποστηρίζετε την εφαρμογή μας."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias por apoyar nuestra aplicación."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias por apoyar nuestra aplicación."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos sovelluksemme tukemisesta."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci de soutenir notre application."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci de soutenir notre application."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה שתמכת באפליקציה שלנו."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "हमारे ऐप का समर्थन करने के लिए धन्यवाद।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvala što podržavate našu aplikaciju."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönjük, hogy támogatja alkalmazásunkat."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih telah mendukung aplikasi kami."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie per supportare la nostra app."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "私たちのアプリをサポートしていただきありがとうございます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "우리 앱을 지원해 주셔서 감사합니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kerana menyokong apl kami."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takk for at du støtter appen vår."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bedankt voor het ondersteunen van onze app."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dziękujemy za wsparcie naszej aplikacji."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado por apoiar a nossa aplicação."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado por apoiar a nossa aplicação."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vă mulțumim pentru susținerea aplicației noastre."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо за поддержку нашего приложения."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ďakujeme za podporu našej aplikácie."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack för att du stödjer vår app."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอบคุณสำหรับการสนับสนุนแอปของเรา"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygulamamızı desteklediğiniz için teşekkür ederiz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо за підтримку нашого додатка."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn bạn đã ủng hộ ứng dụng của chúng tôi."
-          }
-        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "感谢您对我们应用的支持。"
+            "value" : "感谢每一位用户的下载和使用，感谢每一位内购用户的支持，感谢身边朋友的支持。"
           }
-        },
-        "zh-Hant" : {
+        }
+      }
+    },
+    "Thank you to the following platforms for their selfless contributions." : {
+      "comment" : "感谢以下平台的无私奉献",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "感謝您對我們應用的支持。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝您對我們應用的支持。"
+            "value" : "感谢以下平台的无私奉献"
           }
         }
       }
@@ -43630,228 +42820,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "鳴謝"
-          }
-        }
-      }
-    },
-    "Thanks for your support" : {
-      "comment" : "感谢支持",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرا على الدعم"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies pel suport"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Díky za podporu"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak for støtten"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "danke für die Unterstützung"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ευχαριστώ για την υποστήριξη"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias por el apoyo"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias por el apoyo"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos tuesta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci pour le soutien"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci pour le soutien"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה על התמיכה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "समर्थन के लिए धन्यवाद"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvala na podršci"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönöm a támogatást"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih atas dukungannya"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie per il supporto"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サポートに感謝します"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "지원해 주셔서 감사합니다"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih atas sokongan"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takk for støtten"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bedankt voor de steun"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dziękuję za wsparcie"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado pelo apoio"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado pelo apoio"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulțumesc pentru sprijin"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо за поддержку"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dakujem za podporu"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack för stödet"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอบคุณสำหรับการสนับสนุน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desteğiniz için teşekkürler"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо за підтримку"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn sự hỗ trợ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感谢支持"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝支持"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝支持"
           }
         }
       }
@@ -49573,228 +48541,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "越南盾"
-          }
-        }
-      }
-    },
-    "We will continue to work hard to develop better works for more people to use for free." : {
-      "comment" : "我们会继续努力开发更好的作品，供更多人免费使用。\n",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سنواصل العمل الجاد لتطوير أعمال أفضل ليستخدمها عدد أكبر من الأشخاص مجانًا."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuarem treballant dur per desenvolupar millors obres perquè més persones les facin servir gratuïtament."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Budeme i nadále tvrdě pracovat na vývoji lepších děl, která budou moci zdarma používat více lidí."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vi vil fortsætte med at arbejde hårdt for at udvikle bedre værker, som flere kan bruge gratis."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wir werden weiterhin hart daran arbeiten, bessere Werke zu entwickeln, damit mehr Menschen sie kostenlos nutzen können."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Θα συνεχίσουμε να εργαζόμαστε σκληρά για να αναπτύξουμε καλύτερα έργα για περισσότερα άτομα που θα τα χρησιμοποιούν δωρεάν."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuaremos trabajando duro para desarrollar mejores trabajos para que más personas los utilicen de forma gratuita."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuaremos trabajando duro para desarrollar mejores trabajos para que más personas los utilicen de forma gratuita."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jatkamme kovasti työtä kehittääksemme parempia teoksia, jotta useammat ihmiset voivat käyttää niitä ilmaiseksi."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nous continuerons à travailler dur pour développer de meilleures œuvres que davantage de personnes pourront utiliser gratuitement."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nous continuerons à travailler dur pour développer de meilleures œuvres que davantage de personnes pourront utiliser gratuitement."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "נמשיך לעבוד קשה כדי לפתח יצירות טובות יותר שיותר אנשים יוכלו להשתמש בהם בחינם."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "हम अधिक लोगों के लिए निःशुल्क उपयोग के लिए बेहतर कार्य विकसित करने के लिए कड़ी मेहनत करना जारी रखेंगे।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavit ćemo naporno raditi na razvoju boljih djela koja će više ljudi besplatno koristiti."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Továbbra is keményen dolgozunk azon, hogy jobb alkotásokat fejlesszünk ki, hogy minél többen használhassák őket ingyenesen."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kami akan terus bekerja keras untuk mengembangkan karya yang lebih baik agar lebih banyak orang dapat menggunakannya secara gratis."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continueremo a lavorare duro per sviluppare opere migliori che possano essere utilizzate gratuitamente da più persone."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今後もより多くの方に無料でご利用いただけるよう、より良い作品の開発に努めてまいります。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "우리는 더 많은 사람들이 무료로 사용할 수 있는 더 나은 작품을 개발하기 위해 계속 열심히 노력할 것입니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kami akan terus bekerja keras untuk membangunkan karya yang lebih baik untuk digunakan lebih ramai orang secara percuma."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vi vil fortsette å jobbe hardt for å utvikle bedre verk som flere kan bruke gratis."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "We zullen hard blijven werken om betere werken te ontwikkelen, zodat meer mensen deze gratis kunnen gebruiken."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Będziemy nadal ciężko pracować, aby opracowywać lepsze dzieła, aby więcej osób mogło z nich korzystać bezpłatnie."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuaremos a trabalhar arduamente para desenvolver melhores trabalhos para que mais pessoas possam utilizar gratuitamente."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuaremos a trabalhar arduamente para desenvolver melhores trabalhos para que mais pessoas possam utilizar gratuitamente."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vom continua să muncim din greu pentru a dezvolta lucrări mai bune pe care mai mulți oameni să le folosească gratuit."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мы продолжим усердно работать над созданием более качественных продуктов, которые смогут использовать бесплатно больше людей."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Budeme aj naďalej usilovne pracovať na vývoji lepších diel, ktoré bude môcť využívať viac ľudí zadarmo."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vi kommer att fortsätta arbeta hårt för att utveckla bättre verk som fler kan använda gratis."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เราจะทำงานอย่างหนักต่อไปเพื่อพัฒนาผลงานที่ดีขึ้นเพื่อให้ผู้คนได้ใช้งานฟรีมากขึ้น"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daha fazla kişinin ücretsiz olarak faydalanabilmesi için daha iyi çalışmalar geliştirmek için çok çalışmaya devam edeceğiz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ми продовжуватимемо наполегливо працювати над розробкою кращих творів, щоб більше людей могли використовувати їх безкоштовно."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chúng tôi sẽ tiếp tục làm việc chăm chỉ để phát triển những tác phẩm tốt hơn để nhiều người có thể sử dụng miễn phí."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "我们会继续努力开发更好的作品，供更多人免费使用。\n"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "我們會繼續努力開發更好的作品，供更多人免費使用。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "我們會繼續努力開發更好的作品，供更多人免費使用。"
           }
         }
       }

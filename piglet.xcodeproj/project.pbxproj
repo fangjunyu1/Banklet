@@ -122,7 +122,6 @@
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
-		1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400AF2D30F15700DC51C0 /* ThanksView.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
 		1D1400B42D31119E00DC51C0 /* Thanks2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B32D31119E00DC51C0 /* Thanks2View.swift */; };
 		1D1400B62D3112BD00DC51C0 /* AboutUs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1400B52D3112BD00DC51C0 /* AboutUs.json */; };
@@ -141,6 +140,9 @@
 		1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */; };
 		1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */; };
 		1D27D83C2EB5CB1300F6AFE6 /* HomeBanksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */; };
+		1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */; };
+		1D2A5EF82EBEE26A00C1F831 /* ThanksDance.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */; };
+		1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */; };
 		1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F922B2E9CA5240077A235 /* GifView.swift */; };
 		1D2F92332E9D2C340077A235 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92322E9D2C320077A235 /* PlaceholderView.swift */; };
 		1D2F92362E9D2F400077A235 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2F92352E9D2F400077A235 /* Lottie */; };
@@ -220,6 +222,7 @@
 		1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D22EBDC61000001CF5 /* SafariView.swift */; };
 		1D66C4D52EBDD75C00001CF5 /* MailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */; };
 		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
+		1D66C4D92EBE2F0600001CF5 /* Sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4D82EBE2F0600001CF5 /* Sun.json */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
@@ -240,7 +243,6 @@
 		1D88545B2D244B27009DE7AE /* Completed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88545A2D244B27009DE7AE /* Completed.swift */; };
 		1D8854612D244FB9009DE7AE /* Fireworks1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D88545F2D244FB9009DE7AE /* Fireworks1.json */; };
 		1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8854602D244FB9009DE7AE /* Fireworks2.json */; };
-		1D89C54F2D506254000DECFF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89C54E2D506254000DECFF /* DetailView.swift */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
 		1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */; };
 		1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */; };
@@ -303,7 +305,6 @@
 		1DF47D922E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF47D912E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
-		1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */; };
 		1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */; };
 		1DFCED362E9BB45500F19FD3 /* BankletWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED352E9BB45400F19FD3 /* BankletWidgetEntry.swift */; };
 		1DFCED382E9BB48A00F19FD3 /* BankletWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCED372E9BB48A00F19FD3 /* BankletWidgetProvider.swift */; };
@@ -450,7 +451,6 @@
 		1D0FA7042D225A9D00ABF5F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
-		1D1400AF2D30F15700DC51C0 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		1D1400B32D31119E00DC51C0 /* Thanks2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thanks2View.swift; sourceTree = "<group>"; };
 		1D1400B52D3112BD00DC51C0 /* AboutUs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AboutUs.json; sourceTree = "<group>"; };
@@ -469,6 +469,9 @@
 		1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankView.swift; sourceTree = "<group>"; };
 		1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProgressView.swift; sourceTree = "<group>"; };
 		1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBanksListView.swift; sourceTree = "<group>"; };
+		1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
+		1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ThanksDance.json; sourceTree = "<group>"; };
+		1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		1D2F922B2E9CA5240077A235 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		1D2F92322E9D2C320077A235 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		1D2F923D2E9D4E030077A235 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -548,6 +551,7 @@
 		1D66C4D22EBDC61000001CF5 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposeViewController.swift; sourceTree = "<group>"; };
 		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		1D66C4D82EBE2F0600001CF5 /* Sun.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sun.json; sourceTree = "<group>"; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -577,7 +581,6 @@
 		1D88545A2D244B27009DE7AE /* Completed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completed.swift; sourceTree = "<group>"; };
 		1D88545F2D244FB9009DE7AE /* Fireworks1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks1.json; sourceTree = "<group>"; };
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
-		1D89C54E2D506254000DECFF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
 		1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
@@ -713,7 +716,6 @@
 		1DF47D932E6D352A002B56C5 /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF555742BF60B1000BF0DE5 /* pigletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletApp.swift; sourceTree = "<group>"; };
 		1DF555782BF60B1200BF0DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		1DFCED352E9BB45400F19FD3 /* BankletWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetEntry.swift; sourceTree = "<group>"; };
 		1DFCED372E9BB48A00F19FD3 /* BankletWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWidgetProvider.swift; sourceTree = "<group>"; };
@@ -822,7 +824,6 @@
 			isa = PBXGroup;
 			children = (
 				1DE736022EB64D2C00573C1A /* HomeActivityView.swift */,
-				1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */,
 			);
 			path = ActiveView;
 			sourceTree = "<group>";
@@ -856,28 +857,25 @@
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
 				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
+				1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */,
 				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
 				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
 				1D88545A2D244B27009DE7AE /* Completed.swift */,
 				1D214F582D2F999E007F1D0E /* Settings.swift */,
-				1D1400AF2D30F15700DC51C0 /* ThanksView.swift */,
 				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
 				1D1400B32D31119E00DC51C0 /* Thanks2View.swift */,
 				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
 				1DCB0C542D3759D00037153C /* GeneralView.swift */,
 				1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */,
-				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
 				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
 				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
 				1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */,
-				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
-				1D89C54E2D506254000DECFF /* DetailView.swift */,
 				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
-				1DF8CEAC2D8F900100C931A1 /* ActivityView.swift */,
 				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
+				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -984,6 +982,7 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1D66C4D82EBE2F0600001CF5 /* Sun.json */,
 				1D1561AC2EB33BEB0041C0DD /* HomeAnimation */,
 				1DE45C712EB3A8180079F76E /* EmptyBanklet.json */,
 				1D1561AF2EB33C1E0041C0DD /* security.json */,
@@ -994,6 +993,7 @@
 				1D1561A82EB2FC040041C0DD /* welcome.json */,
 				1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */,
 				1D66C4CE2EBDB2B400001CF5 /* emptyStats2.json */,
+				1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1088,9 +1088,11 @@
 		1DBCF41B2EB8DA6600B85BF4 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
+				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
+				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
+				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -1126,6 +1128,7 @@
 		1DCBEDC22C02B776005BFFFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */,
 				1D66C4D42EBDD75B00001CF5 /* MailComposeViewController.swift */,
 				1D66C4D22EBDC61000001CF5 /* SafariView.swift */,
 				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
@@ -1512,6 +1515,7 @@
 				1D0386CE2EA0023600E9379F /* gif_Home45.gif in Resources */,
 				1D0386CF2EA0023600E9379F /* gif_Home21.gif in Resources */,
 				1D0386D02EA0023600E9379F /* gif_Home46.gif in Resources */,
+				1D2A5EF82EBEE26A00C1F831 /* ThanksDance.json in Resources */,
 				1D0386D12EA0023600E9379F /* gif_Home11.gif in Resources */,
 				1D0386D22EA0023600E9379F /* gif_Home8.gif in Resources */,
 				1D0386D32EA0023600E9379F /* gif_Home0.gif in Resources */,
@@ -1572,6 +1576,7 @@
 				1D3E142B2D4A5D7000747D20 /* Home45.json in Resources */,
 				1DAD52D22E9E8C2D008D07CB /* Assets.xcassets in Resources */,
 				1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */,
+				1D66C4D92EBE2F0600001CF5 /* Sun.json in Resources */,
 				1D3E14152D4A35F600747D20 /* Home38.json in Resources */,
 				1D3E13FC2D4A160E00747D20 /* Home26.json in Resources */,
 				1D3E14322D4A5D7000747D20 /* Home48.json in Resources */,
@@ -1674,6 +1679,7 @@
 				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
 				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
+				1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
@@ -1729,18 +1735,16 @@
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
+				1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */,
 				1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
-				1D89C54F2D506254000DECFF /* DetailView.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
-				1DF8CEAD2D8F900100C931A1 /* ActivityView.swift in Sources */,
 				1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */,
 				1DE736012EB64D2A00573C1A /* HomeMainView.swift in Sources */,
 				1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */,
 				1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */,
-				1D1400B02D30F15700DC51C0 /* ThanksView.swift in Sources */,
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
 				1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */,

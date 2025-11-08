@@ -149,7 +149,7 @@ struct HomeStatsView: View {
                         }
                     }
                     // 4、存取次数，显示更多
-                    if !recentRecords.isEmpty {
+                    if !savingsRecords.isEmpty {
                         HStack {
                             Text("Access times")
                                 .fontWeight(.medium)
