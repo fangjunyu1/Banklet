@@ -10,10 +10,10 @@
     "    " : {
 
     },
-    " : " : {
+    " %lld " : {
 
     },
-    " %lld " : {
+    ":" : {
 
     },
     "/" : {
@@ -25,16 +25,6 @@
     "%@ %%" : {
 
     },
-    "%@.%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@.%2$@"
-          }
-        }
-      }
-    },
     "%lld" : {
 
     },
@@ -42,9 +32,6 @@
 
     },
     "0.0" : {
-
-    },
-    "A" : {
 
     },
     "A piggy bank is not just a container for coins, it’s a symbol of dreams and discipline." : {
@@ -40605,226 +40592,7 @@
       }
     },
     "Sponsored Apps" : {
-      "comment" : "赞助应用",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "التطبيقات الدعائية"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicacions patrocinades"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponzorované aplikace"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsorerede apps"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gesponserte Apps"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Διαφημιζόμενες εφαρμογές"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicaciones patrocinadas"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicaciones patrocinadas"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsoroidut sovellukset"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Applications sponsorisées"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Applications sponsorisées"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "אפליקציות ממומנות"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "प्रायोजित ऐप्स"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponzorirane aplikacije"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Szponzorált alkalmazások"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplikasi Bersponsor"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App sponsorizzate"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "スポンサー付きアプリ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "후원 앱"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apl yang Ditaja"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsede apper"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gesponsorde apps"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsorowane aplikacje"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicativos patrocinados"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicativos patrocinados"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicații sponsorizate"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спонсорские приложения"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponzorované aplikácie"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsrade appar"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แอพที่ได้รับการสนับสนุน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsorlu Uygulamalar"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спонсоровані програми"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ứng dụng được tài trợ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "赞助应用"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "贊助應用"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "贊助應用"
-          }
-        }
-      }
+
     },
     "Start" : {
       "comment" : "1.1.0 开始",
@@ -44045,6 +43813,18 @@
         }
       }
     },
+    "The piggy bank displays the currency symbol; currency conversion is not currently supported." : {
+      "comment" : "显示存钱罐的货币符号，暂不支持货币转换。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示存钱罐的货币符号，暂不支持货币转换。"
+          }
+        }
+      }
+    },
     "This is empty." : {
       "comment" : "这里是空的。",
       "extractionState" : "manual",
@@ -46163,7 +45943,7 @@
         }
       }
     },
-    "Version Number" : {
+    "version" : {
       "comment" : "版本号",
       "extractionState" : "manual",
       "localizations" : {
@@ -46384,9 +46164,6 @@
           }
         }
       }
-    },
-    "version: %@" : {
-
     },
     "Vibration" : {
       "comment" : "1.0.11:振动",
@@ -49382,19 +49159,7 @@
         }
       }
     },
-    "是否重制内购标识？" : {
-
-    },
-    "是否重置内购标识？" : {
-
-    },
-    "确定" : {
-
-    },
     "重置内购和欢迎界面" : {
-
-    },
-    "重置内购标识" : {
 
     }
   },

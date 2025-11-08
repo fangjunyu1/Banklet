@@ -46,6 +46,52 @@ struct HomeSettingRow: View {
     }
 }
 
+// 设置视图
+struct GeneralSilentRow: View {
+    var title: String
+    var footnote: String?
+    @Binding var mode: Bool
+    
+    var body: some View {
+        VStack {
+            HStack {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(width: 30,height: 30)
+                        .aspectRatio(1, contentMode: .fit)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                    Image("Silent")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                        .aspectRatio(1, contentMode: .fit)
+                        .foregroundColor(mode ? .white : .black)
+                }
+                .padding(.trailing,10)
+                Text(LocalizedStringKey(title))
+                    .foregroundColor(mode ? .white : .black)
+                Spacer()
+                Toggle("", isOn: $mode)
+            }
+            .padding(.vertical,10)
+            .padding(.horizontal,14)
+            .background(mode ? Color(hex: "53ad43") : .white)
+            .cornerRadius(10)
+            if let footnote = footnote {
+                HStack {
+                    Text(LocalizedStringKey(footnote))
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+            }
+        }
+    }
+}
+
 private struct accessoryView: View {
     let accessory: HomeSettingsEnum
     var body: some View {
@@ -57,8 +103,8 @@ private struct accessoryView: View {
                 }
         case .binding(let isOn):
             Toggle("", isOn: isOn)
-            Image(systemName:"chevron.right")
-                .foregroundColor(.black)
+        case .reminder(let notice):
+            reminderTime(notice: notice)
         case .premium:
             Image(systemName:"chevron.right")
                 .foregroundColor(.black)
@@ -73,6 +119,7 @@ private struct accessoryView: View {
         }
     }
 }
+
 
 private struct iconView: View {
     var icon: HomeSettingsIconEnum
@@ -116,6 +163,116 @@ private struct ColorView: View {
                 .frame(width: 30,height: 30)
                 .aspectRatio(1, contentMode: .fit)
                 .cornerRadius(10)
+        }
+    }
+}
+
+// 提醒时间
+private struct reminderTime: View {
+    @EnvironmentObject var appStorage: AppStorageManager
+    @Binding var notice: Bool
+    var body: some View {
+        HStack {
+            if appStorage.isReminderTime {
+                // 日期选择器
+                DatePicker("",
+                           selection: Binding(get: {
+                    Date(timeIntervalSince1970: appStorage.reminderTime)
+                }, set: {
+                    appStorage.reminderTime = $0.timeIntervalSince1970
+                    // 选择日期后，更新调度通知
+                    scheduleLocalNotification()
+                }),
+                           displayedComponents: .hourAndMinute
+                )
+                .datePickerStyle(DefaultDatePickerStyle()) // 日期选择器样式
+                .frame(width: 60,height: 0)
+            }
+            Toggle("", isOn:$appStorage.isReminderTime)
+                .onChange(of: appStorage.isReminderTime) { _, newValue in
+                    if newValue {
+                        // 检查权限，首次弹出消息提示
+                        requestNotificationPermission()
+                    } else {
+                        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                        print("所有未触发的通知已清除")
+                        appStorage.isReminderTime = false
+                    }
+                }
+            .frame(width:70, height:0)
+        }
+        .onAppear {
+            // 为了检查应用的权限是否在后台关闭
+            // 调用消息授权方法重新校验，如果提醒时间字段为true
+            if appStorage.isReminderTime {
+                // 重新执行授权通知进行校验
+                requestNotificationPermission()
+            }
+        }
+    }
+    
+    
+    // 授权通知
+    func requestNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                print("授权失败：\(error.localizedDescription)")
+                // 如果授权失败，系统运行提醒权限设置为false
+                // 授权失败场景可能不常见，更多的是根据granted判断授权成功/失败
+            } else {
+                print("授权结果：\(granted ? "允许" : "拒绝")")
+                appStorage.isReminderTime = granted
+                // 如果当前提示时间为false并且授权结构为false，弹出吐司提示，告知用户可能是通知未授权导致的问题
+                if !appStorage.isReminderTime && !granted {
+                    print("当前应用未授权通知功能")
+                    withAnimation(.easeInOut(duration: 1)){
+                        notice = true
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                        withAnimation(.easeInOut(duration: 1)){
+                            notice = false
+                        }
+                    }
+                    
+                }
+                if granted {
+                    // 清除所有通知
+                    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                    print("所有未触发的通知已清除")
+                    
+                    // 如果授权成功，执行调度本地通知的命令
+                    scheduleLocalNotification()
+                }
+            }
+        }
+    }
+    
+    // 设置调度本地通知
+    func scheduleLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Savings reminder", comment: "Title of the savings reminder notification")
+        content.body = NSLocalizedString("Accumulate today and reap tomorrow.", comment: "Body text of the savings reminder notification")
+        content.sound = .default
+        
+        // 创建日期和时间组件
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.hour, .minute], from: Date(timeIntervalSince1970: appStorage.reminderTime))
+        
+        // 创建日期触发器
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        // 创建通知请求
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        // 将通知添加到通知中心
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("通知调度失败：\(error.localizedDescription)")
+            } else {
+                print("通知调度成功")
+            }
         }
     }
 }

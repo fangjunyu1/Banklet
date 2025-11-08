@@ -133,7 +133,6 @@
 		1D1561B02EB33C1E0041C0DD /* security.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561AF2EB33C1E0041C0DD /* security.json */; };
 		1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1695EA2D201BB10043A645 /* ContentView.swift */; };
 		1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */; };
-		1D214F592D2F999E007F1D0E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D214F582D2F999E007F1D0E /* Settings.swift */; };
 		1D214F5D2D2FAF5E007F1D0E /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */; };
 		1D21686D2D9049E600DC4376 /* LifeSavingsJarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */; };
 		1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* Double.swift */; };
@@ -463,7 +462,6 @@
 		1D1561AF2EB33C1E0041C0DD /* security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = security.json; sourceTree = "<group>"; };
 		1D1695EA2D201BB10043A645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
-		1D214F582D2F999E007F1D0E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
 		1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSavingsJarView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -863,11 +861,9 @@
 				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
 				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
 				1D88545A2D244B27009DE7AE /* Completed.swift */,
-				1D214F582D2F999E007F1D0E /* Settings.swift */,
 				1D1400B32D31119E00DC51C0 /* Thanks2View.swift */,
 				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
-				1DCB0C542D3759D00037153C /* GeneralView.swift */,
 				1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
 				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
@@ -1092,6 +1088,7 @@
 			children = (
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
+				1DCB0C542D3759D00037153C /* GeneralView.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
 				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
 				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
@@ -1728,7 +1725,6 @@
 				1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */,
 				1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */,
 				1D21686D2D9049E600DC4376 /* LifeSavingsJarView.swift in Sources */,
-				1D214F592D2F999E007F1D0E /* Settings.swift in Sources */,
 				1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */,
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,

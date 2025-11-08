@@ -10,6 +10,7 @@ import SwiftUI
 enum HomeSettingsEnum {
     case toggle(Binding<Bool>, ModelConfigManager)
     case binding(Binding<Bool>)
+    case reminder(Binding<Bool>)
     case premium
     case remark(String)
     case none

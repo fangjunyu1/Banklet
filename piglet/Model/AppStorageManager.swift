@@ -216,15 +216,16 @@ class AppStorageManager: ObservableObject {
     }
     
     // 活动入口
-    var isShowActivity = true {
-        didSet {
-            if isShowActivity != oldValue && !isLoading {
-                let store = NSUbiquitousKeyValueStore.default
-                store.set(isShowActivity, forKey: "isShowActivity")
-                store.synchronize() // 强制触发数据同步
-            }
-        }
-    }
+    // 1.1.0版本中被废弃
+//    var isShowActivity = true {
+//        didSet {
+//            if isShowActivity != oldValue && !isLoading {
+//                let store = NSUbiquitousKeyValueStore.default
+//                store.set(isShowActivity, forKey: "isShowActivity")
+//                store.synchronize() // 强制触发数据同步
+//            }
+//        }
+//    }
     
     // 应用图标
     var appIcon = "AppIcon 2"
@@ -280,11 +281,12 @@ class AppStorageManager: ObservableObject {
         isReminderTime = UserDefaults.standard.bool(forKey: "isReminderTime")  // 提醒时间，设置提醒时间为true，否则为false
         reminderTime = UserDefaults.standard.double(forKey: "reminderTime") // 存储用户设定的提醒时间
         accessNotes = UserDefaults.standard.bool(forKey: "accessNotes")  // 存取备注
-        if UserDefaults.standard.object(forKey: "isShowActivity") == nil {
-            // 设置默认值为 true
-            UserDefaults.standard.set(true, forKey: "isShowActivity")
-        }
-        isShowActivity = UserDefaults.standard.bool(forKey: "isShowActivity")  // 活动入口
+        // 显示活动入口，1.1.0版本被废弃
+//        if UserDefaults.standard.object(forKey: "isShowActivity") == nil {
+//            // 设置默认值为 true
+//            UserDefaults.standard.set(true, forKey: "isShowActivity")
+//        }
+//        isShowActivity = UserDefaults.standard.bool(forKey: "isShowActivity")  // 活动入口
         appIcon = UserDefaults.standard.string(forKey: "appIcon") ?? "AppIcon 2"  // 应用图标
         // 音效，默认配置为 true
         if UserDefaults.standard.object(forKey: "isSoundEffects") == nil {
@@ -418,13 +420,14 @@ class AppStorageManager: ObservableObject {
             print("无法从iCloud加载 accessNotes 内容，将当前变量同步到iCloud")
         }
         
-        if store.object(forKey: "isShowActivity") != nil {
-            isShowActivity = store.bool(forKey: "isShowActivity")
-            print("isShowActivity:\(isShowActivity)")
-        } else {
-            store.set(isShowActivity, forKey: "isShowActivity")
-            print("无法从iCloud加载 isShowActivity 内容，将当前变量同步到iCloud")
-        }
+        // 显示活动入口，1.1.0版本被废弃
+//        if store.object(forKey: "isShowActivity") != nil {
+//            isShowActivity = store.bool(forKey: "isShowActivity")
+//            print("isShowActivity:\(isShowActivity)")
+//        } else {
+//            store.set(isShowActivity, forKey: "isShowActivity")
+//            print("无法从iCloud加载 isShowActivity 内容，将当前变量同步到iCloud")
+//        }
 
         // 读取字符串值
         if let storedBackgroundImage = store.string(forKey: "BackgroundImage") {

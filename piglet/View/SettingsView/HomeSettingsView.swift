@@ -25,11 +25,17 @@ struct HomeSettingsView: View {
                 .frame(height: 100)
                 .offset(y: -10)
             
+            // 外层，分隔所有组件视图
             VStack(spacing: 10) {
                 // 启用iCloud
                 HomeSettingRow(color: .color("226AD6"),icon: .sficon("icloud.fill"),title: "Enable iCloud",footnote:"iCloud is in beta, so please be careful when switching on and off.", accessory: .toggle($appStorage.isModelConfigManager, modelConfigManager))
                 // 通用
-                HomeSettingRow(color: .color("A422D6"), icon: .img("general"), title: "General",footnote: "Configure the application's background, animations, icons, and other related parameters.", accessory:.none)
+                
+                NavigationLink(destination: {
+                    GeneralView()
+                }, label: {
+                    HomeSettingRow(color: .color("A422D6"), icon: .img("general"), title: "General",footnote: "Configure the application's background, animations, icons, and other related parameters.", accessory:.none)
+                })
                 
                 // 问题反馈、使用条款、隐私政策
                 VStack(spacing: 0) {
@@ -78,8 +84,7 @@ struct HomeSettingsView: View {
                             .ignoresSafeArea()
                     }
                 }
-                .background(colorScheme == .dark ? AppColor.appGrayColor : .white)
-                .cornerRadius(10)
+                .modifier(SettingVStackRowModifier())
                 
                 // 高级会员
                 HomeSettingRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member",accessory: .none)
@@ -106,11 +111,15 @@ struct HomeSettingsView: View {
                         HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open source",accessory: .none)
                     })
                 }
-                .background(colorScheme == .dark ? AppColor.appGrayColor : .white)
-                .cornerRadius(10)
+                .modifier(SettingVStackRowModifier())
                 
+                Spacer().frame(height: 10)
                 // 版本号
-                Text("version: \(Bundle.main.appVersion)")
+                HStack(spacing: 2) {
+                    Text("version")
+                    Text(":")
+                    Text(Bundle.main.appVersion)
+                }
                     .font(.caption2)
                     .foregroundColor(AppColor.gray)
             }

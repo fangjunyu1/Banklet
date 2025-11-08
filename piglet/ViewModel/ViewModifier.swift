@@ -45,3 +45,12 @@ struct BackgroundModifier: ViewModifier {
             }
     }
 }
+
+struct SettingVStackRowModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .dark ? AppColor.appGrayColor : .white)
+            .cornerRadius(10)
+    }
+}
