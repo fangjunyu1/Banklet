@@ -2743,6 +2743,18 @@
         }
       }
     },
+    "All icons" : {
+      "comment" : "全部图标",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部图标"
+          }
+        }
+      }
+    },
     "Amount" : {
       "comment" : "金额",
       "extractionState" : "manual",
@@ -9868,6 +9880,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前金額"
+          }
+        }
+      }
+    },
+    "Current icon" : {
+      "comment" : "当前图标",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前图标"
           }
         }
       }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainInterfaceAnimationView: View {
+struct AnimationView: View {
     
     @Environment(\.layoutDirection) var layoutDirection // 获取当前语言的文字方向
     @Environment(\.dismiss) var dismiss
@@ -141,7 +141,7 @@ struct MainInterfaceAnimationView: View {
 }
 
 #Preview {
-    MainInterfaceAnimationView()
+    AnimationView()
             .environment(\.locale, .init(identifier: "ar"))
             .environment(AppStorageManager.shared)
             .modelContainer(PiggyBank.preview)

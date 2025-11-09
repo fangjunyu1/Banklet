@@ -15,22 +15,23 @@ struct GeneralView: View {
     
     var body: some View {
         ScrollView {
+            Spacer().frame(height: 10)
             // 外层，分隔所有组件视图
             VStack(spacing: 10) {
                 // 图标、动画、背景
                 VStack(spacing: 0) {
                     // 图标
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: AppIconView()) {
                         HomeSettingRow(color: .color("EAA22A"),icon: .img("icon"),title: "icon", accessory: .none)
                     }
                     Divider().padding(.leading,60)
                     // 动画
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: AnimationView()) {
                         HomeSettingRow(color: .color("56BCA6"),icon: .img("Animation"),title: "Animation", accessory: .none)
                     }
                     Divider().padding(.leading,60)
                     // 背景
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: BackgroundView()) {
                         HomeSettingRow(color: .color("3477F5"),icon: .img("Background"),title: "Background", accessory: .none)
                     }
                 }

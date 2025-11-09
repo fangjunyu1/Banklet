@@ -162,7 +162,7 @@
 		1D3E13D32D49AD7A00747D20 /* Home7.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13CC2D49AD7A00747D20 /* Home7.json */; };
 		1D3E13D42D49AD7A00747D20 /* Home2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13CD2D49AD7A00747D20 /* Home2.json */; };
 		1D3E13D52D49AD7A00747D20 /* Home5.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13CE2D49AD7A00747D20 /* Home5.json */; };
-		1D3E13D72D49ADCC00747D20 /* MainInterfaceAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */; };
+		1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E13D62D49ADCC00747D20 /* AnimationView.swift */; };
 		1D3E13DC2D49DF3D00747D20 /* Home11.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13D82D49DF3C00747D20 /* Home11.json */; };
 		1D3E13DD2D49DF3D00747D20 /* Home10.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13D92D49DF3C00747D20 /* Home10.json */; };
 		1D3E13DE2D49DF3D00747D20 /* Home8.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13DA2D49DF3D00747D20 /* Home8.json */; };
@@ -269,7 +269,7 @@
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
-		1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */; };
+		1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C562D375ADE0037153C /* BackgroundView.swift */; };
 		1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C5A2D37B12A0037153C /* ManagingView.swift */; };
 		1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C02D25B042004B0936 /* PiggyBank.swift */; };
 		1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C22D264209004B0936 /* PiggyBankData.swift */; };
@@ -488,7 +488,7 @@
 		1D3E13CC2D49AD7A00747D20 /* Home7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home7.json; sourceTree = "<group>"; };
 		1D3E13CD2D49AD7A00747D20 /* Home2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home2.json; sourceTree = "<group>"; };
 		1D3E13CE2D49AD7A00747D20 /* Home5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home5.json; sourceTree = "<group>"; };
-		1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceAnimationView.swift; sourceTree = "<group>"; };
+		1D3E13D62D49ADCC00747D20 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		1D3E13D82D49DF3C00747D20 /* Home11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home11.json; sourceTree = "<group>"; };
 		1D3E13D92D49DF3C00747D20 /* Home10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home10.json; sourceTree = "<group>"; };
 		1D3E13DA2D49DF3D00747D20 /* Home8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home8.json; sourceTree = "<group>"; };
@@ -621,7 +621,7 @@
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
 		1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piglet.entitlements; sourceTree = "<group>"; };
 		1DCB0C542D3759D00037153C /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
-		1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceBackgroundView.swift; sourceTree = "<group>"; };
+		1DCB0C562D375ADE0037153C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1DCB0C5A2D37B12A0037153C /* ManagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagingView.swift; sourceTree = "<group>"; };
 		1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -857,6 +857,7 @@
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
 				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
+				1DCB0C562D375ADE0037153C /* BackgroundView.swift */,
 				1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */,
 				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
 				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
@@ -864,11 +865,9 @@
 				1D1400B32D31119E00DC51C0 /* Thanks2View.swift */,
 				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
-				1DCB0C562D375ADE0037153C /* MainInterfaceBackgroundView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
 				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
-				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
-				1D3E13D62D49ADCC00747D20 /* MainInterfaceAnimationView.swift */,
+				1D3E13D62D49ADCC00747D20 /* AnimationView.swift */,
 				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
 				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
@@ -1089,6 +1088,7 @@
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
 				1DCB0C542D3759D00037153C /* GeneralView.swift */,
+				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
 				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
 				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
@@ -1674,7 +1674,7 @@
 				1D1400B42D31119E00DC51C0 /* Thanks2View.swift in Sources */,
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
-				1D3E13D72D49ADCC00747D20 /* MainInterfaceAnimationView.swift in Sources */,
+				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
 				1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */,
 				1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */,
 				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
@@ -1729,7 +1729,7 @@
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,
 				1D01B4652EBB0F720022B549 /* HomeSettingRow.swift in Sources */,
-				1DCB0C572D375ADE0037153C /* MainInterfaceBackgroundView.swift in Sources */,
+				1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */,
 				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
 				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,

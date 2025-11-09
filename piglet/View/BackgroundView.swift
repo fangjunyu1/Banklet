@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainInterfaceBackgroundView: View {
+struct BackgroundView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
@@ -152,7 +152,7 @@ struct MainInterfaceBackgroundView: View {
 }
 
 #Preview {
-    MainInterfaceBackgroundView()
+    BackgroundView()
         .environment(AppStorageManager.shared)
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
