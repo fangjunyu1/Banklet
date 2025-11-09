@@ -16,10 +16,19 @@ struct TitleModifier: ViewModifier {
     }
 }
 
+struct LargeTitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+    }
+}
+
 struct FootNoteModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.caption2)
+            .font(.footnote)
             .foregroundStyle(.gray)
             .multilineTextAlignment(.center)
     }
