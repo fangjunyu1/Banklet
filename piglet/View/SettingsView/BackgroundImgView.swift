@@ -15,8 +15,9 @@ struct BackgroundImgView: View {
             Image(appStorage.BackgroundImage)
                 .resizable()
                 .scaledToFill()
+                .blur(radius: appStorage.isBlurBackground ? 30 : 0)
                 .ignoresSafeArea()
-                .opacity(0.5)
+//                .opacity(0.5)
         } else {
             AppColor.appBgGrayColor
                 .ignoresSafeArea()

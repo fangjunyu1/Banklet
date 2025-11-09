@@ -129,12 +129,12 @@ private struct accessoryView: View {
     var body: some View {
         switch accessory {
         case .toggle(let isOn, let manager):
-            Toggle("", isOn: isOn)
+            Toggle("", isOn: isOn.animation(.easeInOut))
                 .onChange(of: isOn.wrappedValue) { _, newValue in
                     manager.cloudKitMode = newValue ? .privateDatabase : .none
                 }
         case .binding(let isOn):
-            Toggle("", isOn: isOn)
+            Toggle("", isOn: isOn.animation(.easeInOut))
         case .reminder(let notice):
             reminderTime(notice: notice)
         case .premium:
