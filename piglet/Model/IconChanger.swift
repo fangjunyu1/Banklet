@@ -34,8 +34,10 @@ class IconChanger {
                 UIApplication.shared.setAlternateIconName(name)
                 DispatchQueue.main.async {
                     // 修改存储的图标名称
-                    AppStorageManager.shared.appIcon = name ?? "AppIcon 2"
-                    selected?.wrappedValue = AppStorageManager.shared.appIcon
+                    withAnimation {
+                        AppStorageManager.shared.appIcon = name ?? "AppIcon 2"
+                        selected?.wrappedValue = AppStorageManager.shared.appIcon
+                    }
                 }
             } else {
                 print("不支持更换图标功能")

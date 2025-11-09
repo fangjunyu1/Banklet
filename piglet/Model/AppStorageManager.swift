@@ -82,6 +82,17 @@ class AppStorageManager: ObservableObject {
         }
     }
     
+    // 模糊背景
+    var isBlurBackground = false {
+        didSet {
+            if isBlurBackground != oldValue && !isLoading {
+                let store = NSUbiquitousKeyValueStore.default
+                store.set(isBlurBackground, forKey: "isBlurBackground")
+                store.synchronize() // 强制触发数据同步
+            }
+        }
+    }
+    
     // 静默模式
     var isSilentMode = false  {
         didSet {
@@ -266,6 +277,7 @@ class AppStorageManager: ObservableObject {
         LoopAnimation = UserDefaults.standard.string(forKey: "LoopAnimation") ?? "Home0"  // Lottie动画
         isLoopAnimation = UserDefaults.standard.bool(forKey: "isLoopAnimation")  // 循环动画
         isSilentMode = UserDefaults.standard.bool(forKey: "isSilentMode")  // 静默模式
+        isBlurBackground = UserDefaults.standard.bool(forKey: "isBlurBackground") // 模糊背景
         CurrencySymbol = UserDefaults.standard.string(forKey: "CurrencySymbol")  ?? "USD"  // 密码保护
         SwitchTopStyle = UserDefaults.standard.bool(forKey: "SwitchTopStyle")  // 存钱罐首页显示样式，为true则显示已存入的金额
         RatingClicks = UserDefaults.standard.integer(forKey: "RatingClicks")  // 请求评分
@@ -418,6 +430,14 @@ class AppStorageManager: ObservableObject {
         } else {
             store.set(accessNotes, forKey: "accessNotes")
             print("无法从iCloud加载 accessNotes 内容，将当前变量同步到iCloud")
+        }
+        
+        if store.object(forKey: "isBlurBackground") != nil {
+            isBlurBackground = store.bool(forKey: "isBlurBackground")
+            print("isBlurBackground:\(isBlurBackground)")
+        } else {
+            store.set(isBlurBackground, forKey: "isBlurBackground")
+            print("无法从iCloud加载 isBlurBackground 内容，将当前变量同步到iCloud")
         }
         
         // 显示活动入口，1.1.0版本被废弃

@@ -32,8 +32,12 @@ struct pigletApp: App {
             ContentView()
                 .task {
                     await iapManager.loadProduct()   // 加载产品信息
-                    await iapManager.checkAllTransactions()  // 先检查历史交易
                     await iapManager.handleTransactions()   // 加载内购交易更新
+                    #if DEBUG
+                    print("测试环境下，不检查历史交易")
+                    #else
+                    await iapManager.checkAllTransactions()  // 先检查历史交易
+                    #endif
                 }
         }
         .environment(sound)

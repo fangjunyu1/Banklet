@@ -36,7 +36,7 @@ struct HomeSettingRow: View {
             if let footnote = footnote {
                 HStack {
                     Text(LocalizedStringKey(footnote))
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
                     Spacer()
@@ -46,7 +46,39 @@ struct HomeSettingRow: View {
     }
 }
 
-// 设置视图
+// 设置 - 无图标的视图，用于动画、背景
+struct HomeSettingNoIconRow: View {
+    var title: String
+    var footnote: String?
+    let accessory: HomeSettingsEnum
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(LocalizedStringKey(title))
+                    .foregroundColor(.black)
+                Spacer()
+                accessoryView(accessory:accessory)
+            }
+            .padding(.vertical,10)
+            .padding(.horizontal,14)
+            .background(.white)
+            .cornerRadius(10)
+            if let footnote = footnote {
+                HStack {
+                    Text(LocalizedStringKey(footnote))
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                }
+            }
+        }
+        .padding(10)
+    }
+}
+
+// 静默模式
 struct GeneralSilentRow: View {
     var title: String
     var footnote: String?
@@ -82,7 +114,7 @@ struct GeneralSilentRow: View {
             if let footnote = footnote {
                 HStack {
                     Text(LocalizedStringKey(footnote))
-                        .font(.caption2)
+                        .font(.footnote)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
                     Spacer()

@@ -2743,6 +2743,18 @@
         }
       }
     },
+    "All Animations" : {
+      "comment" : "全部动画",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部动画"
+          }
+        }
+      }
+    },
     "All icons" : {
       "comment" : "全部图标",
       "extractionState" : "manual",
@@ -5526,6 +5538,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "根據你目前的年齡和目前薪資，自動推算職涯起點、退休年齡和薪資成長率，計算出一生收入。"
+          }
+        }
+      }
+    },
+    "Blur background" : {
+      "comment" : "模糊背景",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模糊背景"
           }
         }
       }
@@ -9880,6 +9904,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "目前金額"
+          }
+        }
+      }
+    },
+    "Current Animation" : {
+      "comment" : "当前动画",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前动画"
           }
         }
       }

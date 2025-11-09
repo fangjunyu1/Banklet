@@ -35,16 +35,7 @@ struct HomeMainView: View {
         .navigationTitle("Home")
         .searchable(text: $searchText, prompt: "Search for piggy banks")
         .background {
-            if !appStorage.BackgroundImage.isEmpty {
-                Image(appStorage.BackgroundImage)
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                    .opacity(0.5)
-            } else {
-                AppColor.appBgGrayColor
-                    .ignoresSafeArea()
-            }
+            BackgroundImgView()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

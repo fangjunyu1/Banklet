@@ -97,32 +97,3 @@ private struct NoNotice: View {
             .environment(AppStorageManager.shared)
     }
 }
-
-struct GeneralTestView: View {
-    @Environment(\.colorScheme) var colorScheme
-    @Environment(AppStorageManager.self) var appStorage
-    @State private var Notification = false
-    
-    var body: some View {
-        // 提醒时间
-        SettingView(content: {
-            if appStorage.isReminderTime {
-                Image(systemName: "bell.badge")
-                    .padding(.horizontal,5)
-            } else {
-                Image(systemName: "bell")
-                    .padding(.horizontal,5)
-            }
-            Text("Reminder time")
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-            Spacer()
-        })
-    }
-}
-
-
-#Preview {
-    GeneralTestView()
-        .environment(AppStorageManager.shared)
-}

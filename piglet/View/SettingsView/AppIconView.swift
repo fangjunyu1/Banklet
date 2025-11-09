@@ -10,19 +10,13 @@ import SwiftUI
 struct AppIconView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
-    
     @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 2"
     
     let generator = UISelectionFeedbackGenerator()
     
-    let columns = [
-        GridItem(.adaptive(minimum: 100, maximum: 120)), // 控制列宽范围
-        GridItem(.adaptive(minimum: 100, maximum: 120)),
-        GridItem(.adaptive(minimum: 100, maximum: 120))
-    ]
+    let columns = Array(repeating: GridItem(.adaptive(minimum: 100, maximum: 120)), count: 3)
     
     var appIcon: [Int] {
-        //        Array(appStorage.isInAppPurchase ? 0..<36 : 0..<6)
         Array(0..<36)
     }
     
@@ -33,9 +27,8 @@ struct AppIconView: View {
     var body: some View {
         VStack {
             Spacer().frame(height: 10)
-            Text("Current icon")
-                .font(.footnote)
-                .foregroundColor(.gray)
+            // 当前图标
+            Footnote(text: "Current icon")
             HStack(alignment: .center) {
                 Image(selectedIconName)
                     .resizable()
@@ -44,12 +37,12 @@ struct AppIconView: View {
                     .frame(width: 95,height: 95)
             }
             Spacer().frame(height: 20)
+            // 所有图标
             HStack {
-                Text("All icons")
-                    .font(.footnote)
-                    .foregroundColor(.gray)
+                Footnote(text: "All icons")
                 Spacer()
             }
+            // 图标列表
             ScrollView(showsIndicators: false ) {
                 LazyVGrid(columns:  columns,spacing: 20) {
                     ForEach(appIcon, id: \.self) { index in
@@ -73,18 +66,13 @@ struct AppIconView: View {
                         .overlay {
                             // 未内购的图标
                             if !appStorage.isInAppPurchase && index >= appIconLimit {
-                                lockApp()   // 未解锁的状态
+                                LockApp()   // 未解锁的状态
                             }
                         }
                     }
                 }
-                Spacer().frame(height:20)
                 // Freepik备注
-                HStack(alignment: .center) {
-                    Text("Image by freepik")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                }
+                FootnoteSource(text: "Image by freepik")
             }
         }
         .navigationTitle("icon")
@@ -97,31 +85,11 @@ struct AppIconView: View {
             generator.prepare()
             generator.selectionChanged()
         }
-        IconChanger.changeIconSilently(to: iconName,selected: $selectedIconName)
+            IconChanger.changeIconSilently(to: iconName,selected: $selectedIconName)
         print("点击了:\(iconName)")
     }
 }
 
-private struct lockApp: View {
-    var body: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Image(systemName: "lock.fill")
-                    .imageScale(.small)
-                    .padding(.vertical,6)
-                    .padding(.horizontal,10)
-                    .foregroundColor(.white)
-                    .background(AppColor.appColor)
-                    .cornerRadius(5)
-            }
-        }
-        .background {
-            Color.black.opacity(0.1).cornerRadius(10)
-        }
-    }
-}
 #Preview {
     NavigationStack {
         AppIconView()
