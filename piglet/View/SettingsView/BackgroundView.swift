@@ -51,11 +51,13 @@ struct BackgroundView: View {
     }
     // 点击背景，触发振动
     private func selectedBackground(_ index: Int?) {
+        print("触发振动")
         if appStorage.isVibration {
             // 发生振动
             generator.prepare()
             generator.selectionChanged()
         }
+        print("更换背景")
         withAnimation {
             if let index = index {
                 print("更新壁纸:bg\(index)")
@@ -81,7 +83,6 @@ private struct BackgroundItemView: View {
         self.action = action
     }
     var body: some View {
-        
         ZStack {
             // 选中框
             RoundedRectangle(cornerRadius: 10)

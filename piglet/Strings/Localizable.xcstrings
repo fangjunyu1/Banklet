@@ -2755,6 +2755,18 @@
         }
       }
     },
+    "All Currencies" : {
+      "comment" : "全部币种",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部币种"
+          }
+        }
+      }
+    },
     "All icons" : {
       "comment" : "全部图标",
       "extractionState" : "manual",
@@ -9916,6 +9928,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "当前动画"
+          }
+        }
+      }
+    },
+    "Current Currency" : {
+      "comment" : "当前币种",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前币种"
           }
         }
       }

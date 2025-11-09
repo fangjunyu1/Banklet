@@ -93,7 +93,7 @@ struct GeneralSilentRow: View {
                         .frame(width: 30,height: 30)
                         .aspectRatio(1, contentMode: .fit)
                         .cornerRadius(10)
-                        .shadow(radius: 5)
+                        .shadow(radius: 2)
                     Image("Silent")
                         .resizable()
                         .scaledToFit()

@@ -876,7 +876,6 @@
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
 				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
-				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
 				1D214F5C2D2FAF5E007F1D0E /* SettingButton.swift */,
 				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
@@ -1105,6 +1104,7 @@
 				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
 				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
+				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";

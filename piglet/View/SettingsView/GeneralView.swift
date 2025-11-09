@@ -41,7 +41,7 @@ struct GeneralView: View {
                 GeneralSilentRow(title: "Silent Mode",footnote: "After waiting for 10 seconds, hide the main view buttons and only show the animation.", mode:$appStorage.isSilentMode)
                 
                 // 货币符号
-                NavigationLink(destination: {}) {
+                NavigationLink(destination: CurrencySymbolView() ) {
                     HomeSettingRow(color: .color("6025E2"),icon: .img("CurrencySymbol"),title: "Currency Symbol",footnote: "The piggy bank displays the currency symbol; currency conversion is not currently supported.", accessory: .none)
                 }
                 
