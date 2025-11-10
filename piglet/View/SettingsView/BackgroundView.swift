@@ -51,12 +51,8 @@ struct BackgroundView: View {
     }
     // 点击背景，触发振动
     private func selectedBackground(_ index: Int?) {
-        print("触发振动")
-        if appStorage.isVibration {
-            // 发生振动
-            generator.prepare()
-            generator.selectionChanged()
-        }
+        // 振动
+        HapticManager.shared.selectionChanged()
         print("更换背景")
         withAnimation {
             if let index = index {

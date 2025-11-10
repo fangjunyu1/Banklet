@@ -43,6 +43,14 @@ struct LottieModifier: ViewModifier {
     }
 }
 
+struct LottieModifier2: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxHeight: 180)
+            .frame(maxWidth: 500)
+    }
+}
+
 struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -54,6 +62,7 @@ struct BackgroundModifier: ViewModifier {
             }
     }
 }
+
 
 struct SettingVStackRowModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme

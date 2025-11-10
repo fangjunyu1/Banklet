@@ -4,9 +4,6 @@
     "" : {
 
     },
-    "  " : {
-
-    },
     "    " : {
 
     },
@@ -14,6 +11,9 @@
 
     },
     ":" : {
+
+    },
+    "(%@" : {
 
     },
     "/" : {
@@ -34,8 +34,32 @@
     "0.0" : {
 
     },
+    "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal." : {
+      "comment" : "永久会员一次购买，永久有效，无需续费。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永久会员一次购买，永久有效，无需续费。"
+          }
+        }
+      }
+    },
     "A piggy bank is not just a container for coins, it’s a symbol of dreams and discipline." : {
 
+    },
+    "A variety of solid color backgrounds ensure a fresh experience every time you open the app." : {
+      "comment" : "丰富的纯色主题背景，让每一次打开都充满新鲜感。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "丰富的纯色主题背景，让每一次打开都充满新鲜感。"
+          }
+        }
+      }
     },
     "About Us" : {
       "comment" : "关于我们",
@@ -3892,228 +3916,6 @@
     "App Store" : {
       "extractionState" : "manual"
     },
-    "Apple will adjust the specific amount of the sponsorship amount based on the exchange rate/tax of the national currency." : {
-      "comment" : "Apple会根据国家货币的汇率/税费调整赞助金额的具体数值。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ستقوم Apple بتعديل القيمة المحددة لمبلغ الرعاية بناءً على سعر صرف العملة الوطنية/الضرائب."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple ajustarà el valor específic de l'import del patrocini en funció del tipus de canvi/impostos de la moneda nacional."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple upraví konkrétní hodnotu sponzorské částky na základě směnného kurzu národní měny/daní."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple vil justere den specifikke værdi af sponsoratbeløbet baseret på den nationale valutakurs/skatter."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple wird den spezifischen Wert des Sponsoringbetrags basierend auf dem Wechselkurs/den Steuern der Landeswährung anpassen."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Η Apple θα προσαρμόσει τη συγκεκριμένη αξία του ποσού της χορηγίας με βάση την συναλλαγματική ισοτιμία/φόρους του εθνικού νομίσματος."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple ajustará el valor específico del monto del patrocinio en función del tipo de cambio/impuestos de la moneda nacional."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple ajustará el valor específico del monto del patrocinio en función del tipo de cambio/impuestos de la moneda nacional."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple säätää sponsorointisumman erityistä arvoa kansallisen valuutan vaihtokurssin/verojen perusteella."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple ajustera la valeur spécifique du montant du parrainage en fonction du taux de change/des taxes de la monnaie nationale."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple ajustera la valeur spécifique du montant du parrainage en fonction du taux de change/des taxes de la monnaie nationale."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "אפל תתאים את הערך הספציפי של סכום החסות בהתבסס על שער/המסים של המטבע הלאומי."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple राष्ट्रीय मुद्रा विनिमय दर/करों के आधार पर प्रायोजन राशि के विशिष्ट मूल्य को समायोजित करेगा।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple će prilagoditi određenu vrijednost iznosa sponzorstva na temelju tečaja nacionalne valute/poreza."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Az Apple a szponzorációs összeg konkrét értékét a nemzeti valuta árfolyama/adói alapján módosítja."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple akan menyesuaikan nilai spesifik jumlah sponsorship berdasarkan nilai tukar mata uang nasional/pajak."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple adeguerà il valore specifico dell'importo della sponsorizzazione in base al tasso di cambio/tasse della valuta nazionale."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple は、各国の為替レート/税金に基づいてスポンサーシップ金額の具体的な値を調整します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple은 국가별 환율/세금을 기준으로 후원 금액의 구체적인 가치를 조정할 예정입니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple akan melaraskan nilai khusus jumlah tajaan berdasarkan kadar pertukaran mata wang negara/cukai."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple vil justere den spesifikke verdien av sponsorbeløpet basert på den nasjonale valutakursen/skattene."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple zal de specifieke waarde van het sponsorbedrag aanpassen op basis van de nationale wisselkoers/belastingen."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple dostosuje konkretną wartość kwoty sponsorowania na podstawie kursu wymiany waluty krajowej/podatków."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A Apple ajustará o valor específico do valor do patrocínio com base na taxa de câmbio/impostos da moeda nacional."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A Apple ajustará o valor específico do valor do patrocínio com base na taxa de câmbio/impostos da moeda nacional."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple va ajusta valoarea specifică a sumei de sponsorizare pe baza cursului/taxelor în moneda națională."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple скорректирует конкретную стоимость спонсорской суммы в зависимости от курса обмена национальной валюты/налогов."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spoločnosť Apple upraví konkrétnu hodnotu sponzorskej sumy na základe výmenného kurzu národnej meny/daní."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple kommer att justera det specifika värdet på sponsringsbeloppet baserat på den nationella valutakursen/skatterna."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple จะปรับมูลค่าเฉพาะของจำนวนเงินสนับสนุนตามอัตราแลกเปลี่ยนสกุลเงินของประเทศ/ภาษี"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple, sponsorluk tutarının spesifik değerini ulusal döviz kuruna/vergilere göre ayarlayacaktır."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple коригуватиме конкретне значення суми спонсорства на основі курсу обміну національної валюти/податків."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple sẽ điều chỉnh giá trị cụ thể của số tiền tài trợ dựa trên tỷ giá/thuế hối đoái quốc gia."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple会根据国家货币的汇率/税费调整赞助金额的具体数值。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple會根據國家貨幣的匯率/稅費調整贊助金額的具體數值。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple會根據國家貨幣的匯率/稅費調整贊助金額的具體數值。"
-          }
-        }
-      }
-    },
     "Are you sure you want to delete this piggy bank?" : {
       "comment" : "你确定要删除该存钱罐么？",
       "extractionState" : "manual",
@@ -5308,6 +5110,18 @@
         }
       }
     },
+    "Background Images" : {
+      "comment" : "背景图片",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景图片"
+          }
+        }
+      }
+    },
     "Banklet" : {
       "comment" : "应用名称",
       "extractionState" : "manual",
@@ -5550,6 +5364,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "根據你目前的年齡和目前薪資，自動推算職涯起點、退休年齡和薪資成長率，計算出一生收入。"
+          }
+        }
+      }
+    },
+    "Best choice" : {
+      "comment" : "最佳选择",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最佳选择"
           }
         }
       }
@@ -6766,6 +6592,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "瑞士法郎"
+          }
+        }
+      }
+    },
+    "Choose a solution" : {
+      "comment" : "选择方案",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择方案"
           }
         }
       }
@@ -8144,6 +7982,18 @@
         }
       }
     },
+    "Contents" : {
+      "comment" : "包含内容",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包含内容"
+          }
+        }
+      }
+    },
     "Continue" : {
       "comment" : "继续",
       "extractionState" : "manual",
@@ -8362,6 +8212,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "繼續"
+          }
+        }
+      }
+    },
+    "Continuously updated" : {
+      "comment" : "持续更新",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "持续更新"
           }
         }
       }
@@ -11777,6 +11639,30 @@
         }
       }
     },
+    "Desktop Icons" : {
+      "comment" : "桌面图标",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桌面图标"
+          }
+        }
+      }
+    },
+    "Desktop widgets have been fully upgraded, supporting transparent and dynamic styles, and updating in sync with the app." : {
+      "comment" : "桌面小组件全面升级，支持透明与动态样式，与 App 同步焕新。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桌面小组件全面升级，支持透明与动态样式，与 App 同步焕新。"
+          }
+        }
+      }
+    },
     "Details" : {
       "comment" : "详细信息",
       "extractionState" : "manual",
@@ -13397,6 +13283,18 @@
         }
       }
     },
+    "Enjoy exclusive animation effects to make the savings process smoother and more engaging." : {
+      "comment" : "获得专属动画效果，让储蓄过程更流畅、更生动。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得专属动画效果，让储蓄过程更流畅、更生动。"
+          }
+        }
+      }
+    },
     "EUR" : {
       "comment" : "1.0.6:欧元",
       "extractionState" : "manual",
@@ -14093,228 +13991,6 @@
         }
       }
     },
-    "for providing free images or animations." : {
-      "comment" : "提供的免费图片或动画素材。\n",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "الصور المجانية أو الرسوم المتحركة المقدمة."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "S'ofereixen imatges o animacions gratuïtes."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Volné obrazy nebo animace poskytovaly."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratis billeder eller animationer leveres."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kostenlose Bilder oder Animationen zur Verfügung gestellt."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Παρέχονται δωρεάν εικόνες ή κινούμενα σχέδια."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imágenes o animaciones gratuitas proporcionadas."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imágenes o animaciones gratuitas proporcionadas."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ilmaisia kuvia tai animaatioita tarjotaan."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Images ou animations gratuites fournies."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Images ou animations gratuites fournies."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תמונות או אנימציות בחינם מסופקות."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "निःशुल्क छवियाँ या एनिमेशन प्रदान किए गए।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dostupne besplatne slike ili animacije."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ingyenes képek vagy animációk biztosítottak."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gambar atau animasi gratis disediakan."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Immagini o animazioni gratuite fornite."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無料の画像またはアニメーションが提供されます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "무료 이미지 또는 애니메이션이 제공됩니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imej atau animasi percuma disediakan."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratis bilder eller animasjoner tilbys."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Er worden gratis afbeeldingen of animaties aangeboden."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dostępne bezpłatne obrazy lub animacje."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagens ou animações gratuitas fornecidas."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagens ou animações gratuitas fornecidas."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagini sau animații gratuite oferite."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Предоставляются бесплатные изображения или анимация."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "K dispozícii sú bezplatné obrázky alebo animácie."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratis bilder eller animationer tillhandahålls."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ให้ภาพหรือภาพเคลื่อนไหวฟรี"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ücretsiz resimler veya animasyonlar sağlanır."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Надаються безкоштовні зображення або анімація."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hình ảnh hoặc hình ảnh động miễn phí được cung cấp."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "提供的免费图片或动画素材。\n"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "提供的免費圖片或動畫素材。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "提供的免費圖片或動畫素材。"
-          }
-        }
-      }
-    },
     "GBP" : {
       "comment" : "1.0.6英镑",
       "extractionState" : "manual",
@@ -14789,231 +14465,21 @@
         }
       }
     },
-    "Get more pictures and animations." : {
-      "comment" : "1.0.6:获得更多图片和动画效果。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "احصل على المزيد من الصور والرسوم المتحركة."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obteniu més imatges i animacions."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Získejte více obrázků a animací."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Få flere billeder og animationer."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Holen Sie sich mehr Bilder und Animationen."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Λάβετε περισσότερες εικόνες και κινούμενα σχέδια."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtén más imágenes y efectos de animación."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtén más imágenes y efectos de animación."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hanki lisää kuvia ja animaatioita."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenez plus d'images et d'animations."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenez plus d'images et d'animations."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "קבל עוד תמונות ואנימציות."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "अधिक छवियाँ और एनिमेशन प्राप्त करें."
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dobijte više slika i animacija."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Szerezzen be több képet és animációt."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dapatkan lebih banyak gambar dan animasi."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ottieni più immagini e animazioni."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "さらに多くの画像とアニメーションを入手してください。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "더 많은 사진과 애니메이션을 얻으세요."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dapatkan lebih banyak gambar dan animasi."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Få flere bilder og animasjoner."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ontvang meer afbeeldingen en animaties."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uzyskaj więcej zdjęć i animacji."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenha mais fotografias e animações."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenha mais fotografias e animações."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obțineți mai multe imagini și animații."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Получите больше изображений и анимации."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Získajte viac obrázkov a animácií."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Få fler bilder och animationseffekter."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "รับรูปภาพและเอฟเฟกต์แอนิเมชั่นเพิ่มเติม"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daha fazla resim ve animasyon efekti alın."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отримуйте більше зображень і анімаційних ефектів."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nhận thêm hình ảnh và hiệu ứng hoạt hình."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "获得更多图片、体验新功能。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "獲得更多圖片和動畫效果。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "獲得更多圖片和動畫效果。"
-          }
-        }
-      }
-    },
     "GitHub" : {
       "comment" : "GitHub",
       "extractionState" : "manual"
+    },
+    "Give your piggy bank a fresh new look with more customization options, smoother animations, and unique themes." : {
+      "comment" : "拥有更多自定义选项、更流畅的动画和独特主题，让你的存钱罐焕发新生命。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拥有更多自定义选项、更流畅的动画和独特主题，让你的存钱罐焕发新生命。"
+          }
+        }
+      }
     },
     "Go directly to the main interface" : {
       "comment" : "直接进入主界面",
@@ -16734,228 +16200,6 @@
         }
       }
     },
-    "If you are satisfied with our app, we hope you can sponsor us through in-app purchases to help us develop more and better apps." : {
-      "comment" : "如果您对我们的应用满意，希望您通过内购的形式赞助我们，以帮助我们开发更多更好的应用。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "إذا كنت راضيًا عن تطبيقنا، نأمل أن تدعمنا من خلال عمليات الشراء داخل التطبيق لمساعدتنا في تطوير تطبيقات أكثر وأفضل."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si estàs satisfet amb la nostra aplicació, esperem que ens patrocinaràs mitjançant compres integrades a l'aplicació per ajudar-nos a desenvolupar més i millors aplicacions."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokud jste s naší aplikací spokojeni, doufáme, že nás budete sponzorovat prostřednictvím nákupů v aplikaci, abyste nám pomohli vyvíjet více a lepších aplikací."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvis du er tilfreds med vores applikation, håber vi, at du vil sponsorere os gennem køb i appen for at hjælpe os med at udvikle flere og bedre applikationer."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wenn Sie mit unserer Anwendung zufrieden sind, hoffen wir, dass Sie uns durch In-App-Käufe sponsern, um uns bei der Entwicklung weiterer und besserer Anwendungen zu helfen."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Εάν είστε ικανοποιημένοι με την εφαρμογή μας, ελπίζουμε να μας χορηγήσετε μέσω αγορών εντός εφαρμογής για να μας βοηθήσετε να αναπτύξουμε περισσότερες και καλύτερες εφαρμογές."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si está satisfecho con nuestra aplicación, esperamos que nos patrocine mediante compras dentro de la aplicación para ayudarnos a desarrollar más y mejores aplicaciones."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si está satisfecho con nuestra aplicación, esperamos que nos patrocine mediante compras dentro de la aplicación para ayudarnos a desarrollar más y mejores aplicaciones."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jos olet tyytyväinen sovellukseemme, toivomme, että sponsoroit meitä sovelluksen sisäisillä ostoilla auttaaksemme meitä kehittämään enemmän ja parempia sovelluksia."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si vous êtes satisfait de notre application, nous espérons que vous nous parrainerez via des achats intégrés pour nous aider à développer des applications plus nombreuses et de meilleure qualité."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si vous êtes satisfait de notre application, nous espérons que vous nous parrainerez via des achats intégrés pour nous aider à développer des applications plus nombreuses et de meilleure qualité."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "אם אתה מרוצה מהאפליקציה שלנו, אנו מקווים שתיתן לנו חסות באמצעות רכישות בתוך האפליקציה כדי לעזור לנו לפתח יישומים נוספים וטובים יותר."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "यदि आप हमारे एप्लिकेशन से संतुष्ट हैं, तो हमें उम्मीद है कि आप हमें अधिक और बेहतर एप्लिकेशन विकसित करने में मदद करने के लिए इन-ऐप खरीदारी के माध्यम से प्रायोजित करेंगे।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ako ste zadovoljni našom aplikacijom, nadamo se da ćete nas sponzorirati putem kupnje unutar aplikacije kako biste nam pomogli da razvijemo više i boljih aplikacija."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ha elégedett az alkalmazásunkkal, reméljük, hogy alkalmazáson belüli vásárlásokkal szponzorál minket, hogy több és jobb alkalmazást fejleszthessünk."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jika Anda puas dengan aplikasi kami, kami berharap Anda mensponsori kami melalui pembelian dalam aplikasi untuk membantu kami mengembangkan aplikasi yang lebih banyak dan lebih baik."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se sei soddisfatto della nostra applicazione, speriamo che ci sponsorizzerai tramite acquisti in-app per aiutarci a sviluppare applicazioni sempre migliori."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "私たちのアプリケーションにご満足いただけましたら、アプリ内購入を通じてスポンサーになっていただき、より良いアプリケーションの開発にご協力いただければ幸いです。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "우리 애플리케이션에 만족하신다면, 더 많은 더 나은 애플리케이션을 개발하는 데 도움이 되도록 인앱 구매를 통해 우리를 후원해 주시기를 바랍니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jika anda berpuas hati dengan aplikasi kami, kami berharap anda akan menaja kami melalui pembelian dalam apl untuk membantu kami membangunkan lebih banyak aplikasi dan lebih baik."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvis du er fornøyd med applikasjonen vår, håper vi at du vil sponse oss gjennom kjøp i appen for å hjelpe oss med å utvikle flere og bedre applikasjoner."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Als u tevreden bent met onze applicatie, hopen we dat u ons wilt sponsoren via in-app-aankopen om ons te helpen meer en betere applicaties te ontwikkelen."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jeśli jesteś zadowolony z naszej aplikacji, mamy nadzieję, że będziesz nas sponsorować poprzez zakupy w aplikacji, aby pomóc nam rozwijać więcej i lepszych aplikacji."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se estiver satisfeito com a nossa aplicação, esperamos que nos patrocine através de compras na aplicação para nos ajudar a desenvolver mais e melhores aplicações."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se estiver satisfeito com a nossa aplicação, esperamos que nos patrocine através de compras na aplicação para nos ajudar a desenvolver mais e melhores aplicações."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dacă sunteți mulțumit de aplicația noastră, sperăm că ne veți sponsoriza prin achiziții în aplicație pentru a ne ajuta să dezvoltăm mai multe aplicații și mai bune."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Если вы удовлетворены нашим приложением, мы надеемся, что вы спонсируете нас посредством покупок внутри приложения, чтобы помочь нам разрабатывать больше и лучше приложений."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ak ste s našou aplikáciou spokojní, dúfame, že nás budete sponzorovať prostredníctvom nákupov v aplikácii, aby ste nám pomohli vyvinúť viac a lepších aplikácií."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Om du är nöjd med vår applikation hoppas vi att du kommer att sponsra oss genom köp i appen för att hjälpa oss att utveckla fler och bättre applikationer."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "หากคุณพอใจกับแอปพลิเคชันของเรา เราหวังว่าคุณจะสนับสนุนเราผ่านการซื้อในแอป เพื่อช่วยเราพัฒนาแอปพลิเคชันให้ดียิ่งขึ้น"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygulamamızdan memnun kaldıysanız, daha fazla ve daha iyi uygulamalar geliştirmemize yardımcı olmak için uygulama içi satın alımlar yoluyla bize sponsor olacağınızı umuyoruz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Якщо ви задоволені нашою програмою, ми сподіваємося, що ви станете спонсором нас через покупки в програмі, щоб допомогти нам розробляти більше та кращих програм."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nếu bạn hài lòng với ứng dụng của chúng tôi, chúng tôi hy vọng bạn sẽ tài trợ cho chúng tôi thông qua mua hàng trong ứng dụng để giúp chúng tôi phát triển các ứng dụng ngày càng tốt hơn."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果您对我们的应用满意，希望您通过内购的形式赞助我们，以帮助我们开发更多更好的应用。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果您對我們的應用程式滿意，希望您透過內購的形式贊助我們，以幫助我們開發更多更好的應用程式。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果您對我們的應用程式滿意，希望您透過內購的形式贊助我們，以幫助我們開發更多更好的應用程式。"
-          }
-        }
-      }
-    },
     "ILS" : {
       "comment" : "1.0.6:以色列新谢克尔",
       "extractionState" : "manual",
@@ -17453,228 +16697,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "进行中"
-          }
-        }
-      }
-    },
-    "In-app purchase completed" : {
-      "comment" : "内购完成",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "اكتملت عملية الشراء داخل التطبيق"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compra des de l'aplicació completada"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nákup v aplikaci dokončen"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Køb i appen er gennemført"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In-App-Kauf abgeschlossen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Η αγορά εντός εφαρμογής ολοκληρώθηκε"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compra desde la aplicación completada"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compra desde la aplicación completada"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sovelluksen sisäinen osto tehty"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achat via l'application terminé"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achat via l'application terminé"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הרכישה בתוך האפליקציה הושלמה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "इन-ऐप खरीदारी पूरी हुई"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kupnja putem aplikacije dovršena"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Az alkalmazáson belüli vásárlás befejeződött"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pembelian dalam aplikasi selesai"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Acquisto in-app completato"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリ内購入が完了しました"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "인앱 구매 완료"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pembelian dalam apl selesai"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kjøp i app fullført"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In-app-aankoop voltooid"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zakup w aplikacji zakończony"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compra na aplicação concluída"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compra na aplicação concluída"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achiziție în aplicație finalizată"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Покупка в приложении завершена"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nákup v aplikácii bol dokončený"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köp i appen slutfört"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "การซื้อในแอปเสร็จสมบูรณ์"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygulama içi satın alma tamamlandı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Покупку в додатку завершено"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mua hàng trong ứng dụng đã hoàn tất"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "内购完成"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "內購完成"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "內購完成"
           }
         }
       }
@@ -19575,6 +18597,18 @@
         }
       }
     },
+    "Lifetime" : {
+      "comment" : "永久",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永久"
+          }
+        }
+      }
+    },
     "lifetime wealth planning" : {
       "comment" : "1.0.10一生财富规划",
       "extractionState" : "manual",
@@ -21145,6 +20179,30 @@
         }
       }
     },
+    "Member Animations" : {
+      "comment" : "会员动画",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会员动画"
+          }
+        }
+      }
+    },
+    "Members who have already purchased memberships can retrieve them through the \"Restore Purchase\" function." : {
+      "comment" : "已购买会员可通过“恢复购买”找回。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已购买会员可通过“恢复购买”找回。"
+          }
+        }
+      }
+    },
     "Modify the detailed information style on the left side of the home page." : {
       "comment" : "1.0.5修改首页左侧的详细信息样式。",
       "extractionState" : "manual",
@@ -21363,6 +20421,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "修改首頁左側的詳細資訊樣式。"
+          }
+        }
+      }
+    },
+    "Month" : {
+      "comment" : "月",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        }
+      }
+    },
+    "Monthly" : {
+      "comment" : "按月",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按月"
           }
         }
       }
@@ -23517,228 +22599,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "挪威克朗"
-          }
-        }
-      }
-    },
-    "Non-consumable items" : {
-      "comment" : "非消耗型项目",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "العناصر غير الاستهلاكية"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "articles no consumibles"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nespotřebitelné předměty"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ikke-forbrugsvarer"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nicht verbrauchbare Gegenstände"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "μη αναλώσιμα είδη"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "artículos no consumibles"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "artículos no consumibles"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ei-kulutustuotteita"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "articles non consommables"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "articles non consommables"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "פריטים שאינם מתכלים"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गैर उपभोज्य वस्तुएँ"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nepotrošni predmeti"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nem fogyasztható tárgyak"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "barang-barang yang tidak dapat dikonsumsi"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "articoli non consumabili"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非消耗品"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "비소모성 품목"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "barangan yang tidak boleh digunakan"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ikke-forbruksvarer"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "niet-consumeerbare artikelen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "przedmioty niezużywalne"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "artigos não consumíveis"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "artigos não consumíveis"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "articole neconsumabile"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "непотребляемые предметы"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "nespotrebné predmety"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "icke förbrukningsartiklar"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "รายการที่ไม่บริโภค"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sarf malzemesi olmayan öğeler"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "предмети неспоживного призначення"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "vật dụng không tiêu hao"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非消耗型项目"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非消耗型項目"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非消耗型項目"
           }
         }
       }
@@ -27810,228 +26670,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隱私權政策"
-          }
-        }
-      }
-    },
-    "Privacy Policy (Chinese)" : {
-      "comment" : "隐私政策（中文）",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سياسة الخصوصية (الصينية)"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Política de privadesa (xinès)"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zásady ochrany osobních údajů (čínština)"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privatlivspolitik (kinesisk)"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datenschutzrichtlinie (Chinesisch)"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Πολιτική Απορρήτου (Κινεζικά)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Política de privacidad (chino)"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Política de privacidad (chino)"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tietosuojakäytäntö (kiina)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politique de confidentialité (chinois)"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politique de confidentialité (chinois)"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מדיניות פרטיות (סינית)"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गोपनीयता नीति (चीनी)"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politika privatnosti (kineski)"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adatvédelmi irányelvek (kínai)"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kebijakan Privasi (Cina)"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informativa sulla privacy (cinese)"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "プライバシーポリシー（中国語）"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개인정보 보호정책(중국어)"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dasar Privasi (Bahasa Cina)"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Personvernregler (kinesisk)"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacybeleid (Chinees)"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Polityka prywatności (chiński)"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Política de Privacidade (chinês)"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Política de Privacidade (chinês)"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politica de confidențialitate (chineză)"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Политика конфиденциальности (китайский)"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zásady ochrany osobných údajov (čínština)"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sekretesspolicy (kinesiska)"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "นโยบายความเป็นส่วนตัว (ภาษาจีน)"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gizlilik Politikası (Çince)"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Політика конфіденційності (китайська)"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chính sách quyền riêng tư (tiếng Trung)"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隐私政策（中文）"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隱私權政策（中文）"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隱私權政策（中文）"
           }
         }
       }
@@ -33802,6 +32440,30 @@
         }
       }
     },
+    "Purchase Membership" : {
+      "comment" : "购买会员",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "购买会员"
+          }
+        }
+      }
+    },
+    "Purchase Tips" : {
+      "comment" : "购买提示",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "购买提示"
+          }
+        }
+      }
+    },
     "Query and count every record, and use visual charts to show your wealth." : {
       "comment" : "查询和统计每一笔记录，用可视化图表展现你的财富。",
       "extractionState" : "manual",
@@ -36789,6 +35451,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將願望物品儲蓄進來，記錄每一筆儲蓄，讓願望更進一步。"
+          }
+        }
+      }
+    },
+    "Saving every dream" : {
+      "comment" : "储蓄每一个梦想",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "储蓄每一个梦想"
           }
         }
       }
@@ -42283,258 +40957,6 @@
         }
       }
     },
-    "Thank you user" : {
-      "comment" : "1.0.7 感谢来自中国大陆、泰国、阿根廷、安哥拉、芬兰和意大利的用户支持。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرًا للمستخدمين من الصين القارية وتايلاند والأرجنتين وأنغولا وفنلندا وإيطاليا على دعمهم."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gràcies als usuaris de la Xina continental, Tailàndia, Argentina, Angola, Finlàndia i Itàlia pel seu suport."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Děkujeme uživatelům z pevninské Číny, Thajska, Argentiny, Angoly, Finska a Itálie za podporu."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Tak til brugere fra det kinesiske fastland, Thailand, Argentina, Angola, Finland og Italien for deres støtte."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Vielen Dank an Benutzer aus Festlandchina, Thailand, Argentinien, Angola, Finnland und Italien für ihre Unterstützung."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ευχαριστούμε τους χρήστες από την ηπειρωτική Κίνα, την Ταϊλάνδη, την Αργεντινή, την Αγκόλα, τη Φινλανδία και την Ιταλία για την υποστήριξή τους."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thanks to our users from Mainland China, Thailand, Argentina, Angola, Finland and Italy for their support."
-          }
-        },
-        "en-AU" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thanks to our users from Mainland China, Thailand, Argentina, Angola, Finland and Italy for their support."
-          }
-        },
-        "en-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thanks to our users from Mainland China, Thailand, Argentina, Angola, Finland and Italy for their support."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thanks to our users from Mainland China, Thailand, Argentina, Angola, Finland and Italy for their support."
-          }
-        },
-        "en-IN" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thanks to our users from Mainland China, Thailand, Argentina, Angola, Finland and Italy for their support."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Argentina, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Gracias a los usuarios de China continental, Tailandia, Argentina, Angola, Finlandia e Italia por su apoyo."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kiitos käyttäjille Manner-Kiinasta, Thaimaasta, Argentiinasta, Angolasta, Suomesta ja Italiasta tuesta."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Argentine, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Merci aux utilisateurs de Chine continentale, de Thaïlande, d'Argentine, d'Angola, de Finlande et d'Italie pour leur soutien."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "תודה למשתמשים מסין, תאילנד, ארגנטינה, אנגולה, פינלנד ואיטליה על תמיכתם."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "मुख्य भूमि चीन, थाईलैंड, अर्जेंटीना, अंगोला, फ़िनलैंड और इटली के उपयोगकर्ताओं को उनके समर्थन के लिए धन्यवाद।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Hvala korisnicima iz kontinentalne Kine, Tajlanda, Argentine, Angole, Finske i Italije na podršci."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Köszönjük a szárazföldi kínai, thaiföldi, Argentína, Angola, Finnország és Olaszország felhasználók támogatását."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Terima kasih kepada pengguna dari Tiongkok daratan, Thailand, Argentina, Angola, Finlandia, dan Italia atas dukungan mereka."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Grazie agli utenti della Cina continentale, Tailandia, Argentina, Angola, Finlandia e Italia per il loro supporto."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "中国本土、タイ、アルゼンチン、アンゴラ、フィンランド、イタリアのユーザーのサポートに感謝します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "중국 본토, 태국, 아르헨티나, 앙골라, 핀란드, 이탈리아의 사용자들의 지원에 감사드립니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Terima kasih kepada pengguna dari tanah besar China, Thailand, Argentina, Angola, Finland dan Itali atas sokongan mereka."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Takk til brukere fra fastlands-Kina, Thailand, Argentina, Angola, Finland og Italia for deres støtte."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Dank aan gebruikers van het vasteland van China, Thailand, Argentinië, Angola, Finland en Italië voor hun steun."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Dziękujemy użytkownikom z Chin kontynentalnych, Tajlandii, Argentyny, Angoli, Finlandii i Włoch za ich wsparcie."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Argentina, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Obrigado aos utilizadores da China continental, Tailândia, Argentina, Angola, Finlândia e Itália pelo seu apoio."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Mulțumim utilizatorilor din China continentală, Thailanda, Argentina, Angola, Finlanda și Italia pentru sprijinul acordat."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Спасибо пользователям из материкового Китая, Таиланда, Аргентины, Анголы, Финляндии и Италии за поддержку."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ďakujeme používateľom z pevninskej Číny, Thajska, Argentíny, Angoly, Fínska a Talianska za podporu."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Tack till användare från Kina, Thailand, Argentina, Angola, Finland och Italien för deras stöd."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "ขอขอบคุณผู้ใช้จากจีนแผ่นดินใหญ่ ไทย อาร์เจนตินา แองโกลา ฟินแลนด์ และอิตาลีที่ให้การสนับสนุน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Destekleri için Çin anakarası, Tayland, Arjantin, Angola, Finlandiya ve İtalya'daki kullanıcılara teşekkür ederiz."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Дякуємо користувачам із Китаю, Таїланду, Аргентини, Анголи, Фінляндії та Італії за підтримку."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Cảm ơn người dùng từ Trung Quốc đại lục, Thái Lan, Argentina, Angola, Phần Lan và Ý đã hỗ trợ."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "感谢来自中国大陆、泰国、阿根廷、安哥拉、芬兰和意大利的用户支持。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "感謝來自中國大陸、泰國、阿根廷、安哥拉、芬蘭和義大利的使用者支援。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "感謝來自中國大陸、泰國、阿根廷、安哥拉、芬蘭和義大利的使用者支援。"
-          }
-        }
-      }
-    },
     "Thanks" : {
       "comment" : "鸣谢",
       "extractionState" : "manual",
@@ -42753,450 +41175,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "鳴謝"
-          }
-        }
-      }
-    },
-    "Thanks to freepik and lottieFiles" : {
-      "comment" : "感谢 freepik 和 lottieFiles",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "بفضل freepik وlottieFiles"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies a freepik i lottieFiles"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Díky freepik a lottieFiles"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak til freepik og lottieFiles"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Danke an freepik und lottieFiles"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Χάρη στο freepik και το lottieFiles"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a freepik y lottieFiles."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a freepik y lottieFiles."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos freepikille ja lottieFilesille"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci à freepik et lottieFiles"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci à freepik et lottieFiles"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה ל-freepik ו-lottieFiles"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "फ्रीपिक और लोटीफाइल्स को धन्यवाद"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zahvaljujući freepiku i lottieFilesu"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönet a freepik-nek és a lottieFiles-nek"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada freepik dan lottieFiles"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie a freepik e lottieFiles"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "freepik と LottieFiles に感謝します"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "freepik과 lottieFiles 덕분에"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada freepik dan lottieFiles"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takket være freepik og lottieFiles"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Met dank aan freepik en lottieFiles"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dzięki Freepik i lottieFiles"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Graças ao freepik e ao lottieFiles"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Graças ao freepik e ao lottieFiles"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulțumim freepik și lottieFiles"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо freepik и lottieFiles."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vďaka freepik a lottieFiles"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack vare freepik och lottieFiles"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอบคุณ freepik และ lottieFiles"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Freepik ve lottieFiles'a teşekkürler"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Завдяки freepik і lottieFiles"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn freepik và lottieFiles"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感谢 freepik 和 lottieFiles"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝freepik 和lottieFiles"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝freepik 和lottieFiles"
-          }
-        }
-      }
-    },
-    "Thanks to the following users for their support" : {
-      "comment" : "感谢以下用户的赞助",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شكرا للمستخدمين التالية أسماؤهم لرعايتهم"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gràcies als següents usuaris pel seu patrocini"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Děkujeme následujícím uživatelům za jejich sponzorství"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tak til følgende brugere for deres sponsorering"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank an die folgenden Benutzer für ihr Sponsoring"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ευχαριστούμε τους παρακάτω χρήστες για τη χορηγία τους"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los siguientes usuarios por su patrocinio."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gracias a los siguientes usuarios por su patrocinio."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kiitos seuraaville käyttäjille heidän sponsoroinnistaan"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs suivants pour leur parrainage"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci aux utilisateurs suivants pour leur parrainage"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תודה למשתמשים הבאים על החסות שלהם"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "निम्नलिखित उपयोगकर्ताओं को उनके प्रायोजन के लिए धन्यवाद"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zahvaljujemo sljedećim korisnicima na njihovom sponzorstvu"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Köszönjük a következő felhasználóknak a szponzorálást"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna berikut atas sponsor mereka"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grazie ai seguenti utenti per la loro sponsorizzazione"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "以下のユーザーのスポンサーシップに感謝します"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "후원해주신 다음 사용자분들께 감사드립니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terima kasih kepada pengguna berikut atas tajaan mereka"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Takk til følgende brukere for deres sponsing"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dank aan de volgende gebruikers voor hun sponsoring"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dziękujemy następującym użytkownikom za sponsorowanie"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos seguintes utilizadores pelo seu patrocínio"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obrigado aos seguintes utilizadores pelo seu patrocínio"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulțumim următorilor utilizatori pentru sponsorizare"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо следующим пользователям за спонсорство"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ďakujeme nasledujúcim používateľom za ich sponzorstvo"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tack till följande användare för deras sponsring"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขอขอบคุณผู้ใช้ต่อไปนี้สำหรับการสนับสนุนของพวกเขา"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsorlukları için aşağıdaki kullanıcılara teşekkür ederiz"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо наступним користувачам за їхнє спонсорство"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cảm ơn những người dùng sau đã tài trợ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感谢以下用户的赞助"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝以下用戶的贊助"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "感謝以下用戶的贊助"
           }
         }
       }
@@ -43449,6 +41427,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "泰銖"
+          }
+        }
+      }
+    },
+    "The advanced version continues to expand its features, unlocking more experiences such as music and sound in the future." : {
+      "comment" : "高级版功能持续扩展，未来将解锁音乐、声音等更多体验。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级版功能持续扩展，未来将解锁音乐、声音等更多体验。"
           }
         }
       }
@@ -43909,6 +41899,18 @@
         }
       }
     },
+    "The subscription will automatically renew unless canceled in your App Store account." : {
+      "comment" : "订阅会自动续费，除非在 App Store 账户中取消。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "订阅会自动续费，除非在 App Store 账户中取消。"
+          }
+        }
+      }
+    },
     "This is empty." : {
       "comment" : "这里是空的。",
       "extractionState" : "manual",
@@ -44127,6 +42129,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這裡是空的。"
+          }
+        }
+      }
+    },
+    "To unsubscribe, please go to App Store → Account → Purchase History. The developer cannot unsubscribe or issue a refund on your behalf." : {
+      "comment" : "如需退订，请在 App Store → 账户 → 购买历史操作，开发者无法代为退订或退款。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如需退订，请在 App Store → 账户 → 购买历史操作，开发者无法代为退订或退款。"
           }
         }
       }
@@ -45079,6 +43093,18 @@
         }
       }
     },
+    "Unlock 30+ personalized icons, switch them as you like, and define your app's unique look." : {
+      "comment" : "解锁 30+ 款个性化图标，随心切换，定义属于你的应用形象。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解锁 30+ 款个性化图标，随心切换，定义属于你的应用形象。"
+          }
+        }
+      }
+    },
     "Unlock failed, please try again." : {
       "comment" : "解锁失败，请重新尝试。",
       "extractionState" : "manual",
@@ -45771,258 +43797,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用一輩子的薪資收入規劃未來"
-          }
-        }
-      }
-    },
-    "UserSponsorshipDeadline" : {
-      "comment" : "1.0.6 截止到2025年2月10日。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تنتهي في 10 فبراير 2025."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finalitza el 10 de febrer de 2025."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Končí 10. února 2025."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slutter den 10. februar 2025."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Endet am 10. Februar 2025."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Λήγει στις 10 Φεβρουαρίου 2025."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ends on February 10, 2025."
-          }
-        },
-        "en-AU" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ends on February 10, 2025."
-          }
-        },
-        "en-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ends on February 10, 2025."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ends on February 10, 2025."
-          }
-        },
-        "en-IN" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ends on February 10, 2025."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta el 10 de febrero de 2025."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta el 10 de febrero de 2025."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Päättyy 10.2.2025."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se termine le 10 février 2025."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se termine le 10 février 2025."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מסתיים ב-10 בפברואר 2025."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10 फरवरी 2025 को समाप्त होगा।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Završava 10. veljače 2025."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2025. február 10-én ér véget."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berakhir pada 10 Februari 2025."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termina il 10 febbraio 2025."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2025年2月10日に終了します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2025년 2월 10일에 종료됩니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berakhir pada 10 Februari 2025."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slutter 10. februar 2025."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eindigt op 10 februari 2025."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kończy się 10 lutego 2025 r."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termina a 10 de fevereiro de 2025."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termina a 10 de fevereiro de 2025."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se încheie pe 10 februarie 2025."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Завершится 10 февраля 2025 г."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Končí sa 10. februára 2025."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fram till den 10 februari 2025."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จนถึงวันที่ 10 กุมภาพันธ์ 2025"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10 Şubat 2025 tarihine kadar."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Станом на 10 лютого 2025 року."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tính đến ngày 10 tháng 2 năm 2025."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "截止到2025年2月10日。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "截止到2025年2月10日。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "截止到2025年2月10日。"
           }
         }
       }
@@ -47215,6 +44989,18 @@
         }
       }
     },
+    "Widget Extensions" : {
+      "comment" : "小组件扩展",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件扩展"
+          }
+        }
+      }
+    },
     "Withdraw" : {
       "comment" : "取出",
       "extractionState" : "manual",
@@ -48099,6 +45885,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "密碼錯誤。"
+          }
+        }
+      }
+    },
+    "Year" : {
+      "comment" : "年",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年"
+          }
+        }
+      }
+    },
+    "Yearly" : {
+      "comment" : "按年",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按年"
           }
         }
       }

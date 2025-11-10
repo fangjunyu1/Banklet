@@ -27,15 +27,6 @@ struct Home: View {
     var primaryBank: PiggyBank? {
         allPiggyBank.filter { $0.isPrimary }.first
     }
-    // 振动
-    let generator = UISelectionFeedbackGenerator()
-    ///
-    /// if appStorage.isVibration {
-    /// 发生振动
-    /// generator.prepare()
-    /// generator.selectionChanged()
-    ///}
-    ///
     
     var body: some View {
         NavigationStack {

@@ -80,12 +80,9 @@ struct AppIconView: View {
     }
     
     private func handleTap(iconName: String) {
-        if appStorage.isVibration {
-            // 发生振动
-            generator.prepare()
-            generator.selectionChanged()
-        }
-            IconChanger.changeIconSilently(to: iconName,selected: $selectedIconName)
+        // 振动
+        HapticManager.shared.selectionChanged()
+        IconChanger.changeIconSilently(to: iconName,selected: $selectedIconName)
         print("点击了:\(iconName)")
     }
 }

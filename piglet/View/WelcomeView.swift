@@ -12,6 +12,7 @@ struct WelcomeView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
     @State private var step: WelcomeStep = .welcome
+    @State private var showPrivacyPolicy:Bool = false
     
     var LottieName: String {
         if step == .welcome {
@@ -28,22 +29,18 @@ struct WelcomeView: View {
         // Welcome 动画
         LottieView(filename:  LottieName, isPlaying: true, playCount: 0, isReversed: false)
             .id(LottieName)
-            .scaleEffect(step == .welcome ? 1 : 1.5)
-            .frame(maxHeight: 180)
-            .frame(maxWidth: 500)
+            .scaleEffect(step == .welcome ? 1: 1.5)
+            .modifier(LottieModifier2())
         Spacer().frame(height: 50)
         // 文字内容
-        VStack(spacing: 30) {
+        VStack(spacing: 15) {
             // 标题
             Text(step == .welcome ? "Start your savings journey" : "Privacy is in your control")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+                .modifier(LargeTitleModifier())
             // 副标题
             Text(step == .welcome ? "Welcome to a brand new way of saving, where every penny shines in the future." : "Savings data is stored locally and synced with iCloud, ensuring security and transparency, and giving you complete control.")
-                .font(.footnote)
-                .padding(.horizontal,20)
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
+                .modifier(FootNoteModifier())
+            Spacer().frame(height: 10)
             // 圆形进度条
             HStack {
                 Circle()
@@ -57,11 +54,16 @@ struct WelcomeView: View {
         Spacer()
         
         // 隐私政策-中文链接
-        Link("Privacy Policy (Chinese)", destination: URL(string: "https://fangjunyu.com/2024/05/23/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/")!)
-            .font(.footnote)
-            .foregroundColor(colorScheme == .light ? AppColor.appColor : .white)
-            .opacity(step == .privacy ? 1 : 0)
-        
+        Button(action: {
+            showPrivacyPolicy = true
+        }, label: {
+            Text("Privacy Policy")
+                .modifier(FootNoteModifier())
+        })
+        .sheet(isPresented: $showPrivacyPolicy) {
+            SafariView(url: URL(string: "https://fangjunyu.com/2024/05/23/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/")!, entersReaderIfAvailable: true)
+                .ignoresSafeArea()
+        }
         Spacer().frame(height: 20)
         
         // 开始或完成-按钮

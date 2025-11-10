@@ -16,6 +16,24 @@ struct Footnote: View {
     }
 }
 
+struct Caption: View {
+    var text: String
+    var body: some View {
+        Text(LocalizedStringKey(text))
+            .font(.caption)
+            .foregroundColor(.gray)
+    }
+}
+
+struct Caption2: View {
+    var text: String
+    var body: some View {
+        Text(LocalizedStringKey(text))
+            .font(.caption2)
+            .foregroundColor(.gray)
+    }
+}
+
 struct FootnoteSource: View {
     var text: String
     var body: some View {

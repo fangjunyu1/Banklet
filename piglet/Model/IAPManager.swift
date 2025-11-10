@@ -7,6 +7,13 @@
 
 import StoreKit
 
+// 内购商品结构
+struct IAPProduct {
+    var name: String    // 本地展示名，如 “按月”
+    var id: String  // App Store 产品 ID
+    var priceSuffix: String?    // 价格后缀，如 “/月” 或 “/年”
+}
+
 @available(iOS 15.0, *)
 @Observable
 class IAPManager:ObservableObject {
@@ -14,46 +21,31 @@ class IAPManager:ObservableObject {
     
     private init() {}
     
-    var productID = ["20240523"]  //  需要内购的产品ID数组
+    // 商品信息-价格映射表
+    let IAPProductList: [IAPProduct] = [    //  需要内购的产品ID数组
+        IAPProduct(name: "Monthly", id: "com.fangjunyu.Banklet.monthly", priceSuffix: "Month"),
+        IAPProduct(name: "Yearly", id: "com.fangjunyu.Banklet.yearly", priceSuffix: "Year"),
+        IAPProduct(name: "Lifetime", id: "20240523")
+    ]
+    
     var products: [Product] = []    // 存储从 App Store 获取的内购商品信息
-    var loadPurchased = false    // 如果开始内购流程，loadPurchased为true，View视图显示加载画布
     
     // 视图自动加载loadProduct()方法
+    @MainActor
     func loadProduct() async {
         do {
             // 传入 productID 产品ID数组，调取Product.products接口从App Store返回产品信息
             // App Store会返回对应的产品信息，如果数组中个别产品ID有误，只会返回正确的产品ID的产品信息
-            let fetchedProducts = try await Product.products(for: productID)
+            let fetchedProducts = try await Product.products(for: IAPProductList.map { $0.id} )
             if fetchedProducts.isEmpty {    // 判断返回的是否是否为空
                 // 抛出内购信息为空的错误,可能是所有的产品ID都不存在，中断执行，不会return返回products产品信息
                 throw StoreError.IAPInformationIsEmpty
             }
-            DispatchQueue.main.async {
-                self.products = fetchedProducts  // 将获取的内购商品保存到products变量
-            }
+            products = fetchedProducts  // 将获取的内购商品保存到products变量
             print("成功加载产品: \(products)")    // 输出内购商品数组信息
         } catch {
             print("加载产品失败：\(error)")    // 输出报错
         }
-    }
-    
-    // 发送到服务器端
-    func sendToServer(signedTransactionInfo: String?) {
-        guard let info = signedTransactionInfo else { return }
-        let url = URL(string: "https://your-backend-server.com/verify")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: ["signedTransactionInfo": info], options: [])
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print("Error sending transaction info to server: \(error)")
-                return
-            }
-            print("Server response: \(String(data: data!, encoding: .utf8) ?? "")")
-        }
-        task.resume()
     }
     
     // purchaseProduct：购买商品的方法，返回购买结果
@@ -66,17 +58,6 @@ class IAPManager:ObservableObject {
                 switch result {
                 case .success(let verification):    // 购买成功的情况，返回verification包含交易的验证信息
                     let transaction = try checkVerified(verification)    // 验证交易
-                    
-                    // 获取 JSON 表示的交易信息
-                    //                    let jsonData = transaction.jsonRepresentation
-                    //                    if let signedTransactionInfo = String(data: jsonData, encoding: .utf8) {
-                    //                        print("Signed Transaction Info: \(signedTransactionInfo)")
-                    // 将交易信息发送到后端进行验证
-                    //                        sendToServer(signedTransactionInfo: signedTransactionInfo)
-                    //                    } else {
-                    //                        print("Failed to convert JSON data to string")
-                    //                    }
-                    
                     savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
                     await transaction.finish()    // 告诉系统交易完成
                     print("交易成功：\(result)")
@@ -91,10 +72,6 @@ class IAPManager:ObservableObject {
                 print("购买失败：\(error)")
                 await resetProduct()    // 购买失败后重置 product 以便允许再次尝试购买
             }
-            DispatchQueue.main.async {
-                self.loadPurchased = false   // 隐藏内购时的加载画布
-            }
-            print("loadPurchased:\(loadPurchased)")
         }
     }
     // 验证购买结果
@@ -108,6 +85,7 @@ class IAPManager:ObservableObject {
             return signedType    // StoreKit确认本笔交易信息由苹果服务器合法签署
         }
     }
+    
     // handleTransactions处理所有的交易情况
     func handleTransactions() async {
         print("进入handleTransactions方法")
@@ -169,7 +147,7 @@ class IAPManager:ObservableObject {
         }
 
         // **移除所有未在最新交易中的商品**
-        let allPossibleProductIDs: Set<String> = Set(productID) // 所有可能的商品 ID
+        let allPossibleProductIDs: Set<String> = Set(IAPProductList.map { $0.id }) // 所有可能的商品 ID
         let productsToRemove = allPossibleProductIDs.subtracting(validPurchasedProducts)
 
         for id in productsToRemove {
@@ -177,11 +155,23 @@ class IAPManager:ObservableObject {
         }
     }
     
-    // 当购买失败时，会尝试重新加载产品信息。
+    // 重新加载产品信息。
     func resetProduct() async {
         self.products = []
         await loadProduct()    // 调取loadProduct方法获取产品信息
     }
+    
+    // 恢复内购状态
+    func restoredPurchasesStatus() {
+        print("点击了恢复内购按钮")
+    }
+    
+    // 移除内购状态
+    func removePurchasedState(for productID: String) {
+        UserDefaults.standard.removeObject(forKey: productID)
+        print("已移除购买状态: \(productID)")
+    }
+    
     // 保存购买状态到用户偏好设置或其他存储位置
     func savePurchasedState(for productID: String) {
         UserDefaults.standard.set(true, forKey: productID)
@@ -190,11 +180,6 @@ class IAPManager:ObservableObject {
             AppStorageManager.shared.isInAppPurchase = true
         }
         print("保存购买状态: \(productID)")
-    }
-    // 移除内购状态
-    func removePurchasedState(for productID: String) {
-        UserDefaults.standard.removeObject(forKey: productID)
-        print("已移除购买状态: \(productID)")
     }
     
     // 通过productID检查是否已完成购买

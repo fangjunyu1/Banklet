@@ -65,15 +65,16 @@ struct CurrencySymbolView: View {
                     if lastIndex != index {                        Divider().padding(.leading, 50)
                     }
                 }
-                .ignoresSafeArea(.all, edges: .bottom)
+                .padding(.vertical,10)
+                .background(.white)
+                .cornerRadius(12)
+                .padding(.bottom, 50)
             }
-            .padding(.vertical,8)
-            .background(.white)
-            .cornerRadius(12)
         }
         .navigationTitle("Currency Symbol")
         .modifier(BackgroundModifier())
         .scrollIndicators(.hidden) // 隐藏滚动条
+        .ignoresSafeArea(.all, edges: .bottom)
     }
 }
 

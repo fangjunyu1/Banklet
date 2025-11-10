@@ -65,11 +65,8 @@ struct ManagingView: View {
                                                 guard !piggyBank[index].isPrimary else {
                                                     return
                                                 }
-                                                if appStorage.isVibration {
-                                                    // 发生振动
-                                                    generator.prepare()
-                                                    generator.selectionChanged()
-                                                }
+                                                // 振动
+                                                HapticManager.shared.selectionChanged()
                                                 // Step 1: 查询所有存钱罐
                                                 let fetchRequest = FetchDescriptor<PiggyBank>()
                                                 let existingPiggyBanks = try? modelContext.fetch(fetchRequest)

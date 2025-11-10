@@ -19,3 +19,16 @@ struct ButtonModifier: ViewModifier {
             .cornerRadius(10)
     }
 }
+
+struct ButtonModifier2: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .frame(height: 60)
+            .frame(minWidth: 200)
+            .foregroundColor(Color.white)
+            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+            .cornerRadius(20)
+    }
+}
