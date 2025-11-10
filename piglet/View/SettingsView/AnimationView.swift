@@ -31,7 +31,7 @@ struct AnimationView: View {
             Footnote(text: "Current Animation")
             HStack(alignment: .center) {
                 LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation ? true : false, playCount: 0, isReversed: false)
-                    .id(appStorage.LoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
+                    .id(appStorage.isLoopAnimation) // 关键：确保当 LoopAnimation 变化时，LottieView 重新加载
                     .frame(width: 140,height: 100)
                     .cornerRadius(10)
             }

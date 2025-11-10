@@ -15,7 +15,7 @@ struct BiometricAuthView: View {
     // 安全校验页面
     var body: some View {
         Spacer()
-            .frame(height: 20)
+            .frame(height: 60)
         VStack(spacing: 10) {
             // 安全校验
             Text("Security Verification")
@@ -23,11 +23,11 @@ struct BiometricAuthView: View {
             Text("You have enabled password protection, please click the button below to verify.")
                 .modifier(FootNoteModifier())
         }
-        Spacer().frame(height: 50)
+        Spacer().frame(height: 80)
         LottieView(filename: "lock", isPlaying: true, playCount: 0, isReversed: false)
             .modifier(LottieModifier())
             .scaleEffect(1.2)
-        Spacer().frame(height: 150)
+        Spacer().frame(height: 100)
         VStack(spacing: 16) {
             Button(action: {
                 onAuthenticate() // 调用闭包执行认证

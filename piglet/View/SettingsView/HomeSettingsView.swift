@@ -22,6 +22,7 @@ struct HomeSettingsView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
+                .id(appStorage.LoopAnimation)
                 .frame(height: 100)
                 .offset(y: -10)
             
@@ -30,7 +31,6 @@ struct HomeSettingsView: View {
                 // 启用iCloud
                 HomeSettingRow(color: .color("226AD6"),icon: .sficon("icloud.fill"),title: "Enable iCloud",footnote:"iCloud is in beta, so please be careful when switching on and off.", accessory: .toggle($appStorage.isModelConfigManager, modelConfigManager))
                 // 通用
-                
                 NavigationLink(destination: {
                     GeneralView()
                 }, label: {
@@ -87,8 +87,9 @@ struct HomeSettingsView: View {
                 .modifier(SettingVStackRowModifier())
                 
                 // 高级会员
-                HomeSettingRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member",accessory: .none)
-                
+                NavigationLink(destination: PremiumView()) {
+                    HomeSettingRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member",accessory: .none)
+                }
                 // 关于我们、鸣谢、开源
                 VStack(spacing: 0) {
                     // 关于我们
