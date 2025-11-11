@@ -11,8 +11,9 @@ import StoreKit
 
 struct PremiumView: View {
     @EnvironmentObject var iapManager: IAPManager
-    @State private var loadPurchased = false    // 加载画布
+    @State private var isLoading = false    // 加载画布
     @State private var selectedProduct: Product?
+    @State private var purchaseProductTask: Task<Void, Never>?
     var body: some View {
         VStack {
             // 显示列表
@@ -36,18 +37,24 @@ struct PremiumView: View {
                     // 选择方案、包含内容、购买提示的视图
                     PremiumComponentsView(selectedProduct:$selectedProduct)
                 }
+                Spacer().frame(height: 20)
             }
             
             // 只有加载产品，才会显示购买方案。
             if !iapManager.products.isEmpty {
                 // 购买会员
-                BuyPremiumView(selectedProduct:$selectedProduct)
+                BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,purchaseProductTask: $purchaseProductTask)
             }
         }
         .navigationTitle("Premium Member")
         .modifier(BackgroundModifier())
         .scrollIndicators(.hidden)
         .onAppear(perform: CheckPurchaseStatus)
+        .overlay {
+            if isLoading {
+                PurchaseLoadingView(isLoading: $isLoading,purchaseProductTask: $purchaseProductTask)
+            }
+        }
     }
     
     @MainActor
@@ -57,6 +64,39 @@ struct PremiumView: View {
             if iapManager.products.isEmpty {
                 await iapManager.loadProduct()
             }
+        }
+    }
+}
+
+// 加载产品-遮罩曾
+private struct PurchaseLoadingView: View {
+    @Binding var isLoading: Bool
+    @Binding var purchaseProductTask: Task<Void, Never>?
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.3).ignoresSafeArea()
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isLoading.toggle()
+                        purchaseProductTask?.cancel()   // 取消购买任务
+                    }, label: {
+                        Image(systemName: "xmark")
+                            .font(.title)
+                            .fontWeight(.black)
+                            .foregroundColor(.white)
+                    })
+                    Spacer().frame(width: 20)
+                }
+                Spacer()
+            }
+            // 加载条
+            ProgressView("loading...")
+                .padding(20)
+                .cornerRadius(10)
+                .background(.white)
+                .cornerRadius(10)
         }
     }
 }
@@ -114,6 +154,9 @@ private struct PremiumComponentsView: View {
                             }
                             .contentShape(Rectangle())
                             .onTapGesture {
+                                
+                                // 振动
+                                HapticManager.shared.selectionChanged()
                                 // 如果重复点击内购商品，则清空内购商品
                                 if selectedProduct == products {
                                     selectedProduct = nil
@@ -174,21 +217,29 @@ private struct PremiumComponentsView: View {
 private struct BuyPremiumView: View {
     @EnvironmentObject var iapManager: IAPManager
     @Binding var selectedProduct: Product?
+    @Binding var loadPurchased:Bool
+    @Binding var purchaseProductTask: Task<Void, Never>?
     var body: some View {
         VStack(spacing: 10) {
             // 购买会员-按钮
             Button(action: {
+                // 振动
                 HapticManager.shared.selectionChanged()
+                // 如果有商品信息，则购买商品。
                 if let selectedProduct = selectedProduct {
-                    iapManager.purchaseProduct(selectedProduct)
+                    purchaseProductTask = Task {
+                        await iapManager.purchaseProduct(selectedProduct)
+                    }
                 }
+                // 显示加载动画
+                loadPurchased = true
             }, label: {
                 VStack {
                     // 会员信息
                     HStack {
                         Text("Purchase Membership")
                         if let selectedProduct = selectedProduct,let product = iapManager.IAPProductList.first(where: { $0.id == selectedProduct.id }) {
-                            Text("(\(product.name))")
+                            Text(LocalizedStringKey(product.name))
                         }
                     }
                     // 价格

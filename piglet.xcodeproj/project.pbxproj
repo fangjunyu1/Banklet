@@ -227,7 +227,6 @@
 		1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359742D6425F900F7D599 /* Preview Assets.xcassets */; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
-		1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */; };
 		1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */; };
 		1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */; };
 		1D7D5A542E96A77800D776F4 /* FooObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D5A532E96A77800D776F4 /* FooObject.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -562,7 +561,6 @@
 		1D7359742D6425F900F7D599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
-		1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsoredAppsView.swift; sourceTree = "<group>"; };
 		1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressViewStyle.swift; sourceTree = "<group>"; };
 		1D7D4D3E2D224F45001EE006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D7D4D402D224F4F001EE006 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1165,7 +1163,6 @@
 				1D21686C2D9049E600DC4376 /* LifeSavingsJarView.swift */,
 				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
-				1D7524D52D3DF2B4001F3E28 /* SponsoredAppsView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
 			);
 			path = Other;
@@ -1762,7 +1759,6 @@
 				1D01B4652EBB0F720022B549 /* HomeSettingRow.swift in Sources */,
 				1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */,
 				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
-				1D7524D62D3DF2B4001F3E28 /* SponsoredAppsView.swift in Sources */,
 				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,

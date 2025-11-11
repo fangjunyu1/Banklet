@@ -15,6 +15,7 @@ struct IAPProduct {
 }
 
 @available(iOS 15.0, *)
+@MainActor
 @Observable
 class IAPManager:ObservableObject {
     static let shared = IAPManager()
@@ -31,7 +32,6 @@ class IAPManager:ObservableObject {
     var products: [Product] = []    // 存储从 App Store 获取的内购商品信息
     
     // 视图自动加载loadProduct()方法
-    @MainActor
     func loadProduct() async {
         do {
             // 传入 productID 产品ID数组，调取Product.products接口从App Store返回产品信息
@@ -49,31 +49,30 @@ class IAPManager:ObservableObject {
     }
     
     // purchaseProduct：购买商品的方法，返回购买结果
-    func purchaseProduct(_ product: Product) {
+    func purchaseProduct(_ product: Product) async {
         // 在这里输出要购买的商品id
         print("Purchasing product: \(product.id)")
-        Task {  @MainActor in
-            do {
-                let result = try await product.purchase()
-                switch result {
-                case .success(let verification):    // 购买成功的情况，返回verification包含交易的验证信息
-                    let transaction = try checkVerified(verification)    // 验证交易
-                    savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
-                    await transaction.finish()    // 告诉系统交易完成
-                    print("交易成功：\(result)")
-                case .userCancelled:    // 用户取消交易
-                    print("用户取消交易：\(result)")
-                case .pending:    // 购买交易被挂起
-                    print("购买交易被挂起：\(result)")
-                default:    // 其他情况
-                    throw StoreError.failedVerification    // 购买失败
-                }
-            } catch {
-                print("购买失败：\(error)")
-                await resetProduct()    // 购买失败后重置 product 以便允许再次尝试购买
+        do {
+            let result = try await product.purchase()
+            switch result {
+            case .success(let verification):    // 购买成功的情况，返回verification包含交易的验证信息
+                let transaction = try checkVerified(verification)    // 验证交易
+                savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
+                await transaction.finish()    // 告诉系统交易完成
+                print("交易成功：\(result)")
+            case .userCancelled:    // 用户取消交易
+                print("用户取消交易：\(result)")
+            case .pending:    // 购买交易被挂起
+                print("购买交易被挂起：\(result)")
+            default:    // 其他情况
+                throw StoreError.failedVerification    // 购买失败
             }
+        } catch {
+            print("购买失败：\(error)")
+            await resetProduct()    // 购买失败后重置 product 以便允许再次尝试购买
         }
     }
+    
     // 验证购买结果
     func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         switch result {
@@ -97,7 +96,6 @@ class IAPManager:ObservableObject {
                 
                 if !AppStorageManager.shared.isInAppPurchase {
                     print("当前不是内购状态，但是内购已完成")
-                    print("当前是否在主线程？\(Thread.isMainThread)") // true or false
                     // 处理交易，例如解锁内容
                     savePurchasedState(for: transaction.productID)
                 } else {
@@ -115,7 +113,7 @@ class IAPManager:ObservableObject {
         print("开始检查所有交易记录...")
         let allTransactions = Transaction.all
         var latestTransactions: [String: Transaction] = [:]
-
+        
         for await transaction in allTransactions {
             do {
                 let verifiedTransaction = try checkVerified(transaction)
@@ -132,7 +130,7 @@ class IAPManager:ObservableObject {
                 print("交易验证失败：\(error)")
             }
         }
-
+        
         var validPurchasedProducts: Set<String> = []
         
         // 处理最新的交易
@@ -145,11 +143,11 @@ class IAPManager:ObservableObject {
                 savePurchasedState(for: productID)
             }
         }
-
+        
         // **移除所有未在最新交易中的商品**
         let allPossibleProductIDs: Set<String> = Set(IAPProductList.map { $0.id }) // 所有可能的商品 ID
         let productsToRemove = allPossibleProductIDs.subtracting(validPurchasedProducts)
-
+        
         for id in productsToRemove {
             removePurchasedState(for: id)
         }
