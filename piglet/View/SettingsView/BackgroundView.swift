@@ -101,7 +101,7 @@ private struct BackgroundItemView: View {
                 }
             })
             .overlay {
-                if let index = index,!appStorage.isInAppPurchase && index >= backgroundLimit {
+                if let index = index,!appStorage.isValidMember && index >= backgroundLimit {
                     LockApp()   // 未解锁的状态
                 }
             }

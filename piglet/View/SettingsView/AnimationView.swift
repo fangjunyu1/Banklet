@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct AnimationView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -64,7 +65,7 @@ struct AnimationView: View {
                             }
                         })
                         .overlay {
-                            if !appStorage.isInAppPurchase && index >= backgroundRangeLimit {
+                            if !appStorage.isValidMember && index >= backgroundRangeLimit {
                                 LockApp()   // 未解锁的状态
                             }
                         }
@@ -84,6 +85,12 @@ struct AnimationView: View {
         withAnimation {
             appStorage.LoopAnimation = "Home\(index)"
         }
+        // 评分弹窗
+        if !appStorage.isRatingWindow {
+            SKStoreReviewController.requestReview()
+            appStorage.isRatingWindow = true
+        }
+        
         print("LoopAnimation:\(appStorage.LoopAnimation)")
     }
 }

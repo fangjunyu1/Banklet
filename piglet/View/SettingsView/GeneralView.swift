@@ -60,7 +60,7 @@ struct GeneralView: View {
                     HomeSettingRow(color: .color("B1A507"),icon: .img("password"),title: "Password protection", accessory: .binding($appStorage.isBiometricEnabled))
                     Divider().padding(.leading,60)
                     // 存取备注
-                    HomeSettingRow(color: .color("EAA22A"),icon: .img("AccessNotes"),title: "Access Notes", accessory: .binding($appStorage.accessNotes))
+                    HomeSettingRow(color: .color("EAA22A"),icon: .img("AccessNotes"),title: "Access Notes", accessory: .binding($appStorage.isAccessNotes))
                 }
                 .modifier(SettingVStackRowModifier())
             }

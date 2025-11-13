@@ -34,7 +34,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if !appStorage.hasCompletedWelcome {
+        if !appStorage.isCompletedWelcome {
             WelcomeView()
         } else {
             if appStorage.isBiometricEnabled && !isAuthenticated && !showHomeView {

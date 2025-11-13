@@ -5,6 +5,12 @@
 //  Created by 方君宇 on 2025/11/10.
 //
 // 高级会员视图
+//
+// 1、在应用初始化时，会先获取一遍产品信息
+// 异步任务不影响应用，也是为了打开该页面时显示对应的内购产品。
+// 2、当视图加载时，调用CheckPurchaseStatus方法，判断产品列表是否有产品
+// 如果没有任何产品信息，则会重新尝试获取产品信息列表
+//
 
 import SwiftUI
 import StoreKit
@@ -81,6 +87,7 @@ private struct PurchaseLoadingView: View {
                     Button(action: {
                         isLoading.toggle()
                         purchaseProductTask?.cancel()   // 取消购买任务
+                        purchaseProductTask = nil
                     }, label: {
                         Image(systemName: "xmark")
                             .font(.title)

@@ -31,7 +31,7 @@ class IAPManager:ObservableObject {
     
     var products: [Product] = []    // 存储从 App Store 获取的内购商品信息
     
-    // 视图自动加载loadProduct()方法
+    // 获取产品信息的方法
     func loadProduct() async {
         do {
             // 传入 productID 产品ID数组，调取Product.products接口从App Store返回产品信息
@@ -57,6 +57,9 @@ class IAPManager:ObservableObject {
             switch result {
             case .success(let verification):    // 购买成功的情况，返回verification包含交易的验证信息
                 let transaction = try checkVerified(verification)    // 验证交易
+                
+                print("产品购买成功！商品 ID: \(product.id)，商品名称: \(product.displayName)，商品描述: \(product.description)，价格: \(product.price)，本地化价格: \(product.displayPrice)，商品类型: \(product.type),订阅商品信息：\(product.subscription),\(product.type)")
+                
                 savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
                 await transaction.finish()    // 告诉系统交易完成
                 print("交易成功：\(result)")
@@ -94,7 +97,7 @@ class IAPManager:ObservableObject {
                 let transaction = try checkVerified(result) // 验证交易
                 print("当前已完成的交易:\(transaction)")
                 
-                if !AppStorageManager.shared.isInAppPurchase {
+                if !AppStorageManager.shared.isValidMember {
                     print("当前不是内购状态，但是内购已完成")
                     // 处理交易，例如解锁内容
                     savePurchasedState(for: transaction.productID)
@@ -159,6 +162,12 @@ class IAPManager:ObservableObject {
         await loadProduct()    // 调取loadProduct方法获取产品信息
     }
     
+    // 保存商品状态
+    func savePurchasedState(for productID: String) {
+//        AppStorageManager.shared.isInAppPurchase = true
+        print("保存购买状态: \(productID)")
+    }
+    
     // 恢复内购状态
     func restoredPurchasesStatus() {
         print("点击了恢复内购按钮")
@@ -168,16 +177,6 @@ class IAPManager:ObservableObject {
     func removePurchasedState(for productID: String) {
         UserDefaults.standard.removeObject(forKey: productID)
         print("已移除购买状态: \(productID)")
-    }
-    
-    // 保存购买状态到用户偏好设置或其他存储位置
-    func savePurchasedState(for productID: String) {
-        UserDefaults.standard.set(true, forKey: productID)
-        print("当前是否在主线程？\(Thread.isMainThread)") // true or false
-        DispatchQueue.main.async {
-            AppStorageManager.shared.isInAppPurchase = true
-        }
-        print("保存购买状态: \(productID)")
     }
     
     // 通过productID检查是否已完成购买

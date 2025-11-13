@@ -128,8 +128,9 @@ struct HomeSettingsView: View {
             Spacer().frame(height:20)
             // 重置内购和欢迎界面
             Button(action: {
-                AppStorageManager.shared.isInAppPurchase = false
-                AppStorageManager.shared.hasCompletedWelcome = false
+                AppStorageManager.shared.isLifetime = false
+                AppStorageManager.shared.expirationDate = Date.distantPast.timeIntervalSince1970
+                AppStorageManager.shared.isCompletedWelcome = false
             }, label: {
                 Text("重置内购和欢迎界面")
                     .font(.caption2)

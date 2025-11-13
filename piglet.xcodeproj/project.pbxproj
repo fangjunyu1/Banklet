@@ -122,6 +122,7 @@
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
+		1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13B5692EC5B13000044135 /* AppStorage.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
 		1D1400B62D3112BD00DC51C0 /* AboutUs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1400B52D3112BD00DC51C0 /* AboutUs.json */; };
 		1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */; };
@@ -307,7 +308,6 @@
 		1DEB96CC2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEB96CB2D5D9D6C00A68C21 /* BankletWidgetLiveActivity.swift */; };
 		1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DEC98802C10315500BEECFF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC987F2C10315500BEECFF /* Bundle.swift */; };
-		1DF47D922E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF47D912E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
 		1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */; };
@@ -456,6 +456,7 @@
 		1D0FA7042D225A9D00ABF5F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		1D13B5692EC5B13000044135 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		1D1400B52D3112BD00DC51C0 /* AboutUs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AboutUs.json; sourceTree = "<group>"; };
 		1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAndWithdrawView.swift; sourceTree = "<group>"; };
@@ -874,6 +875,7 @@
 		1D39BB342EA3EB67007C3017 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1D13B5692EC5B13000044135 /* AppStorage.swift */,
 				1D39BB352EA3EB7C007C3017 /* AppColor.swift */,
 				1D2386752D2E4B3F0033FBBA /* Double.swift */,
 				1D80E7C82C0BC0D300A79B96 /* Color.swift */,
@@ -1340,7 +1342,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					1D73596A2D6425F700F7D599 = {
 						CreatedOnToolsVersion = 15.4;
@@ -1440,7 +1442,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */,
-				1DF47D922E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist in Resources */,
 				1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */,
 				1DDDD26A2EAD099E00AD9A5A /* Localizable.xcstrings in Resources */,
 				1DDDD26B2EAD099E00AD9A5A /* InfoPlist.strings in Resources */,
@@ -1721,6 +1722,7 @@
 				1DD14EE22EC033DE00325DF7 /* GIFView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* Bundle.swift in Sources */,
 				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
+				1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */,
 				1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */,
 				1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */,
 				1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */,
@@ -1943,7 +1945,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BankletWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BankletWatch Watch App/BankletWatch-Watch-App-Info.plist";
@@ -1976,7 +1977,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BankletWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BankletWatch Watch App/BankletWatch-Watch-App-Info.plist";
@@ -2009,7 +2009,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BankletWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
@@ -2042,7 +2041,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BankletWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BankletWidget;
@@ -2071,6 +2069,7 @@
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\" \"AppIcon 33\" \"AppIcon 34\" \"AppIcon 35\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2101,6 +2100,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -2139,6 +2139,7 @@
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "\"AppIcon 0\" \"AppIcon 1\" \"AppIcon 2\" \"AppIcon 3\" \"AppIcon 4\" \"AppIcon 5\" \"AppIcon 6\" \"AppIcon 7\" \"AppIcon 8\" \"AppIcon 9\" \"AppIcon 10\" \"AppIcon 11\" \"AppIcon 12\" \"AppIcon 13\" \"AppIcon 14\" \"AppIcon 15\" \"AppIcon 16\" \"AppIcon 17\" \"AppIcon 18\" \"AppIcon 19\" \"AppIcon 20\" \"AppIcon 21\" \"AppIcon 22\" \"AppIcon 23\" \"AppIcon 24\" \"AppIcon 25\" \"AppIcon 26\" \"AppIcon 27\" \"AppIcon 28\" \"AppIcon 29\" \"AppIcon 30\" \"AppIcon 31\" \"AppIcon 32\" \"AppIcon 33\" \"AppIcon 34\" \"AppIcon 35\"";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -2169,6 +2170,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -2203,7 +2205,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
@@ -2245,7 +2246,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = RRMSD743UQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;

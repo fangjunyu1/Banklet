@@ -10,7 +10,7 @@ import SwiftUI
 struct AppIconView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
-    @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 2"
+    @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 0"
     
     let generator = UISelectionFeedbackGenerator()
     
@@ -65,7 +65,7 @@ struct AppIconView: View {
                         })
                         .overlay {
                             // 未内购的图标
-                            if !appStorage.isInAppPurchase && index >= appIconLimit {
+                            if !appStorage.isValidMember && index >= appIconLimit {
                                 LockApp()   // 未解锁的状态
                             }
                         }
@@ -83,7 +83,6 @@ struct AppIconView: View {
         // 振动
         HapticManager.shared.selectionChanged()
         IconChanger.changeIconSilently(to: iconName,selected: $selectedIconName)
-        print("点击了:\(iconName)")
     }
 }
 

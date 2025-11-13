@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@MainActor
 class IconChanger {
     static func changeIconSilently(to name: String?,selected: Binding<String>? = nil) {
         guard let windowScene = UIApplication.shared.connectedScenes
@@ -32,13 +33,7 @@ class IconChanger {
             if UIApplication.shared.supportsAlternateIcons {
                 print("支持功能图标的功能")
                 UIApplication.shared.setAlternateIconName(name)
-                DispatchQueue.main.async {
-                    // 修改存储的图标名称
-                    withAnimation {
-                        AppStorageManager.shared.appIcon = name ?? "AppIcon 2"
-                        selected?.wrappedValue = AppStorageManager.shared.appIcon
-                    }
-                }
+                selected?.wrappedValue = name ?? "AppIcon 0"
             } else {
                 print("不支持更换图标功能")
             }

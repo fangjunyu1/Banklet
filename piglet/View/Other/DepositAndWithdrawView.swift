@@ -86,7 +86,7 @@ struct DepositAndWithdrawView: View {
                         .cornerRadius(10)
                         Spacer().frame(height:20)
                         // 存取备注
-                        if appStorage.accessNotes {
+                        if appStorage.isAccessNotes {
                             HStack {
                                 Text(LocalizedStringKey("Notes"))
                                     .padding(.horizontal,20)
