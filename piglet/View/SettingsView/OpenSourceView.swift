@@ -56,6 +56,7 @@ struct OpenSourceView: View {
             Spacer()
         }
         .navigationTitle("Open source")
+        .frame(maxWidth: .infinity)
         .modifier(BackgroundModifier())
     }
 }

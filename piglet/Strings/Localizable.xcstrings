@@ -18411,6 +18411,18 @@
         }
       }
     },
+    "Living allowance" : {
+      "comment" : "生活保障金",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生活保障金"
+          }
+        }
+      }
+    },
     "loading..." : {
       "localizations" : {
         "da" : {
@@ -19089,6 +19101,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "主存錢罐"
+          }
+        }
+      }
+    },
+    "Maintain a sense of security in your life" : {
+      "comment" : "留一份安心生活的底气",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留一份安心生活的底气"
           }
         }
       }
@@ -23097,6 +23121,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開源"
+          }
+        }
+      }
+    },
+    "Participate" : {
+      "comment" : "参与",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参与"
           }
         }
       }
