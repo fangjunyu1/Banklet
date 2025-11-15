@@ -57,7 +57,7 @@ struct HomeSettingPremiumRow: View {
     
     func formattedDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
     

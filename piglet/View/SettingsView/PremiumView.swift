@@ -16,6 +16,7 @@ import SwiftUI
 import StoreKit
 
 struct PremiumView: View {
+    @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var iapManager: IAPManager
     @State private var isLoading = false    // 加载画布
     @State private var selectedProduct: Product?
@@ -40,6 +41,10 @@ struct PremiumView: View {
                             Text("Give your piggy bank a fresh new look with more customization options, smoother animations, and unique themes.")
                                 .modifier(FootNoteModifier())
                         }
+                    }
+                    // 当前方案
+                    if appStorage.isValidMember {
+                        CurrentPlanView()
                     }
                     // 选择方案、包含内容、购买提示的视图
                     PremiumComponentsView(selectedProduct:$selectedProduct)
@@ -114,6 +119,73 @@ private struct PurchaseLoadingView: View {
     }
 }
 
+// 当前方案
+private struct CurrentPlanView: View {
+    @Environment(AppStorageManager.self) var appStorage
+    
+    let date = Date(timeIntervalSince1970: AppStorageManager.shared.expirationDate)
+    let isLifetime = AppStorageManager.shared.isLifetime
+    let isSubScription = AppStorageManager.shared.expirationDate > Date().timeIntervalSince1970
+    let isValidMember = AppStorageManager.shared.isValidMember
+    
+    func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: date)
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            // 只有加载产品，才会显示选择方案。
+            // 选择方案
+            VStack {
+                HStack {
+                    Footnote(text: "Current Plan")
+                    Spacer()
+                }
+            }
+            // 当前方案
+            VStack(spacing: 10) {
+                // 永久会员
+                if isLifetime {
+                    HStack {
+                        Image(systemName: "checkmark.seal.fill")
+                            .imageScale(.large)
+                        Text("Premium Member")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        Spacer()
+                        Text("Permanently valid")
+                            .font(.footnote)
+                    }
+                    .foregroundColor(AppColor.appColor)
+                }
+                // 分割线
+                if isLifetime && isSubScription {
+                    Divider().padding(.leading, 40)
+                }
+                if appStorage.expirationDate > Date().timeIntervalSince1970 {
+                    HStack {
+                        Image(systemName: "checkmark.seal.fill")
+                            .imageScale(.large)
+                        Text("Premium Member")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                        Spacer()
+                        VStack(alignment:.trailing, spacing:3) {
+                            // 到期时间
+                            Text("Expiry date")
+                            Text(formattedDate(date))
+                        }
+                        .font(.caption2)
+                    }
+                    .foregroundColor(AppColor.appColor)
+                }
+            }
+            .modifier(VStackModifier())
+        }
+    }
+}
 // 选择方案、包含内容、购买提示的视图
 private struct PremiumComponentsView: View {
     @Binding var selectedProduct: Product?
@@ -361,11 +433,6 @@ private struct PurchaseSuccessfulView: View {
             // 高级会员
             HStack(spacing:0) {
                 Text("Premium Member")
-                if AppStorageManager.shared.isLifetime {
-                    Text("(")
-                    Text("Lifetime")
-                    Text(")")
-                }
             }
             .font(.footnote)
             .fontWeight(.medium)
@@ -374,6 +441,7 @@ private struct PurchaseSuccessfulView: View {
             Text("Completed")
                 .modifier(ButtonModifier())
                 .onTapGesture {
+                    print("点击关闭按钮")
                     dismiss()
                 }
         }
