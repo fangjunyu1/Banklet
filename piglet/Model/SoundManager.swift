@@ -7,13 +7,14 @@
 import AVFoundation
 
 @Observable
+@MainActor
 class SoundManager:ObservableObject {
     static let shared = SoundManager() // 单例
     
     private var players: [String: AVAudioPlayer] = [:]
     
     private init() {
-        preloadSounds(["money"]) // 预加载音效
+        preloadSounds(["money","life0","life1"]) // 预加载音效
     }
     
     private func preloadSounds(_ soundNames: [String]) {
@@ -32,16 +33,37 @@ class SoundManager:ObservableObject {
             }
         }
     }
+    
     func playSound(named soundName: String) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            if let player = self.players[soundName] {
-                player.currentTime = 0
-                DispatchQueue.main.async {
-                    player.play()
-                }
-            } else {
-                print("音效未加载: \(soundName)")
-            }
+        if let player = self.players[soundName] {
+            player.currentTime = 0
+            player.play()
+        } else {
+            print("音效未加载: \(soundName)")
+        }
+    }
+    
+    func playBackgroundMusic(named soundName: String) {
+        stopAllSound()  // 先暂停所有音乐，再播放背景音乐
+        if let player = self.players[soundName] {
+            player.numberOfLoops = -1
+            player.play()
+        } else {
+            print("音效未加载: \(soundName)")
+        }
+    }
+    
+    func stopSound(named soundName: String) {
+        if let player = self.players[soundName] {
+            player.stop()
+        } else {
+            print("音效未加载: \(soundName)")
+        }
+    }
+    
+    func stopAllSound() {
+        for player in players.values {
+            player.stop()
         }
     }
 }

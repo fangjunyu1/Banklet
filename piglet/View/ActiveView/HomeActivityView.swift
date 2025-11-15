@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct HomeActivityView: View {
+    @Environment(AppStorageManager.self) var appStorage
+    @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
     @State private var activityTab = ActivityTab.LifeSavingsBank
     
-    init() {
-        if colorScheme == .light {
-            UIPageControl.appearance().currentPageIndicatorTintColor = .black // 当前页指示器为黑色
-            UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3) // 其他页指示器半透明黑色
+    private func playMusicForCurrentTab() {
+        switch activityTab {
+        case .LifeSavingsBank:
+            soundManager.playBackgroundMusic(named: "life0")
+        case .LivingAllowance:
+            soundManager.playBackgroundMusic(named: "life1")
         }
     }
+    
     var body: some View {
-        VStack {
+        ScrollView(showsIndicators: false) {
             // Tab切换列表
             HomeActivityTabView(activityTab: $activityTab)
-            Spacer().frame(height:10)
-            Spacer().frame(height:30)
+                .onChange(of: activityTab) { oldValue, newValue in
+                    if appStorage.isActivityMusic {
+                        playMusicForCurrentTab()
+                    }
+                }
+            Spacer().frame(height:20)
             Button(action: {
                 
             }, label: {
@@ -32,47 +41,111 @@ struct HomeActivityView: View {
             Spacer()
         }
         .navigationTitle("Activity")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                HomeActivityToolbarMusicView(activityTab: $activityTab)
+            }
+        }
+        .onAppear {
+            if appStorage.isActivityMusic {
+                playMusicForCurrentTab()    // 播放音乐
+            }
+            if colorScheme == .light {
+                UIPageControl.appearance().currentPageIndicatorTintColor = .black // 当前页指示器为黑色
+                UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3) // 其他页指示器半透明黑色
+            }
+        }
         .background {
             HomeActivityViewBackground(activityTab: $activityTab)
         }
+        .onDisappear {
+            soundManager.stopAllSound()
+        }
+    }
+}
+
+private struct HomeActivityToolbarMusicView: View {
+    @Environment(AppStorageManager.self) var appStorage
+    @Environment(SoundManager.self) var soundManager
+    @Environment(\.colorScheme) var colorScheme
+    @Binding var activityTab: ActivityTab
+    
+    private func playMusicForCurrentTab() {
+        switch activityTab {
+        case .LifeSavingsBank:
+            soundManager.playBackgroundMusic(named: "life0")
+        case .LivingAllowance:
+            soundManager.playBackgroundMusic(named: "life1")
+        }
+    }
+    
+    var body: some View {
+        Button(action: {
+            appStorage.isActivityMusic.toggle()
+            if appStorage.isActivityMusic {
+                playMusicForCurrentTab()    // 播放音乐
+            } else {
+                soundManager.stopAllSound()
+            }
+        }, label: {
+            Image(systemName: "music.note")
+                .overlay {
+                    if !appStorage.isActivityMusic {
+                        Image(systemName: "xmark")
+                    }
+                }
+                .foregroundColor(Color.black)
+        })
     }
 }
 
 private struct HomeActivityTabView: View {
     @Binding var activityTab: ActivityTab
+    let imgHeight: CGFloat = 360
+    var TabHeight: CGFloat { imgHeight + 60 }
     var body: some View {
         TabView(selection: $activityTab) {
             ForEach(ActivityTab.allCases) { item in
                 Image(item.image)
-                    .HomeActivityTabImageView()
-                    .overlay {
-                        HStack {
-                            VStack {
-                                Spacer()
-                                VStack(alignment: .leading,spacing: 10) {
-                                    Text(LocalizedStringKey(item.title))
-                                        .font(.title2)
-                                        .fontWeight(.bold)
-                                    Text(LocalizedStringKey(item.description))
-                                        .font(.footnote)
-                                }
-                                .foregroundColor(.white)
-                                .padding(20)
-                                .background {
-                                    Rectangle()
-                                        .scale(0.5)
-                                        .blur(radius: 30)
-                                }
-                            }
-                            Spacer()
-                        }
-                    }
-                    .offset(y: -10)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:280, height: imgHeight)
+                    .cornerRadius(30)
+                    .shadow(radius: 1)
+                    .overlay { HomeActivityTabTextView(item: item)}
+                    .offset(y: -15)
                     .tag(item)
             }
         }
         .tabViewStyle(.page) // 隐藏分页指示器
-        .frame(height: 480)
+        .frame(height: TabHeight)
+    }
+}
+
+private struct HomeActivityTabTextView: View {
+    var item: ActivityTab
+    var body: some View {
+        HStack {
+            VStack {
+                Spacer()
+                VStack(alignment: .leading,spacing: 10) {
+                    Text(LocalizedStringKey(item.title))
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Text(LocalizedStringKey(item.description))
+                        .font(.footnote)
+                }
+                .foregroundColor(.white)
+                .padding(20)
+                .background {
+                    Rectangle()
+                        .scale(0.5)
+                        .foregroundColor(Color.black)
+                        .blur(radius: 30)
+                }
+            }
+            Spacer()
+        }
     }
 }
 
@@ -91,17 +164,6 @@ private struct HomeActivityViewBackground: View {
 }
 
 extension Image {
-    func HomeActivityTabImageView() -> some View{
-        self
-            .resizable()
-            .scaledToFill()
-            .frame(width:300, height: 400)
-            .cornerRadius(30)
-            .shadow(radius: 2)
-    }
-}
-
-extension Image {
     func HomeActivityBgView() -> some View{
         self
             .resizable()
@@ -115,5 +177,7 @@ extension Image {
 #Preview {
     NavigationStack {
         HomeActivityView()
+            .environment(AppStorageManager.shared)
+            .environment(SoundManager.shared)
     }
 }
