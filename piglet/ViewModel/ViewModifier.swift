@@ -51,6 +51,14 @@ struct LottieModifier2: ViewModifier {
     }
 }
 
+struct LottieModifier3: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .scaledToFit()
+            .frame(maxWidth: 160)
+    }
+}
+
 struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content

@@ -17,6 +17,13 @@ struct HomeMainView: View {
         ScrollView(showsIndicators: false) {
             // 如果有存钱罐
             if !allPiggyBank.isEmpty {
+                // 顶部动画效果
+                HStack {
+                    Spacer()
+                    LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
+                        .id(appStorage.LoopAnimation)
+                        .modifier(LottieModifier3())
+                }
                 // 如果有主存钱罐
                 if let primaryBank = primaryBank {
                     // 主存钱罐视图

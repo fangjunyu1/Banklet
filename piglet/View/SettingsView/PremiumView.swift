@@ -134,8 +134,14 @@ private struct CurrentPlanView: View {
         return formatter.string(from: date)
     }
     
+    func formattedDateTest(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter.string(from: date)
+    }
+    
     var body: some View {
-        VStack(spacing: 20) {
+        VStack {
             // 只有加载产品，才会显示选择方案。
             // 选择方案
             VStack {
@@ -175,7 +181,11 @@ private struct CurrentPlanView: View {
                         VStack(alignment:.trailing, spacing:3) {
                             // 到期时间
                             Text("Expiry date")
+                            #if DEBUG
+                            Text(formattedDateTest(date))
+                            #else
                             Text(formattedDate(date))
+                            #endif
                         }
                         .font(.caption2)
                     }
@@ -215,13 +225,12 @@ private struct PremiumComponentsView: View {
                                 }
                                 VStack(alignment: .leading, spacing: 3) {
                                     Text(LocalizedStringKey(item.name))
-                                        .font(.subheadline)
                                         .foregroundColor(AppColor.appGrayColor)
                                     HStack(spacing: 0) {
                                         Caption2(text: products.displayPrice)
                                         if let priceSuffix = item.priceSuffix {
-                                            Caption2(text:"/")
-                                            Caption2(text: priceSuffix)
+                                            Footnote(text:"/")
+                                            Footnote(text: priceSuffix)
                                         }
                                     }
                                 }
@@ -376,7 +385,7 @@ private struct premiumItemView: View {
             VStack {
                 ZStack {
                     Rectangle()
-                        .frame(width: 30, height: 30)
+                        .frame(width: 36, height: 36)
                         .cornerRadius(10)
                         .foregroundColor(premium.color)
                     Group {
@@ -391,7 +400,7 @@ private struct premiumItemView: View {
                                 .scaledToFit()
                         }
                     }
-                    .frame(width: 18)
+                    .frame(width: 20)
                     .aspectRatio(1, contentMode: .fit)
                     .foregroundColor(.white)
                 }
@@ -400,9 +409,9 @@ private struct premiumItemView: View {
             // 标题和描述
             VStack(alignment: .leading, spacing: 3) {
                 Text(LocalizedStringKey(premium.text))
-                    .font(.caption)
+                    .font(.subheadline)
                     .foregroundColor(AppColor.appGrayColor)
-                Caption2(text: premium.info)
+                Caption(text: premium.info)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
@@ -456,6 +465,7 @@ private struct PurchaseSuccessfulView: View {
         PremiumView()
     }
     .environment(IAPManager.shared)
+    .environmentObject(AppStorageManager.shared)
 }
 
 #Preview {

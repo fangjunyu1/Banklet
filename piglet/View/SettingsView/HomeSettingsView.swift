@@ -21,11 +21,7 @@ struct HomeSettingsView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
-                .id(appStorage.LoopAnimation)
-                .frame(height: 100)
-                .offset(y: -10)
-            
+            Spacer().frame(height:20)
             // 外层，分隔所有组件视图
             VStack(spacing: 10) {
                 // 启用iCloud

@@ -23,8 +23,8 @@ struct ThanksView: View {
                     .modifier(FootNoteModifier())
             }
             // 致谢动画
-            LottieView(filename: "ThanksDance", isPlaying: true, playCount: 0, isReversed: false)
-                .scaleEffect(1.1)
+            LottieView(filename: "ThanksAnimation", isPlaying: true, playCount: 0, isReversed: false)
+                .scaleEffect(0.8)
                 .modifier(LottieModifier())
             
             // 资源与技术支持

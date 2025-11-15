@@ -59,7 +59,8 @@ struct HomeStatsView: View {
         ScrollView(showsIndicators: false) {
             // 如果统计数据（存钱罐）
             if !allPiggyBank.isEmpty {
-                VStack(spacing: 20) {
+                VStack(spacing: 15) {
+                    Spacer().frame(height:0)
                     // 1、统计顶部日期、存取次数、存款等信息
                     HStack(spacing:12) {
                         // 日期图标、月份、周末
