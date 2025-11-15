@@ -19,6 +19,7 @@ struct PremiumView: View {
     @EnvironmentObject var iapManager: IAPManager
     @State private var isLoading = false    // 加载画布
     @State private var selectedProduct: Product?
+    @State private var isPurchaseSuccessfulView = false
     @State private var purchaseProductTask: Task<Void, Never>?
     var body: some View {
         VStack {
@@ -49,7 +50,11 @@ struct PremiumView: View {
             // 只有加载产品，才会显示购买方案。
             if !iapManager.products.isEmpty {
                 // 购买会员
-                BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,purchaseProductTask: $purchaseProductTask)
+                BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,isPurchaseSuccessfulView: $isPurchaseSuccessfulView, purchaseProductTask: $purchaseProductTask)
+                    .sheet(isPresented: $isPurchaseSuccessfulView, content: {
+                        PurchaseSuccessfulView()
+                            .presentationDetents([.height(360)])
+                    })
             }
         }
         .navigationTitle("Premium Member")
@@ -85,6 +90,7 @@ private struct PurchaseLoadingView: View {
                 HStack {
                     Spacer()
                     Button(action: {
+                        HapticManager.shared.selectionChanged()
                         isLoading.toggle()
                         purchaseProductTask?.cancel()   // 取消购买任务
                         purchaseProductTask = nil
@@ -161,7 +167,6 @@ private struct PremiumComponentsView: View {
                             }
                             .contentShape(Rectangle())
                             .onTapGesture {
-                                
                                 // 振动
                                 HapticManager.shared.selectionChanged()
                                 // 如果重复点击内购商品，则清空内购商品
@@ -225,6 +230,7 @@ private struct BuyPremiumView: View {
     @EnvironmentObject var iapManager: IAPManager
     @Binding var selectedProduct: Product?
     @Binding var loadPurchased:Bool
+    @Binding var isPurchaseSuccessfulView: Bool
     @Binding var purchaseProductTask: Task<Void, Never>?
     var body: some View {
         VStack(spacing: 10) {
@@ -232,21 +238,27 @@ private struct BuyPremiumView: View {
             Button(action: {
                 // 振动
                 HapticManager.shared.selectionChanged()
+                // 显示加载动画
+                loadPurchased = true
                 // 如果有商品信息，则购买商品。
                 if let selectedProduct = selectedProduct {
                     purchaseProductTask = Task {
-                        await iapManager.purchaseProduct(selectedProduct)
+                        await iapManager.purchaseProduct(selectedProduct) { success in
+                            if success == true {
+                                isPurchaseSuccessfulView = true
+                            }
+                            loadPurchased = false
+                            print("success:\(success)")
+                        }
                     }
                 }
-                // 显示加载动画
-                loadPurchased = true
             }, label: {
                 VStack {
                     // 会员信息
                     HStack {
                         Text("Purchase Membership")
                         if let selectedProduct = selectedProduct,let product = iapManager.IAPProductList.first(where: { $0.id == selectedProduct.id }) {
-                            Text(LocalizedStringKey(product.name))
+                            Text("(")+Text(LocalizedStringKey(product.name))+Text(")")
                         }
                     }
                     // 价格
@@ -267,10 +279,18 @@ private struct BuyPremiumView: View {
             // 恢复购买-按钮
             Button(action: {
                 HapticManager.shared.selectionChanged()
-                IAPManager.shared.restoredPurchasesStatus()
+                Task {
+                    await IAPManager.shared.checkAllTransactions()
+                }
             },label: {
                 Footnote(text:"Restore Purchases")
             })
+        }
+        .onAppear {
+            // 如果有产品，则默认选择最后一个产品
+            if !iapManager.products.isEmpty {
+                selectedProduct = iapManager.products.last
+            }
         }
     }
 }
@@ -327,9 +347,49 @@ private struct VStackModifier: ViewModifier {
     }
 }
 
+private struct PurchaseSuccessfulView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        VStack {
+            Spacer().frame(height:30)
+            LottieView(filename: "BlueAccessVIP", isPlaying: true, playCount: 0, isReversed: false)
+                .frame(maxHeight: 150)
+                .frame(maxWidth: 500)
+            // 购买成功
+            Text("Purchase successful")
+                .modifier(TitleModifier())
+            // 高级会员
+            HStack(spacing:0) {
+                Text("Premium Member")
+                if AppStorageManager.shared.isLifetime {
+                    Text("(")
+                    Text("Lifetime")
+                    Text(")")
+                }
+            }
+            .font(.footnote)
+            .fontWeight(.medium)
+            .foregroundColor(AppColor.appColor)
+            Spacer()
+            Text("Completed")
+                .modifier(ButtonModifier())
+                .onTapGesture {
+                    dismiss()
+                }
+        }
+        .onTapGesture {
+            print("点击了成功视图")
+        }
+    }
+}
+
 #Preview {
     NavigationStack{
         PremiumView()
     }
     .environment(IAPManager.shared)
+}
+
+#Preview {
+    PurchaseSuccessfulView()
 }

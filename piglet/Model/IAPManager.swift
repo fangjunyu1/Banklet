@@ -49,7 +49,7 @@ class IAPManager:ObservableObject {
     }
     
     // purchaseProduct：购买商品的方法，返回购买结果
-    func purchaseProduct(_ product: Product) async {
+    func purchaseProduct(_ product: Product,completion:(Bool) -> Void) async {
         // 在这里输出要购买的商品id
         print("Purchasing product: \(product.id)")
         do {
@@ -57,22 +57,94 @@ class IAPManager:ObservableObject {
             switch result {
             case .success(let verification):    // 购买成功的情况，返回verification包含交易的验证信息
                 let transaction = try checkVerified(verification)    // 验证交易
-                
-                print("产品购买成功！商品 ID: \(product.id)，商品名称: \(product.displayName)，商品描述: \(product.description)，价格: \(product.price)，本地化价格: \(product.displayPrice)，商品类型: \(product.type),订阅商品信息：\(product.subscription),\(product.type)")
-                
-                savePurchasedState(for: product.id)    // 更新UserDefaults中的购买状态
+                updatePurchasedState(from: transaction)    // 更新内购商品的购买状态
                 await transaction.finish()    // 告诉系统交易完成
+                completion(true)
                 print("交易成功：\(result)")
             case .userCancelled:    // 用户取消交易
                 print("用户取消交易：\(result)")
+                completion(false)
             case .pending:    // 购买交易被挂起
                 print("购买交易被挂起：\(result)")
+                completion(false)
             default:    // 其他情况
+                completion(false)
                 throw StoreError.failedVerification    // 购买失败
             }
         } catch {
             print("购买失败：\(error)")
+            completion(false)
             await resetProduct()    // 购买失败后重置 product 以便允许再次尝试购买
+        }
+    }
+    
+    // handleTransactions处理所有的交易情况
+    func handleTransactions() async {
+        print("交易发生变动，进入 handleTransactions 方法")
+        for await result in Transaction.updates {
+            // 遍历当前所有已完成的交易
+            do {
+                let transaction = try checkVerified(result) // 验证交易
+                updatePurchasedState(from: transaction)
+                await transaction.finish()
+            } catch {
+                print("交易处理失败：\(error)")
+            }
+        }
+    }
+    
+    // 检查所有交易，如果用户退款，则取消内购标识。
+    func checkAllTransactions() async {
+        print("进入 checkAllTransactions 方法，检查所有交易")
+        for await result in Transaction.all {
+            // 遍历当前所有已完成的交易
+            do {
+                let transaction = try checkVerified(result) // 验证交易
+                updatePurchasedState(from: transaction)
+                await transaction.finish()
+            } catch {
+                print("交易处理失败：\(error)")
+            }
+        }
+    }
+    
+    // 更新内购商品状态
+    func updatePurchasedState(from transaction: Transaction) {
+        let productID = transaction.productID
+        print("进入内购商品状态，产品ID：\(productID)")
+        
+        // ========== 永久会员逻辑 =========
+        if productID == "20240523" {
+            if transaction.revocationDate != nil {
+                // 清理永久会员标识
+                print("永久会员退款，清空标识")
+                print("订阅商品信息:\(transaction)")
+                AppStorageManager.shared.isLifetime = false
+            } else {
+                print("购买永久会员，新增标识")
+                print("商品订购日期:\(transaction.purchaseDate)")
+                print("订阅商品信息:\(transaction)")
+                AppStorageManager.shared.isLifetime = true
+            }
+            return
+        }
+        
+        // ============ 订阅商品逻辑 ===========
+        // 订阅退款
+        if transaction.revocationDate != nil {
+            print("订阅商品退款，清空高级会员有效期")
+            print("订阅商品信息:\(transaction)")
+            AppStorageManager.shared.expirationDate = 0
+            return
+        }
+        
+        if let expiration = transaction.expirationDate {
+            print("当前时间:\(Date())")
+            print("商品订购日期:\(transaction.purchaseDate)")
+            print("订阅商品有效期为:\(expiration)，同步高级会员有效期")
+            print("订阅商品信息:\(transaction)")
+            AppStorageManager.shared.expirationDate = expiration.timeIntervalSince1970
+            return
         }
     }
     
@@ -88,102 +160,10 @@ class IAPManager:ObservableObject {
         }
     }
     
-    // handleTransactions处理所有的交易情况
-    func handleTransactions() async {
-        print("进入handleTransactions方法")
-        for await result in Transaction.updates {
-            // 遍历当前所有已完成的交易
-            do {
-                let transaction = try checkVerified(result) // 验证交易
-                print("当前已完成的交易:\(transaction)")
-                
-                if !AppStorageManager.shared.isValidMember {
-                    print("当前不是内购状态，但是内购已完成")
-                    // 处理交易，例如解锁内容
-                    savePurchasedState(for: transaction.productID)
-                } else {
-                    print("当前时内购状态，不需要重复设置")
-                }
-                await transaction.finish()
-            } catch {
-                print("交易处理失败：\(error)")
-            }
-        }
-    }
-    
-    // 检查所有交易，如果用户退款，则取消内购标识。
-    func checkAllTransactions() async {
-        print("开始检查所有交易记录...")
-        let allTransactions = Transaction.all
-        var latestTransactions: [String: Transaction] = [:]
-        
-        for await transaction in allTransactions {
-            do {
-                let verifiedTransaction = try checkVerified(transaction)
-                print("verifiedTransaction:\(verifiedTransaction)")
-                // 只保留最新的交易
-                if let existingTransaction = latestTransactions[verifiedTransaction.productID] {
-                    if verifiedTransaction.purchaseDate > existingTransaction.purchaseDate {
-                        latestTransactions[verifiedTransaction.productID] = verifiedTransaction
-                    }
-                } else {
-                    latestTransactions[verifiedTransaction.productID] = verifiedTransaction
-                }
-            } catch {
-                print("交易验证失败：\(error)")
-            }
-        }
-        
-        var validPurchasedProducts: Set<String> = []
-        
-        // 处理最新的交易
-        for (productID, transaction) in latestTransactions {
-            if let revocationDate = transaction.revocationDate {
-                print("交易 \(productID) 已退款，撤销日期: \(revocationDate)")
-                removePurchasedState(for: productID)
-            } else {
-                validPurchasedProducts.insert(productID)
-                savePurchasedState(for: productID)
-            }
-        }
-        
-        // **移除所有未在最新交易中的商品**
-        let allPossibleProductIDs: Set<String> = Set(IAPProductList.map { $0.id }) // 所有可能的商品 ID
-        let productsToRemove = allPossibleProductIDs.subtracting(validPurchasedProducts)
-        
-        for id in productsToRemove {
-            removePurchasedState(for: id)
-        }
-    }
-    
     // 重新加载产品信息。
     func resetProduct() async {
         self.products = []
         await loadProduct()    // 调取loadProduct方法获取产品信息
-    }
-    
-    // 保存商品状态
-    func savePurchasedState(for productID: String) {
-//        AppStorageManager.shared.isInAppPurchase = true
-        print("保存购买状态: \(productID)")
-    }
-    
-    // 恢复内购状态
-    func restoredPurchasesStatus() {
-        print("点击了恢复内购按钮")
-    }
-    
-    // 移除内购状态
-    func removePurchasedState(for productID: String) {
-        UserDefaults.standard.removeObject(forKey: productID)
-        print("已移除购买状态: \(productID)")
-    }
-    
-    // 通过productID检查是否已完成购买
-    func loadPurchasedState(for productID: String) -> Bool{
-        let isPurchased = UserDefaults.standard.bool(forKey: productID)    // UserDefaults读取购买状态
-        print("Purchased state loaded for product: \(productID) - \(isPurchased)")
-        return isPurchased    // 返回购买状态
     }
 }
 // 定义 throws 报错

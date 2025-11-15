@@ -88,7 +88,7 @@ struct HomeSettingsView: View {
                 
                 // 高级会员
                 NavigationLink(destination: PremiumView()) {
-                    HomeSettingRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member",accessory: .none)
+                    HomeSettingPremiumRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member")
                 }
                 // 关于我们、鸣谢、开源
                 VStack(spacing: 0) {
@@ -129,7 +129,7 @@ struct HomeSettingsView: View {
             // 重置内购和欢迎界面
             Button(action: {
                 AppStorageManager.shared.isLifetime = false
-                AppStorageManager.shared.expirationDate = Date.distantPast.timeIntervalSince1970
+                AppStorageManager.shared.expirationDate = 0
                 AppStorageManager.shared.isCompletedWelcome = false
             }, label: {
                 Text("重置内购和欢迎界面")

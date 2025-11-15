@@ -46,6 +46,64 @@ struct HomeSettingRow: View {
     }
 }
 
+// 设置 - 高级会员视图
+struct HomeSettingPremiumRow: View {
+    var color: HomeSettingsColorEnum
+    var icon: HomeSettingsIconEnum
+    var title: String
+    let date = Date(timeIntervalSince1970: AppStorageManager.shared.expirationDate)
+    let isLifetime = AppStorageManager.shared.isLifetime
+    let isValidMember = AppStorageManager.shared.isValidMember
+    
+    func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter.string(from: date)
+    }
+    
+    var body: some View {
+        VStack {
+            HStack {
+                // 图标
+                if isValidMember {
+                        Image(systemName: "checkmark.seal.fill")
+                        .imageScale(.large)
+                            .foregroundColor(.white)
+                            .frame(width: 40,height: 30)
+                } else {
+                    ZStack {
+                        ColorView(color:color)
+                        iconView(icon: icon)
+                    }
+                    .padding(.trailing,10)
+                }
+                Text(LocalizedStringKey(title))
+                    .foregroundColor(isValidMember ? .white : .black)
+                Spacer()
+                if isLifetime {
+                    Text("Permanently valid")
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                } else if isValidMember {
+                    VStack(alignment:.trailing, spacing:3) {
+                        // 到期时间
+                        Text("Expiry date")
+                        Text(formattedDate(date))
+                    }
+                    .font(.caption2)
+                    .foregroundColor(.white)
+                }
+                Image(systemName:"chevron.right")
+                    .foregroundColor(isValidMember ? .white : .black)
+            }
+            .padding(.vertical,10)
+            .padding(.horizontal,14)
+            .background(isValidMember ? AppColor.appColor : .white)
+            .cornerRadius(10)
+        }
+    }
+}
+
 // 设置 - 无图标的视图，用于动画、背景
 struct HomeSettingNoIconRow: View {
     var title: String
@@ -188,9 +246,9 @@ private struct ColorView: View {
                 .fill (
                     LinearGradient(
                         gradient: Gradient(colors: [Color(hex: col1), Color(hex: col2)]), // 渐变的颜色
-                                startPoint: .topLeading, // 渐变的起始点
-                                endPoint: .bottomTrailing // 渐变的结束点
-                            )
+                        startPoint: .topLeading, // 渐变的起始点
+                        endPoint: .bottomTrailing // 渐变的结束点
+                    )
                 )
                 .frame(width: 30,height: 30)
                 .aspectRatio(1, contentMode: .fit)
@@ -231,7 +289,7 @@ private struct reminderTime: View {
                         appStorage.isReminderTime = false
                     }
                 }
-            .frame(width:70, height:0)
+                .frame(width:70, height:0)
         }
         .onAppear {
             // 为了检查应用的权限是否在后台关闭

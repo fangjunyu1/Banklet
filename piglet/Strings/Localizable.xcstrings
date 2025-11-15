@@ -13,6 +13,12 @@
     ":" : {
 
     },
+    "(" : {
+
+    },
+    ")" : {
+
+    },
     "/" : {
 
     },
@@ -12875,6 +12881,18 @@
         }
       }
     },
+    "Expiry date" : {
+      "comment" : "到期时间",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到期时间"
+          }
+        }
+      }
+    },
     "Finished Editing" : {
       "comment" : "完成编辑",
       "extractionState" : "manual",
@@ -23293,6 +23311,18 @@
         }
       }
     },
+    "Permanently valid" : {
+      "comment" : "永久有效",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永久有效"
+          }
+        }
+      }
+    },
     "Piggy Bank" : {
       "comment" : "存钱罐",
       "extractionState" : "manual",
@@ -25566,6 +25596,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "购买会员"
+          }
+        }
+      }
+    },
+    "Purchase successful" : {
+      "comment" : "购买成功",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "购买成功"
           }
         }
       }

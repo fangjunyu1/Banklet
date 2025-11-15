@@ -17,6 +17,9 @@ struct ButtonModifier: ViewModifier {
             .foregroundColor(Color.white)
             .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
             .cornerRadius(10)
+            .onTapGesture {
+                print("点击了ButtonModifier")
+            }
     }
 }
 

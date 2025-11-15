@@ -153,6 +153,7 @@
 		1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D601B852C0747FD00052528 /* StoreKit.framework */; };
 		1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33A19A2C077E2C0073320F /* IAPManager.swift */; };
 		1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3663E72D72FD34003C1052 /* AppStorageManager.swift */; };
+		1D3683582EC80B180089FE28 /* BlueAccessVIP.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3683572EC80B180089FE28 /* BlueAccessVIP.json */; };
 		1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39BB352EA3EB7C007C3017 /* AppColor.swift */; };
 		1D3E13CF2D49AD7A00747D20 /* Home3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C82D49AD7A00747D20 /* Home3.json */; };
 		1D3E13D02D49AD7A00747D20 /* Home1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E13C92D49AD7A00747D20 /* Home1.json */; };
@@ -484,6 +485,7 @@
 		1D2F92442E9D518E0077A235 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		1D33A19A2C077E2C0073320F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		1D3663E72D72FD34003C1052 /* AppStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageManager.swift; sourceTree = "<group>"; };
+		1D3683572EC80B180089FE28 /* BlueAccessVIP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlueAccessVIP.json; sourceTree = "<group>"; };
 		1D39BB352EA3EB7C007C3017 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		1D3E13C82D49AD7A00747D20 /* Home3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home3.json; sourceTree = "<group>"; };
 		1D3E13C92D49AD7A00747D20 /* Home1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Home1.json; sourceTree = "<group>"; };
@@ -989,6 +991,7 @@
 				1D66C4CE2EBDB2B400001CF5 /* emptyStats2.json */,
 				1D2A5EF72EBEE26A00C1F831 /* ThanksDance.json */,
 				1DD0895C2EC17E9A002EE03D /* vip.json */,
+				1D3683572EC80B180089FE28 /* BlueAccessVIP.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1555,6 +1558,7 @@
 				1D0386DD2EA0023600E9379F /* gif_Home16.gif in Resources */,
 				1D0386DE2EA0023600E9379F /* gif_Home33.gif in Resources */,
 				1D0386DF2EA0023600E9379F /* gif_Home1.gif in Resources */,
+				1D3683582EC80B180089FE28 /* BlueAccessVIP.json in Resources */,
 				1DD0895D2EC17E9A002EE03D /* vip.json in Resources */,
 				1D0386E02EA0023600E9379F /* gif_Home51.gif in Resources */,
 				1D0386E12EA0023600E9379F /* gif_Home39.gif in Resources */,
