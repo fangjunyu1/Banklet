@@ -64,6 +64,7 @@ class SoundManager:ObservableObject {
     func stopAllSound() {
         for player in players.values {
             player.stop()
+            player.rate
         }
     }
 }

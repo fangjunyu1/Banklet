@@ -34,6 +34,9 @@
     "0.0" : {
 
     },
+    "123" : {
+
+    },
     "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal." : {
       "comment" : "永久会员一次购买，永久有效，无需续费。",
       "extractionState" : "manual",
@@ -2055,6 +2058,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "進一步完善存錢筒的資訊。"
+          }
+        }
+      }
+    },
+    "Addressing future risks" : {
+      "comment" : "应对未来的风险",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应对未来的风险"
           }
         }
       }
@@ -5146,224 +5161,14 @@
         }
       }
     },
-    "Based on your current age and current salary, automatically calculate your career starting point, retirement age and salary growth rate, and calculate your lifetime income." : {
-      "comment" : "1.0.10:根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算出一生收入。",
+    "Based on your current age and salary, it automatically calculates your career starting point, retirement age, and salary growth rate, and calculates your lifetime wealth." : {
+      "comment" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算一生财富。",
       "extractionState" : "manual",
       "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "بناءً على عمرك الحالي وراتبك الحالي، فإنه يحسب تلقائيًا نقطة بداية مسيرتك المهنية وسن التقاعد ومعدل نمو الراتب، ويحسب دخلك مدى الحياة."
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En funció de la vostra edat actual i el sou actual, calcula automàticament el punt d'inici de la vostra carrera, l'edat de jubilació i la taxa de creixement del sou, i calcula els vostres ingressos vitals."
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na základě vašeho aktuálního věku a aktuálního platu vám automaticky vypočítá výchozí bod kariéry, věk odchodu do důchodu a míru růstu platu a vypočítá váš celoživotní příjem."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baseret på din nuværende alder og nuværende løn beregner den automatisk dit karrierestartpunkt, pensionsalder og lønvækst og beregner din livsindkomst."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Basierend auf Ihrem aktuellen Alter und Ihrem aktuellen Gehalt werden automatisch Ihr Karrierestartpunkt, Ihr Renteneintrittsalter und Ihre Gehaltswachstumsrate berechnet und Ihr Lebenseinkommen berechnet."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Με βάση την τρέχουσα ηλικία και τον τρέχοντα μισθό σας, υπολογίζει αυτόματα το σημείο εκκίνησης της σταδιοδρομίας σας, την ηλικία συνταξιοδότησης και τον ρυθμό αύξησης των μισθών σας και υπολογίζει το εισόδημά σας κατά τη διάρκεια της ζωής σας."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En función de su edad actual y su salario actual, calcula automáticamente el punto de inicio de su carrera, la edad de jubilación y la tasa de crecimiento salarial, y calcula sus ingresos de por vida."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En función de su edad actual y su salario actual, calcula automáticamente el punto de inicio de su carrera, la edad de jubilación y la tasa de crecimiento salarial, y calcula sus ingresos de por vida."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nykyisen ikäsi ja nykyisen palkkasi perusteella se laskee automaattisesti urasi aloituspisteen, eläkeikäsi ja palkan kasvuasteen sekä laskee elinaikasi tulot."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En fonction de votre âge actuel et de votre salaire actuel, il calcule automatiquement votre point de départ de carrière, votre âge de retraite et votre taux de croissance de salaire, et calcule votre revenu à vie."
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En fonction de votre âge actuel et de votre salaire actuel, il calcule automatiquement votre point de départ de carrière, votre âge de retraite et votre taux de croissance de salaire, et calcule votre revenu à vie."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "בהתבסס על הגיל הנוכחי והמשכורת הנוכחית שלך, הוא מחשב אוטומטית את נקודת ההתחלה שלך בקריירה, גיל הפרישה וקצב הצמיחה בשכר, ומחשב את ההכנסה שלך לכל החיים."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "आपकी वर्तमान आयु और वर्तमान वेतन के आधार पर, यह स्वचालित रूप से आपके कैरियर के प्रारंभिक बिंदु, सेवानिवृत्ति की आयु और वेतन वृद्धि दर की गणना करता है, और आपकी आजीवन आय की गणना करता है।"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na temelju vaše trenutne dobi i trenutne plaće, automatski izračunava početnu točku vaše karijere, dob za odlazak u mirovinu i stopu rasta plaće te izračunava vaš životni prihod."
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Az Ön jelenlegi életkora és jelenlegi fizetése alapján automatikusan kiszámítja a karrier kiindulási pontját, a nyugdíjkorhatárt és a fizetés növekedési ütemét, valamint kiszámítja életre szóló jövedelmét."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berdasarkan usia dan gaji Anda saat ini, secara otomatis menghitung titik awal karier Anda, usia pensiun dan tingkat pertumbuhan gaji, serta menghitung pendapatan seumur hidup Anda."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In base alla tua età attuale e al tuo stipendio attuale, calcola automaticamente il punto di partenza della tua carriera, l'età pensionabile e il tasso di crescita dello stipendio, oltre a calcolare il tuo reddito complessivo nel corso della vita."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "現在の年齢と現在の給与に基づいて、キャリアの開始点、退職年齢、給与増加率を自動的に計算し、生涯収入を計算します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 나이와 현재 급여를 기반으로 자동으로 경력 시작 시점, 은퇴 연령, 급여 성장률을 계산하고, 평생 소득을 계산합니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berdasarkan umur semasa dan gaji semasa anda, ia secara automatik mengira titik permulaan kerjaya anda, umur persaraan dan kadar pertumbuhan gaji, dan mengira pendapatan seumur hidup anda."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Basert på din nåværende alder og nåværende lønn, beregner den automatisk ditt karrierestartpunkt, pensjonsalder og lønnsvekst, og beregner din livsinntekt."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Op basis van uw huidige leeftijd en salaris berekent het programma automatisch uw startpunt in uw carrière, uw pensioenleeftijd en uw salarisgroeipercentage. Ook wordt uw levenslange inkomen berekend."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na podstawie Twojego obecnego wieku i obecnego wynagrodzenia aplikacja automatycznie oblicza punkt rozpoczęcia kariery zawodowej, wiek emerytalny i tempo wzrostu wynagrodzenia oraz oblicza dochód na całe życie."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Com base na sua idade e salário atuais, o ponto de início da carreira, a idade de reforma e a taxa de crescimento salarial são calculados automaticamente para calcular o rendimento vitalício."
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Com base na sua idade e salário atuais, o ponto de início da carreira, a idade de reforma e a taxa de crescimento salarial são calculados automaticamente para calcular o rendimento vitalício."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pe baza vârstei tale actuale și a salariului actual, calculează automat punctul de pornire în carieră, vârsta de pensionare și rata de creștere a salariului și calculează venitul pe viață."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "На основе вашего текущего возраста и текущей зарплаты приложение автоматически рассчитывает начальную точку вашей карьеры, пенсионный возраст и темпы роста заработной платы, а также рассчитывает ваш пожизненный доход."
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Na základe vášho aktuálneho veku a aktuálneho platu vám automaticky vypočíta počiatočný bod kariéry, dôchodkový vek a mieru rastu platu a vypočíta váš celoživotný príjem."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baserat på din nuvarande ålder och nuvarande lön, beräknar den automatiskt din karriärstartpunkt, pensionsålder och löneökningstakt och beräknar din livsinkomst."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ระบบจะคำนวณจุดเริ่มต้นของอาชีพ อายุเกษียณ และอัตราการเติบโตของเงินเดือน รวมทั้งคำนวณรายได้ตลอดชีพของคุณโดยอัตโนมัติโดยพิจารณาจากอายุปัจจุบันและเงินเดือนปัจจุบันของคุณ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mevcut yaşınıza ve mevcut maaşınıza göre kariyer başlangıç noktanızı, emeklilik yaşınızı ve maaş artış oranınızı otomatik olarak hesaplar ve yaşam boyu gelirinizi hesaplar."
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Виходячи з вашого поточного віку та поточної зарплати, він автоматично розраховує початкову точку вашої кар’єри, пенсійний вік і швидкість зростання зарплати, а також обчислює ваш дохід за все життя."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dựa trên độ tuổi và mức lương hiện tại của bạn, công cụ sẽ tự động tính toán điểm bắt đầu sự nghiệp, tuổi nghỉ hưu và tỷ lệ tăng lương, đồng thời tính toán thu nhập trọn đời của bạn."
-          }
-        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算出一生收入。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "根據你目前的年齡和目前薪資，自動推算職涯起點、退休年齡和薪資成長率，計算出一生收入。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "根據你目前的年齡和目前薪資，自動推算職涯起點、退休年齡和薪資成長率，計算出一生收入。"
+            "value" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算一生财富。"
           }
         }
       }
@@ -5896,6 +5701,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "加幣"
+          }
+        }
+      }
+    },
+    "Calculate" : {
+      "comment" : "计算",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计算"
+          }
+        }
+      }
+    },
+    "Calculate your lifetime wealth" : {
+      "comment" : "计算一生的财富",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计算一生的财富"
           }
         }
       }
@@ -12185,6 +12014,18 @@
         }
       }
     },
+    "Emergency Fund" : {
+      "comment" : "生活保障金",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生活保障金"
+          }
+        }
+      }
+    },
     "Enable iCloud" : {
       "comment" : "启用iCloud",
       "extractionState" : "manual",
@@ -13835,6 +13676,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "直接進入主介面"
+          }
+        }
+      }
+    },
+    "Guaranteed Month" : {
+      "comment" : "保障月份",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保障月份"
           }
         }
       }
@@ -16335,6 +16188,18 @@
         }
       }
     },
+    "It is recommended to prepare 3-6 months' worth of living expenses to cope with temporary unemployment, medical expenses, or other emergencies." : {
+      "comment" : "建议准备 3-6 个月的生活开销，以应对暂时的失业、医疗支出或其他突发状况。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建议准备 3-6 个月的生活开销，以应对暂时的失业、医疗支出或其他突发状况。"
+          }
+        }
+      }
+    },
     "JPY" : {
       "comment" : "1.0.6:日元",
       "extractionState" : "manual",
@@ -18411,14 +18276,14 @@
         }
       }
     },
-    "Living allowance" : {
-      "comment" : "生活保障金",
+    "Living Expenses" : {
+      "comment" : "生活开销",
       "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "生活保障金"
+            "value" : "生活开销"
           }
         }
       }
@@ -25894,228 +25759,6 @@
         }
       }
     },
-    "Quickly calculate lifetime wealth" : {
-      "comment" : "1.0.10:快速计算一生财富",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "احسب ثروة مدى الحياة بسرعة"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcula ràpidament la riquesa de tota la vida"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rychle vypočítat celoživotní bohatství"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beregn hurtigt livslang rigdom"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lebensvermögen schnell berechnen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Υπολογίστε γρήγορα τον πλούτο της ζωής"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcule rápidamente su riqueza vitalicia"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcule rápidamente su riqueza vitalicia"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laske nopeasti elinikäinen varallisuus"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calculez rapidement votre richesse à vie"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calculez rapidement votre richesse à vie"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "חישוב מהיר של עושר לכל החיים"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "जीवन भर की संपत्ति की तुरंत गणना करें"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Brzo izračunajte životno bogatstvo"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gyorsan kiszámítja az életre szóló vagyont"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hitung kekayaan seumur hidup dengan cepat"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcola rapidamente la ricchezza della tua vita"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "生涯の資産を素早く計算"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "평생 재산을 빠르게 계산하세요"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cepat mengira kekayaan seumur hidup"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beregn raskt livsformuen"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bereken snel uw levenslange vermogen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Szybko oblicz majątek na całe życie"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcule rapidamente a sua riqueza vitalícia"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calcule rapidamente a sua riqueza vitalícia"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calculați rapid averea pe viață"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Быстро рассчитать пожизненное богатство"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rýchlo vypočítajte celoživotné bohatstvo"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beräkna snabbt livstidsförmögenhet"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "คำนวณความมั่งคั่งตลอดชีวิตอย่างรวดเร็ว"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yaşam boyu servetinizi hızla hesaplayın"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Швидко підрахувати багатство за все життя"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nhanh chóng tính toán tài sản trọn đời"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快速计算一生财富"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快速計算一生財富"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快速計算一生財富"
-          }
-        }
-      }
-    },
     "Re-create" : {
 
     },
@@ -32565,228 +32208,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "开始"
-          }
-        }
-      }
-    },
-    "Start calculation" : {
-      "comment" : "1.0.10:开始计算",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "بدء الحساب"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comença el càlcul"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spusťte výpočet"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start beregningen"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berechnung starten"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Έναρξη υπολογισμού"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iniciar cálculo"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iniciar cálculo"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aloita laskenta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Démarrer le calcul"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Démarrer le calcul"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "התחל בחישוב"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गणना प्रारंभ करें"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Započnite izračun"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indítsa el a számítást"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulai perhitungan"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inizia il calcolo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "計算を開始"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계산 시작"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mulakan pengiraan"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start beregningen"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begin met berekenen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rozpocznij obliczenia"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comece a calcular"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comece a calcular"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Începeți calculul"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Начать расчет"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spustite výpočet"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Starta beräkningen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เริ่มการคำนวณ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yaşam boyu servetinizi hızla hesaplayın"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Почніть розрахунок"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bắt đầu tính toán"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "开始计算"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開始計算"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開始計算"
           }
         }
       }

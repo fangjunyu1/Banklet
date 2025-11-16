@@ -126,6 +126,14 @@
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
 		1D1400B62D3112BD00DC51C0 /* AboutUs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1400B52D3112BD00DC51C0 /* AboutUs.json */; };
 		1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */; };
+		1D1434A02EC9530000FA6CBB /* check1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D14349E2EC9530000FA6CBB /* check1.json */; };
+		1D1434A12EC9530000FA6CBB /* check2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D14349F2EC9530000FA6CBB /* check2.json */; };
+		1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A22EC9536300FA6CBB /* HomeActivitySheetView.swift */; };
+		1D1434A52EC9A3B600FA6CBB /* HomeActivityTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A42EC9A3B400FA6CBB /* HomeActivityTitleView.swift */; };
+		1D1434A72EC9BBEE00FA6CBB /* HomeActivitySheetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */; };
+		1D1434A92EC9BC1C00FA6CBB /* HomeActivitySheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */; };
+		1D1434AB2EC9BC4100FA6CBB /* HomeActivityToolbarMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */; };
+		1D1434AD2EC9BCD600FA6CBB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434AC2EC9BCD400FA6CBB /* Test.swift */; };
 		1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */; };
 		1D1561A92EB2FC040041C0DD /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561A82EB2FC040041C0DD /* welcome.json */; };
 		1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */; };
@@ -463,6 +471,14 @@
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		1D1400B52D3112BD00DC51C0 /* AboutUs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AboutUs.json; sourceTree = "<group>"; };
 		1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAndWithdrawView.swift; sourceTree = "<group>"; };
+		1D14349E2EC9530000FA6CBB /* check1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check1.json; sourceTree = "<group>"; };
+		1D14349F2EC9530000FA6CBB /* check2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check2.json; sourceTree = "<group>"; };
+		1D1434A22EC9536300FA6CBB /* HomeActivitySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetView.swift; sourceTree = "<group>"; };
+		1D1434A42EC9A3B400FA6CBB /* HomeActivityTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityTitleView.swift; sourceTree = "<group>"; };
+		1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetBackground.swift; sourceTree = "<group>"; };
+		1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetContentView.swift; sourceTree = "<group>"; };
+		1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityToolbarMusicView.swift; sourceTree = "<group>"; };
+		1D1434AC2EC9BCD400FA6CBB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = migrateOldDataIfNeeded.swift; sourceTree = "<group>"; };
 		1D1561A82EB2FC040041C0DD /* welcome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
@@ -841,6 +857,12 @@
 			isa = PBXGroup;
 			children = (
 				1DE736022EB64D2C00573C1A /* HomeActivityView.swift */,
+				1D1434A22EC9536300FA6CBB /* HomeActivitySheetView.swift */,
+				1D1434A42EC9A3B400FA6CBB /* HomeActivityTitleView.swift */,
+				1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */,
+				1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */,
+				1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */,
+				1D1434AC2EC9BCD400FA6CBB /* Test.swift */,
 			);
 			path = ActiveView;
 			sourceTree = "<group>";
@@ -984,6 +1006,8 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1D14349E2EC9530000FA6CBB /* check1.json */,
+				1D14349F2EC9530000FA6CBB /* check2.json */,
 				1D1400B52D3112BD00DC51C0 /* AboutUs.json */,
 				1D3683572EC80B180089FE28 /* BlueAccessVIP.json */,
 				1DE45C712EB3A8180079F76E /* EmptyBanklet.json */,
@@ -1525,6 +1549,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8854612D244FB9009DE7AE /* Fireworks1.json in Resources */,
+				1D1434A02EC9530000FA6CBB /* check1.json in Resources */,
+				1D1434A12EC9530000FA6CBB /* check2.json in Resources */,
 				1D3E141A2D4A3F0700747D20 /* Home42.json in Resources */,
 				1D3E13DC2D49DF3D00747D20 /* Home11.json in Resources */,
 				1D3E13F52D4A0C8700747D20 /* Home16.json in Resources */,
@@ -1741,29 +1767,34 @@
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */,
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
+				1D1434A92EC9BC1C00FA6CBB /* HomeActivitySheetContentView.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
 				1DE736032EB64D3000573C1A /* HomeActivityView.swift in Sources */,
 				1DE45C6A2EB355BB0079F76E /* HomeTabView.swift in Sources */,
+				1D1434A52EC9A3B600FA6CBB /* HomeActivityTitleView.swift in Sources */,
 				1DBCF4172EB8D9DE00B85BF4 /* HomeEmptyView.swift in Sources */,
 				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
 				1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
+				1D1434AD2EC9BCD600FA6CBB /* Test.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
 				1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */,
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */,
+				1D1434AB2EC9BC4100FA6CBB /* HomeActivityToolbarMusicView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */,
 				1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */,
 				1DBCF41D2EB8DB6400B85BF4 /* EmailHelper.swift in Sources */,
 				1DD0895F2EC187D4002EE03D /* PreminumList.swift in Sources */,
 				1DD089582EC16C3D002EE03D /* PremiumView.swift in Sources */,
 				1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */,
+				1D1434A72EC9BBEE00FA6CBB /* HomeActivitySheetBackground.swift in Sources */,
 				1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */,
 				1D21686D2D9049E600DC4376 /* LifeSavingsJarView.swift in Sources */,
 				1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */,
@@ -1781,6 +1812,7 @@
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
+				1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
 				1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */,
 				1DE736012EB64D2A00573C1A /* HomeMainView.swift in Sources */,

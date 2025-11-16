@@ -25,7 +25,7 @@ struct PremiumView: View {
     var body: some View {
         VStack {
             // 显示列表
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
                     VStack {
                         // 会员 动画
@@ -367,6 +367,8 @@ private struct BuyPremiumView: View {
                 Footnote(text:"Restore Purchases")
             })
         }
+        .padding(.bottom,10)
+        .ignoresSafeArea()
         .onAppear {
             // 如果有产品，则默认选择最后一个产品
             if !iapManager.products.isEmpty {
@@ -376,6 +378,7 @@ private struct BuyPremiumView: View {
     }
 }
 
+// 会员权益-列表
 private struct premiumItemView: View {
     var premium: PreminumModel
     var body: some View {
@@ -423,6 +426,7 @@ private struct VStackModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(10)
+            .frame(maxWidth: .infinity,alignment: .leading)
             .background(.white)
             .cornerRadius(10)
     }

@@ -12,12 +12,13 @@ struct HomeActivityView: View {
     @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
     @State private var activityTab = ActivityTab.LifeSavingsBank
+    @State private var activitySheet = false
     
     private func playMusicForCurrentTab() {
         switch activityTab {
         case .LifeSavingsBank:
             soundManager.playBackgroundMusic(named: "life0")
-        case .LivingAllowance:
+        case .EmergencyFund:
             soundManager.playBackgroundMusic(named: "life1")
         }
     }
@@ -33,11 +34,14 @@ struct HomeActivityView: View {
                 }
             Spacer().frame(height:20)
             Button(action: {
-                
+                activitySheet.toggle()
             }, label: {
                 Text("Participate")
                     .modifier(ButtonModifier())
             })
+            .sheet(isPresented: $activitySheet) {
+                HomeActivitySheetView(activityTab: $activityTab)
+            }
             Spacer()
         }
         .navigationTitle("Activity")
@@ -61,41 +65,6 @@ struct HomeActivityView: View {
         .onDisappear {
             soundManager.stopAllSound()
         }
-    }
-}
-
-private struct HomeActivityToolbarMusicView: View {
-    @Environment(AppStorageManager.self) var appStorage
-    @Environment(SoundManager.self) var soundManager
-    @Environment(\.colorScheme) var colorScheme
-    @Binding var activityTab: ActivityTab
-    
-    private func playMusicForCurrentTab() {
-        switch activityTab {
-        case .LifeSavingsBank:
-            soundManager.playBackgroundMusic(named: "life0")
-        case .LivingAllowance:
-            soundManager.playBackgroundMusic(named: "life1")
-        }
-    }
-    
-    var body: some View {
-        Button(action: {
-            appStorage.isActivityMusic.toggle()
-            if appStorage.isActivityMusic {
-                playMusicForCurrentTab()    // 播放音乐
-            } else {
-                soundManager.stopAllSound()
-            }
-        }, label: {
-            Image(systemName: "music.note")
-                .overlay {
-                    if !appStorage.isActivityMusic {
-                        Image(systemName: "xmark")
-                    }
-                }
-                .foregroundColor(Color.black)
-        })
     }
 }
 
@@ -156,7 +125,7 @@ private struct HomeActivityViewBackground: View {
         case .LifeSavingsBank:
             Image("life0")
                 .HomeActivityBgView()
-        case .LivingAllowance:
+        case .EmergencyFund:
             Image("life1")
                 .HomeActivityBgView()
         }
