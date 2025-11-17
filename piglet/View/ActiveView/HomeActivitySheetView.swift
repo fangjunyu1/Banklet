@@ -12,6 +12,7 @@ struct HomeActivitySheetView: View {
     @Binding var activityTab: ActivityTab
     @State private var activityInput = ActivityInput()
     @State private var activityStep: ActivityStep = .calculate
+    @FocusState private var isFocused: Bool
     var body: some View {
         ZStack(alignment: .bottom) {
             // 活动视图
@@ -19,12 +20,17 @@ struct HomeActivitySheetView: View {
                 // 背景图片区域
                 HomeActivitySheetBackground(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep)
                 // 内容显示
-                HomeActivitySheetContentView(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep)
+                HomeActivitySheetContentView(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep,isFocused: $isFocused)
             }
             // 顶部返回按钮和标题
             HomeActivityTitleView(activityTab: $activityTab)
         }
         .ignoresSafeArea()
+        .onTapGesture {
+            withAnimation {
+                isFocused = false
+            }
+        }
     }
 }
 
@@ -64,8 +70,9 @@ enum ActivityStep {
 
 #Preview {
     NavigationStack {
-        ZStack {
-            HomeActivitySheetPreviewView()
-        }
+        VStack{}
+            .sheet(isPresented: .constant(true)) {
+                HomeActivitySheetView(activityTab: .constant(.LifeSavingsBank))
+            }
     }
 }

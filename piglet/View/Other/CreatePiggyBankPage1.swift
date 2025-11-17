@@ -162,6 +162,8 @@ struct CreatePiggyBankPage1: View {
                     Spacer()
                     // 进入主界面
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         pageSteps = 0
                     }, label: {
                         Text("Go directly to the main interface")
@@ -171,6 +173,8 @@ struct CreatePiggyBankPage1: View {
                     Spacer().frame(height: height * 0.02)
                     // 下一步
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         DetermineInput()
                     }, label: {
                         Text("Next")
@@ -190,9 +194,13 @@ struct CreatePiggyBankPage1: View {
                 // 如果填写的字段为空，弹出警告框。
                 .alert("Name or amount is missing", isPresented: $showAlert) {
                     Button("Confirm") {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         pageSteps = 4
                     }
                     Button("Re-enter", role: .cancel) {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         showAlert = false
                     }
                 } message: {

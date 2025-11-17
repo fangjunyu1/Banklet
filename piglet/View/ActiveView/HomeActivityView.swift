@@ -14,15 +14,6 @@ struct HomeActivityView: View {
     @State private var activityTab = ActivityTab.LifeSavingsBank
     @State private var activitySheet = false
     
-    private func playMusicForCurrentTab() {
-        switch activityTab {
-        case .LifeSavingsBank:
-            soundManager.playBackgroundMusic(named: "life0")
-        case .EmergencyFund:
-            soundManager.playBackgroundMusic(named: "life1")
-        }
-    }
-    
     var body: some View {
         ScrollView(showsIndicators: false) {
             // Tab切换列表
@@ -35,6 +26,8 @@ struct HomeActivityView: View {
             Spacer().frame(height:20)
             Button(action: {
                 activitySheet.toggle()
+                // 振动
+                HapticManager.shared.selectionChanged()
             }, label: {
                 Text("Participate")
                     .modifier(ButtonModifier())
@@ -66,11 +59,21 @@ struct HomeActivityView: View {
             soundManager.stopAllSound()
         }
     }
+    
+    private func playMusicForCurrentTab() {
+        switch activityTab {
+        case .LifeSavingsBank:
+            soundManager.playBackgroundMusic(named: "life0")
+        case .EmergencyFund:
+            soundManager.playBackgroundMusic(named: "life1")
+        }
+    }
 }
 
 private struct HomeActivityTabView: View {
     @Binding var activityTab: ActivityTab
-    let imgHeight: CGFloat = 360
+    let imgHeight: CGFloat = 380
+    let imgWidth: CGFloat = 280
     var TabHeight: CGFloat { imgHeight + 60 }
     var body: some View {
         TabView(selection: $activityTab) {
@@ -78,7 +81,7 @@ private struct HomeActivityTabView: View {
                 Image(item.image)
                     .resizable()
                     .scaledToFill()
-                    .frame(width:280, height: imgHeight)
+                    .frame(width: imgWidth, height: imgHeight)
                     .cornerRadius(30)
                     .shadow(radius: 1)
                     .overlay { HomeActivityTabTextView(item: item)}

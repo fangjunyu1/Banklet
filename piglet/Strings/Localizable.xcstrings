@@ -34,9 +34,6 @@
     "0.0" : {
 
     },
-    "123" : {
-
-    },
     "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal." : {
       "comment" : "永久会员一次购买，永久有效，无需续费。",
       "extractionState" : "manual",
@@ -5160,6 +5157,9 @@
           }
         }
       }
+    },
+    "Based on your current age and current salary, automatically calculate your career starting point, retirement age and salary growth rate, and calculate your lifetime income." : {
+
     },
     "Based on your current age and salary, it automatically calculates your career starting point, retirement age, and salary growth rate, and calculates your lifetime wealth." : {
       "comment" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算一生财富。",
@@ -25759,6 +25759,9 @@
         }
       }
     },
+    "Quickly calculate lifetime wealth" : {
+
+    },
     "Re-create" : {
 
     },
@@ -32211,6 +32214,9 @@
           }
         }
       }
+    },
+    "Start calculation" : {
+
     },
     "Start your savings journey" : {
       "comment" : "1.1.0 开始你的储蓄之旅",

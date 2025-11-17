@@ -15,6 +15,7 @@ struct ButtonModifier: ViewModifier {
             .frame(height: 60)
             .frame(minWidth: 200)
             .foregroundColor(Color.white)
+            .contentShape(Rectangle())
             .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
             .cornerRadius(10)
     }
@@ -28,6 +29,7 @@ struct ButtonModifier2: ViewModifier {
             .frame(height: 60)
             .frame(minWidth: 200)
             .foregroundColor(Color.white)
+            .contentShape(Rectangle())
             .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
             .cornerRadius(20)
     }

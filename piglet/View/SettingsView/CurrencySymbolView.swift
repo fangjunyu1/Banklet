@@ -11,6 +11,8 @@ struct CurrencySymbolView: View {
     @Environment(AppStorageManager.self) var appStorage
     
     private func changeSymbols(currency: Currency) {
+        // 振动
+        HapticManager.shared.selectionChanged()
         withAnimation {
             appStorage.CurrencySymbol = currency.currencyAbbreviation
         }

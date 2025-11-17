@@ -18,6 +18,8 @@ struct HomeBanksListView: View {
                     .fontWeight(.medium)
                 Spacer()
                 Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
                     print("显示更多")
                 }, label: {
                     Text("Show more")
@@ -30,6 +32,8 @@ struct HomeBanksListView: View {
                 ForEach(Array(allPiggyBank.prefix(3).enumerated()), id: \.offset) { index,item in
                     Button(action: {
                         
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                     }, label: {
                         HStack {
                             // 我的存钱罐图标

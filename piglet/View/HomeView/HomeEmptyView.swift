@@ -33,7 +33,8 @@ struct HomeEmptyView: View {
             }
             Spacer().frame(height: 50)
             Button(action:{
-                
+                // 振动
+                HapticManager.shared.selectionChanged()
             },label: {
                 Text("Create")
                     .modifier(ButtonModifier())

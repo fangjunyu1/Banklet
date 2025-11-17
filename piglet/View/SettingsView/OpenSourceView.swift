@@ -28,6 +28,8 @@ struct OpenSourceView: View {
             
             // GitHub 按钮
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 showGitHub = true
             }, label: {
                 Image("GitHub")

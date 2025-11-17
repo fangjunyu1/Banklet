@@ -64,6 +64,10 @@ struct ThanksView: View {
                             .background(AppColor.appColor)
                             .cornerRadius(16)
                             .shadow(radius: 5)
+                            .onTapGesture {
+                                // 振动
+                                HapticManager.shared.selectionChanged()
+                            }
                     }
                 }
                 Spacer().frame(height:50)

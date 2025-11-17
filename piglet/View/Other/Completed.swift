@@ -87,6 +87,8 @@ struct CompletedView: View {
                 Spacer()
                 // 重新创建按钮
                 Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
                     pageSteps = 3
                 }, label: {
                     Text("Re-create")
@@ -96,6 +98,8 @@ struct CompletedView: View {
                 Spacer().frame(height: height * 0.02)
                 // 完成按钮
                 Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
                     save()
                     pageSteps = 0
                     // 重制存钱罐对象

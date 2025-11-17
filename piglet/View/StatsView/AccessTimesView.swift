@@ -98,6 +98,8 @@ private struct groupRecordsHeader: View {
             Text(weekString + "," + dateString).font(.caption2)
             Spacer()
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 withAnimation {
                     if collapsedDates.contains(group.date) {
                         collapsedDates.remove(group.date)
@@ -119,6 +121,8 @@ private struct FilterTabs: View {
     var body: some View {
         HStack {
             TabButton(title: "All", isSelected: selectedBank == nil) {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 withAnimation {
                     selectedBank = nil
                 }
@@ -126,6 +130,8 @@ private struct FilterTabs: View {
             // 存钱罐列表
             ForEach(allBanks, id:\.self) { item in
                 TabButton(title: item.name, isSelected: item == selectedBank) {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
                     withAnimation {
                         selectedBank = item
                     }
@@ -141,7 +147,9 @@ private struct TabButton: View {
     let action: () -> Void
     
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            action()
+        }, label: {
             Text(LocalizedStringKey(title))
                 .font(.footnote)
                 .padding(.vertical, 12)
@@ -153,7 +161,7 @@ private struct TabButton: View {
                         .foregroundColor(isSelected ? .white : .clear)
                 }
                 .cornerRadius(20)
-        }
+        })
     }
 }
 

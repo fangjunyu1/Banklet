@@ -133,7 +133,6 @@
 		1D1434A72EC9BBEE00FA6CBB /* HomeActivitySheetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */; };
 		1D1434A92EC9BC1C00FA6CBB /* HomeActivitySheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */; };
 		1D1434AB2EC9BC4100FA6CBB /* HomeActivityToolbarMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */; };
-		1D1434AD2EC9BCD600FA6CBB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434AC2EC9BCD400FA6CBB /* Test.swift */; };
 		1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */; };
 		1D1561A92EB2FC040041C0DD /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561A82EB2FC040041C0DD /* welcome.json */; };
 		1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */; };
@@ -267,6 +266,7 @@
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
+		1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */; };
 		1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */; };
 		1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */; };
 		1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4142EB8657900B85BF4 /* BanksRow.swift */; };
@@ -478,7 +478,6 @@
 		1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetBackground.swift; sourceTree = "<group>"; };
 		1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetContentView.swift; sourceTree = "<group>"; };
 		1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityToolbarMusicView.swift; sourceTree = "<group>"; };
-		1D1434AC2EC9BCD400FA6CBB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = migrateOldDataIfNeeded.swift; sourceTree = "<group>"; };
 		1D1561A82EB2FC040041C0DD /* welcome.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = welcome.json; sourceTree = "<group>"; };
 		1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
@@ -619,6 +618,7 @@
 		1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetProvider.swift; sourceTree = "<group>"; };
 		1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetEntry.swift; sourceTree = "<group>"; };
 		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
+		1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTimesView.swift; sourceTree = "<group>"; };
 		1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecordRow.swift; sourceTree = "<group>"; };
 		1DBCF4142EB8657900B85BF4 /* BanksRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRow.swift; sourceTree = "<group>"; };
@@ -862,7 +862,6 @@
 				1D1434A62EC9BBED00FA6CBB /* HomeActivitySheetBackground.swift */,
 				1D1434A82EC9BC1A00FA6CBB /* HomeActivitySheetContentView.swift */,
 				1D1434AA2EC9BC4000FA6CBB /* HomeActivityToolbarMusicView.swift */,
-				1D1434AC2EC9BCD400FA6CBB /* Test.swift */,
 			);
 			path = ActiveView;
 			sourceTree = "<group>";
@@ -1184,6 +1183,7 @@
 				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
 				1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */,
 				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
+				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1753,6 +1753,7 @@
 				1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */,
 				1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */,
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
+				1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */,
 				1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */,
 				1DD14EE02EC0330B00325DF7 /* AnimatedImageView.swift in Sources */,
 				1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */,
@@ -1780,7 +1781,6 @@
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
-				1D1434AD2EC9BCD600FA6CBB /* Test.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,

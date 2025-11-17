@@ -11,17 +11,18 @@ struct HomeActivitySheetContentView: View {
     @Binding var activityTab: ActivityTab
     @Binding var activityInput: ActivityInput
     @Binding var activityStep: ActivityStep
+    @FocusState.Binding var isFocused: Bool
     var body: some View {
-        VStack(spacing: 30) {
-            // 内容视图的标题
-            HomeActivitySheetContentTitleView(activityTab: $activityTab,activityStep: $activityStep)
-            // 内容视图的输入视图
-            HomeActivitySheetContentInputView(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep)
-            // 确认按钮
-            HomeActivitySheetContentButtonView(activityTab: $activityTab,activityStep: $activityStep)
-            Spacer().frame(maxWidth: 20)
-        }
-        .modifier(HomeActivitySheetContentModifier())
+            VStack(spacing: 30) {
+                // 内容视图的标题
+                HomeActivitySheetContentTitleView(activityTab: $activityTab,activityStep: $activityStep)
+                // 内容视图的输入视图
+                HomeActivitySheetContentInputView(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep, isFocused: $isFocused)
+                // 确认按钮
+                HomeActivitySheetContentButtonView(activityTab: $activityTab,activityStep: $activityStep)
+            }
+            .modifier(HomeActivitySheetContentModifier())
+            .modifier(KeyboardAdaptive())
     }
 }
 
@@ -31,37 +32,41 @@ private struct HomeActivitySheetContentButtonView: View {
     var body: some View {
         Button(action: {
             // 下一步
-            
+            // 振动
+            HapticManager.shared.selectionChanged()
         }, label: {
-            switch activityStep {
-            case .calculate:
-                Text("Calculate")
-            case .create:
-                Text("Create")
-            case .loading:
-                ProgressView("")
-            case .complete:
-                Text("Completed")
+            Group {
+                switch activityStep {
+                case .calculate:
+                    Text("Calculate")
+                case .create:
+                    Text("Create")
+                case .loading:
+                    ProgressView("")
+                case .complete:
+                    Text("Completed")
+                }
             }
+            .modifier(ButtonModifier())
         })
-        .modifier(ButtonModifier())
     }
 }
 private struct HomeActivitySheetContentInputView: View {
     @Binding var activityTab: ActivityTab
     @Binding var activityInput: ActivityInput
     @Binding var activityStep: ActivityStep
+    @FocusState.Binding var isFocused: Bool
     var body: some View {
         if activityTab == .LifeSavingsBank {
             HStack {
                 // 年龄
-                PrivateInputBindingView(text:"Age",image: "person.fill", color: "695CFE", placeholder: "_ _",textField: $activityInput.age,textWidth: 40)
+                PrivateInputBindingView(text:"Age",image: "person.fill", color: "695CFE", placeholder: "_ _",textField: $activityInput.age,textWidth: 40,isFocused: $isFocused)
                 // 年薪
-                PrivateInputBindingView(text:"Annual salary",image: "dollarsign.circle.fill",color: "695CFE",placeholder: "_ _ _ _ _",textField: $activityInput.annualSalary,textWidth: 100)
+                PrivateInputBindingView(text:"Annual salary",image: "dollarsign.circle.fill",color: "695CFE",placeholder: "_ _ _ _ _",textField: $activityInput.annualSalary,textWidth: 100,isFocused: $isFocused)
             }
         } else if activityTab == .EmergencyFund {
             // 生活开销
-            PrivateInputBindingView(text:"Living Expenses",image: "dollarsign.circle.fill",color: "FF9A00",placeholder: "_ _ _",textField: $activityInput.livingExpenses,textWidth: 100)
+            PrivateInputBindingView(text:"Living Expenses",image: "dollarsign.circle.fill",color: "FF9A00",placeholder: "_ _ _",textField: $activityInput.livingExpenses,textWidth: 100,isFocused: $isFocused)
         }
     }
 }
@@ -73,11 +78,13 @@ private struct PrivateInputBindingView: View {
     var placeholder: String
     @Binding var textField: String
     var textWidth: CGFloat
+    @FocusState.Binding var isFocused: Bool
     var body: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 10) {
             VStack(spacing: 5) {
                 Text(LocalizedStringKey(text))
-                    .font(.footnote)
+                    .font(.caption2)
+                    .fixedSize(horizontal: true, vertical: false)
                 Image(systemName: image)
                     .imageScale(.large)
             }
@@ -86,6 +93,11 @@ private struct PrivateInputBindingView: View {
                 .fontWeight(.bold)
                 .frame(width: textWidth)
                 .multilineTextAlignment(.center)
+                .focused($isFocused)
+                .onChange(of: textField) {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
+                }
         }
         .padding(.vertical,10)
         .padding(.horizontal,16)
@@ -122,17 +134,18 @@ private struct HomeActivitySheetContentTitleView: View {
 
 #Preview {
     NavigationStack {
-        ZStack {
-            HomeActivitySheetPreviewView()
-        }
+        VStack{}
+            .sheet(isPresented: .constant(true)) {
+                HomeActivitySheetView(activityTab: .constant(.LifeSavingsBank))
+            }
     }
 }
+
 
 private struct HomeActivitySheetContentModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(.top,30)
-            .padding(.bottom,30)
+            .padding(.vertical,30)
             .padding(.horizontal,20)
             .frame(idealHeight: 300)
             .frame(maxWidth: .infinity)

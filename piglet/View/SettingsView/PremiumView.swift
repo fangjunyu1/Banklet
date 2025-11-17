@@ -95,6 +95,7 @@ private struct PurchaseLoadingView: View {
                 HStack {
                     Spacer()
                     Button(action: {
+                        // 振动
                         HapticManager.shared.selectionChanged()
                         isLoading.toggle()
                         purchaseProductTask?.cancel()   // 取消购买任务

@@ -21,6 +21,7 @@ struct HomeActivitySheetBackground: View {
                         .resizable()
                         .scaledToFill()
                 }
+                .frame(minHeight: 400)
                 .padding(.bottom, -20)
             SheetView(activityTab: $activityTab, activityInput: $activityInput, activityStep: $activityStep)
         }
@@ -51,20 +52,20 @@ private struct SheetEmergencyFundView: View {
         // 保障月份
         VStack(spacing: 10) {
             Text("Guaranteed Month")
-                .font(.headline)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
             HStack(spacing: 15) {
                 ForEach(monthList, id:\.self) { item in
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         activityInput.guaranteeMonth = item
                     }, label: {
                         VStack {
                             Text("\(item)")
                                 .font(.footnote)
-                                .fontWeight(.medium)
-                                .foregroundColor(.black)
+                                .foregroundColor(AppColor.appGrayColor)
                             Image(systemName: activityInput.guaranteeMonth == item ? "checkmark.circle.fill" : "circle.fill")
-                                .imageScale(.large)
+                                .font(.title)
                                 .foregroundColor(activityInput.guaranteeMonth == item ? Color(hex: "FA9803") : AppColor.appBgGrayColor)
                         }
                     })
@@ -79,8 +80,10 @@ private struct SheetEmergencyFundView: View {
 }
 #Preview {
     NavigationStack {
-        ZStack {
-            HomeActivitySheetPreviewView()
-        }
+        VStack{}
+            .sheet(isPresented: .constant(true)) {
+                HomeActivitySheetView(activityTab: .constant(.EmergencyFund))
+            }
     }
 }
+

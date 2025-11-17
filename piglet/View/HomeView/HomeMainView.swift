@@ -47,6 +47,8 @@ struct HomeMainView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
                     // 新增按钮
                     print("点击了新增按钮")
                 }, label: {

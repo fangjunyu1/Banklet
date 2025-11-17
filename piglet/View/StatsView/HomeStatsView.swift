@@ -116,6 +116,8 @@ struct HomeStatsView: View {
                             // 列表（显示最多三个）
                             ForEach(StatisticsTab.allCases, id:\.self) { item in
                                 Button(action: {
+                                    // 振动
+                                    HapticManager.shared.selectionChanged()
                                     withAnimation { selectedTab1 = item }
                                 }, label: {
                                     Text(LocalizedStringKey(item.title))

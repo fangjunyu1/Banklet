@@ -24,6 +24,8 @@ struct HomeActivityToolbarMusicView: View {
     
     var body: some View {
         Button(action: {
+            // 振动
+            HapticManager.shared.selectionChanged()
             appStorage.isActivityMusic.toggle()
             if appStorage.isActivityMusic {
                 playMusicForCurrentTab()    // 播放音乐

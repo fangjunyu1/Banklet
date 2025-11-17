@@ -31,6 +31,8 @@ struct HomeActivityTitleView: View {
             VStack {
                 HStack {
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         dismiss()
                     }, label: {
                         Image(systemName:"chevron.down")

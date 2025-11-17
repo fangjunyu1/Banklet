@@ -88,6 +88,8 @@ struct HomePrimaryBankView: View {
                     // 1) 信息按钮
                     Button(action: {
                         print("width:\(width)")
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"info")
@@ -106,6 +108,8 @@ struct HomePrimaryBankView: View {
                     // 2) 存入按钮
                     Button(action: {
                         
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.down")
@@ -124,6 +128,8 @@ struct HomePrimaryBankView: View {
                     // 3) 取出按钮
                     Button(action: {
                         
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.up")
@@ -142,6 +148,8 @@ struct HomePrimaryBankView: View {
                     // 4) 删除按钮
                     Button(action: {
                         
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"trash")

@@ -56,6 +56,8 @@ struct WelcomeView: View {
             
             // 隐私政策-中文链接
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 showPrivacyPolicy = true
             }, label: {
                 Text("Privacy Policy")
@@ -70,6 +72,8 @@ struct WelcomeView: View {
             
             // 开始或完成-按钮
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 if step == .welcome {
                     withAnimation {
                         step = .privacy

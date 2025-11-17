@@ -37,6 +37,8 @@ struct HomeSettingsView: View {
                 VStack(spacing: 0) {
                     // 问题反馈
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         if MFMailComposeViewController.canSendMail() {
                             showMailComposer.toggle()
                         } else {
@@ -60,6 +62,8 @@ struct HomeSettingsView: View {
                     Divider().padding(.leading,60)
                     // 使用条款
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         showTermsofUse = true
                     }, label: {
                         HomeSettingRow(color: .color("E64E5A"), icon: .sficon("book.pages.fill"), title: "Terms of Use",accessory: .remark("Web page"))
@@ -71,6 +75,8 @@ struct HomeSettingsView: View {
                     Divider().padding(.leading,60)
                     // 隐私政策
                     Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
                         showPrivacyPolicy = true
                     }, label: {
                         HomeSettingRow(color: .color("1CB02E"), icon: .sficon("lock.fill"), title: "Privacy Policy",accessory: .remark("Web page"))
@@ -124,6 +130,8 @@ struct HomeSettingsView: View {
             Spacer().frame(height:20)
             // 重置内购和欢迎界面
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 AppStorageManager.shared.isLifetime = false
                 AppStorageManager.shared.expirationDate = 0
                 AppStorageManager.shared.isCompletedWelcome = false
