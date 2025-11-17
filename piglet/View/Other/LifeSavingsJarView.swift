@@ -58,42 +58,7 @@ struct LifeSavingsJarView: View {
                 // 通过 `geometry` 获取布局信息
                 let width = geometry.size.width * 0.85
                 ZStack {
-                    // 背景
-                    Color(hex: colorScheme == .light ?  "f0f0f0" : "0E0E0E")
-                        .ignoresSafeArea()
                     ScrollView(showsIndicators: false) {
-                        Spacer().frame(height: 20)
-                        Text("Use your lifetime salary income to plan your future")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                        Spacer().frame(height: 20)
-                        Group {
-                            Text("    ") + Text("Have you ever thought about how much wealth you can get from working for your entire life? The life piggy bank is designed for this purpose. From the beginning of your career to retirement, you can accumulate your lifetime income and make a comprehensive wealth plan for the future.")
-                        }
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.leading)
-                        Spacer().frame(height: 20)
-                        Image("lifeImage0")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 300)
-                        
-                        Spacer().frame(height: 20)
-                        Text("Quickly calculate lifetime wealth")
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                        Spacer().frame(height: 20)
-                        
-                        Group {
-                            Text("    ") + Text("Based on your current age and current salary, automatically calculate your career starting point, retirement age and salary growth rate, and calculate your lifetime income.")
-                        }
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.leading)
-                        Spacer().frame(height: 20)
                         // 输入框
                         VStack {
                             // 年龄
@@ -176,22 +141,6 @@ struct LifeSavingsJarView: View {
                             .minimumScaleFactor(0.5)
                         })
                         .shadow(radius: 4,y:4)
-                        Spacer().frame(height:20)
-                        Group {
-                            Text("    ") +
-                            Text("The default working age is 18, the annual salary requirement is greater than 10, the retirement age is 65, and the salary growth rate is 5%.")
-                        }
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        Spacer().frame(height: 100)
-                    }
-                    .frame(width: width)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity)
-                    .navigationTitle("Life savings jar")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .onTapGesture {
-                        // 取消文本输入框聚集
-                        focusedField = nil
                     }
                     .overlay {
                         if showLifePiggyBank {

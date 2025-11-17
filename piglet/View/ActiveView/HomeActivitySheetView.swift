@@ -54,11 +54,11 @@ struct HomeActivityFootNoteModifier: ViewModifier {
 // 管理活动输入内容
 struct ActivityInput {
     // 人生存钱罐
-    var age: String = ""
-    var annualSalary: String = ""
+    var age: Int? = nil
+    var annualSalary: Int? = nil
     // 生活保障金
-    var livingExpenses: String = ""
-    var guaranteeMonth: Int = 6
+    var livingExpenses: Int? = nil
+    var guaranteeMonth: Int? = nil
 }
 
 enum ActivityStep {

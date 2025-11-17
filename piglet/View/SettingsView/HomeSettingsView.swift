@@ -132,9 +132,11 @@ struct HomeSettingsView: View {
             Button(action: {
                 // 振动
                 HapticManager.shared.selectionChanged()
-                AppStorageManager.shared.isLifetime = false
-                AppStorageManager.shared.expirationDate = 0
-                AppStorageManager.shared.isCompletedWelcome = false
+                appStorage.isLifetime = false
+                appStorage.expirationDate = 0
+                appStorage.isCompletedWelcome = false
+                appStorage.isRatingWindow = false
+                appStorage.isActivityMusic = false
             }, label: {
                 Text("重置内购和欢迎界面")
                     .font(.caption2)

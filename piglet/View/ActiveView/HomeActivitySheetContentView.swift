@@ -76,7 +76,7 @@ private struct PrivateInputBindingView: View {
     var image: String
     var color: String
     var placeholder: String
-    @Binding var textField: String
+    @Binding var textField: Int?
     var textWidth: CGFloat
     @FocusState.Binding var isFocused: Bool
     var body: some View {
@@ -88,16 +88,17 @@ private struct PrivateInputBindingView: View {
                 Image(systemName: image)
                     .imageScale(.large)
             }
-            TextField(placeholder, text: $textField)
+            TextField(placeholder, value: $textField, format: .number)
                 .font(.title2)
                 .fontWeight(.bold)
-                .frame(width: textWidth)
                 .multilineTextAlignment(.center)
+                .keyboardType(.numberPad)
                 .focused($isFocused)
                 .onChange(of: textField) {
                     // 振动
                     HapticManager.shared.selectionChanged()
                 }
+                .fixedSize(horizontal: true, vertical: false)
         }
         .padding(.vertical,10)
         .padding(.horizontal,16)

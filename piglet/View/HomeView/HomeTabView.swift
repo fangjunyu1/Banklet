@@ -14,21 +14,22 @@ struct HomeTabView: View {
     var body: some View {
         VStack {
             Spacer()
-            HStack(spacing: 50) {
+            HStack(spacing: 0) {
                 ForEach(HomeTab.allCases, id: \.self) { index in
                     SingleTabView(tab: index, selectedTab: $selectedTab)
                 }
             }
             .padding(.vertical,12)
-            .padding(.horizontal,30)
+            .padding(.horizontal,0)
             .background(
                 HStack {
                     Rectangle()
                         .fill(colorScheme == .light ? .white : AppColor.appGrayColor)
-                        .frame(width: 80,height: 60)
+                        .frame(width: 75,height: 60)
                         .cornerRadius(40)
                         .offset(x:5)
-                        .offset(x: CGFloat(75) * CGFloat(selectedTab.rawValue))
+                        .offset(x: CGFloat(78) * CGFloat(selectedTab.rawValue))
+                        .opacity(0.8)
                     Spacer()
                 }
             )
@@ -38,9 +39,26 @@ struct HomeTabView: View {
                     .blur(radius: 3)
                     .cornerRadius(100)
                     .shadow(color: .black.opacity(0.1), radius: 10, y: 5)
+                    .opacity(0.9)
             )
         }
         .padding(.bottom,20)
         .ignoresSafeArea()
     }
+}
+
+private struct HomeTabPreviewView: View {
+    @State private var tab = HomeTab.activity
+    var body: some View {
+        ZStack {
+            Image("bg0")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            HomeTabView(selectedTab: $tab)
+        }
+    }
+}
+#Preview {
+    HomeTabPreviewView()
 }

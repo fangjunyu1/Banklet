@@ -13,20 +13,34 @@ struct SingleTabView: View {
     @Binding var selectedTab: HomeTab
     @State private var clicked = false
     var body: some View {
-        VStack(spacing: 0) {
-            Image(systemName: tab.icon)
-                .imageScale(.large)
-                .symbolEffect(.bounce, value: clicked)
-                .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
-            Text(LocalizedStringKey(tab.title))
-                .textScale(.secondary)
-                .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
-        }
-        .foregroundColor(AppColor.gray)
-        .onTapGesture {
+        Button(action: {
+            print("点击了Tab")
             clicked.toggle()
             withAnimation{ selectedTab = tab } // 设置当前的索引
-        }
-        .contentShape(Rectangle())
+        },label: {
+            VStack(spacing: 5) {
+                Image(systemName: tab.icon)
+                    .imageScale(.large)
+                    .symbolEffect(.bounce, value: clicked)
+                    .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
+                Text(LocalizedStringKey(tab.title))
+                    .font(.footnote)
+                    .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
+            }
+            .frame(width:80)
+            .foregroundColor(AppColor.gray)
+            .contentShape(Rectangle())
+        })
+        .buttonStyle(.plain)
     }
+}
+
+private struct HomeTabPreviewView: View {
+    @State private var tab = HomeTab.activity
+    var body: some View {
+        HomeTabView(selectedTab: $tab)
+    }
+}
+#Preview {
+    HomeTabPreviewView()
 }
