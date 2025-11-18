@@ -9,21 +9,19 @@ import SwiftUI
 
 struct HomeActivitySheetView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var activityTab: ActivityTab
-    @State private var activityInput = ActivityInput()
-    @State private var activityStep: ActivityStep = .calculate
+    @EnvironmentObject var activityVM: ActiveViewModel
     @FocusState private var isFocused: Bool
     var body: some View {
         ZStack(alignment: .bottom) {
             // 活动视图
             VStack(alignment: .center,spacing: 0) {
                 // 背景图片区域
-                HomeActivitySheetBackground(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep)
+                ActivitySheetBgView()
                 // 内容显示
-                HomeActivitySheetContentView(activityTab: $activityTab,activityInput: $activityInput,activityStep: $activityStep,isFocused: $isFocused)
+                ActivityContentView(isFocused: $isFocused)
             }
             // 顶部返回按钮和标题
-            HomeActivityTitleView(activityTab: $activityTab)
+            HomeActivityTitleView()
         }
         .ignoresSafeArea()
         .onTapGesture {
@@ -51,28 +49,12 @@ struct HomeActivityFootNoteModifier: ViewModifier {
     }
 }
 
-// 管理活动输入内容
-struct ActivityInput {
-    // 人生存钱罐
-    var age: Int? = nil
-    var annualSalary: Int? = nil
-    // 生活保障金
-    var livingExpenses: Int? = nil
-    var guaranteeMonth: Int? = nil
-}
-
-enum ActivityStep {
-    case calculate
-    case create
-    case loading
-    case complete
-}
-
 #Preview {
     NavigationStack {
         VStack{}
             .sheet(isPresented: .constant(true)) {
-                HomeActivitySheetView(activityTab: .constant(.LifeSavingsBank))
+                HomeActivitySheetView()
+                    .environment(ActiveViewModel())
             }
     }
 }

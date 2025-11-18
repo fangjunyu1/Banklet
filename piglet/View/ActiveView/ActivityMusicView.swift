@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct HomeActivityToolbarMusicView: View {
+struct ActivityMusicView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
-    @Binding var activityTab: ActivityTab
+    @EnvironmentObject var activityVM: ActiveViewModel
     
     private func playMusicForCurrentTab() {
-        switch activityTab {
+        switch activityVM.tab {
         case .LifeSavingsBank:
             soundManager.playBackgroundMusic(named: "life0")
         case .EmergencyFund:

@@ -22,6 +22,8 @@ struct ContentView: View {
             print("Biometric authentication is disabled by the user.")
             return
         }
+        // 振动
+        HapticManager.shared.selectionChanged()
         BiometricAuth.shared.authenticate(reason: "Authenticate to access your account") { success, error in
             if success {
                 isAuthenticated = true

@@ -14,23 +14,17 @@ struct LifeSavingsJarView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
     @Environment(\.modelContext) var modelContext
-    @State private var age: Int? = nil  // 年龄
-    @State private var annualSalary: Int? = nil //年薪
-    @FocusState private var focusedField: Field? // 使用枚举管理焦点
+    @State private var age: Int? = 20  // 年龄
+    @State private var annualSalary: Int? = 20000 //年薪
     @State private var calculationProgress = false  // 计算进度条
     @State private var showLifePiggyBank = false
     @State private var LifePiggyBankAmount = 2000000  // 人生存钱罐金额
     @State private var creationCompleted = false    // 创建完成
-    enum Field: Hashable {
-        case ageField
-        case annualSalaryField
-    }
-    
     func calculateLifePiggyBank() {
-        var growthRate: Double = 0.05     // 薪资增长率 (如 0.05 表示 5%)
-        var startingAge: Int = 18    // 起始年龄
+        let growthRate: Double = 0.05     // 薪资增长率 (如 0.05 表示 5%)
+        let startingAge: Int = 18    // 起始年龄
         var startingSalary: Double = 0    // 起始年薪
-        var retirementAge: Int = 65     // 预期退休年龄
+        let retirementAge: Int = 65     // 预期退休年龄
         // 计算初始薪资
         if let age = age,let annualSalary = annualSalary,age >= startingAge{
             startingSalary = Double(annualSalary) / pow(1 + growthRate, Double(age - startingAge))
@@ -59,58 +53,6 @@ struct LifeSavingsJarView: View {
                 let width = geometry.size.width * 0.85
                 ZStack {
                     ScrollView(showsIndicators: false) {
-                        // 输入框
-                        VStack {
-                            // 年龄
-                            HStack {
-                                Text("Age")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.5)
-                                Spacer().frame(width: 20)
-                                TextField("", value: $age, format: .number)
-                                    .frame(width: 100)
-                                    .foregroundColor(age == 0 ? .gray : colorScheme == .light ? .black : .white)
-                                    .multilineTextAlignment(.center)
-                                    .background {
-                                        Rectangle().frame(width: .infinity,height: 4)
-                                            .foregroundColor(.gray)
-                                            .padding(.top)
-                                            .offset(y: 10)
-                                    }
-                                    .keyboardType(.numberPad)
-                                    .focused($focusedField,equals: .ageField)
-                                // 对齐年薪的占位符
-                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )")
-                                    .opacity(0)
-                            }
-                            Spacer().frame(height: 20)
-                            // 年薪
-                            HStack {
-                                Text("Annual salary")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.5)
-                                Spacer().frame(width: 20)
-                                TextField("", value: $annualSalary, format: .number)
-                                    .frame(width: 100)
-                                    .foregroundColor(annualSalary == 0 ? .gray : colorScheme == .light ? .black : .white)
-                                    .multilineTextAlignment(.center)
-                                    .background {
-                                        Rectangle().frame(width: .infinity,height: 4)
-                                            .foregroundColor(.gray)
-                                            .padding(.top)
-                                            .offset(y: 10)
-                                    }
-                                    .keyboardType(.numberPad)
-                                    .focused($focusedField,equals: .annualSalaryField)
-                                Spacer().frame(width: 10)
-                                Text("\(currencySymbolList.first{ $0.currencyAbbreviation == appStorage.CurrencySymbol}?.currencySymbol ?? "$" )")
-                            }
-                        }
-                        Spacer().frame(height: 30)
                         // 计算按钮
                         Button(action: {
                             calculationProgress = true

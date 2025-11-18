@@ -9,13 +9,13 @@ import SwiftUI
 
 struct HomeActivityTitleView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var activityTab: ActivityTab
+    @EnvironmentObject var activityVM: ActiveViewModel
     var body: some View {
         ZStack {
             // 存钱罐活动标题
             VStack {
                 HStack {
-                    Text(LocalizedStringKey(activityTab.title))
+                    Text(LocalizedStringKey(activityVM.tab.title))
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
