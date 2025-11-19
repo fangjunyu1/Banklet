@@ -43,7 +43,6 @@ struct AboutUsView: View {
             Spacer().frame(height: 50)
         }
         .navigationTitle("About Us")
-        .frame(maxWidth: .infinity)
         .modifier(BackgroundModifier())
     }
     

@@ -36,6 +36,7 @@ struct HomeActivityView: View {
             })
             .sheet(isPresented: $activitySheet) {
                 HomeActivitySheetView()
+                    .environment(homeActivityVM)
             }
             Spacer()
         }

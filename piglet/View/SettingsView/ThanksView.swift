@@ -74,7 +74,6 @@ struct ThanksView: View {
             }
         }
         .navigationTitle("Thanks")
-        .frame(maxWidth: .infinity)
         .modifier(BackgroundModifier())
     }
 }

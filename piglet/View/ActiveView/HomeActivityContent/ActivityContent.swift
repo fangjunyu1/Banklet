@@ -40,6 +40,7 @@ struct ActivityContentView: View {
             .sheet(isPresented: .constant(true)) {
                 HomeActivitySheetView()
                     .environment(ActiveViewModel())
+                    .environment(HomeActivityViewModel())
             }
     }
 }

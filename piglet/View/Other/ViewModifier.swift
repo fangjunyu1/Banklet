@@ -62,6 +62,7 @@ struct LottieModifier3: ViewModifier {
 struct BackgroundModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
             .padding(.horizontal,20)
             .background {

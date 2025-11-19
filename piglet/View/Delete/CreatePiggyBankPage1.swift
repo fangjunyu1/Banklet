@@ -68,14 +68,6 @@ struct CreatePiggyBankPage1: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                     
-                    Spacer().frame(height: height * 0.01)
-                    // 创建属于你的存钱罐。
-                    Text("Create your own piggy bank.")
-                        .font(.footnote)
-                        .foregroundColor(Color.gray)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
-                    Spacer().frame(height: height * 0.05)
                     Group {
                         // 设置存钱罐名称
                         HStack {
@@ -132,20 +124,6 @@ struct CreatePiggyBankPage1: View {
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
                             
-                        }
-                        .frame(width: width,height: 60)
-                        .cornerRadius(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color.gray, lineWidth: 1) // 设置边框颜色和宽度
-                        )
-                        VStack(alignment: .leading) {
-                            Text("Set the total amount you plan to deposit into your piggy bank.")
-                                .font(.footnote)
-                                .foregroundColor(Color.gray)
-                                .frame(maxWidth: .infinity, alignment: .leading) // 让 VStack 占满宽度，并左对齐
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.8)
                         }
                     }
                         Spacer()
@@ -214,7 +192,6 @@ struct CreatePiggyBankPage1: View {
 #Preview {
     CreatePiggyBankPage1(pageSteps: .constant(3),piggyBankData: .constant(PiggyBankData()))
         .modelContainer(PiggyBank.preview)
-        .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
