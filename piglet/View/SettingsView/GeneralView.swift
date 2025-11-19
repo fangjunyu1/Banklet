@@ -21,10 +21,12 @@ struct GeneralView: View {
                 // 图标、动画、背景
                 VStack(spacing: 0) {
                     // 图标
-                    NavigationLink(destination: AppIconView()) {
-                        HomeSettingRow(color: .color("EAA22A"),icon: .img("icon"),title: "icon", accessory: .none)
+                    if UIApplication.shared.supportsAlternateIcons {
+                        NavigationLink(destination: AppIconView()) {
+                            HomeSettingRow(color: .color("EAA22A"),icon: .img("icon"),title: "icon", accessory: .none)
+                        }
+                        Divider().padding(.leading,60)
                     }
-                    Divider().padding(.leading,60)
                     // 动画
                     NavigationLink(destination: AnimationView()) {
                         HomeSettingRow(color: .color("56BCA6"),icon: .img("Animation"),title: "Animation", accessory: .none)
