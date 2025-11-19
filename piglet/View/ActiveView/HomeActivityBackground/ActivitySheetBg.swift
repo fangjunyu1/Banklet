@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ActivitySheetBgView: View {
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
+    
     var body: some View {
         ZStack {
             // 背景图片
             Rectangle()
                 .overlay {
                     // 背景图片
-                    Image(activityVM.tab.image)
+                    Image(homeActivityVM.tab.image)
                         .resizable()
                         .scaledToFill()
                 }
@@ -27,13 +29,14 @@ struct ActivitySheetBgView: View {
 }
 
 private struct SheetView: View {
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     var body: some View {
         VStack {
             // 人生存钱罐
-            if activityVM.tab == .LifeSavingsBank {
+            if homeActivityVM.tab == .LifeSavingsBank {
                 LifeSavingsView()
-            } else if activityVM.tab == .EmergencyFund {
+            } else if homeActivityVM.tab == .EmergencyFund {
                 // 生活存钱罐
                 EmergencyFundView()
             }

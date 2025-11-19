@@ -22,10 +22,11 @@ struct ActivityContentButtonView: View {
 
 // 取消按钮
 private struct ContentCancelButtonView: View {
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     var body: some View {
         Button(action: {
-            activityVM.cancelButton()
+            activityVM.cancelButton(for:homeActivityVM.tab)
         }, label: {
             Text("Cancel")
                 .foregroundColor(AppColor.appGrayColor)
@@ -37,6 +38,7 @@ private struct ContentCancelButtonView: View {
 }
 
 private struct ContentDisplayButtonView: View {
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     @FocusState.Binding var isFocused: Bool
     @Environment(\.dismiss) var dismiss
@@ -46,12 +48,13 @@ private struct ContentDisplayButtonView: View {
             // 计算阶段 - 显示计算
             if activityVM.step == .calculate {
                 isFocused = false
-                activityVM.calculateButton()
+                activityVM.calculateButton(for: homeActivityVM.tab)
             } else if activityVM.step == .create {
                 // 创建阶段 - 创建存钱罐
-                activityVM.createButton()
+                activityVM.createButton(for: homeActivityVM.tab)
             } else if activityVM.step == .complete {
                 dismiss()
+                activityVM.completeButton()
             }
         }, label: {
             Group {
@@ -70,6 +73,6 @@ private struct ContentDisplayButtonView: View {
             }
             .modifier(ButtonModifier())
         })
-        .disabled(activityVM.step == .calculating)
+        .disabled(activityVM.step == .calculating || activityVM.step == .creating)
     }
 }

@@ -11,10 +11,11 @@ struct ActivityMusicView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     
     private func playMusicForCurrentTab() {
-        switch activityVM.tab {
+        switch homeActivityVM.tab {
         case .LifeSavingsBank:
             soundManager.playBackgroundMusic(named: "life0")
         case .EmergencyFund:

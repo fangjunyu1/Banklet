@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeActivitySheetView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var activityVM: ActiveViewModel
+    @State private var activityVM = ActiveViewModel()
     @FocusState private var isFocused: Bool
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -29,6 +29,7 @@ struct HomeActivitySheetView: View {
                 isFocused = false
             }
         }
+        .environment(activityVM)
     }
 }
 
@@ -53,11 +54,13 @@ struct HomeActivityFootNoteModifier: ViewModifier {
     NavigationStack {
         VStack{}
             .sheet(isPresented: .constant(true)) {
+                let hvm = HomeActivityViewModel()
                 let vm = ActiveViewModel()
                 HomeActivitySheetView()
                     .environment(vm)
+                    .environment(hvm)
                     .onAppear {
-                        vm.tab = .EmergencyFund
+                        hvm.tab = .EmergencyFund
                     }
             }
     }

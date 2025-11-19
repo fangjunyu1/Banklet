@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ActivityContentInputView: View {
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     @FocusState.Binding var isFocused: Bool
     var body: some View {
         // 人生存钱罐
-        if activityVM.tab == .LifeSavingsBank {
+        if homeActivityVM.tab == .LifeSavingsBank {
             // MARK: - 人生存钱罐
             switch activityVM.step {
             case .calculate, .calculating:
@@ -26,7 +27,7 @@ struct ActivityContentInputView: View {
                 // 目标金额
                 PrivateInputBindingView(text:"Target amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.lifeSavingsBank ?? 0))
             }
-        } else if activityVM.tab == .EmergencyFund {
+        } else if homeActivityVM.tab == .EmergencyFund {
             // MARK: - 生活保障金
             switch activityVM.step {
             case .calculate, .calculating:

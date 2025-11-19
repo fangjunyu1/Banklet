@@ -20,11 +20,11 @@ struct SingleTabView: View {
         },label: {
             VStack(spacing: 5) {
                 Image(systemName: tab.icon)
-                    .font(.title3)
+                    .imageScale(.large)
                     .symbolEffect(.bounce, value: clicked)
                     .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
                 Text(LocalizedStringKey(tab.title))
-                    .font(.caption2)
+                    .font(.footnote)
                     .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
             }
             .frame(width:70)

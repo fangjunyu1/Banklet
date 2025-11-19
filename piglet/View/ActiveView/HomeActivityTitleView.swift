@@ -9,13 +9,14 @@ import SwiftUI
 
 struct HomeActivityTitleView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     var body: some View {
         ZStack {
             // 存钱罐活动标题
             VStack {
                 HStack {
-                    Text(LocalizedStringKey(activityVM.tab.title))
+                    Text(LocalizedStringKey(homeActivityVM.tab.title))
                         .modifier(ActivityTextModifier())
                 }
                 .padding(20)

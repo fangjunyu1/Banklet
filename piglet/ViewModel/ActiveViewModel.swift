@@ -13,7 +13,6 @@ import SwiftData
 final class ActiveViewModel:ObservableObject {
     var input = ActivityInput()
     var step: ActivityStep = .calculate
-    var tab: ActivityTab = .LifeSavingsBank
     var lifeSavingRows: [AnimationRow] = [] // 人生存钱罐数组
     var isErrorMsg = false
     
@@ -23,7 +22,7 @@ final class ActiveViewModel:ObservableObject {
     private let retirementAge: Int = 65     // 预期退休年龄
     
     // MARK: - 处理计算界面的点击手势
-    func calculateButton() {
+    func calculateButton(for tab: ActivityTab) {
         print("进入calculateButton")
         // 振动
         HapticManager.shared.selectionChanged()
@@ -48,7 +47,7 @@ final class ActiveViewModel:ObservableObject {
     }
     
     // 用户点击创建存钱罐
-    func createButton() {
+    func createButton(for tab: ActivityTab) {
         Task { @MainActor in
             step = .creating
             try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
@@ -72,7 +71,7 @@ final class ActiveViewModel:ObservableObject {
     }
     
     // 用户点击取消按钮
-    func cancelButton() {
+    func cancelButton(for tab: ActivityTab) {
         Task { @MainActor in
             step = .creating
             print("设置为计算中状态")
@@ -89,6 +88,14 @@ final class ActiveViewModel:ObservableObject {
             print("设置为计算状态")
             step = .calculate
         }
+    }
+    
+    // 用户点击完成按钮
+    func completeButton() {
+        step = .calculate
+        input = ActivityInput()
+        lifeSavingRows = []
+        isErrorMsg = false
     }
     
     // MARK: - 计算 - 人生存钱罐

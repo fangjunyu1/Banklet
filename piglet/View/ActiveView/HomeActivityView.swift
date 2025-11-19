@@ -11,18 +11,18 @@ struct HomeActivityView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
-    @State private var activityVM = ActiveViewModel()
+    @State private var homeActivityVM = HomeActivityViewModel()
     @State private var activitySheet = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             // Tab切换列表
             HomeActivityTabView()
-                .onChange(of: activityVM.tab) { oldValue, newValue in
+                .onChange(of: homeActivityVM.tab) { oldValue, newValue in
                     // 振动
                     HapticManager.shared.selectionChanged()
                     if appStorage.isActivityMusic {
-                        playMusicForCurrentTab()
+                        playMusicForCurrentTab(for: homeActivityVM.tab)
                     }
                 }
             Spacer().frame(height:20)
@@ -47,7 +47,7 @@ struct HomeActivityView: View {
         }
         .onAppear {
             if appStorage.isActivityMusic {
-                playMusicForCurrentTab()    // 播放音乐
+                playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
             }
             if colorScheme == .light {
                 UIPageControl.appearance().currentPageIndicatorTintColor = .black // 当前页指示器为黑色
@@ -55,16 +55,16 @@ struct HomeActivityView: View {
             }
         }
         .background {
-            HomeActivityViewBackground(activityTab: $activityVM.tab)
+            HomeActivityViewBackground(activityTab: $homeActivityVM.tab)
         }
         .onDisappear {
             soundManager.stopAllSound()
         }
-        .environment(activityVM)
+        .environment(homeActivityVM)
     }
     
-    private func playMusicForCurrentTab() {
-        switch activityVM.tab {
+    private func playMusicForCurrentTab(for tab: ActivityTab) {
+        switch tab {
         case .LifeSavingsBank:
             soundManager.playBackgroundMusic(named: "life0")
         case .EmergencyFund:
@@ -74,12 +74,12 @@ struct HomeActivityView: View {
 }
 
 private struct HomeActivityTabView: View {
-    @EnvironmentObject var activityVM: ActiveViewModel
+    @EnvironmentObject var homeActivity: HomeActivityViewModel
     let imgHeight: CGFloat = 380
     let imgWidth: CGFloat = 280
     var TabHeight: CGFloat { imgHeight + 60 }
     var body: some View {
-        TabView(selection: $activityVM.tab) {
+        TabView(selection: $homeActivity.tab) {
             ForEach(ActivityTab.allCases) { item in
                 Image(item.image)
                     .resizable()

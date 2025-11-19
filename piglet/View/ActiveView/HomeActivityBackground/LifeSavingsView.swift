@@ -29,7 +29,7 @@ struct LifeSavingsView: View {
                 }
             }
         }
-        .padding(.top, 30)
+        .padding(.top, 40)
     }
 }
 
@@ -37,12 +37,18 @@ struct LifeSavingsView: View {
     NavigationStack {
         VStack{}
             .sheet(isPresented: .constant(true)) {
+                let hvm = HomeActivityViewModel()
                 let vm = ActiveViewModel()
-                    HomeActivitySheetView()
-                        .environment(vm)
-                        .onAppear {
-                            vm.tab = .LifeSavingsBank
-                        }
+                HomeActivitySheetView()
+                    .environment(vm)
+                    .environment(hvm)
+                    .onAppear {
+                        hvm.tab = .EmergencyFund
+                    }
             }
     }
 }
+
+
+
+
