@@ -13,12 +13,18 @@ struct ActivityContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 30) {
-                // 内容视图的标题
-                ActivityContentTitleView()
-                // 内容视图的输入视图
-                ActivityContentInputView(isFocused: $isFocused)
+                // 如果完成，则显示完成视图，否则显示标题和输入
+                switch activityVM.step {
+                case .calculate, .calculating, .create, .creating:
+                    // 内容视图的标题
+                    ActivityContentTitleView()
+                    // 内容视图的输入视图
+                    ActivityContentInputView(isFocused: $isFocused)
+                case .complete:
+                    ActivityCompleteView()
+                }
                 // 确认按钮
-                ActivityContentButtonView()
+                ActivityContentButtonView(isFocused: $isFocused)
             }
             .modifier(HomeActivitySheetContentModifier())
             .modifier(KeyboardAdaptive())

@@ -16,13 +16,7 @@ struct HomeActivityTitleView: View {
             VStack {
                 HStack {
                     Text(LocalizedStringKey(activityVM.tab.title))
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.vertical,10)
-                        .padding(.horizontal,20)
-                        .background(.black.opacity(0.3))
-                        .cornerRadius(10)
+                        .modifier(ActivityTextModifier())
                 }
                 .padding(20)
                 Spacer()

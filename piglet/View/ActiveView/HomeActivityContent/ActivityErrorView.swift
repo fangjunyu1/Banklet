@@ -20,14 +20,6 @@ struct ActivityErrorView: View {
                 .background(AppColor.appGrayColor.opacity(0.5))
                 .cornerRadius(10)
                 .offset(y:50)
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        withAnimation {
-                            activityVM.isErrorMsg = false
-                        }
-                        print("修改提示为false")
-                    }
-                }
         }
     }
 }

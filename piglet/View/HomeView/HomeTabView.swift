@@ -20,15 +20,15 @@ struct HomeTabView: View {
                 }
             }
             .padding(.vertical,12)
-            .padding(.horizontal,0)
+            .padding(.horizontal,12)
             .background(
                 HStack {
                     Rectangle()
                         .fill(colorScheme == .light ? .white : AppColor.appGrayColor)
-                        .frame(width: 75,height: 60)
+                        .frame(width: 88,height: 58)
                         .cornerRadius(40)
                         .offset(x:5)
-                        .offset(x: CGFloat(78) * CGFloat(selectedTab.rawValue))
+                        .offset(x: CGFloat(68) * CGFloat(selectedTab.rawValue))
                         .opacity(0.8)
                     Spacer()
                 }

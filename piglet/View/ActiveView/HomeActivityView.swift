@@ -39,7 +39,6 @@ struct HomeActivityView: View {
             }
             Spacer()
         }
-        .environment(activityVM)
         .navigationTitle("Activity")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -61,6 +60,7 @@ struct HomeActivityView: View {
         .onDisappear {
             soundManager.stopAllSound()
         }
+        .environment(activityVM)
     }
     
     private func playMusicForCurrentTab() {

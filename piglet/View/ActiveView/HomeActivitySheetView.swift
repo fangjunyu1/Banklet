@@ -53,8 +53,12 @@ struct HomeActivityFootNoteModifier: ViewModifier {
     NavigationStack {
         VStack{}
             .sheet(isPresented: .constant(true)) {
+                let vm = ActiveViewModel()
                 HomeActivitySheetView()
-                    .environment(ActiveViewModel())
+                    .environment(vm)
+                    .onAppear {
+                        vm.tab = .EmergencyFund
+                    }
             }
     }
 }

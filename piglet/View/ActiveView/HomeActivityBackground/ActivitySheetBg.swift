@@ -30,10 +30,12 @@ private struct SheetView: View {
     @EnvironmentObject var activityVM: ActiveViewModel
     var body: some View {
         VStack {
-            Spacer()
-            if activityVM.tab == .EmergencyFund {
+            // 人生存钱罐
+            if activityVM.tab == .LifeSavingsBank {
+                LifeSavingsView()
+            } else if activityVM.tab == .EmergencyFund {
+                // 生活存钱罐
                 EmergencyFundView()
-                    .padding(.bottom,20)
             }
         }
     }

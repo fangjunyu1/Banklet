@@ -10,6 +10,9 @@
     ":" : {
 
     },
+    "..." : {
+
+    },
     "(" : {
 
     },
@@ -7584,226 +7587,7 @@
       }
     },
     "Congratulations, you have created it" : {
-      "comment" : "恭喜你，创建完成",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "مبروك، اكتمل الخلق"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enhorabona, la creació està acabada"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratulujeme, tvorba je dokončena"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tillykke, oprettelsen er fuldført"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Herzlichen Glückwunsch, die Erstellung ist abgeschlossen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Συγχαρητήρια, η δημιουργία ολοκληρώθηκε"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felicitaciones, la creación está completa."
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felicitaciones, la creación está completa."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Onnittelut, luominen on valmis"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Félicitations, la création est terminée"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Félicitations, la création est terminée"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מזל טוב, היצירה הושלמה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "बधाई हो, रचना पूरी हो गई"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čestitamo, izrada je dovršena"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratulálunk, az alkotás elkészült"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Selamat, pembuatannya telah selesai"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Congratulazioni, la creazione è completata"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "おめでとうございます、作成が完了しました"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "축하합니다. 생성이 완료되었습니다."
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tahniah, penciptaan telah selesai"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratulerer, opprettelsen er fullført"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gefeliciteerd, de creatie is voltooid"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratulacje, tworzenie zostało ukończone"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Parabéns, a criação está concluída"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Parabéns, a criação está concluída"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Felicitări, creația este finalizată"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поздравляем, создание завершено"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gratulujeme, tvorba je dokončená"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grattis, skapandet är klart"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ยินดีด้วย การสร้างเสร็จสมบูรณ์แล้ว"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tebrikler, oluşturma tamamlandı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вітаємо, створення завершено"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Xin chúc mừng, việc tạo đã hoàn tất"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恭喜你，创建完成"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恭喜你，創建完成"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恭喜你，創建完成"
-          }
-        }
-      }
+
     },
     "Contents" : {
       "comment" : "包含内容",
@@ -8713,6 +8497,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "創造屬於你的存錢筒。"
+          }
+        }
+      }
+    },
+    "Creation completed" : {
+      "comment" : "创建完成",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建完成"
           }
         }
       }
@@ -31773,9 +31569,6 @@
           }
         }
       }
-    },
-    "Start calculation" : {
-
     },
     "Start your savings journey" : {
       "comment" : "1.1.0 开始你的储蓄之旅",
