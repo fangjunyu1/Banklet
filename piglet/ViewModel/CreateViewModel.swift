@@ -8,6 +8,6 @@
 import SwiftUI
 
 @Observable
-final class CreateViewModel: ObservableObject {
-    var tab: ActivityTab = .LifeSavingsBank
+final class CreateStepViewModel: ObservableObject {
+    var tab: CreateStep = .name
 }

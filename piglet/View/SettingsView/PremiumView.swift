@@ -205,67 +205,69 @@ private struct PremiumComponentsView: View {
         VStack(spacing: 20) {
             // 只有加载产品，才会显示选择方案。
             // 选择方案
-            VStack {
-                HStack {
-                    Footnote(text: "Choose a solution")
-                    Spacer()
-                }
-                // 选择方案-列表
-                VStack(spacing: 10) {
-                    ForEach(Array(iapManager.IAPProductList.enumerated()), id:\.1.id) { index, item in
-                        if let products = iapManager.products.first(where: { $0.id == item.id }) {
-                            HStack(spacing: 8) {
-                                if selectedProduct == products {
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .imageScale(.large)
-                                        .foregroundColor(AppColor.appColor)
-                                } else {
-                                    Image(systemName: "circle")
-                                        .imageScale(.large)
-                                        .foregroundColor(AppColor.gray)
-                                }
-                                VStack(alignment: .leading, spacing: 3) {
-                                    Text(LocalizedStringKey(item.name))
-                                        .foregroundColor(AppColor.appGrayColor)
-                                    HStack(spacing: 0) {
-                                        Caption2(text: products.displayPrice)
-                                        if let priceSuffix = item.priceSuffix {
-                                            Footnote(text:"/")
-                                            Footnote(text: priceSuffix)
+            if !iapManager.IAPProductList.isEmpty {
+                VStack {
+                    HStack {
+                        Footnote(text: "Choose a solution")
+                        Spacer()
+                    }
+                    // 选择方案-列表
+                    VStack(spacing: 10) {
+                        ForEach(Array(iapManager.IAPProductList.enumerated()), id:\.1.id) { index, item in
+                            if let products = iapManager.products.first(where: { $0.id == item.id }) {
+                                HStack(spacing: 8) {
+                                    if selectedProduct == products {
+                                        Image(systemName: "checkmark.circle.fill")
+                                            .imageScale(.large)
+                                            .foregroundColor(AppColor.appColor)
+                                    } else {
+                                        Image(systemName: "circle")
+                                            .imageScale(.large)
+                                            .foregroundColor(AppColor.gray)
+                                    }
+                                    VStack(alignment: .leading, spacing: 3) {
+                                        Text(LocalizedStringKey(item.name))
+                                            .foregroundColor(AppColor.appGrayColor)
+                                        HStack(spacing: 0) {
+                                            Caption2(text: products.displayPrice)
+                                            if let priceSuffix = item.priceSuffix {
+                                                Footnote(text:"/")
+                                                Footnote(text: priceSuffix)
+                                            }
                                         }
                                     }
+                                    Spacer()
+                                    if item.name == "Lifetime" {
+                                        Text("Best choice")
+                                            .font(.footnote)
+                                            .fontWeight(.medium)
+                                            .foregroundColor(.white)
+                                            .padding(.vertical, 8)
+                                            .padding(.horizontal,14)
+                                            .background(AppColor.appColor)
+                                            .cornerRadius(5)
+                                    }
                                 }
-                                Spacer()
-                                if item.name == "Lifetime" {
-                                    Text("Best choice")
-                                        .font(.footnote)
-                                        .fontWeight(.medium)
-                                        .foregroundColor(.white)
-                                        .padding(.vertical, 8)
-                                        .padding(.horizontal,14)
-                                        .background(AppColor.appColor)
-                                        .cornerRadius(5)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    // 振动
+                                    HapticManager.shared.selectionChanged()
+                                    // 如果重复点击内购商品，则清空内购商品
+                                    if selectedProduct == products {
+                                        selectedProduct = nil
+                                    } else {
+                                        selectedProduct = products
+                                    }
                                 }
-                            }
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                // 振动
-                                HapticManager.shared.selectionChanged()
-                                // 如果重复点击内购商品，则清空内购商品
-                                if selectedProduct == products {
-                                    selectedProduct = nil
-                                } else {
-                                    selectedProduct = products
+                                // 分割线
+                                if index < iapManager.IAPProductList.count - 1 {
+                                    Divider().padding(.leading, 40)
                                 }
-                            }
-                            // 分割线
-                            if index < iapManager.IAPProductList.count - 1 {
-                                Divider().padding(.leading, 40)
                             }
                         }
                     }
+                    .modifier(VStackModifier())
                 }
-                .modifier(VStackModifier())
             }
             
             // 包含内容

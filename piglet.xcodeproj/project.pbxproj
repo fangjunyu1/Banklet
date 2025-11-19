@@ -272,6 +272,7 @@
 		1DAD52D22E9E8C2D008D07CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
+		1DAEF8C02ECDF6E400B36FAB /* IconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */; };
 		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
 		1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */; };
 		1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */; };
@@ -636,6 +637,7 @@
 		1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankletWidgetExtension.entitlements; sourceTree = "<group>"; };
 		1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetProvider.swift; sourceTree = "<group>"; };
 		1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetEntry.swift; sourceTree = "<group>"; };
+		1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconList.swift; sourceTree = "<group>"; };
 		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
 		1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTimesView.swift; sourceTree = "<group>"; };
@@ -1135,6 +1137,25 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
+		1DAEF8BD2ECDF63600B36FAB /* HomeCreate */ = {
+			isa = PBXGroup;
+			children = (
+				1DC524912ECDDC6D00E48964 /* HomeCreateView.swift */,
+			);
+			path = HomeCreate;
+			sourceTree = "<group>";
+		};
+		1DAEF8BE2ECDF6B400B36FAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */,
+				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
+				1DE7360A2EB654B500573C1A /* ActivityTab.swift */,
+				1DC524962ECDDFD800E48964 /* CreateStep.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1DBCF4192EB8DA1C00B85BF4 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1144,7 +1165,7 @@
 				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
 				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
-				1DC524912ECDDC6D00E48964 /* HomeCreateView.swift */,
+				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -1210,9 +1231,6 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1DC524962ECDDFD800E48964 /* CreateStep.swift */,
-				1DE7360A2EB654B500573C1A /* ActivityTab.swift */,
-				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
@@ -1225,7 +1243,6 @@
 				1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */,
 				1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */,
 				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
-				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 				1DD0895E2EC187C5002EE03D /* PreminumList.swift */,
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
@@ -1245,6 +1262,7 @@
 				1DC524942ECDDFB900E48964 /* CreateViewModel.swift */,
 				1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */,
 				1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */,
+				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1329,6 +1347,7 @@
 				1D64EFD22D21661F00832FB4 /* Strings */,
 				1D88545C2D244EC4009DE7AE /* Lottie */,
 				1D39BB342EA3EB67007C3017 /* Extensions */,
+				1DAEF8BE2ECDF6B400B36FAB /* Resources */,
 				1DCBEDBF2C02B702005BFFFA /* Model */,
 				1D2F9A5D2BFCA53C005C8676 /* View */,
 				1DCBEDC22C02B776005BFFFA /* ViewModel */,
@@ -1856,6 +1875,7 @@
 				1D8C38762ECC7B1000F7CAD5 /* LifeSavingsView.swift in Sources */,
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */,
+				1DAEF8C02ECDF6E400B36FAB /* IconList.swift in Sources */,
 				1D1434AB2EC9BC4100FA6CBB /* ActivityMusicView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */,
 				1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */,

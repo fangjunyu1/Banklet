@@ -23,8 +23,6 @@ struct CreatePiggyBankPage2: View {
     
     let generator = UISelectionFeedbackGenerator()
     
-    // 图标列表
-    let iconArray: [String] = ["pencil.tip","books.vertical","graduationcap","dumbbell","soccerball","football","tennisball","trophy","location","camera","envelope","bag","creditcard","giftcard","briefcase","cross.case","suitcase.rolling","house","lightbulb.max","party.popper","popcorn","sofa","tent","mountain.2","building.2","map","laptopcomputer","iphone.gen2","ipad","visionpro","applewatch","headphones","airpodspro","beats.powerbeats","homepodmini","tv","airplane","car","tram","ferry","sailboat","bicycle","stroller","syringe","pills","dog","fish","teddybear","leaf","crown","tshirt","film","eye","photo","gamecontroller","birthday.cake","gift","list.bullet","dollarsign","apple.logo"]
     let rows = [
         GridItem(.adaptive(minimum: 30, maximum: 80), spacing: 0),
         GridItem(.adaptive(minimum: 30, maximum: 80), spacing: 0)
@@ -83,7 +81,7 @@ struct CreatePiggyBankPage2: View {
                     // 存钱罐图标
                     ScrollView(.horizontal,showsIndicators:false) {
                         LazyHGrid(rows: rows) {
-                            ForEach(iconArray, id: \.self) { item in
+                            ForEach(IconList.list, id: \.self) { item in
                                 Button(action: {
                                     if piggyBankData.icon != item {
                                         piggyBankData.icon = item

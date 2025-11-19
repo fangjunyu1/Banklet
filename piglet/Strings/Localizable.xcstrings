@@ -23047,6 +23047,18 @@
         }
       }
     },
+    "Please fill in your savings plan information completely, and set the name, goal and starting amount step by step." : {
+      "comment" : "请完整填写你的存钱计划信息，按步骤设定名称、目标与起点金额。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请完整填写你的存钱计划信息，按步骤设定名称、目标与起点金额。"
+          }
+        }
+      }
+    },
     "PLN" : {
       "comment" : "1.0.6:波兰兹罗提",
       "extractionState" : "manual",

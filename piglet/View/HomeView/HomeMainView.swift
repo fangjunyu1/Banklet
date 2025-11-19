@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeMainView: View {
-    @Binding var searchText: String
+    @State private var searchText = ""  // 搜索框
+    @State private var showCreateView = false
     var allPiggyBank: [PiggyBank]
     var primaryBank: PiggyBank?
     var appStorage = AppStorageManager.shared
@@ -46,21 +47,30 @@ struct HomeMainView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                    // 振动
-                    HapticManager.shared.selectionChanged()
-                    // 新增按钮
-                    print("点击了新增按钮")
-                }, label: {
-                    Image("plus")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20,height: 20)
-                        .padding(5)
-                        .background(.white)
-                        .cornerRadius(5)
-                })
+                HomeMainToolBarButton(showCreateView: $showCreateView)
             }
         }
+        .navigationDestination(isPresented: $showCreateView) {
+            HomeCreateView()
+        }
+    }
+}
+
+private struct HomeMainToolBarButton: View {
+    @Binding var showCreateView: Bool
+    var body: some View {
+        Button(action: {
+            // 振动
+            HapticManager.shared.selectionChanged()
+            showCreateView = true
+        }, label: {
+            Image("plus")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20,height: 20)
+                .padding(5)
+                .background(.white)
+                .cornerRadius(5)
+        })
     }
 }

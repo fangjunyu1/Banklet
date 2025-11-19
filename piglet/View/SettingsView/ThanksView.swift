@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ThanksView: View {
+    @Environment(\.openURL) var openURL
     @State private var showAppStore = false
     let platformList: [String] = ["ChatGPT","LottieFiles","iconfont","Pinterest","Dirbbble","GitHub", "px"]
     
@@ -55,7 +56,14 @@ struct ThanksView: View {
                         .frame(maxHeight: 200)
                         .frame(maxWidth: 500)
                     Spacer().frame(height:10)
-                    Link(destination: URL(string: "https://apps.apple.com/cn/developer/%E5%90%9B%E5%AE%87-%E6%96%B9/id1746520472")!) {
+                    Button {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
+
+                        if let url = URL(string: "https://apps.apple.com/cn/developer/%E5%90%9B%E5%AE%87-%E6%96%B9/id1746520472") {
+                            openURL(url)
+                        }
+                    } label: {
                         Text("App Store")
                             .fontWeight(.medium)
                             .padding(.vertical,20)
@@ -64,10 +72,6 @@ struct ThanksView: View {
                             .background(AppColor.appColor)
                             .cornerRadius(16)
                             .shadow(radius: 5)
-                            .onTapGesture {
-                                // 振动
-                                HapticManager.shared.selectionChanged()
-                            }
                     }
                 }
                 Spacer().frame(height:50)

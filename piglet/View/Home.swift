@@ -22,7 +22,6 @@ struct Home: View {
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数
     @State private var selectedTab = HomeTab.home  // 当前选择的Tab
-    @State private var searchText = ""  // 搜索框
     // 获取第一个存钱罐
     var primaryBank: PiggyBank? {
         allPiggyBank.filter { $0.isPrimary }.first
@@ -36,7 +35,7 @@ struct Home: View {
                     switch selectedTab {
                         // 主页视图
                     case .home:
-                        HomeMainView(searchText: $searchText, allPiggyBank: allPiggyBank, primaryBank: primaryBank)
+                        HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
                         // 活动视图
                     case .activity:
                         HomeActivityView()
