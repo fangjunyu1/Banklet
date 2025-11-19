@@ -13,12 +13,7 @@ struct ActivityErrorView: View {
     var body: some View {
         if activityVM.isErrorMsg {
             Text("Incorrect input information")
-                .font(.footnote)
-                .foregroundColor(.white)
-                .padding(.vertical,8)
-                .padding(.horizontal,16)
-                .background(AppColor.appGrayColor.opacity(0.5))
-                .cornerRadius(10)
+                .modifier(ToastTipsModifier())
                 .offset(y:50)
         }
     }

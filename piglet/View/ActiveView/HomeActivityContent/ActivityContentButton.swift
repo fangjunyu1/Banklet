@@ -54,7 +54,9 @@ private struct ContentDisplayButtonView: View {
                 activityVM.createButton(for: homeActivityVM.tab)
             } else if activityVM.step == .complete {
                 dismiss()
-                activityVM.completeButton()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    activityVM.completeButton()
+                }
             }
         }, label: {
             Group {

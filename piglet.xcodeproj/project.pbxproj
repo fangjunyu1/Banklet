@@ -229,6 +229,8 @@
 		1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* Mail.swift */; };
 		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
 		1D66C4D92EBE2F0600001CF5 /* Sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4D82EBE2F0600001CF5 /* Sun.json */; };
+		1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */; };
+		1D6E81252ECE07A100C88269 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81242ECE079F00C88269 /* DataController.swift */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
 		1D7359702D6425F700F7D599 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596F2D6425F700F7D599 /* ContentView.swift */; };
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
@@ -587,6 +589,8 @@
 		1D66C4D42EBDD75B00001CF5 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		1D66C4D82EBE2F0600001CF5 /* Sun.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sun.json; sourceTree = "<group>"; };
+		1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTipsModifier.swift; sourceTree = "<group>"; };
+		1D6E81242ECE079F00C88269 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
 		1D73596F2D6425F700F7D599 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -922,6 +926,7 @@
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
 				1DC524932ECDDCB800E48964 /* Other */,
+				1D6E81202ECDFCBD00C88269 /* Components */,
 				1DD089592EC16CB2002EE03D /* Delete */,
 			);
 			path = View;
@@ -991,6 +996,22 @@
 				1DEB96CD2D5D9D6C00A68C21 /* BackgroundView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1D6E81202ECDFCBD00C88269 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1D6E81232ECE079000C88269 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				1D6E81242ECE079F00C88269 /* DataController.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 		1D73596C2D6425F700F7D599 /* BankletWatch Watch App */ = {
@@ -1345,6 +1366,7 @@
 				1DF555782BF60B1200BF0DE5 /* Assets.xcassets */,
 				1D7ED6F12DFEE490000EB349 /* Sound */,
 				1D64EFD22D21661F00832FB4 /* Strings */,
+				1D6E81232ECE079000C88269 /* SwiftData */,
 				1D88545C2D244EC4009DE7AE /* Lottie */,
 				1D39BB342EA3EB67007C3017 /* Extensions */,
 				1DAEF8BE2ECDF6B400B36FAB /* Resources */,
@@ -1856,6 +1878,7 @@
 				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
 				1D1434A92EC9BC1C00FA6CBB /* ActivityContent.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
+				1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */,
 				1DC524902ECDCDF000E48964 /* HomeActivityViewModel.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
@@ -1881,6 +1904,7 @@
 				1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */,
 				1DBCF41D2EB8DB6400B85BF4 /* EmailHelper.swift in Sources */,
 				1DD0895F2EC187D4002EE03D /* PreminumList.swift in Sources */,
+				1D6E81252ECE07A100C88269 /* DataController.swift in Sources */,
 				1DD089582EC16C3D002EE03D /* PremiumView.swift in Sources */,
 				1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */,
 				1D1434A72EC9BBEE00FA6CBB /* ActivitySheetBg.swift in Sources */,

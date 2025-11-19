@@ -11,6 +11,7 @@ import SwiftData
 @Observable
 @MainActor
 final class ActiveViewModel:ObservableObject {
+    
     var input = ActivityInput()
     var step: ActivityStep = .calculate
     var lifeSavingRows: [AnimationRow] = [] // 人生存钱罐数组
@@ -201,13 +202,7 @@ final class ActiveViewModel:ObservableObject {
     // 创建人生存钱罐
     private func createLifeSavingBank() throws {
         // Step 1: 获取上下文
-        let container: ModelContainer
-        do {
-            container = try ModelContainer(for: PiggyBank.self)
-        } catch {
-            throw CalculationError.containerCreationFailed
-        }
-        let context = container.mainContext
+        let context = DataController.shared.context
         
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()
@@ -252,13 +247,7 @@ final class ActiveViewModel:ObservableObject {
     // 创建生活保障金
     private func createEmergencyFund() throws {
         // Step 1: 获取上下文
-        let container: ModelContainer
-        do {
-            container = try ModelContainer(for: PiggyBank.self)
-        } catch {
-            throw CalculationError.containerCreationFailed
-        }
-        let context = container.mainContext
+        let context = DataController.shared.context
         
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()

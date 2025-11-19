@@ -13,7 +13,8 @@ import WatchConnectivity
 struct pigletApp: App {
     @State private var iapManager = IAPManager.shared
     @State private var appStorage = AppStorageManager.shared
-    @State private var modelConfigManager = ModelConfigManager()
+    @State private var modelConfigManager = ModelConfigManager.shared
+    @State private var dataController = DataController.shared
     @State private var sound = SoundManager.shared
     @Environment(\.scenePhase) var scenePhase
     
@@ -39,7 +40,6 @@ struct pigletApp: App {
         .environment(appStorage)
         .environment(iapManager)
         .environment(modelConfigManager)
-        .modelContainer(try! ModelContainer(for: PiggyBank.self,SavingsRecord.self,configurations: modelConfigManager.currentConfiguration))
+        .modelContainer(dataController.container)
     }
 }
-

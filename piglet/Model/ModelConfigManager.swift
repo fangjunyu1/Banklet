@@ -11,7 +11,7 @@ import SwiftUI
 
 @Observable
 class ModelConfigManager {
-    
+    static let shared = ModelConfigManager()
     var cloudKitMode: CloudKitMode = .privateDatabase {
         didSet {
             updateConfiguration()

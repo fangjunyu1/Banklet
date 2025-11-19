@@ -80,15 +80,9 @@ private struct NoNotice: View {
         VStack {
             Spacer()
             HStack {
-                Image(systemName: "xmark")
                 Text("No notification permission")
             }
-            .font(.subheadline)
-            .foregroundColor(.red)
-            .padding(10)
-            .background(.white)
-            .cornerRadius(10)
-            .shadow(radius: 2)
+            .modifier(ToastTipsModifier())
             Spacer().frame(height: 20)
         }
     }
