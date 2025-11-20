@@ -45,78 +45,19 @@ struct CreatePiggyBankPage1: View {
                 let width = geometry.size.width * 0.85
                 let height = geometry.size.height
                 VStack {
-                    Spacer().frame(height: height * 0.02)
-                    // 存钱罐进度条
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(colorScheme == .light ? Color(hex:"FF4B00") : Color(hex:"2C2B2D"))
-                            .frame(width: 130,height: 8)
-                            .cornerRadius(10)
-                            .clipShape(CreatingALeftProgressBar())
-                        Rectangle()
-                            .foregroundColor(.gray)
-                            .frame(width: 130,height: 8)
-                            .cornerRadius(10)
-                            .clipShape(CreatingARightProgressBar())
-                        
-                    }
-                    Spacer().frame(height: height * 0.05)
-                    // 创建存钱罐
-                    Text("Create a piggy bank")
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                    
-                    Group {
-                        // 设置存钱罐名称
-                        HStack {
-                            Text("Name")
-                                .padding(.horizontal,20)
-                            TextField("Set the name of the piggy bank", text: $piggyBankData.name)
-                                .focused($isFocus, equals: .nameField)
-                                .onChange(of: piggyBankData.name) { _,newValue in
-                                    if newValue.count > limitLength {
-                                        piggyBankData.name = String(newValue.prefix(limitLength))
-                                    }
-                                }
-                                .padding(.trailing,20)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.8)
-                            
-                        }
-                        .frame(width: width,height: 60)
-                        .cornerRadius(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color.gray, lineWidth: 1) // 设置边框颜色和宽度
-                        )
-                        VStack(alignment: .leading) {
-                            HStack(spacing: 0) {
-                                Group {
-                                    Text("Remaining")
-                                    Text(" \(nameLength) ")
-                                    Text("Characters.")
-                                }
-                                .font(.footnote)
-                                .foregroundColor(Color.gray)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.8)
-                                Spacer()
-                            }
-                        }
+                    VStack {
                         Spacer().frame(height: height * 0.02)
                         // 设置存钱罐金额
                         HStack {
                             Text("Amount")
                                 .padding(.horizontal,20)
-                            TextField("0.0", text: Binding(
-                                get: { piggyBankData.targetAmount == 0 ? "" : String(piggyBankData.targetAmount.formattedWithTwoDecimalPlaces()) },
-                                set: { newValue in
-                                    let userInput = parseInput(newValue)
-                                    piggyBankData.targetAmount = userInput
-                                }
-                            ))
+//                            TextField("0.0", text: Binding(
+//                                get: { piggyBankData.targetAmount == 0 ? "" : String(piggyBankData.targetAmount.formattedWithTwoDecimalPlaces()) },
+//                                set: { newValue in
+//                                    let userInput = parseInput(newValue)
+//                                    piggyBankData.targetAmount = userInput
+//                                }
+//                            ))
                             .focused($isFocus, equals: .amountField)
                             .keyboardType(.decimalPad)
                             .submitLabel(.continue)

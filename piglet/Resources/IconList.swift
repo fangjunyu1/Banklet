@@ -54,7 +54,6 @@ enum IconList {
         "pills",    // 药丸，14.0+
         "tshirt",   // T恤衫，15.0+
         "pencil.tip", // 铅笔 13.0+
-        "graduationcap",    // 学士帽，14.0+
         "stroller", // 婴儿车，16.1+
         "building.2",   // 楼房，14.0+
         "briefcase",    // 工作包，13.0+

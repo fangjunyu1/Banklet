@@ -29,19 +29,19 @@ struct CompletedView: View {
             bank.isPrimary = false
         }
         // Step 3: 创建新的存钱罐并设置 isPrimary 为 true
-        let piggyBank = PiggyBank(name: piggyBankData.name == "" ? "Piggy Bank" : piggyBankData.name,
-                                  icon: piggyBankData.icon == "" ? "shadow" : piggyBankData.icon,
-                                  initialAmount:
-                                    piggyBankData.targetAmount == 0 ? 0 :
-                                    piggyBankData.initialAmount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.initialAmount,
-                                  targetAmount: piggyBankData.targetAmount == 0 ? 100.0 : piggyBankData.targetAmount,
-                                  amount:
-                                    piggyBankData.targetAmount == 0 ? 0 : piggyBankData.amount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.amount,
-                                  creationDate: piggyBankData.creationDate,
-                                  expirationDate: piggyBankData.expirationDate,
-                                  isExpirationDateEnabled: piggyBankData.isExpirationDateEnabled,
-                                  isPrimary: piggyBankData.isPrimary)
-        modelContext.insert(piggyBank) // 将对象插入到上下文中
+//        let piggyBank = PiggyBank(name: piggyBankData.name == "" ? "Piggy Bank" : piggyBankData.name,
+//                                  icon: piggyBankData.icon == "" ? "shadow" : piggyBankData.icon,
+//                                  initialAmount:
+//                                    piggyBankData.targetAmount == 0 ? 0 :
+//                                    piggyBankData.initialAmount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.initialAmount,
+//                                  targetAmount: piggyBankData.targetAmount == 0 ? 100.0 : piggyBankData.targetAmount,
+//                                  amount:
+//                                    piggyBankData.targetAmount == 0 ? 0 : piggyBankData.amount > piggyBankData.targetAmount ? piggyBankData.targetAmount : piggyBankData.amount,
+//                                  creationDate: piggyBankData.creationDate,
+//                                  expirationDate: piggyBankData.expirationDate,
+//                                  isExpirationDateEnabled: piggyBankData.isExpirationDateEnabled,
+//                                  isPrimary: piggyBankData.isPrimary)
+//        modelContext.insert(piggyBank) // 将对象插入到上下文中
         do {
             try modelContext.save() // 提交上下文中的所有更改
         } catch {

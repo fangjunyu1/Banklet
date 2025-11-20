@@ -230,7 +230,6 @@ final class ActiveViewModel:ObservableObject {
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isPrimary: true)
-        print("创建人生存钱罐")
         
         context.insert(piggyBank) // 将对象插入到上下文中
         
@@ -240,8 +239,6 @@ final class ActiveViewModel:ObservableObject {
         } catch {
             throw CalculationError.saveFailed(error)
         }
-        
-        print("保存人生存钱罐")
     }
     
     // 创建生活保障金
@@ -275,7 +272,6 @@ final class ActiveViewModel:ObservableObject {
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isPrimary: true)
-        print("创建生活保障金")
         
         context.insert(piggyBank) // 将对象插入到上下文中
         
@@ -285,8 +281,6 @@ final class ActiveViewModel:ObservableObject {
         } catch {
             throw CalculationError.saveFailed(error)
         }
-        
-        print("保存生活保障金")
     }
     enum ActivityStep {
         case calculate  // 输入年龄、年薪
