@@ -41,6 +41,7 @@ struct HomeCreateTitleView: View {
     }
 }
 
+// 显示预览
 private struct HomeCreatePreviewImage: View {
     @EnvironmentObject var piggyBank: PiggyBankData
     @EnvironmentObject var step: CreateStepViewModel

@@ -265,7 +265,7 @@ final class ActiveViewModel:ObservableObject {
         
         // Step 4: 创建新的生活保障金
         let piggyBank = PiggyBank(name: "Emergency Fund",
-                                  icon: "heart.fill",
+                                  icon: "heart",    // 爱心图标
                                   initialAmount:
                                     0,
                                   targetAmount: Double(input.emergencyFund ?? 0),

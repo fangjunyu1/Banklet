@@ -11,7 +11,7 @@ import SwiftUI
 @Observable
 class PiggyBankData: ObservableObject {
     var name: String = ""  // 存钱罐名称
-    var icon:String = "character"   // 图标名称
+    var icon:String = "apple.logo"   // 图标名称
     var initialAmount: Double = 0.0 // 初始化金额，仅首次标记，用于后续展示
     var targetAmount: Double = 0.0  // 目标金额
     var amount: Double = 0.0   // 存钱罐金额
