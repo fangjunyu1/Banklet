@@ -883,6 +883,22 @@
 			path = HomeAnimation;
 			sourceTree = "<group>";
 		};
+		1D186C182ECE8C9600362C48 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		1D186C192ECE8CA900362C48 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		1D21686B2D9049CA00DC4376 /* ActiveView */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,7 +941,6 @@
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
-				1DC524932ECDDCB800E48964 /* Other */,
 				1D6E81202ECDFCBD00C88269 /* Components */,
 				1DD089592EC16CB2002EE03D /* Delete */,
 			);
@@ -1001,7 +1016,26 @@
 		1D6E81202ECDFCBD00C88269 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1D8C38772ECC7E6C00F7CAD5 /* ActivityTextModifier.swift */,
+				1DD14EDF2EC0330A00325DF7 /* AnimatedImageView.swift */,
+				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
+				1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */,
+				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
+				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
+				1DBCF41C2EB8DB6300B85BF4 /* EmailHelper.swift */,
+				1DD14EDB2EC02C0700325DF7 /* Footnote.swift */,
+				1DD14EE12EC033DD00325DF7 /* GIFView.swift */,
+				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
+				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
+				1D80E7CD2C0BC72400A79B96 /* LottieView.swift */,
+				1D66C4D42EBDD75B00001CF5 /* Mail.swift */,
+				1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */,
+				1D66C4D22EBDC61000001CF5 /* SafariView.swift */,
+				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
 				1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */,
+				1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */,
+				1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */,
+				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1010,6 +1044,9 @@
 			isa = PBXGroup;
 			children = (
 				1D6E81242ECE079F00C88269 /* DataController.swift */,
+				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
+				1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */,
+				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -1169,10 +1206,17 @@
 		1DAEF8BE2ECDF6B400B36FAB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DE736082EB64ED700573C1A /* HomeTab.swift */,
 				1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */,
 				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
 				1DE7360A2EB654B500573C1A /* ActivityTab.swift */,
+				1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */,
 				1DC524962ECDDFD800E48964 /* CreateStep.swift */,
+				1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */,
+				1D3F72082EB703E7000DF62A /* StatisticsTab.swift */,
+				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
+				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
+				1DD0895E2EC187C5002EE03D /* PreminumList.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1225,54 +1269,16 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
-		1DC524932ECDDCB800E48964 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				1D8C38772ECC7E6C00F7CAD5 /* ActivityTextModifier.swift */,
-				1DD14EDF2EC0330A00325DF7 /* AnimatedImageView.swift */,
-				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
-				1D1561AA2EB325E30041C0DD /* ButtonModifier.swift */,
-				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
-				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
-				1DBCF41C2EB8DB6300B85BF4 /* EmailHelper.swift */,
-				1DD14EDB2EC02C0700325DF7 /* Footnote.swift */,
-				1DD14EE12EC033DD00325DF7 /* GIFView.swift */,
-				1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */,
-				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
-				1D80E7CD2C0BC72400A79B96 /* LottieView.swift */,
-				1D66C4D42EBDD75B00001CF5 /* Mail.swift */,
-				1D66C4D22EBDC61000001CF5 /* SafariView.swift */,
-				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
-				1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */,
-				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
-				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
-				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
 				1DD089602EC1CD7C002EE03D /* HapticManager.swift */,
-				1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */,
-				1DE736082EB64ED700573C1A /* HomeTab.swift */,
 				1D33A19A2C077E2C0073320F /* IAPManager.swift */,
 				1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */,
-				1D1561A62EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift */,
-				1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */,
-				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
-				1DD0895E2EC187C5002EE03D /* PreminumList.swift */,
-				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
-				1D3F72082EB703E7000DF62A /* StatisticsTab.swift */,
 				1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */,
-				1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */,
-				1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */,
-				1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */,
-				1DBEC52D2EA13EC9006152D3 /* WidgetFunction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1368,8 +1374,10 @@
 				1D64EFD22D21661F00832FB4 /* Strings */,
 				1D6E81232ECE079000C88269 /* SwiftData */,
 				1D88545C2D244EC4009DE7AE /* Lottie */,
+				1D186C182ECE8C9600362C48 /* Watch */,
 				1D39BB342EA3EB67007C3017 /* Extensions */,
 				1DAEF8BE2ECDF6B400B36FAB /* Resources */,
+				1D186C192ECE8CA900362C48 /* Widget */,
 				1DCBEDBF2C02B702005BFFFA /* Model */,
 				1D2F9A5D2BFCA53C005C8676 /* View */,
 				1DCBEDC22C02B776005BFFFA /* ViewModel */,

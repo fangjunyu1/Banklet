@@ -17,6 +17,7 @@ struct Home: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var sound: SoundManager  // 通过 Sound 注入
+    @State private var homeActivityVM = HomeActivityViewModel()
     @Query(sort: \PiggyBank.creationDate)   // 所有存钱罐，按创建日期排序
     var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
@@ -50,6 +51,7 @@ struct Home: View {
                 // 液态玻璃 TabView 视图
                 HomeTabView(selectedTab: $selectedTab)
             }
+            .environment(homeActivityVM)
             .background {
                 // 设置默认的背景灰色，防止各视图切换时显示白色闪烁背景
                 AppColor.appBgGrayColor

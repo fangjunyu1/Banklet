@@ -190,6 +190,7 @@ private struct accessoryView: View {
             Toggle("", isOn: isOn.animation(.easeInOut))
                 .onChange(of: isOn.wrappedValue) { _, newValue in
                     manager.cloudKitMode = newValue ? .privateDatabase : .none
+                    DataController.shared.updateContainer() // 更新容器
                 }
         case .binding(let isOn):
             Toggle("", isOn: isOn.animation(.easeInOut))

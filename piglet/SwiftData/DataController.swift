@@ -9,14 +9,22 @@ import SwiftUI
 import SwiftData
 
 @MainActor
-final class DataController {
+@Observable
+final class DataController: ObservableObject {
     static let shared = DataController()
-    let container: ModelContainer
+    var container: ModelContainer
     var context: ModelContext { container.mainContext }
     private init() {
         self.container = try! ModelContainer(
             for: PiggyBank.self,
                  SavingsRecord.self,
             configurations: ModelConfigManager.shared.currentConfiguration)
+    }
+    
+    func updateContainer() {
+        container = try! ModelContainer(
+            for: PiggyBank.self, SavingsRecord.self,
+            configurations: ModelConfigManager.shared.currentConfiguration
+        )
     }
 }

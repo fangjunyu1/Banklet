@@ -11,7 +11,7 @@ struct HomeActivityView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(SoundManager.self) var soundManager
     @Environment(\.colorScheme) var colorScheme
-    @State private var homeActivityVM = HomeActivityViewModel()
+    @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @State private var activitySheet = false
     
     var body: some View {
