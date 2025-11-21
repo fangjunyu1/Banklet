@@ -42,6 +42,8 @@ struct GeneralView: View {
                 // 静默模式
                 GeneralSilentRow(title: "Silent Mode",footnote: "After waiting for 10 seconds, hide the main view buttons and only show the animation.", mode:$appStorage.isSilentMode)
                 
+                // 负债模式
+                HomeSettingRow(color: .color("8F8F8F"),icon: .img("Liabilities"),title: "Debt Model",footnote: "Once enabled, spending can exceed the balance, resulting in a negative number.",  accessory: .binding($appStorage.isDebtModel))
                 // 货币符号
                 NavigationLink(destination: CurrencySymbolView() ) {
                     HomeSettingRow(color: .color("6025E2"),icon: .img("CurrencySymbol"),title: "Currency Symbol",footnote: "The piggy bank displays the currency symbol; currency conversion is not currently supported.", accessory: .none)
@@ -90,6 +92,6 @@ private struct NoNotice: View {
 #Preview {
     NavigationStack {
         GeneralView()
-            .environment(AppStorageManager.shared)
+            .environmentObject(AppStorageManager.shared)
     }
 }

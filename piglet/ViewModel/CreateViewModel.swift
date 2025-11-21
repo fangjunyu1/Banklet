@@ -37,7 +37,7 @@ final class CreateStepViewModel: ObservableObject {
                                   icon: data.icon,
                                   initialAmount:
                                     data.amount ?? 0,
-                                  targetAmount: data.targetAmount ?? 100,
+                                  targetAmount: data.targetAmount ?? 1,
                                   amount:
                                     data.amount ?? 0,
                                   creationDate: Date(),

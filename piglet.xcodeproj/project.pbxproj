@@ -251,9 +251,7 @@
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
 		1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* Color.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
-		1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */; };
 		1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4D2D23F3C000EDE480 /* Home.swift */; };
-		1D88545B2D244B27009DE7AE /* Completed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D88545A2D244B27009DE7AE /* Completed.swift */; };
 		1D8854612D244FB9009DE7AE /* Fireworks1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D88545F2D244FB9009DE7AE /* Fireworks1.json */; };
 		1D8854622D244FB9009DE7AE /* Fireworks2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8854602D244FB9009DE7AE /* Fireworks2.json */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
@@ -279,7 +277,6 @@
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
 		1DAEF8C02ECDF6E400B36FAB /* IconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */; };
-		1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */; };
 		1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */; };
 		1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */; };
 		1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */; };
@@ -624,9 +621,7 @@
 		1D7FE03E2D20D5120065AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D80E7C82C0BC0D300A79B96 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1D80E7CD2C0BC72400A79B96 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage2.swift; sourceTree = "<group>"; };
 		1D845F4D2D23F3C000EDE480 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		1D88545A2D244B27009DE7AE /* Completed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completed.swift; sourceTree = "<group>"; };
 		1D88545F2D244FB9009DE7AE /* Fireworks1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks1.json; sourceTree = "<group>"; };
 		1D8854602D244FB9009DE7AE /* Fireworks2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fireworks2.json; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
@@ -650,7 +645,6 @@
 		1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetProvider.swift; sourceTree = "<group>"; };
 		1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetEntry.swift; sourceTree = "<group>"; };
 		1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconList.swift; sourceTree = "<group>"; };
-		1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePiggyBankPage1.swift; sourceTree = "<group>"; };
 		1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTimesView.swift; sourceTree = "<group>"; };
 		1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecordRow.swift; sourceTree = "<group>"; };
@@ -968,6 +962,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1D4E1E012ED0293500717238 /* DepositAndWithdrawView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DepositAndWithdrawView;
+			sourceTree = "<group>";
+		};
 		1D601B842C0747FC00052528 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1236,6 +1237,7 @@
 		1DBCF4192EB8DA1C00B85BF4 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				1D4E1E012ED0293500717238 /* DepositAndWithdrawView */,
 				1DE736002EB64D2400573C1A /* HomeMainView.swift */,
 				1DBCF4162EB8D9DD00B85BF4 /* HomeEmptyView.swift */,
 				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
@@ -1309,9 +1311,6 @@
 		1DD089592EC16CB2002EE03D /* Delete */ = {
 			isa = PBXGroup;
 			children = (
-				1D88545A2D244B27009DE7AE /* Completed.swift */,
-				1DB13A3C2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift */,
-				1D845F4B2D23F34300EDE480 /* CreatePiggyBankPage2.swift */,
 				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
@@ -1896,7 +1895,6 @@
 				1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */,
-				1D845F4C2D23F34300EDE480 /* CreatePiggyBankPage2.swift in Sources */,
 				1D1434A92EC9BC1C00FA6CBB /* ActivityContent.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */,
@@ -1910,7 +1908,6 @@
 				1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */,
 				1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
-				1D88545B2D244B27009DE7AE /* Completed.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
 				1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */,
@@ -1941,7 +1938,6 @@
 				1D01B4652EBB0F720022B549 /* HomeSettingRow.swift in Sources */,
 				1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */,
 				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
-				1DB13A3D2D23A12F0006B0A2 /* CreatePiggyBankPage1.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
 				1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */,

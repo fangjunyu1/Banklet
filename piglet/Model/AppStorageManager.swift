@@ -47,6 +47,8 @@ class AppStorageManager: ObservableObject {
     var isBlurBackground = false { didSet {updateValue(key: "isBlurBackground",newValue: isBlurBackground,oldValue: oldValue )}}
     // 静默模式
     var isSilentMode = false { didSet {updateValue(key: "isSilentMode",newValue: isSilentMode,oldValue: oldValue )}}
+    // 负债模式
+    var isDebtModel = false { didSet {updateValue(key: "isDebtModel",newValue: isSilentMode,oldValue: oldValue )}}
     // 货币符号
     var CurrencySymbol = "USD" { didSet {updateValue(key: "CurrencySymbol",newValue: CurrencySymbol,oldValue: oldValue )}}
     // 音效
@@ -98,6 +100,7 @@ extension AppStorageManager {
         BackgroundImage = defaults.string(forKey: "BackgroundImage") ?? ""  // 背景照片
         isBlurBackground = defaults.bool(forKey: "isBlurBackground") // 模糊背景
         isSilentMode = defaults.bool(forKey: "isSilentMode")  // 静默模式
+        isDebtModel = defaults.bool(forKey: "isDebtModel")  // 负债模式
         CurrencySymbol = defaults.string(forKey: "CurrencySymbol")  ?? "USD"  // 货币符号
         isSoundEffects = defaults.bool(forKey: "isSoundEffects")    // 音效
         isVibration = defaults.bool(forKey: "isVibration")  // 振动
@@ -132,6 +135,7 @@ extension AppStorageManager {
         loadValueFromiCloud(key: "BackgroundImage")    // 背景图片
         loadValueFromiCloud(key: "isBlurBackground")    // 模糊图片
         loadValueFromiCloud(key: "isSilentMode")    // 静默模式
+        loadValueFromiCloud(key: "isDebtModel")    // 负债模式
         loadValueFromiCloud(key: "CurrencySymbol")    // 货币符号
         loadValueFromiCloud(key: "isSoundEffects")    // 音效
         loadValueFromiCloud(key: "isVibration")    // 振动
@@ -165,6 +169,7 @@ extension AppStorageManager {
         case "BackgroundImage": BackgroundImage = store.string(forKey: key) ?? ""
         case "isBlurBackground": isBlurBackground = store.bool(forKey: key)
         case "isSilentMode": isSilentMode = store.bool(forKey: key)
+        case "isDebtModel":isDebtModel = store.bool(forKey: key)
         case "CurrencySymbol": CurrencySymbol = store.string(forKey: key) ?? "USD"
         case "isSoundEffects": isSoundEffects = store.bool(forKey: key)
         case "isVibration": isVibration = store.bool(forKey: key)
