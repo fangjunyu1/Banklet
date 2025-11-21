@@ -18,6 +18,7 @@ struct HomeCreateTitleView: View {
                 Text("Please fill in your savings plan information completely, and set the name, goal and starting amount step by step.")
                     .font(.footnote)
                     .foregroundColor(AppColor.gray)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
         }

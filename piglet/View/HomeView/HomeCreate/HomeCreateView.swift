@@ -15,6 +15,7 @@ struct HomeCreateView: View {
         VStack(spacing: 10) {
             // 创建存钱罐 - 标题
             HomeCreateTitleView()
+            
             if step.tab.isLast {
                 HomeCreateLottieView()
             } else {
@@ -49,6 +50,7 @@ struct HomeCreateView: View {
         }
     }
 }
+
 struct HomeCreateLottieView: View {
     var body: some View {
         LottieView(filename: "CreateComplete", isPlaying: true, playCount: 1, isReversed: false)

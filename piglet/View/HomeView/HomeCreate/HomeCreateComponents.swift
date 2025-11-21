@@ -37,7 +37,7 @@ struct HomeCreateInputTargetAmountView: View {
                 .fontWeight(.medium)
             TextField("0", value: $piggyBank.targetAmount, format: .number)
                 .focused($isFocus)
-                .keyboardType(.numbersAndPunctuation)   // 数字 + 符号键盘
+                .keyboardType(.numberPad)   // 数字 + 符号键盘
         }
     }
 }
@@ -69,13 +69,46 @@ struct HomeCreateInputIconView: View {
 struct HomeCreateInputAmountView: View {
     @EnvironmentObject var piggyBank: PiggyBankData
     @FocusState.Binding var isFocus: Bool
+    @State private var isNegative = false
     var body: some View {
         HStack(spacing: 15) {
             Text("Initial amount")
                 .fontWeight(.medium)
-            TextField("0", value: $piggyBank.amount, format: .number)
-                .focused($isFocus)
-                .keyboardType(.numbersAndPunctuation)   // 数字 + 符号键盘
+            HStack(spacing:2) {
+                TextField("0", value: Binding<Double?>(get: {
+                    piggyBank.amount
+                }, set: {
+                    if let amount = $0 {
+                        piggyBank.amount = isNegative ? -abs(amount) : abs(amount)
+                    } else {
+                        piggyBank.amount = $0
+                    }
+                }), format: .number)
+                    .focused($isFocus)
+                    .keyboardType(.numberPad)
+                    .foregroundColor(isNegative ? .red : .primary)
+            }   // 数字 + 符号键盘
+        }
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button(action: {
+                    isNegativeButton()
+                }, label: {
+                    Image(systemName: isNegative ? "minus" : "plus")
+                        .foregroundColor(isNegative ? Color.red : AppColor.gray)
+                })
+            }
+        }
+    }
+    
+    private func isNegativeButton() {
+        isNegative.toggle()
+        if let amount = piggyBank.amount {
+            if isNegative {
+                piggyBank.amount = -abs(amount)
+            } else {
+                piggyBank.amount = abs(amount)
+            }
         }
     }
 }
@@ -89,12 +122,6 @@ struct HomeCreateInputExpirationDateView: View {
             Text("Expiration date")
                 .fontWeight(.medium)
             Spacer()
-            DatePicker("", selection: $piggyBank.expirationDate, displayedComponents: .date)
-                .datePickerStyle(DefaultDatePickerStyle())
-                .frame(height:0)
-                .frame(maxWidth: 120)
-                .scaleEffect(0.8)
-                .opacity(piggyBank.isExpirationDateEnabled ? 1 : 0)
             Toggle("",isOn: $piggyBank.isExpirationDateEnabled.animation(.bouncy))
                 .frame(width: 50,height: 0)
                 .background(.red)
@@ -102,17 +129,61 @@ struct HomeCreateInputExpirationDateView: View {
     }
 }
 
-// 显示图标
+struct HomeCreateDateView: View {
+    @EnvironmentObject var piggyBank: PiggyBankData
+    @State private var isShowSheet = false
+    var body: some View {
+        VStack(alignment: .center) {
+            Button(action: {
+                isShowSheet.toggle()
+            }, label: {
+                Text(piggyBank.expirationDate.formatted(
+                    .dateTime
+                        .year()
+                        .month(.wide)
+                        .day()
+                )) // 输出类似 "2025年1月14日"
+                .padding(10)
+                .tint(.primary)
+                .background(AppColor.gray.opacity(0.3))
+                .cornerRadius(10)
+            })
+            .sheet(isPresented: $isShowSheet) {
+                VStack {
+                    DatePicker("", selection: $piggyBank.expirationDate, displayedComponents: .date)
+                        .datePickerStyle(.wheel)
+                        .opacity(piggyBank.isExpirationDateEnabled ? 1 : 0)
+                        .presentationDetents([.height(300)])
+                        .padding(.trailing, 20)
+                    Button(action: {
+                        isShowSheet.toggle()
+                    }, label: {
+                        Text("Completed")
+                            .modifier(ButtonModifier())
+                    })
+                }
+            }
+        }
+    }
+}
+
+// 占位视图 - 显示日期或者图标
 struct HomeCreatePreviewImage: View {
     @EnvironmentObject var piggyBank: PiggyBankData
     @EnvironmentObject var step: CreateStepViewModel
     var body: some View {
-        Image(systemName: piggyBank.icon)
-            .font(.largeTitle)
-            .foregroundColor(AppColor.gray)
-            .imageScale(.large)
-            .opacity(step.tab == .icon ? 1 : 0)
-            .frame(height: 45)
+        ZStack {
+            // 截止日期
+            HomeCreateDateView()
+                .opacity(step.tab.isDate && piggyBank.isExpirationDateEnabled ? 1 : 0)
+            // App图标
+            Image(systemName: piggyBank.icon)
+                .font(.largeTitle)
+                .foregroundColor(AppColor.gray)
+                .imageScale(.large)
+                .opacity(step.tab == .icon ? 1 : 0)
+                .frame(height: 45)
+        }
     }
 }
 
@@ -149,6 +220,7 @@ struct HomeCreateInputFootNoteView: View {
         }
         .font(.footnote)
         .foregroundColor(Color.gray)
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 

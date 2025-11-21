@@ -15,6 +15,9 @@ enum CreateStep: Int,CaseIterable {
     case expirationDate // 截止日期
     case complete   // 完成
     
+    var isDate: Bool {
+        self == Self.expirationDate
+    }
     var index: Int {
         self.rawValue + 1
     }
