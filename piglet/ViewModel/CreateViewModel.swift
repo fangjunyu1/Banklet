@@ -33,8 +33,8 @@ final class CreateStepViewModel: ObservableObject {
         }
         
         // Step 4: 创建新的生活保障金
-        let piggyBank = PiggyBank(name: "Emergency Fund",
-                                  icon: "heart",    // 爱心图标
+        let piggyBank = PiggyBank(name: data.name,
+                                  icon: data.icon,
                                   initialAmount:
                                     data.amount ?? 0,
                                   targetAmount: data.targetAmount ?? 100,

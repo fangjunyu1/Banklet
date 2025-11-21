@@ -4,9 +4,6 @@
     "" : {
 
     },
-    " %lld " : {
-
-    },
     ":" : {
 
     },
@@ -31,7 +28,7 @@
     "%lld" : {
 
     },
-    "0.0" : {
+    "0" : {
 
     },
     "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal." : {
