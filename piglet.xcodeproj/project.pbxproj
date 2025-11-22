@@ -125,7 +125,6 @@
 		1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13B5692EC5B13000044135 /* AppStorage.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
 		1D1400B62D3112BD00DC51C0 /* AboutUs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1400B52D3112BD00DC51C0 /* AboutUs.json */; };
-		1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */; };
 		1D1434A02EC9530000FA6CBB /* check1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D14349E2EC9530000FA6CBB /* check1.json */; };
 		1D1434A12EC9530000FA6CBB /* check2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D14349F2EC9530000FA6CBB /* check2.json */; };
 		1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1434A22EC9536300FA6CBB /* HomeActivitySheetView.swift */; };
@@ -241,6 +240,9 @@
 		1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359742D6425F900F7D599 /* Preview Assets.xcassets */; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
+		1D7728412ED06DF20046B35B /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728402ED06DEE0046B35B /* TradeViewModel.swift */; };
+		1D7728432ED08C800046B35B /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728422ED08C7E0046B35B /* TradeView.swift */; };
+		1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728442ED08D880046B35B /* HomeViewModel.swift */; };
 		1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */; };
 		1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */; };
 		1D7D5A542E96A77800D776F4 /* FooObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D5A532E96A77800D776F4 /* FooObject.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -309,6 +311,14 @@
 		1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */; };
 		1DDDD26A2EAD099E00AD9A5A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD2682EAD099E00AD9A5A /* Localizable.xcstrings */; };
 		1DDDD26B2EAD099E00AD9A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD2672EAD099E00AD9A5A /* InfoPlist.strings */; };
+		1DDEC5612ED14D2F00B940E2 /* TradeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */; };
+		1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */; };
+		1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */; };
+		1DDEC5672ED14D7100B940E2 /* PreviewTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */; };
+		1DDEC5692ED14D9200B940E2 /* TradeShowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */; };
+		1DDEC56B2ED1539300B940E2 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56A2ED1539300B940E2 /* check.json */; };
+		1DDEC56D2ED16C7800B940E2 /* money1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56C2ED16C7800B940E2 /* money1.mp3 */; };
+		1DDEC56F2ED170D200B940E2 /* FreeBlueLoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */; };
 		1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE164402D324CDA0010A78A /* SavingsRecord.swift */; };
 		1DE25D6F2D6230FD00482673 /* AnimationScaleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */; };
 		1DE25D702D62310000482673 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE25D6C2D622D8700482673 /* Localizable.xcstrings */; };
@@ -486,7 +496,6 @@
 		1D13B5692EC5B13000044135 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		1D1400B52D3112BD00DC51C0 /* AboutUs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AboutUs.json; sourceTree = "<group>"; };
-		1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAndWithdrawView.swift; sourceTree = "<group>"; };
 		1D14349E2EC9530000FA6CBB /* check1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check1.json; sourceTree = "<group>"; };
 		1D14349F2EC9530000FA6CBB /* check2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check2.json; sourceTree = "<group>"; };
 		1D1434A22EC9536300FA6CBB /* HomeActivitySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivitySheetView.swift; sourceTree = "<group>"; };
@@ -602,6 +611,9 @@
 		1D7359742D6425F900F7D599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		1D7728402ED06DEE0046B35B /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
+		1D7728422ED08C7E0046B35B /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
+		1D7728442ED08D880046B35B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressViewStyle.swift; sourceTree = "<group>"; };
 		1D7D4D3E2D224F45001EE006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D7D4D402D224F4F001EE006 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -751,6 +763,14 @@
 		1DDDD2652EAD099E00AD9A5A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1DDDD2662EAD099E00AD9A5A /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1DDDD2682EAD099E00AD9A5A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeButtonView.swift; sourceTree = "<group>"; };
+		1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeContentView.swift; sourceTree = "<group>"; };
+		1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeNotesView.swift; sourceTree = "<group>"; };
+		1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTradeView.swift; sourceTree = "<group>"; };
+		1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeShowContentView.swift; sourceTree = "<group>"; };
+		1DDEC56A2ED1539300B940E2 /* check.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		1DDEC56C2ED16C7800B940E2 /* money1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = money1.mp3; sourceTree = "<group>"; };
+		1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FreeBlueLoadingAnimation.json; sourceTree = "<group>"; };
 		1DE164402D324CDA0010A78A /* SavingsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecord.swift; sourceTree = "<group>"; };
 		1DE25D6C2D622D8700482673 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1DE45C672EB355A00079F76E /* SingleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTabView.swift; sourceTree = "<group>"; };
@@ -962,11 +982,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1D4E1E012ED0293500717238 /* DepositAndWithdrawView */ = {
+		1D4E1E012ED0293500717238 /* TradeView */ = {
 			isa = PBXGroup;
 			children = (
+				1D7728422ED08C7E0046B35B /* TradeView.swift */,
+				1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */,
+				1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */,
+				1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */,
+				1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */,
+				1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */,
 			);
-			path = DepositAndWithdrawView;
+			path = TradeView;
 			sourceTree = "<group>";
 		};
 		1D601B842C0747FC00052528 /* Frameworks */ = {
@@ -1089,6 +1115,7 @@
 		1D7ED6F12DFEE490000EB349 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				1DDEC56C2ED16C7800B940E2 /* money1.mp3 */,
 				1D7EB3982EC8CDA4007625DE /* life0.mp3 */,
 				1D7EB3992EC8CDA4007625DE /* life1.mp3 */,
 				1D7ED6F62DFEE740000EB349 /* money.mp3 */,
@@ -1099,6 +1126,8 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */,
+				1DDEC56A2ED1539300B940E2 /* check.json */,
 				1D14349E2EC9530000FA6CBB /* check1.json */,
 				1D14349F2EC9530000FA6CBB /* check2.json */,
 				1D1400B52D3112BD00DC51C0 /* AboutUs.json */,
@@ -1237,7 +1266,6 @@
 		1DBCF4192EB8DA1C00B85BF4 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				1D4E1E012ED0293500717238 /* DepositAndWithdrawView */,
 				1DE736002EB64D2400573C1A /* HomeMainView.swift */,
 				1DBCF4162EB8D9DD00B85BF4 /* HomeEmptyView.swift */,
 				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
@@ -1245,6 +1273,7 @@
 				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
 				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
+				1D4E1E012ED0293500717238 /* TradeView */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -1300,6 +1329,8 @@
 		1DCBEDC22C02B776005BFFFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D7728442ED08D880046B35B /* HomeViewModel.swift */,
+				1D7728402ED06DEE0046B35B /* TradeViewModel.swift */,
 				1DC524942ECDDFB900E48964 /* CreateViewModel.swift */,
 				1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */,
 				1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */,
@@ -1311,7 +1342,6 @@
 		1DD089592EC16CB2002EE03D /* Delete */ = {
 			isa = PBXGroup;
 			children = (
-				1D1400B72D3164D800DC51C0 /* DepositAndWithdrawView.swift */,
 				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
 				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
@@ -1701,6 +1731,7 @@
 				1D0386D22EA0023600E9379F /* gif_Home8.gif in Resources */,
 				1D0386D32EA0023600E9379F /* gif_Home0.gif in Resources */,
 				1D0386D42EA0023600E9379F /* gif_Home22.gif in Resources */,
+				1DDEC56D2ED16C7800B940E2 /* money1.mp3 in Resources */,
 				1D0386D52EA0023600E9379F /* gif_Home4.gif in Resources */,
 				1D0386D62EA0023600E9379F /* gif_Home14.gif in Resources */,
 				1D0386D72EA0023600E9379F /* gif_Home17.gif in Resources */,
@@ -1734,6 +1765,7 @@
 				1D0386F12EA0023600E9379F /* gif_Home20.gif in Resources */,
 				1D0386F22EA0023600E9379F /* gif_Home23.gif in Resources */,
 				1D1561A92EB2FC040041C0DD /* welcome.json in Resources */,
+				1DDEC56B2ED1539300B940E2 /* check.json in Resources */,
 				1D0386F32EA0023600E9379F /* gif_Home48.gif in Resources */,
 				1D0386F42EA0023600E9379F /* gif_Home31.gif in Resources */,
 				1D0386F52EA0023600E9379F /* gif_Home28.gif in Resources */,
@@ -1786,6 +1818,7 @@
 				1D3E141D2D4A3F0700747D20 /* Home41.json in Resources */,
 				1D3E141C2D4A3F0700747D20 /* Home40.json in Resources */,
 				1D7ED6F72DFEE740000EB349 /* money.mp3 in Resources */,
+				1DDEC56F2ED170D200B940E2 /* FreeBlueLoadingAnimation.json in Resources */,
 				1D3E143B2D4A631700747D20 /* Home12.json in Resources */,
 				1D3E13E22D49E05300747D20 /* Home13.json in Resources */,
 				1D3E14142D4A35F600747D20 /* Home34.json in Resources */,
@@ -1870,11 +1903,13 @@
 				1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */,
+				1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
 				1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */,
+				1D7728432ED08C800046B35B /* TradeView.swift in Sources */,
 				1DC524922ECDDC7600E48964 /* HomeCreateView.swift in Sources */,
 				1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */,
 				1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */,
@@ -1882,6 +1917,7 @@
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
 				1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */,
 				1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */,
+				1DDEC5692ED14D9200B940E2 /* TradeShowContentView.swift in Sources */,
 				1DD14EE02EC0330B00325DF7 /* AnimatedImageView.swift in Sources */,
 				1D8C38742ECC1DB200F7CAD5 /* ActivityContentButton.swift in Sources */,
 				1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */,
@@ -1895,12 +1931,12 @@
 				1DE736052EB64D4400573C1A /* HomeStatsView.swift in Sources */,
 				1D33A19B2C077E2C0073320F /* IAPManager.swift in Sources */,
 				1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */,
+				1D7728412ED06DF20046B35B /* TradeViewModel.swift in Sources */,
 				1D1434A92EC9BC1C00FA6CBB /* ActivityContent.swift in Sources */,
 				1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */,
 				1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */,
 				1DC524902ECDCDF000E48964 /* HomeActivityViewModel.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
-				1D1400B82D3164D800DC51C0 /* DepositAndWithdrawView.swift in Sources */,
 				1DE736032EB64D3000573C1A /* HomeActivityView.swift in Sources */,
 				1DE45C6A2EB355BB0079F76E /* HomeTabView.swift in Sources */,
 				1D1434A52EC9A3B600FA6CBB /* HomeActivityTitleView.swift in Sources */,
@@ -1914,6 +1950,7 @@
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
 				1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */,
+				1DDEC5612ED14D2F00B940E2 /* TradeButtonView.swift in Sources */,
 				1D8C38762ECC7B1000F7CAD5 /* LifeSavingsView.swift in Sources */,
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */,
@@ -1940,9 +1977,11 @@
 				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
+				1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */,
 				1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */,
 				1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
+				1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */,
 				1D8C38782ECC7E7800F7CAD5 /* ActivityTextModifier.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
 				1D8C386A2ECC1B4600F7CAD5 /* EmergencyFund.swift in Sources */,
@@ -1958,6 +1997,7 @@
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
 				1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */,
+				1DDEC5672ED14D7100B940E2 /* PreviewTradeView.swift in Sources */,
 				1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

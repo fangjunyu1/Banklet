@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePrimaryBankView: View {
+    @EnvironmentObject var homeVM: HomeViewModel
     var primaryBank: PiggyBank
     var progress: Double {
         primaryBank.progress
@@ -107,9 +108,11 @@ struct HomePrimaryBankView: View {
                     
                     // 2) 存入按钮
                     Button(action: {
-                        
                         // 振动
                         HapticManager.shared.selectionChanged()
+                        homeVM.tardeModel = .deposit
+                        homeVM.piggyBank = primaryBank
+                        homeVM.isTradeView.toggle()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.down")
@@ -127,9 +130,11 @@ struct HomePrimaryBankView: View {
                     
                     // 3) 取出按钮
                     Button(action: {
-                        
                         // 振动
                         HapticManager.shared.selectionChanged()
+                        homeVM.tardeModel = .withdraw
+                        homeVM.piggyBank = primaryBank
+                        homeVM.isTradeView.toggle()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.up")

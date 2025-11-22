@@ -23,58 +23,69 @@ struct Home: View {
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数
     @State private var selectedTab = HomeTab.home  // 当前选择的Tab
+    @State private var homeVM = HomeViewModel() // 视图步骤
     // 获取第一个存钱罐
     var primaryBank: PiggyBank? {
         allPiggyBank.filter { $0.isPrimary }.first
     }
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Group {
-                    // switch selectedTab
-                    switch selectedTab {
-                        // 主页视图
-                    case .home:
-                        HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
-                        // 活动视图
-                    case .activity:
-                        HomeActivityView()
-                        // 统计视图
-                    case .stats:
-                          HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
-                        // 统计视图
-                    case .settings:
-                        HomeSettingsView()
+        ZStack {
+            NavigationStack {
+                ZStack {
+                    Group {
+                        // switch selectedTab
+                        switch selectedTab {
+                            // 主页视图
+                        case .home:
+                            HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
+                            // 活动视图
+                        case .activity:
+                            HomeActivityView()
+                            // 统计视图
+                        case .stats:
+                              HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
+                            // 统计视图
+                        case .settings:
+                            HomeSettingsView()
+                        }
+                    }
+                    // 液态玻璃 TabView 视图
+                    HomeTabView(selectedTab: $selectedTab)
+                }
+                .background {
+                    // 设置默认的背景灰色，防止各视图切换时显示白色闪烁背景
+                    AppColor.appBgGrayColor
+                        .ignoresSafeArea()
+                }
+                // 监听应用状态，如果返回，则调用Widget保存数据
+                .onChange(of: scenePhase) { _,newPhase in
+                    if newPhase == .active {
+                        // App 进入活跃状态
+                        print("App 进入活跃状态")
+                    }
+                    if newPhase == .background {
+                        // 在应用进入后台时保存数据
+                        saveWidgetData(primaryBank)
+                        print("应用移入后台，调用Widget保存数据")
+                    }
+                    if newPhase == .inactive {
+                        // 应用即将终止时保存数据（iOS 15+）
+                        saveWidgetData(primaryBank)
+                        print("非活跃状态，调用Widget保存数据")
                     }
                 }
-                // 液态玻璃 TabView 视图
-                HomeTabView(selectedTab: $selectedTab)
             }
-            .environment(homeActivityVM)
-            .background {
-                // 设置默认的背景灰色，防止各视图切换时显示白色闪烁背景
-                AppColor.appBgGrayColor
-                    .ignoresSafeArea()
-            }
-            // 监听应用状态，如果返回，则调用Widget保存数据
-            .onChange(of: scenePhase) { _,newPhase in
-                if newPhase == .active {
-                    // App 进入活跃状态
-                    print("App 进入活跃状态")
-                }
-                if newPhase == .background {
-                    // 在应用进入后台时保存数据
-                    saveWidgetData(primaryBank)
-                    print("应用移入后台，调用Widget保存数据")
-                }
-                if newPhase == .inactive {
-                    // 应用即将终止时保存数据（iOS 15+）
-                    saveWidgetData(primaryBank)
-                    print("非活跃状态，调用Widget保存数据")
-                }
+            .blur(radius: homeVM.isTradeView ? 10 : 0)
+            if homeVM.isTradeView {
+                TradeView()
+                    .transition(.opacity)   // 想要动画就加个过渡
+                    .zIndex(1)
+                    .animation(.easeInOut(duration: 2), value: homeVM.isTradeView)
             }
         }
+        .environment(homeActivityVM)
+        .environment(homeVM)
     }
 }
 
