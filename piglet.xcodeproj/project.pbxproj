@@ -1322,6 +1322,7 @@
 				1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
 				1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */,
+				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1334,7 +1335,6 @@
 				1DC524942ECDDFB900E48964 /* CreateViewModel.swift */,
 				1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */,
 				1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */,
-				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

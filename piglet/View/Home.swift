@@ -18,7 +18,11 @@ struct Home: View {
     @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var sound: SoundManager  // 通过 Sound 注入
     @State private var homeActivityVM = HomeActivityViewModel()
-    @Query(sort: \PiggyBank.creationDate)   // 所有存钱罐，按创建日期排序
+    @Query(sort: [
+        SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
+        SortDescriptor(\PiggyBank.creationDate, order: .reverse)
+    ])   // 所有存钱罐，按创建日期排序
+    
     var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数

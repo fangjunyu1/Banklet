@@ -17,26 +17,26 @@ struct HapticManager {
     }
     
     func selectionChanged() {
-            guard isEnabled else { return }
-            selectionGenerator.prepare()
-            selectionGenerator.selectionChanged()
-        }
-
-        func success() {
-            guard isEnabled else { return }
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.success)
-        }
-
-        func error() {
-            guard isEnabled else { return }
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.error)
-        }
-
-        func warning() {
-            guard isEnabled else { return }
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.warning)
-        }
+        guard isEnabled else { return }
+        selectionGenerator.prepare()
+        selectionGenerator.selectionChanged()
+    }
+    
+    func success() {
+        guard isEnabled else { return }
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
+    
+    func error() {
+        guard isEnabled else { return }
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+    }
+    
+    func warning() {
+        guard isEnabled else { return }
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
+    }
 }

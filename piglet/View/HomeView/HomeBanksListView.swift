@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeBanksListView: View {
+    @EnvironmentObject var homeVM: HomeViewModel
     var allPiggyBank: [PiggyBank]
     
     var body: some View {
@@ -31,9 +32,10 @@ struct HomeBanksListView: View {
             VStack(spacing: 15) {
                 ForEach(Array(allPiggyBank.prefix(3).enumerated()), id: \.offset) { index,item in
                     Button(action: {
-                        
                         // 振动
                         HapticManager.shared.selectionChanged()
+                        // 选择该存钱罐为主存钱罐
+                        homeVM.setPiggyBank(for: item)
                     }, label: {
                         HStack {
                             // 我的存钱罐图标

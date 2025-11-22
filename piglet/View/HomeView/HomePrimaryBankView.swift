@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePrimaryBankView: View {
     @EnvironmentObject var homeVM: HomeViewModel
+    @State private var showDeleteAlert = false
     var primaryBank: PiggyBank
     var progress: Double {
         primaryBank.progress
@@ -112,7 +113,7 @@ struct HomePrimaryBankView: View {
                         HapticManager.shared.selectionChanged()
                         homeVM.tardeModel = .deposit
                         homeVM.piggyBank = primaryBank
-                        homeVM.isTradeView.toggle()
+                        withAnimation { homeVM.isTradeView.toggle() }
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.down")
@@ -134,7 +135,7 @@ struct HomePrimaryBankView: View {
                         HapticManager.shared.selectionChanged()
                         homeVM.tardeModel = .withdraw
                         homeVM.piggyBank = primaryBank
-                        homeVM.isTradeView.toggle()
+                        withAnimation { homeVM.isTradeView.toggle() }
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.up")
@@ -152,9 +153,10 @@ struct HomePrimaryBankView: View {
                     
                     // 4) 删除按钮
                     Button(action: {
-                        homeVM.deletePiggyBank(for: primaryBank)
                         // 振动
                         HapticManager.shared.selectionChanged()
+                        // 显示删除存钱罐警告框
+                        showDeleteAlert.toggle()
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"trash")
@@ -167,6 +169,13 @@ struct HomePrimaryBankView: View {
                     .contentShape(Rectangle())
                     .background(Color(hex: "FCF3F2"))
                     .cornerRadius(5)
+                    .alert("Delete",isPresented: $showDeleteAlert) {
+                        Button("Delete", role: .destructive) {
+                            homeVM.deletePiggyBank(for: primaryBank)
+                        }
+                    } message: {
+                        Text("Are you sure you want to delete this piggy bank?")
+                    }
                 }
             }
             .frame(height:buttonHeight)

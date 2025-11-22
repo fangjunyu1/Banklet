@@ -68,6 +68,8 @@ class TradeViewModel:ObservableObject {
         
         // 进入完成界面
         self.tradeStatus = .finish
+        // 返回成功振动效果
+        HapticManager.shared.success()
         // 播放金额音效
         SoundManager.shared.playSound(named: "money1")
     }
