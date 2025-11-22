@@ -152,7 +152,7 @@ struct HomePrimaryBankView: View {
                     
                     // 4) 删除按钮
                     Button(action: {
-                        
+                        homeVM.deletePiggyBank(for: primaryBank)
                         // 振动
                         HapticManager.shared.selectionChanged()
                     }, label: {

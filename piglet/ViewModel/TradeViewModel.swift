@@ -17,8 +17,23 @@ class TradeViewModel:ObservableObject {
     var date: Date?
     var tradeStatus: TradeStatus = .prepare
     let context = DataController.shared.context
+    var tradeTask: Task<Void,Never>?
     
     func tradeAmount(piggyBank: PiggyBank?,tardeModel: TradeModel) {
+        tradeTask?.cancel() // 如果有正在进行的任务，先取消
+        
+        tradeTask = Task {
+            await tradeFlow(piggyBank: piggyBank, tardeModel: tardeModel)
+            
+        }
+    }
+    
+    func cancelTask() {
+        print("取消任务")
+        tradeTask?.cancel()
+    }
+    
+    func tradeFlow(piggyBank: PiggyBank?, tardeModel: TradeModel) async {
         guard let piggyBank else {
             print("没有存钱罐")
             return
@@ -31,6 +46,18 @@ class TradeViewModel:ObservableObject {
             print("输入为0，或小于0，不处理")
             return
         }
+        
+        // 显示等待动画
+        tradeStatus = .loading
+        let random = Double.random(in: 2...6)
+        print("随机延时:\(random)秒")
+        do {
+            try await Task.sleep(for: .seconds(random))
+        } catch {
+            print("任务被取消")
+            return
+        }
+        
         // 计算交易金额
         switch tardeModel {
         case .deposit:
@@ -38,18 +65,12 @@ class TradeViewModel:ObservableObject {
         case .withdraw:
             takeOut(piggyBank: piggyBank)
         }
-        tradeStatus = .loading
-        let random = Double.random(in: 2...6)
-        print("随机延时:\(random)秒")
-        // 延时 2 秒后恢复
-        DispatchQueue.main.asyncAfter(deadline: .now() + random) {
-            // 进入完成界面
-            self.tradeStatus = .finish
-            // 播放金额音效
-            SoundManager.shared.playSound(named: "money1")
-        }
+        
+        // 进入完成界面
+        self.tradeStatus = .finish
+        // 播放金额音效
+        SoundManager.shared.playSound(named: "money1")
     }
-    
     // 存钱逻辑
     func deposit(piggyBank: PiggyBank) {
         // 如果有存入金额

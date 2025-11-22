@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct PreviewTradeView: View {
-    @State private var hvm: HomeViewModel
-    init(hvm: HomeViewModel = HomeViewModel()) {
-        self.hvm = hvm
+    
+    @State private var hvm = HomeViewModel()
+    
+    init() {
         self.hvm.piggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: true)
     }
     

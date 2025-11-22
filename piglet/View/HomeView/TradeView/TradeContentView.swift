@@ -20,14 +20,14 @@ struct TradeContentView: View {
                     .fontWeight(.medium)
                     .font(.title2)
                 Spacer()
-                VStack(spacing: 3) {
+                VStack(alignment: .trailing,spacing: 3) {
                     Image(systemName: homeVM.piggyBank?.icon ?? "")
                         .imageScale(.small)
                         .foregroundColor(Color(hex: "216DFA"))
                         .padding(8)
                         .background(Color(hex: "216DFA").opacity(0.15))
                         .cornerRadius(5)
-                    Text("\(homeVM.piggyBank?.name ?? "")")
+                    Text(LocalizedStringKey(homeVM.piggyBank?.name ?? ""))
                         .font(.footnote)
                         .fontWeight(.medium)
                 }
@@ -66,22 +66,40 @@ struct TradeContentAmountView: View {
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
     @FocusState.Binding var focus: Bool
+    @State private var textOffset: CGFloat = 40
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: 0) {
             HStack(alignment: .center) {
                 Text(currencySymbol)
                     .font(.system(size: 50))
                     .fontWeight(.bold)
                     .foregroundColor(AppColor.gray)
-                TextField("_ _ ", value: $tradeVM.amount, format: .number)
+                    .offset(x: textOffset)
+                    .onChange(of: tradeVM.amount) { _, newAmount in
+                        if let amount = newAmount {
+                            let length = String(Int(amount)).count
+                            print("length:\(length)")
+                            if length > 3 {
+                                print("金额超过4位数")
+                                textOffset = 0
+                            } else {
+                                print("金额未超过4位数，偏移\(CGFloat(length * -10)),textOffset:\(textOffset)")
+                                textOffset = 40 + CGFloat(length * -10)
+                            }
+                        } else {
+                            textOffset = 40
+                        }
+                    }
+                TextField("_", value: $tradeVM.amount, format: .number)
                     .fontWeight(.bold)
                     .font(.system(size: 60))
                     .foregroundColor(AppColor.appColor)
                     .focused($focus)
-                    .frame(minWidth: 160)
-                    .frame(height: 60)
+                    .frame(width: 140)
+                    .frame(height: 70)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
+                    .multilineTextAlignment(.center)
                     .onChange(of: tradeVM.amount) {
                         // 振动
                         HapticManager.shared.selectionChanged()

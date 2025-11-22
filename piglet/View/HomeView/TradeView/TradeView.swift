@@ -39,7 +39,7 @@ struct TradeView: View {
                 if tradeVM.tradeStatus != .finish {
                     Spacer().frame(height:20)
                 }
-                TradeButtonView()
+                TradeButtonView(focus: $focus)
                 
                 Spacer()
             }
