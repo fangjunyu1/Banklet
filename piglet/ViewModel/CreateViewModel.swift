@@ -67,6 +67,8 @@ final class CreateStepViewModel: ObservableObject {
             tab = .expirationDate
         case .expirationDate:
             tab = .complete
+            // 播放完成音效
+            SoundManager.shared.playSound(named: "success")
         case .complete:
             break
         }

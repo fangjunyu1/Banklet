@@ -279,6 +279,7 @@
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
 		1DAEF8C02ECDF6E400B36FAB /* IconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */; };
+		1DB8B3C92ED34801002AD2D1 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DB8B3C82ED34801002AD2D1 /* success.mp3 */; };
 		1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */; };
 		1DBCF4102EB8483000B85BF4 /* AccessTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */; };
 		1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */; };
@@ -657,6 +658,7 @@
 		1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetProvider.swift; sourceTree = "<group>"; };
 		1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetEntry.swift; sourceTree = "<group>"; };
 		1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconList.swift; sourceTree = "<group>"; };
+		1DB8B3C82ED34801002AD2D1 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTimesView.swift; sourceTree = "<group>"; };
 		1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsRecordRow.swift; sourceTree = "<group>"; };
@@ -1119,6 +1121,7 @@
 				1D7EB3982EC8CDA4007625DE /* life0.mp3 */,
 				1D7EB3992EC8CDA4007625DE /* life1.mp3 */,
 				1D7ED6F62DFEE740000EB349 /* money.mp3 */,
+				1DB8B3C82ED34801002AD2D1 /* success.mp3 */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -1724,6 +1727,7 @@
 				1D3E13DE2D49DF3D00747D20 /* Home8.json in Resources */,
 				1D3E13FD2D4A160E00747D20 /* Home25.json in Resources */,
 				1D3E13EF2D4A0C8700747D20 /* Home14.json in Resources */,
+				1DB8B3C92ED34801002AD2D1 /* success.mp3 in Resources */,
 				1D0386CE2EA0023600E9379F /* gif_Home45.gif in Resources */,
 				1D0386CF2EA0023600E9379F /* gif_Home21.gif in Resources */,
 				1D0386D02EA0023600E9379F /* gif_Home46.gif in Resources */,

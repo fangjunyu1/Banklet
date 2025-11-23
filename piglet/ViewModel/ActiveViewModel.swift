@@ -67,7 +67,10 @@ final class ActiveViewModel:ObservableObject {
             } catch {
                 print("未知错误:\(error)")
             }
+            // 完成状态
             step = .complete
+            // 播放完成音效
+            SoundManager.shared.playSound(named: "success")
         }
     }
     
