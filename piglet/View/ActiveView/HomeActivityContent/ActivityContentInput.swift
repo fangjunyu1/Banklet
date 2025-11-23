@@ -62,7 +62,7 @@ private struct PrivateInputBindingView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                     .focused(isFocused)
                     .onChange(of: textField.wrappedValue) {
                         // 振动
@@ -75,7 +75,7 @@ private struct PrivateInputBindingView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                     .fixedSize(horizontal: true, vertical: false)
             }
         }

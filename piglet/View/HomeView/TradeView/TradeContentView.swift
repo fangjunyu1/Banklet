@@ -98,6 +98,7 @@ struct TradeContentAmountView: View {
                     .foregroundColor(AppColor.appColor)
                     .focused($focus)
                     .frame(width: 140)
+                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                     .frame(height: 70)
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)

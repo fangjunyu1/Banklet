@@ -37,7 +37,7 @@ struct HomeCreateInputTargetAmountView: View {
                 .fontWeight(.medium)
             TextField("0", value: $piggyBank.targetAmount, format: .number)
                 .focused($isFocus)
-                .keyboardType(.numberPad)   // 数字 + 符号键盘
+                .keyboardType(.decimalPad)   // 数字 + 小数点键盘
         }
     }
 }
@@ -85,7 +85,7 @@ struct HomeCreateInputAmountView: View {
                     }
                 }), format: .number)
                     .focused($isFocus)
-                    .keyboardType(.numberPad)
+                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                     .foregroundColor(isNegative ? .red : .primary)
             }   // 数字 + 符号键盘
         }

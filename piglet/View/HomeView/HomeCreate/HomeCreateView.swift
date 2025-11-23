@@ -66,6 +66,8 @@ struct HomeCreateButtonView: View {
     var body: some View {
         VStack(spacing: 15) {
             Button(action: {
+                // 振动
+                HapticManager.shared.selectionChanged()
                 // 如果是最后一个 tab
                 if step.tab.isLast {
                     step.createPiggyBank(for: piggyBank)
