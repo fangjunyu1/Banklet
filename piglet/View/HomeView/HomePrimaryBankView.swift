@@ -113,7 +113,7 @@ struct HomePrimaryBankView: View {
                         HapticManager.shared.selectionChanged()
                         homeVM.tardeModel = .deposit
                         homeVM.piggyBank = primaryBank
-                        withAnimation { homeVM.isTradeView.toggle() }
+                        withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView.toggle() }
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.down")
@@ -135,7 +135,7 @@ struct HomePrimaryBankView: View {
                         HapticManager.shared.selectionChanged()
                         homeVM.tardeModel = .withdraw
                         homeVM.piggyBank = primaryBank
-                        withAnimation { homeVM.isTradeView.toggle() }
+                        withAnimation(.easeInOut(duration: 1)) { homeVM.isTradeView.toggle() }
                     }, label: {
                         VStack(spacing: spacerSpacing) {
                             Image(systemName:"square.and.arrow.up")

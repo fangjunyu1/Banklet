@@ -26,7 +26,7 @@ struct TradeButtonView:View {
                 case .prepare:
                     tradeVM.tradeAmount(piggyBank: homeVM.piggyBank, tardeModel: homeVM.tardeModel)
                 case .finish:
-                    withAnimation { homeVM.isTradeView = false }
+                    withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
                 case .loading:
                     break
                 }
@@ -51,7 +51,7 @@ struct TradeButtonView:View {
                 tradeVM.cancelTask()
                 // 取消输入框焦点
                 focus = false
-                withAnimation { homeVM.isTradeView = false }
+                withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
             }, label: {
                 Text("Closure")
                     .foregroundColor(AppColor.appGrayColor)

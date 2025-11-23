@@ -25,14 +25,14 @@ struct PreviewTradeView: View {
                     .ignoresSafeArea()
                 VStack {
                     Button(action: {
-                        withAnimation { hvm.isTradeView = true }
+                        withAnimation(.easeInOut(duration: 0.3)) { hvm.isTradeView = true }
                         hvm.tardeModel = .deposit
                     }, label: {
                         Text("存入")
                             .modifier(ButtonModifier())
                     })
                     Button(action: {
-                        withAnimation { hvm.isTradeView = true }
+                        withAnimation(.easeInOut(duration: 0.3)) { hvm.isTradeView = true }
                         hvm.tardeModel = .withdraw
                     }, label: {
                         Text("取出")

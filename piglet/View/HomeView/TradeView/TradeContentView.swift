@@ -79,12 +79,14 @@ struct TradeContentAmountView: View {
                         if let amount = newAmount {
                             let length = String(Int(amount)).count
                             print("length:\(length)")
-                            if length > 3 {
-                                print("金额超过4位数")
-                                textOffset = 0
-                            } else {
-                                print("金额未超过4位数，偏移\(CGFloat(length * -10)),textOffset:\(textOffset)")
-                                textOffset = 40 + CGFloat(length * -10)
+                            if length != 1 {
+                                if length > 3 {
+                                    print("金额超过4位数")
+                                    textOffset = 0
+                                } else {
+                                    print("金额未超过4位数，偏移\(CGFloat(length * -10)),textOffset:\(textOffset)")
+                                    textOffset = 40 + CGFloat(length * -10)
+                                }
                             }
                         } else {
                             textOffset = 40

@@ -17,6 +17,7 @@ struct AccessTimesView: View {
     
     @State private var selectedBank: PiggyBank? = nil
     @State private var collapsedDates: Set<Date> = []   // 折叠数组
+
     // 筛选存取信息
     var filterRecords: [SavingsRecord] {
         guard let selectedBank else { return savingsRecords }
@@ -38,18 +39,16 @@ struct AccessTimesView: View {
     }
     
     // 删除存取记录
-    // 目前索引有问题，等主界面完善后，再优化该部分。
-    func removeRows(at offsets: IndexSet) {
-        // 从原始数组中移除这些元素
-        // 这里 indexSet 是 ForEach 中显示的索引
-        //        print("offsets:\(offsets)")
-        //        let itemsToRemove = offsets.map { filterRecords[$0] }
-        //        withAnimation {
-        //            for item in itemsToRemove {
-        //                modelContext.delete(item)
-        //            }
-        //        }
-        //        try? modelContext.save()
+    func removeGroupedRows(_ offsets: IndexSet, from record: [SavingsRecord]) {
+        let itemToRemove = offsets.map { record[$0] }
+        
+        withAnimation {
+            for item in itemToRemove {
+                modelContext.delete(item)
+            }
+        }
+        
+        try? modelContext.save()
     }
     
     var body: some View {
@@ -66,6 +65,9 @@ struct AccessTimesView: View {
                             ForEach(group.records, id:\.self) { item in
                                 SavingsRecordRow(record: item)
                             }
+                            .onDelete { offsets in
+                                removeGroupedRows(offsets, from: group.records)
+                            }
                         }
                     }
                 }
@@ -74,7 +76,6 @@ struct AccessTimesView: View {
                 .listRowBackground(Color.clear) // 保证行之间显示背景间隔
                 .listRowSeparator(.hidden)
                 .background(Color.clear) // 为整个 List 设置您想要的背景色
-                //                .onDelete(perform: removeRows)
             }
             .listStyle(.plain)
         }

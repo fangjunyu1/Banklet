@@ -83,9 +83,7 @@ struct Home: View {
             .blur(radius: homeVM.isTradeView ? 10 : 0)
             if homeVM.isTradeView {
                 TradeView()
-                    .transition(.opacity)   // 想要动画就加个过渡
                     .zIndex(1)
-                    .animation(.easeInOut(duration: 2), value: homeVM.isTradeView)
             }
         }
         .environment(homeActivityVM)
