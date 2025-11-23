@@ -35,7 +35,7 @@ struct HomeMainView: View {
                 Spacer()
             } else {
                 // 显示空白视图
-                HomeEmptyView()
+                HomeEmptyView(showCreateView: $showCreateView)
             }
             // 底部空白
             Spacer().frame(height: 50)

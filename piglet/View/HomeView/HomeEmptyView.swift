@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeEmptyView: View {
+    @Binding var showCreateView: Bool
     var body: some View {
         VStack {
             Spacer()
@@ -35,6 +36,7 @@ struct HomeEmptyView: View {
             Button(action:{
                 // 振动
                 HapticManager.shared.selectionChanged()
+                showCreateView = true
             },label: {
                 Text("Create")
                     .modifier(ButtonModifier())
@@ -45,5 +47,5 @@ struct HomeEmptyView: View {
 }
 
 #Preview {
-    HomeEmptyView()
+    HomeEmptyView(showCreateView: .constant(true))
 }
