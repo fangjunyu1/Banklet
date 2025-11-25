@@ -45,7 +45,7 @@ class PiggyBank {
         return truncated.formatted(.percent.precision(.fractionLength(0...1)))
     }
     /// 与存钱记录的关系
-    @Relationship(deleteRule: .cascade)
+    @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
     init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isPrimary: Bool) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D01B4652EBB0F720022B549 /* HomeSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */; };
+		1D028D9B2ED5F3E500FD8E73 /* successShot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1D028D9A2ED5F3E500FD8E73 /* successShot.mp3 */; };
 		1D0386CE2EA0023600E9379F /* gif_Home45.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D0386C52EA0023600E9379F /* gif_Home45.gif */; };
 		1D0386CF2EA0023600E9379F /* gif_Home21.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D0386AD2EA0023600E9379F /* gif_Home21.gif */; };
 		1D0386D02EA0023600E9379F /* gif_Home46.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D0386C62EA0023600E9379F /* gif_Home46.gif */; };
@@ -400,6 +401,7 @@
 
 /* Begin PBXFileReference section */
 		1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingRow.swift; sourceTree = "<group>"; };
+		1D028D9A2ED5F3E500FD8E73 /* successShot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = successShot.mp3; sourceTree = "<group>"; };
 		1D0386982EA0023600E9379F /* gif_Home0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_Home0.gif; sourceTree = "<group>"; };
 		1D0386992EA0023600E9379F /* gif_Home1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_Home1.gif; sourceTree = "<group>"; };
 		1D03869A2EA0023600E9379F /* gif_Home2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_Home2.gif; sourceTree = "<group>"; };
@@ -1117,6 +1119,7 @@
 		1D7ED6F12DFEE490000EB349 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				1D028D9A2ED5F3E500FD8E73 /* successShot.mp3 */,
 				1DDEC56C2ED16C7800B940E2 /* money1.mp3 */,
 				1D7EB3982EC8CDA4007625DE /* life0.mp3 */,
 				1D7EB3992EC8CDA4007625DE /* life1.mp3 */,
@@ -1760,6 +1763,7 @@
 				1D0386E82EA0023600E9379F /* gif_Home34.gif in Resources */,
 				1D0386E92EA0023600E9379F /* gif_Home53.gif in Resources */,
 				1D0386EA2EA0023600E9379F /* gif_Home35.gif in Resources */,
+				1D028D9B2ED5F3E500FD8E73 /* successShot.mp3 in Resources */,
 				1D0386EB2EA0023600E9379F /* gif_Home36.gif in Resources */,
 				1D0386EC2EA0023600E9379F /* gif_Home49.gif in Resources */,
 				1D0386ED2EA0023600E9379F /* gif_Home13.gif in Resources */,

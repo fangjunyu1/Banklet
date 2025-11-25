@@ -18,8 +18,6 @@ class SavingsRecord {
     var amountText: String {    // 当前金额的String文本
         currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
-    // 反向关系：与 PiggyBank 关联
-    @Relationship(inverse: \PiggyBank.records)
     var piggyBank: PiggyBank? 
     
     init(amount: Double, date: Date = Date(), saveMoney:Bool, note: String? = nil, piggyBank: PiggyBank? = nil) {

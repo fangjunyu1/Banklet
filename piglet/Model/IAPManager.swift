@@ -94,7 +94,7 @@ class IAPManager:ObservableObject {
     }
     
     // 检查所有交易，如果用户退款，则取消内购标识。
-    func checkAllTransactions() async {
+    func checkAllTransactions(state:(Bool) -> Void) async {
         print("进入 checkAllTransactions 方法，检查所有交易")
         for await result in Transaction.all {
             // 遍历当前所有已完成的交易
@@ -102,6 +102,7 @@ class IAPManager:ObservableObject {
                 let transaction = try checkVerified(result) // 验证交易
                 updatePurchasedState(from: transaction)
                 await transaction.finish()
+                state(true)
             } catch {
                 print("交易处理失败：\(error)")
             }

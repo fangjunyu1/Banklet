@@ -23602,6 +23602,18 @@
         }
       }
     },
+    "Recovery Successful" : {
+      "comment" : "恢复成功",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复成功"
+          }
+        }
+      }
+    },
     "Remaining" : {
       "comment" : "剩余",
       "extractionState" : "manual",

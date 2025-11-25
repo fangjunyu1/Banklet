@@ -316,6 +316,7 @@ private struct BuyPremiumView: View {
     @Binding var loadPurchased:Bool
     @Binding var isPurchaseSuccessfulView: Bool
     @Binding var purchaseProductTask: Task<Void, Never>?
+    @State private var recoverySuccessful = false
     var body: some View {
         VStack(spacing: 10) {
             // 购买会员-按钮
@@ -330,6 +331,10 @@ private struct BuyPremiumView: View {
                         await iapManager.purchaseProduct(selectedProduct) { success in
                             if success == true {
                                 isPurchaseSuccessfulView = true
+                                // 振动
+                                HapticManager.shared.success()
+                                // 成功音效
+                                SoundManager.shared.playSound(named: "successShot")
                             }
                             loadPurchased = false
                             print("success:\(success)")
@@ -364,10 +369,20 @@ private struct BuyPremiumView: View {
             Button(action: {
                 HapticManager.shared.selectionChanged()
                 Task {
-                    await IAPManager.shared.checkAllTransactions()
+                    await IAPManager.shared.checkAllTransactions() { success in
+                        recoverySuccessful = success
+                        // 振动
+                        HapticManager.shared.success()
+                        // 成功音效
+                        SoundManager.shared.playSound(named: "successShot")
+                    }
                 }
             },label: {
                 Footnote(text:"Restore Purchases")
+            })
+            .sheet(isPresented: $recoverySuccessful, content: {
+                PurchaseSuccessfulView()
+                    .presentationDetents([.height(360)])
             })
         }
         .padding(.bottom,10)
@@ -435,6 +450,34 @@ private struct VStackModifier: ViewModifier {
     }
 }
 
+// 恢复视图
+private struct RecoverySuccessfulView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        VStack {
+            Spacer().frame(height:30)
+            LottieView(filename: "BlueAccessVIP", isPlaying: true, playCount: 0, isReversed: false)
+                .frame(maxHeight: 150)
+                .frame(maxWidth: 500)
+            // 恢复成功
+            Text("Recovery Successful")
+                .modifier(TitleModifier())
+            // 高级会员
+            HStack(spacing:0) {
+                Text("Premium Member")
+            }
+            .font(.footnote)
+            .fontWeight(.medium)
+            .foregroundColor(AppColor.appColor)
+            Spacer()
+            Text("Completed")
+                .modifier(ButtonModifier())
+                .onTapGesture {
+                    dismiss()
+                }
+        }
+    }
+}
 private struct PurchaseSuccessfulView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -457,12 +500,8 @@ private struct PurchaseSuccessfulView: View {
             Text("Completed")
                 .modifier(ButtonModifier())
                 .onTapGesture {
-                    print("点击关闭按钮")
                     dismiss()
                 }
-        }
-        .onTapGesture {
-            print("点击了成功视图")
         }
     }
 }
