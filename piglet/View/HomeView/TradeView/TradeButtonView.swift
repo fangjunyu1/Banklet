@@ -12,7 +12,7 @@ struct TradeButtonView:View {
     // 管理存钱/取钱状态和是否显示TradeView
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
-    @FocusState.Binding var focus: Bool
+    @FocusState.Binding var focus: Field?
     var body: some View {
         // 存钱按钮
         VStack(spacing: 20) {
@@ -20,7 +20,7 @@ struct TradeButtonView:View {
                 // 振动
                 HapticManager.shared.selectionChanged()
                 // 取消输入框焦点
-                focus = false
+                focus = nil
                 // 根据存钱状态，调用方法
                 switch tradeVM.tradeStatus {
                 case .prepare:
@@ -50,7 +50,7 @@ struct TradeButtonView:View {
                 // 取消任务
                 tradeVM.cancelTask()
                 // 取消输入框焦点
-                focus = false
+                focus = nil
                 withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
             }, label: {
                 Text("Closure")

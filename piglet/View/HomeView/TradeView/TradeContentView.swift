@@ -11,7 +11,7 @@ struct TradeContentView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
-    @FocusState.Binding var focus: Bool
+    @FocusState.Binding var focus: Field?
     var body: some View {
         VStack(spacing: 0) {
             // 存钱金额和图标
@@ -65,7 +65,7 @@ struct TradeContentAmountView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
-    @FocusState.Binding var focus: Bool
+    @FocusState.Binding var focus: Field?
     @State private var textOffset: CGFloat = 40
     var body: some View {
         VStack(spacing: 0) {
@@ -96,7 +96,7 @@ struct TradeContentAmountView: View {
                     .fontWeight(.bold)
                     .font(.system(size: 60))
                     .foregroundColor(AppColor.appColor)
-                    .focused($focus)
+                    .focused($focus, equals: .amount)
                     .frame(width: 140)
                     .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                     .frame(height: 70)

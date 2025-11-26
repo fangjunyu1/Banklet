@@ -11,7 +11,7 @@ struct TradeNotesView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
-    @FocusState.Binding var focus: Bool
+    @FocusState.Binding var focus: Field?
     var body: some View {
         HStack {
             Text("Notes")
@@ -19,7 +19,7 @@ struct TradeNotesView: View {
                 .foregroundColor(AppColor.appGrayColor)
             TextField("", text: $tradeVM.remark)
                 .font(.footnote)
-                .focused($focus)
+                .focused($focus, equals: .note)
                 .onChange(of: tradeVM.remark) {
                     // 振动
                     HapticManager.shared.selectionChanged()

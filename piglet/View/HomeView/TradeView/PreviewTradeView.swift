@@ -11,7 +11,7 @@ import SwiftUI
 struct PreviewTradeView: View {
     
     @State private var hvm = HomeViewModel()
-    
+    @FocusState private var focus: Field?
     init() {
         self.hvm.piggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: true)
     }
@@ -42,8 +42,22 @@ struct PreviewTradeView: View {
             }
             .blur(radius: hvm.isTradeView ? 30 : 0)
             if hvm.isTradeView {
-                TradeView()
-                    .environmentObject(hvm)
+                ZStack {
+                    
+                        // 白色模糊背景
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .ignoresSafeArea()
+                            .opacity(0.5)
+                            .onTapGesture {
+                                focus = nil   // 点击背景，关闭输入框
+                            }
+                    
+                    TradeView()
+                        .transition(.move(edge: .bottom))   // 从底部滑上来
+                        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: hvm.isTradeView)
+                        .zIndex(1)
+                }
             }
         }
     }
@@ -52,4 +66,5 @@ struct PreviewTradeView: View {
 #Preview {
     PreviewTradeView()
         .environmentObject(AppStorageManager.shared)
+        .environmentObject(HomeViewModel())
 }
