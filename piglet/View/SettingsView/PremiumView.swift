@@ -332,7 +332,7 @@ private struct BuyPremiumView: View {
                             if success == true {
                                 isPurchaseSuccessfulView = true
                                 // 振动
-                                HapticManager.shared.success()
+                                HapticManager.shared.selectionChanged()
                                 // 成功音效
                                 SoundManager.shared.playSound(named: "successShot")
                             }
@@ -372,7 +372,7 @@ private struct BuyPremiumView: View {
                     await IAPManager.shared.checkAllTransactions() { success in
                         recoverySuccessful = success
                         // 振动
-                        HapticManager.shared.success()
+                        HapticManager.shared.selectionChanged()
                         // 成功音效
                         SoundManager.shared.playSound(named: "successShot")
                     }
@@ -381,7 +381,7 @@ private struct BuyPremiumView: View {
                 Footnote(text:"Restore Purchases")
             })
             .sheet(isPresented: $recoverySuccessful, content: {
-                PurchaseSuccessfulView()
+                RecoverySuccessfulView()
                     .presentationDetents([.height(360)])
             })
         }

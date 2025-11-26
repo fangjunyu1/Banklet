@@ -96,17 +96,50 @@ class IAPManager:ObservableObject {
     // 检查所有交易，如果用户退款，则取消内购标识。
     func checkAllTransactions(state:(Bool) -> Void) async {
         print("进入 checkAllTransactions 方法，检查所有交易")
+        
+        var latestExpiration: Date?
+        var lifetimePurchased = false
+        
         for await result in Transaction.all {
             // 遍历当前所有已完成的交易
             do {
                 let transaction = try checkVerified(result) // 验证交易
-                updatePurchasedState(from: transaction)
+                // --- 1. 永久会员逻辑 -----
+                if transaction.productID == "20240523" {
+                    if transaction.revocationDate == nil {
+                        lifetimePurchased = true
+                    }
+                    continue   // 不 return，只是跳过本次循环
+                }
+                
+                // --- 2. 订阅逻辑 -------
+                if let revoke = transaction.revocationDate {
+                    // 有退款就清空
+                    latestExpiration = nil
+                    continue
+                }
+                
+                if let expiration = transaction.expirationDate {
+                    // 多订阅，取最新过期时间（有效期最长的）
+                    latestExpiration = max(latestExpiration ?? expiration, expiration)
+                }
+                
                 await transaction.finish()
-                state(true)
             } catch {
                 print("交易处理失败：\(error)")
             }
         }
+        
+        // ---- 扫描完成后统一更新状态 ----
+        AppStorageManager.shared.isLifetime = lifetimePurchased
+        
+        if let exp = latestExpiration {
+            AppStorageManager.shared.expirationDate = exp.timeIntervalSince1970
+        } else {
+            AppStorageManager.shared.expirationDate = 0
+        }
+        
+        state(true)
     }
     
     // 更新内购商品状态
