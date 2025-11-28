@@ -46,7 +46,7 @@ class AppStorageManager: ObservableObject {
     // 模糊背景
     var isBlurBackground = false { didSet {updateValue(key: "isBlurBackground",newValue: isBlurBackground,oldValue: oldValue )}}
     // 静默模式
-    var isSilentMode = false { didSet {updateValue(key: "isSilentMode",newValue: isSilentMode,oldValue: oldValue )}}
+    var isSilentMode = false { didSet { updateValue(key: "isSilentMode",newValue: isSilentMode,oldValue: oldValue) }}
     // 负债模式
     var isDebtModel = false { didSet {updateValue(key: "isDebtModel",newValue: isSilentMode,oldValue: oldValue )}}
     // 货币符号
@@ -116,7 +116,7 @@ extension AppStorageManager {
     
     /// 从 iCloud 读取数据
     /// // 不从iCloud中加载欢迎视图: isCompletedWelcome - Bool，每次下载应用都会显示欢迎视图
-    /// 
+    ///
     func loadFromiCloud() {
         isLoading = true    // 设置加载进度标志
         defer {

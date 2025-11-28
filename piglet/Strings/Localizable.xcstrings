@@ -30823,18 +30823,6 @@
         }
       }
     },
-    "The advanced version continues to expand its features, unlocking more experiences such as music and sound in the future." : {
-      "comment" : "高级版功能持续扩展，未来将解锁音乐、声音等更多体验。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "高级版功能持续扩展，未来将解锁音乐、声音等更多体验。"
-          }
-        }
-      }
-    },
     "The piggy bank displays the currency symbol; currency conversion is not currently supported." : {
       "comment" : "显示存钱罐的货币符号，暂不支持货币转换。",
       "extractionState" : "manual",
@@ -30843,6 +30831,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示存钱罐的货币符号，暂不支持货币转换。"
+          }
+        }
+      }
+    },
+    "The premium version continues to expand its features, unlocking more experiences such as music and events in the future." : {
+      "comment" : "高级版功能持续扩展，未来将解锁音乐、活动等更多体验。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级版功能持续扩展，未来将解锁音乐、活动等更多体验。"
           }
         }
       }

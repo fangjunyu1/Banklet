@@ -31,7 +31,7 @@ let PreminumList: [PreminumModel] = [
     // 小组件扩展
     PreminumModel(imgName: "Widget", imgModel: .img,color: AppColor.appColor, text: "Widget Extensions", info: "Desktop widgets have been fully upgraded, supporting transparent and dynamic styles, and updating in sync with the app."),
     // 持续更新
-    PreminumModel(imgName: "square.stack.3d.up.fill", imgModel: .sf,color: AppColor.appColor, text: "Continuously updated", info: "The advanced version continues to expand its features, unlocking more experiences such as music and sound in the future.")
+    PreminumModel(imgName: "square.stack.3d.up.fill", imgModel: .sf,color: AppColor.appColor, text: "Continuously updated", info: "The premium version continues to expand its features, unlocking more experiences such as music and events in the future.")
 ]
 
 let PurchaseNoticeList: [String] = [

@@ -28,13 +28,19 @@ struct Home: View {
     var savingsRecords: [SavingsRecord]  // 存取次数
     @State private var selectedTab = HomeTab.home  // 当前选择的Tab
     @State private var homeVM = HomeViewModel() // 视图步骤
+    @State private var isSlientMode = false // 静默视图
     // 获取第一个存钱罐
     var primaryBank: PiggyBank? {
         allPiggyBank.filter { $0.isPrimary }.first
     }
+    @State private var lastTouchTime = Date()    // 最后点击时间，检测静默
+    // 每秒检查一次
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    @State private var idleManager = IdleTimerManager.shared
     var body: some View {
         ZStack {
+            // 主视图
             NavigationStack {
                 ZStack {
                     Group {
@@ -48,7 +54,7 @@ struct Home: View {
                             HomeActivityView()
                             // 统计视图
                         case .stats:
-                              HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
+                            HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
                             // 统计视图
                         case .settings:
                             HomeSettingsView()
@@ -81,15 +87,31 @@ struct Home: View {
                 }
             }
             .blur(radius: homeVM.isTradeView ? 10 : 0)
+            
+            // 存取视图
             if homeVM.isTradeView {
+                Color.white
+                    .opacity(0.1)
                 TradeView()
                     .transition(.move(edge: .bottom))   // 从底部滑上来
                     .animation(.spring(response: 0.4, dampingFraction: 0.8), value: homeVM.isTradeView)
                     .zIndex(1)
             }
+            
+            if idleManager.isIdle {
+                SlientMode(isSlientMode: $idleManager.isIdle)
+            }
         }
         .environment(homeActivityVM)
         .environment(homeVM)
+        .environmentObject(idleManager)
+        .onAppear {
+            GlobalTouchManager.shared.onTouch = {
+                idleManager.resetTimer()
+            }
+            GlobalTouchManager.shared.setup()
+        }
+        .contentShape(Rectangle())
     }
 }
 

@@ -164,6 +164,9 @@ struct GeneralSilentRow: View {
                     .foregroundColor(mode ? .white : .black)
                 Spacer()
                 Toggle("", isOn: $mode)
+                    .onChange(of: mode) {
+                        mode ? IdleTimerManager.shared.resetTimer() : IdleTimerManager.shared.stopTimer()
+                    }
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
