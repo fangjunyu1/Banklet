@@ -52,6 +52,7 @@ struct SlientMode: View {
                 // 隐藏时，设置标志位为 false
                 print("静默视图隐藏，设置 isShowingIdleView = false")
                 idleManager.isShowingIdleView = false
+                idleManager.resetTimer()
             }
         }
     }

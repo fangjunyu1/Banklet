@@ -149,8 +149,6 @@
 		1D2A5EFC2EBF215100C1F831 /* WorkingCat.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2A5EFB2EBF215100C1F831 /* WorkingCat.json */; };
 		1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F922B2E9CA5240077A235 /* GifView.swift */; };
 		1D2F92332E9D2C340077A235 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92322E9D2C320077A235 /* PlaceholderView.swift */; };
-		1D2F92362E9D2F400077A235 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2F92352E9D2F400077A235 /* Lottie */; };
-		1D2F92392E9D2FE20077A235 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2F92382E9D2FE20077A235 /* DeviceKit */; };
 		1D2F923E2E9D4E060077A235 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F923D2E9D4E030077A235 /* UIImage.swift */; };
 		1D2F92412E9D50440077A235 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92402E9D50400077A235 /* SimpleEntry.swift */; };
 		1D2F92432E9D511E0077A235 /* GifImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92422E9D511B0077A235 /* GifImageView.swift */; };
@@ -222,6 +220,9 @@
 		1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
+		1D60619B2ED9E98200B32799 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D60619A2ED9E98200B32799 /* ClockHandRotationKit */; };
+		1D60619E2ED9E99E00B32799 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D60619D2ED9E99E00B32799 /* Lottie */; };
+		1D6061A12ED9E9AC00B32799 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D6061A02ED9E9AC00B32799 /* DeviceKit */; };
 		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
 		1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4CA2EBD9F2E00001CF5 /* HomeStatsEmptyView.swift */; };
 		1D66C4CD2EBDA02D00001CF5 /* emptyStats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */; };
@@ -277,7 +278,6 @@
 		1DA7C3A52D6AA67C00FA6CA3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A32D6AA67C00FA6CA3 /* ColorExtensions.swift */; };
 		1DA7C3A72D6AAF3E00FA6CA3 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A62D6AAF3E00FA6CA3 /* CircularProgressBar.swift */; };
 		1DAD52CF2E9E3AC2008D07CB /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DAD52CE2E9E3AC2008D07CB /* ClockHandRotationKit */; };
-		1DAD52D12E9E3C4E008D07CB /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DAD52D02E9E3C4E008D07CB /* ClockHandRotationKit */; };
 		1DAD52D22E9E8C2D008D07CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
@@ -842,12 +842,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2F92362E9D2F400077A235 /* Lottie in Frameworks */,
-				1DAD52D12E9E3C4E008D07CB /* ClockHandRotationKit in Frameworks */,
-				1D2F92392E9D2FE20077A235 /* DeviceKit in Frameworks */,
+				1D60619B2ED9E98200B32799 /* ClockHandRotationKit in Frameworks */,
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
 				1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
+				1D60619E2ED9E99E00B32799 /* Lottie in Frameworks */,
+				1D6061A12ED9E9AC00B32799 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1524,9 +1524,9 @@
 			);
 			name = piglet;
 			packageProductDependencies = (
-				1D2F92352E9D2F400077A235 /* Lottie */,
-				1D2F92382E9D2FE20077A235 /* DeviceKit */,
-				1DAD52D02E9E3C4E008D07CB /* ClockHandRotationKit */,
+				1D60619A2ED9E98200B32799 /* ClockHandRotationKit */,
+				1D60619D2ED9E99E00B32799 /* Lottie */,
+				1D6061A02ED9E9AC00B32799 /* DeviceKit */,
 			);
 			productName = piglet;
 			productReference = 1DE6144C2E6E708B0040FD65 /* piglet.app */;
@@ -1619,9 +1619,9 @@
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
-				1D2F92342E9D2F400077A235 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				1D2F92372E9D2FE20077A235 /* XCRemoteSwiftPackageReference "DeviceKit" */,
-				1DAD52CD2E9E3AC2008D07CB /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
+				1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
+				1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 1DF555682BF60B1000BF0DE5;
 			projectDirPath = "";
@@ -2559,7 +2559,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1D2F92342E9D2F400077A235 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/octree/ClockHandRotationKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
@@ -2567,7 +2575,7 @@
 				minimumVersion = 4.5.2;
 			};
 		};
-		1D2F92372E9D2FE20077A235 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+		1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
 			requirement = {
@@ -2586,22 +2594,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1D2F92352E9D2F400077A235 /* Lottie */ = {
+		1D60619A2ED9E98200B32799 /* ClockHandRotationKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1D2F92342E9D2F400077A235 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
+			productName = ClockHandRotationKit;
+		};
+		1D60619D2ED9E99E00B32799 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		1D2F92382E9D2FE20077A235 /* DeviceKit */ = {
+		1D6061A02ED9E9AC00B32799 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1D2F92372E9D2FE20077A235 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			package = 1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */;
 			productName = DeviceKit;
 		};
 		1DAD52CE2E9E3AC2008D07CB /* ClockHandRotationKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1DAD52CD2E9E3AC2008D07CB /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
-			productName = ClockHandRotationKit;
-		};
-		1DAD52D02E9E3C4E008D07CB /* ClockHandRotationKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DAD52CD2E9E3AC2008D07CB /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
 			productName = ClockHandRotationKit;
