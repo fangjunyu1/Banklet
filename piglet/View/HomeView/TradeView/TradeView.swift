@@ -44,12 +44,13 @@ struct TradeView: View {
         }
         .onAppear {
             // 显示时，设置标志位为 true
-            print("静默视图显示，设置 isShowingIdleView = true")
+            print("显示交易视图，关闭计时器")
             idleManager.isShowingIdleView = true
+            idleManager.stopTimer()
         }
         .onDisappear {
             // 隐藏时，设置标志位为 false
-            print("静默视图隐藏，设置 isShowingIdleView = false")
+            print("关闭交易视图，重启计时器")
             idleManager.isShowingIdleView = false
             idleManager.resetTimer()
         }

@@ -22,7 +22,7 @@ class IdleTimerManager: ObservableObject {
     
     func resetTimer() {
         guard !isShowingIdleView else {
-            print("正在显示静默视图，阻止重置计时器")
+            print("正在显示静默/交易视图，阻止重置计时器")
             return
         }
         print("触发 resetTimer")
