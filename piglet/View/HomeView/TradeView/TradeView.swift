@@ -13,6 +13,7 @@ enum Field {
 }
 
 struct TradeView: View {
+    @EnvironmentObject var idleManager: IdleTimerManager
     @EnvironmentObject var appStorage: AppStorageManager
     // 管理存钱/取钱状态和是否显示TradeView
     @EnvironmentObject var homeVM: HomeViewModel
@@ -40,6 +41,17 @@ struct TradeView: View {
         .environmentObject(tradeVM)
         .onAppear {
             focus = .amount
+        }
+        .onAppear {
+            // 显示时，设置标志位为 true
+            print("静默视图显示，设置 isShowingIdleView = true")
+            idleManager.isShowingIdleView = true
+        }
+        .onDisappear {
+            // 隐藏时，设置标志位为 false
+            print("静默视图隐藏，设置 isShowingIdleView = false")
+            idleManager.isShowingIdleView = false
+            idleManager.resetTimer()
         }
     }
 }
