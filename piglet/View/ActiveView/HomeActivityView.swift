@@ -22,7 +22,7 @@ struct HomeActivityView: View {
                     // 振动
                     HapticManager.shared.selectionChanged()
                     if appStorage.isActivityMusic {
-                        playMusicForCurrentTab(for: homeActivityVM.tab)
+                        homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)
                     }
                 }
             Spacer().frame(height:20)
@@ -47,9 +47,6 @@ struct HomeActivityView: View {
             }
         }
         .onAppear {
-            if appStorage.isActivityMusic {
-                playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
-            }
             if colorScheme == .light {
                 UIPageControl.appearance().currentPageIndicatorTintColor = .black // 当前页指示器为黑色
                 UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3) // 其他页指示器半透明黑色
@@ -58,19 +55,10 @@ struct HomeActivityView: View {
         .background {
             HomeActivityViewBackground(activityTab: $homeActivityVM.tab)
         }
-        .onDisappear {
-            soundManager.stopAllSound()
-        }
+//        .onDisappear {
+//            soundManager.stopAllSound()
+//        }
         .environment(homeActivityVM)
-    }
-    
-    private func playMusicForCurrentTab(for tab: ActivityTab) {
-        switch tab {
-        case .LifeSavingsBank:
-            soundManager.playBackgroundMusic(named: "life0")
-        case .EmergencyFund:
-            soundManager.playBackgroundMusic(named: "life1")
-        }
     }
 }
 

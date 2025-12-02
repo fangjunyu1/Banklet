@@ -34,7 +34,6 @@ struct HomeMainView: View {
             Spacer().frame(height: 50)
         }
         .navigationTitle("Home")
-        .searchable(text: $searchText, prompt: "Search for piggy banks")
         .background {
             BackgroundImgView()
         }

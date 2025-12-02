@@ -26182,18 +26182,6 @@
         }
       }
     },
-    "Search for piggy banks" : {
-      "comment" : "搜索存钱罐",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "搜索存钱罐"
-          }
-        }
-      }
-    },
     "Security Verification" : {
       "comment" : "安全校验",
       "extractionState" : "manual",

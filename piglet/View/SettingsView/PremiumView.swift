@@ -253,11 +253,7 @@ private struct PremiumComponentsView: View {
                                     // 振动
                                     HapticManager.shared.selectionChanged()
                                     // 如果重复点击内购商品，则清空内购商品
-                                    if selectedProduct == products {
-                                        selectedProduct = nil
-                                    } else {
-                                        selectedProduct = products
-                                    }
+                                    selectedProduct = products
                                 }
                                 // 分割线
                                 if index < iapManager.IAPProductList.count - 1 {

@@ -79,7 +79,7 @@ struct AccessTimesView: View {
             }
             .listStyle(.plain)
         }
-        .navigationTitle("Access times")
+        .navigationTitle("Access records")
         .padding(.top, 20)
         .modifier(BackgroundModifier())
     }

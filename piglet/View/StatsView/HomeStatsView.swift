@@ -154,7 +154,7 @@ struct HomeStatsView: View {
                     // 4、存取次数，显示更多
                     if !savingsRecords.isEmpty {
                         HStack {
-                            Text("Access times")
+                            Text("Access records")
                                 .fontWeight(.medium)
                             Spacer()
                             NavigationLink(destination: AccessTimesView(), label: {

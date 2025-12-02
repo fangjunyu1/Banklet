@@ -38,6 +38,7 @@ struct Home: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var idleManager = IdleTimerManager.shared
+    
     var body: some View {
         ZStack {
             // 主视图
@@ -110,6 +111,10 @@ struct Home: View {
                 idleManager.resetTimer()
             }
             GlobalTouchManager.shared.setup()
+            // 播放音乐
+            if appStorage.isActivityMusic {
+                homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
+            }
         }
         .contentShape(Rectangle())
     }
