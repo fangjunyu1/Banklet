@@ -66,3 +66,12 @@ private struct HomeMainToolBarButton: View {
         })
     }
 }
+
+#Preview {
+    Home()
+        .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
+}

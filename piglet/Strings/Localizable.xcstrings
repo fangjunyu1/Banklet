@@ -724,6 +724,18 @@
         }
       }
     },
+    "Access progress" : {
+      "comment" : "存取进度",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取进度"
+          }
+        }
+      }
+    },
     "Access records" : {
       "comment" : "存取记录",
       "extractionState" : "manual",
@@ -31092,6 +31104,9 @@
           }
         }
       }
+    },
+    "Toggle" : {
+
     },
     "Total access times" : {
       "comment" : "1.0.6:存取总次数",

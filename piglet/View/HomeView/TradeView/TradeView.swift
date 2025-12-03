@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-enum Field {
-    case amount
-    case note
-}
-
 struct TradeView: View {
     @EnvironmentObject var idleManager: IdleTimerManager
     @EnvironmentObject var appStorage: AppStorageManager
@@ -55,6 +50,11 @@ struct TradeView: View {
             idleManager.resetTimer()
         }
     }
+}
+
+enum Field {
+    case amount
+    case note
 }
 
 #Preview {

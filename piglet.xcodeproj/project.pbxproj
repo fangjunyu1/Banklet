@@ -139,6 +139,7 @@
 		1D1561AE2EB33C110041C0DD /* lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561AD2EB33C110041C0DD /* lock.json */; };
 		1D1561B02EB33C1E0041C0DD /* security.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561AF2EB33C1E0041C0DD /* security.json */; };
 		1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1695EA2D201BB10043A645 /* ContentView.swift */; };
+		1D1BE06F2EE064EA009BBAB1 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */; };
 		1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */; };
 		1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* Double.swift */; };
 		1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */; };
@@ -216,13 +217,12 @@
 		1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F72082EB703E7000DF62A /* StatisticsTab.swift */; };
 		1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */; };
 		1D42C27F2ED9890B007A890A /* IdleTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */; };
-		1D5354632EB9C06500738441 /* Home0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D5354622EB9C06500738441 /* Home0.json */; };
 		1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
-		1D60619B2ED9E98200B32799 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D60619A2ED9E98200B32799 /* ClockHandRotationKit */; };
-		1D60619E2ED9E99E00B32799 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D60619D2ED9E99E00B32799 /* Lottie */; };
-		1D6061A12ED9E9AC00B32799 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D6061A02ED9E9AC00B32799 /* DeviceKit */; };
+		1D5FE1A62EE00E5100E14155 /* Home0.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D5FE1A52EE00E5100E14155 /* Home0.json */; };
+		1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */; };
+		1D5FE1AA2EE0102500E14155 /* HomePrimaryBankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */; };
 		1D653C302DE02C1A0016026F /* wcSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */; };
 		1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4CA2EBD9F2E00001CF5 /* HomeStatsEmptyView.swift */; };
 		1D66C4CD2EBDA02D00001CF5 /* emptyStats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4CC2EBDA02D00001CF5 /* emptyStats.json */; };
@@ -277,7 +277,6 @@
 		1DA7C3A42D6AA67C00FA6CA3 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A22D6AA67C00FA6CA3 /* DoubleExtension.swift */; };
 		1DA7C3A52D6AA67C00FA6CA3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A32D6AA67C00FA6CA3 /* ColorExtensions.swift */; };
 		1DA7C3A72D6AAF3E00FA6CA3 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA7C3A62D6AAF3E00FA6CA3 /* CircularProgressBar.swift */; };
-		1DAD52CF2E9E3AC2008D07CB /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DAD52CE2E9E3AC2008D07CB /* ClockHandRotationKit */; };
 		1DAD52D22E9E8C2D008D07CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
 		1DAD53792E9E95F3008D07CB /* GifWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53782E9E95F0008D07CB /* GifWidgetEntry.swift */; };
@@ -298,6 +297,10 @@
 		1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524942ECDDFB900E48964 /* CreateViewModel.swift */; };
 		1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524962ECDDFD800E48964 /* CreateStep.swift */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
+		1DCAA8252EDFC4BE00460337 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA8242EDFC4BE00460337 /* DeviceKit */; };
+		1DCAA8282EDFC4CD00460337 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA8272EDFC4CD00460337 /* Lottie */; };
+		1DCAA82B2EDFC4D500460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */; };
+		1DCAA82D2EDFC4DF00460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
 		1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C562D375ADE0037153C /* BackgroundView.swift */; };
 		1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C5A2D37B12A0037153C /* ManagingView.swift */; };
@@ -339,7 +342,7 @@
 		1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */; };
 		1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE736082EB64ED700573C1A /* HomeTab.swift */; };
 		1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7360A2EB654B500573C1A /* ActivityTab.swift */; };
-		1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* MoreInformationView.swift */; };
+		1DE765B92D36718C00A55D36 /* HomeMoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */; };
 		1DE7E8D92D66F0BA009F4C50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8D82D66F0BA009F4C50 /* Home.swift */; };
 		1DE7E8DB2D66F0E9009F4C50 /* ProverbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */; };
 		1DE7E8DE2D66F102009F4C50 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7E8DD2D66F102009F4C50 /* List.swift */; };
@@ -515,6 +518,7 @@
 		1D1561AD2EB33C110041C0DD /* lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lock.json; sourceTree = "<group>"; };
 		1D1561AF2EB33C1E0041C0DD /* security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = security.json; sourceTree = "<group>"; };
 		1D1695EA2D201BB10043A645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankView.swift; sourceTree = "<group>"; };
@@ -592,10 +596,12 @@
 		1D3F72082EB703E7000DF62A /* StatisticsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTab.swift; sourceTree = "<group>"; };
 		1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTouchManager.swift; sourceTree = "<group>"; };
 		1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerManager.swift; sourceTree = "<group>"; };
-		1D5354622EB9C06500738441 /* Home0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home0.json; sourceTree = "<group>"; };
 		1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsEnum.swift; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		1D5FE1A52EE00E5100E14155 /* Home0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home0.json; sourceTree = "<group>"; };
+		1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankTitleView.swift; sourceTree = "<group>"; };
+		1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankButtonView.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1D6445CA2D68312900D3BF8F /* BankletWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BankletWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		1D653C2F2DE02C190016026F /* wcSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wcSessionDelegateImpl.swift; sourceTree = "<group>"; };
@@ -796,7 +802,7 @@
 		1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsView.swift; sourceTree = "<group>"; };
 		1DE736082EB64ED700573C1A /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		1DE7360A2EB654B500573C1A /* ActivityTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTab.swift; sourceTree = "<group>"; };
-		1DE765B82D36718C00A55D36 /* MoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationView.swift; sourceTree = "<group>"; };
+		1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoreInformationView.swift; sourceTree = "<group>"; };
 		1DE7E8D82D66F0BA009F4C50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		1DE7E8DA2D66F0E9009F4C50 /* ProverbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbView.swift; sourceTree = "<group>"; };
 		1DE7E8DD2D66F102009F4C50 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -833,7 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEB96C72D5D9D6C00A68C21 /* SwiftUI.framework in Frameworks */,
-				1DAD52CF2E9E3AC2008D07CB /* ClockHandRotationKit in Frameworks */,
+				1DCAA82D2EDFC4DF00460337 /* ClockHandRotationKit in Frameworks */,
 				1DEB96C62D5D9D6C00A68C21 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -842,12 +848,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60619B2ED9E98200B32799 /* ClockHandRotationKit in Frameworks */,
+				1DCAA8282EDFC4CD00460337 /* Lottie in Frameworks */,
+				1DCAA82B2EDFC4D500460337 /* ClockHandRotationKit in Frameworks */,
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
+				1DCAA8252EDFC4BE00460337 /* DeviceKit in Frameworks */,
 				1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
-				1D60619E2ED9E99E00B32799 /* Lottie in Frameworks */,
-				1D6061A12ED9E9AC00B32799 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +863,7 @@
 		1D1561AC2EB33BEB0041C0DD /* HomeAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				1D5354622EB9C06500738441 /* Home0.json */,
+				1D5FE1A52EE00E5100E14155 /* Home0.json */,
 				1D3E13C92D49AD7A00747D20 /* Home1.json */,
 				1D3E13CD2D49AD7A00747D20 /* Home2.json */,
 				1D3E13C82D49AD7A00747D20 /* Home3.json */,
@@ -1060,6 +1066,7 @@
 		1D6E81202ECDFCBD00C88269 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */,
 				1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */,
 				1DEC906F2ED7382600DFDE90 /* SilentMode.swift */,
 				1D8C38772ECC7E6C00F7CAD5 /* ActivityTextModifier.swift */,
@@ -1284,7 +1291,10 @@
 				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
 				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
 				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
+				1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */,
+				1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
+				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
 				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
 				1D4E1E012ED0293500717238 /* TradeView */,
 			);
@@ -1357,7 +1367,6 @@
 			isa = PBXGroup;
 			children = (
 				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
-				1DE765B82D36718C00A55D36 /* MoreInformationView.swift */,
 				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
 			);
 			path = Delete;
@@ -1524,9 +1533,9 @@
 			);
 			name = piglet;
 			packageProductDependencies = (
-				1D60619A2ED9E98200B32799 /* ClockHandRotationKit */,
-				1D60619D2ED9E99E00B32799 /* Lottie */,
-				1D6061A02ED9E9AC00B32799 /* DeviceKit */,
+				1DCAA8242EDFC4BE00460337 /* DeviceKit */,
+				1DCAA8272EDFC4CD00460337 /* Lottie */,
+				1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */,
 			);
 			productName = piglet;
 			productReference = 1DE6144C2E6E708B0040FD65 /* piglet.app */;
@@ -1619,9 +1628,9 @@
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
-				1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
-				1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
 			);
 			productRefGroup = 1DF555682BF60B1000BF0DE5;
 			projectDirPath = "";
@@ -1736,6 +1745,7 @@
 				1D3E13FA2D4A160E00747D20 /* Home23.json in Resources */,
 				1D3E140E2D4A35F600747D20 /* Home33.json in Resources */,
 				1D3E140F2D4A35F600747D20 /* Home35.json in Resources */,
+				1D5FE1A62EE00E5100E14155 /* Home0.json in Resources */,
 				1D3E13DE2D49DF3D00747D20 /* Home8.json in Resources */,
 				1D3E13FD2D4A160E00747D20 /* Home25.json in Resources */,
 				1D3E13EF2D4A0C8700747D20 /* Home14.json in Resources */,
@@ -1793,7 +1803,6 @@
 				1D0386FA2EA0023600E9379F /* gif_Home26.gif in Resources */,
 				1D1561AE2EB33C110041C0DD /* lock.json in Resources */,
 				1D2A5EFC2EBF215100C1F831 /* WorkingCat.json in Resources */,
-				1D5354632EB9C06500738441 /* Home0.json in Resources */,
 				1D0386FB2EA0023600E9379F /* gif_Home47.gif in Resources */,
 				1D0386FC2EA0023600E9379F /* gif_Home19.gif in Resources */,
 				1D0386FD2EA0023600E9379F /* gif_Home38.gif in Resources */,
@@ -1907,12 +1916,14 @@
 				1D27D83C2EB5CB1300F6AFE6 /* HomeBanksListView.swift in Sources */,
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
+				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
 				1DC5248E2ECD913200E48964 /* ActivityCompleteView.swift in Sources */,
 				1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */,
-				1DE765B92D36718C00A55D36 /* MoreInformationView.swift in Sources */,
+				1DE765B92D36718C00A55D36 /* HomeMoreInformationView.swift in Sources */,
 				1DD14EE42EC06B0600325DF7 /* BackgroundImgView.swift in Sources */,
 				1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */,
+				1D5FE1AA2EE0102500E14155 /* HomePrimaryBankButtonView.swift in Sources */,
 				1DD14EDC2EC02C0F00325DF7 /* Footnote.swift in Sources */,
 				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
 				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
@@ -2004,6 +2015,7 @@
 				1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */,
 				1D8C38782ECC7E7800F7CAD5 /* ActivityTextModifier.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
+				1D1BE06F2EE064EA009BBAB1 /* CircularProgressView.swift in Sources */,
 				1D8C386A2ECC1B4600F7CAD5 /* EmergencyFund.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
 				1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */,
@@ -2559,23 +2571,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/octree/ClockHandRotationKit/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
-		1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.2;
-			};
-		};
-		1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+		1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
 			requirement = {
@@ -2583,7 +2579,15 @@
 				minimumVersion = 5.7.0;
 			};
 		};
-		1DAD52CD2E9E3AC2008D07CB /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
+		1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+		1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/octree/ClockHandRotationKit/";
 			requirement = {
@@ -2594,24 +2598,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1D60619A2ED9E98200B32799 /* ClockHandRotationKit */ = {
+		1DCAA8242EDFC4BE00460337 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1D6061992ED9E98200B32799 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
-			productName = ClockHandRotationKit;
-		};
-		1D60619D2ED9E99E00B32799 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1D60619C2ED9E99E00B32799 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-		1D6061A02ED9E9AC00B32799 /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1D60619F2ED9E9AC00B32799 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			package = 1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */;
 			productName = DeviceKit;
 		};
-		1DAD52CE2E9E3AC2008D07CB /* ClockHandRotationKit */ = {
+		1DCAA8272EDFC4CD00460337 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1DAD52CD2E9E3AC2008D07CB /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
+			package = 1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
+			productName = ClockHandRotationKit;
+		};
+		1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
 			productName = ClockHandRotationKit;
 		};
 /* End XCSwiftPackageProductDependency section */

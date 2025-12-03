@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct HomePrimaryBankView: View {
+    @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
-    @State private var showDeleteAlert = false
     var primaryBank: PiggyBank
     var progress: Double {
         primaryBank.progress
     }
-    let buttonHeight = 50.0
     
     var body: some View {
         // 主存钱罐信息
         VStack(spacing: 10) {
+            // 1、主存钱罐当前金额、金额、图标、名称
+            HomePrimaryBankTitleView(primaryBank: primaryBank)
+            Spacer().frame(height:10)
+            // 2、Lottie 动画
+            LottieView(filename: "Home2", isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
+                .id(appStorage.LoopAnimation)
+                .scaledToFit()
+                .frame(maxWidth: 160)
+                .onTapGesture {
+                    appStorage.isLoopAnimation.toggle()
+                }
+            // 3、主存钱罐信息、存入、取出、删除视图
+            HomePrimaryBankButtonView(primaryBank: primaryBank)
+                .padding(.top,20)
+                .padding(.vertical,20)
             // 1、主存钱罐图标、名称、截止日期和进度
             HStack {
                 // 存钱罐图标
@@ -81,111 +95,16 @@ struct HomePrimaryBankView: View {
                 GridProgressView(rows: 5, columns: 7,progress: progress,filledColor: .blue)
             }
             Spacer().frame(height: 5)
-            // 4、信息、存入、取出、删除按钮
-            GeometryReader { geo in
-                let width = geo.size.width
-                let spacerSpacing = 5.0
-                
-                HStack(spacing: 0) {
-                    // 1) 信息按钮
-                    Button(action: {
-                        print("width:\(width)")
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                    }, label: {
-                        VStack(spacing: spacerSpacing) {
-                            Image(systemName:"info")
-                            Text("Info")
-                        }
-                        .font(.caption2)
-                        .foregroundColor(Color(hex: "376EE2"))
-                    })
-                    .frame(width: width * 0.23, height: buttonHeight)
-                    .contentShape(Rectangle())
-                    .background(Color(hex: "F1F6FE"))
-                    .cornerRadius(5)
-                    
-                    Spacer()
-                    
-                    // 2) 存入按钮
-                    Button(action: {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                        homeVM.tardeModel = .deposit
-                        homeVM.piggyBank = primaryBank
-                        withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView.toggle() }
-                    }, label: {
-                        VStack(spacing: spacerSpacing) {
-                            Image(systemName:"square.and.arrow.down")
-                            Text("Deposit")
-                        }
-                        .font(.caption2)
-                        .foregroundColor(Color(hex: "4CA154"))
-                    })
-                    .frame(width: width * 0.23, height: buttonHeight)
-                    .contentShape(Rectangle())
-                    .background(Color(hex: "F3FDF5"))
-                    .cornerRadius(5)
-                    
-                    Spacer()
-                    
-                    // 3) 取出按钮
-                    Button(action: {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                        homeVM.tardeModel = .withdraw
-                        homeVM.piggyBank = primaryBank
-                        withAnimation(.easeInOut(duration: 1)) { homeVM.isTradeView.toggle() }
-                    }, label: {
-                        VStack(spacing: spacerSpacing) {
-                            Image(systemName:"square.and.arrow.up")
-                            Text("Withdraw")
-                        }
-                        .font(.caption2)
-                        .foregroundColor(Color(hex: "D9622B"))
-                    })
-                    .frame(width: width * 0.23, height: buttonHeight)
-                    .contentShape(Rectangle())
-                    .background(Color(hex: "FEF7EE"))
-                    .cornerRadius(5)
-                    
-                    Spacer()
-                    
-                    // 4) 删除按钮
-                    Button(action: {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                        // 显示删除存钱罐警告框
-                        showDeleteAlert.toggle()
-                    }, label: {
-                        VStack(spacing: spacerSpacing) {
-                            Image(systemName:"trash")
-                            Text("Delete")
-                        }
-                        .font(.caption2)
-                        .foregroundColor(Color(hex: "CA3A32"))
-                    })
-                    .frame(width: width * 0.23, height: buttonHeight)
-                    .contentShape(Rectangle())
-                    .background(Color(hex: "FCF3F2"))
-                    .cornerRadius(5)
-                    .alert("Delete",isPresented: $showDeleteAlert) {
-                        Button("Delete", role: .destructive) {
-                            homeVM.deletePiggyBank(for: primaryBank)
-                        }
-                    } message: {
-                        Text("Are you sure you want to delete this piggy bank?")
-                    }
-                }
-            }
-            .frame(height:buttonHeight)
-            
         }
-        .padding(.vertical,16)
-        .padding(.horizontal,16)
-        .background(.white)
-        .cornerRadius(10)
-        .padding(.vertical,5)
-        .padding(.horizontal,16)
+        .padding(20)
     }
+}
+
+#Preview {
+    Home()
+        .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
 }

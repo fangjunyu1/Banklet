@@ -37,10 +37,14 @@ struct ActivityMusicView: View {
             Image(systemName: "music.note")
                 .overlay {
                     if !appStorage.isActivityMusic {
-                        Image(systemName: "xmark")
+                        Image(systemName: "line.diagonal")
                     }
                 }
                 .foregroundColor(Color.black)
         })
     }
+}
+
+#Preview {
+    HomeActivityView()
 }

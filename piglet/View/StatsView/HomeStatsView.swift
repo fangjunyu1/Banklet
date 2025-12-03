@@ -81,8 +81,11 @@ struct HomeStatsView: View {
                         NavigationLink(destination: AccessTimesView(), label: {
                             VStack(alignment: .leading,spacing: 10) {
                                 HStack(spacing: 10) {
-                                    Image(systemName: "square.and.arrow.down.on.square.fill")
-                                        .imageScale(.small)
+                                    Image("clock1")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 16)
                                         .foregroundColor(.gray)
                                     Text("\(savingsRecords.count)")
                                         .font(.footnote)
