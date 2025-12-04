@@ -85,11 +85,6 @@ struct AnimationView: View {
         withAnimation {
             appStorage.LoopAnimation = "Home\(index)"
         }
-        // 评分弹窗
-        if !appStorage.isRatingWindow {
-            SKStoreReviewController.requestReview()
-            appStorage.isRatingWindow = true
-        }
         
         print("LoopAnimation:\(appStorage.LoopAnimation)")
     }

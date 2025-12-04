@@ -22,7 +22,7 @@ struct HomePrimaryBankView: View {
             HomePrimaryBankTitleView(primaryBank: primaryBank)
             Spacer().frame(height:10)
             // 2、Lottie 动画
-            LottieView(filename: "Home2", isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
+            LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
                 .id(appStorage.LoopAnimation)
                 .scaledToFit()
                 .frame(maxWidth: 160)

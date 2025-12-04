@@ -10,6 +10,9 @@ import SwiftUI
 struct CircularProgressView: View {
     var primary: PiggyBank
     var size: Double
+    var isEdit: Bool
+    @Binding var draft: PiggyBankDraft
+    @Binding var showIcons: Bool
     var progress: Double {
         primary.progress
     }
@@ -31,8 +34,14 @@ struct CircularProgressView: View {
             .frame(width: size, height: size)
             .scaleEffect(0.9)
             // 图标
-            Image(systemName: primary.icon)
-                .font(.largeTitle)
+            Button(action:{
+                if isEdit { withAnimation { showIcons.toggle() } }
+            }, label: {
+                Image(systemName: draft.icon)
+                    .font(.largeTitle)
+                    .foregroundColor(isEdit ? Color.primary : Color.gray)
+            })
+            .disabled(!isEdit)
         }
     }
 }

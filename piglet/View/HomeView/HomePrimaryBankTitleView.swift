@@ -9,6 +9,7 @@ import SwiftUI
 
 // 顶部标题
 struct HomePrimaryBankTitleView: View {
+    @State private var hideAmount = false
     var primaryBank: PiggyBank
     
     var body: some View {
@@ -19,10 +20,22 @@ struct HomePrimaryBankTitleView: View {
                 .foregroundColor(AppColor.gray)
             // 存钱金额
             HStack {
-                Text("\(primaryBank.amountText)")
-                    .font(.largeTitle)
-                    .imageScale(.large)
-                    .fontWeight(.bold)
+                Button(action: {
+                    hideAmount.toggle()
+                }, label: {
+                    if !hideAmount {
+                        Text("\(primaryBank.amountText)")
+                            .font(.largeTitle)
+                            .imageScale(.large)
+                            .fontWeight(.bold)
+                    } else {
+                        Text(currencySymbol + " " + "****")
+                            .font(.largeTitle)
+                            .imageScale(.large)
+                            .fontWeight(.bold)
+                    }
+                })
+                    
             }
             // 图标和名称
             HStack(spacing:10) {

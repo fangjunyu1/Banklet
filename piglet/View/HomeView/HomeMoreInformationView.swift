@@ -8,27 +8,39 @@
 import SwiftUI
 import SwiftData
 
+
 struct HomeMoreInformationView: View {
     @EnvironmentObject var idleManager: IdleTimerManager
+    @Environment(\.modelContext) var context
     @Environment(\.dismiss) var dismiss
+    @State private var isEdit = false
+    @State private var draft:PiggyBankDraft
+    @State private var showIcons = false
+    
+    init(primary: PiggyBank) {
+        self.primary = primary
+        _draft = State(initialValue: PiggyBankDraft(from: primary))
+    }
     var primary: PiggyBank
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
-                CircularProgressView(primary: primary, size: 100)
+                CircularProgressView(primary: primary, size: 100,isEdit: isEdit, draft: $draft,showIcons: $showIcons)
+                // 存钱罐图标列表
+                HomeMoreInformationIconList(showIcons: showIcons,draft: $draft)
                 // 存钱罐信息列表 1
                 VStack(alignment: .leading) {
                     Footnote(text: "Piggy Bank Information")
                     // 存钱罐信息列表
-                    HomeMoreInformationList1(primary: primary)
+                    HomeMoreInformationList1(primary:primary,draft: $draft,isEdit:isEdit)
                 }
                 // 存钱罐信息列表 2
                 if (primary.records != nil) {
                     VStack(alignment: .leading) {
                         Footnote(text: "Access times")
                         // 存钱罐信息列表
-                        HomeMoreInformationList2(primary: primary)
+                        HomeMoreInformationList2(primary: primary, draft: $draft,isEdit:isEdit)
                     }
                 }
             }
@@ -45,6 +57,21 @@ struct HomeMoreInformationView: View {
                     Text("Completed")
                 })
                 .tint(.black)
+            }
+            // 编辑视图
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    if isEdit {
+                        draft.apply(to: primary, context: context)
+                    }
+                    withAnimation {
+                        isEdit.toggle()
+                        showIcons = false
+                    }
+                }, label: {
+                    Text(isEdit ? "Finished Editing" : "Edit")
+                        .foregroundColor(isEdit ? Color.blue : Color.primary)
+                })
             }
         }
         .padding(.horizontal, 20)
@@ -70,31 +97,33 @@ struct HomeMoreInformationView: View {
 
 private struct HomeMoreInformationList1: View {
     var primary: PiggyBank
+    @Binding var draft: PiggyBankDraft
+    var isEdit: Bool
     var body: some View {
         VStack {
             // 名称
-            HomeMoreInformationList(name: "Name",number: .string(primary.name))
+            HomeMoreInformationList(name: "Name",number: .string($draft.name),isEdit:isEdit)
             Divider()
             // 当前金额
-            HomeMoreInformationList(name: "Current amount",number: .string(primary.amountText))
+            HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount),isEdit:isEdit)
             Divider()
             // 目标金额
-            HomeMoreInformationList(name: "Target amount",number: .string(primary.targetAmountText))
+            HomeMoreInformationList(name: "Target amount",number: .amount($draft.targetAmount),isEdit:isEdit)
             Divider()
             // 存取进度
-            HomeMoreInformationList(name: "Access progress",number: .string(primary.progressText))
+            HomeMoreInformationList(name: "Access progress",number: .progress(draft.progressText),isEdit:isEdit)
             Divider()
             // 创建日期
-            HomeMoreInformationList(name: "Creation Date",number: .date(primary.creationDate))
+            HomeMoreInformationList(name: "Creation Date",number: .date(draft.creationDate),isEdit:isEdit)
             // 完成日期
             if primary.progress >= 1 {
                 Divider()
-                HomeMoreInformationList(name: "Completion date",number: .date(primary.completionDate))
+                HomeMoreInformationList(name: "Completion date",number: .date(draft.completionDate),isEdit:isEdit)
             }
             // 截止日期
             if primary.isExpirationDateEnabled {
                 Divider()
-                HomeMoreInformationList(name: "Expiration date",number: .date(primary.expirationDate))
+                HomeMoreInformationList(name: "Expiration date",number: .date(draft.expirationDate),isEdit:isEdit)
             }
         }
         .padding(.vertical,5)
@@ -106,6 +135,8 @@ private struct HomeMoreInformationList1: View {
 
 private struct HomeMoreInformationList2: View {
     var primary: PiggyBank
+    @Binding var draft: PiggyBankDraft
+    var isEdit: Bool
     var lastDate: Date {
         primary.records?
             .sorted(by: {$0.date < $1.date})
@@ -115,10 +146,10 @@ private struct HomeMoreInformationList2: View {
     var body: some View {
         VStack {
             // 存取次数
-            HomeMoreInformationList(name: "Access times",number: .amount(Double(primary.records?.count ?? 0)))
+            HomeMoreInformationList(name: "Access times",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
             Divider()
             // 最近一次存取日期
-            HomeMoreInformationList(name: "Latest access date",number: .date(primary.records?.last?.date ?? Date()))
+            HomeMoreInformationList(name: "Latest access date",number: .date(primary.records?.last?.date ?? Date()), isEdit: isEdit)
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
@@ -129,26 +160,68 @@ private struct HomeMoreInformationList2: View {
 private struct HomeMoreInformationList: View {
     var name: String
     var number: MoreInfomationEnum
+    var isEdit: Bool
     var body: some View {
         HStack {
             Text(LocalizedStringKey(name))
             Spacer()
             switch number {
-            case .string(let string):
-                Text(LocalizedStringKey(string))
-            case .amount(let amount):
-                Text("\(amount.formatted())")
-            case .progress(let double):
-                Text("\(double.formatted())")
+            case .string(let binding):
+                TextField("",text: binding)
+                    .frame(alignment: .trailing)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.trailing)
+                    .disabled(!isEdit)
+                    .foregroundColor(isEdit ? Color.primary : Color.gray)
+            case .amount(let binding):
+                TextField("",value: binding,format: .number)
+                    .multilineTextAlignment(.trailing)
+                    .disabled(!isEdit)
+                    .foregroundColor(isEdit ? Color.primary : Color.gray)
+            case .progress(let string):
+                Text(string)
+                    .foregroundColor(Color.gray)
             case .date(let date):
                 Text(date.formatted(date: .long,time: .omitted))
+                    .foregroundColor(Color.gray)
+            case .record(let double):
+                Text("\(double.formatted())")
+                    .foregroundColor(Color.gray)
             }
         }
         .padding(.vertical,8)
         .padding(.horizontal,10)
     }
 }
-
+struct HomeMoreInformationIconList: View {
+    let columns = Array(repeating: GridItem(.fixed(30)), count: 3)
+    var showIcons: Bool
+    @Binding var draft: PiggyBankDraft
+    var body: some View {
+        if showIcons {
+            VStack(alignment: .leading) {
+                Footnote(text: "All icons")
+                ScrollView(.horizontal,showsIndicators: false) {
+                    LazyHGrid(rows: columns) {
+                        ForEach(IconList.list, id: \.self) { item in
+                            Button(action: {
+                                draft.icon = item
+                            }, label: {
+                                Image(systemName: item)
+                                    .foregroundColor(AppColor.gray)
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                            })
+                        }
+                    }
+                    .padding(10)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                }
+            }
+        }
+    }
+}
 struct PreviewMoreInformationView: View {
     @Query var allPiggyBank: [PiggyBank]
     @State private var isSheet = true
@@ -171,10 +244,11 @@ struct PreviewMoreInformationView: View {
 }
 
 private enum MoreInfomationEnum {
-    case string(String)
-    case amount(Double)
-    case progress(Double)
+    case string(Binding<String>)
+    case amount(Binding<Double>)
+    case progress(String)
     case date(Date)
+    case record(Double)
 }
 
 #Preview {

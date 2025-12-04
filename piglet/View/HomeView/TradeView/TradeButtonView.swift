@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct TradeButtonView:View {
     @EnvironmentObject var appStorage: AppStorageManager
@@ -27,6 +28,13 @@ struct TradeButtonView:View {
                     tradeVM.tradeAmount(piggyBank: homeVM.piggyBank, tardeModel: homeVM.tardeModel)
                 case .finish:
                     withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
+                    // 评分弹窗
+                    if !appStorage.isRatingWindow {
+                        SKStoreReviewController.requestReview()
+                        appStorage.isRatingWindow = true
+                    } else {
+                        print("已经弹出过评分弹窗，不再设置")
+                    }
                 case .loading:
                     break
                 }
@@ -64,4 +72,6 @@ struct TradeButtonView:View {
 #Preview {
     PreviewTradeView()
         .environmentObject(AppStorageManager.shared)
+        .environmentObject(HomeViewModel())
+        .environmentObject(IdleTimerManager.shared)
 }

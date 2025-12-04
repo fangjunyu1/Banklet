@@ -122,6 +122,7 @@
 		1D06A3E62DFFE95600F145F6 /* TransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */; };
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
+		1D1124562EE1115500E87CCC /* PiggyBankDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
 		1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13B5692EC5B13000044135 /* AppStorage.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
@@ -501,6 +502,7 @@
 		1D0FA7032D225A9C00ABF5F6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7042D225A9D00ABF5F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankDraft.swift; sourceTree = "<group>"; };
 		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		1D13B5692EC5B13000044135 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
@@ -1338,6 +1340,7 @@
 		1DCBEDBF2C02B702005BFFFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */,
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1DD089602EC1CD7C002EE03D /* HapticManager.swift */,
@@ -2020,6 +2023,7 @@
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
 				1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
+				1D1124562EE1115500E87CCC /* PiggyBankDraft.swift in Sources */,
 				1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */,
 				1DE736012EB64D2A00573C1A /* HomeMainView.swift in Sources */,
 				1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */,
