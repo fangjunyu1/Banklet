@@ -129,6 +129,11 @@ class TradeViewModel:ObservableObject {
         // 创建存钱记录
         let recprd = SavingsRecord(amount: amount ?? 0, date: Date(), saveMoney: saveMoney, note: remark.isEmpty ? nil : remark, piggyBank: piggyBank)
             context.insert(recprd) // 将对象插入到上下文中
+        
+        // 如果存入金额大于目标金额，标记完成时间
+        if let piggyBank = piggyBank,piggyBank.amount > piggyBank.targetAmount {
+            piggyBank.completionDate = Date()
+        }
         do {
             try context.save() // 提交上下文中的所有更改
         } catch {
