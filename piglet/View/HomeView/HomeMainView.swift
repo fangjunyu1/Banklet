@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeMainView: View {
     @State private var searchText = ""  // 搜索框
     @State private var showCreateView = false
+    @State private var showMoreInformation = false
     var allPiggyBank: [PiggyBank]
     var primaryBank: PiggyBank?
     var appStorage = AppStorageManager.shared
@@ -20,8 +21,32 @@ struct HomeMainView: View {
             if !allPiggyBank.isEmpty {
                 // 如果有主存钱罐
                 if let primaryBank = primaryBank {
-                    // 主存钱罐视图
-                    HomePrimaryBankView(primaryBank: primaryBank)
+                    // 主存钱罐信息
+                    VStack(spacing: 10) {
+                        // 1、主存钱罐当前金额、金额、图标、名称
+                        HomePrimaryBankTitleView(primaryBank: primaryBank,showMoreInformation: $showMoreInformation)
+                        Spacer().frame(height:10)
+                        // 2、Lottie 动画
+                        LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
+                            .id(appStorage.LoopAnimation)
+                            .scaledToFit()
+                            .frame(maxWidth: 160)
+                            .onTapGesture {
+                                appStorage.isLoopAnimation.toggle()
+                            }
+                        // 3、主存钱罐信息、存入、取出、删除视图
+                        HomePrimaryBankButtonView(primaryBank: primaryBank, showMoreInformation: $showMoreInformation)
+                            .padding(.top,20)
+                            .padding(.vertical,20)
+                        // 3、高级功能、创建存钱罐、存取进度
+                        HomePrimaryBankAdvancedFeatures(primaryBank: primaryBank,showCreateView: $showCreateView)
+                    }
+                    .padding(20)
+                    .sheet(isPresented: $showMoreInformation) {
+                        NavigationStack {
+                            HomeMoreInformationView(primary: primaryBank)
+                        }
+                    }
                 }
                 // 如果有存钱罐列表
                 HomeBanksListView(allPiggyBank: allPiggyBank)

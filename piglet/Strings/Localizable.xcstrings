@@ -1858,6 +1858,18 @@
         }
       }
     },
+    "Advanced features" : {
+      "comment" : "高级功能",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级功能"
+          }
+        }
+      }
+    },
     "AED" : {
       "comment" : "1.0.6:迪拉姆",
       "extractionState" : "manual",

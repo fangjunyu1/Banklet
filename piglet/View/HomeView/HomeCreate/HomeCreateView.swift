@@ -48,6 +48,11 @@ struct HomeCreateView: View {
                 }
             }
         }
+        .onDisappear {
+            print("退出视图时，重置信息状态")
+            piggyBank = PiggyBankData()
+            step.tab = .name
+        }
     }
 }
 

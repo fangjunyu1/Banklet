@@ -123,6 +123,7 @@
 		1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D91202D472E7E00F287DA /* AppIconView.swift */; };
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D1124562EE1115500E87CCC /* PiggyBankDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */; };
+		1D11245A2EE14DBD00E87CCC /* HomePrimaryBankAdvancedFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
 		1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13B5692EC5B13000044135 /* AppStorage.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
@@ -143,7 +144,6 @@
 		1D1BE06F2EE064EA009BBAB1 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */; };
 		1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */; };
 		1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* Double.swift */; };
-		1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */; };
 		1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */; };
 		1D27D83C2EB5CB1300F6AFE6 /* HomeBanksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */; };
 		1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */; };
@@ -233,6 +233,7 @@
 		1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* Mail.swift */; };
 		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
 		1D66C4D92EBE2F0600001CF5 /* Sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4D82EBE2F0600001CF5 /* Sun.json */; };
+		1D680CCA2EE1B6720083C05F /* SilentHouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D680CC92EE1B6720083C05F /* SilentHouse.json */; };
 		1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */; };
 		1D69821C2ECEF48F0040CD37 /* HomeCreateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */; };
 		1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */; };
@@ -503,6 +504,7 @@
 		1D0FA7042D225A9D00ABF5F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankDraft.swift; sourceTree = "<group>"; };
+		1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankAdvancedFeatures.swift; sourceTree = "<group>"; };
 		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		1D13B5692EC5B13000044135 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
@@ -523,7 +525,6 @@
 		1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankView.swift; sourceTree = "<group>"; };
 		1D27D8392EB5B45200F6AFE6 /* GridProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridProgressView.swift; sourceTree = "<group>"; };
 		1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBanksListView.swift; sourceTree = "<group>"; };
 		1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
@@ -615,6 +616,7 @@
 		1D66C4D42EBDD75B00001CF5 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		1D66C4D82EBE2F0600001CF5 /* Sun.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sun.json; sourceTree = "<group>"; };
+		1D680CC92EE1B6720083C05F /* SilentHouse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SilentHouse.json; sourceTree = "<group>"; };
 		1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateComponents.swift; sourceTree = "<group>"; };
 		1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateTitleView.swift; sourceTree = "<group>"; };
 		1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateInputView.swift; sourceTree = "<group>"; };
@@ -1148,6 +1150,7 @@
 		1D88545C2D244EC4009DE7AE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				1D680CC92EE1B6720083C05F /* SilentHouse.json */,
 				1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */,
 				1DDEC56A2ED1539300B940E2 /* check.json */,
 				1D14349E2EC9530000FA6CBB /* check1.json */,
@@ -1292,11 +1295,11 @@
 				1DBCF4162EB8D9DD00B85BF4 /* HomeEmptyView.swift */,
 				1DE45C692EB355BA0079F76E /* HomeTabView.swift */,
 				1DE45C672EB355A00079F76E /* SingleTabView.swift */,
-				1D27D8372EB5B2FF00F6AFE6 /* HomePrimaryBankView.swift */,
 				1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */,
 				1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
 				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
+				1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */,
 				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
 				1D4E1E012ED0293500717238 /* TradeView */,
 			);
@@ -1860,6 +1863,7 @@
 				1D3E14102D4A35F600747D20 /* Home37.json in Resources */,
 				1D3E14312D4A5D7000747D20 /* Home53.json in Resources */,
 				1D3E14132D4A35F600747D20 /* Home30.json in Resources */,
+				1D680CCA2EE1B6720083C05F /* SilentHouse.json in Resources */,
 				1D3E13F22D4A0C8700747D20 /* Home19.json in Resources */,
 				1D3E13F02D4A0C8700747D20 /* Home21.json in Resources */,
 			);
@@ -1928,7 +1932,6 @@
 				1DBCF4152EB8657A00B85BF4 /* BanksRow.swift in Sources */,
 				1D5FE1AA2EE0102500E14155 /* HomePrimaryBankButtonView.swift in Sources */,
 				1DD14EDC2EC02C0F00325DF7 /* Footnote.swift in Sources */,
-				1D27D8382EB5B30400F6AFE6 /* HomePrimaryBankView.swift in Sources */,
 				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
 				1D8C38702ECC1D1600F7CAD5 /* ActivityContentTitle.swift in Sources */,
 				1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */,
@@ -2002,6 +2005,7 @@
 				1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */,
 				1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */,
 				1DD14EDE2EC0311700325DF7 /* LockApp.swift in Sources */,
+				1D11245A2EE14DBD00E87CCC /* HomePrimaryBankAdvancedFeatures.swift in Sources */,
 				1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */,
 				1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */,
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
@@ -2470,8 +2474,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2511,8 +2514,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
