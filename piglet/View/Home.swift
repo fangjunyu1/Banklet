@@ -38,6 +38,7 @@ struct Home: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var idleManager = IdleTimerManager.shared
+    @FocusState var focus: Field?
     
     var body: some View {
         ZStack {
@@ -93,7 +94,10 @@ struct Home: View {
             if homeVM.isTradeView {
                 Color.white
                     .opacity(0.1)
-                TradeView()
+                    .onTapGesture {
+                        focus = nil
+                    }
+                TradeView(focus: $focus)
                     .transition(.move(edge: .bottom))   // 从底部滑上来
                     .animation(.spring(response: 0.4, dampingFraction: 0.8), value: homeVM.isTradeView)
                     .zIndex(1)

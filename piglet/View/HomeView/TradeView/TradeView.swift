@@ -14,7 +14,7 @@ struct TradeView: View {
     @EnvironmentObject var homeVM: HomeViewModel
     // 打开存钱/取钱视图时，创建对象并管理金额和备注
     @State private var tradeVM = TradeViewModel()
-    @FocusState var focus: Field?
+    @FocusState.Binding var focus: Field?
     var body: some View {
         // 视图
         VStack(spacing: 40) {
@@ -36,8 +36,6 @@ struct TradeView: View {
         .environmentObject(tradeVM)
         .onAppear {
             focus = .amount
-        }
-        .onAppear {
             // 显示时，设置标志位为 true
             print("显示交易视图，关闭计时器")
             idleManager.isShowingIdleView = true

@@ -11,6 +11,7 @@ import SwiftUI
 struct HomePrimaryBankTitleView: View {
     @State private var hideAmount = false
     var primaryBank: PiggyBank
+    @Binding var showMoreInformation: Bool
     
     var body: some View {
         VStack(spacing: 20) {
@@ -49,6 +50,9 @@ struct HomePrimaryBankTitleView: View {
             .padding(.horizontal,10)
             .background(AppColor.appColor.opacity(0.1))
             .cornerRadius(5)
+            .onTapGesture {
+                showMoreInformation.toggle()
+            }
         }
     }
 }

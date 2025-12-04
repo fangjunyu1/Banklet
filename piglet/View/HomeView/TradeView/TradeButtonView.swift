@@ -55,11 +55,14 @@ struct TradeButtonView:View {
             Button(action: {
                 // 振动
                 HapticManager.shared.selectionChanged()
+                
+                UIView.animate(withDuration: 0.3) {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                }
+                
+                withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
                 // 取消任务
                 tradeVM.cancelTask()
-                // 取消输入框焦点
-                focus = nil
-                withAnimation(.easeInOut(duration: 0.3)) { homeVM.isTradeView = false }
             }, label: {
                 Text("Closure")
                     .foregroundColor(AppColor.appGrayColor)

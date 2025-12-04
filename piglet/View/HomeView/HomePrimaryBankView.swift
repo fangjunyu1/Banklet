@@ -10,6 +10,7 @@ import SwiftUI
 struct HomePrimaryBankView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
+    @State private var showMoreInformation = false
     var primaryBank: PiggyBank
     var progress: Double {
         primaryBank.progress
@@ -19,7 +20,7 @@ struct HomePrimaryBankView: View {
         // 主存钱罐信息
         VStack(spacing: 10) {
             // 1、主存钱罐当前金额、金额、图标、名称
-            HomePrimaryBankTitleView(primaryBank: primaryBank)
+            HomePrimaryBankTitleView(primaryBank: primaryBank,showMoreInformation: $showMoreInformation)
             Spacer().frame(height:10)
             // 2、Lottie 动画
             LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
@@ -30,7 +31,7 @@ struct HomePrimaryBankView: View {
                     appStorage.isLoopAnimation.toggle()
                 }
             // 3、主存钱罐信息、存入、取出、删除视图
-            HomePrimaryBankButtonView(primaryBank: primaryBank)
+            HomePrimaryBankButtonView(primaryBank: primaryBank, showMoreInformation: $showMoreInformation)
                 .padding(.top,20)
                 .padding(.vertical,20)
             // 1、主存钱罐图标、名称、截止日期和进度
@@ -97,6 +98,11 @@ struct HomePrimaryBankView: View {
             Spacer().frame(height: 5)
         }
         .padding(20)
+        .sheet(isPresented: $showMoreInformation) {
+            NavigationStack {
+                HomeMoreInformationView(primary: primaryBank)
+            }
+        }
     }
 }
 

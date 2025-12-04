@@ -10,10 +10,10 @@ import SwiftUI
 struct HomePrimaryBankButtonView: View {
     @EnvironmentObject var homeVM: HomeViewModel
     @State private var showDeleteAlert = false
-    @State private var showMoreInformation = false
     var primaryBank: PiggyBank
+    @Binding var showMoreInformation: Bool
     let buttonBackground: Color = .white
-    let buttonHeight = 50.0
+    let buttonHeight = 60.0
     var body: some View {
         GeometryReader { geo in
             let width = geo.size.width
@@ -24,11 +24,6 @@ struct HomePrimaryBankButtonView: View {
                     // 振动
                     HapticManager.shared.selectionChanged()
                     showMoreInformation.toggle()
-                }
-                .sheet(isPresented: $showMoreInformation) {
-                    NavigationStack {
-                        HomeMoreInformationView(primary: primaryBank)
-                    }
                 }
                 
                 Spacer()
@@ -90,18 +85,19 @@ private struct HomePrimaryBankSingleButtonView: View {
         }, label: {
             VStack(spacing: spacerSpacing) {
                 Image(systemName: image)
-                    .imageScale(.small)
                     .frame(height:10)
+                    .scaleEffect(0.9)
                 Text(LocalizedStringKey(name))
                     .font(.caption2)
             }
+            .padding(.vertical,5)
             .foregroundColor(AppColor.appColor)
+            .contentShape(Rectangle())
+            .frame(width: width,height: height)
+            .background(.ultraThickMaterial)
+            .cornerRadius(10)
+            .opacity(0.95)
         })
-        .frame(width: width,height: height)
-        .padding(.vertical,5)
-        .contentShape(Rectangle())
-        .background(.ultraThickMaterial)
-        .cornerRadius(10)
     }
 }
 

@@ -112,6 +112,9 @@ private struct HomeMoreInformationList1: View {
             // 当前金额
             HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount,$isFocused),isEdit:isEdit)
             Divider()
+            // 初始金额
+            HomeMoreInformationList(name: "Initial amount",number: .amount($draft.initialAmount,$isFocused),isEdit:isEdit)
+            Divider()
             // 目标金额
             HomeMoreInformationList(name: "Target amount",number: .amount($draft.targetAmount,$isFocused),isEdit:isEdit)
             Divider()

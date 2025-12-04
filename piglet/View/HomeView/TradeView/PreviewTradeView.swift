@@ -53,7 +53,7 @@ struct PreviewTradeView: View {
                                 focus = nil   // 点击背景，关闭输入框
                             }
                     
-                    TradeView()
+                    TradeView(focus: $focus)
                         .transition(.move(edge: .bottom))   // 从底部滑上来
                         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: hvm.isTradeView)
                         .zIndex(1)
