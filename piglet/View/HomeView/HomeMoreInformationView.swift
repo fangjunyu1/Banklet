@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftData
 
-
 struct HomeMoreInformationView: View {
     @EnvironmentObject var idleManager: IdleTimerManager
     @Environment(\.modelContext) var context
@@ -16,6 +15,7 @@ struct HomeMoreInformationView: View {
     @State private var isEdit = false
     @State private var draft:PiggyBankDraft
     @State private var showIcons = false
+    @FocusState var isFocused: Bool
     
     init(primary: PiggyBank) {
         self.primary = primary
@@ -33,7 +33,7 @@ struct HomeMoreInformationView: View {
                 VStack(alignment: .leading) {
                     Footnote(text: "Piggy Bank Information")
                     // 存钱罐信息列表
-                    HomeMoreInformationList1(primary:primary,draft: $draft,isEdit:isEdit)
+                    HomeMoreInformationList1(primary:primary,draft: $draft,isEdit:isEdit,isFocused: $isFocused)
                 }
                 // 存钱罐信息列表 2
                 if (primary.records != nil) {
@@ -44,6 +44,10 @@ struct HomeMoreInformationView: View {
                     }
                 }
             }
+        }
+        .onTapGesture {
+            print("点击了背景")
+            isFocused = false
         }
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
@@ -99,16 +103,17 @@ private struct HomeMoreInformationList1: View {
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
+    @FocusState.Binding var isFocused: Bool
     var body: some View {
         VStack {
             // 名称
-            HomeMoreInformationList(name: "Name",number: .string($draft.name),isEdit:isEdit)
+            HomeMoreInformationList(name: "Name",number: .string($draft.name,$isFocused),isEdit:isEdit)
             Divider()
             // 当前金额
-            HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount),isEdit:isEdit)
+            HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount,$isFocused),isEdit:isEdit)
             Divider()
             // 目标金额
-            HomeMoreInformationList(name: "Target amount",number: .amount($draft.targetAmount),isEdit:isEdit)
+            HomeMoreInformationList(name: "Target amount",number: .amount($draft.targetAmount,$isFocused),isEdit:isEdit)
             Divider()
             // 存取进度
             HomeMoreInformationList(name: "Access progress",number: .progress(draft.progressText),isEdit:isEdit)
@@ -134,6 +139,7 @@ private struct HomeMoreInformationList1: View {
 }
 
 private struct HomeMoreInformationList2: View {
+    @Query var records: [SavingsRecord]
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
@@ -143,13 +149,18 @@ private struct HomeMoreInformationList2: View {
             .last?
             .date ?? Date()
     }
+    var lastRecord: SavingsRecord? {
+        records.first(where: {$0.piggyBank == primary})
+    }
     var body: some View {
         VStack {
             // 存取次数
             HomeMoreInformationList(name: "Access times",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
             Divider()
             // 最近一次存取日期
-            HomeMoreInformationList(name: "Latest access date",number: .date(primary.records?.last?.date ?? Date()), isEdit: isEdit)
+            if let lastRecord = lastRecord {
+                HomeMoreInformationList(name: "Latest access date",number: .date(lastRecord.date), isEdit: isEdit)
+            }
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
@@ -166,18 +177,21 @@ private struct HomeMoreInformationList: View {
             Text(LocalizedStringKey(name))
             Spacer()
             switch number {
-            case .string(let binding):
+            case .string(let binding,let focus):
                 TextField("",text: binding)
                     .frame(alignment: .trailing)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.trailing)
                     .disabled(!isEdit)
+                    .focused(focus)
                     .foregroundColor(isEdit ? Color.primary : Color.gray)
-            case .amount(let binding):
+            case .amount(let binding,let focus):
                 TextField("",value: binding,format: .number)
                     .multilineTextAlignment(.trailing)
                     .disabled(!isEdit)
+                    .focused(focus)
                     .foregroundColor(isEdit ? Color.primary : Color.gray)
+                    .keyboardType(.decimalPad)
             case .progress(let string):
                 Text(string)
                     .foregroundColor(Color.gray)
@@ -189,7 +203,7 @@ private struct HomeMoreInformationList: View {
                     .foregroundColor(Color.gray)
             }
         }
-        .padding(.vertical,8)
+        .padding(.vertical,5)
         .padding(.horizontal,10)
     }
 }
@@ -244,8 +258,8 @@ struct PreviewMoreInformationView: View {
 }
 
 private enum MoreInfomationEnum {
-    case string(Binding<String>)
-    case amount(Binding<Double>)
+    case string(Binding<String>,FocusState<Bool>.Binding)
+    case amount(Binding<Double>,FocusState<Bool>.Binding)
     case progress(String)
     case date(Date)
     case record(Double)
