@@ -23,7 +23,6 @@ class PiggyBank {
     @Transient
     var progress: Double {  // 完成进度
         guard amount > 0, targetAmount > 0 else { return 0 }
-        print("name:\(name),amount:\(amount),targetAmount:\(targetAmount),progress:\(amount / targetAmount)")
         return amount / targetAmount
     }
     @Transient

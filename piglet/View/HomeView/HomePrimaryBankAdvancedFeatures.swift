@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct HomePrimaryBankAdvancedFeatures: View {
+    @EnvironmentObject var idleManager: IdleTimerManager
     var primaryBank: PiggyBank
     @Binding var showCreateView: Bool
-    var progress: Double {
-        primaryBank.progress
-    }
     var geoHeight = 210.0
+    func formattedDate(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "y-MM-dd"
+            return formatter.string(from: date)
+        }
     
     var body: some View {
+        let progress: Double = primaryBank.progress
+        let progressText = primaryBank.progressText
+        let lastRecord = primaryBank.records?.max(by: { $0.date < $1.date })
         GeometryReader { geo in
             let width = geo.frame(in: .global).width
             let smallSize = 60.0
-            let largeSize = 130.0
+            let largeSize = 120.0
             let spacing = 15.0
             VStack(alignment: .leading) {
                 Footnote(text: "Advanced features")
@@ -45,16 +51,21 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             .cornerRadius(10)
                         })
                         .frame(height:smallSize)
-                        
+                        // 静默模式
                         Button(action: {
-                            
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                idleManager.isIdle = true
+                            }
                         }, label: {
                             ZStack {
                                 VStack {
                                     HStack {
+                                        Image("SilentBlue")
+                                            .resizable()
+                                            .frame(width: 15, height: 15)
                                         Text("Silent Mode")
                                             .foregroundColor(AppColor.appColor)
-                                            .font(.subheadline)
+                                            .font(.caption2)
                                         Spacer()
                                     }
                                     Spacer()
@@ -78,24 +89,45 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                 Image(systemName:"calendar")
                                     .foregroundColor(Color.gray)
                                     .imageScale(.small)
-                                Caption2(text: "Access progress")
+                                Caption2Black(text: "Access progress")
                                 Spacer()
-                                Text(primaryBank.progressText)
+                                Text(progressText)
                                     .font(.caption2)
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.gray)
                             }
                             GridProgressView(rows: 5, columns: 10,progress: progress,filledColor: .blue)
                         }
-                        .padding(.vertical,10)
-                        .padding(.horizontal,10)
+                        .padding(10)
                         .frame(height:largeSize)
                         .background(.white)
                         .cornerRadius(10)
-                        VStack {
-                            
+                        // 存取记录
+                        VStack(alignment: .leading,spacing: 10) {
+                            HStack {
+                                Image("counterclockwise")
+                                    .resizable()
+                                    .frame(width: 12,height:12)
+                                Caption2Black(text: "Access records")
+                                Spacer()
+                            }
+//                            if let lastRecord{
+//                                HStack {
+//                                    Caption2(text:"\(formattedDate(lastRecord.date))")
+//                                    Spacer()
+//                                    Image(systemName: lastRecord.saveMoney ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill")
+//                                    .font(.caption2)
+//                                    .foregroundColor(lastRecord.saveMoney ? AppColor.green : AppColor.red)
+//                                    Caption2(text: lastRecord.amountText)
+//                                }
+//                            } else {
+//                                Caption2(text:"No records available")
+//                            }
                         }
+                        .padding(10)
                         .frame(height: smallSize)
+                        .background(Color.white)
+                        .cornerRadius(10)
                     }
                     .frame(width: width * 0.49)
                 }

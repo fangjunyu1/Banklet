@@ -14,14 +14,10 @@ struct GridProgressView: View {
     var filledColor: Color
     var emptyColor: Color = .gray.opacity(0.2)
     let spacings = 5.0
-    var total: Int {
-        rows * columns
-    }
-    var filled: Int {
-        Int(Double(total) * progress)
-    }
     
     var body: some View {
+        let total: Int = rows * columns
+        let filled: Int = Int(Double(total) * progress)
         LazyVGrid(columns: Array(repeating: GridItem(.fixed(10),spacing: spacings), count: columns), alignment: .trailing, spacing: spacings) {
             ForEach(0..<total,id: \.self) { index in
                 Rectangle().foregroundColor( index < filled ? filledColor : emptyColor)

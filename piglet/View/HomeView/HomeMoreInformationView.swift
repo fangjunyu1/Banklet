@@ -152,18 +152,10 @@ private struct HomeMoreInformationList2: View {
             .last?
             .date ?? Date()
     }
-    var lastRecord: SavingsRecord? {
-        records.first(where: {$0.piggyBank == primary})
-    }
     var body: some View {
         VStack {
             // 存取次数
             HomeMoreInformationList(name: "Access times",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
-            Divider()
-            // 最近一次存取日期
-            if let lastRecord = lastRecord {
-                HomeMoreInformationList(name: "Latest access date",number: .date(lastRecord.date), isEdit: isEdit)
-            }
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
