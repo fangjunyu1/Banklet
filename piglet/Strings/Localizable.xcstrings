@@ -16773,6 +16773,30 @@
         }
       }
     },
+    "List" : {
+      "comment" : "列表",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列表"
+          }
+        }
+      }
+    },
+    "list of piggy banks" : {
+      "comment" : "存钱罐列表",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存钱罐列表"
+          }
+        }
+      }
+    },
     "Living Expenses" : {
       "comment" : "生活开销",
       "extractionState" : "manual",
@@ -18483,18 +18507,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "墨西哥比索"
-          }
-        }
-      }
-    },
-    "My piggy bank" : {
-      "comment" : "我的存钱罐",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "我的存钱罐"
           }
         }
       }

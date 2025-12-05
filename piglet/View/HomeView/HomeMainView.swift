@@ -38,10 +38,9 @@ struct HomeMainView: View {
                         HomePrimaryBankButtonView(primaryBank: primaryBank, showMoreInformation: $showMoreInformation)
                             .padding(.top,20)
                             .padding(.vertical,20)
-                        // 3、高级功能、创建存钱罐、存取进度
+                        // 4、高级功能、创建存钱罐、存取进度
                         HomePrimaryBankAdvancedFeatures(primaryBank: primaryBank,showCreateView: $showCreateView)
                     }
-                    .padding(20)
                     .sheet(isPresented: $showMoreInformation) {
                         NavigationStack {
                             HomeMoreInformationView(primary: primaryBank)
@@ -59,36 +58,13 @@ struct HomeMainView: View {
             Spacer().frame(height: 50)
         }
         .navigationTitle("Home")
+        .padding(.horizontal,20)
         .background {
             BackgroundImgView()
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                HomeMainToolBarButton(showCreateView: $showCreateView)
-            }
         }
         .navigationDestination(isPresented: $showCreateView) {
             HomeCreateView()
         }
-    }
-}
-
-private struct HomeMainToolBarButton: View {
-    @Binding var showCreateView: Bool
-    var body: some View {
-        Button(action: {
-            // 振动
-            HapticManager.shared.selectionChanged()
-            showCreateView = true
-        }, label: {
-            Image("plus")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20,height: 20)
-                .padding(5)
-                .background(.white)
-                .cornerRadius(5)
-        })
     }
 }
 

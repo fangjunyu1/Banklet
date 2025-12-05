@@ -355,6 +355,7 @@
 		1DEB96D22D5D9D6D00A68C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DEC90702ED7382B00DFDE90 /* SilentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC906F2ED7382600DFDE90 /* SilentMode.swift */; };
 		1DEC98802C10315500BEECFF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC987F2C10315500BEECFF /* Bundle.swift */; };
+		1DF137632EE2E4ED002429AD /* HomeBanksListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF137622EE2E4E4002429AD /* HomeBanksListView2.swift */; };
 		1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF555742BF60B1000BF0DE5 /* pigletApp.swift */; };
 		1DF555792BF60B1200BF0DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF555782BF60B1200BF0DE5 /* Assets.xcassets */; };
 		1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */; };
@@ -817,6 +818,7 @@
 		1DEB96D32D5D9D6D00A68C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DEC906F2ED7382600DFDE90 /* SilentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentMode.swift; sourceTree = "<group>"; };
 		1DEC987F2C10315500BEECFF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		1DF137622EE2E4E4002429AD /* HomeBanksListView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBanksListView2.swift; sourceTree = "<group>"; };
 		1DF47D912E6D34D3002B56C5 /* BankletWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankletWatch-Watch-App-Info.plist"; sourceTree = "<group>"; };
 		1DF47D932E6D352A002B56C5 /* BankletWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankletWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF555742BF60B1000BF0DE5 /* pigletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pigletApp.swift; sourceTree = "<group>"; };
@@ -1298,6 +1300,7 @@
 				1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */,
 				1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */,
 				1D27D83B2EB5CB1100F6AFE6 /* HomeBanksListView.swift */,
+				1DF137622EE2E4E4002429AD /* HomeBanksListView2.swift */,
 				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
 				1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */,
 				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
@@ -1922,6 +1925,7 @@
 			files = (
 				1D27D83C2EB5CB1300F6AFE6 /* HomeBanksListView.swift in Sources */,
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
+				1DF137632EE2E4ED002429AD /* HomeBanksListView2.swift in Sources */,
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,

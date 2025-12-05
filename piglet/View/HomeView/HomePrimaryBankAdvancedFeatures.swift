@@ -11,7 +11,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
     @EnvironmentObject var idleManager: IdleTimerManager
     var primaryBank: PiggyBank
     @Binding var showCreateView: Bool
-    var geoHeight = 210.0
+    var geoHeight = 230.0
     func formattedDate(_ date: Date) -> String {
             let formatter = DateFormatter()
             formatter.dateFormat = "y-MM-dd"
@@ -107,31 +107,33 @@ struct HomePrimaryBankAdvancedFeatures: View {
                         .background(.white)
                         .cornerRadius(10)
                         // 存取记录
-                        VStack(alignment: .leading,spacing: 10) {
-                            HStack {
-                                Image("counterclockwise")
-                                    .resizable()
-                                    .frame(width: 12,height:12)
-                                Caption2Black(text: "Access records")
-                                Spacer()
-                            }
-                            if let lastRecord{
+                        NavigationLink(destination: AccessTimesView(), label: {
+                            VStack(alignment: .leading,spacing: 10) {
                                 HStack {
-                                    Caption2(text:"\(lastRecordDate)")
+                                    Image("counterclockwise")
+                                        .resizable()
+                                        .frame(width: 12,height:12)
+                                    Caption2Black(text: "Access records")
                                     Spacer()
-                                    Image(systemName: lastRecordSaveMoneyIcon)
-//                                    .font(.caption2)
-                                        .foregroundColor(lastRecordSaveMoneyColor)
-                                    Caption2(text: lastRecordAmountText)
                                 }
-                            } else {
-                                Caption2(text:"No records available")
+                                if let lastRecord{
+                                    HStack(spacing:3) {
+                                        Caption2(text:"\(lastRecordDate)")
+                                        Spacer()
+                                        Image(systemName: lastRecordSaveMoneyIcon)
+                                            .font(.caption2)
+                                            .foregroundColor(lastRecordSaveMoneyColor)
+                                        Caption2(text: lastRecordAmountText)
+                                    }
+                                } else {
+                                    Caption2(text:"No records available")
+                                }
                             }
-                        }
-                        .padding(10)
-                        .frame(height: smallSize)
-                        .background(Color.white)
-                        .cornerRadius(10)
+                            .padding(10)
+                            .frame(height: smallSize)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                        })
                     }
                     .frame(width: width * 0.49)
                 }
