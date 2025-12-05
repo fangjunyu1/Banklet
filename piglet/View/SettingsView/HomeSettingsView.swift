@@ -122,6 +122,13 @@ struct HomeSettingsView: View {
                     Text("version")
                     Text(":")
                     Text(Bundle.main.appVersion)
+                    #if DEBUG
+                    Text("(")
+                    Text(Bundle.main.appBuild)
+                    Text(")")
+                    #else
+                    Text(":")
+                    #endif
                 }
                     .font(.caption2)
                     .foregroundColor(AppColor.gray)

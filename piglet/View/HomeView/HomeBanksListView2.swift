@@ -16,73 +16,75 @@ struct HomeBanksListView2: View {
     ])   // 所有存钱罐，按创建日期排序
     var allPiggyBank: [PiggyBank]
     var body: some View {
-        VStack(spacing:15) {
-            ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
-                let itemColor: Color = item.isPrimary ? .white : .primary
-                let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
-                let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
-                let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
-                let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
-                let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
-                let vsBgColor: Color = item.isPrimary ? .blue : Color.white
-                Button(action: {
-                    // 振动
-                    HapticManager.shared.selectionChanged()
-                    // 选择该存钱罐为主存钱罐
-                    homeVM.setPiggyBank(for: item)
-                }, label: {
-                    VStack(spacing: 10) {
-                        HStack(spacing: 15) {
-                            Image(systemName:item.icon)
-                                .imageScale(.small)
-                                .foregroundColor(.white)
-                                .background {
-                                    Circle()
-                                        .foregroundColor(itemBgColor)
-                                        .frame(width: 35, height: 35)
-                                }
-                                .frame(width: 35, height: 35)
-                            Spacer()
-                            Text(item.progressText)
-                                        .font(.footnote)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(itemColor)
-                                        .minimumScaleFactor(0.5)
-                        }
-                        HStack {
-                            Text(LocalizedStringKey(item.name))
-                                .font(.footnote)
-                                .fontWeight(.bold)
-                                .foregroundColor(itemColor)
-                            Spacer()
-                            HStack(spacing:3) {
-                                Text(item.amountText)
-                                    .foregroundColor(itemProgressAmountColor)
-                                Text("/")
-                                Text(item.targetAmountText)
+        ScrollView {
+            VStack(spacing:15) {
+                ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
+                    let itemColor: Color = item.isPrimary ? .white : .primary
+                    let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                    let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                    let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
+                    let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
+                    let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
+                    let vsBgColor: Color = item.isPrimary ? .blue : Color.white
+                    Button(action: {
+                        // 振动
+                        HapticManager.shared.selectionChanged()
+                        // 选择该存钱罐为主存钱罐
+                        homeVM.setPiggyBank(for: item)
+                    }, label: {
+                        VStack(spacing: 10) {
+                            HStack(spacing: 15) {
+                                Image(systemName:item.icon)
+                                    .imageScale(.small)
+                                    .foregroundColor(.white)
+                                    .background {
+                                        Circle()
+                                            .foregroundColor(itemBgColor)
+                                            .frame(width: 35, height: 35)
+                                    }
+                                    .frame(width: 35, height: 35)
+                                Spacer()
+                                Text(item.progressText)
+                                            .font(.footnote)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(itemColor)
+                                            .minimumScaleFactor(0.5)
                             }
-                            .font(.caption2)
-                            .fontWeight(.medium)
-                            .foregroundColor(itemProgressTargetAmountColor)
+                            HStack {
+                                Text(LocalizedStringKey(item.name))
+                                    .font(.footnote)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(itemColor)
+                                Spacer()
+                                HStack(spacing:3) {
+                                    Text(item.amountText)
+                                        .foregroundColor(itemProgressAmountColor)
+                                    Text("/")
+                                    Text(item.targetAmountText)
+                                }
+                                .font(.caption2)
+                                .fontWeight(.medium)
+                                .foregroundColor(itemProgressTargetAmountColor)
+                            }
+                            ZStack(alignment: .leading) {
+                                Rectangle()
+                                    .foregroundColor(itemProgressBgColor)
+                                    .frame(height:10)
+                                    .cornerRadius(5)
+                                Rectangle()
+                                    .foregroundColor(itemProgressColor)
+                                    .frame(width: min(item.progress * 116,116),height:10)
+                                    .cornerRadius(5)
+                            }
                         }
-                        ZStack(alignment: .leading) {
-                            Rectangle()
-                                .foregroundColor(itemProgressBgColor)
-                                .frame(height:10)
-                                .cornerRadius(5)
-                            Rectangle()
-                                .foregroundColor(itemProgressColor)
-                                .frame(width: min(item.progress * 116,116),height:10)
-                                .cornerRadius(5)
-                        }
-                    }
-                    .frame(height:80)
-                    .padding(10)
-                    .background(vsBgColor)
-                    .cornerRadius(10)
-                })
+                        .frame(height:80)
+                        .padding(10)
+                        .background(vsBgColor)
+                        .cornerRadius(10)
+                    })
+                }
+                Spacer()
             }
-            Spacer()
         }
         .padding(.top,20)
         .frame(maxWidth: .infinity,maxHeight: .infinity)
