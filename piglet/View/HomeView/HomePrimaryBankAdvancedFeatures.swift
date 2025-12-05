@@ -22,6 +22,10 @@ struct HomePrimaryBankAdvancedFeatures: View {
         let progress: Double = primaryBank.progress
         let progressText = primaryBank.progressText
         let lastRecord = primaryBank.records?.max(by: { $0.date < $1.date })
+        let lastRecordAmountText = "\(currencySymbol + " " + (lastRecord?.amount.formattedWithTwoDecimalPlaces() ?? ""))"
+        let lastRecordDate = formattedDate(lastRecord?.date ?? Date())
+        let lastRecordSaveMoneyIcon = lastRecord?.saveMoney ?? true ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill"
+        let lastRecordSaveMoneyColor =  lastRecord?.saveMoney ?? true ? AppColor.green : AppColor.red
         GeometryReader { geo in
             let width = geo.frame(in: .global).width
             let smallSize = 60.0
@@ -111,18 +115,18 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                 Caption2Black(text: "Access records")
                                 Spacer()
                             }
-//                            if let lastRecord{
-//                                HStack {
-//                                    Caption2(text:"\(formattedDate(lastRecord.date))")
-//                                    Spacer()
-//                                    Image(systemName: lastRecord.saveMoney ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill")
+                            if let lastRecord{
+                                HStack {
+                                    Caption2(text:"\(lastRecordDate)")
+                                    Spacer()
+                                    Image(systemName: lastRecordSaveMoneyIcon)
 //                                    .font(.caption2)
-//                                    .foregroundColor(lastRecord.saveMoney ? AppColor.green : AppColor.red)
-//                                    Caption2(text: lastRecord.amountText)
-//                                }
-//                            } else {
-//                                Caption2(text:"No records available")
-//                            }
+                                        .foregroundColor(lastRecordSaveMoneyColor)
+                                    Caption2(text: lastRecordAmountText)
+                                }
+                            } else {
+                                Caption2(text:"No records available")
+                            }
                         }
                         .padding(10)
                         .frame(height: smallSize)
