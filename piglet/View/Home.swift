@@ -20,6 +20,7 @@ struct Home: View {
     @State private var homeActivityVM = HomeActivityViewModel()
     @Query(sort: [
         SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
+        SortDescriptor(\PiggyBank.sortOrder),
         SortDescriptor(\PiggyBank.creationDate, order: .reverse)
     ])   // 所有存钱罐，按创建日期排序
     

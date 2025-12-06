@@ -20,6 +20,7 @@ class PiggyBank {
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool = false // 标记主要存钱罐
     var completionDate: Date = Date()    // 完成日期
+    var sortOrder: Int = 0
     @Transient
     var progress: Double {  // 完成进度
         guard amount > 0, targetAmount > 0 else { return 0 }

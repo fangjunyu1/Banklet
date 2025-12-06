@@ -9,87 +9,119 @@ import SwiftUI
 import SwiftData
 
 struct HomeBanksListView2: View {
+    @Environment(\.modelContext) var context
     @EnvironmentObject var homeVM: HomeViewModel
     @Query(sort: [
         SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
+        SortDescriptor(\PiggyBank.sortOrder),
         SortDescriptor(\PiggyBank.creationDate, order: .reverse)
     ])   // 所有存钱罐，按创建日期排序
     var allPiggyBank: [PiggyBank]
     var body: some View {
-        ScrollView {
-            VStack(spacing:15) {
-                ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
-                    let itemColor: Color = item.isPrimary ? .white : .primary
-                    let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
-                    let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
-                    let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
-                    let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
-                    let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
-                    let vsBgColor: Color = item.isPrimary ? .blue : Color.white
-                    Button(action: {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                        // 选择该存钱罐为主存钱罐
-                        homeVM.setPiggyBank(for: item)
-                    }, label: {
-                        VStack(spacing: 10) {
-                            HStack(spacing: 15) {
-                                Image(systemName:item.icon)
-                                    .imageScale(.small)
-                                    .foregroundColor(.white)
-                                    .background {
-                                        Circle()
-                                            .foregroundColor(itemBgColor)
-                                            .frame(width: 35, height: 35)
-                                    }
-                                    .frame(width: 35, height: 35)
-                                Spacer()
-                                Text(item.progressText)
-                                            .font(.footnote)
-                                            .fontWeight(.bold)
-                                            .foregroundColor(itemColor)
-                                            .minimumScaleFactor(0.5)
-                            }
-                            HStack {
-                                Text(LocalizedStringKey(item.name))
-                                    .font(.footnote)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(itemColor)
-                                Spacer()
-                                HStack(spacing:3) {
-                                    Text(item.amountText)
-                                        .foregroundColor(itemProgressAmountColor)
-                                    Text("/")
-                                    Text(item.targetAmountText)
+        List {
+            ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
+                let itemColor: Color = item.isPrimary ? .white : .primary
+                let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
+                let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
+                let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
+                let vsBgColor: Color = item.isPrimary ? .blue : Color.white
+                Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
+                    // 选择该存钱罐为主存钱罐
+                    homeVM.setPiggyBank(for: item)
+                }, label: {
+                    VStack(spacing: 10) {
+                        HStack(spacing: 15) {
+                            Image(systemName:item.icon)
+                                .imageScale(.small)
+                                .foregroundColor(.white)
+                                .background {
+                                    Circle()
+                                        .foregroundColor(itemBgColor)
+                                        .frame(width: 35, height: 35)
                                 }
-                                .font(.caption2)
-                                .fontWeight(.medium)
-                                .foregroundColor(itemProgressTargetAmountColor)
-                            }
-                            ZStack(alignment: .leading) {
-                                Rectangle()
-                                    .foregroundColor(itemProgressBgColor)
-                                    .frame(height:10)
-                                    .cornerRadius(5)
-                                Rectangle()
-                                    .foregroundColor(itemProgressColor)
-                                    .frame(width: min(item.progress * 116,116),height:10)
-                                    .cornerRadius(5)
-                            }
+                                .frame(width: 35, height: 35)
+                            Spacer()
+                            Text(item.progressText)
+                                .font(.footnote)
+                                .fontWeight(.bold)
+                                .foregroundColor(itemColor)
+                                .minimumScaleFactor(0.5)
                         }
-                        .frame(height:80)
-                        .padding(10)
-                        .background(vsBgColor)
-                        .cornerRadius(10)
-                    })
-                }
-                Spacer()
+                        HStack {
+                            Text(LocalizedStringKey(item.name))
+                                .font(.footnote)
+                                .fontWeight(.bold)
+                                .foregroundColor(itemColor)
+                            Spacer()
+                            HStack(spacing:3) {
+                                Text(item.amountText)
+                                    .foregroundColor(itemProgressAmountColor)
+                                Text("/")
+                                Text(item.targetAmountText)
+                            }
+                            .font(.caption2)
+                            .fontWeight(.medium)
+                            .foregroundColor(itemProgressTargetAmountColor)
+                        }
+                        ZStack(alignment: .leading) {
+                            Rectangle()
+                                .foregroundColor(itemProgressBgColor)
+                                .frame(height:10)
+                                .cornerRadius(5)
+                            Rectangle()
+                                .foregroundColor(itemProgressColor)
+                                .frame(width: min(item.progress * 116,116),height:10)
+                                .cornerRadius(5)
+                        }
+                    }
+                    .frame(height:80)
+                    .padding(10)
+                    .background(vsBgColor)
+                    .cornerRadius(10)
+                    .padding(.horizontal,20)
+                })
             }
+            .onMove { indices, newOffset in
+                var banks = allPiggyBank
+                print("当前存钱罐排序为：")
+                var banksPrint = ""
+                for (index, bank) in banks.enumerated() {
+                    banksPrint.append("\(index):\(bank.name),")
+                }
+                print("banksPrint:\(banksPrint)")
+                banks.move(fromOffsets: indices, toOffset: newOffset)
+                for (index,bank) in banks.enumerated() {
+                    bank.sortOrder = index
+                }
+                var newBanksPrint = ""
+                print("替换后的列表")
+                for (index, bank) in banks.enumerated() {
+                    newBanksPrint.append("\(index):\(bank.name),")
+                }
+                print("newBanksPrint:\(newBanksPrint)")
+                do {
+                    try context.save()
+                } catch {
+                    print("保存失败")
+                }
+                print("indices:\(indices),newOffset:\(newOffset)")
+            }
+            .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
+            .listRowBackground(Color.clear) // 保证行之间显示背景间隔
+            .listRowSeparator(.hidden)
+            .background(Color.clear) // 为整个 List 设置您想要的背景色
         }
+        .scrollIndicators(.never)
+        .listSectionSeparator(.hidden)
+        .listStyle(.plain)
         .padding(.top,20)
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .navigationTitle("List")
-        .modifier(BackgroundModifier())
+        .modifier(BackgroundListModifier())
     }
 }
 

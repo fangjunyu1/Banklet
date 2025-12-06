@@ -71,7 +71,6 @@ struct AccessTimesView: View {
                         }
                     }
                 }
-                .background(Color.clear)
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
                 .listRowBackground(Color.clear) // 保证行之间显示背景间隔
                 .listRowSeparator(.hidden)

@@ -72,6 +72,17 @@ struct BackgroundModifier: ViewModifier {
     }
 }
 
+struct BackgroundListModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity)
+            .navigationBarTitleDisplayMode(.inline)
+            .background {
+                AppColor.appBgGrayColor
+                    .ignoresSafeArea()
+            }
+    }
+}
 
 struct SettingVStackRowModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
