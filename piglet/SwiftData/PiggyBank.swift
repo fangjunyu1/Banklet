@@ -58,8 +58,6 @@ class PiggyBank {
         self.expirationDate = expirationDate
         self.isExpirationDateEnabled = isExpirationDateEnabled
         self.isPrimary = isPrimary
-        self.completionDate = Date()
-        self.sortOrder = 0
     }
     
     @MainActor
