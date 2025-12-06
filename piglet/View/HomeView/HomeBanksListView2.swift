@@ -87,28 +87,15 @@ struct HomeBanksListView2: View {
             }
             .onMove { indices, newOffset in
                 var banks = allPiggyBank
-                print("当前存钱罐排序为：")
-                var banksPrint = ""
-                for (index, bank) in banks.enumerated() {
-                    banksPrint.append("\(index):\(bank.name),")
-                }
-                print("banksPrint:\(banksPrint)")
                 banks.move(fromOffsets: indices, toOffset: newOffset)
                 for (index,bank) in banks.enumerated() {
                     bank.sortOrder = index
                 }
-                var newBanksPrint = ""
-                print("替换后的列表")
-                for (index, bank) in banks.enumerated() {
-                    newBanksPrint.append("\(index):\(bank.name),")
-                }
-                print("newBanksPrint:\(newBanksPrint)")
                 do {
                     try context.save()
                 } catch {
                     print("保存失败")
                 }
-                print("indices:\(indices),newOffset:\(newOffset)")
             }
             .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
             .listRowBackground(Color.clear) // 保证行之间显示背景间隔
