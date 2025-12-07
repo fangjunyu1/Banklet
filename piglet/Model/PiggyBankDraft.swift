@@ -18,7 +18,11 @@ struct PiggyBankDraft {
     var expirationDate: Date    // 截止日期
     var isExpirationDateEnabled: Bool   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool // 标记主要存钱罐
+    var isFixedDeposit: Bool  // 定期存款
+    var fixedDepositType: String   //  存款类型
+    var fixedDepositAmount: Double   // 每次存款金额
     var completionDate: Date    // 完成日期
+    var sortOrder:Int   // 排序字段
     // 只读字段
     var progress: Double    // 进度
     var difference: Double
@@ -37,7 +41,12 @@ struct PiggyBankDraft {
         self.expirationDate = model.expirationDate
         self.isExpirationDateEnabled = model.isExpirationDateEnabled
         self.isPrimary = model.isPrimary
+        self.isFixedDeposit = model.isFixedDeposit
+        self.fixedDepositType = model.fixedDepositType
+        self.fixedDepositAmount = model.fixedDepositAmount
         self.completionDate = model.completionDate
+        self.sortOrder = model.sortOrder
+        // 只读字段
         self.progress = model.progress
         self.difference = model.difference
         self.amountText = model.amountText
@@ -55,7 +64,11 @@ struct PiggyBankDraft {
         model.expirationDate = expirationDate
         model.isExpirationDateEnabled = isExpirationDateEnabled
         model.isPrimary = isPrimary
+        model.isFixedDeposit = isFixedDeposit
+        model.fixedDepositType = fixedDepositType
+        model.fixedDepositAmount = fixedDepositAmount
         model.completionDate = completionDate
+        model.sortOrder = sortOrder
         do {
             try context.save()
         } catch {

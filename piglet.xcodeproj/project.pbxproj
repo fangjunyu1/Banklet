@@ -323,7 +323,6 @@
 		1DDEC5612ED14D2F00B940E2 /* TradeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */; };
 		1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */; };
 		1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */; };
-		1DDEC5672ED14D7100B940E2 /* PreviewTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */; };
 		1DDEC5692ED14D9200B940E2 /* TradeShowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */; };
 		1DDEC56B2ED1539300B940E2 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56A2ED1539300B940E2 /* check.json */; };
 		1DDEC56D2ED16C7800B940E2 /* money1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56C2ED16C7800B940E2 /* money1.mp3 */; };
@@ -786,7 +785,6 @@
 		1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeButtonView.swift; sourceTree = "<group>"; };
 		1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeContentView.swift; sourceTree = "<group>"; };
 		1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeNotesView.swift; sourceTree = "<group>"; };
-		1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTradeView.swift; sourceTree = "<group>"; };
 		1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeShowContentView.swift; sourceTree = "<group>"; };
 		1DDEC56A2ED1539300B940E2 /* check.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
 		1DDEC56C2ED16C7800B940E2 /* money1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = money1.mp3; sourceTree = "<group>"; };
@@ -1011,7 +1009,6 @@
 				1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */,
 				1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */,
 				1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */,
-				1DDEC5662ED14D7000B940E2 /* PreviewTradeView.swift */,
 			);
 			path = TradeView;
 			sourceTree = "<group>";
@@ -2041,7 +2038,6 @@
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
 				1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */,
-				1DDEC5672ED14D7100B940E2 /* PreviewTradeView.swift in Sources */,
 				1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

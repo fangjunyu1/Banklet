@@ -8,29 +8,20 @@
 import SwiftData
 import SwiftUI
 
-enum FixedDepositEnum: String, CaseIterable, Identifiable {
-    var id: String {
-        self.rawValue
-    }
-    case day
-    case week
-    case month
-    case year
-}
-
 @Model
 class PiggyBank {
     var name: String = ""  // 存钱罐名称
     var icon:String = ""   // 图标名称
+    var amount: Double = 0.0   // 存钱罐金额
     var initialAmount: Double = 0.0 // 初始化金额，仅首次标记，用于后续展示
     var targetAmount: Double = 0.0  // 目标金额
-    var amount: Double = 0.0   // 存钱罐金额
     var creationDate: Date = Date()    // 创建日期
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool = false // 标记主要存钱罐
     var isFixedDeposit: Bool = false  // 定期存款
-    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  存款日期
+    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  存款类型
+    var fixedDepositAmount: Double = 0.0    // 定期存款金额
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
     @Transient
@@ -60,7 +51,7 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isFixedDeposit:Bool,fixedDepositType:String, isPrimary: Bool) {
+    init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isFixedDeposit:Bool,fixedDepositType:String,fixedDepositAmount: Double?, isPrimary: Bool) {
         self.name = name
         self.icon = icon
         self.initialAmount = initialAmount
@@ -71,6 +62,7 @@ class PiggyBank {
         self.isExpirationDateEnabled = isExpirationDateEnabled
         self.isFixedDeposit = isFixedDeposit
         self.fixedDepositType = fixedDepositType
+        self.fixedDepositAmount = fixedDepositAmount ?? 0
         self.isPrimary = isPrimary
     }
     
@@ -102,10 +94,20 @@ class PiggyBank {
     }
     
     static var PiggyBanks: [PiggyBank] {
-        let carPiggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: true)
-        let iPhonePiggyBank = PiggyBank(name: "iPhone 15 pro Max", icon: "iphone.gen2", initialAmount: 5555, targetAmount: 8999, amount: 5555, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: false)
-        let housePiggyBank = PiggyBank(name: "新房子", icon: "building.2", initialAmount: 200000, targetAmount: 800000, amount: 0, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: false)
+        let carPiggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: true)
+        let iPhonePiggyBank = PiggyBank(name: "iPhone 15 pro Max", icon: "iphone.gen2", initialAmount: 5555, targetAmount: 8999, amount: 5555, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: false)
+        let housePiggyBank = PiggyBank(name: "新房子", icon: "building.2", initialAmount: 200000, targetAmount: 800000, amount: 0, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: false)
         
         return [carPiggyBank, iPhonePiggyBank, housePiggyBank]
     }
+}
+
+enum FixedDepositEnum: String, CaseIterable, Identifiable {
+    var id: String {
+        self.rawValue
+    }
+    case day
+    case week
+    case month
+    case year
 }

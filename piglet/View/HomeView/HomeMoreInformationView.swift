@@ -30,18 +30,29 @@ struct HomeMoreInformationView: View {
                 HomeMoreInfomationNameView(name: "Name",number: .string($draft.name,$isFocused),isEdit:isEdit)
                 // 存钱罐图标列表
                 HomeMoreInformationIconList(showIcons: showIcons,draft: $draft)
-                // 存钱罐信息列表 1
+                // 存钱罐信息列表 - 基本信息
                 VStack(alignment: .leading) {
                     Footnote(text: "Piggy Bank Information")
                     // 存钱罐信息列表
                     HomeMoreInformationList1(primary:primary,draft: $draft,isEdit:isEdit,isFocused: $isFocused)
                 }
-                // 存钱罐信息列表 2
+                // 存钱罐信息列表 - 定期存款
+                VStack(alignment: .leading) {
+                    Footnote(text: "Fixed deposit")
+                    HomeMoreInformationList2(primary:primary,draft: $draft,isEdit:isEdit,isFocused: $isFocused)
+                }
+                
+                // 存钱罐信息列表 - 截止日期
+                VStack(alignment: .leading) {
+                    Footnote(text: "Expiration date")
+                    HomeMoreInformationList3(primary:primary,draft: $draft,isEdit:isEdit,isFocused: $isFocused)
+                }
+                // 存钱罐信息列表 - 存钱次数
                 if (primary.records != nil) {
                     VStack(alignment: .leading) {
                         Footnote(text: "Access times")
                         // 存钱罐信息列表
-                        HomeMoreInformationList2(primary: primary, draft: $draft,isEdit:isEdit)
+                        HomeMoreInformationList4(primary: primary, draft: $draft,isEdit:isEdit)
                     }
                 }
             }
@@ -120,13 +131,15 @@ private struct HomeMoreInfomationNameView: View {
         }
     }
 }
+
+// 基本信息
 private struct HomeMoreInformationList1: View {
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
     @FocusState.Binding var isFocused: Bool
     var body: some View {
-        VStack {
+        VStack(spacing: 2) {
             // 当前金额
             HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount,$isFocused),isEdit:isEdit)
             Divider()
@@ -146,11 +159,6 @@ private struct HomeMoreInformationList1: View {
                 Divider()
                 HomeMoreInformationList(name: "Completion date",number: .date(draft.completionDate),isEdit:isEdit)
             }
-            // 截止日期
-            if primary.isExpirationDateEnabled {
-                Divider()
-                HomeMoreInformationList(name: "Expiration date",number: .date(draft.expirationDate),isEdit:isEdit)
-            }
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
@@ -159,19 +167,95 @@ private struct HomeMoreInformationList1: View {
     }
 }
 
+// 定期存款
 private struct HomeMoreInformationList2: View {
+    var primary: PiggyBank
+    @Binding var draft: PiggyBankDraft
+    var isEdit: Bool
+    @FocusState.Binding var isFocused: Bool
+    @State private var isPickerDate: Bool = false
+    var body: some View {
+        VStack(spacing: 2) {
+            HomeMoreInformationList(name: "Fixed deposit",number: .toggle($draft.isFixedDeposit),isEdit:isEdit)
+            // 定期存款类型
+            if draft.isFixedDeposit {
+                Divider()
+                // 存款频率
+                HomeMoreInformationList(name: "Deposit Frequency",number: .picker($draft.fixedDepositType),isEdit:isEdit)
+                Divider()
+                // 存款金额
+                HomeMoreInformationList(name: "Deposit Amount",number: .amount($draft.fixedDepositAmount, $isFocused),isEdit:isEdit)
+            }
+        }
+        .padding(.vertical,5)
+        .padding(.horizontal, 10)
+        .background(Color.white)
+        .cornerRadius(10)
+        .sheet(isPresented: $isPickerDate) {
+            VStack {
+                DatePicker("", selection: $draft.expirationDate, displayedComponents: .date)
+                    .datePickerStyle(.wheel)
+                    .presentationDetents([.height(300)])
+                    .padding(.trailing, 20)
+                Button(action: {
+                    isPickerDate.toggle()
+                }, label: {
+                    Text("Completed")
+                        .modifier(ButtonModifier())
+                })
+            }
+        }
+    }
+}
+
+// 截止日期
+private struct HomeMoreInformationList3: View {
+    var primary: PiggyBank
+    @Binding var draft: PiggyBankDraft
+    var isEdit: Bool
+    @FocusState.Binding var isFocused: Bool
+    @State private var isPickerDate: Bool = false
+    var body: some View {
+        VStack(spacing: 2) {
+            HomeMoreInformationList(name: "Expiration date",number: .toggle($draft.isExpirationDateEnabled),isEdit:isEdit)
+            // 截止日期
+            if draft.isExpirationDateEnabled {
+                Divider()
+                HomeMoreInformationList(name: "Expiration date",number: .datePicker($draft.expirationDate),isEdit:isEdit)
+                    .onTapGesture {
+                        isPickerDate.toggle()
+                    }
+            }
+        }
+        .padding(.vertical,5)
+        .padding(.horizontal, 10)
+        .background(Color.white)
+        .cornerRadius(10)
+        .sheet(isPresented: $isPickerDate) {
+            VStack {
+                DatePicker("", selection: $draft.expirationDate, displayedComponents: .date)
+                    .datePickerStyle(.wheel)
+                    .presentationDetents([.height(300)])
+                    .padding(.trailing, 20)
+                Button(action: {
+                    isPickerDate.toggle()
+                }, label: {
+                    Text("Completed")
+                        .modifier(ButtonModifier())
+                })
+            }
+        }
+    }
+}
+
+// 存取次数视图
+private struct HomeMoreInformationList4: View {
     @Query var records: [SavingsRecord]
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
-    var lastDate: Date {
-        primary.records?
-            .sorted(by: {$0.date < $1.date})
-            .last?
-            .date ?? Date()
-    }
     var body: some View {
-        VStack {
+        VStack(spacing: 2) {
             // 存取次数
             HomeMoreInformationList(name: "Access times",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
         }
@@ -214,10 +298,25 @@ private struct HomeMoreInformationList: View {
             case .record(let double):
                 Text("\(double.formatted())")
                     .foregroundColor(Color.gray)
+            case .toggle(let bool):
+                Toggle("",isOn: bool)
+                    .frame(height:20)
+                    .disabled(!isEdit)
+            case .datePicker(let date):
+                DatePicker("", selection: date,displayedComponents: .date)
+                    .frame(height:20)
+                    .disabled(!isEdit)
+            case .picker(let string):
+                Picker("", selection: string) {
+                    ForEach(FixedDepositEnum.allCases, id: \.self) { option in
+                        Text(LocalizedStringKey(option.id)).tag(option.id) // 设置标识符
+                    }
+                }
+                .frame(height:20)
+                .pickerStyle(.menu)
             }
         }
-        .padding(.vertical,5)
-        .padding(.horizontal,10)
+        .padding(10)
     }
 }
 struct HomeMoreInformationIconList: View {
@@ -273,9 +372,12 @@ struct PreviewMoreInformationView: View {
 private enum MoreInfomationEnum {
     case string(Binding<String>,FocusState<Bool>.Binding)
     case amount(Binding<Double>,FocusState<Bool>.Binding)
+    case toggle(Binding<Bool>)
     case progress(String)
     case date(Date)
+    case datePicker(Binding<Date>)
     case record(Double)
+    case picker(Binding<String>)
 }
 
 #Preview {

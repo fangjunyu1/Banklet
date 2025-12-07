@@ -54,8 +54,3 @@ enum Field {
     case amount
     case note
 }
-
-#Preview {
-    PreviewTradeView()
-        .environmentObject(AppStorageManager.shared)
-}

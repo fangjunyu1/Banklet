@@ -87,7 +87,7 @@ struct HomeCreateInputAmountView: View {
                 .focused($isFocus)
                 .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                 .foregroundColor(isNegative ? .red : .primary)
-            }   // 数字 + 符号键盘
+            }
         }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
@@ -125,6 +125,22 @@ struct HomeCreateInputRegularView:View {
             Toggle("",isOn: $piggyBank.isFixedDeposit.animation(.bouncy))
                 .frame(width: 50,height: 0)
                 .background(.red)
+        }
+    }
+}
+
+// 定额存款金额界面
+struct HomeCreateInputRegularAmountView:View {
+    @EnvironmentObject var piggyBank: PiggyBankData
+    @FocusState.Binding var isFocus: Bool
+    var body: some View {
+        HStack(spacing: 10) {
+            Text("Fixed deposit")
+                .fontWeight(.medium)
+            Spacer()
+            TextField("0", value: $piggyBank.fixedDepositAmount, format: .number)
+            .focused($isFocus)
+            .keyboardType(.decimalPad)   // 数字 + 小数点键盘
         }
     }
 }
@@ -200,7 +216,7 @@ struct HomeCreatePreviewImage: View {
                 .imageScale(.large)
                 .opacity(step.tab == .icon ? 1 : 0)
                 .frame(height: 45)
-            //
+            // 定期存款的选项
             HomeCreatePickerFixedDepositView()
         }
     }

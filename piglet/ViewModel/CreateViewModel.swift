@@ -32,7 +32,7 @@ final class CreateStepViewModel: ObservableObject {
             bank.isPrimary = false
         }
         
-        // Step 4: 创建新的生活保障金
+        // Step 4: 创建存钱罐
         let piggyBank = PiggyBank(name: data.name.isEmpty ? "New Banklet" : data.name,
                                   icon: data.icon,
                                   initialAmount:
@@ -45,6 +45,7 @@ final class CreateStepViewModel: ObservableObject {
                                   isExpirationDateEnabled: data.isExpirationDateEnabled,
                                   isFixedDeposit: data.isFixedDeposit,
                                   fixedDepositType: data.fixedDepositType,
+                                  fixedDepositAmount: data.fixedDepositAmount,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中

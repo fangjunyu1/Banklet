@@ -234,6 +234,7 @@ final class ActiveViewModel:ObservableObject {
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
                                   fixedDepositType: FixedDepositEnum.day.rawValue,
+                                  fixedDepositAmount: nil,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中
@@ -278,6 +279,7 @@ final class ActiveViewModel:ObservableObject {
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
                                   fixedDepositType: FixedDepositEnum.day.rawValue,
+                                  fixedDepositAmount: nil,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中

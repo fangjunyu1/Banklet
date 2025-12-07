@@ -115,10 +115,3 @@ struct TradeContentAmountView: View {
         }
     }
 }
-
-#Preview {
-    PreviewTradeView()
-        .environmentObject(AppStorageManager.shared)
-        .environmentObject(HomeViewModel())
-        .environmentObject(IdleTimerManager.shared)
-}

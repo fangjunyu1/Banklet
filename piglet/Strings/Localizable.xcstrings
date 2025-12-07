@@ -9977,6 +9977,18 @@
         }
       }
     },
+    "Deposit Frequency" : {
+      "comment" : "存款频率",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存款频率"
+          }
+        }
+      }
+    },
     "Deposit time" : {
       "comment" : "存入时间",
       "extractionState" : "manual",
@@ -12132,13 +12144,13 @@
       }
     },
     "Fixed deposit" : {
-      "comment" : "定额存款",
+      "comment" : "定期存款",
       "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "定额存款"
+            "value" : "定期存款"
           }
         }
       }
@@ -26962,6 +26974,18 @@
         }
       }
     },
+    "Set a fixed deposit amount for the piggy bank." : {
+      "comment" : "设定存钱罐的定期存款金额。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设定存钱罐的定期存款金额。"
+          }
+        }
+      }
+    },
     "Set a target amount for your piggy bank." : {
       "comment" : "设定存钱罐的目标金额。",
       "extractionState" : "manual",
@@ -35025,12 +35049,6 @@
           }
         }
       }
-    },
-    "取出" : {
-
-    },
-    "存入" : {
-
     },
     "重置内购和欢迎界面" : {
 

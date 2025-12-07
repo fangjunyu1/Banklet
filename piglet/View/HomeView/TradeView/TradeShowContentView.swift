@@ -58,8 +58,3 @@ struct TradeShowContentView: View {
         }
     }
 }
-
-#Preview {
-    PreviewTradeView()
-        .environmentObject(AppStorageManager.shared)
-}
