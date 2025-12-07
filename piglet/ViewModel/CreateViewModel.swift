@@ -43,6 +43,8 @@ final class CreateStepViewModel: ObservableObject {
                                   creationDate: Date(),
                                   expirationDate: data.expirationDate,
                                   isExpirationDateEnabled: data.isExpirationDateEnabled,
+                                  isFixedDeposit: data.isFixedDeposit,
+                                  fixedDepositType: data.fixedDepositType,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中
@@ -64,6 +66,8 @@ final class CreateStepViewModel: ObservableObject {
         case .icon:
             tab = .amount
         case .amount:
+            tab = .regular
+        case .regular:
             tab = .expirationDate
         case .expirationDate:
             tab = .complete
@@ -84,8 +88,10 @@ final class CreateStepViewModel: ObservableObject {
             tab = .targetAmount
         case .amount:
             tab = .icon
-        case .expirationDate:
+        case .regular:
             tab = .amount
+        case .expirationDate:
+            tab = .regular
         case .complete:
             tab = .expirationDate
         }

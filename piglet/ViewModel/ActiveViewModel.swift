@@ -232,6 +232,8 @@ final class ActiveViewModel:ObservableObject {
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
+                                  isFixedDeposit: false,
+                                  fixedDepositType: FixedDepositEnum.day.rawValue,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中
@@ -274,6 +276,8 @@ final class ActiveViewModel:ObservableObject {
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
+                                  isFixedDeposit: false,
+                                  fixedDepositType: FixedDepositEnum.day.rawValue,
                                   isPrimary: true)
         
         context.insert(piggyBank) // 将对象插入到上下文中

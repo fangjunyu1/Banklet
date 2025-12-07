@@ -30,12 +30,19 @@ struct HomeCreateView: View {
             Spacer()
         }
         .navigationTitle("Create")
-        .modifier(HomeCreateViewdModifier())
+        .frame(maxWidth: .infinity)
+        .navigationBarTitleDisplayMode(.inline)
+        .padding(.horizontal,40)
+        .padding(.top,30)
+        .background {
+            AppColor.appBgGrayColor
+                .ignoresSafeArea()
+                .onTapGesture {
+                    isFocus = false
+                }
+        }
         .environment(piggyBank)
         .environment(step)
-        .onTapGesture {
-            isFocus = false
-        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 3) {
@@ -95,6 +102,8 @@ struct HomeCreateButtonView: View {
 }
 
 struct HomeCreateViewdModifier: ViewModifier {
+    @FocusState.Binding var isFocus: Bool?
+    
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity)
@@ -104,6 +113,9 @@ struct HomeCreateViewdModifier: ViewModifier {
             .background {
                 AppColor.appBgGrayColor
                     .ignoresSafeArea()
+                    .onTapGesture {
+                        isFocus = false
+                    }
             }
     }
 }

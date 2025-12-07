@@ -32,6 +32,10 @@ struct HomeCreateInputView: View {
                     HomeCreateInputAmountView(isFocus: $isFocus)
                         .transition(.move(edge: .bottom).combined(with: .opacity))
 
+                case .regular:
+                    HomeCreateInputRegularView(isFocus: $isFocus)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                    
                 case .expirationDate:
                     HomeCreateInputExpirationDateView(isFocus: $isFocus)
                         .transition(.move(edge: .bottom).combined(with: .opacity))

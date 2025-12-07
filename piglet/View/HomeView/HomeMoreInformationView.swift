@@ -27,6 +27,7 @@ struct HomeMoreInformationView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
                 CircularProgressView(primary: primary, size: 100,isEdit: isEdit, draft: $draft,showIcons: $showIcons)
+                HomeMoreInfomationNameView(name: "Name",number: .string($draft.name,$isFocused),isEdit:isEdit)
                 // 存钱罐图标列表
                 HomeMoreInformationIconList(showIcons: showIcons,draft: $draft)
                 // 存钱罐信息列表 1
@@ -99,6 +100,26 @@ struct HomeMoreInformationView: View {
     }
 }
 
+private struct HomeMoreInfomationNameView: View {
+    var name: String
+    var number: MoreInfomationEnum
+    var isEdit: Bool
+    var body: some View {
+        if case .string(let binding,let focus) = number {
+            TextField("",text: binding)
+                .frame(alignment: .trailing)
+                .frame(maxWidth: .infinity)
+                .multilineTextAlignment(.center)
+                .disabled(!isEdit)
+                .focused(focus)
+                .foregroundColor(isEdit ? Color.primary : Color.gray)
+                .padding(10)
+                .frame(maxWidth: 200)
+                .background(Color.white)
+                .cornerRadius(10)
+        }
+    }
+}
 private struct HomeMoreInformationList1: View {
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
@@ -106,9 +127,6 @@ private struct HomeMoreInformationList1: View {
     @FocusState.Binding var isFocused: Bool
     var body: some View {
         VStack {
-            // 名称
-            HomeMoreInformationList(name: "Name",number: .string($draft.name,$isFocused),isEdit:isEdit)
-            Divider()
             // 当前金额
             HomeMoreInformationList(name: "Current amount",number: .amount($draft.amount,$isFocused),isEdit:isEdit)
             Divider()

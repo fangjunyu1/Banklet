@@ -84,9 +84,9 @@ struct HomeCreateInputAmountView: View {
                         piggyBank.amount = $0
                     }
                 }), format: .number)
-                    .focused($isFocus)
-                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
-                    .foregroundColor(isNegative ? .red : .primary)
+                .focused($isFocus)
+                .keyboardType(.decimalPad)   // 数字 + 小数点键盘
+                .foregroundColor(isNegative ? .red : .primary)
             }   // 数字 + 符号键盘
         }
         .toolbar {
@@ -113,6 +113,22 @@ struct HomeCreateInputAmountView: View {
     }
 }
 
+// 定额存款界面
+struct HomeCreateInputRegularView:View {
+    @EnvironmentObject var piggyBank: PiggyBankData
+    @FocusState.Binding var isFocus: Bool
+    var body: some View {
+        HStack(spacing: 10) {
+            Text("Fixed deposit")
+                .fontWeight(.medium)
+            Spacer()
+            Toggle("",isOn: $piggyBank.isFixedDeposit.animation(.bouncy))
+                .frame(width: 50,height: 0)
+                .background(.red)
+        }
+    }
+}
+
 // 应用截止日期界面
 struct HomeCreateInputExpirationDateView: View {
     @EnvironmentObject var piggyBank: PiggyBankData
@@ -131,6 +147,7 @@ struct HomeCreateInputExpirationDateView: View {
 
 struct HomeCreateDateView: View {
     @EnvironmentObject var piggyBank: PiggyBankData
+    @EnvironmentObject var step: CreateStepViewModel
     @State private var isShowSheet = false
     var body: some View {
         VStack(alignment: .center) {
@@ -163,6 +180,7 @@ struct HomeCreateDateView: View {
                     })
                 }
             }
+            .opacity(step.tab.isDate && piggyBank.isExpirationDateEnabled ? 1 : 0)
         }
     }
 }
@@ -175,7 +193,6 @@ struct HomeCreatePreviewImage: View {
         ZStack {
             // 截止日期
             HomeCreateDateView()
-                .opacity(step.tab.isDate && piggyBank.isExpirationDateEnabled ? 1 : 0)
             // App图标
             Image(systemName: piggyBank.icon)
                 .font(.largeTitle)
@@ -183,10 +200,30 @@ struct HomeCreatePreviewImage: View {
                 .imageScale(.large)
                 .opacity(step.tab == .icon ? 1 : 0)
                 .frame(height: 45)
+            //
+            HomeCreatePickerFixedDepositView()
         }
     }
 }
 
+struct HomeCreatePickerFixedDepositView: View {
+    @EnvironmentObject var piggyBank: PiggyBankData
+    @EnvironmentObject var step: CreateStepViewModel
+    var body: some View {
+        Picker("",selection: $piggyBank.fixedDepositType) {
+            ForEach(FixedDepositEnum.allCases) { option in
+                Text(LocalizedStringKey(option.rawValue)).tag(option.rawValue) // 设置标识符
+                    .onAppear {
+                        print("value:\(option.rawValue),type:\(type(of:option.rawValue))")
+                    }
+            }
+        }
+        .labelsHidden()
+        .pickerStyle(.segmented)
+        .opacity(step.tab.isRegular && piggyBank.isFixedDeposit ? 1 : 0)
+        .padding(5)
+    }
+}
 // 底部显示的视图
 struct HomeCreateInputFootNoteView: View {
     @EnvironmentObject var piggyBank: PiggyBankData
@@ -211,6 +248,8 @@ struct HomeCreateInputFootNoteView: View {
                 Text("Select the piggy bank icon.")
             case .amount:
                 Text("Set the initial amount for the piggy bank.")
+            case .regular:
+                Text("Set up a fixed deposit for your piggy bank.")
             case .expirationDate:
                 Text("Set an expiration date for the piggy bank.")
             case .complete:

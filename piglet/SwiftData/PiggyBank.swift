@@ -8,6 +8,16 @@
 import SwiftData
 import SwiftUI
 
+enum FixedDepositEnum: String, CaseIterable, Identifiable {
+    var id: String {
+        self.rawValue
+    }
+    case day
+    case week
+    case month
+    case year
+}
+
 @Model
 class PiggyBank {
     var name: String = ""  // 存钱罐名称
@@ -19,6 +29,8 @@ class PiggyBank {
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isPrimary: Bool = false // 标记主要存钱罐
+    var isFixedDeposit: Bool = false  // 定期存款
+    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  存款日期
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
     @Transient
@@ -48,7 +60,7 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isPrimary: Bool) {
+    init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isFixedDeposit:Bool,fixedDepositType:String, isPrimary: Bool) {
         self.name = name
         self.icon = icon
         self.initialAmount = initialAmount
@@ -57,6 +69,8 @@ class PiggyBank {
         self.creationDate = creationDate
         self.expirationDate = expirationDate
         self.isExpirationDateEnabled = isExpirationDateEnabled
+        self.isFixedDeposit = isFixedDeposit
+        self.fixedDepositType = fixedDepositType
         self.isPrimary = isPrimary
     }
     
@@ -88,9 +102,9 @@ class PiggyBank {
     }
     
     static var PiggyBanks: [PiggyBank] {
-        let carPiggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: true)
-        let iPhonePiggyBank = PiggyBank(name: "iPhone 15 pro Max", icon: "iphone.gen2", initialAmount: 5555, targetAmount: 8999, amount: 5555, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: false)
-        let housePiggyBank = PiggyBank(name: "新房子", icon: "building.2", initialAmount: 200000, targetAmount: 800000, amount: 0, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: false)
+        let carPiggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: true)
+        let iPhonePiggyBank = PiggyBank(name: "iPhone 15 pro Max", icon: "iphone.gen2", initialAmount: 5555, targetAmount: 8999, amount: 5555, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: false)
+        let housePiggyBank = PiggyBank(name: "新房子", icon: "building.2", initialAmount: 200000, targetAmount: 800000, amount: 0, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: false)
         
         return [carPiggyBank, iPhonePiggyBank, housePiggyBank]
     }

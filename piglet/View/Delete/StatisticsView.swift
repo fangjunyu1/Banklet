@@ -71,7 +71,6 @@ struct StatisticsView: View {
         
         // 获取今年的全部月份
         for month in 1...12 {
-            print("month")
             let components = DateComponents(year: nowYear, month: month,day: 1)
             if let date = calendar.date(from: components) {
                 print(date) // 转换成功后的具体日期

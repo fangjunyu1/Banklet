@@ -13,7 +13,7 @@ struct PreviewTradeView: View {
     @State private var hvm = HomeViewModel()
     @FocusState private var focus: Field?
     init() {
-        self.hvm.piggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isPrimary: true)
+        self.hvm.piggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, isPrimary: true)
     }
     
     var body: some View {
