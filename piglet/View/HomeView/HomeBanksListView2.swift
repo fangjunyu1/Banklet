@@ -85,18 +85,8 @@ struct HomeBanksListView2: View {
                     .padding(.horizontal,20)
                 })
             }
-            .onMove { indices, newOffset in
-                var banks = allPiggyBank
-                banks.move(fromOffsets: indices, toOffset: newOffset)
-                for (index,bank) in banks.enumerated() {
-                    bank.sortOrder = index
-                }
-                do {
-                    try context.save()
-                } catch {
-                    print("保存失败")
-                }
-            }
+            .onMove(perform: HomeBanksListMove)
+            .onDelete(perform: HomeBanksListDelete)
             .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0)) // 上下间隔 8
             .listRowBackground(Color.clear) // 保证行之间显示背景间隔
             .listRowSeparator(.hidden)
@@ -109,6 +99,34 @@ struct HomeBanksListView2: View {
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .navigationTitle("List")
         .modifier(BackgroundListModifier())
+    }
+    
+    private func HomeBanksListMove(from indices: IndexSet,to newOffset: Int) {
+        var banks = allPiggyBank
+        banks.move(fromOffsets: indices, toOffset: newOffset)
+        for (index,bank) in banks.enumerated() {
+            bank.sortOrder = index
+        }
+        do {
+            try context.save()
+        } catch {
+            print("保存失败")
+        }
+    }
+    
+    private func HomeBanksListDelete(offsets:IndexSet) {
+        let itemToRemove = offsets.map { allPiggyBank[$0] }
+        withAnimation {
+            for item in itemToRemove {
+                context.delete(item)
+            }
+        }
+        do {
+            try context.save()
+            print("删除成功")
+        } catch {
+            print("保存失败")
+        }
     }
 }
 
