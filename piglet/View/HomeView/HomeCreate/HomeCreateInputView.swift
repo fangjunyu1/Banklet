@@ -56,11 +56,15 @@ struct HomeCreateInputView: View {
                         HomeCreateInputFootNoteView()
                         // 启用定期存款，显示定期存款金额视图
                         if piggyBank.isFixedDeposit {
-                            HomeCreateInputRegularAmountView(isFocus: $isFocus)
-                                .modifier(HomeCreateInputModifier())
-                                .transition(.move(edge: .bottom).combined(with: .opacity))
-                            FixedDepositFootNoteView()
+                            VStack {
+                                HomeCreateInputRegularAmountView(isFocus: $isFocus)
+                                    .modifier(HomeCreateInputModifier())
+                                FixedDepositFootNoteView()
+                            }
+                            .transition(.move(edge: .bottom).combined(with: .opacity))
                         }
+                        Spacer().frame(height:20)
+                        HomeCreateInputRegularComponentsView()
                     }
                     
                 case .expirationDate:
@@ -79,6 +83,76 @@ struct HomeCreateInputView: View {
         }
     }
 }
+
+struct HomeCreateInputRegularComponentsView: View {
+    @EnvironmentObject var piggyBank: PiggyBankData
+    @EnvironmentObject var step: CreateStepViewModel
+    
+    var weekSymbol: [String] {
+        let dateFormat = DateFormatter()
+        return dateFormat.veryShortStandaloneWeekdaySymbols
+    }
+    var body: some View {
+        // 每日组件
+        if piggyBank.isFixedDeposit {
+            if piggyBank.fixedDepositType == FixedDepositEnum.day.rawValue {
+                
+                VStack {
+                    DatePicker("",
+                               selection: $piggyBank.fixedDepositTime,
+                               displayedComponents: .hourAndMinute
+                    )
+                    .frame(width: 70)
+                    Footnote(text: "Automatically save at the selected time each day.")
+                        .multilineTextAlignment(.center)
+                        .padding(.top,3)
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.week.rawValue {
+                VStack {
+                    HStack(spacing:30) {
+                        ForEach(Array(weekSymbol.enumerated()), id:\.offset) { index,item in
+                            Button(action:{
+                                piggyBank.fixedDepositWeekday = index
+                                print("\(index)")
+                            }, label: {
+                                Text("\(item)")
+                                    .foregroundColor(index == piggyBank.fixedDepositWeekday ? Color.blue : .secondary)
+                                    .background {
+                                        if index == piggyBank.fixedDepositWeekday  {
+                                            Circle().fill(Color.blue.opacity(0.15))
+                                                .frame(width: 40, height: 40)
+                                        }
+                                    }
+                            })
+                        }
+                    }
+                    Footnote(text: "Automatically saves data weekly at selected days and specific times.")
+                        .multilineTextAlignment(.center)
+                        .padding(.top,3)
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.month.rawValue {
+                VStack {
+                    Text("月")
+                    Footnote(text: "The funds will be automatically deposited each month at the selected weekday and a specific time; if no date is selected for the month (such as the 31st), the system will automatically roll over to the last day of the month.")
+                        .multilineTextAlignment(.center)
+                        .padding(.top,3)
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.year.rawValue {
+                VStack {
+                    Text("年")
+                    Footnote(text: "Automatically saves data annually on selected dates and at specific times.")
+                        .multilineTextAlignment(.center)
+                        .padding(.top,3)
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+    }
+}
+
 
 // 定期存款金额提示
 struct FixedDepositFootNoteView: View {

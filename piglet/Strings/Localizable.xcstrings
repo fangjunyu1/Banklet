@@ -4477,6 +4477,42 @@
         }
       }
     },
+    "Automatically save at the selected time each day." : {
+      "comment" : "每天在选定的时间自动存入。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每天在选定的时间自动存入。"
+          }
+        }
+      }
+    },
+    "Automatically saves data annually on selected dates and at specific times." : {
+      "comment" : "每年在选定的日期和特定时间自动存入。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每年在选定的日期和特定时间自动存入。"
+          }
+        }
+      }
+    },
+    "Automatically saves data weekly at selected days and specific times." : {
+      "comment" : "每周在选定的星期和特定时间自动存入。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每周在选定的星期和特定时间自动存入。"
+          }
+        }
+      }
+    },
     "Background" : {
       "comment" : "1.0.6:背景",
       "extractionState" : "manual",
@@ -30717,6 +30753,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "泰銖"
+          }
+        }
+      }
+    },
+    "The funds will be automatically deposited each month at the selected weekday and a specific time; if no date is selected for the month (such as the 31st), the system will automatically roll over to the last day of the month." : {
+      "comment" : "每月在选定的星期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月在选定的星期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。"
           }
         }
       }

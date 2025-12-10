@@ -16,8 +16,7 @@ final class DataController: ObservableObject {
     var context: ModelContext { container.mainContext }
     private init() {
         self.container = try! ModelContainer(
-            for: PiggyBank.self,
-                 SavingsRecord.self,
+            for:PiggyBank.self, SavingsRecord.self,
             configurations: ModelConfigManager.shared.currentConfiguration)
     }
     

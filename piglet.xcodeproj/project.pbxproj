@@ -1344,6 +1344,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */,
+				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
 				1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */,
 				1DD089602EC1CD7C002EE03D /* HapticManager.swift */,
@@ -1351,7 +1352,6 @@
 				1D06A3E32DFFE93E00F145F6 /* IconChanger.swift */,
 				1D7ED6F42DFEE4D8000EB349 /* SoundManager.swift */,
 				1D06A3E52DFFE95500F145F6 /* TransparentViewController.swift */,
-				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

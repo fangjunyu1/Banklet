@@ -222,20 +222,19 @@ final class ActiveViewModel:ObservableObject {
         }
         
         // Step 4: 创建新的人生存钱罐
-        let piggyBank = PiggyBank(name: "Life savings jar",
+        let piggyBank = PiggyBank(isPrimary: true,
+                                  name: "Life savings jar",
                                   icon: "person.fill",
-                                  initialAmount:
-                                    0,
+                                  amount: 0,
+                                  initialAmount: 0,
                                   targetAmount: Double(input.lifeSavingsBank ?? 0),
-                                  amount:
-                                    0,
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
                                   fixedDepositType: FixedDepositEnum.day.rawValue,
-                                  fixedDepositAmount: nil,
-                                  isPrimary: true)
+                                  fixedDepositAmount: 0
+                                  )
         
         context.insert(piggyBank) // 将对象插入到上下文中
         
@@ -267,20 +266,19 @@ final class ActiveViewModel:ObservableObject {
         }
         
         // Step 4: 创建新的生活保障金
-        let piggyBank = PiggyBank(name: "Emergency Fund",
+        let piggyBank = PiggyBank(isPrimary: true,
+                                  name: "Emergency Fund",
                                   icon: "heart",    // 爱心图标
-                                  initialAmount:
-                                    0,
+                                  amount: 0,
+                                  initialAmount: 0,
                                   targetAmount: Double(input.emergencyFund ?? 0),
-                                  amount:
-                                    0,
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
                                   fixedDepositType: FixedDepositEnum.day.rawValue,
-                                  fixedDepositAmount: nil,
-                                  isPrimary: true)
+                                  fixedDepositAmount: 0
+                                  )
         
         context.insert(piggyBank) // 将对象插入到上下文中
         

@@ -10,18 +10,23 @@ import SwiftUI
 
 @Model
 class PiggyBank {
-    var name: String = ""  // 存钱罐名称
-    var icon:String = ""   // 图标名称
-    var amount: Double = 0.0   // 存钱罐金额
-    var initialAmount: Double = 0.0 // 初始化金额，仅首次标记，用于后续展示
-    var targetAmount: Double = 0.0  // 目标金额
+    var isPrimary: Bool = false// 标记主要存钱罐
+    var name: String = "" // 存钱罐名称
+    var icon: String = "apple.logo"   // 图标名称
+    var amount: Double = 0   // 存钱罐金额
+    var initialAmount: Double = 0 // 初始化金额，仅首次标记，用于后续展示
+    var targetAmount: Double = 1  // 目标金额
     var creationDate: Date = Date()    // 创建日期
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
-    var isPrimary: Bool = false // 标记主要存钱罐
     var isFixedDeposit: Bool = false  // 定期存款
-    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  存款类型
+    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  定期存款类型
     var fixedDepositAmount: Double = 0.0    // 定期存款金额
+    var nextDepositDate: Date = Date()  // 定期存款日期
+    var fixedDepositMonth: Int = 1     // 定期存款-几月（1-12）
+    var fixedDepositWeekday: Int = 1    // 定期存款-周几（0表示日，1表示一，范围0-6）
+    var fixedDepositDay: Int = 1     // 定期存款-几号（1-31）
+    var fixedDepositTime: Date = Date() // 定期存款-时间
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
     @Transient
@@ -51,19 +56,26 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(name: String, icon: String, initialAmount: Double, targetAmount: Double, amount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool,isFixedDeposit:Bool,fixedDepositType:String,fixedDepositAmount: Double?, isPrimary: Bool) {
-        self.name = name
-        self.icon = icon
-        self.initialAmount = initialAmount
-        self.targetAmount = targetAmount
-        self.amount = amount
-        self.creationDate = creationDate
-        self.expirationDate = expirationDate
-        self.isExpirationDateEnabled = isExpirationDateEnabled
-        self.isFixedDeposit = isFixedDeposit
-        self.fixedDepositType = fixedDepositType
-        self.fixedDepositAmount = fixedDepositAmount ?? 0
-        self.isPrimary = isPrimary
+    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.day.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositMonth:Int = 1, fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
+        self.isPrimary = isPrimary  // 标记主要存钱罐
+        self.name = name    // 存钱罐名称
+        self.icon = icon    // 存钱罐徒步
+        self.amount = amount    // 存钱罐金额
+        self.initialAmount = initialAmount  // 初始化金额
+        self.targetAmount = targetAmount    // 目标金额
+        self.creationDate = creationDate    // 创建日期
+        self.expirationDate = expirationDate    // 截止日期
+        self.isExpirationDateEnabled = isExpirationDateEnabled  // 是否设置截止日期
+        self.isFixedDeposit = isFixedDeposit    // 定期存款
+        self.fixedDepositType = fixedDepositType    // 定期存款类型
+        self.fixedDepositAmount = fixedDepositAmount    // 定期存款金额
+        self.nextDepositDate = nextDepositDate    // 定期存款日期
+        self.fixedDepositMonth = fixedDepositMonth     // 定期存款-月（1-12）
+        self.fixedDepositWeekday = fixedDepositWeekday     // 定期存款-周（1-7）
+        self.fixedDepositDay = fixedDepositDay     // 定期存款-日（1-31）
+        self.fixedDepositTime = fixedDepositTime   // 定期存款-时分
+        self.completionDate = completionDate
+        self.sortOrder = sortOrder
     }
     
     @MainActor
@@ -94,10 +106,9 @@ class PiggyBank {
     }
     
     static var PiggyBanks: [PiggyBank] {
-        let carPiggyBank = PiggyBank(name: "奔驰车", icon: "car", initialAmount: 40000, targetAmount: 380000, amount: 40000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: true)
-        let iPhonePiggyBank = PiggyBank(name: "iPhone 15 pro Max", icon: "iphone.gen2", initialAmount: 5555, targetAmount: 8999, amount: 5555, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: false)
-        let housePiggyBank = PiggyBank(name: "新房子", icon: "building.2", initialAmount: 200000, targetAmount: 800000, amount: 0, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false,fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: nil, isPrimary: false)
-        
+        let carPiggyBank = PiggyBank(isPrimary: true,name: "奔驰车", icon: "car", amount: 40000, initialAmount: 40000, targetAmount: 380000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let iPhonePiggyBank = PiggyBank(isPrimary: false, name: "iPhone 15 pro Max", icon: "iphone.gen2", amount: 5555, initialAmount: 5555, targetAmount: 8999, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let housePiggyBank = PiggyBank(isPrimary: false, name: "新房子", icon: "building.2", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
         return [carPiggyBank, iPhonePiggyBank, housePiggyBank]
     }
 }
