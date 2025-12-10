@@ -83,11 +83,12 @@ struct HomeCreateInputView: View {
 // 定期存款金额提示
 struct FixedDepositFootNoteView: View {
     var body: some View {
-        VStack {
+        HStack {
             Text("Set a fixed deposit amount for the piggy bank.")
                 .font(.footnote)
                 .foregroundColor(Color.gray)
                 .fixedSize(horizontal: false, vertical: true)
+            Spacer()
         }
     }
 }

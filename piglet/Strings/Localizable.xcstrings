@@ -23488,6 +23488,18 @@
         }
       }
     },
+    "Regular" : {
+      "comment" : "定期",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定期"
+          }
+        }
+      }
+    },
     "Remaining" : {
       "comment" : "剩余",
       "extractionState" : "manual",

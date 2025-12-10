@@ -135,7 +135,7 @@ struct HomeCreateInputRegularAmountView:View {
     @FocusState.Binding var isFocus: Bool
     var body: some View {
         HStack(spacing: 10) {
-            Text("Fixed deposit")
+            Text("Deposit Amount")
                 .fontWeight(.medium)
             Spacer()
             TextField("0", value: $piggyBank.fixedDepositAmount, format: .number)

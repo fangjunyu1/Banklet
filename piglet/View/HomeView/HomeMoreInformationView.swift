@@ -306,6 +306,7 @@ private struct HomeMoreInformationList: View {
                 DatePicker("", selection: date,displayedComponents: .date)
                     .frame(height:20)
                     .disabled(!isEdit)
+                    .padding(.trailing,-10)
             case .picker(let string):
                 Picker("", selection: string) {
                     ForEach(FixedDepositEnum.allCases, id: \.self) { option in
@@ -314,6 +315,8 @@ private struct HomeMoreInformationList: View {
                 }
                 .frame(height:20)
                 .pickerStyle(.menu)
+                .disabled(!isEdit)
+                .padding(.trailing,-10)
             }
         }
         .padding(10)
