@@ -34,7 +34,7 @@ final class CreateStepViewModel: ObservableObject {
         
         
         // Step 4: 计算下一次定期存款的日期
-        let nextDate = SavingsScheduler.calculateNextDate(type: data.fixedDepositType, time: data.fixedDepositTime, weekday: data.fixedDepositWeekday, day: data.fixedDepositDay)
+        let nextDate = SavingsScheduler.calculateNextDate(type: data.fixedDepositType, lastDate: data.fixedDepositTime, weekday: data.fixedDepositWeekday, day: data.fixedDepositDay)
         
         // Step 5: 创建存钱罐
         let piggyBank = PiggyBank(isPrimary: true,

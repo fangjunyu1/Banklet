@@ -23,7 +23,6 @@ struct Home: View {
         SortDescriptor(\PiggyBank.sortOrder),
         SortDescriptor(\PiggyBank.creationDate, order: .reverse)
     ])   // 所有存钱罐，按创建日期排序
-    
     var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数
@@ -122,6 +121,13 @@ struct Home: View {
             }
         }
         .contentShape(Rectangle())
+        .onChange(of: scenePhase) { _, newValue in
+            // 如果应用为活跃状态
+            if newValue == .active {
+                print("检查定期存款逻辑")
+                SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
+            }
+        }
     }
 }
 
