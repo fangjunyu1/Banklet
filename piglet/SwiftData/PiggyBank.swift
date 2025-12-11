@@ -22,11 +22,10 @@ class PiggyBank {
     var isFixedDeposit: Bool = false  // 定期存款
     var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  定期存款类型
     var fixedDepositAmount: Double = 0.0    // 定期存款金额
-    var nextDepositDate: Date = Date()  // 定期存款日期
-    var fixedDepositMonth: Int = 1     // 定期存款-几月（1-12）
-    var fixedDepositWeekday: Int = 1    // 定期存款-周几（0表示日，1表示一，范围0-6）
-    var fixedDepositDay: Int = 1     // 定期存款-几号（1-31）
-    var fixedDepositTime: Date = Date() // 定期存款-时间
+    var nextDepositDate: Date = Date()  // 最近一次定期存款日期
+    var fixedDepositWeekday: Int = 1    // 定期存款-周几（1表示日，1表示一，范围1-7）
+    var fixedDepositDay: Int = 1     // 定期存款-每月（1-31）
+    var fixedDepositTime: Date = Date() // 定期存款-每天时分、每年月日
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
     @Transient
@@ -56,7 +55,7 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.day.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositMonth:Int = 1, fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
+    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.day.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
         self.isPrimary = isPrimary  // 标记主要存钱罐
         self.name = name    // 存钱罐名称
         self.icon = icon    // 存钱罐徒步
@@ -70,7 +69,6 @@ class PiggyBank {
         self.fixedDepositType = fixedDepositType    // 定期存款类型
         self.fixedDepositAmount = fixedDepositAmount    // 定期存款金额
         self.nextDepositDate = nextDepositDate    // 定期存款日期
-        self.fixedDepositMonth = fixedDepositMonth     // 定期存款-月（1-12）
         self.fixedDepositWeekday = fixedDepositWeekday     // 定期存款-周（1-7）
         self.fixedDepositDay = fixedDepositDay     // 定期存款-日（1-31）
         self.fixedDepositTime = fixedDepositTime   // 定期存款-时分

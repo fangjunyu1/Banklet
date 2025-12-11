@@ -22,13 +22,12 @@ struct PiggyBankDraft {
     var fixedDepositType: String   //  存款类型
     var fixedDepositAmount: Double   // 每次存款金额
     var nextDepositDate: Date   // 定期存款日期
-    var fixedDepositMonth: Int    // 定期存款-月
-    var fixedDepositWeekday: Int    // 定期存款-周
-    var fixedDepositDay: Int    // 定期存款-日
-    var fixedDepositTime: Date    // 定期存款-时间
+    var fixedDepositWeekday: Int    // 定期存款-每周
+    var fixedDepositDay: Int    // 定期存款-每月
+    var fixedDepositTime: Date    // 定期存款-每天时分、每年月日
     var completionDate: Date    // 完成日期
     var sortOrder:Int   // 排序字段
-    // 只读字段
+    // 只读字段 
     var progress: Double    // 进度
     var difference: Double
     var amountText: String
@@ -50,7 +49,6 @@ struct PiggyBankDraft {
         self.fixedDepositType = model.fixedDepositType
         self.fixedDepositAmount = model.fixedDepositAmount
         self.nextDepositDate = model.nextDepositDate
-        self.fixedDepositMonth = model.fixedDepositMonth
         self.fixedDepositWeekday = model.fixedDepositWeekday
         self.fixedDepositDay = model.fixedDepositDay
         self.fixedDepositTime = model.fixedDepositTime
@@ -78,7 +76,6 @@ struct PiggyBankDraft {
         model.fixedDepositType = fixedDepositType
         model.fixedDepositAmount = fixedDepositAmount
         model.nextDepositDate = nextDepositDate
-        model.fixedDepositMonth = fixedDepositMonth
         model.fixedDepositWeekday = fixedDepositWeekday
         model.fixedDepositDay = fixedDepositDay
         model.fixedDepositTime = fixedDepositTime

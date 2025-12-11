@@ -9101,6 +9101,18 @@
         }
       }
     },
+    "Day" : {
+      "comment" : "日",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
+        }
+      }
+    },
     "Debt Model" : {
       "comment" : "负债模式",
       "extractionState" : "manual",
@@ -15236,6 +15248,9 @@
           }
         }
       }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "KRW" : {
       "comment" : "1.0.6:韩元",
@@ -30757,14 +30772,14 @@
         }
       }
     },
-    "The funds will be automatically deposited each month at the selected weekday and a specific time; if no date is selected for the month (such as the 31st), the system will automatically roll over to the last day of the month." : {
-      "comment" : "每月在选定的星期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。",
+    "The deposit will be automatically made on the selected date and at the specified time each month; if the selected date does not exist in a particular month (e.g., the 31st), the system will automatically postpone it to the last day of that month." : {
+      "comment" : "每月在选定的日期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。",
       "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每月在选定的星期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。"
+            "value" : "每月在选定的日期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。"
           }
         }
       }
@@ -31272,6 +31287,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "存取總次數"
+          }
+        }
+      }
+    },
+    "Trigger time" : {
+      "comment" : "触发时间",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "触发时间"
           }
         }
       }

@@ -112,16 +112,18 @@ struct HomeCreateInputRegularComponentsView: View {
                 VStack {
                     HStack(spacing:30) {
                         ForEach(Array(weekSymbol.enumerated()), id:\.offset) { index,item in
+                            let buttonIndex = index + 1
                             Button(action:{
-                                piggyBank.fixedDepositWeekday = index
-                                print("\(index)")
+                                piggyBank.fixedDepositWeekday = buttonIndex
+                                print("\(buttonIndex)")
                             }, label: {
                                 Text("\(item)")
-                                    .foregroundColor(index == piggyBank.fixedDepositWeekday ? Color.blue : .secondary)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(buttonIndex == piggyBank.fixedDepositWeekday ? Color.blue : .secondary)
                                     .background {
-                                        if index == piggyBank.fixedDepositWeekday  {
+                                        if buttonIndex == piggyBank.fixedDepositWeekday  {
                                             Circle().fill(Color.blue.opacity(0.15))
-                                                .frame(width: 40, height: 40)
+                                                .frame(width: 36, height: 36)
                                         }
                                     }
                             })
@@ -134,15 +136,26 @@ struct HomeCreateInputRegularComponentsView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.month.rawValue {
                 VStack {
-                    Text("月")
-                    Footnote(text: "The funds will be automatically deposited each month at the selected weekday and a specific time; if no date is selected for the month (such as the 31st), the system will automatically roll over to the last day of the month.")
+                    HStack {
+                        Picker("", selection: $piggyBank.fixedDepositDay) {
+                            ForEach(1..<32, id:\.self) { item in
+                                Text("\(item)")
+                            }
+                        }
+                        Text("Day")
+                    }
+                    Footnote(text: "The deposit will be automatically made on the selected date and at the specified time each month; if the selected date does not exist in a particular month (e.g., the 31st), the system will automatically postpone it to the last day of that month.")
                         .multilineTextAlignment(.center)
                         .padding(.top,3)
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.year.rawValue {
                 VStack {
-                    Text("年")
+                    DatePicker("",
+                               selection: $piggyBank.fixedDepositTime,
+                               displayedComponents: .date
+                    )
+                    .frame(width: 70)
                     Footnote(text: "Automatically saves data annually on selected dates and at specific times.")
                         .multilineTextAlignment(.center)
                         .padding(.top,3)

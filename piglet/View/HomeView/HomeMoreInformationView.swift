@@ -57,10 +57,6 @@ struct HomeMoreInformationView: View {
                 }
             }
         }
-        .onTapGesture {
-            print("点击了背景")
-            isFocused = false
-        }
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
         .padding(.top,20)
@@ -78,7 +74,11 @@ struct HomeMoreInformationView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
                     if isEdit {
+                        draft.nextDepositDate =  SavingsScheduler.calculateNextDate(type: draft.fixedDepositType, time: draft.fixedDepositTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
                         draft.apply(to: primary, context: context)
+                    } else {
+                        draft.nextDepositDate =  SavingsScheduler.calculateNextDate(type: draft.fixedDepositType, time: draft.fixedDepositTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+                        print("draft.nextDepositDate:\(draft.nextDepositDate)")
                     }
                     withAnimation {
                         isEdit.toggle()
@@ -95,6 +95,10 @@ struct HomeMoreInformationView: View {
         .background {
             AppColor.appBgGrayColor
                 .ignoresSafeArea()
+                .onTapGesture {
+                    print("点击了背景")
+                    isFocused = false
+                }
         }
         .onAppear {
             // 显示时，设置标志位为 true
@@ -162,7 +166,12 @@ private struct HomeMoreInformationList1: View {
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
-        .background(Color.white)
+        .background {
+            Color.white.onTapGesture {
+                print("点击了背景")
+                isFocused = false
+            }
+        }
         .cornerRadius(10)
     }
 }
@@ -185,11 +194,36 @@ private struct HomeMoreInformationList2: View {
                 Divider()
                 // 存款金额
                 HomeMoreInformationList(name: "Deposit Amount",number: .amount($draft.fixedDepositAmount, $isFocused),isEdit:isEdit)
+                if draft.fixedDepositType == FixedDepositEnum.day.rawValue {
+                    Divider()
+                    // 存款时间 - 时/分
+                    HomeMoreInformationList(name: "Deposit time",number: .timePicker($draft.fixedDepositTime),isEdit:isEdit)
+                } else if draft.fixedDepositType == FixedDepositEnum.year.rawValue {
+                    Divider()
+                    // 存款时间 - 月/日
+                    HomeMoreInformationList(name: "Deposit time",number: .datePicker($draft.fixedDepositTime),isEdit:isEdit)
+                } else if draft.fixedDepositType == FixedDepositEnum.week.rawValue {
+                    Divider()
+                    // 存款时间 - 周
+                    HomeMoreInformationList(name: "Deposit time",number: .pickerWeek($draft.fixedDepositWeekday),isEdit:isEdit)
+                } else if draft.fixedDepositType == FixedDepositEnum.month.rawValue {
+                    Divider()
+                    // 存款时间 - 月
+                    HomeMoreInformationList(name: "Deposit time",number: .pickerDay($draft.fixedDepositDay),isEdit:isEdit)
+                }
+                Divider()
+                // 触发时间
+                HomeMoreInformationList(name: "Trigger time",number: .date(draft.nextDepositDate),isEdit:isEdit)
             }
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
-        .background(Color.white)
+        .background {
+            Color.white.onTapGesture {
+                print("点击了背景")
+                isFocused = false
+            }
+        }
         .cornerRadius(10)
         .sheet(isPresented: $isPickerDate) {
             VStack {
@@ -229,7 +263,12 @@ private struct HomeMoreInformationList3: View {
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
-        .background(Color.white)
+        .background {
+            Color.white.onTapGesture {
+                print("点击了背景")
+                isFocused = false
+            }
+        }
         .cornerRadius(10)
         .sheet(isPresented: $isPickerDate) {
             VStack {
@@ -269,6 +308,11 @@ private struct HomeMoreInformationList: View {
     var name: String
     var number: MoreInfomationEnum
     var isEdit: Bool
+    var weekList: [String] {
+        let component = DateFormatter()
+        let week = component.veryShortStandaloneWeekdaySymbols ?? []
+        return week
+    }
     var body: some View {
         HStack {
             Text(LocalizedStringKey(name))
@@ -293,7 +337,10 @@ private struct HomeMoreInformationList: View {
                 Text(string)
                     .foregroundColor(Color.gray)
             case .date(let date):
-                Text(date.formatted(date: .long,time: .omitted))
+                Text(date.formatted(date: .numeric,time: .shortened))
+                    .foregroundColor(Color.gray)
+            case .time(let date):
+                Text(date.formatted(date: .omitted,time: .complete))
                     .foregroundColor(Color.gray)
             case .record(let double):
                 Text("\(double.formatted())")
@@ -302,6 +349,11 @@ private struct HomeMoreInformationList: View {
                 Toggle("",isOn: bool)
                     .frame(height:20)
                     .disabled(!isEdit)
+            case .timePicker(let date):
+                DatePicker("", selection: date,displayedComponents: .hourAndMinute)
+                    .frame(height:20)
+                    .disabled(!isEdit)
+                    .padding(.trailing,-10)
             case .datePicker(let date):
                 DatePicker("", selection: date,displayedComponents: .date)
                     .frame(height:20)
@@ -317,8 +369,32 @@ private struct HomeMoreInformationList: View {
                 .pickerStyle(.menu)
                 .disabled(!isEdit)
                 .padding(.trailing,-10)
+            case .pickerWeek(let num):
+                Picker("", selection: num) {
+                    ForEach(Array(weekList.enumerated()), id:\.offset) { index, item in
+                        Text("\(item)")
+                            .tag(index + 1)
+                    }
+                }
+                .frame(height:20)
+                .pickerStyle(.menu)
+                .disabled(!isEdit)
+                .padding(.trailing,-10)
+            case .pickerDay(let num):
+                HStack {
+                    Picker("", selection: num) {
+                        ForEach(1..<32, id: \.self) { item in
+                            Text("\(item)")
+                        }
+                    }
+                    .frame(height:20)
+                    .pickerStyle(.menu)
+                    .disabled(!isEdit)
+                    .padding(.trailing,-10)
+                    Text("Day")
+                }
             }
-        }
+        } // fixedDepositWeekday fixedDepositDay
         .padding(10)
     }
 }
@@ -378,9 +454,13 @@ private enum MoreInfomationEnum {
     case toggle(Binding<Bool>)
     case progress(String)
     case date(Date)
+    case time(Date)
     case datePicker(Binding<Date>)
+    case timePicker(Binding<Date>)
     case record(Double)
     case picker(Binding<String>)
+    case pickerWeek(Binding<Int>)
+    case pickerDay(Binding<Int>)
 }
 
 #Preview {

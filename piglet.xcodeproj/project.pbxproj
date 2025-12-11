@@ -141,6 +141,7 @@
 		1D1561AE2EB33C110041C0DD /* lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561AD2EB33C110041C0DD /* lock.json */; };
 		1D1561B02EB33C1E0041C0DD /* security.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1561AF2EB33C1E0041C0DD /* security.json */; };
 		1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1695EA2D201BB10043A645 /* ContentView.swift */; };
+		1D17FA492EEA6B6D00C306AF /* SavingsScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D17FA482EEA6B6B00C306AF /* SavingsScheduler.swift */; };
 		1D1BE06F2EE064EA009BBAB1 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */; };
 		1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */; };
 		1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* Double.swift */; };
@@ -522,6 +523,7 @@
 		1D1561AD2EB33C110041C0DD /* lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lock.json; sourceTree = "<group>"; };
 		1D1561AF2EB33C1E0041C0DD /* security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = security.json; sourceTree = "<group>"; };
 		1D1695EA2D201BB10043A645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D17FA482EEA6B6B00C306AF /* SavingsScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsScheduler.swift; sourceTree = "<group>"; };
 		1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -1069,6 +1071,7 @@
 		1D6E81202ECDFCBD00C88269 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				1D17FA482EEA6B6B00C306AF /* SavingsScheduler.swift */,
 				1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */,
 				1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */,
 				1DEC906F2ED7382600DFDE90 /* SilentMode.swift */,
@@ -1923,6 +1926,7 @@
 				1D27D83C2EB5CB1300F6AFE6 /* HomeBanksListView.swift in Sources */,
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
 				1DF137632EE2E4ED002429AD /* HomeBanksListView2.swift in Sources */,
+				1D17FA492EEA6B6D00C306AF /* SavingsScheduler.swift in Sources */,
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
