@@ -64,7 +64,7 @@ struct ThanksView: View {
                             openURL(url)
                         }
                     } label: {
-                        Text("App Store")
+                        Text(verbatim: "App Store")
                             .fontWeight(.medium)
                             .padding(.vertical,20)
                             .padding(.horizontal,50)

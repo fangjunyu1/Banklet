@@ -246,7 +246,6 @@
 		1D7359722D6425F900F7D599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359712D6425F900F7D599 /* Assets.xcassets */; };
 		1D7359752D6425F900F7D599 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7359742D6425F900F7D599 /* Preview Assets.xcassets */; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
-		1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */; };
 		1D7728412ED06DF20046B35B /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728402ED06DEE0046B35B /* TradeViewModel.swift */; };
 		1D7728432ED08C800046B35B /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728422ED08C7E0046B35B /* TradeView.swift */; };
 		1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728442ED08D880046B35B /* HomeViewModel.swift */; };
@@ -306,7 +305,6 @@
 		1DCAA82D2EDFC4DF00460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
 		1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C562D375ADE0037153C /* BackgroundView.swift */; };
-		1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C5A2D37B12A0037153C /* ManagingView.swift */; };
 		1DD089582EC16C3D002EE03D /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD089572EC16C34002EE03D /* PremiumView.swift */; };
 		1DD0895D2EC17E9A002EE03D /* vip.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DD0895C2EC17E9A002EE03D /* vip.json */; };
 		1DD0895F2EC187D4002EE03D /* PreminumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD0895E2EC187C5002EE03D /* PreminumList.swift */; };
@@ -630,7 +628,6 @@
 		1D7359712D6425F900F7D599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7359742D6425F900F7D599 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
-		1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		1D7728402ED06DEE0046B35B /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
 		1D7728422ED08C7E0046B35B /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
 		1D7728442ED08D880046B35B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -711,7 +708,6 @@
 		1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piglet.entitlements; sourceTree = "<group>"; };
 		1DCB0C542D3759D00037153C /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		1DCB0C562D375ADE0037153C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		1DCB0C5A2D37B12A0037153C /* ManagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagingView.swift; sourceTree = "<group>"; };
 		1DD089572EC16C34002EE03D /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
 		1DD0895C2EC17E9A002EE03D /* vip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vip.json; sourceTree = "<group>"; };
 		1DD0895E2EC187C5002EE03D /* PreminumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreminumList.swift; sourceTree = "<group>"; };
@@ -985,7 +981,6 @@
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
-				1DD089592EC16CB2002EE03D /* Delete */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1370,15 +1365,6 @@
 				1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		1DD089592EC16CB2002EE03D /* Delete */ = {
-			isa = PBXGroup;
-			children = (
-				1DCB0C5A2D37B12A0037153C /* ManagingView.swift */,
-				1D749EBE2D59AEA600D04A07 /* StatisticsView.swift */,
-			);
-			path = Delete;
 			sourceTree = "<group>";
 		};
 		1DDDD2692EAD099E00AD9A5A /* String */ = {
@@ -1947,7 +1933,6 @@
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
-				1D749EBF2D59AEA600D04A07 /* StatisticsView.swift in Sources */,
 				1D7728432ED08C800046B35B /* TradeView.swift in Sources */,
 				1DC524922ECDDC7600E48964 /* HomeCreateView.swift in Sources */,
 				1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */,
@@ -1963,7 +1948,6 @@
 				1D051A152D58F34D004E2736 /* CurrencySymbolView.swift in Sources */,
 				1DD14EE22EC033DE00325DF7 /* GIFView.swift in Sources */,
 				1DEC98802C10315500BEECFF /* Bundle.swift in Sources */,
-				1DCB0C5B2D37B12A0037153C /* ManagingView.swift in Sources */,
 				1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */,
 				1D06A3E42DFFE94000F145F6 /* IconChanger.swift in Sources */,
 				1D39BB362EA3EB7E007C3017 /* AppColor.swift in Sources */,

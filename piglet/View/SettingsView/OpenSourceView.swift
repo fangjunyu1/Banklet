@@ -51,7 +51,7 @@ struct OpenSourceView: View {
             
             Spacer().frame(height: 10)
             
-            Text("https://github.com/fangjunyu1/Banklet")
+            Text(verbatim: "https://github.com/fangjunyu1/Banklet")
                 .tint(.gray)
                 .font(.caption2)
                 .multilineTextAlignment(.center)

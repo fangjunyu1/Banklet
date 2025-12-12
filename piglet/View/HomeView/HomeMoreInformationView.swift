@@ -436,7 +436,7 @@ struct PreviewMoreInformationView: View {
     }
     var body: some View {
         VStack {
-            Text("Toggle")
+            Text(verbatim: "Toggle")
                 .onTapGesture {
                     isSheet.toggle()
                 }

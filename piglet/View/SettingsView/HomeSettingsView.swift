@@ -145,7 +145,7 @@ struct HomeSettingsView: View {
                 appStorage.isRatingWindow = false
                 appStorage.isActivityMusic = false
             }, label: {
-                Text("重置内购和欢迎界面")
+                Text(verbatim:"重置内购和欢迎界面")
                     .font(.caption2)
                     .foregroundColor(.gray)
             })

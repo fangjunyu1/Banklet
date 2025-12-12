@@ -25,9 +25,6 @@
     "%@" : {
 
     },
-    "%@ %%" : {
-
-    },
     "%lld" : {
 
     },
@@ -38,6 +35,12 @@
       "comment" : "永久会员一次购买，永久有效，无需续费。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عضوية دائمة، شراء لمرة واحدة، صالحة دائمًا، لا حاجة للتجديد."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -50,6 +53,12 @@
       "comment" : "丰富的纯色主题背景，让每一次打开都充满新鲜感。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خلفيات ذات ألوان صافية غنية، تجعل كل مرة تفتح فيها التطبيق مليئة بالجدة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -65,7 +74,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "معلومات عنا"
+            "value" : "من نحن"
           }
         },
         "ca" : {
@@ -280,236 +289,14 @@
         }
       }
     },
-    "Access grid" : {
-      "comment" : "1.0.6:存取方格",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شبكة الوصول"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Graella d'accés"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přístupová mřížka"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adgangsgitter"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zugangsraster"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Πλέγμα πρόσβασης"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuadrícula de transacciones"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuadrícula de transacciones"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pääsyverkko"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grille d'accès"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grille d'accès"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "רשת גישה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एक्सेस ग्रिड"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pristupna mreža"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hozzáférési rács"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jaringan akses"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Griglia di accesso"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アクセスグリッド"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "액세스 그리드"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "grid akses"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tilgangsnett"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toegangsrooster"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "siatka dostępu"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "grelha de acesso"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "grelha de acesso"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "grila de acces"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "сетка доступа"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "prístupová mriežka"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Transaktionsruta"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ตารางธุรกรรม"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İşlem tablosu"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Таблиця операцій"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bảng giao dịch"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "存取方格"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取方格"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取方格"
-          }
-        }
-      }
-    },
     "Access Notes" : {
-      "comment" : "1.0.10存取备注",
+      "comment" : "存取备注",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ملاحظات الوصول"
+            "value" : "ملاحظات الإيداع والسحب"
           }
         },
         "ca" : {
@@ -728,6 +515,12 @@
       "comment" : "存取进度",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقدم الإيداع والسحب"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -743,7 +536,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تاريخ الوصول"
+            "value" : "سجلات الإيداع والسحب"
           }
         },
         "ca" : {
@@ -965,7 +758,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "عدد مرات الوصول"
+            "value" : "عدد مرات الإيداع والسحب"
           }
         },
         "ca" : {
@@ -1187,7 +980,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إمكانية الوصول"
+            "value" : "إمكانيات مساعدة"
           }
         },
         "ca" : {
@@ -1403,13 +1196,13 @@
       }
     },
     "Accumulate today and reap tomorrow." : {
-      "comment" : "1.0.6:积累今天，收获明天。",
+      "comment" : "积累今天，收获明天。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إجمع اليوم واحصد غداً."
+            "value" : "اجمع اليوم، واحصد غدًا."
           }
         },
         "ca" : {
@@ -1625,7 +1418,7 @@
       }
     },
     "Activity" : {
-      "comment" : "1.0.10活动",
+      "comment" : "活动",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -1850,6 +1643,12 @@
       "comment" : "应对未来的风险",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مواجهة المخاطر المستقبلية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1862,6 +1661,12 @@
       "comment" : "高级功能",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ميزات متقدمة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1871,7 +1676,7 @@
       }
     },
     "AED" : {
-      "comment" : "1.0.6:迪拉姆",
+      "comment" : "迪拉姆",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -2123,13 +1928,13 @@
       }
     },
     "After waiting for 10 seconds, hide the main view buttons and only show the animation." : {
-      "comment" : "1.0.6：等待10秒后，隐藏主视图按钮，仅显示动画。",
+      "comment" : "等待10秒后，隐藏主视图按钮，仅显示动画。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بعد الانتظار لمدة 10 ثواني، قم بإخفاء أزرار العرض الرئيسية وإظهار الرسوم المتحركة فقط."
+            "value" : "بعد 10 ثوانٍ، إخفاء زر العرض الرئيسي، وعرض الرسوم المتحركة فقط."
           }
         },
         "ca" : {
@@ -2345,13 +2150,13 @@
       }
     },
     "Age" : {
-      "comment" : "1.0.10:年龄",
+      "comment" : "年龄",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "عمر"
+            "value" : "العمر"
           }
         },
         "ca" : {
@@ -2570,6 +2375,12 @@
       "comment" : "全部",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الكل"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2582,6 +2393,12 @@
       "comment" : "全部动画",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع الرسوم المتحركة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2594,6 +2411,12 @@
       "comment" : "全部币种",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع العملات"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2606,6 +2429,12 @@
       "comment" : "全部图标",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع الرموز"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2621,7 +2450,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "كمية"
+            "value" : "المبلغ"
           }
         },
         "ca" : {
@@ -3065,7 +2894,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مطور مستقل من الصين."
+            "value" : "من مطور مستقل من الصين."
           }
         },
         "ca" : {
@@ -3281,13 +3110,13 @@
       }
     },
     "Animation" : {
-      "comment" : "1.0.6:动画",
+      "comment" : "动画",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الرسوم المتحركة"
+            "value" : "رسوم متحركة"
           }
         },
         "ca" : {
@@ -3503,7 +3332,7 @@
       }
     },
     "Annual salary" : {
-      "comment" : "1.0.10:年薪",
+      "comment" : "年薪",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -3724,9 +3553,6 @@
         }
       }
     },
-    "App Store" : {
-      "extractionState" : "manual"
-    },
     "Are you sure you want to delete this piggy bank?" : {
       "comment" : "你确定要删除该存钱罐么？",
       "extractionState" : "manual",
@@ -3734,7 +3560,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "هل أنت متأكد أنك تريد حذف هذه الحصالة؟"
+            "value" : "هل أنت متأكد من حذف هذا الحافظة؟"
           }
         },
         "ca" : {
@@ -3950,13 +3776,13 @@
       }
     },
     "ARS" : {
-      "comment" : "1.0.6:阿根廷比索",
+      "comment" : "阿根廷比索",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "البيزو الأرجنتيني"
+            "value" : "بيزو الأرجنتين"
           }
         },
         "ca" : {
@@ -4205,6 +4031,12 @@
       "comment" : "截止到 2025年6月，这只小猪已经成长了 9 个版本。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حتى يونيو 2025، نمت هذه الحافظة إلى 9 إصدارات."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4217,6 +4049,12 @@
       "comment" : "当时，我打算为房子和车子的目标努力，于是萌生出了开发一款存钱应用的想法。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في ذلك الوقت، كنت أنوي العمل من أجل هدف المنزل والسيارة، لذا نشأت فكرة تطوير تطبيق توفير المال."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4226,13 +4064,13 @@
       }
     },
     "AUD" : {
-      "comment" : "1.0.6:澳元",
+      "comment" : "澳元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الدولار الاسترالي"
+            "value" : "دولار أسترالي"
           }
         },
         "ca" : {
@@ -4481,6 +4319,12 @@
       "comment" : "每天在选定的时间自动存入。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيداع التلقائي يوميًا في الوقت المحدد."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4493,6 +4337,12 @@
       "comment" : "每年在选定的日期和特定时间自动存入。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيداع التلقائي سنويًا في التاريخ والوقت المحددين."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4505,6 +4355,12 @@
       "comment" : "每周在选定的星期和特定时间自动存入。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيداع التلقائي أسبوعيًا في اليوم والوقت المحددين."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4514,13 +4370,13 @@
       }
     },
     "Background" : {
-      "comment" : "1.0.6:背景",
+      "comment" : "背景",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "خلفية"
+            "value" : "الخلفية"
           }
         },
         "ca" : {
@@ -4739,6 +4595,12 @@
       "comment" : "背景图片",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورة الخلفية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4751,6 +4613,12 @@
       "comment" : "应用名称",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم التطبيق"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4775,6 +4643,12 @@
       "comment" : "根据你的当前年龄和当前薪资，自动推算职业起点、退休年龄和薪资增长率，计算一生财富。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استنادًا إلى عمرك الحالي وراتبك الحالي، يتم حساب نقطة بدء الوظيفة، ووقت التقاعد، ومعدل نمو الراتب، وحساب الثروة مدى الحياة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4787,6 +4661,12 @@
       "comment" : "最佳选择",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أفضل اختيار"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4799,6 +4679,12 @@
       "comment" : "模糊背景",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خلفية ضبابية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4808,7 +4694,7 @@
       }
     },
     "BRL" : {
-      "comment" : "1.0.6:巴西里亚尔",
+      "comment" : "巴西里亚尔",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -5064,13 +4950,13 @@
       "extractionState" : "manual"
     },
     "CAD" : {
-      "comment" : "1.0.6:加元",
+      "comment" : "加元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الدولار الكندي"
+            "value" : "دولار كندي"
           }
         },
         "ca" : {
@@ -5319,6 +5205,12 @@
       "comment" : "计算",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حساب"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5331,6 +5223,12 @@
       "comment" : "计算一生的财富",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حساب ثروة الحياة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5346,7 +5244,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يلغي"
+            "value" : "إلغاء"
           }
         },
         "ca" : {
@@ -5568,7 +5466,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الشخصيات."
+            "value" : "حروف."
           }
         },
         "ca" : {
@@ -5784,13 +5682,13 @@
       }
     },
     "CHF" : {
-      "comment" : "1.0.6:瑞士法郎",
+      "comment" : "瑞士法郎",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الفرنك السويسري"
+            "value" : "فرنك سويسري"
           }
         },
         "ca" : {
@@ -6039,6 +5937,12 @@
       "comment" : "选择方案",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر الخطة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6054,7 +5958,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إنهاء"
+            "value" : "إغلاق"
           }
         },
         "ca" : {
@@ -6270,7 +6174,7 @@
       }
     },
     "CNY" : {
-      "comment" : "1.0.6:人民币",
+      "comment" : "人民币",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -6528,7 +6432,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ينهي"
+            "value" : "اكتمل"
           }
         },
         "ca" : {
@@ -6744,13 +6648,13 @@
       }
     },
     "Completion date" : {
-      "comment" : "1.0.5完成日期",
+      "comment" : "完成日期",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تاريخ الانتهاء"
+            "value" : "تاريخ الاكتمال"
           }
         },
         "ca" : {
@@ -6969,6 +6873,12 @@
       "comment" : "配置应用的背景、动画、图标等相关参数信息。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تكوين التطبيق من حيث الخلفية والرسوم المتحركة والرموز وغيرها من المعلمات ذات الصلة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6984,7 +6894,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بالتأكيد"
+            "value" : "تأكيد"
           }
         },
         "ca" : {
@@ -7203,6 +7113,12 @@
       "comment" : "包含内容",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المحتوى المضمن"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7218,7 +7134,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يكمل"
+            "value" : "استمر"
           }
         },
         "ca" : {
@@ -7437,6 +7353,12 @@
       "comment" : "持续更新",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث مستمر"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7452,7 +7374,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يخلق"
+            "value" : "إنشاء"
           }
         },
         "ca" : {
@@ -7674,7 +7596,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إنشاء بنك أصبع"
+            "value" : "إنشاء حافظة النقود"
           }
         },
         "ca" : {
@@ -7893,6 +7815,12 @@
       "comment" : "创建完成",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتمل الإنشاء"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8123,230 +8051,8 @@
         }
       }
     },
-    "Cumulative deposit amount" : {
-      "comment" : "1.0.6:累计存款金额",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "مبلغ الإيداع التراكمي"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Import acumulat del dipòsit"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumulativní částka vkladu"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akkumuleret indskudsbeløb"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumulierter Einzahlungsbetrag"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Σωρευτικό ποσό κατάθεσης"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monto total ahorrado"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monto total ahorrado"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumulatiivinen talletussumma"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Montant cumulé du dépôt"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Montant cumulé du dépôt"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "סכום הפקדה מצטבר"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "संचयी जमा राशि"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumulativni iznos depozita"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Halmozott betét összege"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah setoran kumulatif"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Importo cumulativo del deposito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "累計預金額"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "누적 입금액"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah deposit terkumpul"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akkumulert innskuddsbeløp"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cumulatief stortingsbedrag"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Łączna kwota depozytu"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valor do depósito cumulativo"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valor do depósito cumulativo"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suma cumulativă a depozitului"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Совокупная сумма депозита"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suma kumulatívneho vkladu"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ackumulerat sparbelopp"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จำนวนเงินฝากสะสม"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toplam birikim miktarı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Загальна сума заощаджень"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tổng số tiền tiết kiệm"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "累计存款金额"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "累計存款金額"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "累計存款金額"
-          }
-        }
-      }
-    },
     "Currency Symbol" : {
-      "comment" : "1.0.6:货币符号",
+      "comment" : "货币符号",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -8793,6 +8499,12 @@
       "comment" : "当前动画",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرسوم المتحركة الحالية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8805,6 +8517,12 @@
       "comment" : "当前币种",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العملة الحالية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8817,6 +8535,12 @@
       "comment" : "当前图标",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرمز الحالي"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8829,6 +8553,12 @@
       "comment" : "当前方案",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخطة الحالية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8838,13 +8568,13 @@
       }
     },
     "CZK" : {
-      "comment" : "1.0.6:捷克克朗",
+      "comment" : "捷克克朗",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الكورونا التشيكية"
+            "value" : "كرونة تشيكية"
           }
         },
         "ca" : {
@@ -9093,6 +8823,12 @@
       "comment" : "每天",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوميًا"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9105,6 +8841,12 @@
       "comment" : "日",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوم"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9117,6 +8859,12 @@
       "comment" : "负债模式",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وضع الدين"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9126,13 +8874,13 @@
       }
     },
     "Delete" : {
-      "comment" : "1.0.5:删除",
+      "comment" : "删除",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يمسح"
+            "value" : "حذف"
           }
         },
         "ca" : {
@@ -9347,228 +9095,6 @@
         }
       }
     },
-    "Delete prompt" : {
-      "comment" : "删除提示",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "حذف النصائح"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suprimeix consells"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Smazat tipy"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slet tips"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tipps löschen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Διαγραφή συμβουλών"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar sugerencias"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar sugerencias"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poista vinkkejä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer les conseils"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer les conseils"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מחק טיפים"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "युक्तियाँ हटाएँ"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Izbriši savjete"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tippek törlése"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hapus tip"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elimina suggerimenti"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ヒントを削除する"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "팁 삭제"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Padamkan petua"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slett tips"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tips verwijderen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usuń wskazówki"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apagar dicas"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apagar dicas"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ștergeți sfaturile"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удалить советы"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odstrániť tipy"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ta bort tips"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ลบเคล็ดลับ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İpuçlarını sil"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Видалити поради"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Xóa mẹo"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "删除提示"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "刪除提示"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "刪除提示"
-          }
-        }
-      }
-    },
     "Delete this piggy bank" : {
       "comment" : "删除该存钱罐",
       "extractionState" : "manual",
@@ -9576,7 +9102,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "احذف هذا البنك الخنزير"
+            "value" : "حذف هذه الحافظة"
           }
         },
         "ca" : {
@@ -10017,6 +9543,12 @@
       "comment" : "存款金额",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مبلغ الإيداع"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10029,6 +9561,12 @@
       "comment" : "存款频率",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تكرار الإيداع"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10263,6 +9801,12 @@
       "comment" : "桌面图标",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رمز سطح المكتب"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10275,6 +9819,12 @@
       "comment" : "桌面小组件全面升级，支持透明与动态样式，与 App 同步焕新。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ترقية كاملة لأداة سطح المكتب المصغرة، دعم الشفافية والأنماط الديناميكية، وتجديد متزامن مع التطبيق."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10512,7 +10062,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قم بتطوير عادة الادخار وتسجيل المدخرات في حياتك لتجعل نفسك تشعر براحة أكبر."
+            "value" : "تنمية عادة التوفير، تسجيل المدخرات في حياتك، ليكون لديك راحة البال."
           }
         },
         "ca" : {
@@ -10731,6 +10281,12 @@
       "comment" : "开发者的致谢",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكر من المطور"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10740,13 +10296,13 @@
       }
     },
     "DKK" : {
-      "comment" : "1.0.6:丹麦克朗",
+      "comment" : "丹麦克朗",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الكرونة الدنماركية"
+            "value" : "كرونة دانمركية"
           }
         },
         "ca" : {
@@ -10995,6 +10551,12 @@
       "comment" : "邮件",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البريد الإلكتروني"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11007,6 +10569,12 @@
       "comment" : "没有配置邮箱",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتم تكوين البريد الإلكتروني"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11022,7 +10590,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يحرر"
+            "value" : "تعديل"
           }
         },
         "ca" : {
@@ -11241,6 +10809,12 @@
       "comment" : "生活保障金",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضمان المعيشة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11256,7 +10830,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تمكين آي كلاود"
+            "value" : "تمكين iCloud"
           }
         },
         "ca" : {
@@ -11475,6 +11049,12 @@
       "comment" : "获得专属动画效果，让储蓄过程更流畅、更生动。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "احصل على تأثيرات الرسوم المتحركة الحصرية، لجعل عملية التوفير أكثر سلاسة وحيوية."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11484,7 +11064,7 @@
       }
     },
     "EUR" : {
-      "comment" : "1.0.6:欧元",
+      "comment" : "欧元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -11742,7 +11322,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تاريخ انتهاء الصلاحية"
+            "value" : "تاريخ الانتهاء"
           }
         },
         "ca" : {
@@ -11961,6 +11541,12 @@
       "comment" : "到期时间",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت الاستحقاق"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11976,7 +11562,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "التحرير الكامل"
+            "value" : "اكتمال التعديل"
           }
         },
         "ca" : {
@@ -12195,6 +11781,12 @@
       "comment" : "定期存款",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيداع ثابت"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12204,13 +11796,13 @@
       }
     },
     "GBP" : {
-      "comment" : "1.0.6英镑",
+      "comment" : "英镑",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الجنيه البريطاني "
+            "value" : "جنيه إسترليني"
           }
         },
         "ca" : {
@@ -12462,7 +12054,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "عالمي"
+            "value" : "عام"
           }
         },
         "ca" : {
@@ -12685,6 +12277,12 @@
       "comment" : "拥有更多自定义选项、更流畅的动画和独特主题，让你的存钱罐焕发新生命。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزيد من الخيارات المخصصة، رسوم متحركة أكثر سلاسة، وموضوعات فريدة، تجعل حافظة نقودك حية من جديد."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12697,6 +12295,12 @@
       "comment" : "保障月份",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهر الضمان"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12709,6 +12313,12 @@
       "comment" : "统计数据消失了？",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل اختفت البيانات الإحصائية؟"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12721,6 +12331,12 @@
       "comment" : "你好，我是方君宇，一位来自中国的独立开发者。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبًا، أنا فانغ جونيو، مطور مستقل من الصين."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12730,13 +12346,13 @@
       }
     },
     "HKD" : {
-      "comment" : "1.0.6：港元",
+      "comment" : "港元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "دولار هونج كونج"
+            "value" : "دولار هونغ كونغ"
           }
         },
         "ca" : {
@@ -12985,6 +12601,12 @@
       "comment" : "主页",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الصفحة الرئيسية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13005,17 +12627,14 @@
         }
       }
     },
-    "https://github.com/fangjunyu1/Banklet" : {
-
-    },
     "HUF" : {
-      "comment" : "1.0.6:匈牙利福林",
+      "comment" : "匈牙利福林",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الفورنت المجري"
+            "value" : "فورنت مجري"
           }
         },
         "ca" : {
@@ -13264,6 +12883,12 @@
       "comment" : "我是一个刚刚入门的独立开发者，在成为开发者之前，我做过销售、项目驻场，也在餐饮行业工作过。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أنا مطور مستقل مبتدئ، قبل أن أصبح مطورًا، عملت في المبيعات، والإشراف على المشاريع، وأيضًا في مجال المطاعم."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13276,6 +12901,12 @@
       "comment" : "我希望它能帮助更多的人实现自己的目标，我也会不断更新，让应用更好用。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آمل أن يساعد التطبيق المزيد من الناس على تحقيق أهدافهم، وسأواصل التحديث لجعل التطبيق أفضل."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13291,7 +12922,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iCloud في مرحلة تجريبية، يرجى التبديل بحذر."
+            "value" : "iCloud في مرحلة الاختبار، يرجى توخي الحذر عند تبديل المفتاح."
           }
         },
         "ca" : {
@@ -13729,13 +13360,13 @@
       }
     },
     "IDR" : {
-      "comment" : "1.0.6:印尼盾",
+      "comment" : "印尼盾",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الروبية الإندونيسية"
+            "value" : "روبية إندونيسية"
           }
         },
         "ca" : {
@@ -13981,13 +13612,13 @@
       }
     },
     "ILS" : {
-      "comment" : "1.0.6:以色列新谢克尔",
+      "comment" : "以色列新谢克尔",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الشيكل الإسرائيلي الجديد"
+            "value" : "شيكل إسرائيلي جديد"
           }
         },
         "ca" : {
@@ -14239,6 +13870,12 @@
       "comment" : "2024年，从上一家公司离职后，我开始思考自己真正想做的事。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في 2024، بعد ترك الشركة السابقة، بدأت أفكر فيما أريد فعله حقًا."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14248,13 +13885,13 @@
       }
     },
     "In order to further demonstrate our protection of user privacy, we decided to host the application code as an open source project on GitHub." : {
-      "comment" : "1.0.5：为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。",
+      "comment" : "为了进一步显示我们对于用户隐私的保护，我们决定将应用代码作为开源项目托管在GitHub上。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ولإظهار حمايتنا لخصوصية المستخدم بشكل أكبر، قررنا استضافة رمز التطبيق كمشروع مفتوح المصدر على GitHub."
+            "value" : "لعرض حماية خصوصية المستخدم بشكل أفضل، قررنا استضافة كود التطبيق كمشروع مفتوح المصدر على GitHub."
           }
         },
         "ca" : {
@@ -14473,6 +14110,12 @@
       "comment" : "进行中",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قيد التقدم"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14485,6 +14128,12 @@
       "comment" : "输入信息有误",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معلومات غير صحيحة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14497,6 +14146,12 @@
       "comment" : "信息",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معلومات"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14512,7 +14167,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "المبلغ الأولي"
+            "value" : "المبلغ الابتدائي"
           }
         },
         "ca" : {
@@ -14728,13 +14383,13 @@
       }
     },
     "INR" : {
-      "comment" : "1.0.6:印度卢比",
+      "comment" : "印度卢比",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الروبية الهندية"
+            "value" : "روبية هندية"
           }
         },
         "ca" : {
@@ -14983,6 +14638,12 @@
       "comment" : "iOS & macOS 应用集合",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطبيقات iOS و macOS"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14995,6 +14656,12 @@
       "comment" : "建议准备 3-6 个月的生活开销，以应对暂时的失业、医疗支出或其他突发状况。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُنصح بتحضير نفقات المعيشة لمدة 3-6 أشهر لمواجهة البطالة المؤقتة، النفقات الطبية أو الحالات الطارئة الأخرى."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15004,13 +14671,13 @@
       }
     },
     "JPY" : {
-      "comment" : "1.0.6:日元",
+      "comment" : "日元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ين يابانى"
+            "value" : "ين ياباني"
           }
         },
         "cs" : {
@@ -15249,17 +14916,14 @@
         }
       }
     },
-    "Key" : {
-      "extractionState" : "manual"
-    },
     "KRW" : {
-      "comment" : "1.0.6:韩元",
+      "comment" : "韩元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "فاز"
+            "value" : "وون كوري"
           }
         },
         "ca" : {
@@ -15505,13 +15169,13 @@
       }
     },
     "Let the code show in the sun" : {
-      "comment" : "1.0.5：让代码展现在阳光下",
+      "comment" : "让代码展现在阳光下",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "دع الكود يظهر في الشمس"
+            "value" : "عرض الكود في ضوء الشمس"
           }
         },
         "ca" : {
@@ -15730,6 +15394,12 @@
       "comment" : "让数据见证你的每一次积累与变化。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دع البيانات تشهد كل تراكم وتغير لك."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15745,7 +15415,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "دع الحصالة تسجل كل نمو وتوقع لديك."
+            "value" : "دع الحافظة تسجل كل نمو وتوقع لديك."
           }
         },
         "ca" : {
@@ -15961,13 +15631,13 @@
       }
     },
     "Life savings jar" : {
-      "comment" : "1.0.10人生存钱罐",
+      "comment" : "人生存钱罐",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حصالة الحياة"
+            "value" : "حافظة نقود الحياة"
           }
         },
         "ca" : {
@@ -16186,6 +15856,12 @@
       "comment" : "永久",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دائم"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16195,13 +15871,13 @@
       }
     },
     "lifetime wealth planning" : {
-      "comment" : "1.0.10一生财富规划",
+      "comment" : "一生财富规划",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تخطيط الثروة مدى الحياة"
+            "value" : "تخطيط ثروة مدى الحياة"
           }
         },
         "ca" : {
@@ -16416,454 +16092,16 @@
         }
       }
     },
-    "limited" : {
-      "comment" : "1.0.10 限定",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "محدود"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitada"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "omezený"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "begrænset"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "beschränkt"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "περιωρισμένος"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitado"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitado"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "rajoitettu"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limité"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limité"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מוּגבָּל"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सीमित"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ograničeno"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "korlátozott"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "terbatas"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitato"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限定"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "제한된"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "terhad"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "begrenset"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "beperkt"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ograniczony"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitado"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitado"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "limitat"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ограниченный"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "obmedzené"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "begränsad"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จำกัด"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sınırlı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "обмежений"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "giới hạn"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限定"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限定"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限定"
-          }
-        }
-      }
-    },
-    "limited time" : {
-      "comment" : "1.0.10限时",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "وقت محدود"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temps limitat"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Časově omezený"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begrænset tid"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begrenzte Zeit"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Περιορισμένος χρόνος"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tiempo limitado"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tiempo limitado"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rajoitettu aika"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durée limitée"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durée limitée"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "זמן מוגבל"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सीमित समय"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ograničeno vrijeme"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Korlátozott ideig"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waktu terbatas"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tempo limitato"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "期間限定"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "제한된 시간"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masa terhad"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begrenset tid"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beperkte tijd"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ograniczony czas"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tempo limitado"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tempo limitado"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Timp limitat"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ограниченное время"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Časovo obmedzený"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begränsad tid"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ระยะเวลาจำกัด"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sınırlı zaman"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обмежений час"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thời gian có hạn"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限时"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限時"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "限時"
-          }
-        }
-      }
-    },
     "List" : {
       "comment" : "列表",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قائمة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16876,6 +16114,12 @@
       "comment" : "存钱罐列表",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قائمة حافظات النقود"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16888,6 +16132,12 @@
       "comment" : "生活开销",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نفقات المعيشة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16897,7 +16147,14 @@
       }
     },
     "loading..." : {
+      "comment" : "جار التحميل…",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جار التحميل…"
+          }
+        },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16912,236 +16169,14 @@
         }
       }
     },
-    "long-term" : {
-      "comment" : "1.0.10 长期",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "طويل"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "llarg"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dlouho"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lang"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lang"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "μακρύς"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "largo"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "largo"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pitkä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "long"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "long"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "אָרוֹך"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "लंबा"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dugo"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hosszú"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "panjang"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lungo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "長さ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "긴"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "panjang"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lang"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lang"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "długi"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "longo"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "longo"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lung"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "длинный"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dlhý"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "lång"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ยาว"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "uzun"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "довго"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dài"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "长期"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "長期"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "長期"
-          }
-        }
-      }
-    },
     "Loop animation" : {
-      "comment" : "1.0.5: 循环动画",
+      "comment" : "循环动画",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حلقة الرسوم المتحركة"
+            "value" : "رسوم متحركة دورية"
           }
         },
         "ca" : {
@@ -17356,232 +16391,16 @@
         }
       }
     },
-    "Main piggy bank" : {
-      "comment" : "主存钱罐",
+    "Maintain a sense of security in your life" : {
+      "comment" : "留一份安心生活的底气",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "البنك الخنزير الرئيسي"
+            "value" : "احتفظ بشعور بالأمان في حياتك"
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "guardiola principal"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hlavní prasátko"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "vigtigste sparegris"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hauptsparschwein"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "κύριος κουμπαράς"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "alcancía principal"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "alcancía principal"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tärkein säästöpossu"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tirelire principale"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tirelire principale"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "קופת חזירים ראשית"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य गुल्लक"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "glavna kasica prasica"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "fő malacpersely"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "celengan utama"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "salvadanaio principale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メインの貯金箱"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "메인 돼지 저금통"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "piggy bank utama"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hoved sparegrisen"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "belangrijkste spaarvarken"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "główna skarbonka"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "mealheiro principal"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "mealheiro principal"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pușculița principală"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "главная копилка"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hlavné prasiatko"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "huvudsakliga spargris"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "กระปุกออมสินหลัก"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ana kumbara"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "головна скарбничка"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "con heo đất chính"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主存钱罐"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主存錢罐"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主存錢罐"
-          }
-        }
-      }
-    },
-    "Maintain a sense of security in your life" : {
-      "comment" : "留一份安心生活的底气",
-      "extractionState" : "manual",
-      "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17590,232 +16409,16 @@
         }
       }
     },
-    "Manage" : {
-      "comment" : "管理",
+    "Member Animations" : {
+      "comment" : "会员动画",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يدير"
+            "value" : "رسوم متحركة للعضوية"
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gestionar"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "spravovat"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "styre"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "verwalten"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "διαχειρίζομαι"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "administrar"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "administrar"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hallita"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gérer"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gérer"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "לְנַהֵל"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "प्रबंधित करना"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "upravljati"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kezelni"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "mengelola"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "maneggio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "管理"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "관리하다"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "mengurus"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "administrere"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "beheren"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "zarządzać"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gerir"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gerir"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "gestionează"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "управлять"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "spravovať"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hantera"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จัดการ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "üstesinden gelmek"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "управляти"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "quản lý"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "管理"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "管理"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "管理"
-          }
-        }
-      }
-    },
-    "Member Animations" : {
-      "comment" : "会员动画",
-      "extractionState" : "manual",
-      "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17828,6 +16431,12 @@
       "comment" : "已购买会员可通过“恢复购买”找回。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعضاء الذين اشتروا يمكنهم استرجاع “استعادة الشراء”."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17837,13 +16446,13 @@
       }
     },
     "Modify the detailed information style on the left side of the home page." : {
-      "comment" : "1.0.5修改首页左侧的详细信息样式。",
+      "comment" : "修改首页左侧的详细信息样式。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قم بتعديل نمط التفاصيل على الجانب الأيسر من الصفحة الرئيسية."
+            "value" : "تعديل نمط التفاصيل في الجانب الأيسر للصفحة الرئيسية."
           }
         },
         "ca" : {
@@ -18062,6 +16671,12 @@
       "comment" : "每月",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهري"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18074,6 +16689,12 @@
       "comment" : "月",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهر"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18086,6 +16707,12 @@
       "comment" : "按月",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهريًا"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18095,13 +16722,13 @@
       }
     },
     "MOP" : {
-      "comment" : "1.0.6:澳门元",
+      "comment" : "澳门元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ماكاو باتاكا"
+            "value" : "دولار ماكاو"
           }
         },
         "ca" : {
@@ -18350,6 +16977,12 @@
       "comment" : "更多作品",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزيد من الأعمال"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18359,13 +16992,13 @@
       }
     },
     "MXN" : {
-      "comment" : "1.0.6:墨西哥比索",
+      "comment" : "墨西哥比索",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "البيزو المكسيكي"
+            "value" : "بيزو مكسيكي"
           }
         },
         "ca" : {
@@ -18611,13 +17244,13 @@
       }
     },
     "MYR" : {
-      "comment" : "1.0.6:马来西亚林吉特",
+      "comment" : "马来西亚林吉特",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الرينغيت الماليزي"
+            "value" : "رينغيت ماليزي"
           }
         },
         "ca" : {
@@ -18869,7 +17502,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اسم"
+            "value" : "الاسم"
           }
         },
         "ca" : {
@@ -19085,13 +17718,13 @@
       }
     },
     "No notification permission" : {
-      "comment" : "1.0.11:无通知权限",
+      "comment" : "无通知权限",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بلا تصريح بالإشعارات"
+            "value" : "بدون إذن إشعارات"
           }
         },
         "ca" : {
@@ -19310,6 +17943,12 @@
       "comment" : "没有存钱罐？",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد حافظة؟"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19322,6 +17961,12 @@
       "comment" : "暂无记录",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا سجلات"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19331,13 +17976,13 @@
       }
     },
     "NOK" : {
-      "comment" : "1.0.6:挪威克朗",
+      "comment" : "挪威克朗",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الكرونة النرويجية"
+            "value" : "كرونة نرويجية"
           }
         },
         "ca" : {
@@ -19586,6 +18231,12 @@
       "comment" : "无",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19601,7 +18252,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ملاحظة"
+            "value" : "ملاحظات"
           }
         },
         "ca" : {
@@ -19817,7 +18468,7 @@
       }
     },
     "Nothing happened" : {
-      "comment" : "1.0.10 什么都没有发生",
+      "comment" : "什么都没有发生",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -20038,236 +18689,14 @@
         }
       }
     },
-    "Number of piggy banks" : {
-      "comment" : "1.0.6:存钱罐数量",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عدد حصالات الادخار"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de guardioles"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počet prasátek"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antal sparegrise"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anzahl Sparschweine"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Αριθμός κουμπαριών"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de huchas"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de huchas"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Säästöpossujen määrä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de tirelires"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de tirelires"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מספר קופות חזירים"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गुल्लकों की संख्या"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Broj kasica prasica"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A malacperselyek száma"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah celengan"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Numero di salvadanai"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "貯金箱の数"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "돼지 저금통 수"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bilangan simpanan"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antall sparegriser"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aantal spaarpotten"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liczba skarbonek"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de mealheiros"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de mealheiros"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Numărul pușculițelor"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Количество копилок"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počet prasiatok"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " Antal spargrisar"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จำนวนกระปุกออมสิน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kumbara sayısı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кількість скарбничок"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Số lượng lợn tiết kiệm"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "存钱罐数量"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢筒數量"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢筒數量"
-          }
-        }
-      }
-    },
     "NZD" : {
-      "comment" : "1.0.6:新西兰元",
+      "comment" : "新西兰元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الدولار النيوزيلندي"
+            "value" : "دولار نيوزيلندي"
           }
         },
         "ca" : {
@@ -20519,7 +18948,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "على المسار الصحيح"
+            "value" : "على الطريق الصحيح"
           }
         },
         "ca" : {
@@ -20738,6 +19167,12 @@
       "comment" : "开启后支出可超过余额，显示负数。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بعد التمكين يمكن أن تتجاوز المصروفات الرصيد، يظهر العدد بالسالب."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20747,7 +19182,7 @@
       }
     },
     "Open source" : {
-      "comment" : "1.0.5:开源",
+      "comment" : "开源",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -20972,6 +19407,12 @@
       "comment" : "参与",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشاركة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20987,7 +19428,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حماية كلمة المرور"
+            "value" : "حماية بكلمة مرور"
           }
         },
         "ca" : {
@@ -21206,232 +19647,16 @@
       "comment" : "永久有效",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صالحة دائمًا"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "永久有效"
-          }
-        }
-      }
-    },
-    "Piggy Bank" : {
-      "comment" : "存钱罐",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "البنك أصبع"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "guardiola"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "prasátko"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sparegris"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sparschwein"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "κουμπαράς"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hucha"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hucha"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "säästöpossu"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tirelire"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "tirelire"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "קופת חזירים"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गुल्लक"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kasica prasica"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "malacpersely"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "keruntung"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "salvadanaio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "貯金箱"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "돼지 저금통"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "piggy bank"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sparegris"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "spaarvarken"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "skarbonka"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "cofrinho"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "cofrinho"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "pușculița"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "копилка"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "prasiatko"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "spargris"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "กระปุกออมสิน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kumbara"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "скарбничка"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "heo đất"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存钱罐"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢罐"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存錢罐"
           }
         }
       }
@@ -21443,7 +19668,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "معلومات البنك أصبع"
+            "value" : "معلومات حافظة النقود"
           }
         },
         "ca" : {
@@ -21658,13 +19883,16 @@
         }
       }
     },
-    "PiggyBank" : {
-
-    },
     "Please fill in your savings plan information completely, and set the name, goal and starting amount step by step." : {
       "comment" : "请完整填写你的存钱计划信息，按步骤设定名称、目标与起点金额。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرجى ملء معلومات خطة التوفير بالكامل، وتعيين الاسم، الهدف والمبلغ الابتدائي خطوة بخطوة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21674,13 +19902,13 @@
       }
     },
     "PLN" : {
-      "comment" : "1.0.6:波兰兹罗提",
+      "comment" : "波兰兹罗提",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الزلوتي البولندي"
+            "value" : "زلوتي بولندي"
           }
         },
         "ca" : {
@@ -21929,6 +20157,12 @@
       "comment" : "高级会员",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عضو مميز"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22610,7 +20844,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ردود الفعل المشكلة"
+            "value" : "ملاحظات واستفسارات"
           }
         },
         "ca" : {
@@ -22829,6 +21063,12 @@
       "comment" : "购买会员",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شراء العضوية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22841,6 +21081,12 @@
       "comment" : "购买成功",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الشراء بنجاح"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22853,6 +21099,12 @@
       "comment" : "购买提示",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنبيه الشراء"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22868,7 +21120,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "استعلم عن كل سجل وقم بإحصائه، واستخدم الرسوم البيانية المرئية لإظهار ثروتك."
+            "value" : "التحقق والإحصاء لكل سجل، وعرض ثروتك بصريًا باستخدام الرسوم البيانية."
           }
         },
         "ca" : {
@@ -23090,7 +21342,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سجل الحياة"
+            "value" : "تسجيل الحياة"
           }
         },
         "ca" : {
@@ -23312,7 +21564,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سجل معلومات المدخرات الخاصة بك في أي وقت وفي أي مكان."
+            "value" : "سجل مدخراتك في أي وقت وفي أي مكان."
           }
         },
         "ca" : {
@@ -23531,6 +21783,12 @@
       "comment" : "恢复成功",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم الاستعادة بنجاح"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23543,6 +21801,12 @@
       "comment" : "定期",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثابت"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23774,7 +22038,7 @@
       }
     },
     "Reminder time" : {
-      "comment" : "1.0.6:提醒时间",
+      "comment" : "提醒时间",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -23999,6 +22263,12 @@
       "comment" : "资源与技术支持",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الموارد والدعم الفني"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24014,7 +22284,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "استئناف الشراء"
+            "value" : "استعادة الشراء"
           }
         },
         "ca" : {
@@ -24230,7 +22500,7 @@
       }
     },
     "RON" : {
-      "comment" : "1.0.6:罗马尼亚列伊",
+      "comment" : "罗马尼亚列伊",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -24482,13 +22752,13 @@
       }
     },
     "RUB" : {
-      "comment" : "1.0.6:俄罗斯卢布",
+      "comment" : "俄罗斯卢布",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الروبل الروسي"
+            "value" : "روبل روسي"
           }
         },
         "ca" : {
@@ -24734,13 +23004,13 @@
       }
     },
     "SAR" : {
-      "comment" : "1.0.6:沙特里亚尔",
+      "comment" : "沙特里亚尔",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الريال السعودي"
+            "value" : "ريال سعودي"
           }
         },
         "ca" : {
@@ -24992,7 +23262,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "احفظ كل حلم"
+            "value" : "ادخر كل حلم"
           }
         },
         "ca" : {
@@ -25214,7 +23484,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "احفظ العناصر التي تريدها وسجل كل المدخرات لتحقيق أمنيتك أبعد من ذلك."
+            "value" : "ضع العناصر المرغوبة في التوفير، وسجل كل مبلغ، لتقترب أكثر من تحقيق الأماني."
           }
         },
         "ca" : {
@@ -25433,6 +23703,12 @@
       "comment" : "储蓄每一个梦想",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادخر كل حلم"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25448,7 +23724,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حفظ التقدم"
+            "value" : "تقدم الادخار"
           }
         },
         "ca" : {
@@ -25664,9 +23940,15 @@
       }
     },
     "Savings data is stored locally and synced with iCloud, ensuring security and transparency, and giving you complete control." : {
-      "comment" : "1.10 储蓄数据本地与 iCloud 同步保存，安全透明，由您自由掌控。",
+      "comment" : "储蓄数据本地与 iCloud 同步保存，安全透明，由您自由掌控。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تتم مزامنة بيانات الادخار محليًا و على iCloud، آمنة وشفافة، تحت سيطرتك."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25676,13 +23958,13 @@
       }
     },
     "Savings reminder" : {
-      "comment" : "1.0.6:存钱提醒",
+      "comment" : "存钱提醒",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تذكير بالادخار"
+            "value" : "تذكير الادخار"
           }
         },
         "ca" : {
@@ -25904,7 +24186,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الرغبة في الحفظ"
+            "value" : "أمنيات الادخار"
           }
         },
         "ca" : {
@@ -26126,7 +24408,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "فحص الأمان"
+            "value" : "التحقق الأمني"
           }
         },
         "ca" : {
@@ -26342,13 +24624,13 @@
       }
     },
     "SEK" : {
-      "comment" : "1.0.6:瑞典克朗",
+      "comment" : "瑞典克朗",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الكرونة السويدية"
+            "value" : "كرونة سويدية"
           }
         },
         "ca" : {
@@ -26600,7 +24882,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اختر تاريخ استحقاق محدد."
+            "value" : "اختر تاريخ الانتهاء المحدد."
           }
         },
         "ca" : {
@@ -26822,7 +25104,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حدد أيقونة البنك الخنزير."
+            "value" : "اختر رمز حافظة النقود."
           }
         },
         "ca" : {
@@ -27041,6 +25323,12 @@
       "comment" : "设定存钱罐的定期存款金额。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعيين مبلغ الإيداع الثابت للحافظة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27053,6 +25341,12 @@
       "comment" : "设定存钱罐的目标金额。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعيين هدف الحافظة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27068,7 +25362,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "حدد تاريخ انتهاء الصلاحية للبنك الخنزير."
+            "value" : "تعيين تاريخ انتهاء الحافظة."
           }
         },
         "ca" : {
@@ -27283,232 +25577,16 @@
         }
       }
     },
-    "Set as primary piggy bank" : {
-      "comment" : "设为主存钱罐",
+    "Set the initial amount for the piggy bank." : {
+      "comment" : "设定存钱罐的初始金额。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تعيين كحصالة رئيسية"
+            "value" : "تعيين المبلغ الابتدائي للحافظة."
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estableix com a guardiola principal"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavit jako hlavní prasátko"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indstillet som hovedsparegris"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Als Hauptsparschwein eingestellt"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ορισμός ως κύριος κουμπαράς"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Establecer como alcancía principal"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Establecer como alcancía principal"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aseta pääsäästöpossu"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Définir comme tirelire principale"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Définir comme tirelire principale"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מוגדר כבנק חזירון ראשי"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मुख्य गुल्लक के रूप में सेट करें"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Postavite kao glavnu kasicu prasicu"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beállítás fő malacperselynek"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tetapkan sebagai celengan utama"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imposta come salvadanaio principale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メイン貯金箱として設定"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "주요 돼지 저금통으로 설정"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ditetapkan sebagai piggy bank utama"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sett som hoved sparegris"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ingesteld als hoofdspaarvarken"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ustaw jako główną skarbonkę"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Definir como mealheiro principal"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Definir como mealheiro principal"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setați ca pușculiță principală"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сделать основной копилкой"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastaviť ako hlavné prasiatko"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ställ in som huvudspargris"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ตั้งเป็นกระปุกออมสินหลัก"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ana kumbara olarak ayarla"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Встановити як основну скарбничку"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đặt làm heo đất chính"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "设为主存钱罐"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "設為主存錢罐"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "設為主存錢罐"
-          }
-        }
-      }
-    },
-    "Set the initial amount for the piggy bank." : {
-      "comment" : "设定存钱罐的初始金额。",
-      "extractionState" : "manual",
-      "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27524,7 +25602,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تعيين اسم البنك أصبع"
+            "value" : "تعيين اسم الحافظة"
           }
         },
         "ca" : {
@@ -27743,6 +25821,12 @@
       "comment" : "设定存钱罐的定期存款。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعيين الإيداع الثابت للحافظة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27758,7 +25842,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يثبت"
+            "value" : "إعدادات"
           }
         },
         "ca" : {
@@ -27974,13 +26058,13 @@
       }
     },
     "SGD" : {
-      "comment" : "1.0.6:新加坡元",
+      "comment" : "新加坡元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الدولار السنغافوري"
+            "value" : "دولار سنغافوري"
           }
         },
         "ca" : {
@@ -28229,6 +26313,12 @@
       "comment" : "显示更多",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض المزيد"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28238,7 +26328,7 @@
       }
     },
     "Silent Mode" : {
-      "comment" : "1.0.6：静默模式",
+      "comment" : "静默模式",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -28463,6 +26553,12 @@
       "comment" : "于是我开始学习 iOS 开发，并在当月完成并上架了“存钱猪猪”的第一个版本。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لذلك بدأت تعلم تطوير iOS، وفي نفس الشهر أنجزت ونشرت أول نسخة من “حافظة النقود الخنزير”."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28471,236 +26567,14 @@
         }
       }
     },
-    "Some accumulation" : {
-      "comment" : "小有积累",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تراكم صغير"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Petita acumulació"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malá akumulace"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lille ophobning"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kleine Ansammlung"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μικρή συσσώρευση"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pequeña acumulación"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pequeña acumulación"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pieni kertymä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Petite accumulation"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Petite accumulation"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הצטברות קטנה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "छोटा संचय"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mala akumulacija"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kis felhalmozódás"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akumulasi kecil"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Piccolo accumulo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小さな蓄積"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "작은 축적"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pengumpulan kecil"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liten opphopning"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kleine accumulatie"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mała kumulacja"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pequena acumulação"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pequena acumulação"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Acumulare mică"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Небольшое накопление"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malá akumulácia"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liten ansamling"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "สะสมน้อย"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Küçük birikim"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Невелике накопичення"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tích lũy nhỏ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小有积累"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小有積累"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小有積累"
-          }
-        }
-      }
-    },
     "Sound effects" : {
-      "comment" : "1.0.11:音效",
+      "comment" : "音效",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تأثير الصوت"
+            "value" : "الصوتيات"
           }
         },
         "ca" : {
@@ -28916,9 +26790,15 @@
       }
     },
     "Start" : {
-      "comment" : "1.1.0 开始",
+      "comment" : "开始",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28928,9 +26808,15 @@
       }
     },
     "Start your savings journey" : {
-      "comment" : "1.1.0 开始你的储蓄之旅",
+      "comment" : "开始你的储蓄之旅",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ رحلة التوفير الخاصة بك"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28939,11 +26825,8 @@
         }
       }
     },
-    "Statistics" : {
-
-    },
     "Stats" : {
-      "comment" : "1.0.6:统计",
+      "comment" : "统计",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -29164,450 +27047,6 @@
         }
       }
     },
-    "Still a ways from" : {
-      "comment" : "还差",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ليست جيدة بما فيه الكفاية"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No prou bo"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Není dost dobrý"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ikke godt nok"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicht gut genug"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Δεν είναι αρκετά καλό"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No es lo suficientemente bueno"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No es lo suficientemente bueno"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ei tarpeeksi hyvä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas assez bien"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas assez bien"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "לא מספיק טוב"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "बहुत अच्छा नहीं"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nije dovoljno dobro"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nem elég jó"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tidak cukup baik"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Non abbastanza buono"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "十分ではありません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "충분하지 않음"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tidak cukup baik"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ikke bra nok"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niet goed genoeg"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nie dość dobre"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Não é bom o suficiente"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Não é bom o suficiente"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nu suficient de bun"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Недостаточно хорошо"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nie dosť dobré"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inte tillräckligt bra"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ไม่ดีพอ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeterince iyi değil"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Недостатньо добре"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Không đủ tốt"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "还差"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "還差"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "還差"
-          }
-        }
-      }
-    },
-    "Summarize Bills" : {
-      "comment" : "汇总账单",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "فاتورة موجزة"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Factura resum"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Souhrnné vyúčtování"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sammenfattende regning"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zusammenfassende Rechnung"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Συνοπτικός λογαριασμός"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "factura resumida"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "factura resumida"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yhteenveto lasku"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Facture récapitulative"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Facture récapitulative"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הצעת חוק סיכום"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सारांश बिल"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zbirni račun"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Összefoglaló számla"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ringkasan tagihan"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fattura riepilogativa"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "概要請求書"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "요약 청구서"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bil ringkasan"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sammendragsregning"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Samenvatting factuur"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Podsumowanie rachunku"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fatura resumida"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fatura resumida"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Factura sumară"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сводный счет"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Súhrnný účet"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sammanfattande räkning"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "สรุปบิล"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Özet fatura"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зведений рахунок"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hóa đơn tóm tắt"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "汇总账单"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "匯總帳單"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "匯總帳單"
-          }
-        }
-      }
-    },
     "Target amount" : {
       "comment" : "目标金额",
       "extractionState" : "manual",
@@ -29615,7 +27054,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "المبلغ المستهدف"
+            "value" : "مبلغ الهدف"
           }
         },
         "ca" : {
@@ -30053,13 +27492,13 @@
       }
     },
     "Test function" : {
-      "comment" : "1.0.5:测试功能",
+      "comment" : "测试功能",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "وظيفة الاختبار"
+            "value" : "وظائف الاختبار"
           }
         },
         "ca" : {
@@ -30278,6 +27717,12 @@
       "comment" : "感谢每一位用户的下载和使用，感谢每一位内购用户的支持，感谢身边朋友的支持。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكر لكل مستخدم قام بتنزيل التطبيق واستخدامه، وشكر لكل من دعم الشراء داخل التطبيق، وشكر للأصدقاء المحيطين."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30290,6 +27735,12 @@
       "comment" : "感谢以下平台的无私奉献",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شكر للمنصات التالية على جهودهم غير الأنانية"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30305,7 +27756,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شكر وتقدير"
+            "value" : "شكر"
           }
         },
         "ca" : {
@@ -30521,13 +27972,13 @@
       }
     },
     "THB" : {
-      "comment" : "1.0.6:泰铢",
+      "comment" : "泰铢",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "البات التايلندي"
+            "value" : "بات تاي"
           }
         },
         "ca" : {
@@ -30776,6 +28227,12 @@
       "comment" : "每月在选定的日期和特定时间自动存入；如果当月没有选定的日期（如31号），系统将自动延顺至当月最后一天。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيداع الشهري التلقائي في التاريخ والوقت المحددين؛ إذا لم يكن هناك التاريخ المحدد في الشهر (مثل اليوم 31)، سيتم التمديد تلقائيًا إلى آخر يوم من الشهر."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30788,6 +28245,12 @@
       "comment" : "显示存钱罐的货币符号，暂不支持货币转换。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض رمز العملة في الحافظة، ولا يدعم التحويل بين العملات حاليًا."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30800,6 +28263,12 @@
       "comment" : "高级版功能持续扩展，未来将解锁音乐、活动等更多体验。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الميزات المتقدمة ستستمر في التوسع، وستفتح مستقبلًا الموسيقى والأنشطة وغيرها من التجارب."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30812,6 +28281,12 @@
       "comment" : "订阅会自动续费，除非在 App Store 账户中取消。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاشتراك يتجدد تلقائيًا، ما لم يتم إلغاؤه في حساب App Store."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30827,7 +28302,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "انها فارغة هنا."
+            "value" : "هذا المكان فارغ."
           }
         },
         "ca" : {
@@ -31046,6 +28521,12 @@
       "comment" : "时间",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقت"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31058,6 +28539,12 @@
       "comment" : "如需退订，请在 App Store → 账户 → 购买历史操作，开发者无法代为退订或退款。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لإلغاء الاشتراك، اذهب إلى App Store → الحساب → سجل الشراء، ولا يمكن للمطور إلغاء الاشتراك أو رد المبلغ."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31066,235 +28553,16 @@
         }
       }
     },
-    "Toggle" : {
-
-    },
-    "Total access times" : {
-      "comment" : "1.0.6:存取总次数",
+    "Trigger time" : {
+      "comment" : "触发时间",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مجموع أوقات الوصول"
+            "value" : "وقت التشغيل"
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temps total d'accés"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Celková doba přístupu"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Samlede adgangstider"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gesamtzugriffszeiten"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Συνολικοί χρόνοι πρόσβασης"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número total de transacciones"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número total de transacciones"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Käyttöajat yhteensä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temps d'accès totaux"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temps d'accès totaux"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "סך כל זמני הגישה"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कुल पहुँच समय"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ukupno vrijeme pristupa"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Összes hozzáférési idő"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total waktu akses"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tempi di accesso totali"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "合計アクセス時間"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "총 접속 횟수"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah bilangan akses"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Totalt antall tilganger"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Totale toegangstijden"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Całkowita liczba dostępów"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número total de acessos"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número total de acessos"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Numărul total de accesări"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Общее количество доступов"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Celkový počet prístupov"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Totalt antal transaktioner"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จำนวนธุรกรรมทั้งหมด"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toplam işlem sayısı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Загальна кількість транзакцій"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tổng số lần giao dịch"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "存取总次数"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取總次數"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取總次數"
-          }
-        }
-      }
-    },
-    "Trigger time" : {
-      "comment" : "触发时间",
-      "extractionState" : "manual",
-      "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31304,13 +28572,13 @@
       }
     },
     "TRY" : {
-      "comment" : "1.0.6:土耳其里拉",
+      "comment" : "土耳其里拉",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الليرة التركية"
+            "value" : "ليرة تركية"
           }
         },
         "ca" : {
@@ -31556,13 +28824,13 @@
       }
     },
     "UAH" : {
-      "comment" : "1.0.6:乌克兰格里夫纳",
+      "comment" : "乌克兰格里夫纳",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الهريفنيا الأوكرانية"
+            "value" : "هريفنيا أوكرانية"
           }
         },
         "ca" : {
@@ -31814,7 +29082,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "فتح"
+            "value" : "فتح القفل"
           }
         },
         "ca" : {
@@ -32033,6 +29301,12 @@
       "comment" : "解锁 30+ 款个性化图标，随心切换，定义属于你的应用形象。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افتح أكثر من 30 رمزًا مخصصًا، غيّر بحرية، وعرّف التطبيق بطريقتك."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32048,7 +29322,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "فشل فتح القفل، يرجى المحاولة مرة أخرى."
+            "value" : "فشل الفتح، حاول مرة أخرى."
           }
         },
         "ca" : {
@@ -32264,13 +29538,13 @@
       }
     },
     "USD" : {
-      "comment" : "1.0.6:美元",
+      "comment" : "美元",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "دولار"
+            "value" : "دولار أمريكي"
           }
         },
         "ca" : {
@@ -32522,7 +29796,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "رقم الإصدار"
+            "value" : "رقم النسخة"
           }
         },
         "ca" : {
@@ -32738,7 +30012,7 @@
       }
     },
     "Vibration" : {
-      "comment" : "1.0.11:振动",
+      "comment" : "振动",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -32960,13 +30234,13 @@
       }
     },
     "VND" : {
-      "comment" : "1.0.6:越南盾",
+      "comment" : "越南盾",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الدونج الفيتنامي"
+            "value" : "دونغ فيتنامي"
           }
         },
         "ca" : {
@@ -33215,6 +30489,12 @@
       "comment" : "希望这个App能为你带来轻松、愉快的使用体验。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آمل أن يقدم هذا التطبيق تجربة استخدام سهلة وممتعة."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33227,6 +30507,12 @@
       "comment" : "网页",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صفحة ويب"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33239,6 +30525,12 @@
       "comment" : "每周",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسبوعيًا"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33248,9 +30540,15 @@
       }
     },
     "Welcome to a brand new way of saving, where every penny shines in the future." : {
-      "comment" : "1.1.0 欢迎来到全新的储蓄方式，让每一笔小钱都在未来闪光。",
+      "comment" : "欢迎来到全新的储蓄方式，让每一笔小钱都在未来闪光。",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبًا بك في طريقة توفير جديدة، اجعل كل مبلغ صغير يلمع في المستقبل."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33266,7 +30564,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مرحباً"
+            "value" : "مرحبًا بك"
           }
         },
         "ca" : {
@@ -33482,13 +30780,13 @@
       }
     },
     "When enabled, the animation will play in a loop." : {
-      "comment" : "1.0.5启用后，动画将循环播放",
+      "comment" : "启用后，动画将循环播放。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "عند التمكين، سيتم تكرار الرسوم المتحركة."
+            "value" : "بعد التمكين، ستستمر الرسوم المتحركة في التشغيل."
           }
         },
         "ca" : {
@@ -33707,6 +31005,12 @@
       "comment" : "我们是谁",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "من نحن"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33719,6 +31023,12 @@
       "comment" : "小组件扩展",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توسيع الأدوات المصغرة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33734,7 +31044,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "أخرج"
+            "value" : "سحب"
           }
         },
         "ca" : {
@@ -33953,6 +31263,12 @@
       "comment" : "取出金额",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مبلغ السحب"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33968,7 +31284,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "خذ الوقت"
+            "value" : "وقت السحب"
           }
         },
         "ca" : {
@@ -34190,7 +31506,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "كلمة مرور خاطئة."
+            "value" : "كلمة المرور خاطئة."
           }
         },
         "ca" : {
@@ -34409,6 +31725,12 @@
       "comment" : "每年",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنوي"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34421,6 +31743,12 @@
       "comment" : "年",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنة"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34433,6 +31761,12 @@
       "comment" : "按年",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنويًا"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34448,7 +31782,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يمكن ملء الملاحظات"
+            "value" : "يمكن إضافة ملاحظات"
           }
         },
         "ca" : {
@@ -34670,7 +32004,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "لقد قمت بتفعيل حماية كلمة المرور، يرجى النقر على الزر أدناه للتحقق."
+            "value" : "لقد قمت بتمكين حماية بكلمة مرور، يرجى النقر على الزر أدناه للتحقق."
           }
         },
         "ca" : {
@@ -34886,13 +32220,13 @@
       }
     },
     "ZAR" : {
-      "comment" : "1.0.6:南非兰特",
+      "comment" : "南非兰特",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الراند الجنوب أفريقي"
+            "value" : "راند جنوب أفريقي"
           }
         },
         "ca" : {
@@ -35136,9 +32470,6 @@
           }
         }
       }
-    },
-    "重置内购和欢迎界面" : {
-
     }
   },
   "version" : "1.0"
