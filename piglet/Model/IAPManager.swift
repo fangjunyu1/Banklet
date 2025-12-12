@@ -106,14 +106,18 @@ class IAPManager:ObservableObject {
                 let transaction = try checkVerified(result) // 验证交易
                 // --- 1. 永久会员逻辑 -----
                 if transaction.productID == "20240523" {
+                    print("进入永久会员逻辑")
                     if transaction.revocationDate == nil {
+                        print("永久会员没有退款，新增永久会员标识")
                         lifetimePurchased = true
                     }
+                    print("永久会员退款，下一个")
                     continue   // 不 return，只是跳过本次循环
                 }
                 
                 // --- 2. 订阅逻辑 -------
                 if let revoke = transaction.revocationDate {
+                    print("订阅商品有退款，订阅时间为nil")
                     // 有退款就清空
                     latestExpiration = nil
                     continue
@@ -122,6 +126,7 @@ class IAPManager:ObservableObject {
                 if let expiration = transaction.expirationDate {
                     // 多订阅，取最新过期时间（有效期最长的）
                     latestExpiration = max(latestExpiration ?? expiration, expiration)
+                    print("最新的订阅时间:\(latestExpiration?.formatted())")
                 }
                 
                 await transaction.finish()
@@ -133,6 +138,7 @@ class IAPManager:ObservableObject {
         // ---- 扫描完成后统一更新状态 ----
         AppStorageManager.shared.isLifetime = lifetimePurchased
         
+        print("全部扫描完成，更新状态，永久会员标识:\(lifetimePurchased),最近的订阅时间:\(latestExpiration?.formatted())")
         if let exp = latestExpiration {
             AppStorageManager.shared.expirationDate = exp.timeIntervalSince1970
         } else {
