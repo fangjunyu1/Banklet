@@ -19,7 +19,7 @@ struct PiggyBankDraft {
     var expirationDate: Date    // 截止日期
     var isExpirationDateEnabled: Bool   // 是否设置截止日期,true为设置了截止日期
     var isFixedDeposit: Bool  // 定期存款
-    var fixedDepositType: String   //  存款类型
+    var fixedDepositType: String   //  定期存款类型
     var fixedDepositAmount: Double   // 每次存款金额
     var nextDepositDate: Date   // 定期存款日期
     var fixedDepositWeekday: Int    // 定期存款-每周

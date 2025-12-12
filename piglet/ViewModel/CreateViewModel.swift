@@ -32,9 +32,14 @@ final class CreateStepViewModel: ObservableObject {
             bank.isPrimary = false
         }
         
-        
+        var fixedDate = data.fixedDepositTime
         // Step 4: 计算下一次定期存款的日期
-        let nextDate = SavingsScheduler.calculateNextDate(type: data.fixedDepositType, lastDate: data.fixedDepositTime, weekday: data.fixedDepositWeekday, day: data.fixedDepositDay)
+        if data.fixedDepositTime < Date() {
+            print("创建存钱罐时的存钱罐时间:\(data.fixedDepositTime.formatted())")
+            let nextDate = SavingsScheduler.calculateNextDate(type: data.fixedDepositType, lastDate: data.fixedDepositTime, weekday: data.fixedDepositWeekday, day: data.fixedDepositDay)
+            fixedDate = nextDate
+            print("存钱罐定期存款时间:\(nextDate.formatted())")
+        }
         
         // Step 5: 创建存钱罐
         let piggyBank = PiggyBank(isPrimary: true,
@@ -49,7 +54,7 @@ final class CreateStepViewModel: ObservableObject {
                                   isFixedDeposit: data.isFixedDeposit,
                                   fixedDepositType: data.fixedDepositType,
                                   fixedDepositAmount: data.fixedDepositAmount ?? 0,
-                                  nextDepositDate: nextDate,    // 计算下一次存钱日期
+                                  nextDepositDate: fixedDate,    // 计算下一次存钱日期
                                   fixedDepositWeekday: data.fixedDepositWeekday,
                                   fixedDepositDay: data.fixedDepositDay,
                                   fixedDepositTime: data.fixedDepositTime
@@ -57,7 +62,7 @@ final class CreateStepViewModel: ObservableObject {
         
         
         
-        piggyBank.nextDepositDate = nextDate
+        piggyBank.nextDepositDate = fixedDate
         
         context.insert(piggyBank) // 将对象插入到上下文中
         

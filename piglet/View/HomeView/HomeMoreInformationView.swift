@@ -74,11 +74,12 @@ struct HomeMoreInformationView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
                     if isEdit {
-                        draft.nextDepositDate =  SavingsScheduler.calculateNextDate(type: draft.fixedDepositType, lastDate: draft.fixedDepositTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+                        draft.nextDepositDate =  SavingsScheduler.nearestFutureDailyTime(draft:draft)
                         draft.apply(to: primary, context: context)
                     } else {
-                        draft.nextDepositDate =  SavingsScheduler.calculateNextDate(type: draft.fixedDepositType, lastDate: draft.fixedDepositTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
-                        print("draft.nextDepositDate:\(draft.nextDepositDate)")
+                        draft.nextDepositDate =
+                        SavingsScheduler.nearestFutureDailyTime(
+                            draft: draft)
                     }
                     withAnimation {
                         isEdit.toggle()

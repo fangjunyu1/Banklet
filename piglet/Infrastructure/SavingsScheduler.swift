@@ -11,14 +11,127 @@ import SwiftData
 // 计算下一次存钱周期的方法
 @MainActor
 struct SavingsScheduler {
-    static func calculateNextDate(type:String,
+    
+    // 计算最近的一次定期存款时间
+    static func nearestFutureDailyTime(draft: PiggyBankDraft ) -> Date {
+        let now = Date()
+        let calendar = Calendar.current
+        let enumType = FixedDepositEnum(rawValue: draft.fixedDepositType) ?? .day
+        
+        // 用户的最近存取时间可能是很久之前的时间,提取当前用户选择的 时-分 组件
+        var userComponents = calendar.dateComponents([.hour, .minute], from: draft.fixedDepositTime)
+        // 提取今天的 年-月-日 组件
+        let nowComponents = calendar.dateComponents([.year, .month, .day], from: now)
+        // 今天 年-月-日 + 用户选择的时-分，组成最新的日期组件
+        userComponents.year = nowComponents.year
+        userComponents.month = nowComponents.month
+        userComponents.day = nowComponents.day
+        userComponents.calendar = Calendar.current
+        
+        print("用户选择的日期组件:\(userComponents)")
+        var nowDayTime: Date
+        // 今天的日期和时间，如果用户选择每日存取，那么对应的是今天的存取时间
+        if let nowDate = userComponents.date {
+            print("转换成功:\(nowDate)") // 转换成功后的具体日期
+            nowDayTime = nowDate
+        } else {
+            nowDayTime = Date()
+            print("转换失败")
+        }
+        
+        print("用户选择的时间组件：\(userComponents)")
+        print("nowDayTime:\(nowDayTime.formatted())")
+        // 判断用户的存取类型
+        switch enumType {
+        case .day:
+            // 如果今天的存取时间大于现在的时间，返回今天的存取时间
+            if nowDayTime > now {
+                print("选择的时间大于现在的时候，返回选择的时间")
+                return nowDayTime
+            } else {
+                print("选择的时间小于现在的时间，返回下一个时间")
+                // 否则，今天的存取时间过时，计算下一次存取时间。
+                return calculateNextDate(type: draft.fixedDepositType, lastDate: nowDayTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+            }
+        case .week:
+            // 如果今天对应的星期，检查是否是否大于9点。
+            userComponents.hour = 9
+            userComponents.minute = 0
+            // 生成今天的日期时间
+            let nowWeekTime: Date = userComponents.date ?? Date()
+            // 提取今天的星期
+            let tmpWeek = calendar.component(.weekday, from: nowWeekTime)
+            // 如果今天的星期和用户选择的星期一样，则检查时间。
+            if tmpWeek + 1 == draft.fixedDepositWeekday {
+                // 判断今天的存取时间是否大于现在的时间
+                if nowWeekTime > now {
+                    return nowWeekTime
+                } else {
+                    // 否则计算下一个周期
+                    return calculateNextDate(type: draft.fixedDepositType, lastDate: nowWeekTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+                }
+            } else {
+                // 否则计算下一个周期
+                return calculateNextDate(type: draft.fixedDepositType, lastDate: nowWeekTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+            }
+        case .month:
+            // 如果今天对应的日期，检查是否是否大于9点。
+            userComponents.hour = 9
+            userComponents.minute = 0
+            // 生成今天的日期时间
+            let nowMonthTime: Date = userComponents.date ?? Date()
+            // 提取今天的几号
+            let tmpMonth = calendar.component(.day, from: nowMonthTime)
+            // 如果今天的几号和用户选择的几号一样，则检查时间。
+            if tmpMonth == draft.fixedDepositDay {
+                // 判断今天的存取时间是否大于现在的时间
+                if nowMonthTime > now {
+                    return nowMonthTime
+                } else {
+                    // 否则计算下一个周期
+                    return calculateNextDate(type: draft.fixedDepositType, lastDate: nowMonthTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+                }
+            } else {
+                // 否则计算下一个周期
+                return calculateNextDate(type: draft.fixedDepositType, lastDate: nowMonthTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+            }
+        case .year:
+            userComponents = calendar.dateComponents([.year, .month, .day], from: draft.fixedDepositTime)
+            // 如果今天对应的日期，检查是否是否大于9点。
+            userComponents.calendar = Calendar.current
+            userComponents.hour = 9
+            userComponents.minute = 0
+            // 生成今天的日期时间
+            var nowYearTime: Date
+            if let nowYear = userComponents.date {
+                print("转换成功:\(nowYear)") // 转换成功后的具体日期
+                nowYearTime = nowYear
+            } else {
+                nowYearTime = Date()
+                print("转换失败")
+            }
+            // 如果今天的存取时间大于现在的时间，返回今天的存取时间
+            if nowYearTime > now {
+                print("选择时间:\(nowYearTime.formatted())")
+                print("现在选择的时间大于当前时间，返回选择时间")
+                return nowYearTime
+            } else {
+                print("计算下一个月日")
+                // 否则，今天的存取时间过时，计算下一次存取时间。
+                return calculateNextDate(type: draft.fixedDepositType, lastDate: nowYearTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
+            }
+        }
+    }
+    
+    // 计算下一次定期存款时间
+    static func calculateNextDate(type: String,
                                   lastDate: Date,
                                   weekday: Int?,
                                   day: Int?) -> Date {
         
         let calendar = Calendar.current
         let enumType = FixedDepositEnum(rawValue: type) ?? .day
-        
+        print("存款类型:\(enumType.rawValue)")
         // 非每日定期存款的组件
         var components = DateComponents()
         components.hour = 9
@@ -27,8 +140,10 @@ struct SavingsScheduler {
         
         switch enumType {
         case .day:
+            print("当日存款，更新为选中的时间")
             components.hour = calendar.component(.hour, from: lastDate)
             components.minute = calendar.component(.minute, from: lastDate)
+            print("当前存钱罐组件时间为:\(components)")
         case .week:
             components.weekday = weekday
         case .month:
@@ -57,9 +172,13 @@ struct SavingsScheduler {
             // 1、如果没有启用定期存款，则跳过
             guard bank.isFixedDeposit else { continue }
             
+            print("存钱罐:\(bank)，启用定期存款，进入定期存款逻辑")
             // 2、如果还没到时间，则跳过
             var nextDate = bank.nextDepositDate
-            if nextDate > now { continue}
+            if nextDate > now {
+                print("存钱罐:\(bank)的定期存款时间大于当前时间，跳出定期存款逻辑。")
+                continue
+            }
             
             // 4、遍历循环
             // 如果处理时间早于或等于现在，则循环执行
