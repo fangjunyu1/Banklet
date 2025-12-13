@@ -111,7 +111,7 @@ struct HomeSettingsView: View {
                     NavigationLink(destination: {
                         OpenSourceView()
                     }, label: {
-                        HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open source",accessory: .none)
+                        HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open Source",accessory: .none)
                     })
                 }
                 .modifier(SettingVStackRowModifier())

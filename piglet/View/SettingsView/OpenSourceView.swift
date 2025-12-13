@@ -57,7 +57,7 @@ struct OpenSourceView: View {
                 .multilineTextAlignment(.center)
             Spacer()
         }
-        .navigationTitle("Open source")
+        .navigationTitle("Open Source")
         .modifier(BackgroundModifier())
     }
 }

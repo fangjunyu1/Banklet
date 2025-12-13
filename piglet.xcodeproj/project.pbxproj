@@ -1620,6 +1620,22 @@
 				ta,
 				te,
 				ur,
+				fa,
+				fil,
+				km,
+				my,
+				az,
+				uz,
+				sw,
+				sq,
+				ga,
+				is,
+				lv,
+				et,
+				ceb,
+				"ceb-PH",
+				jv,
+				"jv-ID",
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
