@@ -75,7 +75,7 @@ struct AppIconView: View {
                 FootnoteSource(text: "Image by freepik")
             }
         }
-        .navigationTitle("icon")
+        .navigationTitle("Icon")
         .modifier(BackgroundModifier())
     }
     

@@ -23,7 +23,7 @@ struct GeneralView: View {
                     // 图标
                     if UIApplication.shared.supportsAlternateIcons {
                         NavigationLink(destination: AppIconView()) {
-                            HomeSettingRow(color: .color("EAA22A"),icon: .img("icon"),title: "icon", accessory: .none)
+                            HomeSettingRow(color: .color("EAA22A"),icon: .img("icon"),title: "Icon", accessory: .none)
                         }
                         Divider().padding(.leading,60)
                     }

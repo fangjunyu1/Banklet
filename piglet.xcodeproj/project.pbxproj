@@ -522,6 +522,20 @@
 		1D1561AF2EB33C1E0041C0DD /* security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = security.json; sourceTree = "<group>"; };
 		1D1695EA2D201BB10043A645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D17FA482EEA6B6B00C306AF /* SavingsScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsScheduler.swift; sourceTree = "<group>"; };
+		1D187D7F2EEE5E540091C650 /* sq */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sq; path = sq.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D802EEE5E570091C650 /* az */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = az; path = az.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D812EEE5E590091C650 /* my */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = my; path = my.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D822EEE5E590091C650 /* ceb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ceb; path = ceb.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D832EEE5E5B0091C650 /* et */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = et; path = et.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D842EEE5E5C0091C650 /* fil */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fil; path = fil.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D852EEE5E5D0091C650 /* is */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = is; path = is.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D862EEE5E5E0091C650 /* ga */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ga; path = ga.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D872EEE5E610091C650 /* jv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = jv; path = jv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D882EEE5E620091C650 /* km */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = km; path = km.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D892EEE5E630091C650 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D8A2EEE5E650091C650 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D8B2EEE5E670091C650 /* sw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sw; path = sw.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D187D8C2EEE5E680091C650 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceView.swift; sourceTree = "<group>"; };
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -1633,9 +1647,7 @@
 				lv,
 				et,
 				ceb,
-				"ceb-PH",
 				jv,
-				"jv-ID",
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
@@ -2121,6 +2133,20 @@
 				1DBEC5272EA09337006152D3 /* ta */,
 				1DBEC5292EA0933A006152D3 /* te */,
 				1DBEC52B2EA0933E006152D3 /* ur */,
+				1D187D7F2EEE5E540091C650 /* sq */,
+				1D187D802EEE5E570091C650 /* az */,
+				1D187D812EEE5E590091C650 /* my */,
+				1D187D822EEE5E590091C650 /* ceb */,
+				1D187D832EEE5E5B0091C650 /* et */,
+				1D187D842EEE5E5C0091C650 /* fil */,
+				1D187D852EEE5E5D0091C650 /* is */,
+				1D187D862EEE5E5E0091C650 /* ga */,
+				1D187D872EEE5E610091C650 /* jv */,
+				1D187D882EEE5E620091C650 /* km */,
+				1D187D892EEE5E630091C650 /* lv */,
+				1D187D8A2EEE5E650091C650 /* fa */,
+				1D187D8B2EEE5E670091C650 /* sw */,
+				1D187D8C2EEE5E680091C650 /* uz */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
