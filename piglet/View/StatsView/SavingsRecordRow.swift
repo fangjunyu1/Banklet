@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SavingsRecordRow: View {
+    @Environment(\.colorScheme) var colorScheme
     let record: SavingsRecord
         
     var body: some View {
@@ -64,7 +65,7 @@ struct SavingsRecordRow: View {
         }
         .frame(height:40)
         .padding(10)
-        .background(.white)
+        .modifier(WhiteBgModifier())
         .cornerRadius(10)
     }
 }

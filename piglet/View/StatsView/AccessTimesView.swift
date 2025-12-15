@@ -142,11 +142,13 @@ private struct FilterTabs: View {
 }
 
 private struct TabButton: View {
+    @Environment(\.colorScheme) var colorScheme
     let title: String
     let isSelected: Bool
     let action: () -> Void
     
     var body: some View {
+        let bgColor:Color = colorScheme == .light ? isSelected ? .white : .clear : isSelected ? AppColor.gray : .clear
         Button(action: {
             action()
         }, label: {
@@ -158,9 +160,9 @@ private struct TabButton: View {
                 .foregroundColor(isSelected ? .black : .gray)
                 .background {
                     Rectangle()
-                        .foregroundColor(isSelected ? .white : .clear)
+                        .foregroundColor(bgColor)
+                        .cornerRadius(20)
                 }
-                .cornerRadius(20)
         })
     }
 }

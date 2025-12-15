@@ -60,14 +60,14 @@ struct LottieModifier3: ViewModifier {
 }
 
 struct BackgroundModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
             .padding(.horizontal,20)
             .background {
-                AppColor.appBgGrayColor
-                    .ignoresSafeArea()
+                Background()
             }
     }
 }
