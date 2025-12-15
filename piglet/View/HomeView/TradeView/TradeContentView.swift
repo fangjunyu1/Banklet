@@ -46,7 +46,7 @@ struct TradeContentView: View {
         }
         .padding(20)
         .frame(width: 320)
-        .background(.white)
+        .modifier(WhiteBgModifier())
         .cornerRadius(10)
         .shadow(radius: 2)
     }

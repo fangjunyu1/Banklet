@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct HomeMoreInformationView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var idleManager: IdleTimerManager
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) var dismiss
@@ -67,8 +68,8 @@ struct HomeMoreInformationView: View {
                     dismiss()
                 }, label: {
                     Text("Completed")
+                        .modifier(BlackTextModifier())
                 })
-                .tint(.black)
             }
             // 编辑视图
             ToolbarItem(placement: .topBarTrailing) {
@@ -94,8 +95,7 @@ struct HomeMoreInformationView: View {
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity)
         .background {
-            AppColor.appBgGrayColor
-                .ignoresSafeArea()
+            Background()
                 .onTapGesture {
                     print("点击了背景")
                     isFocused = false
@@ -117,6 +117,7 @@ struct HomeMoreInformationView: View {
 }
 
 private struct HomeMoreInfomationNameView: View {
+    @Environment(\.colorScheme) var colorScheme
     var name: String
     var number: MoreInfomationEnum
     var isEdit: Bool
@@ -131,7 +132,7 @@ private struct HomeMoreInfomationNameView: View {
                 .foregroundColor(isEdit ? Color.primary : Color.gray)
                 .padding(10)
                 .frame(maxWidth: 200)
-                .background(Color.white)
+                .modifier(WhiteBgModifier())
                 .cornerRadius(10)
         }
     }
@@ -139,6 +140,7 @@ private struct HomeMoreInfomationNameView: View {
 
 // 基本信息
 private struct HomeMoreInformationList1: View {
+    @Environment(\.colorScheme) var colorScheme
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
@@ -168,7 +170,8 @@ private struct HomeMoreInformationList1: View {
         .padding(.vertical,5)
         .padding(.horizontal, 10)
         .background {
-            Color.white.onTapGesture {
+            let bgColor = colorScheme == .light ? Color.white : AppColor.appGrayColor
+            bgColor.onTapGesture {
                 print("点击了背景")
                 isFocused = false
             }
@@ -179,6 +182,7 @@ private struct HomeMoreInformationList1: View {
 
 // 定期存款
 private struct HomeMoreInformationList2: View {
+    @Environment(\.colorScheme) var colorScheme
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
@@ -220,7 +224,8 @@ private struct HomeMoreInformationList2: View {
         .padding(.vertical,5)
         .padding(.horizontal, 10)
         .background {
-            Color.white.onTapGesture {
+            let bgColor = colorScheme == .light ? Color.white : AppColor.appGrayColor
+            bgColor.onTapGesture {
                 print("点击了背景")
                 isFocused = false
             }
@@ -245,6 +250,7 @@ private struct HomeMoreInformationList2: View {
 
 // 截止日期
 private struct HomeMoreInformationList3: View {
+    @Environment(\.colorScheme) var colorScheme
     var primary: PiggyBank
     @Binding var draft: PiggyBankDraft
     var isEdit: Bool
@@ -265,7 +271,8 @@ private struct HomeMoreInformationList3: View {
         .padding(.vertical,5)
         .padding(.horizontal, 10)
         .background {
-            Color.white.onTapGesture {
+            let bgColor = colorScheme == .light ? Color.white : AppColor.appGrayColor
+            bgColor.onTapGesture {
                 print("点击了背景")
                 isFocused = false
             }
@@ -301,7 +308,7 @@ private struct HomeMoreInformationList4: View {
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
-        .background(Color.white)
+        .modifier(WhiteBgModifier())
         .cornerRadius(10)
     }
 }
@@ -317,6 +324,8 @@ private struct HomeMoreInformationList: View {
     var body: some View {
         HStack {
             Text(LocalizedStringKey(name))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
             Spacer()
             switch number {
             case .string(let binding,let focus):
@@ -421,7 +430,7 @@ struct HomeMoreInformationIconList: View {
                         }
                     }
                     .padding(10)
-                    .background(Color.white)
+                    .modifier(WhiteBgModifier())
                     .cornerRadius(10)
                 }
             }
@@ -468,5 +477,5 @@ private enum MoreInfomationEnum {
     PreviewMoreInformationView()
         .modelContainer(PiggyBank.preview)
         .environmentObject(IdleTimerManager.shared)
-    //        .environment(\.locale, .init(identifier: "de"))
+            .environment(\.locale, .init(identifier: "de"))
 }

@@ -73,13 +73,13 @@ struct BackgroundModifier: ViewModifier {
 }
 
 struct BackgroundListModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
             .background {
-                AppColor.appBgGrayColor
-                    .ignoresSafeArea()
+                Background()
             }
     }
 }
@@ -98,6 +98,13 @@ struct GrayTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(colorScheme == .light ?  AppColor.gray : AppColor.appBgGrayColor)
+    }
+}
+struct BlackTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ?  Color.black : Color.white)
     }
 }
 struct BlueTextModifier: ViewModifier {

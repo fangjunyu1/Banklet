@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct HomeBanksListView2: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var context
     @EnvironmentObject var homeVM: HomeViewModel
     @Query(sort: [
@@ -21,12 +22,32 @@ struct HomeBanksListView2: View {
         List {
             ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
                 let itemColor: Color = item.isPrimary ? .white : .primary
-                let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
-                let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                var itemBgColor: Color {
+                    if colorScheme == .light {
+                        item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                    } else {
+                        item.isPrimary ?
+                        AppColor.appColor.opacity(0.8) :
+                            .white.opacity(0.25)
+                    }
+                }
+                var itemProgressColor: Color {
+                    if colorScheme == .light {
+                        item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                    } else {
+                        item.isPrimary ? .white : .gray
+                    }
+                }
                 let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
                 let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
                 let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
-                let vsBgColor: Color = item.isPrimary ? .blue : Color.white
+                var vsBgColor: Color {
+                    if colorScheme == .light {
+                        item.isPrimary ? .blue : Color.white
+                    } else {
+                        AppColor.appGrayColor
+                    }
+                }
                 Button(action: {
                     // 振动
                     HapticManager.shared.selectionChanged()
@@ -167,7 +188,6 @@ private struct HomeBanksListRow: View {
         }
         .frame(height:40)
         .padding(10)
-        .background(.white)
         .cornerRadius(10)
     }
 }

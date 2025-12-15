@@ -31460,25 +31460,25 @@
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ətraflı məlumat"
+            "value" : "Ətraflı"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Подробна информация"
+            "value" : "Подробн"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "বিস্তারিত তথ্য"
+            "value" : "বিস্তারিত"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Informació detallada"
+            "value" : "Detalls"
           }
         },
         "ceb" : {
@@ -31688,7 +31688,7 @@
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "အသေးစိတ် အချက်အလက်များ"
+            "value" : "အသေးစိတ်"
           }
         },
         "nb" : {
