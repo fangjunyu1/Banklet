@@ -9,6 +9,7 @@ import SwiftUI
 
 // 顶部标题
 struct HomePrimaryBankTitleView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var hideAmount = false
     var primaryBank: PiggyBank
     @Binding var showMoreInformation: Bool
@@ -18,7 +19,7 @@ struct HomePrimaryBankTitleView: View {
             // 当前金额
             Text("Current amount")
                 .font(.footnote)
-                .foregroundColor(AppColor.gray)
+                .modifier(GrayTextModifier())
             // 存钱金额
             HStack {
                 Button(action: {
@@ -36,7 +37,7 @@ struct HomePrimaryBankTitleView: View {
                             .fontWeight(.bold)
                     }
                 })
-                    
+                .modifier(BlueTextModifier())
             }
             // 图标和名称
             HStack(spacing:10) {
@@ -45,14 +46,24 @@ struct HomePrimaryBankTitleView: View {
                 Text(LocalizedStringKey(primaryBank.name))
             }
             .font(.caption2)
-            .foregroundColor(AppColor.appColor)
+            .modifier(BlueTextModifier())
             .padding(.vertical,5)
             .padding(.horizontal,10)
-            .background(AppColor.appColor.opacity(0.1))
+            .modifier(LightBlueBgTextModifier())
             .cornerRadius(5)
             .onTapGesture {
                 showMoreInformation.toggle()
             }
         }
     }
+}
+
+#Preview {
+    Home()
+        .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
+        .environment(\.locale, .init(identifier: "ta"))
 }

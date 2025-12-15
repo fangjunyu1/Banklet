@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePrimaryBankButtonView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeVM: HomeViewModel
     @State private var showDeleteAlert = false
     var primaryBank: PiggyBank
@@ -89,9 +90,11 @@ private struct HomePrimaryBankSingleButtonView: View {
                     .scaleEffect(0.9)
                 Text(LocalizedStringKey(name))
                     .font(.caption2)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
             }
             .padding(.vertical,5)
-            .foregroundColor(AppColor.appColor)
+            .modifier(BlueTextModifier())
             .contentShape(Rectangle())
             .frame(width: width,height: height)
             .background(.ultraThickMaterial)
@@ -108,4 +111,5 @@ private struct HomePrimaryBankSingleButtonView: View {
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
+        .environment(\.locale, .init(identifier: "ru"))
 }

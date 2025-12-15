@@ -219,6 +219,7 @@
 		1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F72082EB703E7000DF62A /* StatisticsTab.swift */; };
 		1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */; };
 		1D42C27F2ED9890B007A890A /* IdleTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */; };
+		1D4542BC2EF01AEF0042C564 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4542BB2EF01AE40042C564 /* Background.swift */; };
 		1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
@@ -613,6 +614,7 @@
 		1D3F72082EB703E7000DF62A /* StatisticsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTab.swift; sourceTree = "<group>"; };
 		1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTouchManager.swift; sourceTree = "<group>"; };
 		1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerManager.swift; sourceTree = "<group>"; };
+		1D4542BB2EF01AE40042C564 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsEnum.swift; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
@@ -991,6 +993,8 @@
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
 				1D845F4D2D23F3C000EDE480 /* Home.swift */,
+				1D4542BB2EF01AE40042C564 /* Background.swift */,
+				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
 				1DBCF4192EB8DA1C00B85BF4 /* HomeView */,
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1DBCF41A2EB8DA3B00B85BF4 /* StatsView */,
@@ -1346,7 +1350,6 @@
 				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
 				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
-				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
 				1DD14EDD2EC0311400325DF7 /* LockApp.swift */,
 			);
 			path = SettingsView;
@@ -2043,6 +2046,7 @@
 				1D8C386A2ECC1B4600F7CAD5 /* EmergencyFund.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
 				1D1434A32EC9536400FA6CBB /* HomeActivitySheetView.swift in Sources */,
+				1D4542BC2EF01AEF0042C564 /* Background.swift in Sources */,
 				1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */,
 				1D1124562EE1115500E87CCC /* PiggyBankDraft.swift in Sources */,
 				1D1561AB2EB325E80041C0DD /* ButtonModifier.swift in Sources */,

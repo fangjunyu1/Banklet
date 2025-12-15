@@ -66,9 +66,7 @@ struct Home: View {
                     HomeTabView(selectedTab: $selectedTab)
                 }
                 .background {
-                    // 设置默认的背景灰色，防止各视图切换时显示白色闪烁背景
-                    AppColor.appBgGrayColor
-                        .ignoresSafeArea()
+                    Background()
                 }
                 // 监听应用状态，如果返回，则调用Widget保存数据
                 .onChange(of: scenePhase) { _,newPhase in

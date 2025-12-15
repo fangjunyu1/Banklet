@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeMainView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var searchText = ""  // 搜索框
     @State private var showCreateView = false
     @State private var showMoreInformation = false
@@ -75,4 +76,5 @@ struct HomeMainView: View {
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
+        .environment(\.locale, .init(identifier: "ta"))
 }

@@ -92,3 +92,25 @@ struct SettingVStackRowModifier: ViewModifier {
             .cornerRadius(10)
     }
 }
+
+struct GrayTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ?  AppColor.gray : AppColor.appBgGrayColor)
+    }
+}
+struct BlueTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ? AppColor.appColor : Color.white)
+    }
+}
+struct LightBlueBgTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .light ? AppColor.appColor.opacity(0.1) : Color.white.opacity(0.1))
+    }
+}
