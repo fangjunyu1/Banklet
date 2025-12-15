@@ -46,12 +46,6 @@ struct HomeActivityView: View {
                 ActivityMusicView()
             }
         }
-        .onAppear {
-            if colorScheme == .light {
-                UIPageControl.appearance().currentPageIndicatorTintColor = .black // 当前页指示器为黑色
-                UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.3) // 其他页指示器半透明黑色
-            }
-        }
         .background {
             HomeActivityViewBackground(activityTab: $homeActivityVM.tab)
         }
@@ -63,11 +57,14 @@ struct HomeActivityView: View {
 }
 
 private struct HomeActivityTabView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeActivity: HomeActivityViewModel
     let imgHeight: CGFloat = 380
     let imgWidth: CGFloat = 280
     var TabHeight: CGFloat { imgHeight + 60 }
+    
     var body: some View {
+        let imgOpacity = colorScheme == .light ? 1 : 0.8
         TabView(selection: $homeActivity.tab) {
             ForEach(ActivityTab.allCases) { item in
                 Image(item.image)
@@ -79,6 +76,7 @@ private struct HomeActivityTabView: View {
                     .overlay { HomeActivityTabTextView(item: item)}
                     .offset(y: -15)
                     .tag(item)
+                    .opacity(imgOpacity)
             }
         }
         .tabViewStyle(.page) // 隐藏分页指示器
@@ -143,5 +141,7 @@ extension Image {
         HomeActivityView()
             .environment(AppStorageManager.shared)
             .environment(SoundManager.shared)
+            .environment(HomeActivityViewModel())
+            .environment(\.locale, .init(identifier: "ta"))
     }
 }

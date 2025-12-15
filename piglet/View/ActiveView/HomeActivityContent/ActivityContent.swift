@@ -53,7 +53,7 @@ private struct HomeActivitySheetContentModifier: ViewModifier {
             .padding(.horizontal,20)
             .frame(idealHeight: 300)
             .frame(maxWidth: .infinity)
-            .background(.white)
+            .modifier(WhiteBg2Modifier())
             .cornerRadius(20)
     }
 }

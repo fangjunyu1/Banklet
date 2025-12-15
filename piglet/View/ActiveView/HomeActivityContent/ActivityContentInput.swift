@@ -8,31 +8,34 @@
 import SwiftUI
 
 struct ActivityContentInputView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     @FocusState.Binding var isFocused: Bool
     var body: some View {
         // 人生存钱罐
         if homeActivityVM.tab == .LifeSavingsBank {
+            let viewColor:Color = colorScheme == .light ? Color(hex:"695CFE") : Color(hex:"695CFE").opacity(0.8)
             // MARK: - 人生存钱罐
             switch activityVM.step {
             case .calculate, .calculating:
                 HStack {
                     // 年龄
-                    PrivateInputBindingView(text:"Age",image: .sficon("person.fill"), color: Color(hex:"695CFE"), mode: .input(placeholder: "_ _", textField: $activityVM.input.age, textWidth: 40, isFocused: $isFocused))
+                    PrivateInputBindingView(text:"Age",image: .sficon("person.fill"), color: viewColor, mode: .input(placeholder: "_ _", textField: $activityVM.input.age, textWidth: 40, isFocused: $isFocused))
                     // 年薪
-                    PrivateInputBindingView(text:"Annual salary",image: .sficon("dollarsign.circle.fill"),color: Color(hex: "695CFE"), mode: .input(placeholder: "_ _ _ _ _", textField: $activityVM.input.annualSalary, textWidth: 100, isFocused: $isFocused))
+                    PrivateInputBindingView(text:"Salary",image: .sficon("dollarsign.circle.fill"),color: Color(hex: "695CFE"), mode: .input(placeholder: "_ _ _ _ _", textField: $activityVM.input.annualSalary, textWidth: 100, isFocused: $isFocused))
                 }
             default:
                 // 目标金额
                 PrivateInputBindingView(text:"Target amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.lifeSavingsBank ?? 0))
             }
         } else if homeActivityVM.tab == .EmergencyFund {
+            let viewColor:Color = colorScheme == .light ? Color(hex:"FF9A00") : Color(hex:"FF9A00").opacity(0.8)
             // MARK: - 生活保障金
             switch activityVM.step {
             case .calculate, .calculating:
                 // 生活开销
-                PrivateInputBindingView(text:"Living Expenses",image: .sficon("dollarsign.circle.fill"),color: Color(hex:"FF9A00"), mode: .input(placeholder: "_ _ _", textField: $activityVM.input.livingExpenses, textWidth: 100, isFocused: $isFocused))
+                PrivateInputBindingView(text:"Expense",image: .sficon("dollarsign.circle.fill"),color: viewColor, mode: .input(placeholder: "_ _ _", textField: $activityVM.input.livingExpenses, textWidth: 100, isFocused: $isFocused))
             default:
                 // 目标金额
                 PrivateInputBindingView(text:"Target amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.emergencyFund ?? 0))

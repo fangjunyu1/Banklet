@@ -128,6 +128,13 @@ struct WhiteBgModifier: ViewModifier {
             .background(colorScheme == .light ? Color.white : AppColor.appGrayColor)
     }
 }
+struct WhiteBg2Modifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .light ? Color.white : Color.black)
+    }
+}
 struct BlueBgModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {

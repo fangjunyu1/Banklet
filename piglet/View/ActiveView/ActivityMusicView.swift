@@ -38,13 +38,19 @@ struct ActivityMusicView: View {
                 .overlay {
                     if !appStorage.isActivityMusic {
                         Image(systemName: "line.diagonal")
+                            .rotationEffect(Angle(degrees: 90))
                     }
                 }
-                .foregroundColor(Color.black)
+                .modifier(BlackTextModifier())
         })
     }
 }
 
 #Preview {
-    HomeActivityView()
+    NavigationStack {
+        HomeActivityView()
+            .environment(AppStorageManager.shared)
+            .environment(SoundManager.shared)
+            .environment(HomeActivityViewModel())
+    }
 }

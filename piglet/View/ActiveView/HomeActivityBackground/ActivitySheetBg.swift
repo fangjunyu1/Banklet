@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct ActivitySheetBgView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeActivityVM: HomeActivityViewModel
     @EnvironmentObject var activityVM: ActiveViewModel
     
     var body: some View {
+        let imgOpacity = colorScheme == .light ? 0 : 0.3
         ZStack {
             // 背景图片
-            Rectangle()
-                .overlay {
-                    // 背景图片
-                    Image(homeActivityVM.tab.image)
-                        .resizable()
-                        .scaledToFill()
-                }
-                .frame(minHeight: 400)
-                .padding(.bottom, -20)
+            ZStack {
+                Color.black
+                Rectangle()
+                    .overlay {
+                        // 背景图片
+                        Image(homeActivityVM.tab.image)
+                            .resizable()
+                            .scaledToFill()
+                            .overlay {
+                                Color.black
+                                    .opacity(imgOpacity)
+                            }
+                    }
+                    .frame(minHeight: 400)
+                    .padding(.bottom, -20)
+            }
             SheetView()
         }
     }
@@ -49,7 +58,9 @@ private struct SheetView: View {
         VStack{}
             .sheet(isPresented: .constant(true)) {
                 HomeActivitySheetView()
-                    .environment(ActiveViewModel())
+                    .environment(AppStorageManager.shared)
+                    .environment(SoundManager.shared)
+                    .environment(HomeActivityViewModel())
             }
     }
 }

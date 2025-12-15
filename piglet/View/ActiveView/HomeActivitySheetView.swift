@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeActivitySheetView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @State private var activityVM = ActiveViewModel()
     @FocusState private var isFocused: Bool
