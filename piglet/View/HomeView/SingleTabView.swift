@@ -26,6 +26,8 @@ struct SingleTabView: View {
                 Text(LocalizedStringKey(tab.title))
                     .font(.footnote)
                     .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.3)
             }
             .frame(width:70)
             .foregroundColor(AppColor.gray)
@@ -39,6 +41,7 @@ private struct HomeTabPreviewView: View {
     @State private var tab = HomeTab.activity
     var body: some View {
         HomeTabView(selectedTab: $tab)
+            .environment(\.locale, .init(identifier: "ta"))
     }
 }
 #Preview {

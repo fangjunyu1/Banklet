@@ -3596,7 +3596,7 @@
       }
     },
     "Activity" : {
-      "comment" : "活动",
+      "comment" : "活动（导航）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -3608,7 +3608,7 @@
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fəaliyyətlər"
+            "value" : "Fəal"
           }
         },
         "bg" : {
@@ -3620,67 +3620,67 @@
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ইভেন্ট"
+            "value" : "কার্য"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activitat"
+            "value" : "Actiu"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Aktibidad"
+            "value" : "Buhat"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivity"
+            "value" : "Aktivita"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktiviteter"
+            "value" : "Aktiv"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitäten"
+            "value" : "Aktiv"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δραστηριότητα"
+            "value" : "Δραστη"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Actividad"
+            "value" : "Activo"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Actividad"
+            "value" : "Activo"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Actividad"
+            "value" : "Activo"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tegevused"
+            "value" : "Tegevus"
           }
         },
         "fa" : {
@@ -3692,31 +3692,31 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktiviteetit"
+            "value" : "Toimi"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Aktibidad"
+            "value" : "Gawain"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activités"
+            "value" : "Actif"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activités"
+            "value" : "Actif"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gníomhaíocht"
+            "value" : "Gníomh"
           }
         },
         "gu" : {
@@ -3740,43 +3740,43 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivnost"
+            "value" : "Aktiv"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tevékenység"
+            "value" : "Aktív"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitas"
+            "value" : "Aktif"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Viðburðir"
+            "value" : "Virk"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Attività"
+            "value" : "Attiv"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "イベント"
+            "value" : "活動"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kegiatan"
+            "value" : "Aktif"
           }
         },
         "kk" : {
@@ -3788,37 +3788,37 @@
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "សកម្មភាព"
+            "value" : "ចលនា"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಚಟುವಟಿಕೆಗಳು"
+            "value" : "ಚಟುವಟಿಕೆ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "이벤트"
+            "value" : "활동"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veikla"
+            "value" : "Aktyv"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitātes"
+            "value" : "Aktīvs"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പ്രവർത്തനം"
+            "value" : "പ്രവർത്തി"
           }
         },
         "mr" : {
@@ -3830,31 +3830,31 @@
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktiviti"
+            "value" : "Aktif"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "လှုပ်ရှားမှုများ"
+            "value" : "လှုပ်"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitet"
+            "value" : "Aktiv"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activiteiten"
+            "value" : "Actief"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "କାର୍ଯ୍ୟକଳାପ"
+            "value" : "କାର୍ଯ୍ୟ"
           }
         },
         "pa" : {
@@ -3866,55 +3866,55 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wydarzenia"
+            "value" : "Aktyw"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Atividades"
+            "value" : "Ativo"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Atividade"
+            "value" : "Ativo"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activități"
+            "value" : "Activ"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Активность"
+            "value" : "Актив"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivita"
+            "value" : "Aktiv"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dejavnost"
+            "value" : "Aktiv"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitete"
+            "value" : "Aktiv"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aktivitet"
+            "value" : "Aktiv"
           }
         },
         "sw" : {
@@ -3932,7 +3932,7 @@
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "కార్యకలాపం"
+            "value" : "చటువటిక"
           }
         },
         "th" : {
@@ -3944,31 +3944,31 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Etkinlikler"
+            "value" : "Aktif"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Події"
+            "value" : "Актив"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سرگرمیاں"
+            "value" : "سرگرمی"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Faoliyatlar"
+            "value" : "Faol"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hoạt động"
+            "value" : "Hoạt"
           }
         },
         "zh-Hans" : {
@@ -40220,31 +40220,31 @@
       }
     },
     "Home" : {
-      "comment" : "主页",
+      "comment" : "主页（导航）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الصفحة الرئيسية"
+            "value" : "رئيسي"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ana səhifə"
+            "value" : "Ana"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Начална страница"
+            "value" : "Начало"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "হোম পেজ"
+            "value" : "হোম"
           }
         },
         "ca" : {
@@ -40256,7 +40256,7 @@
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Home Page"
+            "value" : "Balay"
           }
         },
         "cs" : {
@@ -40274,13 +40274,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Startseite"
+            "value" : "Start"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Αρχική"
+            "value" : "Αρχή"
           }
         },
         "es" : {
@@ -40310,19 +40310,19 @@
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "صفحه اصلی"
+            "value" : "خانه"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Etusivu"
+            "value" : "Koti"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Home Page"
+            "value" : "Bahay"
           }
         },
         "fr" : {
@@ -40340,37 +40340,37 @@
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Leathanach baile"
+            "value" : "Baile"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "હોમ પેજ"
+            "value" : "હોમ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "דף הבית"
+            "value" : "בית"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "होम पेज"
+            "value" : "होम"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Početna"
+            "value" : "Početak"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Főoldal"
+            "value" : "Kezdő"
           }
         },
         "id" : {
@@ -40382,13 +40382,13 @@
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Heimaskjár"
+            "value" : "Heim"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pagina principale"
+            "value" : "Home"
           }
         },
         "ja" : {
@@ -40400,25 +40400,25 @@
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kaca Utama"
+            "value" : "Ngarep"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Басты бет"
+            "value" : "Басты"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ទំព័រដើម"
+            "value" : "មុខ"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಮುಖಪುಟ"
+            "value" : "ಹೋಮ್"
           }
         },
         "ko" : {
@@ -40430,7 +40430,7 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pagrindinis"
+            "value" : "Pradžia"
           }
         },
         "lv" : {
@@ -40442,25 +40442,25 @@
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ഹോം പേജ്"
+            "value" : "ഹോം"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "होमपेज"
+            "value" : "होम"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Halaman Utama"
+            "value" : "Utama"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ပင်မစာမျက်နှာ"
+            "value" : "မူလ"
           }
         },
         "nb" : {
@@ -40472,25 +40472,25 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Startpagina"
+            "value" : "Start"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ମୂଳପୃଷ୍ଠା"
+            "value" : "ହୋମ୍"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਮੁੱਖ ਪੰਨਾ"
+            "value" : "ਹੋਮ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Strona główna"
+            "value" : "Dom"
           }
         },
         "pt-BR" : {
@@ -40502,7 +40502,7 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Página inicial"
+            "value" : "Início"
           }
         },
         "ro" : {
@@ -40514,7 +40514,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Главная"
+            "value" : "Дом"
           }
         },
         "sk" : {
@@ -40532,7 +40532,7 @@
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kreu"
+            "value" : "Balli"
           }
         },
         "sv" : {
@@ -40544,7 +40544,7 @@
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ukurasa wa nyumbani"
+            "value" : "Kwanza"
           }
         },
         "ta" : {
@@ -40556,19 +40556,19 @@
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "హోమ్ పేజీ"
+            "value" : "హోమ్"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "หน้าหลัก"
+            "value" : "หน้าแรก"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ana Sayfa"
+            "value" : "Ana"
           }
         },
         "uk" : {
@@ -40580,19 +40580,19 @@
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ہوم پیج"
+            "value" : "ہوم"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bosh sahifa"
+            "value" : "Bosh"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trang chủ"
+            "value" : "Trang"
           }
         },
         "zh-Hans" : {
@@ -77371,43 +77371,43 @@
       }
     },
     "Settings" : {
-      "comment" : "设置",
+      "comment" : "设置（导航）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إعدادات"
+            "value" : "إعداد"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Parametrlər"
+            "value" : "Param"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Настройки"
+            "value" : "Настр"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "সেটিংস"
+            "value" : "সেট"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuració"
+            "value" : "Conf"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Setting"
+            "value" : "Set"
           }
         },
         "cs" : {
@@ -77419,97 +77419,97 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indstillinger"
+            "value" : "Indstil"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einstellungen"
+            "value" : "Einstell"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ρυθμίσεις"
+            "value" : "Ρυθμ"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajustes"
+            "value" : "Config"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración"
+            "value" : "Config"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración"
+            "value" : "Config"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seaded"
+            "value" : "Seadist"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تنظیمات"
+            "value" : "تنظیم"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Asetukset"
+            "value" : "Aseta"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Setting"
+            "value" : "Ayos"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres"
+            "value" : "Config"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres"
+            "value" : "Config"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Socruithe"
+            "value" : "Socra"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "સેટિંગ્સ"
+            "value" : "સેટિંગ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הגדרות"
+            "value" : "הגדר"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिंग्स"
+            "value" : "सेटिंग"
           }
         },
         "hr" : {
@@ -77521,25 +77521,25 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beállítások"
+            "value" : "Beáll"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pengaturan"
+            "value" : "Setel"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stillingar"
+            "value" : "Stilling"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impostazioni"
+            "value" : "Impost"
           }
         },
         "ja" : {
@@ -77551,25 +77551,25 @@
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setelan"
+            "value" : "Setel"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Параметрлер"
+            "value" : "Бапта"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ការកំណត់"
+            "value" : "កំណត់"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+            "value" : "ಸೆಟ್"
           }
         },
         "ko" : {
@@ -77581,79 +77581,79 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nustatymai"
+            "value" : "Nustat"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Iestatījumi"
+            "value" : "Iestat"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ക്രമീകരണങ്ങൾ"
+            "value" : "സജ്ജ"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिंग्ज"
+            "value" : "सेटिंग"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tetapan"
+            "value" : "Tetap"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ဆက်တင်များ"
+            "value" : "ဆက်"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Innstillinger"
+            "value" : "Innst"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Instellingen"
+            "value" : "Instel"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ସେଟିଂସମୂହ"
+            "value" : "ସେଟିଂ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਸੈਟਿੰਗਾਂ"
+            "value" : "ਸੈਟ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustawienia"
+            "value" : "Ustaw"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações"
+            "value" : "Config"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações"
+            "value" : "Config"
           }
         },
         "ro" : {
@@ -77665,85 +77665,85 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Настройки"
+            "value" : "Настр"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavenia"
+            "value" : "Nastav"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavitve"
+            "value" : "Nastav"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cilësimet"
+            "value" : "Cilës"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inställningar"
+            "value" : "Inst"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mipangilio"
+            "value" : "Mipang"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "அமைப்புகள்"
+            "value" : "அமைப்பு"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "సెట్టింగ్‌లు"
+            "value" : "సెట్"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การตั้งค่า"
+            "value" : "ตั้งค่า"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayarlar"
+            "value" : "Ayar"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Налаштування"
+            "value" : "Налашт"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ترتیبات"
+            "value" : "سیٹ"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sozlamalar"
+            "value" : "Soz"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cài đặt"
+            "value" : "Cài"
           }
         },
         "zh-Hans" : {
@@ -80569,91 +80569,91 @@
       }
     },
     "Stats" : {
-      "comment" : "统计",
+      "comment" : "统计（导航）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إحصائيات"
+            "value" : "إحصاء"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Статистика"
+            "value" : "Стат"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "পরিসংখ্যান"
+            "value" : "পরি"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estadístiques"
+            "value" : "Estad"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estadistika"
+            "value" : "Estad"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistiky"
+            "value" : "Stat"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Στατιστικά"
+            "value" : "Στατ"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estadísticas"
+            "value" : "Stat"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estadísticas"
+            "value" : "Stat"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estadísticas"
+            "value" : "Stat"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "fa" : {
@@ -80665,31 +80665,31 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tilastot"
+            "value" : "Tilasto"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Istatistika"
+            "value" : "Stat"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistiques"
+            "value" : "Stat"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistiques"
+            "value" : "Stat"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Staitisticí"
+            "value" : "Stait"
           }
         },
         "gu" : {
@@ -80701,43 +80701,43 @@
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "סטטיסטיקה"
+            "value" : "סטט"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "आंकड़े"
+            "value" : "आँकड़ा"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statisztika"
+            "value" : "Statis"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tölfræði"
+            "value" : "Staða"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistiche"
+            "value" : "Stat"
           }
         },
         "ja" : {
@@ -80749,13 +80749,13 @@
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Статистика"
+            "value" : "Стат"
           }
         },
         "km" : {
@@ -80767,7 +80767,7 @@
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಅಂಕಿಅಂಶಗಳು"
+            "value" : "ಅಂಕಿ"
           }
         },
         "ko" : {
@@ -80779,55 +80779,55 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "സ്ഥിതിവിവരക്കണക്കുകൾ"
+            "value" : "സ്ഥിതി"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "आकडेवारी"
+            "value" : "आकडे"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "စာရင်းအင်းများ"
+            "value" : "စာရင်း"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistikk"
+            "value" : "Stat"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistieken"
+            "value" : "Stat"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ପରିସଂଖ୍ୟାନ"
+            "value" : "ସାଂଖ୍ୟିକ"
           }
         },
         "pa" : {
@@ -80839,55 +80839,55 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statystyki"
+            "value" : "Stat"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estatísticas"
+            "value" : "Estat"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Estatísticas"
+            "value" : "Estat"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistici"
+            "value" : "Stat"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Статистика"
+            "value" : "Стат"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Štatistiky"
+            "value" : "Stat"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistik"
+            "value" : "Stat"
           }
         },
         "sw" : {
@@ -80899,13 +80899,13 @@
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "புள்ளிவிவரங்கள்"
+            "value" : "புள்ளிவிவரம்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "గణాంకాలు"
+            "value" : "గణాంక"
           }
         },
         "th" : {
@@ -80917,31 +80917,31 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İstatistik"
+            "value" : "Stat"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Статистика"
+            "value" : "Стат"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شماریات"
+            "value" : "اعداد"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Statistika"
+            "value" : "Stat"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thống kê"
+            "value" : "Thống"
           }
         },
         "zh-Hans" : {

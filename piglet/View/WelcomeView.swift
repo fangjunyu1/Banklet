@@ -90,7 +90,7 @@ struct WelcomeView: View {
             Spacer()
                 .frame(height: 50)
         }
-        .padding(.horizontal,10)
+        .padding(.horizontal,20)
     }
 }
 
@@ -103,5 +103,5 @@ enum WelcomeStep {
 #Preview {
     WelcomeView()
         .environment(AppStorageManager.shared)
-    // .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+     .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
 }
