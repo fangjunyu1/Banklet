@@ -43,7 +43,7 @@ struct LifeSavingsView: View {
                     .environment(vm)
                     .environment(hvm)
                     .onAppear {
-                        hvm.tab = .EmergencyFund
+                        hvm.tab = .LifeFund
                     }
             }
     }

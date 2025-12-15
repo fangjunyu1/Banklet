@@ -32,13 +32,13 @@ final class ActiveViewModel:ObservableObject {
         // 计算人生存钱罐
         Task { @MainActor in
             do {
-                if tab == .LifeSavingsBank {
-                    try lifeSavingsBankCalculate()
+                if tab == .LifePiggy {
+                    try LifePiggyCalculate()
                     await runLifeSavingBankAnimation()
                     print("显示人生存钱罐的动画")
-                } else if tab == .EmergencyFund {
+                } else if tab == .LifeFund {
                     // 计算生活保障金
-                    try await emergencyFundCalculate()
+                    try await lifeFundCalculate()
                 }
                 step = .create   // 显示创建界面
             } catch {
@@ -53,10 +53,10 @@ final class ActiveViewModel:ObservableObject {
             step = .creating
             try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
             do {
-                if tab == .LifeSavingsBank {
+                if tab == .LifePiggy {
                     try createLifeSavingBank()
-                } else if tab == .EmergencyFund {
-                    try createEmergencyFund()
+                } else if tab == .LifeFund {
+                    try createLifeFund()
                 }
             } catch CalculationError.containerCreationFailed {
                 print("无法创建 ModelContainer")
@@ -81,12 +81,12 @@ final class ActiveViewModel:ObservableObject {
             print("设置为计算中状态")
             try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
             print("等待2秒钟")
-            if tab == .LifeSavingsBank {
+            if tab == .LifePiggy {
                 while !lifeSavingRows.isEmpty {
                     lifeSavingRows.removeLast()
                     try? await Task.sleep(nanoseconds: 300_000_000)  // 等 0.3 秒
                 }
-            } else if tab == .EmergencyFund {
+            } else if tab == .LifeFund {
                 
             }
             print("设置为计算状态")
@@ -103,7 +103,7 @@ final class ActiveViewModel:ObservableObject {
     }
     
     // MARK: - 计算 - 人生存钱罐
-    private func lifeSavingsBankCalculate() throws {
+    private func LifePiggyCalculate() throws {
         // 检查输入的年龄和年薪是否正确，年龄要求大于等于起始年龄，小于等于退休年龄
         guard let age = input.age,
               let annualSalary = input.annualSalary,
@@ -133,7 +133,7 @@ final class ActiveViewModel:ObservableObject {
         }
         
         // 完成人生存钱罐的金额
-        input.lifeSavingsBank = Int(total)
+        input.LifePiggy = Int(total)
         print("人生存钱罐的金额为:\(Int(total))")
     }
     
@@ -142,7 +142,7 @@ final class ActiveViewModel:ObservableObject {
         lifeSavingRows.removeAll()
         try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
         
-        guard let lifeSavingsBank = input.lifeSavingsBank else {
+        guard let LifePiggy = input.LifePiggy else {
             return
         }
         // 展示前两个年龄
@@ -166,13 +166,13 @@ final class ActiveViewModel:ObservableObject {
             try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
         }
         // 插入人生存钱罐
-        withAnimation { lifeSavingRows.append(.total(amount: lifeSavingsBank)) }
+        withAnimation { lifeSavingRows.append(.total(amount: LifePiggy)) }
         
         try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等1秒
     }
     
     // MARK: - 计算 - 生活保障金
-    private func emergencyFundCalculate() async throws {
+    private func lifeFundCalculate() async throws {
         // 检查输入的生活开销是否正确，不能等于0 或者大于 1000000
         guard let livingExpenses = input.livingExpenses,
               let month = input.guaranteeMonth,
@@ -182,8 +182,8 @@ final class ActiveViewModel:ObservableObject {
             throw CalculationError.invalidInput
         }
         
-        input.emergencyFund = month * livingExpenses
-        print("生活保障金的金额为:\(input.emergencyFund ?? 0)")
+        input.lifeFund = month * livingExpenses
+        print("生活保障金的金额为:\(input.lifeFund ?? 0)")
         try? await Task.sleep(nanoseconds: 2_000_000_000)  // 等2秒
     }
     
@@ -223,11 +223,11 @@ final class ActiveViewModel:ObservableObject {
         
         // Step 4: 创建新的人生存钱罐
         let piggyBank = PiggyBank(isPrimary: true,
-                                  name: "Life savings jar",
+                                  name: "LifePiggy",
                                   icon: "person.fill",
                                   amount: 0,
                                   initialAmount: 0,
-                                  targetAmount: Double(input.lifeSavingsBank ?? 0),
+                                  targetAmount: Double(input.LifePiggy ?? 0),
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
@@ -247,7 +247,7 @@ final class ActiveViewModel:ObservableObject {
     }
     
     // 创建生活保障金
-    private func createEmergencyFund() throws {
+    private func createLifeFund() throws {
         // Step 1: 获取上下文
         let context = DataController.shared.context
         
@@ -267,11 +267,11 @@ final class ActiveViewModel:ObservableObject {
         
         // Step 4: 创建新的生活保障金
         let piggyBank = PiggyBank(isPrimary: true,
-                                  name: "Emergency Fund",
+                                  name: "LifeFund",
                                   icon: "heart",    // 爱心图标
                                   amount: 0,
                                   initialAmount: 0,
-                                  targetAmount: Double(input.emergencyFund ?? 0),
+                                  targetAmount: Double(input.lifeFund ?? 0),
                                   creationDate: Date(),
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
@@ -324,9 +324,9 @@ struct ActivityInput {
     var age: Int? = nil // 年龄
     var annualSalary: Int? = nil    // 年薪
     var startingSalary: Int = 1  // 起始年薪
-    var lifeSavingsBank: Int? = nil // 人生存钱罐
+    var LifePiggy: Int? = nil // 人生存钱罐
     // 生活保障金
     var livingExpenses: Int? = nil  // 基本生活开销
     var guaranteeMonth: Int? = 6    // 保障月份
-    var emergencyFund: Int? = nil   // 生活保障金
+    var lifeFund: Int? = nil   // 生活保障金
 }

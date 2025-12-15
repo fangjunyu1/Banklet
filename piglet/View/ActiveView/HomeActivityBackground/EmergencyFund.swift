@@ -1,5 +1,5 @@
 //
-//  SheetEmergencyFundView.swift
+//  SheetLifeFundView.swift
 //  piglet
 //
 //  Created by 方君宇 on 2025/11/18.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 // 生活保障金 - 月份选择视图
-struct EmergencyFundView: View {
+struct LifeFundView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var activityVM: ActiveViewModel
     let monthList: [Int] = [1,3,6,9,12,24]

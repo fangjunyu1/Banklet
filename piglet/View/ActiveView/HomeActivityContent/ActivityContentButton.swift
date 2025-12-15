@@ -29,7 +29,7 @@ private struct ContentCancelButtonView: View {
             activityVM.cancelButton(for:homeActivityVM.tab)
         }, label: {
             Text("Cancel")
-                .foregroundColor(AppColor.appGrayColor)
+                .modifier(GrayTextModifier())
                 .font(.footnote)
         })
         .opacity(activityVM.step == .create ? 1 : 0)

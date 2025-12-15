@@ -10,13 +10,13 @@ import SwiftUI
 @Observable
 @MainActor
 final class HomeActivityViewModel: ObservableObject {
-    var tab: ActivityTab = .LifeSavingsBank
+    var tab: ActivityTab = .LifePiggy
     
      func playMusicForCurrentTab(for tab: ActivityTab) {
        switch tab {
-       case .LifeSavingsBank:
+       case .LifePiggy:
            SoundManager.shared.playBackgroundMusic(named: "life0")
-       case .EmergencyFund:
+       case .LifeFund:
            SoundManager.shared.playBackgroundMusic(named: "life1")
        }
    }

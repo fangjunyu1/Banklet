@@ -61,7 +61,7 @@ struct HomeActivityFootNoteModifier: ViewModifier {
                     .environment(vm)
                     .environment(hvm)
                     .onAppear {
-                        hvm.tab = .EmergencyFund
+                        hvm.tab = .LifeFund
                     }
             }
     }

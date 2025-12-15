@@ -43,11 +43,11 @@ private struct SheetView: View {
     var body: some View {
         VStack {
             // 人生存钱罐
-            if homeActivityVM.tab == .LifeSavingsBank {
+            if homeActivityVM.tab == .LifePiggy {
                 LifeSavingsView()
-            } else if homeActivityVM.tab == .EmergencyFund {
+            } else if homeActivityVM.tab == .LifeFund {
                 // 生活存钱罐
-                EmergencyFundView()
+                LifeFundView()
             }
         }
     }

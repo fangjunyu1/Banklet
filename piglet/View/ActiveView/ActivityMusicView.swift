@@ -16,9 +16,9 @@ struct ActivityMusicView: View {
     
     private func playMusicForCurrentTab() {
         switch homeActivityVM.tab {
-        case .LifeSavingsBank:
+        case .LifePiggy:
             soundManager.playBackgroundMusic(named: "life0")
-        case .EmergencyFund:
+        case .LifeFund:
             soundManager.playBackgroundMusic(named: "life1")
         }
     }

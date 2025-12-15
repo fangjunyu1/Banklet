@@ -226,6 +226,10 @@
         }
       }
     },
+    "LifePiggy" : {
+      "comment" : "人生存钱罐",
+      "extractionState" : "manual"
+    },
     "proverb0" : {
       "comment" : "存下今天，收获明天。",
       "extractionState" : "manual",

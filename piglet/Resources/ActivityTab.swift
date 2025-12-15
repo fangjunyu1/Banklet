@@ -7,25 +7,25 @@
 
 enum ActivityTab: String, CaseIterable,Identifiable {
     var id: String { rawValue }
-    case LifeSavingsBank  // 人生存钱罐
-    case EmergencyFund    // 生活保障金
+    case LifePiggy  // 人生存钱罐
+    case LifeFund    // 生活保障金
     
     // 标题
     var title: String {
         switch self {
-        case .LifeSavingsBank:
-            "Life savings jar"
-        case .EmergencyFund:
-            "Emergency Fund"
+        case .LifePiggy:
+            "LifePiggy"
+        case .LifeFund:
+            "LifeFund"
         }
     }
     
     // 描述
     var description: String {
         switch self {
-        case .LifeSavingsBank:
+        case .LifePiggy:
             "lifetime wealth planning"
-        case .EmergencyFund:
+        case .LifeFund:
             "Maintain a sense of security in your life"
         }
     }
@@ -33,9 +33,9 @@ enum ActivityTab: String, CaseIterable,Identifiable {
     // 图片
     var image: String {
         switch self {
-        case .LifeSavingsBank:
+        case .LifePiggy:
             "life0"
-        case .EmergencyFund:
+        case .LifeFund:
             "life1"
         }
     }

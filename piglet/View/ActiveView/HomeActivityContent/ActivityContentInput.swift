@@ -14,7 +14,7 @@ struct ActivityContentInputView: View {
     @FocusState.Binding var isFocused: Bool
     var body: some View {
         // 人生存钱罐
-        if homeActivityVM.tab == .LifeSavingsBank {
+        if homeActivityVM.tab == .LifePiggy {
             let viewColor:Color = colorScheme == .light ? Color(hex:"695CFE") : Color(hex:"695CFE").opacity(0.8)
             // MARK: - 人生存钱罐
             switch activityVM.step {
@@ -27,9 +27,9 @@ struct ActivityContentInputView: View {
                 }
             default:
                 // 目标金额
-                PrivateInputBindingView(text:"Target amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.lifeSavingsBank ?? 0))
+                PrivateInputBindingView(text:"Amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.LifePiggy ?? 0))
             }
-        } else if homeActivityVM.tab == .EmergencyFund {
+        } else if homeActivityVM.tab == .LifeFund {
             let viewColor:Color = colorScheme == .light ? Color(hex:"FF9A00") : Color(hex:"FF9A00").opacity(0.8)
             // MARK: - 生活保障金
             switch activityVM.step {
@@ -38,7 +38,7 @@ struct ActivityContentInputView: View {
                 PrivateInputBindingView(text:"Expense",image: .sficon("dollarsign.circle.fill"),color: viewColor, mode: .input(placeholder: "_ _ _", textField: $activityVM.input.livingExpenses, textWidth: 100, isFocused: $isFocused))
             default:
                 // 目标金额
-                PrivateInputBindingView(text:"Target amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.emergencyFund ?? 0))
+                PrivateInputBindingView(text:"Amount",image: .img("whiteBanklet"), color: AppColor.appColor, mode: .display(value: activityVM.input.lifeFund ?? 0))
             }
         }
     }

@@ -115,10 +115,10 @@ private struct HomeActivityViewBackground: View {
     @Binding var activityTab:ActivityTab
     var body: some View {
         switch activityTab {
-        case .LifeSavingsBank:
+        case .LifePiggy:
             Image("life0")
                 .HomeActivityBgView()
-        case .EmergencyFund:
+        case .LifeFund:
             Image("life1")
                 .HomeActivityBgView()
         }
