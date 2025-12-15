@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct TradeContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
     @FocusState.Binding var focus: Field?
     var body: some View {
         VStack(spacing: 0) {
+            let iconImg: Color = colorScheme == .light ? Color(hex: "216DFA") : Color.white
+            let iconImgBg: Color = colorScheme == .light ? Color(hex: "216DFA").opacity(0.15) : Color.white.opacity(0.15)
             // 存钱金额和图标
             HStack(alignment: .top) {
-                Text(homeVM.tardeModel == .deposit ? "Amount Deposited" : "Withdraw Amount")
+                Text(homeVM.tardeModel == .deposit ? "Deposit" : "Withdraw")
                     .fontWeight(.medium)
                     .font(.title2)
                 Spacer()
                 VStack(alignment: .trailing,spacing: 3) {
                     Image(systemName: homeVM.piggyBank?.icon ?? "")
                         .imageScale(.small)
-                        .foregroundColor(Color(hex: "216DFA"))
+                        .foregroundColor(iconImg)
                         .padding(8)
-                        .background(Color(hex: "216DFA").opacity(0.15))
+                        .background(iconImgBg)
                         .cornerRadius(5)
                     Text(LocalizedStringKey(homeVM.piggyBank?.name ?? ""))
                         .font(.footnote)
@@ -53,8 +56,14 @@ struct TradeContentView: View {
 }
 
 struct TradeLoadingView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        LottieView(filename: "FreeBlueLoadingAnimation", isPlaying: true, playCount: 0, isReversed: false)
+        LottieView(
+            filename: "FreeBlueLoadingAnimation",
+            isPlaying: true,
+            playCount: 0,
+            isReversed: false,
+            tintColor: colorScheme == .light ? nil : .white)
             .scaledToFit()
             .scaleEffect(1.5)
             .frame(maxWidth: 100)

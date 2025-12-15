@@ -110,7 +110,7 @@ struct HomeCreateInputRegularComponentsView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Weekly.rawValue {
                 VStack {
-                    HStack(spacing:30) {
+                    HStack(spacing:10) {
                         ForEach(Array(weekSymbol.enumerated()), id:\.offset) { index,item in
                             let buttonIndex = index + 1
                             Button(action:{
@@ -120,6 +120,8 @@ struct HomeCreateInputRegularComponentsView: View {
                                 Text("\(item)")
                                     .fontWeight(.bold)
                                     .foregroundColor(buttonIndex == piggyBank.fixedDepositWeekday ? Color.blue : .secondary)
+                                    .frame(width: 36, height: 36)
+                                    .contentShape(Circle())
                                     .background {
                                         if buttonIndex == piggyBank.fixedDepositWeekday  {
                                             Circle().fill(Color.blue.opacity(0.15))
@@ -188,7 +190,7 @@ struct HomeCreateInputModifier: ViewModifier {
             .background {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(AppColor.gray.opacity(0.3), lineWidth: 10)
-                    .background(.white)
+                    .modifier(WhiteBgModifier())
                     .cornerRadius(10)
             }
     }
@@ -198,4 +200,5 @@ struct HomeCreateInputModifier: ViewModifier {
     NavigationStack {
         HomeCreateView()
     }
+    .environment(\.locale, .init(identifier: "ta"))
 }

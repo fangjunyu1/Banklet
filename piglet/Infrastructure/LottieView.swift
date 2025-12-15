@@ -13,7 +13,8 @@ struct LottieView: UIViewRepresentable {
     var isPlaying: Bool // 控制是否播放
     var playCount: Int // 播放次数，0 表示无限循环
     var isReversed: Bool // 是否倒放
-
+    var tintColor: UIColor? = nil
+    
     class Coordinator {
         var parent: LottieView
         init(parent: LottieView) {
@@ -33,7 +34,12 @@ struct LottieView: UIViewRepresentable {
         animationView.contentMode = .scaleAspectFit // 确保动画等比例缩放
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.loopMode = playCount == 0 ? .loop : .playOnce
-        
+        if let tintColor {
+            animationView.setValueProvider(
+                ColorValueProvider(tintColor.lottieColorValue),
+                keypath: AnimationKeypath(keypath: "**.Color")
+            )
+        }
         
         view.addSubview(animationView)
         

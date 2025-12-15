@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct TradeShowContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var homeVM: HomeViewModel
     @EnvironmentObject var tradeVM: TradeViewModel
     var body: some View {
         VStack(spacing: 10) {
-            LottieView(filename: "check1", isPlaying: true, playCount: 1, isReversed: false)
+            LottieView(
+                filename: "check1",
+                isPlaying: true,
+                playCount: 1,
+                isReversed: false
+            )
                 .scaledToFit()
                 .scaleEffect(1.2)
                 .frame(maxWidth: 100)

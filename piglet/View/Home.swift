@@ -137,5 +137,5 @@ struct Home: View {
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
-     .environment(\.locale, .init(identifier: "ta"))
+        .environment(\.locale, .init(identifier: "ta"))
 }

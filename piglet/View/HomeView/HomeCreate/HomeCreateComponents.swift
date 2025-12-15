@@ -23,6 +23,7 @@ struct HomeCreateInputNameView: View {
                         piggyBank.name = String(piggyBank.name.prefix(30))
                     }
                 }
+                .minimumScaleFactor(0.5)
         }
     }
 }
@@ -283,4 +284,5 @@ struct HomeCreateInputFootNoteView: View {
     NavigationStack {
         HomeCreateView()
     }
+    .environment(\.locale, .init(identifier: "ta"))
 }

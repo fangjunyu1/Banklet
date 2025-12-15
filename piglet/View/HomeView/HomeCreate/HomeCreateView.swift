@@ -35,8 +35,7 @@ struct HomeCreateView: View {
         .padding(.horizontal,40)
         .padding(.top,30)
         .background {
-            AppColor.appBgGrayColor
-                .ignoresSafeArea()
+            Background()
                 .onTapGesture {
                     isFocus = false
                 }
