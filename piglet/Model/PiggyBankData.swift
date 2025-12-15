@@ -20,7 +20,7 @@ class PiggyBankData: ObservableObject {
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期
     var isFixedDeposit:Bool = false   // 是否设置定额存款
-    var fixedDepositType: String = FixedDepositEnum.day.rawValue
+    var fixedDepositType: String = FixedDepositEnum.Daily.rawValue
     var fixedDepositAmount: Double? = nil   // 定期金额
     var nextDepositDate: Date = Date()  // 下一次存取时间
     var fixedDepositWeekday: Int = 1    // 每周存取

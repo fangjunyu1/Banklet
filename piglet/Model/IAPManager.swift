@@ -24,8 +24,8 @@ class IAPManager:ObservableObject {
     
     // 商品信息-价格映射表
     let IAPProductList: [IAPProduct] = [    //  需要内购的产品ID数组
-        IAPProduct(name: "Monthly", id: "com.fangjunyu.Banklet.monthly", priceSuffix: "Month"),
-        IAPProduct(name: "Yearly", id: "com.fangjunyu.Banklet.yearly", priceSuffix: "Year"),
+        IAPProduct(name: "By Month", id: "com.fangjunyu.Banklet.monthly", priceSuffix: "Month"),
+        IAPProduct(name: "By Year", id: "com.fangjunyu.Banklet.yearly", priceSuffix: "Year"),
         IAPProduct(name: "Lifetime", id: "20240523")
     ]
     

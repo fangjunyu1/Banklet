@@ -20,7 +20,7 @@ class PiggyBank {
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
     var isFixedDeposit: Bool = false  // 定期存款
-    var fixedDepositType: String = FixedDepositEnum.day.rawValue   //  定期存款类型
+    var fixedDepositType: String = FixedDepositEnum.Daily.rawValue   //  定期存款类型
     var fixedDepositAmount: Double = 0.0    // 定期存款金额
     var nextDepositDate: Date = Date()  // 最近一次定期存款日期
     var fixedDepositWeekday: Int = 1    // 定期存款-周几（1表示日，1表示一，范围1-7）
@@ -55,7 +55,7 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.day.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
+    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.Daily.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
         self.isPrimary = isPrimary  // 标记主要存钱罐
         self.name = name    // 存钱罐名称
         self.icon = icon    // 存钱罐徒步
@@ -115,8 +115,8 @@ enum FixedDepositEnum: String, CaseIterable, Identifiable {
     var id: String {
         self.rawValue
     }
-    case day
-    case week
-    case month
-    case year
+    case Daily
+    case Weekly
+    case Monthly
+    case Yearly
 }

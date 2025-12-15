@@ -42,7 +42,7 @@ struct migrateOldData: View {
             }
             
             // 将旧数据保存到 SwiftData 模型
-            let newPiggyBank = PiggyBank(isPrimary: true, name: pigLetName, icon: "apple.logo", amount: pigLetCount, initialAmount: pigLetCount, targetAmount: pigLettarget, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: false, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.day.rawValue, fixedDepositAmount: 0)
+            let newPiggyBank = PiggyBank(isPrimary: true, name: pigLetName, icon: "apple.logo", amount: pigLetCount, initialAmount: pigLetCount, targetAmount: pigLettarget, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: false, isFixedDeposit: false, fixedDepositType: FixedDepositEnum.Daily.rawValue, fixedDepositAmount: 0)
             
             modelContext.insert(newPiggyBank)
             

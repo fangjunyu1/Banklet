@@ -95,7 +95,7 @@ struct HomeCreateInputRegularComponentsView: View {
     var body: some View {
         // 每日组件
         if piggyBank.isFixedDeposit {
-            if piggyBank.fixedDepositType == FixedDepositEnum.day.rawValue {
+            if piggyBank.fixedDepositType == FixedDepositEnum.Daily.rawValue {
                 
                 VStack {
                     DatePicker("",
@@ -108,7 +108,7 @@ struct HomeCreateInputRegularComponentsView: View {
                         .padding(.top,3)
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
-            } else if piggyBank.fixedDepositType == FixedDepositEnum.week.rawValue {
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.Weekly.rawValue {
                 VStack {
                     HStack(spacing:30) {
                         ForEach(Array(weekSymbol.enumerated()), id:\.offset) { index,item in
@@ -134,7 +134,7 @@ struct HomeCreateInputRegularComponentsView: View {
                         .padding(.top,3)
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
-            } else if piggyBank.fixedDepositType == FixedDepositEnum.month.rawValue {
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.Monthly.rawValue {
                 VStack {
                     HStack {
                         Picker("", selection: $piggyBank.fixedDepositDay) {
@@ -149,7 +149,7 @@ struct HomeCreateInputRegularComponentsView: View {
                         .padding(.top,3)
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
-            } else if piggyBank.fixedDepositType == FixedDepositEnum.year.rawValue {
+            } else if piggyBank.fixedDepositType == FixedDepositEnum.Yearly.rawValue {
                 VStack {
                     DatePicker("",
                                selection: $piggyBank.fixedDepositTime,

@@ -195,19 +195,19 @@ private struct HomeMoreInformationList2: View {
                 Divider()
                 // 存款金额
                 HomeMoreInformationList(name: "Deposit Amount",number: .amount($draft.fixedDepositAmount, $isFocused),isEdit:isEdit)
-                if draft.fixedDepositType == FixedDepositEnum.day.rawValue {
+                if draft.fixedDepositType == FixedDepositEnum.Daily.rawValue {
                     Divider()
                     // 存款时间 - 时/分
                     HomeMoreInformationList(name: "Deposit time",number: .timePicker($draft.fixedDepositTime),isEdit:isEdit)
-                } else if draft.fixedDepositType == FixedDepositEnum.year.rawValue {
+                } else if draft.fixedDepositType == FixedDepositEnum.Yearly.rawValue {
                     Divider()
                     // 存款时间 - 月/日
                     HomeMoreInformationList(name: "Deposit time",number: .datePicker($draft.fixedDepositTime),isEdit:isEdit)
-                } else if draft.fixedDepositType == FixedDepositEnum.week.rawValue {
+                } else if draft.fixedDepositType == FixedDepositEnum.Weekly.rawValue {
                     Divider()
                     // 存款时间 - 周
                     HomeMoreInformationList(name: "Deposit time",number: .pickerWeek($draft.fixedDepositWeekday),isEdit:isEdit)
-                } else if draft.fixedDepositType == FixedDepositEnum.month.rawValue {
+                } else if draft.fixedDepositType == FixedDepositEnum.Monthly.rawValue {
                     Divider()
                     // 存款时间 - 月
                     HomeMoreInformationList(name: "Deposit time",number: .pickerDay($draft.fixedDepositDay),isEdit:isEdit)

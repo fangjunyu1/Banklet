@@ -232,7 +232,7 @@ final class ActiveViewModel:ObservableObject {
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
-                                  fixedDepositType: FixedDepositEnum.day.rawValue,
+                                  fixedDepositType: FixedDepositEnum.Daily.rawValue,
                                   fixedDepositAmount: 0
                                   )
         
@@ -276,7 +276,7 @@ final class ActiveViewModel:ObservableObject {
                                   expirationDate: Date(),
                                   isExpirationDateEnabled: false,
                                   isFixedDeposit: false,
-                                  fixedDepositType: FixedDepositEnum.day.rawValue,
+                                  fixedDepositType: FixedDepositEnum.Daily.rawValue,
                                   fixedDepositAmount: 0
                                   )
         

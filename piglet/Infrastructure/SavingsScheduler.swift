@@ -16,14 +16,14 @@ struct SavingsScheduler {
     static func nearestFutureDailyTime(draft: PiggyBankDraft ) -> Date {
         let now = Date()
         let calendar = Calendar.current
-        let enumType = FixedDepositEnum(rawValue: draft.fixedDepositType) ?? .day
+        let enumType = FixedDepositEnum(rawValue: draft.fixedDepositType) ?? .Daily
         
         // 用户的最近存取时间可能是很久之前的时间,提取当前用户选择的 时-分 组件
         var userComponents = calendar.dateComponents([.hour, .minute], from: draft.fixedDepositTime)
         
         // 判断用户的存取类型
         switch enumType {
-        case .day:
+        case .Daily:
             guard let todayAtUserTime = calendar.date(
                 bySettingHour: userComponents.hour ?? 0,
                 minute: userComponents.minute ?? 0,
@@ -39,7 +39,7 @@ struct SavingsScheduler {
                 // 否则，今天的存取时间过时，计算下一次存取时间。
                 return calculateNextDate(type: draft.fixedDepositType, lastDate: todayAtUserTime, weekday: draft.fixedDepositWeekday, day: draft.fixedDepositDay)
             }
-        case .week:
+        case .Weekly:
             guard let todayAt9AM = calendar.date(
                 bySettingHour: 9,
                 minute: 0,
@@ -64,7 +64,7 @@ struct SavingsScheduler {
                     day: draft.fixedDepositDay
                 )
             }
-        case .month:
+        case .Monthly:
             guard let todayAt9AM = calendar.date(
                 bySettingHour: 9,
                 minute: 0,
@@ -89,7 +89,7 @@ struct SavingsScheduler {
                     day: draft.fixedDepositDay
                 )
             }
-        case .year:
+        case .Yearly:
             let targetComponents = calendar.dateComponents([.month, .day], from: draft.fixedDepositTime)
             let currentYear = calendar.component(.year, from: now)
             
@@ -126,7 +126,7 @@ struct SavingsScheduler {
                                   day: Int?) -> Date {
         
         let calendar = Calendar.current
-        let enumType = FixedDepositEnum(rawValue: type) ?? .day
+        let enumType = FixedDepositEnum(rawValue: type) ?? .Daily
         print("存款类型:\(enumType.rawValue)")
         // 非每日定期存款的组件
         var components = DateComponents()
@@ -135,16 +135,16 @@ struct SavingsScheduler {
         components.second = 0
         
         switch enumType {
-        case .day:
+        case .Daily:
             print("当日存款，更新为选中的时间")
             components.hour = calendar.component(.hour, from: lastDate)
             components.minute = calendar.component(.minute, from: lastDate)
             print("当前存钱罐组件时间为:\(components)")
-        case .week:
+        case .Weekly:
             components.weekday = weekday
-        case .month:
+        case .Monthly:
             components.day = day
-        case .year:
+        case .Yearly:
             let month = calendar.component(.month, from: lastDate)
             let day = calendar.component(.day, from: lastDate)
             components.month = month

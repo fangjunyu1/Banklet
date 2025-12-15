@@ -52,7 +52,7 @@ struct AboutUsView: View {
         "I am a novice independent developer. Before becoming a developer, I worked in sales, on-site project work, and the catering industry.",
         "In 2024, after leaving my previous company, I began to think about what I really wanted to do.",
         "At the time, I was working towards my goals of owning a house and a car, which gave me the idea to develop a money-saving app.",
-        "So I started learning iOS development and completed and released the first version of \"Savings Piggy\" that month.",
+        "So I started learning iOS development and completed and released the first version of \"Banklet\" that month.",
         "As of June 2025, this little pig has evolved through 9 versions.",
         "I hope it can help more people achieve their goals, and I will continue to update it to make the app even better."
     ]

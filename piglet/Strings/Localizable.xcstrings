@@ -15487,6 +15487,798 @@
         }
       }
     },
+    "By Month" : {
+      "comment" : "按月",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهريًا"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aylıq"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По месеци"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "মাসিক"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensualment"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matag bulan"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Měsíčně"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Månedligt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatlich"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ανά μήνα"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por mes"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por mes"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por mes"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuu kaupa"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بر اساس ماه"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuukausittain"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batay sa Buwan"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par mois"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par mois"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De réir míosa"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "મહિના પ્રમાણે"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לפי חודש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "महीने के अनुसार"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mjesečno"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Havonta"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulanan"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eftir mánuði"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensile"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月払い"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miturut Wulan"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ай сайын"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "តាមខែ"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ತಿಂಗಳಿಗೊಮ್ಮೆ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월별"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kas mėnesį"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pa mēnešiem"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "പ്രതിമാസം"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मासिक"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bulanan"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "လအလိုက်"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Månedlig"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maandelijks"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ମାସିକ"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਮਹੀਨੇ ਦੁਆਰਾ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miesięcznie"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por mês"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por mês"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pe lună"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По месяцам"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po mesiacoch"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po mesecih"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Në muaj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Månadsvis"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwa mwezi"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "மாத வாரியாக"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "నెలవారీగా"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รายเดือน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aylık"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Щомісячно"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ماہ بہ ماہ"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oyma-oy"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theo tháng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按月"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按月"
+          }
+        }
+      }
+    },
+    "By Year" : {
+      "comment" : "按年",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنويًا"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İllik"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По години"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "বার্ষিক"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anualment"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matag tuig"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ročně"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årligt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jährlich"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ανά έτος"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por año"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por año"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por año"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aasta kaupa"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بر اساس سال"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuosittain"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batay sa Taon"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par an"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par année"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De réir bliana"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "વર્ષ પ્રમાણે"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לפי שנה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वर्ष के अनुसार"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Godišnje"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Évente"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahunan"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eftir ári"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年払い"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miturut Taun"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жыл сайын"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "តាមឆ្នាំ"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ವರ್ಷಕ್ಕೊಮ್ಮೆ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연별"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kasmet"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pa gadiem"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "വാർഷികം"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वार्षिक"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tahunan"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "နှစ်အလိုက်"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årlig"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaarlijks"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ବାର୍ଷିକ"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਸਾਲ ਦੁਆਰਾ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rocznie"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por ano"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por ano"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pe an"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По годам"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po rokoch"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po letih"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Në vit"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årsvis"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwa mwaka"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ஆண்டு வாரியாக"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "సంవత్సరం వారీగా"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รายปี"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıllık"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Щорічно"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سال بہ سال"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yilma-yil"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theo năm"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按年"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按年"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按年"
+          }
+        }
+      }
+    },
     "CAD" : {
       "comment" : "加元",
       "extractionState" : "manual",
@@ -26299,8 +27091,8 @@
         }
       }
     },
-    "day" : {
-      "comment" : "每天",
+    "Daily" : {
+      "comment" : "每天（定期选项）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -26312,163 +27104,163 @@
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hər gün"
+            "value" : "Gün"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Всеки ден"
+            "value" : "Ден"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "প্রতিদিন"
+            "value" : "দৈনিক"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cada dia"
+            "value" : "Dia"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kada adlaw"
+            "value" : "Adlaw"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Denně"
+            "value" : "Den"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hver dag"
+            "value" : "Dag"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Täglich"
+            "value" : "Tag"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Καθημερινά"
+            "value" : "Ημέρα"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diariamente"
+            "value" : "Día"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diariamente"
+            "value" : "Día"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diariamente"
+            "value" : "Día"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Iga päev"
+            "value" : "Päev"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "هر روز"
+            "value" : "روزانه"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Joka päivä"
+            "value" : "Päivä"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Araw-araw"
+            "value" : "Araw"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chaque jour"
+            "value" : "Jour"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tschechische Krone"
+            "value" : "Jour"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gach lá"
+            "value" : "Lá"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "દરરોજ"
+            "value" : "રોજ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "כל יום"
+            "value" : "יום"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "हर दिन"
+            "value" : "दिन"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Svaki dan"
+            "value" : "Dan"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naponta"
+            "value" : "Nap"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setiap Hari"
+            "value" : "Hari"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Daglega"
+            "value" : "Dagur"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ogni giorno"
+            "value" : "Giorno"
           }
         },
         "ja" : {
@@ -26480,25 +27272,25 @@
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saben dina"
+            "value" : "Dina"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Күн сайын"
+            "value" : "Күн"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ជារៀងរាល់ថ្ងៃ"
+            "value" : "រៀងរាល់ថ្ងៃ"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಪ್ರತಿದಿನ"
+            "value" : "ದಿನ"
           }
         },
         "ko" : {
@@ -26510,169 +27302,169 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kasdien"
+            "value" : "Dieną"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Katru dienu"
+            "value" : "Dienā"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "എല്ലാ ദിവസവും"
+            "value" : "ദിവസം"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "दररोज"
+            "value" : "दिवस"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setiap Hari"
+            "value" : "Hari"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "နေ့စဉ်"
+            "value" : "နေ့"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hver dag"
+            "value" : "Dag"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Elke dag"
+            "value" : "Dag"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ପ୍ରତିଦିନ"
+            "value" : "ଦିନ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਹਰ ਰੋਜ਼"
+            "value" : "ਦਿਨ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Codziennie"
+            "value" : "Dzień"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diariamente"
+            "value" : "Dia"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diariamente"
+            "value" : "Dia"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zilnic"
+            "value" : "Zi"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ежедневно"
+            "value" : "День"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Denne"
+            "value" : "Deň"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vsak dan"
+            "value" : "Dan"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Çdo ditë"
+            "value" : "Ditë"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Varje dag"
+            "value" : "Dag"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kila siku"
+            "value" : "Siku"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "தினமும்"
+            "value" : "தினம்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ప్రతిరోజు"
+            "value" : "రోజు"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ทุกวัน"
+            "value" : "วัน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Her gün"
+            "value" : "Gün"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Щодня"
+            "value" : "День"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "روزانہ"
+            "value" : "دن"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Har kuni"
+            "value" : "Kun"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mỗi ngày"
+            "value" : "Ngày"
           }
         },
         "zh-Hans" : {
@@ -53316,402 +54108,6 @@
         }
       }
     },
-    "month" : {
-      "comment" : "每月",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "شهري"
-          }
-        },
-        "az" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hər ay"
-          }
-        },
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Всеки месец"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "প্রতি মাসে"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cada mes"
-          }
-        },
-        "ceb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kada bulan"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Měsíčně"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hver måned"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monatlich"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μηνιαία"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensualmente"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensualmente"
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensualmente"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iga kuu"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ماهانه"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Joka kuukausi"
-          }
-        },
-        "fil" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buwan-buwan"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chaque mois"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensuel"
-          }
-        },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gach mí"
-          }
-        },
-        "gu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "માસિક"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "חודשי"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मासिक"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Svaki mjesec"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Havonta"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setiap Bulan"
-          }
-        },
-        "is" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mánaðarlega"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ogni mese"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "毎月"
-          }
-        },
-        "jv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saben wulan"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ай сайын"
-          }
-        },
-        "km" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ជារៀងរាល់ខែ"
-          }
-        },
-        "kn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ಪ್ರತಿ ತಿಂಗಳು"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "매월"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kas mėnesį"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Katru mēnesi"
-          }
-        },
-        "ml" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ഓരോ മാസവും"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "दरमहा"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setiap Bulan"
-          }
-        },
-        "my" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "လစဉ်"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hver måned"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elke maand"
-          }
-        },
-        "or" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ପ୍ରତିମାସ"
-          }
-        },
-        "pa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ਹਰ ਮਹੀਨੇ"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Co miesiąc"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensalmente"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mensalmente"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lunar"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ежемесячно"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mesačne"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mesečno"
-          }
-        },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çdo muaj"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Varje månad"
-          }
-        },
-        "sw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kila mwezi"
-          }
-        },
-        "ta" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "மாதந்தோறும்"
-          }
-        },
-        "te" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ప్రతి నెల"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทุกเดือน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Her ay"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Щомісяця"
-          }
-        },
-        "ur" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ماہانہ"
-          }
-        },
-        "uz" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Har oy"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mỗi tháng"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每月"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每月"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每月"
-          }
-        }
-      }
-    },
     "Month" : {
       "comment" : "月",
       "extractionState" : "manual",
@@ -54109,25 +54505,25 @@
       }
     },
     "Monthly" : {
-      "comment" : "按月",
+      "comment" : "每月（定期选项）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شهريًا"
+            "value" : "شهري"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aylıq"
+            "value" : "Ay"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "По месеци"
+            "value" : "Мес"
           }
         },
         "bn" : {
@@ -54139,367 +54535,367 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mensualment"
+            "value" : "Mes"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Matag bulan"
+            "value" : "Bulan"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Měsíčně"
+            "value" : "Měs"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Månedligt"
+            "value" : "Måned"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Monatlich"
+            "value" : "Monat"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ανά μήνα"
+            "value" : "Μήνας"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por mes"
+            "value" : "Mes"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por mes"
+            "value" : "Mes"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por mes"
+            "value" : "Mes"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kuu kaupa"
+            "value" : "Kuu"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بر اساس ماه"
+            "value" : "ماهانه"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kuukausittain"
+            "value" : "Kuukausi"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batay sa Buwan"
+            "value" : "Buwan"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Par mois"
+            "value" : "Mois"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Par mois"
+            "value" : "Mois"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De réir míosa"
+            "value" : "Mí"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "મહિના પ્રમાણે"
+            "value" : "મહિનો"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "לפי חודש"
+            "value" : "חודש"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "महीने के अनुसार"
+            "value" : "माह"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mjesečno"
+            "value" : "Mjes"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Havonta"
+            "value" : "Hónap"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bulanan"
+            "value" : "Bulan"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eftir mánuði"
+            "value" : "Mánuður"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mensile"
+            "value" : "Mese"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月払い"
+            "value" : "毎月"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Miturut Wulan"
+            "value" : "Sasi"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ай сайын"
+            "value" : "Ай"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "តាមខែ"
+            "value" : "រៀងរាល់ខែ"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ತಿಂಗಳಿಗೊಮ್ಮೆ"
+            "value" : "ತಿಂಗಳು"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "월별"
+            "value" : "매월"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kas mėnesį"
+            "value" : "Mėnesį"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pa mēnešiem"
+            "value" : "Mēnesī"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പ്രതിമാസം"
+            "value" : "മാസം"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "मासिक"
+            "value" : "महिना"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bulanan"
+            "value" : "Bulan"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "လအလိုက်"
+            "value" : "လ"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Månedlig"
+            "value" : "Måned"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maandelijks"
+            "value" : "Mnd"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ମାସିକ"
+            "value" : "ମାସ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਮਹੀਨੇ ਦੁਆਰਾ"
+            "value" : "ਮਹੀਨਾ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Miesięcznie"
+            "value" : "Mies"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por mês"
+            "value" : "Mês"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por mês"
+            "value" : "Mês"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pe lună"
+            "value" : "Lună"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "По месяцам"
+            "value" : "Мес"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Po mesiacoch"
+            "value" : "Mesiac"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Po mesecih"
+            "value" : "Mesec"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Në muaj"
+            "value" : "Muaj"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Månadsvis"
+            "value" : "Månad"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kwa mwezi"
+            "value" : "Mwezi"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "மாத வாரியாக"
+            "value" : "மாதம்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "నెలవారీగా"
+            "value" : "నెల"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "รายเดือน"
+            "value" : "เดือน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aylık"
+            "value" : "Ay"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Щомісячно"
+            "value" : "Міс"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ماہ بہ ماہ"
+            "value" : "ماہ"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Oyma-oy"
+            "value" : "Oy"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Theo tháng"
+            "value" : "Tháng"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按月"
+            "value" : "每月"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按月"
+            "value" : "每月"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按月"
+            "value" : "每月"
           }
         }
       }
@@ -78588,380 +78984,380 @@
         }
       }
     },
-    "So I started learning iOS development and completed and released the first version of \"Savings Piggy\" that month." : {
+    "So I started learning iOS development and completed and released the first version of \"Banklet\" that month." : {
       "comment" : "于是我开始学习 iOS 开发，并在当月完成并上架了“存钱猪猪”的第一个版本。",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "لذلك بدأت تعلم تطوير iOS، وفي نفس الشهر أنجزت ونشرت أول نسخة من “حافظة النقود الخنزير”."
+            "value" : "لذلك بدأت في تعلم تطوير iOS، وفي نفس الشهر أكملت وأطلقت النسخة الأولى من تطبيق “Banklet”."
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beləliklə, mən iOS inkişafını öyrənməyə başladım və həmin ay \"Piggy Savings\"in ilk versiyasını tamamlayıb buraxdım."
+            "value" : "Beləliklə, mən iOS inkişafını öyrənməyə başladım və həmin ay \"Banklet\" in ilk versiyasını tamamlayıb buraxdım."
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Така започнах да уча разработка за iOS и завърших и пуснах първата версия на \"Piggy Bank\" същия месец."
+            "value" : "Така започнах да уча разработка за iOS и завърших и пуснах първата версия на \"Banklet\" същия месец."
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "তাই আমি iOS ডেভেলপমেন্ট শেখা শুরু করি এবং সেই মাসেই \"সেভিংস পিগি\" এর প্রথম সংস্করণ সম্পন্ন করি এবং প্রকাশ করি।"
+            "value" : "তাহলে আমি iOS ডেভেলপমেন্ট শেখা শুরু করি, এবং একই মাসে \"Banklet\" এর প্রথম ভার্সন সম্পূর্ণ করে প্রকাশ করি।"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Així que vaig començar a aprendre desenvolupament d'iOS i aquell mateix mes vaig completar i publicar la primera versió del \"Porquet Guardiola\"."
+            "value" : "Així que vaig començar a aprendre desenvolupament iOS, i durant el mateix mes vaig completar i publicar la primera versió de “Banklet”."
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Busa nagsugod ko sa pagkat-on og iOS development, ug nahuman ug na-publish ang unang bersyon sa \"Piggy Savings\" niadtong bulana."
+            "value" : "Busa nagsugod ko sa pagkat-on og iOS development, ug nahuman ug na-publish ang unang bersyon sa \"Banklet\" niadtong bulana."
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tak jsem se začal učit vývoj pro iOS a ten samý měsíc jsem dokončil a vydal první verzi „Spořicího prasátka“."
+            "value" : "Tak jsem začal studovat vývoj pro iOS a ještě v tomtéž měsíci dokončil a vydal první verzi aplikace „Banklet“."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Så jeg begyndte at lære iOS-udvikling og færdiggjorde og udgav den første version af \"Sparegris\" i samme måned."
+            "value" : "Så jeg begyndte at lære iOS-udvikling, og i samme måned færdiggjorde og udgav jeg den første version af “Banklet”."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Also begann ich, iOS-Entwicklung zu lernen, und stellte noch im selben Monat die erste Version von \"Money Piggy\" fertig und veröffentlichte sie."
+            "value" : "Also begann ich, iOS-Entwicklung zu lernen, und stellte noch im selben Monat die erste Version von \"Banklet\" fertig und veröffentlichte sie."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Έτσι άρχισα να μαθαίνω ανάπτυξη iOS και τον ίδιο μήνα ολοκλήρωσα και κυκλοφόρησα την πρώτη έκδοση του \"Piggy Bank\"."
+            "value" : "Έτσι άρχισα να μαθαίνω ανάπτυξη iOS και τον ίδιο μήνα ολοκλήρωσα και κυκλοφόρησα την πρώτη έκδοση του \"Banklet\"."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Así que empecé a aprender desarrollo iOS, y ese mismo mes completé y lancé la primera versión de \"Cerdito de Ahorros\"."
+            "value" : "Así que comencé a aprender desarrollo iOS y, en el mismo mes, completé y publiqué la primera versión de «Banklet»."
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Así que empecé a aprender desarrollo iOS, y ese mismo mes completé y lancé la primera versión de \"Cerdito de Ahorros\"."
+            "value" : "Así que comencé a aprender desarrollo iOS y, en el mismo mes, completé y publiqué la primera versión de «Banklet»."
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Así que empecé a aprender desarrollo iOS, y ese mismo mes completé y lancé la primera versión de \"Cerdito de Ahorros\"."
+            "value" : "Así que comencé a aprender desarrollo iOS y, en el mismo mes, completé y publiqué la primera versión de «Banklet»."
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seega hakkasin õppima iOS-i arendust ning lõpetasin ja avaldasin samal kuul \"Piggy Savings\" esimese versiooni."
+            "value" : "Seega hakkasin õppima iOS-i arendust ning lõpetasin ja avaldasin samal kuul \"Banklet\" esimese versiooni."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بنابراین شروع به یادگیری توسعه iOS کردم و در همان ماه اولین نسخه «قلک خوکی» را تکمیل و منتشر کردم."
+            "value" : "بنابراین شروع به یادگیری توسعه iOS کردم و در همان ماه، نخستین نسخهٔ «Banklet» را تکمیل کرده و منتشر کردم."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Joten aloin opiskella iOS-kehitystä ja samassa kuussa sain valmiiksi ja julkaisin \"Possupankin\" ensimmäisen version."
+            "value" : "Niinpä aloin opiskella iOS-kehitystä, ja samassa kuussa sain valmiiksi ja julkaistua “Bankletin” ensimmäisen version."
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kaya nagsimula akong mag-aral ng iOS development, at natapos at inilabas ang unang bersyon ng \"Piggy Savings\" sa buwang iyon."
+            "value" : "Kaya nagsimula akong mag-aral ng iOS development, at natapos at inilabas ang unang bersyon ng \"Banklet\" sa buwang iyon."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "J'ai donc commencé à apprendre le développement iOS, et j'ai terminé et publié la première version de \"Money Piggy\" le même mois."
+            "value" : "Ainsi, j’ai commencé à apprendre le développement iOS, et au cours du même mois, j’ai terminé et publié la première version de “Banklet”."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "J'ai donc commencé à apprendre le développement iOS, et j'ai terminé et publié la première version de « Piggy Savings » ce mois-là."
+            "value" : "Ainsi, j’ai commencé à apprendre le développement iOS et, au cours du même mois, j’ai complété et mis en ligne la première version de « Banklet »."
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mar sin thosaigh mé ag foghlaim forbairt iOS, agus chríochnaigh mé agus sheol mé an chéad leagan de \"Piggy Bank\" an mhí sin."
+            "value" : "Mar sin thosaigh mé ag foghlaim forbairt iOS, agus chríochnaigh mé agus sheol mé an chéad leagan de \"Banklet\" an mhí sin."
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "તેથી મેં iOS ડેવલપમેન્ટ શીખવાનું શરૂ કર્યું, અને તે જ મહિનામાં \"Piggy Bank\" નું પ્રથમ સંસ્કરણ પૂર્ણ કર્યું અને લોન્ચ કર્યું."
+            "value" : "તેથી મેં iOS ડેવલપમેન્ટ શીખવાનું શરૂ કર્યું, અને તે જ મહિનામાં \"Banklet\" નું પ્રથમ સંસ્કરણ પૂર્ણ કર્યું અને લોન્ચ કર્યું."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "אז התחלתי ללמוד פיתוח iOS, ובאותו חודש סיימתי והשקתי את הגרסה הראשונה של \"Piggy Bank\"."
+            "value" : "אז התחלתי ללמוד פיתוח iOS, ובאותו חודש סיימתי והשקתי את הגרסה הראשונה של \"Banklet\"."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "इसलिए मैंने iOS डेवलपमेंट सीखना शुरू किया, और उसी महीने \"Piggy Bank\" का पहला संस्करण पूरा किया और लॉन्च किया।"
+            "value" : "इसलिए मैंने iOS डेवलपमेंट सीखना शुरू किया, और उसी महीने \"Banklet\" का पहला संस्करण पूरा किया और लॉन्च किया।"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tako sam počeo učiti razvoj za iOS te istog mjeseca završio i objavio prvu verziju \"Piggy Bank\"."
+            "value" : "Tako sam počeo učiti razvoj za iOS te istog mjeseca završio i objavio prvu verziju \"Banklet\"."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Így elkezdtem tanulni az iOS fejlesztést, és abban a hónapban befejeztem és kiadtam a „Malacpersely” első verzióját."
+            "value" : "Így elkezdtem az iOS fejlesztés tanulását, és ugyanabban a hónapban elkészítettem és feltöltöttem a „Banklet” első verzióját."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jadi saya mulai belajar pengembangan iOS, dan pada bulan itu menyelesaikan serta merilis versi pertama \"Celengan Babi\"."
+            "value" : "Jadi, saya mulai belajar pengembangan iOS, dan pada bulan yang sama saya menyelesaikan dan merilis versi pertama dari “Banklet”."
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Svo ég fór að læra iOS forritun og kláraði og setti í loftið fyrstu útgáfuna af \"Sparigrísnum\" í þeim mánuði."
+            "value" : "Þannig byrjaði ég að læra iOS-þróun og sama mánuð lauk ég við og setti á markað fyrstu útgáfu „Banklet“."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Così ho iniziato a imparare lo sviluppo iOS e nello stesso mese ho completato e pubblicato la prima versione di \"Porcellino Salvadanaio\"."
+            "value" : "Così ho iniziato a studiare lo sviluppo iOS e, nello stesso mese, ho completato e pubblicato la prima versione di “Banklet”."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "そこで私はiOS開発の勉強を始め、その月のうちに「貯金ブタ」の最初のバージョンを完成させ、リリースしました。"
+            "value" : "こうして私は iOS 開発の学習を始め、同じ月に「Banklet」の最初のバージョンを完成させて公開しました。"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dadi aku wiwit sinau pangembangan iOS, lan ngrampungake sarta ngrilis versi pisanan \"Celengan Babi\" ing sasi kasebut."
+            "value" : "Mula, aku miwiti sinau pangembangan iOS, lan ing wulan sing padha aku ngrampungake lan nerbitake versi pisanan saka “Banklet”."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сонымен мен iOS әзірлеуді үйрене бастадым және сол айда \"Piggy Bank\" қолданбасының бірінші нұсқасын аяқтап, шығардым."
+            "value" : "Сонымен мен iOS әзірлеуді үйрене бастадым және сол айда \"Banklet\" қолданбасының бірінші нұсқасын аяқтап, шығардым."
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ដូច្នេះខ្ញុំចាប់ផ្តើមរៀនអភិវឌ្ឍ iOS ហើយបានបញ្ចប់ និងដាក់ឱ្យប្រើប្រាស់កំណែដំបូងនៃ \"Piggy Bank\" នៅក្នុងខែនោះ។"
+            "value" : "ដូច្នេះខ្ញុំចាប់ផ្តើមរៀនអភិវឌ្ឍ iOS ហើយបានបញ្ចប់ និងដាក់ឱ្យប្រើប្រាស់កំណែដំបូងនៃ \"Banklet\" នៅក្នុងខែនោះ។"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಆದ್ದರಿಂದ ನಾನು iOS ಡೆವಲಪ್‌ಮೆಂಟ್ ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿದೆ ಮತ್ತು ಅದೇ ತಿಂಗಳಲ್ಲಿ \"ಪಿಗ್ಗಿ ಬ್ಯಾಂಕ್\" ನ ಮೊದಲ ಆವೃತ್ತಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ ಬಿಡುಗಡೆ ಮಾಡಿದೆ."
+            "value" : "ಅದರಿಂದ ನಾನು iOS ಅಭಿವೃದ್ಧಿಯನ್ನು ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿದೆ, ಮತ್ತು ಅದೇ ತಿಂಗಳಲ್ಲಿ ನಾನು “Banklet” ನ ಪ್ರಥಮ ಆವೃತ್ತಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ ಬಿಡುಗಡೆ ಮಾಡಿದೆ."
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "그래서 iOS 개발을 공부하기 시작했고, 그달에 \"저금 돼지\" 첫 버전을 완성하여 출시했습니다."
+            "value" : "그리하여 나는 iOS 개발을 배우기 시작했고, 같은 달에 “Banklet”의 첫 번째 버전을 완성하여 출시했습니다."
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Taigi pradėjau mokytis „iOS“ programavimo ir tą patį mėnesį užbaigiau bei išleidau pirmąją „Taupyklės paršiuko“ versiją."
+            "value" : "Taigi pradėjau mokytis iOS programavimo, ir tą patį mėnesį užbaigiau bei paskelbiau pirmąją „Banklet“ versiją."
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tā es sāku apgūt iOS izstrādi un tajā pašā mēnesī pabeidzu un publicēju pirmo \"Piggy Bank\" versiju."
+            "value" : "Tā es sāku apgūt iOS izstrādi un tajā pašā mēnesī pabeidzu un publicēju pirmo \"Banklet\" versiju."
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "അങ്ങനെ ഞാൻ iOS ഡെവലപ്‌മെന്റ് പഠിക്കാൻ തുടങ്ങി, ആ മാസത്തിൽ തന്നെ \"പിഗ്ഗി ബാങ്ക്\" ൻ്റെ ആദ്യ പതിപ്പ് പൂർത്തിയാക്കി പുറത്തിറക്കി."
+            "value" : "അതിനാൽ ഞാൻ iOS ഡെവലപ്പ്മെന്റ് പഠിക്കാൻ ആരംഭിച്ചു, ആ മാസത്തിൽ തന്നെ “Banklet” എന്ന അപ്ലിക്കേഷന്റെ ആദ്യത്തെ പതിപ്പ് പൂർത്തിയാക്കി പുറത്തുവിട്ടു."
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "म्हणून मी iOS डेव्हलपमेंट शिकण्यास सुरुवात केली आणि त्याच महिन्यात \"सेव्हिंग्ज पिगी\" ची पहिली आवृत्ती पूर्ण करून लॉन्च केली."
+            "value" : "म्हणून मी iOS विकास शिकायला सुरुवात केली, आणि त्याच महिन्यात “Banklet” चे पहिले आवृत्ती पूर्ण करून प्रकाशित केली."
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jadi saya mula belajar pembangunan iOS, dan pada bulan itu melengkapkan serta melancarkan versi pertama \"Piggy Bank\"."
+            "value" : "Jadi saya mula belajar pembangunan iOS, dan pada bulan itu melengkapkan serta melancarkan versi pertama \"Banklet\"."
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ထို့နောက် ကျွန်တော် iOS development ကို စတင်လေ့လာခဲ့ပြီး ထိုလတွင်ပင် \"Piggy Savings\" ၏ ပထမဆုံး ဗားရှင်းကို ပြီးစီးအောင်ရေးဆွဲကာ ဖြန့်ချိခဲ့သည်။"
+            "value" : "ထို့နောက် ကျွန်တော် iOS development ကို စတင်လေ့လာခဲ့ပြီး ထိုလတွင်ပင် \"Banklet\" ၏ ပထမဆုံး ဗားရှင်းကို ပြီးစီးအောင်ရေးဆွဲကာ ဖြန့်ချိခဲ့သည်။"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Så jeg begynte å lære iOS-utvikling, og fullførte og lanserte den første versjonen av \"Sparegrisen\" samme måned."
+            "value" : "Derfor begynte jeg å lære iOS-utvikling, og i løpet av samme måned fullførte og lanserte jeg den første versjonen av «Banklet»."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dus begon ik iOS-ontwikkeling te leren en voltooide en lanceerde diezelfde maand nog de eerste versie van \"Spaarvarkentje\"."
+            "value" : "Dus begon ik met het leren van iOS-ontwikkeling, en in dezelfde maand voltooide en publiceerde ik de eerste versie van “Banklet”."
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ତେଣୁ ମୁଁ iOS ଡେଭଲପମେଣ୍ଟ ଶିଖିବା ଆରମ୍ଭ କଲି ଏବଂ ସେହି ମାସରେ \"ସେଭିଂ ପିଗି\" ର ପ୍ରଥମ ସଂସ୍କରଣ ସମାପ୍ତ କରି ଲଞ୍ଚ କଲି।"
+            "value" : "ଏହିପରି ମୁଁ iOS ବିକାଶ ଶିଖିବା ଆରମ୍ଭ କଲି, ଏବଂ ସେହି ମାସରେ “Banklet”ର ପ୍ରଥମ ସଂସ୍କରଣ ସମ୍ପୂର୍ଣ୍ଣ କରି ପ୍ରକାଶ କଲି।"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਇਸ ਲਈ ਮੈਂ iOS ਵਿਕਾਸ ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕੀਤਾ, ਅਤੇ ਉਸੇ ਮਹੀਨੇ \"Piggy Bank\" ਦਾ ਪਹਿਲਾ ਸੰਸਕਰਣ ਪੂਰਾ ਕੀਤਾ ਅਤੇ ਲਾਂਚ ਕੀਤਾ।"
+            "value" : "ਇਸ ਲਈ ਮੈਂ iOS ਵਿਕਾਸ ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕੀਤਾ, ਅਤੇ ਉਸੇ ਮਹੀਨੇ \"Banklet\" ਦਾ ਪਹਿਲਾ ਸੰਸਕਰਣ ਪੂਰਾ ਕੀਤਾ ਅਤੇ ਲਾਂਚ ਕੀਤਾ।"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Więc zacząłem uczyć się programowania na iOS, a w tym samym miesiącu ukończyłem i opublikowałem pierwszą wersję „Świnki Skarbonki”."
+            "value" : "W związku z tym zacząłem uczyć się tworzenia aplikacji na iOS i w tym samym miesiącu ukończyłem oraz opublikowałem pierwszą wersję „Banklet”."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Então comecei a aprender desenvolvimento iOS, e completei e lancei a primeira versão do \"Piggy Savings\" naquele mês."
+            "value" : "Então comecei a aprender desenvolvimento iOS, e completei e lancei a primeira versão do \"Banklet\" naquele mês."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Então comecei a aprender desenvolvimento iOS e, no mesmo mês, concluí e lancei a primeira versão do \"Savings Piggy\"."
+            "value" : "Então comecei a aprender desenvolvimento iOS e, no mesmo mês, concluí e lancei a primeira versão do \"Banklet\"."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Așa că am început să învăț dezvoltarea iOS, iar în acea lună am finalizat și lansat prima versiune a „Piggy Bank”."
+            "value" : "Astfel, am început să învăț dezvoltarea iOS și, în aceeași lună, am finalizat și publicat prima versiune a „Banklet”."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поэтому я начал изучать разработку под iOS, и в том же месяце выпустил первую версию «Свинки-копилки»."
+            "value" : "Итак, я начал изучать разработку для iOS и в том же месяце завершил и выпустил первую версию «Banklet»."
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tak som sa začal učiť vývoj pre iOS a v ten istý mesiac som dokončil a zverejnil prvú verziu „Sporiaceho prasiatka“."
+            "value" : "Tak som začal študovať vývoj pre iOS a v tom istom mesiaci som dokončil a vydal prvú verziu „Banklet“."
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tako sem se začel učiti razvoja za iOS in v istem mesecu dokončal ter objavil prvo različico »Prašička za varčevanje«."
+            "value" : "Tako sem začel učiti razvoj za iOS in v istem mesecu dokončal ter objavil prvo različico »Banklet«."
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kështu fillova të mësoj zhvillimin e iOS dhe përfundova e publikova versionin e parë të \"Piggy Savings\" po atë muaj."
+            "value" : "Kështu fillova të mësoj zhvillimin e iOS dhe përfundova e publikova versionin e parë të \"Banklet\" po atë muaj."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Så jag började lära mig iOS-utveckling, och samma månad färdigställde och lanserade jag den första versionen av \"Spar-grisen\"."
+            "value" : "Så började jag lära mig iOS-utveckling och under samma månad färdigställde och lanserade jag den första versionen av ”Banklet”."
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hivyo nilianza kujifunza uundaji wa iOS, na mwezi huo huo nilikamilisha na kuzindua toleo la kwanza la \"Piggy Bank\"."
+            "value" : "Hivyo nilianza kujifunza uundaji wa iOS, na mwezi huo huo nilikamilisha na kuzindua toleo la kwanza la \"Banklet\"."
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "எனவே நான் iOS மேம்பாட்டைக் கற்கத் தொடங்கினேன், அதே மாதத்தில் \"Piggy Bank\" இன் முதல் பதிப்பை முடித்து வெளியிட்டேன்."
+            "value" : "எனவே நான் iOS மேம்பாட்டைக் கற்கத் தொடங்கினேன், அதே மாதத்தில் \"Banklet\" இன் முதல் பதிப்பை முடித்து வெளியிட்டேன்."
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "కాబట్టి నేను iOS డెవలప్‌మెంట్ నేర్చుకోవడం ప్రారంభించాను మరియు అదే నెలలో \"పిగ్గీ బ్యాంక్\" యొక్క మొదటి వెర్షన్‌ను పూర్తి చేసి విడుదల చేశాను."
+            "value" : "అందువలన నేను iOS డెవలప్‌మెంట్ నేర్చుకోవడం ప్రారంభించాను, మరియు అదే నెలలో “Banklet” యొక్క మొదటి వర్షన్‌ను పూర్తి చేసి విడుదల చేసాను."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ดังนั้นผมจึงเริ่มเรียนรู้การพัฒนา iOS และสร้าง \"หมูออมสิน\" เวอร์ชันแรกเสร็จและเปิดให้ดาวน์โหลดในเดือนนั้น"
+            "value" : "ดังนั้นฉันจึงเริ่มเรียนรู้การพัฒนา iOS และในเดือนเดียวกันนั้นก็ได้ทำการพัฒนาและปล่อยเวอร์ชันแรกของ “Banklet” ออกมา"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Böylece iOS geliştirme öğrenmeye başladım ve o ay içinde \"Tasarruf Domuzcuğu\"nun ilk sürümünü tamamlayıp yayınladım."
+            "value" : "Böylece iOS geliştirmeyi öğrenmeye başladım ve aynı ay içinde “Banklet”in ilk sürümünü tamamlayıp yayımladım."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Я почав вивчати розробку під iOS і того ж місяця випустив першу версію «Свинки-скарбнички»."
+            "value" : "Отже, я почав вивчати розробку для iOS і в тому ж місяці завершив та опублікував першу версію «Banklet»."
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "چنانچہ میں نے iOS ڈویلپمنٹ سیکھنا شروع کیا، اور اسی مہینے \"Piggy Bank\" کا پہلا ورژن مکمل کر کے لانچ کیا۔"
+            "value" : "چنانچہ میں نے iOS ڈویلپمنٹ سیکھنا شروع کیا اور اسی مہینے میں نے “Banklet” کا پہلا ورژن مکمل کر کے شائع کیا۔"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shunday qilib, men iOS dasturlashni o'rganishni boshladim va o'sha oyda \"Piggy Bank\"ning birinchi versiyasini tugatib, ishga tushirdim."
+            "value" : "Shunday qilib, men iOS dasturlashni o‘rganishni boshladim va shu oy ichida «Banklet»ning birinchi versiyasini yakunlab, nashr etdim."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thế là tôi bắt đầu học phát triển iOS, và trong tháng đó đã hoàn thành cũng như đưa lên kệ phiên bản đầu tiên của \"Heo đất tiết kiệm\"."
+            "value" : "Vì vậy, tôi đã bắt đầu học phát triển iOS và trong cùng tháng đó, tôi đã hoàn thành và phát hành phiên bản đầu tiên của “Banklet”."
           }
         },
         "zh-Hans" : {
@@ -90618,8 +91014,8 @@
         }
       }
     },
-    "week" : {
-      "comment" : "每周",
+    "Weekly" : {
+      "comment" : "每周（定期选项）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
@@ -90631,13 +91027,13 @@
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hər həftə"
+            "value" : "Həftə"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Всяка седмица"
+            "value" : "Седм"
           }
         },
         "bn" : {
@@ -90649,61 +91045,61 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cada setmana"
+            "value" : "Setmana"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kada semana"
+            "value" : "Semana"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Týdně"
+            "value" : "Týd"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hver uge"
+            "value" : "Uge"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wöchentlich"
+            "value" : "Woche"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Εβδομαδιαία"
+            "value" : "Εβδομάδα"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Semanalmente"
+            "value" : "Sem"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Semanalmente"
+            "value" : "Sem"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Semanalmente"
+            "value" : "Sem"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Iga nädal"
+            "value" : "Nädal"
           }
         },
         "fa" : {
@@ -90715,79 +91111,79 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Joka viikko"
+            "value" : "Viikko"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Linggo-linggo"
+            "value" : "Linggo"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chaque semaine"
+            "value" : "Semaine"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hebdomadaire"
+            "value" : "Semaine"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gach seachtain"
+            "value" : "Seachtain"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "સાપ્તાહિક"
+            "value" : "અઠવાડિયું"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "שבועי"
+            "value" : "שבוע"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "साप्ताहिक"
+            "value" : "सप्ताह"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Svaki tjedan"
+            "value" : "Tjed"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hetente"
+            "value" : "Hét"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setiap Minggu"
+            "value" : "Minggu"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vikulega"
+            "value" : "Vika"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ogni settimana"
+            "value" : "Settimana"
           }
         },
         "ja" : {
@@ -90799,25 +91195,25 @@
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Saben minggu"
+            "value" : "Minggu"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Апта сайын"
+            "value" : "Апта"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ជារៀងរាល់សប្តាហ៍"
+            "value" : "រៀងរាល់សប្តាហ៍"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಪ್ರತಿ ವಾರ"
+            "value" : "ವಾರ"
           }
         },
         "ko" : {
@@ -90829,169 +91225,169 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kas savaitę"
+            "value" : "Savaitę"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Katru nedēļu"
+            "value" : "Nedēļā"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ഓരോ ആഴ്ചയും"
+            "value" : "ആഴ്‌ച"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "दर आठवड्याला"
+            "value" : "आठवडा"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setiap Minggu"
+            "value" : "Minggu"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "အပတ်စဉ်"
+            "value" : "အပတ်"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hver uke"
+            "value" : "Uke"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Elke week"
+            "value" : "Wk"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ପ୍ରତି ସପ୍ତାହରେ"
+            "value" : "ସପ୍ତାହ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਹਰ ਹਫ਼ਤੇ"
+            "value" : "ਹਫ਼ਤਾ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Co tydzień"
+            "value" : "Tydz"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Semanalmente"
+            "value" : "Semana"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Semanalmente"
+            "value" : "Semana"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Săptămânal"
+            "value" : "Săpt"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Еженедельно"
+            "value" : "Нед"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Týždenne"
+            "value" : "Týž"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tedensko"
+            "value" : "Teden"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Çdo javë"
+            "value" : "Javë"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Varje vecka"
+            "value" : "Vecka"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kila wiki"
+            "value" : "Wiki"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "வாரந்தோறும்"
+            "value" : "வாரம்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ప్రతి వారం"
+            "value" : "వారంవారీ"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ทุกสัปดาห์"
+            "value" : "สัปดาห์"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Her hafta"
+            "value" : "Hafta"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Щотижня"
+            "value" : "Тиж"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ہفتہ وار"
+            "value" : "ہفتہ"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Har hafta"
+            "value" : "Haftа"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mỗi tuần"
+            "value" : "Tuần"
           }
         },
         "zh-Hans" : {
@@ -94578,402 +94974,6 @@
         }
       }
     },
-    "year" : {
-      "comment" : "每年",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سنوي"
-          }
-        },
-        "az" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hər il"
-          }
-        },
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Всяка година"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "বার্ষিক"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cada any"
-          }
-        },
-        "ceb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kada tuig"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ročně"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvert år"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jährlich"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ετήσια"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anualmente"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anualmente"
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anualmente"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iga aasta"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سالانه"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Joka vuosi"
-          }
-        },
-        "fil" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Taon-taon"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chaque année"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuel"
-          }
-        },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gach bliain"
-          }
-        },
-        "gu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "વાર્ષિક"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "שנתי"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वार्षिक"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Svake godine"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Évente"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setiap Tahun"
-          }
-        },
-        "is" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Árlega"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ogni anno"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "毎年"
-          }
-        },
-        "jv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saben taun"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Жыл сайын"
-          }
-        },
-        "km" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ជារៀងរាល់ឆ្នាំ"
-          }
-        },
-        "kn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ಪ್ರತಿ ವರ್ಷ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "매년"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kasmet"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Katru gadu"
-          }
-        },
-        "ml" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ഓരോ വർഷവും"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "दरवर्षी"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setiap Tahun"
-          }
-        },
-        "my" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "နှစ်စဉ်"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hvert år"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elk jaar"
-          }
-        },
-        "or" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ପ୍ରତିବର୍ଷ"
-          }
-        },
-        "pa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ਹਰ ਸਾਲ"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Co roku"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anualmente"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anualmente"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anual"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ежегодно"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ročne"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letno"
-          }
-        },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Çdo vit"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Varje år"
-          }
-        },
-        "sw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kila mwaka"
-          }
-        },
-        "ta" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ஆண்டுதோறும்"
-          }
-        },
-        "te" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ఏటా"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทุกปี"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Her yıl"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Щороку"
-          }
-        },
-        "ur" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "سالانہ"
-          }
-        },
-        "uz" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Har yili"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mỗi năm"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每年"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每年"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每年"
-          }
-        }
-      }
-    },
     "Year" : {
       "comment" : "年",
       "extractionState" : "manual",
@@ -95371,25 +95371,25 @@
       }
     },
     "Yearly" : {
-      "comment" : "按年",
+      "comment" : "每年（定期选项）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سنويًا"
+            "value" : "سنوي"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İllik"
+            "value" : "İl"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "По години"
+            "value" : "Год"
           }
         },
         "bn" : {
@@ -95401,367 +95401,367 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Anualment"
+            "value" : "Any"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Matag tuig"
+            "value" : "Tuig"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ročně"
+            "value" : "Rok"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Årligt"
+            "value" : "År"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jährlich"
+            "value" : "Jahr"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ανά έτος"
+            "value" : "Έτος"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por año"
+            "value" : "Año"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por año"
+            "value" : "Año"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por año"
+            "value" : "Año"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aasta kaupa"
+            "value" : "Aasta"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "بر اساس سال"
+            "value" : "سالانه"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vuosittain"
+            "value" : "Vuosi"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batay sa Taon"
+            "value" : "Taon"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Par an"
+            "value" : "An"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Par année"
+            "value" : "An"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De réir bliana"
+            "value" : "Bliain"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "વર્ષ પ્રમાણે"
+            "value" : "વર્ષ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "לפי שנה"
+            "value" : "שנה"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "वर्ष के अनुसार"
+            "value" : "वर्ष"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Godišnje"
+            "value" : "God"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Évente"
+            "value" : "Év"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tahunan"
+            "value" : "Tahun"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eftir ári"
+            "value" : "Ár"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Annuale"
+            "value" : "Anno"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "年払い"
+            "value" : "毎年"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Miturut Taun"
+            "value" : "Taun"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Жыл сайын"
+            "value" : "Жыл"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "តាមឆ្នាំ"
+            "value" : "រៀងរាល់ឆ្នាំ"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ವರ್ಷಕ್ಕೊಮ್ಮೆ"
+            "value" : "ವರ್ಷ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "연별"
+            "value" : "매년"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kasmet"
+            "value" : "Metus"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pa gadiem"
+            "value" : "Gadā"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "വാർഷികം"
+            "value" : "വർഷം"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "वार्षिक"
+            "value" : "वर्ष"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tahunan"
+            "value" : "Tahun"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "နှစ်အလိုက်"
+            "value" : "နှစ်"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Årlig"
+            "value" : "År"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jaarlijks"
+            "value" : "Jr"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ବାର୍ଷିକ"
+            "value" : "ବର୍ଷ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਸਾਲ ਦੁਆਰਾ"
+            "value" : "ਸਾਲ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rocznie"
+            "value" : "Rok"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por ano"
+            "value" : "Ano"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Por ano"
+            "value" : "Ano"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pe an"
+            "value" : "An"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "По годам"
+            "value" : "Год"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Po rokoch"
+            "value" : "Rok"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Po letih"
+            "value" : "Leto"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Në vit"
+            "value" : "Vit"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Årsvis"
+            "value" : "År"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kwa mwaka"
+            "value" : "Mwaka"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ஆண்டு வாரியாக"
+            "value" : "ஆண்டு"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "సంవత్సరం వారీగా"
+            "value" : "సంవత్సరం"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "รายปี"
+            "value" : "ปี"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yıllık"
+            "value" : "Yıl"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Щорічно"
+            "value" : "Рік"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سال بہ سال"
+            "value" : "سال"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yilma-yil"
+            "value" : "Yil"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Theo năm"
+            "value" : "Năm"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按年"
+            "value" : "每年"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按年"
+            "value" : "每年"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按年"
+            "value" : "每年"
           }
         }
       }
