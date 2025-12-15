@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeBanksListView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeVM: HomeViewModel
     var allPiggyBank: [PiggyBank]
     
@@ -19,8 +20,8 @@ struct HomeBanksListView: View {
                 Spacer()
                 NavigationLink(destination: HomeBanksListView2()) {
                     Text("Show more")
-                        .foregroundColor(AppColor.appColor)
                         .font(.footnote)
+                        .modifier(BlueTextModifier())
                 }
                 .simultaneousGesture(TapGesture().onEnded {
                     HapticManager.shared.selectionChanged()
@@ -31,10 +32,30 @@ struct HomeBanksListView: View {
                 HStack {
                     ForEach(Array(allPiggyBank.enumerated()), id: \.offset) { index,item in
                         let itemColor: Color = item.isPrimary ? .white : .primary
-                        let itemBgColor: Color = item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
-                        let itemProgressColor: Color = item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                        var itemBgColor: Color {
+                            if colorScheme == .light {
+                                item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                            } else {
+                                item.isPrimary ?
+                                AppColor.appColor.opacity(0.8) :
+                                    .white.opacity(0.25)
+                            }
+                        }
+                        var itemProgressColor: Color {
+                            if colorScheme == .light {
+                                item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                            } else {
+                                item.isPrimary ? .white : .gray
+                            }
+                        }
                         let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
-                        let vsBgColor: Color = item.isPrimary ? .blue : Color.white
+                        var vsBgColor: Color {
+                            if colorScheme == .light {
+                                item.isPrimary ? .blue : Color.white
+                            } else {
+                                item.isPrimary ? AppColor.appGrayColor : Color.black
+                            }
+                        }
                         Button(action: {
                             // 振动
                             HapticManager.shared.selectionChanged()
@@ -69,6 +90,8 @@ struct HomeBanksListView: View {
                                         .font(.footnote)
                                         .fontWeight(.bold)
                                         .foregroundColor(itemColor)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.5)
                                     Spacer()
                                 }
                                 // 进度条

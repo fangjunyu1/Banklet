@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePrimaryBankAdvancedFeatures: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var idleManager: IdleTimerManager
     var primaryBank: PiggyBank
     @Binding var showCreateView: Bool
@@ -19,6 +20,8 @@ struct HomePrimaryBankAdvancedFeatures: View {
         }
     
     var body: some View {
+        let silentImg = colorScheme == .light ? "SilentBlue" : "SilentWhite"
+        let rmode: Image.TemplateRenderingMode = colorScheme == .light ? .original : .template
         let progress: Double = primaryBank.progress
         let progressText = primaryBank.progressText
         let lastRecord = primaryBank.records?.max(by: { $0.date < $1.date })
@@ -43,7 +46,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                         }, label: {
                             HStack {
                                 Image(systemName: "plus")
-                                Text("Create a piggy bank")
+                                Text("Create Piggy")
                                     .font(.subheadline)
                             }
                             .foregroundColor(.white)
@@ -51,7 +54,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             .padding(.vertical,20)
                             .padding(.horizontal,30)
                             .frame(maxWidth: .infinity)
-                            .background(AppColor.appColor)
+                            .modifier(BlueBgModifier())
                             .cornerRadius(10)
                         })
                         .frame(height:smallSize)
@@ -64,12 +67,13 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             ZStack {
                                 VStack {
                                     HStack {
-                                        Image("SilentBlue")
+                                        Image(silentImg)
                                             .resizable()
                                             .frame(width: 15, height: 15)
+                                            .foregroundColor(.white)
                                         Text("Silent Mode")
-                                            .foregroundColor(AppColor.appColor)
                                             .font(.caption2)
+                                            .modifier(BlueTextModifier())
                                         Spacer()
                                     }
                                     Spacer()
@@ -79,7 +83,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                     .scaledToFit()
                                     .frame(height:largeSize * 0.8)
                             }
-                            .background(Color.white)
+                            .modifier(WhiteBgModifier())
                             .frame(height:largeSize)
                             .cornerRadius(10)
                         })
@@ -104,7 +108,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                         }
                         .padding(10)
                         .frame(height:largeSize)
-                        .background(.white)
+                        .modifier(WhiteBgModifier())
                         .cornerRadius(10)
                         // 存取记录
                         NavigationLink(destination: AccessTimesView(), label: {
@@ -112,7 +116,9 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                 HStack {
                                     Image("counterclockwise")
                                         .resizable()
+                                        .renderingMode(rmode)
                                         .frame(width: 12,height:12)
+                                        .foregroundColor(Color.gray)
                                     Caption2Black(text: "Access records")
                                     Spacer()
                                 }
@@ -131,7 +137,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             }
                             .padding(10)
                             .frame(height: smallSize)
-                            .background(Color.white)
+                            .modifier(WhiteBgModifier())
                             .cornerRadius(10)
                         })
                     }

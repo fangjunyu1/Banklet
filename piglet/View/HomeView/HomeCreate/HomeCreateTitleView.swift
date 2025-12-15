@@ -12,7 +12,7 @@ struct HomeCreateTitleView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading,spacing: 10) {
-                Text("Create a piggy bank")
+                Text("Create Piggy")
                     .font(.title2)
                     .fontWeight(.medium)
                 Text("Please fill in your savings plan information completely, and set the name, goal and starting amount step by step.")

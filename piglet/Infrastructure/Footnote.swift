@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct Footnote: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var body: some View {
+        var color = colorScheme == .light ? Color.gray : Color.white
         Text(LocalizedStringKey(text))
             .font(.footnote)
-            .foregroundColor(.gray)
+            .foregroundColor(color)
     }
 }
 
@@ -35,11 +37,13 @@ struct Caption2: View {
 }
 
 struct Caption2Black: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var body: some View {
+        let color = colorScheme == .light ? AppColor.appGrayColor : AppColor.appBgGrayColor
         Text(LocalizedStringKey(text))
             .font(.caption2)
-            .foregroundColor(AppColor.appGrayColor)
+            .foregroundColor(color)
     }
 }
 

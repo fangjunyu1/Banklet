@@ -107,7 +107,28 @@ struct BlueTextModifier: ViewModifier {
             .foregroundColor(colorScheme == .light ? AppColor.appColor : Color.white)
     }
 }
-struct LightBlueBgTextModifier: ViewModifier {
+struct WhiteTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ? Color.white : AppColor.appGrayColor)
+    }
+}
+struct WhiteBgModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .light ? Color.white : AppColor.appGrayColor)
+    }
+}
+struct BlueBgModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+    }
+}
+struct LightBlueBgModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
         content

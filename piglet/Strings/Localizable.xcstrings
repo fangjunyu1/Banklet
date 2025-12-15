@@ -23101,92 +23101,92 @@
         }
       }
     },
-    "Create a piggy bank" : {
+    "Create Piggy" : {
       "comment" : "创建存钱罐",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إنشاء حافظة النقود"
+            "value" : "إنشاء حصالة"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yığım qutusu yarat"
+            "value" : "Pul Q"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Създай касичка"
+            "value" : "Създ. каса"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "পিগি ব্যাংক তৈরি করুন"
+            "value" : "নগদ ঝুড়ি"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear guardiola"
+            "value" : "Crea Fons"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paghimo og Alkansiya"
+            "value" : "Himo Piggy"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vytvořit pokladničku"
+            "value" : "Vytvoř Pok."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opret sparegris"
+            "value" : "Opret Spare"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sparschwein erstellen"
+            "value" : "Sparbüch"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δημιουργία κουμπαρά"
+            "value" : "Δημιρ. Κουμπ"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear alcancía"
+            "value" : "Crear Hucha"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear alcancía"
+            "value" : "Crear Hucha"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear alcancía"
+            "value" : "Crear Hucha"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loo rahakassa"
+            "value" : "Loo Sääst."
           }
         },
         "fa" : {
@@ -23198,109 +23198,109 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Luo säästölipas"
+            "value" : "Luo Säästö"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gumawa ng Alkansya"
+            "value" : "Gawa Piggy"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Créer une tirelire"
+            "value" : "Créer Tirel."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Créer une tirelire"
+            "value" : "Créer Tirel."
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cruthaigh muc sparáin"
+            "value" : "Cruthaigh Coig."
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "પિગી બેંક બનાવો"
+            "value" : "પિગી બનાવો"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "צור קופת חיסכון"
+            "value" : "צור קופה"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पिग्गी बैंक बनाएं"
+            "value" : "पिग्गी बनाओ"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stvori kasicu prasicu"
+            "value" : "Napr. Škr."
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Persely létrehozása"
+            "value" : "Kész Pénzt."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buat Celengan"
+            "value" : "Buat Cel."
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Búa til sparibauk"
+            "value" : "Búa Spari"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crea salvadanaio"
+            "value" : "Crea Salvad."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "貯金箱を作成"
+            "value" : "貯金箱作成"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gawe Celengan"
+            "value" : "Gawe Celeng"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Жинақ сандықшасын жасау"
+            "value" : "Құт. жасау"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "បង្កើតធនាគារសន្សំប្រាក់"
+            "value" : "បង្កើតធន."
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಪಿಗ್ಗಿ ಬ್ಯಾಂಕ್ ರಚಿಸಿ"
+            "value" : "ಸೇವಾ ಕುಡಿಯ"
           }
         },
         "ko" : {
@@ -23312,169 +23312,169 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sukurti taupyklę"
+            "value" : "Sukurk Taup"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Izveidot krājkasīti"
+            "value" : "Izveido K"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പിഗ്ഗി ബാങ്ക് സൃഷ്ടിക്കുക"
+            "value" : "പിഗി സൃഷ്ടി"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पिगी बँक तयार करा"
+            "value" : "पिग्गी तयार"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cipta Tabung Simpanan"
+            "value" : "Buat Tab"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "စုဘူး ဖန်တီးရန်"
+            "value" : "ပိုက်ဆံဘူး"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opprett sparebøsse"
+            "value" : "Lag Spareb"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Spaarpot maken"
+            "value" : "Maak Spaar"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ପିଗି ବ୍ୟାଙ୍କ ସୃଷ୍ଟି କରନ୍ତୁ"
+            "value" : "ପିଗି ତିଆରି"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਗੁੱਲਕ ਬਣਾਓ"
+            "value" : "ਪਿਗੀ ਬਣਾਓ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utwórz skarbonkę"
+            "value" : "Utwórz Skar"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Criar cofrinho"
+            "value" : "Criar Cofr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Criar cofrinho"
+            "value" : "Criar Cofr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Creează o pușculiță"
+            "value" : "Creează Pușc"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Создать копилку"
+            "value" : "Создать Коп"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vytvoriť pokladničku"
+            "value" : "Vytv. Pok"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustvari hranilnik"
+            "value" : "Ustvar. Škat"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Krijo arkë kursimi"
+            "value" : "Krijo Kurs"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skapa spargris"
+            "value" : "Skapa Sparb"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unda kibubu"
+            "value" : "Tengeneza H"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "உண்டியலை உருவாக்குங்கள்"
+            "value" : "பிகி உருவா"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "పిగ్గీ బ్యాంక్‌ని సృష్టించండి"
+            "value" : "పిగ్గీ సృష్టి"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "สร้างกระปุกออมสิน"
+            "value" : "สร้างกระปุก"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kumbara oluştur"
+            "value" : "Kumbara Y"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Створити скарбничку"
+            "value" : "Створ. Коп"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "گلک بنائیں"
+            "value" : "پگی بنائیں"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pul yig'ish qutisini yaratish"
+            "value" : "Pul Q. Y"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tạo heo đất"
+            "value" : "Tạo Heo"
           }
         },
         "zh-Hans" : {
@@ -23492,7 +23492,7 @@
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "建立存錢罐"
+            "value" : "創建存錢罐"
           }
         }
       }

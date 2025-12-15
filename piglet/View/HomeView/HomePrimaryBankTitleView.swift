@@ -49,7 +49,7 @@ struct HomePrimaryBankTitleView: View {
             .modifier(BlueTextModifier())
             .padding(.vertical,5)
             .padding(.horizontal,10)
-            .modifier(LightBlueBgTextModifier())
+            .modifier(LightBlueBgModifier())
             .cornerRadius(5)
             .onTapGesture {
                 showMoreInformation.toggle()
