@@ -25,19 +25,22 @@ struct HomeSettingRow: View {
                 }
                 .padding(.trailing,10)
                 Text(LocalizedStringKey(title))
-                    .foregroundColor(.black)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .modifier(BlackTextModifier())
                 Spacer()
                 accessoryView(accessory:accessory)
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(.white)
+            .modifier(WhiteBgModifier())
             .cornerRadius(10)
+            .frame(maxWidth: .infinity)
             if let footnote = footnote {
                 HStack {
                     Text(LocalizedStringKey(footnote))
                         .font(.footnote)
-                        .foregroundColor(.gray)
+                        .modifier(GrayTextModifier())
                         .multilineTextAlignment(.leading)
                     Spacer()
                 }
@@ -46,8 +49,16 @@ struct HomeSettingRow: View {
     }
 }
 
+#Preview {
+    NavigationStack {
+        GeneralView()
+            .environmentObject(AppStorageManager.shared)
+    }
+}
+
 // 设置 - 高级会员视图
 struct HomeSettingPremiumRow: View {
+    @Environment(\.colorScheme) var colorScheme
     var color: HomeSettingsColorEnum
     var icon: HomeSettingsIconEnum
     var title: String
@@ -62,6 +73,20 @@ struct HomeSettingPremiumRow: View {
     }
     
     var body: some View {
+        var textColor: Color {
+            if colorScheme == .light {
+                isValidMember ? .white : .black
+            } else {
+                .white
+            }
+        }
+        var bgColor: Color {
+            if colorScheme == .light {
+                isValidMember ? AppColor.appColor : .white
+            } else {
+                isValidMember ? AppColor.appColor.opacity(0.8) : AppColor.appGrayColor
+            }
+        }
         VStack {
             HStack {
                 // 图标
@@ -78,7 +103,9 @@ struct HomeSettingPremiumRow: View {
                     .padding(.trailing,10)
                 }
                 Text(LocalizedStringKey(title))
-                    .foregroundColor(isValidMember ? .white : .black)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .foregroundColor(textColor)
                 Spacer()
                 if isLifetime {
                     Text("Permanently valid")
@@ -94,11 +121,11 @@ struct HomeSettingPremiumRow: View {
                     .foregroundColor(.white)
                 }
                 Image(systemName:"chevron.right")
-                    .foregroundColor(isValidMember ? .white : .black)
+                    .foregroundColor(textColor)
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(isValidMember ? AppColor.appColor : .white)
+            .background(bgColor)
             .cornerRadius(10)
         }
     }
@@ -114,19 +141,18 @@ struct HomeSettingNoIconRow: View {
         VStack {
             HStack {
                 Text(LocalizedStringKey(title))
-                    .foregroundColor(.black)
                 Spacer()
                 accessoryView(accessory:accessory)
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(.white)
+            .modifier(WhiteBgModifier())
             .cornerRadius(10)
             if let footnote = footnote {
                 HStack {
                     Text(LocalizedStringKey(footnote))
                         .font(.footnote)
-                        .foregroundColor(.gray)
+                        .modifier(GrayTextModifier())
                         .multilineTextAlignment(.leading)
                     Spacer()
                 }
@@ -138,11 +164,26 @@ struct HomeSettingNoIconRow: View {
 
 // 静默模式
 struct GeneralSilentRow: View {
+    @Environment(\.colorScheme) var colorScheme
     var title: String
     var footnote: String?
     @Binding var mode: Bool
     
     var body: some View {
+        var textColor: Color {
+            if colorScheme == .light {
+                mode ? .white : .black
+            } else {
+                .white
+            }
+        }
+        var bgColor: Color {
+            if colorScheme == .light {
+                mode ? Color(hex: "53ad43") : .white
+            } else {
+                mode ? Color(hex: "53ad43") : AppColor.appGrayColor
+            }
+        }
         VStack {
             HStack {
                 ZStack {
@@ -157,11 +198,11 @@ struct GeneralSilentRow: View {
                         .scaledToFit()
                         .frame(width: 20)
                         .aspectRatio(1, contentMode: .fit)
-                        .foregroundColor(mode ? .white : .black)
+                        .foregroundColor(textColor)
                 }
                 .padding(.trailing,10)
                 Text(LocalizedStringKey(title))
-                    .foregroundColor(mode ? .white : .black)
+                    .foregroundColor(textColor)
                 Spacer()
                 Toggle("", isOn: $mode)
                     .onChange(of: mode) {
@@ -170,13 +211,13 @@ struct GeneralSilentRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(mode ? Color(hex: "53ad43") : .white)
+            .background(bgColor)
             .cornerRadius(10)
             if let footnote = footnote {
                 HStack {
                     Text(LocalizedStringKey(footnote))
                         .font(.footnote)
-                        .foregroundColor(.gray)
+                        .modifier(GrayTextModifier())
                         .multilineTextAlignment(.leading)
                     Spacer()
                 }
@@ -195,21 +236,23 @@ private struct accessoryView: View {
                     manager.cloudKitMode = newValue ? .privateDatabase : .none
                     DataController.shared.updateContainer() // 更新容器
                 }
+                .frame(width: 80)
         case .binding(let isOn):
             Toggle("", isOn: isOn.animation(.easeInOut))
+                .frame(width: 80)
         case .reminder(let notice):
             reminderTime(notice: notice)
         case .premium:
             Image(systemName:"chevron.right")
-                .foregroundColor(.black)
+                .modifier(BlackTextModifier())
         case .remark(let remark):
             Text(LocalizedStringKey(remark))
                 .foregroundColor(AppColor.gray)
             Image(systemName:"chevron.right")
-                .foregroundColor(.black)
+                .modifier(BlackTextModifier())
         case .none:
             Image(systemName:"chevron.right")
-                .foregroundColor(.black)
+                .modifier(BlackTextModifier())
         }
     }
 }

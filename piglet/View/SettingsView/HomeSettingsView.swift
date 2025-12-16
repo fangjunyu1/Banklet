@@ -190,8 +190,13 @@ private struct PreviewHomeSettingsView: View {
 }
 
 #Preview {
-    PreviewHomeSettingsView()
-        .environment(ModelConfigManager())  // iCloud配置
-        .environmentObject(IAPManager.shared)
+    Home()
+        .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
+//        .environment(\.locale, .init(identifier: "en"))
+//        .environment(\.locale, .init(identifier: "ru"))
+//        .environment(\.locale, .init(identifier: "ta"))
 }

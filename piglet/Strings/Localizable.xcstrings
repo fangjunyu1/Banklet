@@ -63967,396 +63967,426 @@
       }
     },
     "Privacy Policy" : {
-      "comment" : "隐私政策",
+      "comment" : "隐私政策（条款/隐私）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سياسة الخصوصية"
+            "value" : "الشروط"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Məxfilik siyasəti"
+            "value" : "Məxfi"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Политика за поверителност"
+            "value" : "Повер"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "গোপনীয়তা নীতি"
+            "value" : "গোপন"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de privadesa"
+            "value" : "Privac"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Polisiya sa Pribasiya"
+            "value" : "Prib"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zásady ochrany osobních údajů"
+            "value" : "Soukr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privatlivspolitik"
+            "value" : "Privat"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Datenschutzrichtlinie"
+            "value" : "Datenschutz"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Πολιτική Απορρήτου"
+            "value" : "Απόρ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de privacidad"
+            "value" : "Priv"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de privacidad"
+            "value" : "Priv"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de privacidad"
+            "value" : "Priv"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privaatsuspoliitika"
+            "value" : "Priva"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سیاست حفظ حریم خصوصی"
+            "value" : "شرایط"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tietosuojakäytäntö"
+            "value" : "Yksity"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patakaran sa Privacy"
+            "value" : "Priba"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Politique de confidentialité"
+            "value" : "Privé"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Politique de confidentialité"
+            "value" : "Privé"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Polasaí Príobháideachta"
+            "value" : "Príobh"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ગોપનીયતા નીતિ"
+            "value" : "ખાનગી"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "מדיניות פרטיות"
+            "value" : "תנאים"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "गोपनीयता नीति"
+            "value" : "गोपनीय"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Politika privatnosti"
+            "value" : "Privat"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Adatvédelmi szabályzat"
+            "value" : "Adatv"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kebijakan Privasi"
+            "value" : "Privasi"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Persónuverndarstefna"
+            "value" : "Einka"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Informativa sulla privacy"
+            "value" : "Privacy"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "プライバシーポリシー"
+            "value" : "プライ"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kabijakan Privasi"
+            "value" : "Rahas"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Құпиялылық саясаты"
+            "value" : "Құпия"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "គោលការណ៍​ភាព​ឯកជន"
+            "value" : "ឯកជន"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಗೌಪ್ಯತಾ ನೀತಿ"
+            "value" : "ಖಾಸಗಿ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "개인정보 처리방침"
+            "value" : "개인정보"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privatumo politika"
+            "value" : "Privat"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privātuma politika"
+            "value" : "Priv"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "സ്വകാര്യതാ നയം"
+            "value" : "സ്വകാര്യ"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "गोपनीयता धोरण"
+            "value" : "गोपनीय"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dasar Privasi"
+            "value" : "Privasi"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ကိုယ်ရေးအချက်အလက် မူဝါဒ"
+            "value" : "ကိုယ်ရေး"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Personvernerklæring"
+            "value" : "Person"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privacybeleid"
+            "value" : "Privacy"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ଗୋପନୀୟତା ନୀତି"
+            "value" : "ଗୋପନ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਗੋਪਨੀਯਤਾ ਨੀਤੀ"
+            "value" : "ਨਿੱਜੀ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Polityka prywatności"
+            "value" : "Prywat"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de Privacidade"
+            "value" : "Privac"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Política de Privacidade"
+            "value" : "Privac"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Politică de confidențialitate"
+            "value" : "Privat"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Политика конфиденциальности"
+            "value" : "Конф"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zásady ochrany osobných údajov"
+            "value" : "Súkro"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pravilnik o zasebnosti"
+            "value" : "Zaseb"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Politika e Privatësisë"
+            "value" : "Privat"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Integritetspolicy"
+            "value" : "Privat"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sera ya Faragha"
+            "value" : "Farag"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "தனியுரிமைக் கொள்கை"
+            "value" : "தனிய"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "గోప్యతా విధానం"
+            "value" : "గోప"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "นโยบายความเป็นส่วนตัว"
+            "value" : "ส่วนตัว"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gizlilik Politikası"
+            "value" : "Gizli"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Політика конфіденційності"
+            "value" : "Прив"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "رازداری کی پالیسی"
+            "value" : "شرائط"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maxfiylik siyosati"
+            "value" : "Maxfiy"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chính sách bảo mật"
+            "value" : "Riêng"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "隐私政策"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "隱私權政策"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "私隱政策"
           }
         }
@@ -81145,396 +81175,426 @@
       }
     },
     "Terms of Use" : {
-      "comment" : "使用条款",
+      "comment" : "使用条款（条款/隐私）",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شروط الاستخدام"
+            "value" : "الخصوصية"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İstifadə şərtləri"
+            "value" : "Şərtlər"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Условия за ползване"
+            "value" : "Условия"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ব্যবহারের শর্তাবলী"
+            "value" : "শর্ত"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Termes d'ús"
+            "value" : "Termes"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Termino sa Paggamit"
+            "value" : "Termino"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Podmínky použití"
+            "value" : "Podmín"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Brugsvilkår"
+            "value" : "Vilkår"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nutzungsbedingungen"
+            "value" : "AGB"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Όροι χρήσης"
+            "value" : "Όροι"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Términos de uso"
+            "value" : "Términos"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Términos de uso"
+            "value" : "Términos"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Términos de uso"
+            "value" : "Términos"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kasutustingimused"
+            "value" : "Tingim"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شرایط استفاده"
+            "value" : "حریم"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Käyttöehdot"
+            "value" : "Ehdot"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Tuntunin sa Paggamit"
+            "value" : "Tuntun"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Conditions d'utilisation"
+            "value" : "Conditions"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Conditions d'utilisation"
+            "value" : "Conditions"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Téarmaí Úsáide"
+            "value" : "Téarma"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ઉપયોગની શરતો"
+            "value" : "શરતો"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "תנאי שימוש"
+            "value" : "פרטיות"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "उपयोग की शर्तें"
+            "value" : "शर्तें"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uvjeti korištenja"
+            "value" : "Uvjeti"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Felhasználási feltételek"
+            "value" : "Feltét"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ketentuan Penggunaan"
+            "value" : "Syarat"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Notkunarskilmálar"
+            "value" : "Skilm"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Termini di utilizzo"
+            "value" : "Termini"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "利用規約"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ketentuan Panggunaan"
+            "value" : "Syarat"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пайдалану шарттары"
+            "value" : "Шарт"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "លក្ខខណ្ឌនៃការប្រើប្រាស់"
+            "value" : "លក្ខ"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಬಳಕೆಯ ನಿಯಮಗಳು"
+            "value" : "ನಿಯಮ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "이용 약관"
+            "value" : "이용약관"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naudojimo sąlygos"
+            "value" : "Sąlygos"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lietošanas noteikumi"
+            "value" : "Noteik"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ഉപയോഗ നിബന്ധനകൾ"
+            "value" : "നിബന്ധ"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "वापराच्या अटी"
+            "value" : "अटी"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Syarat Penggunaan"
+            "value" : "Syarat"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "အသုံးပြုမှု စည်းမျဉ်းများ"
+            "value" : "စည်းမျဉ်း"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Brukervilkår"
+            "value" : "Vilkår"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gebruiksvoorwaarden"
+            "value" : "Voorw"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ"
+            "value" : "ସର୍ତ୍ତ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ"
+            "value" : "ਸ਼ਰਤਾਂ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Warunki użytkowania"
+            "value" : "Warunki"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Termos de Uso"
+            "value" : "Termos"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Termos de Uso"
+            "value" : "Termos"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Termeni de utilizare"
+            "value" : "Termeni"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Условия использования"
+            "value" : "Условия"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Podmienky používania"
+            "value" : "Podm"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pogoji uporabe"
+            "value" : "Pogoji"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kushtet e Përdorimit"
+            "value" : "Kushte"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Användarvillkor"
+            "value" : "Villkor"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Masharti ya matumizi"
+            "value" : "Masharti"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "பயன்பாட்டு விதிமுறைகள்"
+            "value" : "விதிகள்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "వినియోగ నిబంధనలు"
+            "value" : "నిబంధ"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ข้อกำหนดการใช้งาน"
+            "value" : "ข้อกำหนด"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kullanım Koşulları"
+            "value" : "Şartlar"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Умови використання"
+            "value" : "Умови"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "استعمال کی شرائط"
+            "value" : "رازداری"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Foydalanish shartlari"
+            "value" : "Shart"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Điều khoản sử dụng"
+            "value" : "ĐiềuKhoản"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "使用条款"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "使用條款"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "使用條款"
           }
         }

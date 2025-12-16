@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ThanksView: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
     @State private var showAppStore = false
     let platformList: [String] = ["ChatGPT","LottieFiles","iconfont","Pinterest","Dirbbble","GitHub", "px"]
+    let platformBlackList: [String] = ["ChatGPT-white","LottieFiles-white","iconfont-white","Pinterest-white","Dirbbble-white","GitHub", "px"]
     
     var body: some View {
+        let list = colorScheme == .light ? platformList : platformBlackList
         ScrollView(showsIndicators: false) {
             VStack {
                 Spacer()
@@ -36,7 +39,7 @@ struct ThanksView: View {
                     Text("Thank you to the following platforms for their selfless contributions.")
                         .modifier(FootNoteModifier())
                     // 感谢平台的列表
-                    ForEach(platformList, id:\.self) { item in
+                    ForEach(list, id:\.self) { item in
                         Image(item)
                             .resizable()
                             .scaledToFit()

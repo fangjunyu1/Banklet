@@ -28,11 +28,13 @@ struct Caption: View {
 }
 
 struct Caption2: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var body: some View {
+        var color = colorScheme == .light ? Color.gray : Color.white
         Text(LocalizedStringKey(text))
             .font(.caption2)
-            .foregroundColor(.gray)
+            .foregroundColor(color)
     }
 }
 

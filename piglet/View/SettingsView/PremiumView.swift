@@ -114,7 +114,7 @@ private struct PurchaseLoadingView: View {
             ProgressView("loading...")
                 .padding(20)
                 .cornerRadius(10)
-                .background(.white)
+                .modifier(WhiteBgModifier())
                 .cornerRadius(10)
         }
     }
@@ -165,7 +165,7 @@ private struct CurrentPlanView: View {
                         Text("Permanently valid")
                             .font(.footnote)
                     }
-                    .foregroundColor(AppColor.appColor)
+                    .modifier(BlueTextModifier())
                 }
                 // 分割线
                 if isLifetime && isSubScription {
@@ -190,7 +190,7 @@ private struct CurrentPlanView: View {
                         }
                         .font(.caption2)
                     }
-                    .foregroundColor(AppColor.appColor)
+                    .modifier(BlueTextModifier())
                 }
             }
             .modifier(VStackModifier())
@@ -227,7 +227,7 @@ private struct PremiumComponentsView: View {
                                     }
                                     VStack(alignment: .leading, spacing: 3) {
                                         Text(LocalizedStringKey(item.name))
-                                            .foregroundColor(AppColor.appGrayColor)
+                                            .modifier(DrakGrayTextModifier())
                                         HStack(spacing: 0) {
                                             Caption2(text: products.displayPrice)
                                             if let priceSuffix = item.priceSuffix {
@@ -295,7 +295,7 @@ private struct PremiumComponentsView: View {
                         Text(LocalizedStringKey(item))
                             .font(.caption2)
                             .multilineTextAlignment(.leading)
-                            .foregroundColor(AppColor.appGrayColor)
+                            .modifier(DrakGrayTextModifier())
                     }
                 }
                 .modifier(VStackModifier())
@@ -356,7 +356,7 @@ private struct BuyPremiumView: View {
                             }
                         }
                         .font(.caption2)
-                        .foregroundColor(.white)
+                        .modifier(DrakGrayTextModifier())
                     }
                 }
                 .modifier(ButtonModifier2())
@@ -427,7 +427,7 @@ private struct premiumItemView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(LocalizedStringKey(premium.text))
                     .font(.subheadline)
-                    .foregroundColor(AppColor.appGrayColor)
+                    .modifier(DrakGrayTextModifier())
                 Caption(text: premium.info)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -441,7 +441,7 @@ private struct VStackModifier: ViewModifier {
         content
             .padding(10)
             .frame(maxWidth: .infinity,alignment: .leading)
-            .background(.white)
+            .modifier(WhiteBgModifier())
             .cornerRadius(10)
     }
 }

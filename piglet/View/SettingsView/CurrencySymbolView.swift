@@ -62,13 +62,13 @@ struct CurrencySymbolView: View {
                         }
                         .padding(.vertical,2)
                         .padding(.horizontal,10)
-                        .tint(.black)
+                        .modifier(BlackTextModifier())
                     })
                     if lastIndex != index {                        Divider().padding(.leading, 50)
                     }
                 }
                 .padding(.vertical,10)
-                .background(.white)
+                .modifier(WhiteBgModifier())
                 .cornerRadius(12)
                 .padding(.bottom, 50)
             }

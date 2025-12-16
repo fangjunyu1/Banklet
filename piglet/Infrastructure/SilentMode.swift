@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct SlientMode: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var idleManager: IdleTimerManager
     @Binding var isSlientMode: Bool
     var body: some View {
+        var buttonColor: Color {
+            if colorScheme == .light {
+                AppColor.appGrayColor.opacity(0.8)
+            } else {
+                Color.white.opacity(0.8)
+            }
+        }
         NavigationStack {
             VStack {
                 // 动画视图
@@ -35,7 +43,7 @@ struct SlientMode: View {
                             .resizable()
                             .frame(width: 30,height: 30)
                             .scaledToFit()
-                            .foregroundColor(AppColor.appGrayColor.opacity(0.8))
+                            .foregroundColor(buttonColor)
                     })
                     .buttonStyle(.plain)
                 }
