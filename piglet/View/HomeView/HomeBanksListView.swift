@@ -21,7 +21,7 @@ struct HomeBanksListView: View {
                 NavigationLink(destination: HomeBanksListView2()) {
                     Text("Show more")
                         .font(.footnote)
-                        .modifier(BlueTextModifier())
+                        .modifier(BlueHintTextModifier())
                 }
                 .simultaneousGesture(TapGesture().onEnded {
                     HapticManager.shared.selectionChanged()
@@ -53,7 +53,7 @@ struct HomeBanksListView: View {
                             if colorScheme == .light {
                                 item.isPrimary ? .blue : Color.white
                             } else {
-                                item.isPrimary ? AppColor.appGrayColor : Color.black
+                                AppColor.appGrayColor
                             }
                         }
                         Button(action: {

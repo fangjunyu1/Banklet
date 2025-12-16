@@ -51,7 +51,7 @@ struct HomeMoreInformationView: View {
                 // 存钱罐信息列表 - 存钱次数
                 if (primary.records != nil) {
                     VStack(alignment: .leading) {
-                        Footnote(text: "Access times")
+                        Footnote(text: "Tx Count")
                         // 存钱罐信息列表
                         HomeMoreInformationList4(primary: primary, draft: $draft,isEdit:isEdit)
                     }
@@ -304,7 +304,7 @@ private struct HomeMoreInformationList4: View {
     var body: some View {
         VStack(spacing: 2) {
             // 存取次数
-            HomeMoreInformationList(name: "Access times",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
+            HomeMoreInformationList(name: "Tx Count",number: .record(Double(primary.records?.count ?? 0)), isEdit: isEdit)
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)

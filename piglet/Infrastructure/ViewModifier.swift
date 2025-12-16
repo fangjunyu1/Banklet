@@ -93,6 +93,14 @@ struct SettingVStackRowModifier: ViewModifier {
     }
 }
 
+struct DrakGrayTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ?  AppColor.appGrayColor : Color.white)
+    }
+}
+
 struct GrayTextModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
@@ -112,6 +120,13 @@ struct BlueTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(colorScheme == .light ? AppColor.appColor : Color.white)
+    }
+}
+struct BlueHintTextModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(colorScheme == .light ? AppColor.appColor : Color.gray)
     }
 }
 struct WhiteTextModifier: ViewModifier {

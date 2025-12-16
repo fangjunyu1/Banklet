@@ -17,20 +17,18 @@ struct BanksRow: View {
             HStack(spacing:10) {
                 Image(systemName: bank.icon)
                     .imageScale(.small)
-                    .foregroundColor(AppColor.appGrayColor)
                 Text(LocalizedStringKey(bank.name))
                     .font(.footnote)
-                    .foregroundColor(AppColor.appGrayColor)
                 Spacer()
                 Text(bank.progressText)
                     .font(.footnote)
-                    .foregroundColor(AppColor.bankList[index % AppColor.bankList.count])
             }
+            .modifier(DrakGrayTextModifier())
             // 存钱罐金额和进度方格
             HStack(alignment: .bottom) {
                 Text(bank.amountText)
                     .font(.footnote)
-                    .foregroundColor(AppColor.appGrayColor)
+                    .modifier(DrakGrayTextModifier())
                 Spacer()
                 // 进度方格
                 VStack {
@@ -39,7 +37,7 @@ struct BanksRow: View {
             }
         }
         .padding(20)
-        .background(.white)
+        .modifier(WhiteBgModifier())
         .cornerRadius(10)
     }
 }

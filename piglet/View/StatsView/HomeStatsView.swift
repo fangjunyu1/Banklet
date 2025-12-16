@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct HomeStatsView: View {
+    @Environment(\.colorScheme) var colorScheme
     var allPiggyBank: [PiggyBank]
     var savingsRecords: [SavingsRecord]  // 存取次数
     
@@ -73,7 +74,9 @@ struct HomeStatsView: View {
                             }
                             Text("\(formattedWeekday)")
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .modifier(GrayTextModifier())
                         }
                         // 分割线
                         Divider().offset(x: 2)
@@ -89,12 +92,14 @@ struct HomeStatsView: View {
                                         .foregroundColor(.gray)
                                     Text("\(savingsRecords.count)")
                                         .font(.footnote)
-                                        .foregroundColor(.black)
                                         .frame(minWidth: 40,alignment: .leading)
+                                        .modifier(BlackTextModifier())
                                 }
-                                Text("Access times")
+                                Text("Tx Count")
                                     .font(.caption2)
-                                    .foregroundColor(.gray)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.5)
+                                    .modifier(GrayTextModifier())
                             }
                         })
                         // 分割线
@@ -109,7 +114,9 @@ struct HomeStatsView: View {
                             }
                             Text("Deposit Amount")
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
+                                .modifier(GrayTextModifier())
                         }
                         Spacer()
                     }
@@ -118,6 +125,13 @@ struct HomeStatsView: View {
                         HStack(spacing:8) {
                             // 列表（显示最多三个）
                             ForEach(StatisticsTab.allCases, id:\.self) { item in
+                                var selectedColor:Color? {
+                                    if colorScheme == .light {
+                                        return selectedTab1 == item ? .black : .gray
+                                    } else {
+                                        return selectedTab1 == item ? .white : .gray
+                                    }
+                                }
                                 Button(action: {
                                     // 振动
                                     HapticManager.shared.selectionChanged()
@@ -130,7 +144,7 @@ struct HomeStatsView: View {
                                         .frame(width: 80)
                                         .lineLimit(1)
                                         .minimumScaleFactor(0.5)
-                                        .foregroundColor(selectedTab1 == item ? .black : .gray)
+                                        .foregroundColor(selectedColor)
                                         .cornerRadius(20)
                                 })
                             }
@@ -139,7 +153,7 @@ struct HomeStatsView: View {
                             HStack {
                                 Rectangle()
                                     .frame(width:80,height:40)
-                                    .foregroundColor(.white)
+                                    .modifier(WhiteTextModifier())
                                     .cornerRadius(20)
                                     .offset(x: CGFloat(selectedTab1.rawValue) * CGFloat(88))
                                 Spacer()
@@ -162,8 +176,8 @@ struct HomeStatsView: View {
                             Spacer()
                             NavigationLink(destination: AccessTimesView(), label: {
                                 Text("Show more")
-                                    .foregroundColor(AppColor.appColor)
                                     .font(.footnote)
+                                    .modifier(BlueHintTextModifier())
                             })
                         }
                         VStack {
@@ -203,10 +217,11 @@ struct PreviewHomeStatsView: View {
 }
 
 #Preview {
-    PreviewHomeStatsView()
+    Home()
         .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
+        .environment(\.locale, .init(identifier: "ta"))
 }

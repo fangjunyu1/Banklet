@@ -73,6 +73,8 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                             .foregroundColor(.white)
                                         Text("Silent Mode")
                                             .font(.caption2)
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.5)
                                             .modifier(BlueTextModifier())
                                         Spacer()
                                     }

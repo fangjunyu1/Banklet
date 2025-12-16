@@ -148,7 +148,20 @@ private struct TabButton: View {
     let action: () -> Void
     
     var body: some View {
-        let bgColor:Color = colorScheme == .light ? isSelected ? .white : .clear : isSelected ? AppColor.gray : .clear
+        var textColor:Color {
+            if colorScheme == .light {
+                isSelected ? .black : .gray
+            } else {
+                isSelected ? .white : .gray
+            }
+        }
+        var bgColor:Color {
+            if colorScheme == .light {
+                isSelected ? .white : .clear
+            } else {
+                isSelected ? AppColor.appGrayColor : .clear
+            }
+        }
         Button(action: {
             action()
         }, label: {
@@ -157,7 +170,7 @@ private struct TabButton: View {
                 .padding(.vertical, 12)
                 .padding(.horizontal, 10)
                 .lineLimit(1)
-                .foregroundColor(isSelected ? .black : .gray)
+                .foregroundColor(textColor)
                 .background {
                     Rectangle()
                         .foregroundColor(bgColor)

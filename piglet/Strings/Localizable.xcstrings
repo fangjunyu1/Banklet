@@ -1622,390 +1622,420 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تقدم الإيداع والسحب"
+            "value" : "تقدم"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Əməliyyat proqresi"
+            "value" : "İrəlilə"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Прогрес на спестяването"
+            "value" : "Напредък"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "লেনদেনের অগ্রগতি"
+            "value" : "অগ্রগতি"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progrés d'estalvi"
+            "value" : "Progrés"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pag-uswag sa Pagdeposito/Pagkuha"
+            "value" : "Progreso"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Průběh transakcí"
+            "value" : "Průběh"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaktionsstatus"
+            "value" : "Fremdrift"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaktionsfortschritt"
+            "value" : "Fortschr"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Πρόοδος αποταμίευσης/ανάληψης"
+            "value" : "Πρόοδος"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Progress"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progreso de ahorro"
+            "value" : "Progreso"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progreso de ahorro"
+            "value" : "Progreso"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progreso de ahorro"
+            "value" : "Progreso"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tehingu edenemine"
+            "value" : "Edenemine"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "پیشرفت پس‌انداز"
+            "value" : "پیشرفت"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Talletuksen edistyminen"
+            "value" : "Edisty"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progreso ng Transaksyon"
+            "value" : "Progreso"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progression des transactions"
+            "value" : "Progrès"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progression des transactions"
+            "value" : "Progrès"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dul chun cinn idirbhirt"
+            "value" : "DulChun"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "જમા/ઉપાડ પ્રગતિ"
+            "value" : "પ્રગતિ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "התקדמות ההפקדות/משיכות"
+            "value" : "התקדמות"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "जमा/निकासी प्रगति"
+            "value" : "प्रगति"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Napredak štednje"
+            "value" : "Napredak"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tranzakció állapota"
+            "value" : "Haladás"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progres Transaksi"
+            "value" : "Progres"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Framvinda færslna"
+            "value" : "Framvinda"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progresso deposito/prelievo"
+            "value" : "Progresso"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "入出金進捗"
+            "value" : "進捗"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Proses Transaksi"
+            "value" : "Progres"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Салу/алу барысы"
+            "value" : "Ілгерілеу"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "វឌ្ឍនភាពនៃការដាក់ដកប្រាក់"
+            "value" : "វឌ្ឍនភាព"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಠೇವಣಿ/ಹಿಂಪಡೆಯುವಿಕೆ ಪ್ರಗತಿ"
+            "value" : "ಪ್ರಗತಿ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "입출금 진행 상황"
+            "value" : "진행률"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Įnešimo/išėmimo eiga"
+            "value" : "Pažanga"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Krāšanas progress"
+            "value" : "Progress"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "നിക്ഷേപ/പിൻവലിക്കൽ പുരോഗതി"
+            "value" : "പുരോഗതി"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "व्यवहाराची प्रगती"
+            "value" : "प्रगती"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kemajuan Simpanan/Pengeluaran"
+            "value" : "Kemajuan"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ငွေသွင်းငွေထုတ် အခြေအနေ"
+            "value" : "တိုးတက်မှု"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaksjonsfremdrift"
+            "value" : "Fremdrift"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transactievoortgang"
+            "value" : "Voortgang"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "କାରବାର ପ୍ରଗତି"
+            "value" : "ଅଗ୍ରଗତି"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਲੈਣ-ਦੇਣ ਦੀ ਪ੍ਰਗਤੀ"
+            "value" : "ਤਰੱਕੀ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Postęp transakcji"
+            "value" : "Postęp"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progresso da transação"
+            "value" : "Progresso"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progresso da transação"
+            "value" : "Progresso"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progres tranzacție"
+            "value" : "Progres"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Прогресс накоплений"
+            "value" : "Прогресс"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Priebeh sporenia"
+            "value" : "Priebeh"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Napredek varčevanja"
+            "value" : "Napredek"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Progresi i depozitimit/tërheqjes"
+            "value" : "Progres"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sparprocess"
+            "value" : "Framsteg"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maendeleo ya akiba"
+            "value" : "Maendeleo"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "சேமிப்பு முன்னேற்றம்"
+            "value" : "முன்னேற்றம்"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "పొదుపు పురోగతి"
+            "value" : "పురోగతి"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ความคืบหน้าการฝากถอน"
+            "value" : "ความคืบหน้า"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İşlem ilerlemesi"
+            "value" : "İlerleme"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Прогрес накопичення"
+            "value" : "Прогрес"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "لین دین کی پیشرفت"
+            "value" : "پیشرفت"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Depozit va yechish jarayoni"
+            "value" : "Jarayon"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiến độ giao dịch"
+            "value" : "TiếnĐộ"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取进度"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取進度"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取進度"
           }
         }
@@ -2018,787 +2048,421 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سجلات الإيداع والسحب"
+            "value" : "سجلات"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Əməliyyat tarixçəsi"
+            "value" : "Qeydlər"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "История на транзакциите"
+            "value" : "Записи"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "লেনদেনের রেকর্ড"
+            "value" : "রেকর্ড"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historial de transaccions"
+            "value" : "Registres"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Rekord sa Pagdeposito/Pagkuha"
+            "value" : "Talaan"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historie transakcí"
+            "value" : "Záznamy"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaktionshistorik"
+            "value" : "Poster"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaktionsverlauf"
+            "value" : "Verlauf"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ιστορικό συναλλαγών"
+            "value" : "Ιστορικό"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historial de transacciones"
+            "value" : "Registros"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historial de transacciones"
+            "value" : "Registros"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historial de transacciones"
+            "value" : "Registros"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tehingu kirjed"
+            "value" : "Kirjed"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سوابق تراکنش"
+            "value" : "سوابق"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tapahtumahistoria"
+            "value" : "Merkinnät"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mga Rekord ng Transaksyon"
+            "value" : "Talaan"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historique des transactions"
+            "value" : "Historique"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historique des transactions"
+            "value" : "Historique"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Taifead idirbhirt"
+            "value" : "Taifead"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "જમા/ઉપાડ રેકોર્ડ"
+            "value" : "રેકોર્ડ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "היסטוריית הפקדות/משיכות"
+            "value" : "רשומות"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "जमा/निकासी रिकॉर्ड"
+            "value" : "रिकॉर्ड"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Povijest transakcija"
+            "value" : "Zapisi"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tranzakciók előzményei"
+            "value" : "Napló"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Riwayat Transaksi"
+            "value" : "Riwayat"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Færsluyfirlit"
+            "value" : "Skrá"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Registro depositi/prelievi"
+            "value" : "Storico"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "入出金履歴"
+            "value" : "履歴"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Riwayat Transaksi"
+            "value" : "Catatan"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Салу/алу жазбалары"
+            "value" : "Жазбалар"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "កំណត់ត្រាដាក់ដកប្រាក់"
+            "value" : "កំណត់ត្រា"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಠೇವಣಿ/ಹಿಂಪಡೆಯುವಿಕೆ ದಾಖಲೆಗಳು"
+            "value" : "ದಾಖಲೆ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "입출금 내역"
+            "value" : "기록"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Įnešimo/išėmimo įrašai"
+            "value" : "Įrašai"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Darījumu vēsture"
+            "value" : "Ieraksti"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "നിക്ഷേപ/പിൻവലിക്കൽ രേഖകള്"
+            "value" : "രേഖ"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "व्यवहाराच्या नोंदी"
+            "value" : "नोंद"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rekod Simpanan/Pengeluaran"
+            "value" : "Rekod"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ငွေသွင်းငွေထုတ် မှတ်တမ်းများ"
+            "value" : "မှတ်တမ်း"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaksjonshistorikk"
+            "value" : "Historikk"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transactiegeschiedenis"
+            "value" : "Records"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "କାରବାର ରେକର୍ଡ"
+            "value" : "ରେକର୍ଡ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਲੈਣ-ਦੇਣ ਦਾ ਰਿਕਾਰਡ"
+            "value" : "ਰਿਕਾਰਡ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Historia transakcji"
+            "value" : "Historia"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Histórico de transações"
+            "value" : "Registros"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Histórico de transações"
+            "value" : "Registros"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Istoric tranzacții"
+            "value" : "Istoric"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "История операций"
+            "value" : "Записи"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Záznamy transakcií"
+            "value" : "Záznamy"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zgodovina transakcij"
+            "value" : "Zapisi"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Regjistrimet e transaksioneve"
+            "value" : "Regjistr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transaktionshistorik"
+            "value" : "Historik"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rekodi za miamala"
+            "value" : "Rekodi"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "பரிவர்த்தனை பதிவுகள்"
+            "value" : "பதிவு"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "లావాదేవీ రికార్డులు"
+            "value" : "రికార్డ్"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "บันทึกการฝากถอน"
+            "value" : "บันทึก"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İşlem kayıtları"
+            "value" : "Kayıtlar"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Записи операцій"
+            "value" : "Записи"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "لین دین کا ریکارڈ"
+            "value" : "ریکارڈ"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Depozit va yechish tarixi"
+            "value" : "Yozuvlar"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lịch sử giao dịch"
+            "value" : "LịchSử"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取记录"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取記錄"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存取記錄"
-          }
-        }
-      }
-    },
-    "Access times" : {
-      "comment" : "存取次数",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عدد مرات الإيداع والسحب"
-          }
-        },
-        "az" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Əməliyyat sayı"
-          }
-        },
-        "bg" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Брой транзакции"
-          }
-        },
-        "bn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "লেনদেনের সংখ্যা"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de transaccions"
-          }
-        },
-        "ceb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gidaghanon sa Pagdeposito/Pagkuha"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počet transakcí"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antal transaktioner"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anzahl der Transaktionen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Αριθμός συναλλαγών"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de transacciones"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de transacciones"
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de transacciones"
-          }
-        },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tehingute arv"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تعداد تراکنش‌ها"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tapahtumien määrä"
-          }
-        },
-        "fil" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bilang ng Transaksyon"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de transactions"
-          }
-        },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre de transactions"
-          }
-        },
-        "ga" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Líon na n-idirbheart"
-          }
-        },
-        "gu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "જમા/ઉપાડની સંખ્યા"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "מספר הפקדות/משיכות"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "जमा/निकासी की संख्या"
-          }
-        },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Broj transakcija"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tranzakciók száma"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah Transaksi"
-          }
-        },
-        "is" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fjöldi færslna"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Numero di depositi/prelievi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "入出金回数"
-          }
-        },
-        "jv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah Transaksi"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Салу/алу саны"
-          }
-        },
-        "km" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ចំនួនដងនៃការដាក់ដកប្រាក់"
-          }
-        },
-        "kn" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ಠೇವಣಿ/ಹಿಂಪಡೆಯುವಿಕೆ ಸಂಖ್ಯೆ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "입출금 횟수"
-          }
-        },
-        "lt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Įnešimo/išėmimo skaičius"
-          }
-        },
-        "lv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Darījumu skaits"
-          }
-        },
-        "ml" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "നിക്ഷേപ/പിൻവലിക്കൽ എണ്ണം"
-          }
-        },
-        "mr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "व्यवहारांची संख्या"
-          }
-        },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bilangan Simpanan/Pengeluaran"
-          }
-        },
-        "my" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ငွေသွင်းငွေထုတ် အကြိမ်အရေအတွက်"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antall transaksjoner"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aantal transacties"
-          }
-        },
-        "or" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "କାରବାର ସଂଖ୍ୟା"
-          }
-        },
-        "pa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ਲੈਣ-ਦੇਣ ਦੀ ਗਿਣਤੀ"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liczba transakcji"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de transações"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Número de transações"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Număr de tranzacții"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Количество операций"
-          }
-        },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Počet transakcií"
-          }
-        },
-        "sl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Število transakcij"
-          }
-        },
-        "sq" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Numri i transaksioneve"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antal transaktioner"
-          }
-        },
-        "sw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Idadi ya miamala"
-          }
-        },
-        "ta" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "பரிவர்த்தனைகளின் எண்ணிக்கை"
-          }
-        },
-        "te" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "లావాదేవీల సంఖ్య"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "จำนวนครั้งที่ฝากถอน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İşlem sayısı"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кількість операцій"
-          }
-        },
-        "ur" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "لین دین کی تعداد"
-          }
-        },
-        "uz" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Depozit va yechish soni"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Số lần giao dịch"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取次数"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取次數"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存取次數"
           }
         }
       }
@@ -6002,25 +5666,25 @@
       }
     },
     "All" : {
-      "comment" : "全部",
+      "comment" : "全部(三进度)",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "الكل"
+            "value" : "تم"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hamısı"
+            "value" : "Hamı"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Всички"
+            "value" : "Всич"
           }
         },
         "bn" : {
@@ -6065,6 +5729,36 @@
             "value" : "Όλα"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6092,7 +5786,7 @@
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "همه"
+            "value" : "تمام"
           }
         },
         "fi" : {
@@ -6122,19 +5816,19 @@
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gach"
+            "value" : "Uile"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "બધા"
+            "value" : "બધું"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הכל"
+            "value" : "סיום"
           }
         },
         "hi" : {
@@ -6152,7 +5846,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Összes"
+            "value" : "Mind"
           }
         },
         "id" : {
@@ -6170,7 +5864,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tutto"
+            "value" : "Tutti"
           }
         },
         "ja" : {
@@ -6188,7 +5882,7 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Барлығы"
+            "value" : "Бар"
           }
         },
         "km" : {
@@ -6200,7 +5894,7 @@
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಎಲ್ಲಾ"
+            "value" : "ಎಲ್ಲ"
           }
         },
         "ko" : {
@@ -6212,7 +5906,7 @@
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Viskas"
+            "value" : "Visi"
           }
         },
         "lv" : {
@@ -6260,7 +5954,7 @@
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ସମସ୍ତ"
+            "value" : "ସବୁ"
           }
         },
         "pa" : {
@@ -6272,7 +5966,7 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wszystko"
+            "value" : "Wszyst"
           }
         },
         "pt-BR" : {
@@ -6302,7 +5996,7 @@
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Všetko"
+            "value" : "Všet"
           }
         },
         "sl" : {
@@ -6314,7 +6008,7 @@
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Të gjitha"
+            "value" : "Gjithë"
           }
         },
         "sv" : {
@@ -6332,7 +6026,7 @@
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "அனைத்தும்"
+            "value" : "அனை"
           }
         },
         "te" : {
@@ -6356,25 +6050,25 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Усі"
+            "value" : "Усе"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "سب"
+            "value" : "مکمل"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barchasi"
+            "value" : "Barch"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tất cả"
+            "value" : "Tất"
           }
         },
         "zh-Hans" : {
@@ -19142,43 +18836,43 @@
       }
     },
     "Completed" : {
-      "comment" : "完成",
+      "comment" : "完成(三进度)",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "اكتمل"
+            "value" : "الكل"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tamamlandı"
+            "value" : "Bitdi"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Готово"
+            "value" : "Готов"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "সম্পন্ন"
+            "value" : "শেষ"
           }
         },
         "ca" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Fet"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Human na"
+            "value" : "Tapos"
           }
         },
         "cs" : {
@@ -19190,7 +18884,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Færdig"
+            "value" : "Klar"
           }
         },
         "de" : {
@@ -19205,34 +18899,64 @@
             "value" : "Τέλος"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Listo"
+            "value" : "Hecho"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Listo"
+            "value" : "Hecho"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Listo"
+            "value" : "Hecho"
           }
         },
         "et" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Valmis"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "انجام شد"
+            "value" : "همه"
           }
         },
         "fi" : {
@@ -19244,115 +18968,115 @@
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tapos na"
+            "value" : "Tapos"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Terminé"
+            "value" : "Fini"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Terminé"
+            "value" : "Fini"
           }
         },
         "ga" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Déanta"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "પૂર્ણ"
+            "value" : "પૂરું"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "סיום"
+            "value" : "הכל"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पूर्ण"
+            "value" : "पूरा"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gotovo"
+            "value" : "Gotov"
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kész"
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Selesai"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lokið"
+            "value" : "Búið"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fine"
+            "value" : "Fatto"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "完了"
           }
         },
         "jv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Rampung"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Дайын"
+            "value" : "Бітті"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "រួចរាល់"
+            "value" : "ចប់"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಮುಗಿದಿದೆ"
+            "value" : "ಮುಗಿದ"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "완료"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Atlikta"
+            "value" : "Baigta"
           }
         },
         "lv" : {
@@ -19364,25 +19088,25 @@
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പൂർത്തിയായി"
+            "value" : "പൂർത്തി"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पूर्ण झाले"
+            "value" : "पूर्ण"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selesai"
+            "value" : "Siap"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ပြီးပါပြီ"
+            "value" : "ပြီး"
           }
         },
         "nb" : {
@@ -19394,42 +19118,42 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gereed"
+            "value" : "Klaar"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ସମାପ୍ତ"
+            "value" : "ସେଷ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਮੁਕੰਮਲ"
+            "value" : "ਮੁਕੰਮ"
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Gotowe"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Concluído"
+            "value" : "Feito"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Concluído"
+            "value" : "Feito"
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Gata"
           }
         },
@@ -19448,49 +19172,49 @@
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Končano"
+            "value" : "Konč"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Përfundo"
+            "value" : "Gati"
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Klar"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Imekamilika"
+            "value" : "Tayari"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "முடிந்தது"
+            "value" : "முடிவு"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "పూర్తయింది"
+            "value" : "పూర్తి"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เสร็จสิ้น"
+            "value" : "เสร็จ"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tamamlandı"
+            "value" : "Bitti"
           }
         },
         "uk" : {
@@ -19502,36 +19226,36 @@
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مکمل"
+            "value" : "سب"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tayyor"
+            "value" : "Tugat"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hoàn thành"
+            "value" : "Xong"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "完成"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "完成"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "完成"
           }
         }
@@ -28676,396 +28400,426 @@
       }
     },
     "Deposit Amount" : {
-      "comment" : "存款金额",
+      "comment" : "存款金额1",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مبلغ الإيداع"
+            "value" : "مبلغالإيداع"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Əmanət məbləği"
+            "value" : "Məbləğ"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сума на депозита"
+            "value" : "Сума"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "জমার পরিমাণ"
+            "value" : "জমারঅংক"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Import del dipòsit"
+            "value" : "Import"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kantidad sa Deposito"
+            "value" : "Halaga"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Částka vkladu"
+            "value" : "Částka"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indbetalingsbeløb"
+            "value" : "Beløb"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einzahlungsbetrag"
+            "value" : "Betrag"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ποσό κατάθεσης"
+            "value" : "Ποσό"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deposit"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deposit"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deposit"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deposit"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deposit"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cantidad del depósito"
+            "value" : "Monto"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Monto del depósito"
+            "value" : "Monto"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Monto del depósito"
+            "value" : "Monto"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hoiuse summa"
+            "value" : "Summa"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مبلغ سپرده"
+            "value" : "مبلغ"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Talletussumma"
+            "value" : "Summa"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Halaga ng Deposito"
+            "value" : "Halaga"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Montant du dépôt"
+            "value" : "Montant"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Montant du dépôt"
+            "value" : "Montant"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suim taisce"
+            "value" : "Méid"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "જમા રકમ"
+            "value" : "રકમ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "סכום ההפקדה"
+            "value" : "סכום"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "जमा राशि"
+            "value" : "राशि"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Iznos depozita"
+            "value" : "Iznos"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Befizetendő összeg"
+            "value" : "Összeg"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jumlah Setoran"
+            "value" : "Jumlah"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Innlagnarupphæð"
+            "value" : "Upphæð"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Importo del deposito"
+            "value" : "Importo"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "預金金額"
+            "value" : "預入金額"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jumlah Simpenan"
+            "value" : "Jumlah"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Депозит сомасы"
+            "value" : "Сома"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ចំនួនទឹកប្រាក់ដាក់សន្សំ"
+            "value" : "ចំនួន"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಠೇವಣಿ ಮೊತ್ತ"
+            "value" : "ಮೊತ್ತ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "저축 금액"
+            "value" : "입금액"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Indėlio suma"
+            "value" : "Suma"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Iemaksas summa"
+            "value" : "Summa"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "നിക്ഷേപ തുക"
+            "value" : "തുക"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ठेवीची रक्कम"
+            "value" : "रक्कम"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jumlah Simpanan"
+            "value" : "Amaun"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "စုငွေ ပမာဏ"
+            "value" : "ငွေပမာဏ"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Innskuddsbeløp"
+            "value" : "Beløp"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stortingsbedrag"
+            "value" : "Bedrag"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ଜମା ରାଶି"
+            "value" : "ରାଶି"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਜਮ੍ਹਾਂ ਰਕਮ"
+            "value" : "ਰਕਮ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kwota depozytu"
+            "value" : "Kwota"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Valor do depósito"
+            "value" : "Valor"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Valor do depósito"
+            "value" : "Valor"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sumă depusă"
+            "value" : "Sumă"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сумма вклада"
+            "value" : "Сумма"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Suma vkladu"
+            "value" : "Suma"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Znesek pologa"
+            "value" : "Znesek"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shuma e depozitës"
+            "value" : "Shuma"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Insättningsbelopp"
+            "value" : "Belopp"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kiasi cha akiba"
+            "value" : "Kiasi"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "வைப்புத் தொகை"
+            "value" : "தொகை"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "జమ చేసిన మొత్తం"
+            "value" : "మొత్తం"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "จำนวนเงินฝาก"
+            "value" : "จำนวนเงิน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mevduat tutarı"
+            "value" : "Tutar"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сума вкладу"
+            "value" : "Сума"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "جمع کی گئی رقم"
+            "value" : "رقم"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Depozit summasi"
+            "value" : "Miqdor"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Số tiền gửi"
+            "value" : "SốTiền"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存款金额"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存款金額"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "存款金額"
           }
         }
@@ -43736,25 +43490,25 @@
       }
     },
     "In Progress" : {
-      "comment" : "进行中",
+      "comment" : "进行中(三进度)",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قيد التقدم"
+            "value" : "جارٍ"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Davam edir"
+            "value" : "Aktiv"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "В процес"
+            "value" : "Актив"
           }
         },
         "bn" : {
@@ -43766,366 +43520,396 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En curs"
+            "value" : "Actiu"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nagpadayon"
+            "value" : "Aktibo"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Probíhá"
+            "value" : "Aktiv"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "I gang"
+            "value" : "Aktiv"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "In Bearbeitung"
+            "value" : "Aktiv"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Σε εξέλιξη"
+            "value" : "Ενεργ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En curso"
+            "value" : "Activo"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En curso"
+            "value" : "Activo"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En curso"
+            "value" : "Activo"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pooleli"
+            "value" : "Aktiiv"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "در حال انجام"
+            "value" : "جاری"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Käynnissä"
+            "value" : "Akti"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kasalukuyang Ginagawa"
+            "value" : "Aktibo"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En cours"
+            "value" : "Actif"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "En cours"
+            "value" : "Actif"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ar siúl"
+            "value" : "Gníomh"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "પ્રગતિમાં છે"
+            "value" : "ચાલુ"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "בתהליך"
+            "value" : "פעיל"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "प्रगति पर है"
+            "value" : "जारी"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "U tijeku"
+            "value" : "Aktiv"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Folyamatban"
+            "value" : "Aktív"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sedang Berlangsung"
+            "value" : "Aktif"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Í vinnslu"
+            "value" : "Virkt"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "In corso"
+            "value" : "Attivo"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "進行中"
+            "value" : "進行"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lagi Mlaku"
+            "value" : "Aktif"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Орындалуда"
+            "value" : "Белс"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "កំពុងដំណើរការ"
+            "value" : "កំពុង"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಪ್ರಗತಿಯಲ್ಲಿದೆ"
+            "value" : "ಚಾಲು"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "진행 중"
+            "value" : "진행"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vykdoma"
+            "value" : "Aktyv"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Procesā"
+            "value" : "Aktīvs"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പുരോഗതിയിലാണ്"
+            "value" : "തുടര"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सुरू आहे"
+            "value" : "सुरू"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sedang Berjalan"
+            "value" : "Aktif"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "လုပ်ဆောင်နေဆဲ"
+            "value" : "လုပ်ဆဲ"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pågående"
+            "value" : "Aktiv"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bezig"
+            "value" : "Actief"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ଚାଲିଛି"
+            "value" : "ଚାଲୁ"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਪ੍ਰਗਤੀ ਵਿੱਚ"
+            "value" : "ਚੱਲ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "W toku"
+            "value" : "Aktyw"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Em andamento"
+            "value" : "Ativo"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Em andamento"
+            "value" : "Ativo"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "În desfășurare"
+            "value" : "Activ"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "В процессе"
+            "value" : "Актив"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prebieha"
+            "value" : "Aktív"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "V teku"
+            "value" : "Aktiv"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Në progres"
+            "value" : "Aktiv"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pågående"
+            "value" : "Aktiv"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inaendelea"
+            "value" : "Hai"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "செயல்பாட்டில் உள்ளது"
+            "value" : "நடப்பு"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "పురోగతిలో ఉంది"
+            "value" : "సాగు"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "กำลังดำเนินการ"
+            "value" : "กำลัง"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Devam ediyor"
+            "value" : "Aktif"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "В процесі"
+            "value" : "Актив"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "جاری ہے"
+            "value" : "جاری"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jarayonda"
+            "value" : "Faol"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đang thực hiện"
+            "value" : "Đang"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "进行中"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "進行中"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "進行中"
           }
         }
@@ -78901,7 +78685,7 @@
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Modaliteti i heshtur"
+            "value" : "Heshtur"
           }
         },
         "sv" : {
@@ -86960,6 +86744,402 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "土耳其里拉"
+          }
+        }
+      }
+    },
+    "Tx Count" : {
+      "comment" : "存取次数",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عددالعمليات"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Əməliyyat"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "БройОпр"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "লেনদেনসংখ্যা"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NreOps"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IhapOps"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PočOp"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AntalOps"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VorgAnz"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ΑρΠράξ"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NºOps"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NºOps"
+          }
+        },
+        "es-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NºOps"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ToimArv"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعدادعملیات"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tapaht"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BilangOps"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NbOps"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NbOps"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LíonOps"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ઓપરગણ"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מספעולות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेनदेन"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BrOper"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MűvSzám"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JmlAksi"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjöldi"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NOp"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取回数"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CacahOp"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ОперСан"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ចំនួនប្រតិបត្តិ"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ವಹಿವಾಟು"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "입출횟수"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpSk"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SkOps"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ഇടപാട്"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "व्यवहार"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BilOps"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "အကြိမ်ရေ"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AntOps"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TransNr"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ଲେନଦେନ"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਲੈਣਦੇਣ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LiczOp"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QtdOps"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QtdOps"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NrOp"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "КолОпер"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PočOp"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ŠtOp"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NrTrans"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AntOps"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IdadiOps"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "பரிமாற்றம்"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "లావాదేవీ"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จำนวนครั้ง"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İşlemSay"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "К-стьОпер"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لین دین"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AmalSon"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SốLần"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取次数"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取次數"
+          }
+        },
+        "zh-HK" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存取次數"
           }
         }
       }
