@@ -295,7 +295,7 @@ private struct PremiumComponentsView: View {
                         Text(LocalizedStringKey(item))
                             .font(.caption2)
                             .multilineTextAlignment(.leading)
-                            .modifier(DrakGrayTextModifier())
+                            .foregroundColor(.gray)
                     }
                 }
                 .modifier(VStackModifier())
@@ -338,7 +338,7 @@ private struct BuyPremiumView: View {
                     }
                 }
             }, label: {
-                VStack {
+                VStack(spacing:3) {
                     // 会员信息
                     HStack {
                         Text("Purchase Membership")
@@ -356,10 +356,10 @@ private struct BuyPremiumView: View {
                             }
                         }
                         .font(.caption2)
-                        .modifier(DrakGrayTextModifier())
+                        .foregroundColor(.white)
                     }
                 }
-                .modifier(ButtonModifier2())
+                .modifier(ButtonModifier3())
             })
             // 恢复购买-按钮
             Button(action: {
