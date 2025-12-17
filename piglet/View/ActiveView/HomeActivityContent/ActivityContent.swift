@@ -12,7 +12,7 @@ struct ActivityContentView: View {
     @FocusState.Binding var isFocused: Bool
     var body: some View {
         ZStack {
-            VStack(spacing: 30) {
+            VStack(spacing: 20) {
                 // 如果完成，则显示完成视图，否则显示标题和输入
                 switch activityVM.step {
                 case .calculate, .calculating, .create, .creating:
@@ -50,7 +50,8 @@ struct ActivityContentView: View {
 private struct HomeActivitySheetContentModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(.vertical,30)
+            .padding(.top,26)
+            .padding(.bottom,20)
             .padding(.horizontal,20)
             .frame(idealHeight: 300)
             .frame(maxWidth: .infinity)

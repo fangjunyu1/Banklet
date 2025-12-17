@@ -16,16 +16,16 @@ struct LifeSavingsView: View {
                 case .year(let age, let salary):
                     HStack(spacing: 20) {
                         Text("\(age)")
-                            .modifier(ActivityTextModifier())
+                            .modifier(ActivityLittleTextModifier())
                         Text("\(salary)")
-                            .modifier(ActivityTextModifier())
+                            .modifier(ActivityLittleTextModifier())
                     }
                 case .gap:
                     Text("...")
-                        .modifier(ActivityTextModifier())
+                        .modifier(ActivityLittleTextModifier())
                 case .total(let amount):
                     Text("\(amount)")
-                        .modifier(ActivityTextModifier())
+                        .modifier(ActivityLittleTextModifier())
                 }
             }
         }
