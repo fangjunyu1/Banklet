@@ -29,7 +29,7 @@ struct HomeEmptyView: View {
                 Text("Let the piggy bank record your every growth and expectation.")
                     .font(.footnote)
                     .padding(.horizontal,30)
-                    .foregroundColor(.gray)
+                    .modifier(GrayTextModifier())
                     .multilineTextAlignment(.center)
             }
             Spacer().frame(height: 50)

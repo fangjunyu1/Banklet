@@ -34718,19 +34718,19 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gasto"
+            "value" : "支出"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gasto"
+            "value" : "支出"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gasto"
+            "value" : "支出"
           }
         }
       }

@@ -46,7 +46,6 @@ struct Home: View {
             NavigationStack {
                 ZStack {
                     Group {
-                        // switch selectedTab
                         switch selectedTab {
                             // 主页视图
                         case .home:
@@ -137,5 +136,5 @@ struct Home: View {
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
-        .environment(\.locale, .init(identifier: "ta"))
+        .environment(\.locale, .init(identifier: "ru"))
 }

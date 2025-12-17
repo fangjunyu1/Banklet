@@ -110,7 +110,7 @@ struct HomeCreateInputRegularComponentsView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Weekly.rawValue {
                 VStack {
-                    HStack(spacing:10) {
+                    HStack(spacing:0) {
                         ForEach(Array(weekSymbol.enumerated()), id:\.offset) { index,item in
                             let buttonIndex = index + 1
                             Button(action:{
