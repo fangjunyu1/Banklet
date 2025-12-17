@@ -22040,390 +22040,420 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إنشاء حصالة"
+            "value" : "إنشاء"
           }
         },
         "az" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pul Q"
+            "value" : "Yarat"
           }
         },
         "bg" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Създ. каса"
+            "value" : "Създай"
           }
         },
         "bn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "নগদ ঝুড়ি"
+            "value" : "তৈরি"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crea Fons"
+            "value" : "Crea"
           }
         },
         "ceb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Himo Piggy"
+            "value" : "Himo"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vytvoř Pok."
+            "value" : "Vytvoř"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opret Spare"
+            "value" : "Opret"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sparbüch"
+            "value" : "Erstellen"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Δημιρ. Κουμπ"
+            "value" : "Δημι"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create"
+          }
+        },
+        "en-AU" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create"
+          }
+        },
+        "en-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create"
+          }
+        },
+        "en-IN" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear Hucha"
+            "value" : "Crear"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear Hucha"
+            "value" : "Crear"
           }
         },
         "es-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear Hucha"
+            "value" : "Crear"
           }
         },
         "et" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loo Sääst."
+            "value" : "Loo"
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ایجاد قلک"
+            "value" : "ایجاد"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Luo Säästö"
+            "value" : "Luo"
           }
         },
         "fil" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gawa Piggy"
+            "value" : "Gawa"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Créer Tirel."
+            "value" : "Créer"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Créer Tirel."
+            "value" : "Créer"
           }
         },
         "ga" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cruthaigh Coig."
+            "value" : "Crutha"
           }
         },
         "gu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "પિગી બનાવો"
+            "value" : "બનાવો"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "צור קופה"
+            "value" : "צור"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पिग्गी बनाओ"
+            "value" : "बनाएं"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Napr. Škr."
+            "value" : "Stvori"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kész Pénzt."
+            "value" : "Létre"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buat Cel."
+            "value" : "Buat"
           }
         },
         "is" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Búa Spari"
+            "value" : "Búa"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crea Salvad."
+            "value" : "Crea"
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "貯金箱作成"
           }
         },
         "jv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gawe Celeng"
+            "value" : "Gawe"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Құт. жасау"
+            "value" : "Құру"
           }
         },
         "km" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "បង្កើតធន."
+            "value" : "បង្កើត"
           }
         },
         "kn" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ಸೇವಾ ಕುಡಿಯ"
+            "value" : "ರಚಿಸು"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "저금통 만들기"
+            "value" : "생성"
           }
         },
         "lt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sukurk Taup"
+            "value" : "Kurti"
           }
         },
         "lv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Izveido K"
+            "value" : "Izve"
           }
         },
         "ml" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "പിഗി സൃഷ്ടി"
+            "value" : "സൃഷ്ടി"
           }
         },
         "mr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "पिग्गी तयार"
+            "value" : "तयार"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buat Tab"
+            "value" : "Cipta"
           }
         },
         "my" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ပိုက်ဆံဘူး"
+            "value" : "ဖန်တီး"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lag Spareb"
+            "value" : "Opprett"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Maak Spaar"
+            "value" : "Maak"
           }
         },
         "or" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ପିଗି ତିଆରି"
+            "value" : "ସୃଷ୍ଟି"
           }
         },
         "pa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ਪਿਗੀ ਬਣਾਓ"
+            "value" : "ਬਣਾ"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utwórz Skar"
+            "value" : "Utwórz"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Criar Cofr"
+            "value" : "Criar"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Criar Cofr"
+            "value" : "Criar"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Creează Pușc"
+            "value" : "Creez"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Создать Коп"
+            "value" : "Созд"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vytv. Pok"
+            "value" : "Vytv"
           }
         },
         "sl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustvar. Škat"
+            "value" : "Ustvari"
           }
         },
         "sq" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Krijo Kurs"
+            "value" : "Krijo"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skapa Sparb"
+            "value" : "Skapa"
           }
         },
         "sw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tengeneza H"
+            "value" : "Unda"
           }
         },
         "ta" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "பிகி உருவா"
+            "value" : "உருவ"
           }
         },
         "te" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "పిగ్గీ సృష్టి"
+            "value" : "సృష్టి"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "สร้างกระปุก"
+            "value" : "สร้าง"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kumbara Y"
+            "value" : "Oluştur"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Створ. Коп"
+            "value" : "Створ"
           }
         },
         "ur" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "پگی بنائیں"
+            "value" : "بنائیں"
           }
         },
         "uz" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pul Q. Y"
+            "value" : "Yarat"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tạo Heo"
+            "value" : "Tạo"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "创建存钱罐"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "建立存錢筒"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "創建存錢罐"
           }
         }

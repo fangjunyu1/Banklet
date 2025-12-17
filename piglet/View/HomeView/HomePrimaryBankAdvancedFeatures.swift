@@ -48,6 +48,8 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                 Image(systemName: "plus")
                                 Text("Create Piggy")
                                     .font(.subheadline)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.5)
                             }
                             .foregroundColor(.white)
                             .fontWeight(.bold)
@@ -56,6 +58,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             .frame(maxWidth: .infinity)
                             .modifier(BlueBgModifier())
                             .cornerRadius(10)
+                            .multilineTextAlignment(.center)
                         })
                         .frame(height:smallSize)
                         // 静默模式
