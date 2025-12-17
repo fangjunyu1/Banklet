@@ -14,7 +14,7 @@ struct GeneralView: View {
     @State private var Notification = false
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             Spacer().frame(height: 10)
             // 外层，分隔所有组件视图
             VStack(spacing: 10) {

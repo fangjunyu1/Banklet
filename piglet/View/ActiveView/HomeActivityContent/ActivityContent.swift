@@ -41,6 +41,7 @@ struct ActivityContentView: View {
                 HomeActivitySheetView()
                     .environment(ActiveViewModel())
                     .environment(HomeActivityViewModel())
+                    .environment(IdleTimerManager.shared)
             }
     }
 }

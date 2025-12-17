@@ -103,9 +103,8 @@ struct HomeCreateInputRegularComponentsView: View {
                                displayedComponents: .hourAndMinute
                     )
                     .frame(width: 70)
-                    Footnote(text: "Automatically save at the selected time each day.")
-                        .multilineTextAlignment(.center)
-                        .padding(.top,3)
+                    
+                    InputFootnote(text: "Automatically save at the selected time each day.")
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Weekly.rawValue {
@@ -131,9 +130,7 @@ struct HomeCreateInputRegularComponentsView: View {
                             })
                         }
                     }
-                    Footnote(text: "Automatically saves data weekly at selected days and specific times.")
-                        .multilineTextAlignment(.center)
-                        .padding(.top,3)
+                    InputFootnote(text: "Automatically saves data weekly at selected days and specific times.")
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Monthly.rawValue {
@@ -146,9 +143,8 @@ struct HomeCreateInputRegularComponentsView: View {
                         }
                         Text("Day")
                     }
-                    Footnote(text: "The deposit will be automatically made on the selected date and at the specified time each month; if the selected date does not exist in a particular month (e.g., the 31st), the system will automatically postpone it to the last day of that month.")
-                        .multilineTextAlignment(.center)
-                        .padding(.top,3)
+                    
+                    InputFootnote(text: "The deposit will be automatically made on the selected date and at the specified time each month; if the selected date does not exist in a particular month (e.g., the 31st), the system will automatically postpone it to the last day of that month.")
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Yearly.rawValue {
@@ -158,9 +154,7 @@ struct HomeCreateInputRegularComponentsView: View {
                                displayedComponents: .date
                     )
                     .frame(width: 70)
-                    Footnote(text: "Automatically saves data annually on selected dates and at specific times.")
-                        .multilineTextAlignment(.center)
-                        .padding(.top,3)
+                    InputFootnote(text: "Automatically saves data annually on selected dates and at specific times.")
                 }
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }

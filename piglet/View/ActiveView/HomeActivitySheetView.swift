@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeActivitySheetView: View {
+    @EnvironmentObject var idleManager: IdleTimerManager
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @State private var activityVM = ActiveViewModel()
@@ -31,6 +32,18 @@ struct HomeActivitySheetView: View {
             }
         }
         .environment(activityVM)
+        .onAppear {
+            // 显示时，设置标志位为 true
+            print("显示交易视图，关闭计时器")
+            idleManager.isShowingIdleView = true
+            idleManager.stopTimer()
+        }
+        .onDisappear {
+            // 隐藏时，设置标志位为 false
+            print("关闭交易视图，重启计时器")
+            idleManager.isShowingIdleView = false
+            idleManager.resetTimer()
+        }
     }
 }
 
@@ -60,9 +73,11 @@ struct HomeActivityFootNoteModifier: ViewModifier {
                 HomeActivitySheetView()
                     .environment(vm)
                     .environment(hvm)
+                    .environment(IdleTimerManager.shared)
                     .onAppear {
-                        hvm.tab = .LifeFund
+                        hvm.tab = .LifePiggy
                     }
             }
+            .environment(\.locale, .init(identifier: "ru"))
     }
 }

@@ -18,6 +18,8 @@ struct ActivityContentTitleView: View {
                 Text("Calculate your lifetime wealth")
                     .modifier(HomeActivityTitleModifier())
                 Text("Based on your current age and salary, it automatically calculates your career starting point, retirement age, and salary growth rate, and calculates your lifetime wealth.")
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.8)
                     .modifier(HomeActivityFootNoteModifier())
             } else if homeActivityVM.tab == .LifeFund {
                 // 生活保障金或紧急备用金
@@ -25,6 +27,8 @@ struct ActivityContentTitleView: View {
                 Text("Addressing future risks")
                     .modifier(HomeActivityTitleModifier())
                 Text("It is recommended to prepare 3-6 months' worth of living expenses to cope with temporary unemployment, medical expenses, or other emergencies.")
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.8)
                     .modifier(HomeActivityFootNoteModifier())
             }
         }

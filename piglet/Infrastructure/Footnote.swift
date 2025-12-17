@@ -18,6 +18,19 @@ struct Footnote: View {
     }
 }
 
+struct InputFootnote: View {
+    @Environment(\.colorScheme) var colorScheme
+    var text: String
+    var body: some View {
+        var color = colorScheme == .light ? Color.gray : Color.white
+        Text(LocalizedStringKey(text))
+            .font(.footnote)
+            .foregroundColor(Color.gray)
+            .multilineTextAlignment(.center)
+            .padding(.top,3)
+    }
+}
+
 struct Caption: View {
     var text: String
     var body: some View {

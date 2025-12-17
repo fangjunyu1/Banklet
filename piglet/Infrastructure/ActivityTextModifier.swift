@@ -19,3 +19,16 @@ struct ActivityTextModifier: ViewModifier {
             .cornerRadius(10)
     }
 }
+
+struct ActivityLittleTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .padding(.vertical,10)
+            .padding(.horizontal,20)
+            .background(.black.opacity(0.3))
+            .cornerRadius(10)
+    }
+}

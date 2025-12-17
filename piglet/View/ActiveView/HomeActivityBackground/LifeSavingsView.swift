@@ -42,8 +42,9 @@ struct LifeSavingsView: View {
                 HomeActivitySheetView()
                     .environment(vm)
                     .environment(hvm)
+                    .environment(IdleTimerManager.shared)
                     .onAppear {
-                        hvm.tab = .LifeFund
+                        hvm.tab = .LifePiggy
                     }
             }
     }
