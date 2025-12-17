@@ -60,6 +60,7 @@ struct HomeMainView: View {
         }
         .navigationTitle("Home")
         .padding(.horizontal,20)
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background {
             BackgroundImgView()
         }

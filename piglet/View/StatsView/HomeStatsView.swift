@@ -195,6 +195,7 @@ struct HomeStatsView: View {
         }
         .navigationTitle("Stats")
         .padding(.horizontal,20)
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
     }
 }
 

@@ -12,23 +12,25 @@ struct BackgroundImgView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        if !appStorage.BackgroundImage.isEmpty {
-            ZStack {
-                Image(appStorage.BackgroundImage)
-                    .resizable()
-                    .scaledToFill()
-                    .blur(radius: appStorage.isBlurBackground ? 30 : 0)
-                    .ignoresSafeArea()
-                Color.black.opacity(colorScheme == .light ? 0 : 0.95)
-                    .ignoresSafeArea()
-            }
-        } else {
-            if colorScheme == .light {
-                AppColor.appBgGrayColor
-                    .ignoresSafeArea()
+        ZStack {
+            if !appStorage.BackgroundImage.isEmpty {
+                ZStack {
+                    Image(appStorage.BackgroundImage)
+                        .resizable()
+                        .scaledToFill()
+                        .blur(radius: appStorage.isBlurBackground ? 30 : 0)
+                        .ignoresSafeArea()
+                    Color.black.opacity(colorScheme == .light ? 0 : 0.95)
+                        .ignoresSafeArea()
+                }
             } else {
-                Color.black
-                    .ignoresSafeArea()
+                if colorScheme == .light {
+                    AppColor.appBgGrayColor
+                        .ignoresSafeArea()
+                } else {
+                    Color.black
+                        .ignoresSafeArea()
+                }
             }
         }
     }
