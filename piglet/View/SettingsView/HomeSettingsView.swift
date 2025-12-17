@@ -127,7 +127,6 @@ struct HomeSettingsView: View {
                     Text(Bundle.main.appBuild)
                     Text(")")
                     #else
-                    Text(":")
                     #endif
                 }
                     .font(.caption2)
