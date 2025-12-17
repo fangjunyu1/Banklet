@@ -19,7 +19,7 @@ struct BackgroundImgView: View {
                     .scaledToFill()
                     .blur(radius: appStorage.isBlurBackground ? 30 : 0)
                     .ignoresSafeArea()
-                Color.black.opacity(colorScheme == .light ? 0 : 0.5)
+                Color.black.opacity(colorScheme == .light ? 0 : 0.95)
                     .ignoresSafeArea()
             }
         } else {
