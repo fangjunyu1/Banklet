@@ -137,11 +137,36 @@ struct HomeBanksListView2: View {
     
     private func HomeBanksListDelete(offsets:IndexSet) {
         let itemToRemove = offsets.map { allPiggyBank[$0] }
+        
+        // 判断是否为主存钱罐
+        let wasPrimary = itemToRemove.first?.isPrimary
+        
         withAnimation {
             for item in itemToRemove {
                 context.delete(item)
             }
         }
+        
+        if let wasPrimary {
+            let fetchRequest = FetchDescriptor<PiggyBank>(
+                sortBy: [
+                    SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
+                    SortDescriptor(\PiggyBank.sortOrder),
+                    SortDescriptor(\PiggyBank.creationDate, order: .reverse)
+                ]
+            )
+            var existingPiggyBanks: [PiggyBank]
+            do {
+                existingPiggyBanks = try context.fetch(fetchRequest)
+                
+                // Step 5: 设置第一个存钱罐为主存钱罐
+                existingPiggyBanks.first?.isPrimary = true
+            } catch {
+                print("无法捕获存钱罐数据")
+                return
+            }
+        }
+        
         do {
             try context.save()
             print("删除成功")
