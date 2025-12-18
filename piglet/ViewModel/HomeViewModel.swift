@@ -37,8 +37,9 @@ class HomeViewModel:ObservableObject {
         if wasPrimary {
             let fetchRequest = FetchDescriptor<PiggyBank>(
                 sortBy: [
-                    SortDescriptor(\.isPrimary, order: .reverse),
-                    SortDescriptor(\.creationDate, order: .reverse)
+                    SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
+                    SortDescriptor(\PiggyBank.sortOrder),
+                    SortDescriptor(\PiggyBank.creationDate, order: .reverse)
                 ]
             )
             var existingPiggyBanks: [PiggyBank]

@@ -16,7 +16,7 @@ struct TradeNotesView: View {
         HStack {
             Text("Notes")
                 .font(.footnote)
-                .foregroundColor(AppColor.appGrayColor)
+                .modifier(GrayTextModifier())
             TextField("", text: $tradeVM.remark)
                 .font(.footnote)
                 .focused($focus, equals: .note)

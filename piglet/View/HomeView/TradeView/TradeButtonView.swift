@@ -65,7 +65,7 @@ struct TradeButtonView:View {
                 tradeVM.cancelTask()
             }, label: {
                 Text("Closure")
-                    .foregroundColor(AppColor.appGrayColor)
+                    .modifier(GrayTextModifier())
             })
             .opacity(tradeVM.tradeStatus != .finish ? 1 : 0)
         }

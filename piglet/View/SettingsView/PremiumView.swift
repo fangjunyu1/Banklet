@@ -295,7 +295,7 @@ private struct PremiumComponentsView: View {
                         Text(LocalizedStringKey(item))
                             .font(.caption2)
                             .multilineTextAlignment(.leading)
-                            .foregroundColor(.gray)
+                            .modifier(GrayTextModifier())
                     }
                 }
                 .modifier(VStackModifier())
@@ -428,8 +428,10 @@ private struct premiumItemView: View {
                 Text(LocalizedStringKey(premium.text))
                     .font(.subheadline)
                     .modifier(DrakGrayTextModifier())
-                Caption(text: premium.info)
+                Text(LocalizedStringKey(premium.info))
+                    .font(.caption)
                     .fixedSize(horizontal: false, vertical: true)
+                    .modifier(GrayTextModifier())
             }
             Spacer()
         }

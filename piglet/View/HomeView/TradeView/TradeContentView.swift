@@ -82,7 +82,7 @@ struct TradeContentAmountView: View {
                 Text(currencySymbol)
                     .font(.system(size: 50))
                     .fontWeight(.bold)
-                    .foregroundColor(AppColor.gray)
+                    .modifier(GrayTextModifier())
                     .offset(x: textOffset)
                     .onChange(of: tradeVM.amount) { _, newAmount in
                         if let amount = newAmount {
