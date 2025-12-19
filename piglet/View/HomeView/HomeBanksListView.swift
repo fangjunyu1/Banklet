@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeBanksListView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var homeVM: HomeViewModel
+    var primaryBank: PiggyBank?
     var allPiggyBank: [PiggyBank]
     
     var body: some View {
@@ -18,7 +19,7 @@ struct HomeBanksListView: View {
             HStack {
                 Footnote(text: "list of piggy banks")
                 Spacer()
-                NavigationLink(destination: HomeBanksListView2()) {
+                NavigationLink(destination: HomeBanksListView2(primaryBank: primaryBank)) {
                     Text("Show more")
                         .font(.footnote)
                         .modifier(BlueHintTextModifier())
@@ -31,27 +32,28 @@ struct HomeBanksListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(Array(allPiggyBank.enumerated()), id: \.offset) { index,item in
-                        let itemColor: Color = item.isPrimary ? .white : .primary
+                        let primary: Bool = (primaryBank != nil && item == primaryBank)
+                        let itemColor: Color = primary ? .white : .primary
                         var itemBgColor: Color {
                             if colorScheme == .light {
-                                item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                                primary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
                             } else {
-                                item.isPrimary ?
+                                primary ?
                                 AppColor.appColor.opacity(0.8) :
                                     .white.opacity(0.25)
                             }
                         }
                         var itemProgressColor: Color {
                             if colorScheme == .light {
-                                item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                                primary ? .white : AppColor.bankList[index % AppColor.bankList.count]
                             } else {
-                                item.isPrimary ? .white : .gray
+                                primary ? .white : .gray
                             }
                         }
-                        let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
+                        let itemProgressBgColor: Color = primary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
                         var vsBgColor: Color {
                             if colorScheme == .light {
-                                item.isPrimary ? .blue : Color.white
+                                primary ? .blue : Color.white
                             } else {
                                 AppColor.appGrayColor
                             }

@@ -49,7 +49,7 @@ struct HomeMainView: View {
                     }
                 }
                 // 如果有存钱罐列表
-                HomeBanksListView(allPiggyBank: allPiggyBank)
+                HomeBanksListView(primaryBank: primaryBank, allPiggyBank: allPiggyBank)
                 Spacer()
             } else {
                 // 显示空白视图

@@ -12,6 +12,7 @@ struct HomeBanksListView2: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var context
     @EnvironmentObject var homeVM: HomeViewModel
+    var primaryBank: PiggyBank?
     @Query(sort: [
         SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
         SortDescriptor(\PiggyBank.sortOrder),
@@ -21,29 +22,30 @@ struct HomeBanksListView2: View {
     var body: some View {
         List {
             ForEach(Array(allPiggyBank.enumerated()), id:\.offset) { index,item in
-                let itemColor: Color = item.isPrimary ? .white : .primary
+                let primary: Bool = (primaryBank != nil && item == primaryBank)
+                let itemColor: Color = primary ? .white : .primary
                 var itemBgColor: Color {
                     if colorScheme == .light {
-                        item.isPrimary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
+                        primary ? .white.opacity(0.25) : AppColor.bankList[index % AppColor.bankList.count]
                     } else {
-                        item.isPrimary ?
+                        primary ?
                         AppColor.appColor.opacity(0.8) :
                             .white.opacity(0.25)
                     }
                 }
                 var itemProgressColor: Color {
                     if colorScheme == .light {
-                        item.isPrimary ? .white : AppColor.bankList[index % AppColor.bankList.count]
+                        primary ? .white : AppColor.bankList[index % AppColor.bankList.count]
                     } else {
-                        item.isPrimary ? .white : .gray
+                        primary ? .white : .gray
                     }
                 }
-                let itemProgressAmountColor: Color = item.isPrimary ? .white : AppColor.appGrayColor
-                let itemProgressTargetAmountColor: Color = item.isPrimary ? .white.opacity(0.8) : AppColor.gray
-                let itemProgressBgColor: Color = item.isPrimary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
+                let itemProgressAmountColor: Color = primary ? .white : AppColor.appGrayColor
+                let itemProgressTargetAmountColor: Color = primary ? .white.opacity(0.8) : AppColor.gray
+                let itemProgressBgColor: Color = primary ? AppColor.appBgGrayColor.opacity(0.5) : AppColor.gray.opacity(0.5)
                 var vsBgColor: Color {
                     if colorScheme == .light {
-                        item.isPrimary ? .blue : Color.white
+                        primary ? .blue : Color.white
                     } else {
                         AppColor.appGrayColor
                     }
@@ -186,13 +188,11 @@ private struct HomeBanksListRow: View {
 }
 
 #Preview {
-    NavigationStack {
-        HomeBanksListView2()
-            .modelContainer(PiggyBank.preview)
-            .environment(AppStorageManager.shared)
-            .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-            .environmentObject(IAPManager.shared)
-            .environmentObject(SoundManager.shared)
-            .environmentObject(HomeViewModel())
-    }
+    Home()
+        .modelContainer(PiggyBank.preview)
+        .environment(AppStorageManager.shared)
+        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environmentObject(IAPManager.shared)
+        .environmentObject(SoundManager.shared)
+        .environment(\.locale, .init(identifier: "ru"))
 }

@@ -16,9 +16,6 @@
         }
       }
     },
-    "Bottom %@" : {
-
-    },
     "Featured Images" : {
       "comment" : "1.1.0:精选图片",
       "extractionState" : "manual",
@@ -30,15 +27,6 @@
           }
         }
       }
-    },
-    "Hello %@" : {
-
-    },
-    "L" : {
-
-    },
-    "Leading" : {
-
     },
     "Play animation on the desktop in a loop." : {
       "comment" : "1.1.0：在桌面循环播放动画。",
@@ -939,12 +927,6 @@
           }
         }
       }
-    },
-    "T %@" : {
-
-    },
-    "Trailing" : {
-
     },
     "Turn your desktop into your own gallery." : {
       "comment" : "1.1.0:让桌面成为你的画廊。",
