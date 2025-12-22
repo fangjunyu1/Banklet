@@ -5,4 +5,7 @@
   Created by 方君宇 on 2024/12/30.
   
 */
+
+"CFBundleName" = "Banklet";
+
 "CFBundleDisplayName" = "Banklet";
