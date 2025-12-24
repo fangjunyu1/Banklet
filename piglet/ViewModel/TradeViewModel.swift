@@ -49,7 +49,7 @@ class TradeViewModel:ObservableObject {
         
         // 显示等待动画
         tradeStatus = .loading
-        let random = Double.random(in: 2...6)
+        let random = Double.random(in: 2...4)
         print("随机延时:\(random)秒")
         do {
             try await Task.sleep(for: .seconds(random))
