@@ -123,7 +123,9 @@ private struct HomeMoreInfomationNameView: View {
     var isEdit: Bool
     var body: some View {
         if case .string(let binding,let focus) = number {
-            TextField("",text: binding)
+            TextField(text: binding) {
+                Text(verbatim: "")
+            }
                 .frame(alignment: .trailing)
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
@@ -233,7 +235,9 @@ private struct HomeMoreInformationList2: View {
         .cornerRadius(10)
         .sheet(isPresented: $isPickerDate) {
             VStack {
-                DatePicker("", selection: $draft.expirationDate, displayedComponents: .date)
+                DatePicker(selection: $draft.expirationDate, displayedComponents: .date) {
+                    Text(verbatim: "")
+                }
                     .datePickerStyle(.wheel)
                     .presentationDetents([.height(300)])
                     .padding(.trailing, 20)
@@ -280,7 +284,9 @@ private struct HomeMoreInformationList3: View {
         .cornerRadius(10)
         .sheet(isPresented: $isPickerDate) {
             VStack {
-                DatePicker("", selection: $draft.expirationDate, displayedComponents: .date)
+                DatePicker(selection: $draft.expirationDate, displayedComponents: .date) {
+                    Text(verbatim: "")
+                }
                     .datePickerStyle(.wheel)
                     .presentationDetents([.height(300)])
                     .padding(.trailing, 20)
@@ -329,7 +335,9 @@ private struct HomeMoreInformationList: View {
             Spacer()
             switch number {
             case .string(let binding,let focus):
-                TextField("",text: binding)
+                TextField(text: binding) {
+                    Text(verbatim: "")
+                }
                     .frame(alignment: .trailing)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.trailing)
@@ -337,7 +345,9 @@ private struct HomeMoreInformationList: View {
                     .focused(focus)
                     .foregroundColor(isEdit ? Color.primary : Color.gray)
             case .amount(let binding,let focus):
-                TextField("",value: binding,format: .number)
+                TextField(value: binding,format: .number) {
+                    Text(verbatim: "")
+                }
                     .multilineTextAlignment(.trailing)
                     .disabled(!isEdit)
                     .focused(focus)
@@ -353,38 +363,48 @@ private struct HomeMoreInformationList: View {
                 Text(date.formatted(date: .omitted,time: .complete))
                     .foregroundColor(Color.gray)
             case .record(let double):
-                Text("\(double.formatted())")
+                Text(verbatim: "\(double.formatted())")
                     .foregroundColor(Color.gray)
             case .toggle(let bool):
-                Toggle("",isOn: bool)
+                Toggle(isOn: bool) {
+                    Text(verbatim: "")
+                }
                     .frame(height:20)
                     .disabled(!isEdit)
             case .timePicker(let date):
-                DatePicker("", selection: date,displayedComponents: .hourAndMinute)
+                DatePicker(selection: date,displayedComponents: .hourAndMinute) {
+                    Text(verbatim: "")
+                }
                     .frame(height:20)
                     .disabled(!isEdit)
                     .padding(.trailing,-10)
             case .datePicker(let date):
-                DatePicker("", selection: date,displayedComponents: .date)
+                DatePicker(selection: date,displayedComponents: .date) {
+                    Text(verbatim: "")
+                }
                     .frame(height:20)
                     .disabled(!isEdit)
                     .padding(.trailing,-10)
             case .picker(let string):
-                Picker("", selection: string) {
+                Picker(selection: string, content: {
                     ForEach(FixedDepositEnum.allCases, id: \.self) { option in
                         Text(LocalizedStringKey(option.id)).tag(option.id) // 设置标识符
                     }
+                }) {
+                    Text(verbatim: "")
                 }
                 .frame(height:20)
                 .pickerStyle(.menu)
                 .disabled(!isEdit)
                 .padding(.trailing,-10)
             case .pickerWeek(let num):
-                Picker("", selection: num) {
+                Picker(selection: num, content: {
                     ForEach(Array(weekList.enumerated()), id:\.offset) { index, item in
-                        Text("\(item)")
+                        Text(verbatim: "\(item)")
                             .tag(index + 1)
                     }
+                }) {
+                    Text(verbatim: "")
                 }
                 .frame(height:20)
                 .pickerStyle(.menu)
@@ -392,10 +412,12 @@ private struct HomeMoreInformationList: View {
                 .padding(.trailing,-10)
             case .pickerDay(let num):
                 HStack {
-                    Picker("", selection: num) {
+                    Picker(selection: num, content: {
                         ForEach(1..<32, id: \.self) { item in
-                            Text("\(item)")
+                            Text(verbatim: "\(item)")
                         }
+                    }) {
+                        Text(verbatim: "")
                     }
                     .frame(height:20)
                     .pickerStyle(.menu)

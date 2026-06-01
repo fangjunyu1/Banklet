@@ -71,7 +71,7 @@ struct AnimationView: View {
                         }
                     }
                 }
-                FootnoteSource(text: "by Lottiefiles")
+                FootnoteSourceNotLocalized(text: "by Lottiefiles")
             }
         }
         .navigationTitle("Animation")

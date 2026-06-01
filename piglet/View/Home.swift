@@ -96,7 +96,6 @@ struct Home: View {
                     }
                 TradeView(focus: $focus)
                     .transition(.move(edge: .bottom))   // 从底部滑上来
-                    .animation(.spring(response: 0.4, dampingFraction: 0.8), value: homeVM.isTradeView)
                     .zIndex(1)
             }
             

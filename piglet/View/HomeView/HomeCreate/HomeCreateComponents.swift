@@ -36,9 +36,11 @@ struct HomeCreateInputTargetAmountView: View {
         HStack(spacing: 15) {
             Text("Amount")
                 .fontWeight(.medium)
-            TextField("0", value: $piggyBank.targetAmount, format: .number)
-                .focused($isFocus)
-                .keyboardType(.decimalPad)   // 数字 + 小数点键盘
+            TextField(value: $piggyBank.targetAmount, format: .number) {
+                Text(verbatim: "0")
+            }
+            .focused($isFocus)
+            .keyboardType(.decimalPad)   // 数字 + 小数点键盘
         }
     }
 }
@@ -76,7 +78,7 @@ struct HomeCreateInputAmountView: View {
             Text("Initial amount")
                 .fontWeight(.medium)
             HStack(spacing:2) {
-                TextField("0", value: Binding<Double?>(get: {
+                TextField(value: Binding<Double?>(get: {
                     piggyBank.amount
                 }, set: {
                     if let amount = $0 {
@@ -84,7 +86,9 @@ struct HomeCreateInputAmountView: View {
                     } else {
                         piggyBank.amount = $0
                     }
-                }), format: .number)
+                }), format: .number) {
+                    Text(verbatim: "0")
+                }
                 .focused($isFocus)
                 .keyboardType(.decimalPad)   // 数字 + 小数点键盘
                 .foregroundColor(isNegative ? .red : .primary)
@@ -123,9 +127,11 @@ struct HomeCreateInputRegularView:View {
             Text("Fixed deposit")
                 .fontWeight(.medium)
             Spacer()
-            Toggle("",isOn: $piggyBank.isFixedDeposit.animation(.bouncy))
-                .frame(width: 50,height: 0)
-                .background(.red)
+            Toggle(isOn: $piggyBank.isFixedDeposit.animation(.bouncy)) {
+                Text(verbatim: "")
+            }
+            .frame(width: 50,height: 0)
+            .background(.red)
         }
     }
 }
@@ -139,7 +145,9 @@ struct HomeCreateInputRegularAmountView:View {
             Text("Deposit Amount")
                 .fontWeight(.medium)
             Spacer()
-            TextField("0", value: $piggyBank.fixedDepositAmount, format: .number)
+            TextField(value: $piggyBank.fixedDepositAmount, format: .number) {
+                Text(verbatim: "0")
+            }
             .focused($isFocus)
             .keyboardType(.decimalPad)   // 数字 + 小数点键盘
         }
@@ -155,7 +163,9 @@ struct HomeCreateInputExpirationDateView: View {
             Text("Expiration date")
                 .fontWeight(.medium)
             Spacer()
-            Toggle("",isOn: $piggyBank.isExpirationDateEnabled.animation(.bouncy))
+            Toggle(isOn: $piggyBank.isExpirationDateEnabled.animation(.bouncy)) {
+                Text(verbatim: "")
+            }
                 .frame(width: 50,height: 0)
                 .background(.red)
         }
@@ -184,7 +194,9 @@ struct HomeCreateDateView: View {
             })
             .sheet(isPresented: $isShowSheet) {
                 VStack {
-                    DatePicker("", selection: $piggyBank.expirationDate, displayedComponents: .date)
+                    DatePicker(selection: $piggyBank.expirationDate, displayedComponents: .date) {
+                        Text(verbatim: "")
+                    }
                         .datePickerStyle(.wheel)
                         .opacity(piggyBank.isExpirationDateEnabled ? 1 : 0)
                         .presentationDetents([.height(300)])
@@ -227,18 +239,22 @@ struct HomeCreatePickerFixedDepositView: View {
     @EnvironmentObject var piggyBank: PiggyBankData
     @EnvironmentObject var step: CreateStepViewModel
     var body: some View {
-        Picker("",selection: $piggyBank.fixedDepositType) {
-            ForEach(FixedDepositEnum.allCases) { option in
-                Text(LocalizedStringKey(option.rawValue)).tag(option.rawValue) // 设置标识符
-                    .onAppear {
-                        print("value:\(option.rawValue),type:\(type(of:option.rawValue))")
-                    }
+        Picker(
+            selection: $piggyBank.fixedDepositType,
+            content: {
+                ForEach(FixedDepositEnum.allCases) { option in
+                    Text(LocalizedStringKey(option.rawValue)).tag(option.rawValue) // 设置标识符
+                        .onAppear {
+                            print("value:\(option.rawValue),type:\(type(of:option.rawValue))")
+                        }
+                }
+            }) {
+                Text(verbatim: "")
             }
-        }
-        .labelsHidden()
-        .pickerStyle(.segmented)
-        .opacity(step.tab.isRegular && piggyBank.isFixedDeposit ? 1 : 0)
-        .padding(5)
+            .labelsHidden()
+            .pickerStyle(.segmented)
+            .opacity(step.tab.isRegular && piggyBank.isFixedDeposit ? 1 : 0)
+            .padding(5)
     }
 }
 // 底部显示的视图
@@ -256,7 +272,7 @@ struct HomeCreateInputFootNoteView: View {
             case .name:
                 HStack(spacing: 5) {
                     Text("Remaining")
-                    Text("\(remainCharacters)")
+                    Text(verbatim: "\(remainCharacters)")
                     Text("Characters.")
                 }
             case .targetAmount:

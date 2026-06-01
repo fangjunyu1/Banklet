@@ -83,7 +83,7 @@ struct HomeBanksListView2: View {
                             HStack(spacing:3) {
                                 Text(item.amountText)
                                     .foregroundColor(itemProgressAmountColor)
-                                Text("/")
+                                Text(verbatim: "/")
                                 Text(item.targetAmountText)
                             }
                             .font(.caption2)

@@ -1,945 +1,870 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "%@" : {
-
-    },
-    "Animation Widget" : {
-      "comment" : "1.1.0:动画小组件",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "动画小组件"
+  "sourceLanguage": "en",
+  "strings": {
+    "Animation Widget": {
+      "comment": "1.1.0:动画小组件",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动画小组件"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de animação"
           }
         }
       }
     },
-    "Featured Images" : {
-      "comment" : "1.1.0:精选图片",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "精选图片"
+    "Featured Images": {
+      "comment": "1.1.0:精选图片",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "精选图片"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagens em destaque"
           }
         }
       }
     },
-    "Play animation on the desktop in a loop." : {
-      "comment" : "1.1.0：在桌面循环播放动画。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在桌面循环播放动画。"
+    "Play animation on the desktop in a loop.": {
+      "comment": "1.1.0：在桌面循环播放动画。",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在桌面循环播放动画。"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproduza animações em loop na área de trabalho."
           }
         }
       }
     },
-    "Progress widget" : {
-      "comment" : "进度小组件",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عنصر صغير للتقدم"
+    "Progress widget": {
+      "comment": "进度小组件",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عنصر صغير للتقدم"
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progrés"
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de progrés"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget pro pokrok"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget pro pokrok"
           }
         },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fremskridts-widget"
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fremskridts-widget"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fortschritts-Widget"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fortschritts-Widget"
           }
         },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget προόδου"
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget προόδου"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progreso"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de progreso"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progreso"
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edistymis-widget"
           }
         },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edistymis-widget"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de progression"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progression"
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "וידג’ט התקדמות"
           }
         },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progression"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रगति विजेट"
           }
         },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "וידג’ט התקדמות"
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Napredni widget"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "प्रगति विजेट"
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haladási widget"
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Napredni widget"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget kemajuan"
           }
         },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haladási widget"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget di avanzamento"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget kemajuan"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "進行状況ウィジェット"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget di avanzamento"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "진행 상태 위젯"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "進行状況ウィジェット"
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget kemajuan"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "진행 상태 위젯"
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fremdrifts-widget"
           }
         },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget kemajuan"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voortgang-widget"
           }
         },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fremdrifts-widget"
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget postępu"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voortgang-widget"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de progresso"
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget postępu"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget de progres"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progresso"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виджет прогресса"
           }
         },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progresso"
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget pokroku"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget de progres"
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Framstegs-widget"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Виджет прогресса"
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วิดเจ็ตความคืบหน้า"
           }
         },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget pokroku"
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İlerleme widget’ı"
           }
         },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Framstegs-widget"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Віджет прогресу"
           }
         },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "วิดเจ็ตความคืบหน้า"
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget tiến độ"
           }
         },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İlerleme widget’ı"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进度小组件"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Віджет прогресу"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget tiến độ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "进度小组件"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "進度小組件"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "進度小組件"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "進度小組件"
           }
         }
       }
     },
-    "Shows the background image in the application in a small size." : {
-      "comment" : "小尺寸显示应用中的背景图片。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عرض الصورة الخلفية للتطبيق بحجم صغير."
+    "Shows the background image in the application in a small size.": {
+      "comment": "小尺寸显示应用中的背景图片。",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عرض الصورة الخلفية للتطبيق بحجم صغير."
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar la imatge de fons de l’aplicació en una mida petita."
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar la imatge de fons de l’aplicació en una mida petita."
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zobrazení pozadí aplikace v malém formátu."
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazení pozadí aplikace v malém formátu."
           }
         },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vis applikationens baggrundsbillede i lille størrelse."
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis applikationens baggrundsbillede i lille størrelse."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeige das Hintergrundbild der App in kleiner Größe an."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeige das Hintergrundbild der App in kleiner Größe an."
           }
         },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Εμφάνιση της εικόνας φόντου της εφαρμογής σε μικρό μέγεθος."
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εμφάνιση της εικόνας φόντου της εφαρμογής σε μικρό μέγεθος."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar la imagen de fondo de la aplicación en tamaño pequeño."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar la imagen de fondo de la aplicación en tamaño pequeño."
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar la imagen de fondo de la aplicación en tamaño pequeño."
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Näytä sovelluksen taustakuva pienessä koossa."
           }
         },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Näytä sovelluksen taustakuva pienessä koossa."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher l’image de fond de l’application en petite taille."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher l’image de fond de l’application en petite taille."
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "הצגת תמונת הרקע של האפליקציה בגודל קטן."
           }
         },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher l’image de fond de l’application en petite taille."
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एप्लिकेशन की पृष्ठभूमि छवि को छोटे आकार में दिखाएं।"
           }
         },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הצגת תמונת הרקע של האפליקציה בגודל קטן."
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikazivanje pozadinske slike aplikacije u maloj veličini."
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एप्लिकेशन की पृष्ठभूमि छवि को छोटे आकार में दिखाएं।"
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Az alkalmazás háttérképének megjelenítése kicsi méretben."
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prikazivanje pozadinske slike aplikacije u maloj veličini."
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tampilkan gambar latar aplikasi dalam ukuran kecil."
           }
         },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Az alkalmazás háttérképének megjelenítése kicsi méretben."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra l’immagine di sfondo dell’applicazione in dimensioni piccole."
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tampilkan gambar latar aplikasi dalam ukuran kecil."
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリの背景画像を小さなサイズで表示する。"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra l’immagine di sfondo dell’applicazione in dimensioni piccole."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "작은 크기로 애플리케이션의 배경 이미지를 표시합니다."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリの背景画像を小さなサイズで表示する。"
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paparkan imej latar aplikasi dalam saiz kecil."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "작은 크기로 애플리케이션의 배경 이미지를 표시합니다."
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis bakgrunnsbildet til appen i liten størrelse."
           }
         },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paparkan imej latar aplikasi dalam saiz kecil."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon de achtergrondafbeelding van de app in kleine maat."
           }
         },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vis bakgrunnsbildet til appen i liten størrelse."
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż procent postępu aktualnej skarbonki."
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon de achtergrondafbeelding van de app in kleine maat."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exibir a imagem de fundo do aplicativo em tamanho pequeno."
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokaż procent postępu aktualnej skarbonki."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează imaginea de fundal a aplicației în dimensiune mică."
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exibir a imagem de fundo do aplicativo em tamanho pequeno."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать фоновое изображение приложения в маленьком размере."
           }
         },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exibir a imagem de fundo do aplicativo em tamanho pequeno."
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobraziť obrázok pozadia aplikácie v malej veľkosti."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afișează imaginea de fundal a aplicației în dimensiune mică."
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa applikationens bakgrundsbild i liten storlek."
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показать фоновое изображение приложения в маленьком размере."
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดงภาพพื้นหลังของแอปในขนาดเล็ก"
           }
         },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zobraziť obrázok pozadia aplikácie v malej veľkosti."
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulamanın arka plan resmini küçük boyutta göster."
           }
         },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visa applikationens bakgrundsbild i liten storlek."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показати фонове зображення додатку в маленькому розмірі."
           }
         },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แสดงภาพพื้นหลังของแอปในขนาดเล็ก"
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiển thị hình nền ứng dụng ở kích thước nhỏ."
           }
         },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uygulamanın arka plan resmini küçük boyutta göster."
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小尺寸显示应用中的背景图片。"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показати фонове зображення додатку в маленькому розмірі."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hiển thị hình nền ứng dụng ở kích thước nhỏ."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小尺寸显示应用中的背景图片。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小尺寸顯示應用中的背景圖片。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小尺寸顯示應用中的背景圖片。"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小尺寸顯示應用中的背景圖片。"
           }
         }
       }
     },
-    "Shows the current progress percentage of the piggy bank." : {
-      "comment" : "显示当前存钱罐的进度百分比。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عرض النسبة المئوية لتقدم حصال المال الحالي."
+    "Shows the current progress percentage of the piggy bank.": {
+      "comment": "显示当前存钱罐的进度百分比。",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عرض النسبة المئوية لتقدم حصال المال الحالي."
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar el percentatge de progrés de la guardiola actual."
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar el percentatge de progrés de la guardiola actual."
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zobrazení procenta pokroku aktuální pokladničky."
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobrazení procenta pokroku aktuální pokladničky."
           }
         },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vis nuværende sparegris’ fremdriftsprocent."
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis nuværende sparegris’ fremdriftsprocent."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeige den Fortschrittsprozentsatz der aktuellen Spardose an."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeige den Fortschrittsprozentsatz der aktuellen Spardose an."
           }
         },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Εμφάνιση του ποσοστού προόδου της τρέχουσας κουμπαράς."
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Εμφάνιση του ποσοστού προόδου της τρέχουσας κουμπαράς."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar el porcentaje de progreso de la alcancía actual."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar el porcentaje de progreso de la alcancía actual."
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar el porcentaje de progreso de la alcancía actual."
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Näytä nykyisen säästölippaan edistymisprosentti."
           }
         },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Näytä nykyisen säästölippaan edistymisprosentti."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher le pourcentage de progression de la tirelire actuelle."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher le pourcentage de progression de la tirelire actuelle."
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "הצגת אחוז ההתקדמות של קופת החיסכון הנוכחית."
           }
         },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher le pourcentage de progression de la tirelire actuelle."
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वर्तमान बचत बक्से की प्रगति प्रतिशत दिखाएं।"
           }
         },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הצגת אחוז ההתקדמות של קופת החיסכון הנוכחית."
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prikazivanje postotka napretka trenutne kasice."
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वर्तमान बचत बक्से की प्रगति प्रतिशत दिखाएं।"
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A jelenlegi malacka előrehaladási százalékának megjelenítése."
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prikazivanje postotka napretka trenutne kasice."
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tampilkan persentase kemajuan celengan saat ini."
           }
         },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A jelenlegi malacka előrehaladási százalékának megjelenítése."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra la percentuale di avanzamento della salvadanaio attuale."
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tampilkan persentase kemajuan celengan saat ini."
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "現在の貯金箱の進行状況を表示する。"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra la percentuale di avanzamento della salvadanaio attuale."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "현재 저금통의 진행률 퍼센트를 표시합니다."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "現在の貯金箱の進行状況を表示する。"
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paparkan peratusan kemajuan tabung simpanan semasa."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 저금통의 진행률 퍼센트를 표시합니다."
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vis fremdriftsprosenten til den nåværende sparegrisen."
           }
         },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paparkan peratusan kemajuan tabung simpanan semasa."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon het voortgangspercentage van de huidige spaarpot."
           }
         },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vis fremdriftsprosenten til den nåværende sparegrisen."
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż procent postępu aktualnej skarbonki."
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon het voortgangspercentage van de huidige spaarpot."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exibir a porcentagem de progresso do cofrinho atual."
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pokaż procent postępu aktualnej skarbonki."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează procentajul de progres al pușculiței actuale."
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exibir a porcentagem de progresso do cofrinho atual."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать процент прогресса текущей копилки."
           }
         },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exibir a porcentagem de progresso do cofrinho atual."
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobraziť percento pokroku aktuálnej pokladničky."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afișează procentajul de progres al pușculiței actuale."
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa procentandelen för den aktuella spargrisen."
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показать процент прогресса текущей копилки."
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดงเปอร์เซ็นต์ความคืบหน้าของกระปุกออมสินปัจจุบัน"
           }
         },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zobraziť percento pokroku aktuálnej pokladničky."
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mevcut kumbara ilerleme yüzdesini göster."
           }
         },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visa procentandelen för den aktuella spargrisen."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показати відсоток прогресу поточної скарбнички."
           }
         },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แสดงเปอร์เซ็นต์ความคืบหน้าของกระปุกออมสินปัจจุบัน"
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiển thị tỷ lệ tiến độ của con heo đất hiện tại."
           }
         },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mevcut kumbara ilerleme yüzdesini göster."
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示当前存钱罐的进度百分比。"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показати відсоток прогресу поточної скарбнички."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hiển thị tỷ lệ tiến độ của con heo đất hiện tại."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示当前存钱罐的进度百分比。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "顯示當前存錢罐的進度百分比。"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "顯示當前存錢罐的進度百分比。"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "顯示當前存錢罐的進度百分比。"
           }
         }
       }
     },
-    "Small window background image" : {
-      "comment" : "小窗背景图",
-      "extractionState" : "manual",
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "صورة خلفية صغيرة"
+    "Small window background image": {
+      "comment": "小窗背景图",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صورة خلفية صغيرة"
           }
         },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imatge de fons petita"
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imatge de fons petita"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malý pozadí obrázek"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Malý pozadí obrázek"
           }
         },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lille baggrundsbillede"
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lille baggrundsbillede"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kleines Hintergrundbild"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kleines Hintergrundbild"
           }
         },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μικρή εικόνα φόντου"
+        "el": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Μικρή εικόνα φόντου"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagen de fondo pequeña"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagen de fondo pequeña"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagen de fondo pequeña"
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pieni taustakuva"
           }
         },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pieni taustakuva"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Petite image de fond"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Petite image de fond"
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "תמונת רקע קטנה"
           }
         },
-        "fr-CA" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Petite image de fond"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "छोटी पृष्ठभूमि छवि"
           }
         },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "תמונת רקע קטנה"
+        "hr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mala pozadinska slika"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "छोटी पृष्ठभूमि छवि"
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kis háttérkép"
           }
         },
-        "hr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mala pozadinska slika"
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gambar latar kecil"
           }
         },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kis háttérkép"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Immagine di sfondo piccola"
           }
         },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gambar latar kecil"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小さな背景画像"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Immagine di sfondo piccola"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "작은 배경 이미지"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小さな背景画像"
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imej latar kecil"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "작은 배경 이미지"
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liten bakgrunnsbilde"
           }
         },
-        "ms" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imej latar kecil"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kleine achtergrondafbeelding"
           }
         },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liten bakgrunnsbilde"
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mały obraz tła"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kleine achtergrondafbeelding"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagem de fundo pequena"
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mały obraz tła"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagine de fundal mică"
           }
         },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagem de fundo pequena"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленькое фоновое изображение"
           }
         },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagem de fundo pequena"
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Malý obrázok pozadia"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagine de fundal mică"
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liten bakgrundsbild"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Маленькое фоновое изображение"
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ภาพพื้นหลังขนาดเล็ก"
           }
         },
-        "sk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Malý obrázok pozadia"
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget tiến độ"
           }
         },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Liten bakgrundsbild"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маленьке фонове зображення"
           }
         },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ภาพพื้นหลังขนาดเล็ก"
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hình nền nhỏ"
           }
         },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widget tiến độ"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小窗背景图"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Маленьке фонове зображення"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hình nền nhỏ"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小窗背景图"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小窗背景圖"
-          }
-        },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "小窗背景圖"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小窗背景圖"
           }
         }
       }
     },
-    "Turn your desktop into your own gallery." : {
-      "comment" : "1.1.0:让桌面成为你的画廊。",
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "让桌面成为你的画廊。"
+    "Turn your desktop into your own gallery.": {
+      "comment": "1.1.0:让桌面成为你的画廊。",
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "让桌面成为你的画廊。"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transforme sua área de trabalho na sua própria galeria."
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

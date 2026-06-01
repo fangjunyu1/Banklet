@@ -101,7 +101,9 @@ struct TradeContentAmountView: View {
                             textOffset = 40
                         }
                     }
-                TextField("_", value: $tradeVM.amount, format: .number)
+                TextField(value: $tradeVM.amount, format: .number) {
+                    Text(verbatim: "_")
+                }
                     .fontWeight(.bold)
                     .font(.system(size: 60))
                     .foregroundColor(AppColor.appColor)

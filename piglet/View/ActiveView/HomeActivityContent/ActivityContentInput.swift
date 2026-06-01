@@ -74,7 +74,7 @@ private struct PrivateInputBindingView: View {
                     .fixedSize(horizontal: true, vertical: false)
                 
             case .display(let value):
-                Text("\(value)")
+                Text(verbatim: "\(value)")
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)

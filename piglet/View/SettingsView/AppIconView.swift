@@ -72,7 +72,7 @@ struct AppIconView: View {
                     }
                 }
                 // Freepik备注
-                FootnoteSource(text: "Image by freepik")
+                FootnoteSourceNotLocalized(text: "Image by freepik")
             }
         }
         .navigationTitle("Icon")

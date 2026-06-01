@@ -343,7 +343,7 @@ private struct BuyPremiumView: View {
                     HStack {
                         Text("Purchase Membership")
                         if let selectedProduct = selectedProduct,let product = iapManager.IAPProductList.first(where: { $0.id == selectedProduct.id }) {
-                            Text("(")+Text(LocalizedStringKey(product.name))+Text(")")
+                            Text(verbatim: "(")+Text(LocalizedStringKey(product.name))+Text(verbatim: ")")
                         }
                     }
                     // 价格
@@ -351,7 +351,7 @@ private struct BuyPremiumView: View {
                         HStack(spacing: 0) {
                             Text(selectedProduct.displayPrice)
                             if let priceSuffix = product.priceSuffix {
-                                Text("/")
+                                Text(verbatim: "/")
                                 Text(LocalizedStringKey(priceSuffix))
                             }
                         }

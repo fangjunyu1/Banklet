@@ -98,10 +98,11 @@ struct HomeCreateInputRegularComponentsView: View {
             if piggyBank.fixedDepositType == FixedDepositEnum.Daily.rawValue {
                 
                 VStack {
-                    DatePicker("",
-                               selection: $piggyBank.fixedDepositTime,
+                    DatePicker(selection: $piggyBank.fixedDepositTime,
                                displayedComponents: .hourAndMinute
-                    )
+                    ) {
+                        Text(verbatim: "")
+                    }
                     .frame(width: 70)
                     
                     InputFootnote(text: "Automatically save at the selected time each day.")
@@ -116,7 +117,7 @@ struct HomeCreateInputRegularComponentsView: View {
                                 piggyBank.fixedDepositWeekday = buttonIndex
                                 print("\(buttonIndex)")
                             }, label: {
-                                Text("\(item)")
+                                Text(verbatim: "\(item)")
                                     .fontWeight(.bold)
                                     .foregroundColor(buttonIndex == piggyBank.fixedDepositWeekday ? Color.blue : .secondary)
                                     .frame(width: 36, height: 36)
@@ -136,11 +137,13 @@ struct HomeCreateInputRegularComponentsView: View {
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Monthly.rawValue {
                 VStack {
                     HStack {
-                        Picker("", selection: $piggyBank.fixedDepositDay) {
+                        Picker(selection: $piggyBank.fixedDepositDay, content: {
                             ForEach(1..<32, id:\.self) { item in
-                                Text("\(item)")
+                                Text(verbatim: "\(item)")
                             }
-                        }
+                        }, label: {
+                            Text(verbatim: "")
+                        })
                         Text("Day")
                     }
                     
@@ -149,10 +152,11 @@ struct HomeCreateInputRegularComponentsView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else if piggyBank.fixedDepositType == FixedDepositEnum.Yearly.rawValue {
                 VStack {
-                    DatePicker("",
-                               selection: $piggyBank.fixedDepositTime,
+                    DatePicker(selection: $piggyBank.fixedDepositTime,
                                displayedComponents: .date
-                    )
+                    ) {
+                        Text(verbatim: "")
+                    }
                     .frame(width: 70)
                     InputFootnote(text: "Automatically saves data annually on selected dates and at specific times.")
                 }

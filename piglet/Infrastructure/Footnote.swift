@@ -73,3 +73,15 @@ struct FootnoteSource: View {
         .padding(.top,20)
     }
 }
+
+struct FootnoteSourceNotLocalized: View {
+    var text: String
+    var body: some View {
+        HStack(alignment: .center) {
+            Text(text)
+                .font(.footnote)
+                .foregroundColor(.gray)
+        }
+        .padding(.top,20)
+    }
+}

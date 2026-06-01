@@ -28,7 +28,7 @@ struct TradeShowContentView: View {
                     .font(.system(size: 45))
                     .fontWeight(.bold)
                     .foregroundColor(AppColor.gray)
-                Text("\(tradeVM.amount?.formatted() ?? "")")
+                Text(verbatim: "\(tradeVM.amount?.formatted() ?? "")")
                     .font(.system(size: 50))
                     .fontWeight(.bold)
                     .lineLimit(1)
@@ -52,7 +52,7 @@ struct TradeShowContentView: View {
                             Text("None")
                                 .foregroundColor(AppColor.gray)
                         } else {
-                            Text("\(tradeVM.remark)")
+                            Text(verbatim: "\(tradeVM.remark)")
                                 .foregroundColor(AppColor.gray)
                         }
                     }

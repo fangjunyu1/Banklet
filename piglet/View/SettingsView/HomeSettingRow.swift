@@ -204,7 +204,9 @@ struct GeneralSilentRow: View {
                 Text(LocalizedStringKey(title))
                     .foregroundColor(textColor)
                 Spacer()
-                Toggle("", isOn: $mode)
+                Toggle(isOn: $mode) {
+                    Text(verbatim: "")
+                }
                     .onChange(of: mode) {
                         mode ? IdleTimerManager.shared.resetTimer() : IdleTimerManager.shared.stopTimer()
                     }
@@ -231,14 +233,18 @@ private struct accessoryView: View {
     var body: some View {
         switch accessory {
         case .toggle(let isOn, let manager):
-            Toggle("", isOn: isOn.animation(.easeInOut))
+            Toggle(isOn: isOn.animation(.easeInOut)) {
+                Text(verbatim: "")
+            }
                 .onChange(of: isOn.wrappedValue) { _, newValue in
                     manager.cloudKitMode = newValue ? .privateDatabase : .none
                     DataController.shared.updateContainer() // 更新容器
                 }
                 .frame(width: 80)
         case .binding(let isOn):
-            Toggle("", isOn: isOn.animation(.easeInOut))
+            Toggle(isOn: isOn.animation(.easeInOut)) {
+                Text(verbatim: "")
+            }
                 .frame(width: 80)
         case .reminder(let notice):
             reminderTime(notice: notice)
@@ -312,8 +318,7 @@ private struct reminderTime: View {
         HStack {
             if appStorage.isReminderTime {
                 // 日期选择器
-                DatePicker("",
-                           selection: Binding(get: {
+                DatePicker(selection: Binding(get: {
                     Date(timeIntervalSince1970: appStorage.reminderTime)
                 }, set: {
                     appStorage.reminderTime = $0.timeIntervalSince1970
@@ -321,11 +326,15 @@ private struct reminderTime: View {
                     scheduleLocalNotification()
                 }),
                            displayedComponents: .hourAndMinute
-                )
+                ) {
+                    Text(verbatim: "")
+                }
                 .datePickerStyle(DefaultDatePickerStyle()) // 日期选择器样式
                 .frame(width: 60,height: 0)
             }
-            Toggle("", isOn:$appStorage.isReminderTime)
+            Toggle(isOn:$appStorage.isReminderTime) {
+                Text(verbatim: "")
+            }
                 .onChange(of: appStorage.isReminderTime) { _, newValue in
                     if newValue {
                         // 检查权限，首次弹出消息提示

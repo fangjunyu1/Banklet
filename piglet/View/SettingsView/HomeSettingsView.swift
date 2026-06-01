@@ -120,12 +120,12 @@ struct HomeSettingsView: View {
                 // 版本号
                 HStack(spacing: 2) {
                     Text("version")
-                    Text(":")
-                    Text(Bundle.main.appVersion)
+                    Text(verbatim: ":")
+                    Text(verbatim: Bundle.main.appVersion)
                     #if DEBUG
-                    Text("(")
-                    Text(Bundle.main.appBuild)
-                    Text(")")
+                    Text(verbatim: "(")
+                    Text(verbatim: Bundle.main.appBuild)
+                    Text(verbatim: ")")
                     #else
                     #endif
                 }

@@ -32,7 +32,6 @@ struct TradeView: View {
             
             Spacer()
         }
-        .animation(.easeInOut, value: tradeVM.tradeStatus)
         .environmentObject(tradeVM)
         .onAppear {
             focus = .amount

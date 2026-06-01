@@ -26,7 +26,7 @@ struct HomePrimaryBankTitleView: View {
                     hideAmount.toggle()
                 }, label: {
                     if !hideAmount {
-                        Text("\(primaryBank.amountText)")
+                        Text(verbatim: "\(primaryBank.amountText)")
                             .font(.largeTitle)
                             .imageScale(.large)
                             .fontWeight(.bold)

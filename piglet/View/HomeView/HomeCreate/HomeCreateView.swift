@@ -45,11 +45,11 @@ struct HomeCreateView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 3) {
-                    Text("\(step.tab.index)")
+                    Text(verbatim: "\(step.tab.index)")
                         .animation(.default, value: step.tab)
-                    Text("/")
+                    Text(verbatim: "/")
                         .foregroundColor(AppColor.gray)
-                    Text("\(step.tab.count)")
+                    Text(verbatim: "\(step.tab.count)")
                         .foregroundColor(AppColor.gray)
                 }
             }

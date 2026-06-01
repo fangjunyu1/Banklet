@@ -69,10 +69,10 @@ struct HomeStatsView: View {
                             HStack(spacing: 10) {
                                 Image(systemName: "calendar")
                                     .foregroundColor(Color(hex: "DC6054"))
-                                Text("\(formattedData)")
+                                Text(verbatim: "\(formattedData)")
                                     .font(.footnote)
                             }
-                            Text("\(formattedWeekday)")
+                            Text(verbatim: "\(formattedWeekday)")
                                 .font(.caption2)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
@@ -90,7 +90,7 @@ struct HomeStatsView: View {
                                         .scaledToFit()
                                         .frame(width: 16)
                                         .foregroundColor(.gray)
-                                    Text("\(savingsRecords.count)")
+                                    Text(verbatim: "\(savingsRecords.count)")
                                         .font(.footnote)
                                         .frame(minWidth: 40,alignment: .leading)
                                         .modifier(BlackTextModifier())

@@ -68,7 +68,9 @@ private struct ContentDisplayButtonView: View {
                 case .complete:
                     Text("Completed")
                 default:
-                    ProgressView("")
+                    ProgressView {
+                        Text(verbatim: "")
+                    }
                         .tint(.white)
                         .padding(.top,10)
                 }

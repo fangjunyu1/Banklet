@@ -25,7 +25,7 @@ struct CurrencySymbolView: View {
             VStack(spacing: 8) {
                 HStack {
                     Text("Current Currency")
-                    Text("\(appStorage.CurrencySymbol)")
+                    Text(verbatim: "\(appStorage.CurrencySymbol)")
                 }
                 .font(.footnote)
                 .foregroundColor(.gray)

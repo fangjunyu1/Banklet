@@ -34,7 +34,7 @@ struct ProgressView : View {
                         .font(.title2)
                         .fontWeight(.bold)
                     Spacer().frame(height:6)
-                    Text("\(entry.piggyBankName)")
+                    Text(verbatim: "\(entry.piggyBankName)")
                         .font(.footnote)
                 }
                 .foregroundColor(.white)

@@ -1,24 +1,30 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "GJd-Yh-RWb.text" : {
-      "comment" : "Class = \"UILabel\"; text = \"Banklet\"; ObjectID = \"GJd-Yh-RWb\";",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Banklet"
+  "sourceLanguage": "en",
+  "strings": {
+    "GJd-Yh-RWb.text": {
+      "comment": "Class = \"UILabel\"; text = \"Banklet\"; ObjectID = \"GJd-Yh-RWb\";",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Banklet"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "存钱猪猪"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "存钱猪猪"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Banklet"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

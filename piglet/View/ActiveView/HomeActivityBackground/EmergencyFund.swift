@@ -34,7 +34,7 @@ struct LifeFundView: View {
                             activityVM.input.guaranteeMonth = item
                         }, label: {
                             VStack {
-                                Text("\(item)")
+                                Text(verbatim: "\(item)")
                                     .font(.footnote)
                                     .modifier(GrayTextModifier())
                                 Image(systemName: activityVM.input.guaranteeMonth == item ? "checkmark.circle.fill" : "circle.fill")

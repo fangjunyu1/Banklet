@@ -17,7 +17,9 @@ struct TradeNotesView: View {
             Text("Notes")
                 .font(.footnote)
                 .modifier(GrayTextModifier())
-            TextField("", text: $tradeVM.remark)
+            TextField(text: $tradeVM.remark) {
+                Text(verbatim: "")
+            }
                 .font(.footnote)
                 .focused($focus, equals: .note)
                 .onChange(of: tradeVM.remark) {
