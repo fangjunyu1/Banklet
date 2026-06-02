@@ -41,85 +41,80 @@ struct Home: View {
     @FocusState var focus: Field?
     
     var body: some View {
-        if UIDevice.isPhone {
-            NavigationStack {
-                homeView
-            }
-        } else {
-            NavigationSplitView {
-                HomeSideTabView(selectedTab: $selectedTab)
-                    .navigationSplitViewColumnWidth(320)
-            } detail: {
+        ZStack {
+            if UIDevice.isPhone {
                 NavigationStack {
                     homeView
                 }
+            } else {
+                NavigationSplitView {
+                    HomeSideTabView(selectedTab: $selectedTab)
+                        .navigationSplitViewColumnWidth(320)
+                } detail: {
+                    NavigationStack {
+                        homeView
+                    }
+                }
+            }
+            if idleManager.isIdle {
+                SlientMode(isSlientMode: $idleManager.isIdle)
             }
         }
     }
     
     var homeView: some View {
+        // 主视图
         ZStack {
-            // 主视图
-            ZStack {
-                Group {
-                    switch selectedTab {
-                        // 主页视图
-                    case .home:
-                        HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
-                        // 活动视图
-                    case .activity:
-                        HomeActivityView()
-                        // 统计视图
-                    case .stats:
-                        HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
-                        // 统计视图
-                    case .settings:
-                        HomeSettingsView()
-                    }
-                }
-                if UIDevice.isPhone {
-                    // 液态玻璃 TabView 视图
-                    HomeTabView(selectedTab: $selectedTab)
+            Group {
+                switch selectedTab {
+                    // 主页视图
+                case .home:
+                    HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
+                    // 活动视图
+                case .activity:
+                    HomeActivityView()
+                    // 统计视图
+                case .stats:
+                    HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
+                    // 统计视图
+                case .settings:
+                    HomeSettingsView()
                 }
             }
-            .background {
-                Background()
+            if UIDevice.isPhone {
+                // 液态玻璃 TabView 视图
+                HomeTabView(selectedTab: $selectedTab)
             }
-            // 监听应用状态，如果返回，则调用Widget保存数据
-            .onChange(of: scenePhase) { _,newPhase in
-                if newPhase == .active {
-                    // App 进入活跃状态
-                    print("App 进入活跃状态")
+        }
+        .background {
+            Background()
+        }
+        // 监听应用状态，如果返回，则调用Widget保存数据
+        .onChange(of: scenePhase) { _,newPhase in
+            if newPhase == .active {
+                // App 进入活跃状态
+                print("App 进入活跃状态")
+            }
+            if newPhase == .background {
+                // 在应用进入后台时保存数据
+                saveWidgetData(primaryBank)
+                print("应用移入后台，调用Widget保存数据")
+            }
+            if newPhase == .inactive {
+                // 应用即将终止时保存数据（iOS 15+）
+                saveWidgetData(primaryBank)
+                print("非活跃状态，调用Widget保存数据")
+            }
+            print("selectedTab:\(selectedTab)")
+        }
+        .blur(radius: homeVM.isTradeView ? 10 : 0)
+        .sheet(isPresented: $homeVM.isTradeView) {
+            Color.white
+                .opacity(0.1)
+                .onTapGesture {
+                    focus = nil
                 }
-                if newPhase == .background {
-                    // 在应用进入后台时保存数据
-                    saveWidgetData(primaryBank)
-                    print("应用移入后台，调用Widget保存数据")
-                }
-                if newPhase == .inactive {
-                    // 应用即将终止时保存数据（iOS 15+）
-                    saveWidgetData(primaryBank)
-                    print("非活跃状态，调用Widget保存数据")
-                }
-                print("selectedTab:\(selectedTab)")
-            }
-            .blur(radius: homeVM.isTradeView ? 10 : 0)
-            
-            // 存取视图
-            if homeVM.isTradeView {
-                Color.white
-                    .opacity(0.1)
-                    .onTapGesture {
-                        focus = nil
-                    }
-                TradeView(focus: $focus)
-                    .transition(.move(edge: .bottom))   // 从底部滑上来
-                    .zIndex(1)
-            }
-            
-            if idleManager.isIdle {
-                SlientMode(isSlientMode: $idleManager.isIdle)
-            }
+            TradeView(focus: $focus)
         }
         .environment(homeActivityVM)
         .environment(homeVM)

@@ -43,9 +43,9 @@ struct HomeMainView: View {
                         HomePrimaryBankAdvancedFeatures(primaryBank: primaryBank,showCreateView: $showCreateView)
                     }
                     .sheet(isPresented: $showMoreInformation) {
-//                        NavigationStack {
+                        NavigationStack {
                             HomeMoreInformationView(primary: primaryBank)
-//                        }
+                        }
                     }
                 }
                 // 如果有存钱罐列表
