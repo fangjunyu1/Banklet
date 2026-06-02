@@ -58,6 +58,7 @@ struct Home: View {
             }
             if idleManager.isIdle {
                 SlientMode(isSlientMode: $idleManager.isIdle)
+                    .environmentObject(idleManager)
             }
         }
     }
