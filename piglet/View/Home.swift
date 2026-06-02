@@ -48,7 +48,9 @@ struct Home: View {
                 HomeSideTabView(selectedTab: $selectedTab)
                     .navigationSplitViewColumnWidth(320)
             } detail: {
-                homeView
+                NavigationStack {
+                    homeView
+                }
             }
         }
     }
@@ -97,6 +99,7 @@ struct Home: View {
                     saveWidgetData(primaryBank)
                     print("非活跃状态，调用Widget保存数据")
                 }
+                print("selectedTab:\(selectedTab)")
             }
             .blur(radius: homeVM.isTradeView ? 10 : 0)
             

@@ -43,6 +43,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             // 振动
                             HapticManager.shared.selectionChanged()
                             showCreateView = true
+                            print("showCreateView:\(showCreateView)")
                         }, label: {
                             HStack {
                                 Image(systemName: "plus")
