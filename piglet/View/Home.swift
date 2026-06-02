@@ -42,7 +42,9 @@ struct Home: View {
     
     var body: some View {
         if UIDevice.isPhone {
-            homeView
+            NavigationStack {
+                homeView
+            }
         } else {
             NavigationSplitView {
                 HomeSideTabView(selectedTab: $selectedTab)

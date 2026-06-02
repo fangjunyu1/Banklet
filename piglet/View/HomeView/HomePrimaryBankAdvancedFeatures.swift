@@ -128,7 +128,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                     Caption2Black(text: "Access records")
                                     Spacer()
                                 }
-                                if let lastRecord{
+                                if lastRecord != nil{
                                     HStack(spacing:3) {
                                         Caption2(text:"\(lastRecordDate)")
                                         Spacer()
