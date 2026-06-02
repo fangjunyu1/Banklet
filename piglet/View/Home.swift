@@ -41,9 +41,14 @@ struct Home: View {
     @FocusState var focus: Field?
     
     var body: some View {
-        ZStack {
-            // 主视图
-            NavigationStack {
+        NavigationView {
+            if !UIDevice.isPhone {
+                // 液态玻璃 TabView 视图
+                HomeSideTabView(selectedTab: $selectedTab)
+            }
+
+            ZStack {
+                // 主视图
                 ZStack {
                     Group {
                         switch selectedTab {
@@ -61,8 +66,10 @@ struct Home: View {
                             HomeSettingsView()
                         }
                     }
-                    // 液态玻璃 TabView 视图
-                    HomeTabView(selectedTab: $selectedTab)
+                    if UIDevice.isPhone {
+                        // 液态玻璃 TabView 视图
+                        HomeTabView(selectedTab: $selectedTab)
+                    }
                 }
                 .background {
                     Background()
@@ -84,32 +91,34 @@ struct Home: View {
                         print("非活跃状态，调用Widget保存数据")
                     }
                 }
-            }
-            .blur(radius: homeVM.isTradeView ? 10 : 0)
-            
-            // 存取视图
-            if homeVM.isTradeView {
-                Color.white
-                    .opacity(0.1)
-                    .onTapGesture {
-                        focus = nil
-                    }
-                TradeView(focus: $focus)
-                    .transition(.move(edge: .bottom))   // 从底部滑上来
-                    .zIndex(1)
-            }
-            
-            if idleManager.isIdle {
-                SlientMode(isSlientMode: $idleManager.isIdle)
+                .blur(radius: homeVM.isTradeView ? 10 : 0)
+                
+                // 存取视图
+                if homeVM.isTradeView {
+                    Color.white
+                        .opacity(0.1)
+                        .onTapGesture {
+                            focus = nil
+                        }
+                    TradeView(focus: $focus)
+                        .transition(.move(edge: .bottom))   // 从底部滑上来
+                        .zIndex(1)
+                }
+                
+                if idleManager.isIdle {
+                    SlientMode(isSlientMode: $idleManager.isIdle)
+                }
             }
         }
         .environment(homeActivityVM)
         .environment(homeVM)
         .environmentObject(idleManager)
         .onAppear {
+            // 重置计时
             GlobalTouchManager.shared.onTouch = {
                 idleManager.resetTimer()
             }
+            // 设置计时
             GlobalTouchManager.shared.setup()
             // 播放音乐
             if appStorage.isActivityMusic {

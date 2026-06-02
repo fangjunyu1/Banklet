@@ -1,37 +1,43 @@
 //
-//  SingleTabView.swift
+//  SingleSideTabView.swift
 //  piglet
 //
-//  Created by 方君宇 on 2025/10/30.
+//  Created by 方君宇 on 2026/6/2.
 //
 
 import SwiftUI
 
-struct SingleTabView: View {
+struct SingleSideTabView: View {
     @Environment(\.colorScheme) var colorScheme
     var tab: HomeTab
     @Binding var selectedTab: HomeTab
     @State private var clicked = false
     var body: some View {
         Button(action: {
-            print("点击了Tab")
             clicked.toggle()
             withAnimation{ selectedTab = tab } // 设置当前的索引
         },label: {
-            VStack(spacing: 5) {
+            HStack(spacing: 16) {
                 Image(systemName: tab.icon)
-                    .imageScale(.large)
+                    .font(.system(size: 26))
                     .symbolEffect(.bounce, value: clicked)
                     .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
+                    .frame(width: 30)
                 Text(LocalizedStringKey(tab.title))
-                    .font(.footnote)
+                    .font(.title3)
                     .foregroundColor(selectedTab == tab ? AppColor.appColor : colorScheme == .light ? .gray : .white)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.3)
+                Spacer()
             }
-            .frame(width:70)
             .foregroundColor(AppColor.gray)
             .contentShape(Rectangle())
+            .padding(.vertical, 10)
+            .padding(.horizontal, 20)
+            .background {
+                AppColor.appColor
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .opacity(selectedTab == tab ? 0.1 : 0)
+            }
         })
         .buttonStyle(.plain)
     }
@@ -44,7 +50,6 @@ private struct HomeTabPreviewView: View {
             .environment(\.locale, .init(identifier: "ta"))
     }
 }
-
 #Preview {
     HomeTabPreviewView()
 }

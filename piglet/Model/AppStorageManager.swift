@@ -25,6 +25,9 @@ class AppStorageManager: ObservableObject {
         isLifetime || Date(timeIntervalSince1970: expirationDate) > Date()
     }
     
+    // 用户名称
+    var userName: String = "" { willSet { UserDefaults.standard.set(newValue, forKey: "userName")}}
+    
     // 欢迎视图
     var isCompletedWelcome: Bool = false { willSet { UserDefaults.standard.set(newValue, forKey: "isCompletedWelcome")}}
     // 活动-音乐按钮
@@ -89,6 +92,8 @@ extension AppStorageManager {
             "isVibration": true // 默认开启振动
         ])
         
+        userName = defaults.string(forKey: "userName") ?? ""  // 用户名
+        
         isCompletedWelcome = defaults.bool(forKey: "isCompletedWelcome")  // 欢迎视图
         isActivityMusic = defaults.bool(forKey: "isActivityMusic")  // 活动音乐
         isModelConfigManager = defaults.bool(forKey: "isModelConfigManager")    // 是否启用 iCloud
@@ -125,6 +130,8 @@ extension AppStorageManager {
         } // 还原加载进度标志
         let store = NSUbiquitousKeyValueStore.default
         
+        loadValueFromiCloud(key: "userName")    // 用户名
+        
         loadValueFromiCloud(key: "isActivityMusic") // 活动音乐
         loadValueFromiCloud(key: "isModelConfigManager")    // 加载 iCloud
         loadValueFromiCloud(key: "isRatingWindow")    // 评分弹窗
@@ -159,6 +166,7 @@ extension AppStorageManager {
         }
         print("iCloud中 \(key) 值为\(store.object(forKey: key) ?? "None")")
         switch key {
+        case "userName": userName = store.string(forKey: key) ?? ""
         case "isActivityMusic": isActivityMusic = store.bool(forKey: key)
         case "isModelConfigManager": isModelConfigManager = store.bool(forKey: key)
         case "isRatingWindow": isRatingWindow = store.bool(forKey: key)
