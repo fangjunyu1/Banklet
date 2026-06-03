@@ -28,19 +28,22 @@ struct SettingsProfileView: View {
     @State private var isImagePickerPresented = false
     
     var body: some View {
-        VStack(spacing: 30) {
-            // 用户头像
-            SettingsEnum.userImageView(displayName: draftName, image: draftImage, size: 100, fontSize: .system(size: 50))
-                .onTapGesture {
-                    isImagePickerPresented = true
-                }
-            // 用户名称
-            userNameTextField
-            // 提示信息
-            userTip
-            // 确认和取消按钮
-            button
-            Spacer()
+        ScrollView {
+            VStack(spacing: 30) {
+                // 用户头像
+                SettingsEnum.userImageView(displayName: draftName, image: draftImage, size: 100, fontSize: .system(size: 50))
+                    .onTapGesture {
+                        isImagePickerPresented = true
+                    }
+                // 用户名称
+                userNameTextField
+                // 提示信息
+                userTip
+                // 确认和取消按钮
+                button
+                Spacer()
+            }
+            .padding(.top, 30)
         }
         .modifier(BackgroundModifier())
         .navigationTitle("profile card")

@@ -26,7 +26,7 @@ class AppStorageManager: ObservableObject {
     }
     
     // 用户名称
-    var userName: String = "" { willSet { UserDefaults.standard.set(newValue, forKey: "userName")}}
+    var userName: String = "" { didSet {updateValue(key: "userName",newValue: userName,oldValue: oldValue)} }
     // 用户的显示名称
     var userDisplayName: String {
         userName.isEmpty ? "User" : userName
