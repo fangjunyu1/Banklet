@@ -18,7 +18,7 @@ class AppStorageManager: ObservableObject {
         observeiCloudChanges()  // 监听 iCloud 变化，同步到本地
     }
     // 防止循环写入标志
-    private var isLoading = false
+    var isLoading = false
     
     // 判断会员是否有效，显示会员功能
     var isValidMember: Bool {
@@ -27,6 +27,16 @@ class AppStorageManager: ObservableObject {
     
     // 用户名称
     var userName: String = "" { willSet { UserDefaults.standard.set(newValue, forKey: "userName")}}
+    // 用户的显示名称
+    var userDisplayName: String {
+        userName.isEmpty ? "User" : userName
+    }
+    // 用户头像，作为全局变量保存，不同步到 iCloud 和 Userdefaults
+    var userImage: UIImage?
+    // 用户名称，以 String 形式保存，默认为 userProfileImage.jpg，保持不变
+    var userImageName: String = "" { didSet {updateValue(key: "userImageName",newValue: userImageName,oldValue: oldValue)} }
+    // 检测用户头像更新情况
+    var avatarUpdatedUUID: UUID? { didSet {updateValue(key: "avatarUpdatedUUID",newValue: avatarUpdatedUUID,oldValue: oldValue)} }
     
     // 欢迎视图
     var isCompletedWelcome: Bool = false { willSet { UserDefaults.standard.set(newValue, forKey: "isCompletedWelcome")}}
@@ -93,6 +103,14 @@ extension AppStorageManager {
         ])
         
         userName = defaults.string(forKey: "userName") ?? ""  // 用户名
+        userImageName = defaults.string(forKey: "userName") ?? ""  // 用户头像
+        if let idString = defaults.string(forKey: "avatarUpdatedUUID") {
+            print("本地 avatarUpdatedUUID：\(idString)")
+            avatarUpdatedUUID = UUID(uuidString: idString) ?? UUID()
+        } else {
+            print("本地没有 avatarUpdatedUUID，avatarUpdatedUUID 为 nil")
+            avatarUpdatedUUID = nil
+        }
         
         isCompletedWelcome = defaults.bool(forKey: "isCompletedWelcome")  // 欢迎视图
         isActivityMusic = defaults.bool(forKey: "isActivityMusic")  // 活动音乐
@@ -131,6 +149,8 @@ extension AppStorageManager {
         let store = NSUbiquitousKeyValueStore.default
         
         loadValueFromiCloud(key: "userName")    // 用户名
+        loadValueFromiCloud(key: "userImageName")  // 用户头像
+        loadValueFromiCloud(key: "avatarUpdatedUUID")   // 获取用户头像的 UUID()
         
         loadValueFromiCloud(key: "isActivityMusic") // 活动音乐
         loadValueFromiCloud(key: "isModelConfigManager")    // 加载 iCloud
@@ -158,7 +178,7 @@ extension AppStorageManager {
 
 // MARK: - 更新字段，保存到 UserDefaults，并尝试同步 iCloud
 extension AppStorageManager {
-    private func loadValueFromiCloud(key: String) {
+    func loadValueFromiCloud(key: String) {
         let store = NSUbiquitousKeyValueStore.default
         guard store.object(forKey: key) != nil else {
             print("iCloud中无 \(key)，保持本地值，不同步。")
@@ -167,6 +187,16 @@ extension AppStorageManager {
         print("iCloud中 \(key) 值为\(store.object(forKey: key) ?? "None")")
         switch key {
         case "userName": userName = store.string(forKey: key) ?? ""
+        case "userImageName": userImageName = store.string(forKey: key) ?? ""
+        case "avatarUpdatedUUID":
+            if let idString = store.string(forKey: key) {
+                print("本地 avatarUpdatedUUID：\(idString)")
+                avatarUpdatedUUID = UUID(uuidString: idString) ?? UUID()
+            } else {
+                print("iCloud 没有 avatarUpdatedUUID，avatarUpdatedUUID 为 nil)")
+                avatarUpdatedUUID = nil
+            }
+            
         case "isActivityMusic": isActivityMusic = store.bool(forKey: key)
         case "isModelConfigManager": isModelConfigManager = store.bool(forKey: key)
         case "isRatingWindow": isRatingWindow = store.bool(forKey: key)
@@ -194,15 +224,40 @@ extension AppStorageManager {
 // MARK: - 更新字段，保存到 UserDefaults，并尝试同步 iCloud
 extension AppStorageManager {
     private func updateValue<T:Equatable>(key: String, newValue: T, oldValue: T) {
+        print("进入 updateValue 方法,newValue:\(newValue), oldValue:\(oldValue), isLoading:\(isLoading)")
         guard newValue != oldValue, !isLoading else { return }
+        print("完成校验")
         
+        print("更新本地数据，并将 \(key) 数据同步到 iCloud")
         // 同步保存到本地
         let defaults = UserDefaults.standard
-        defaults.set(newValue, forKey: key)
-        
-        // iCloud
         let store = NSUbiquitousKeyValueStore.default
-        store.set(newValue, forKey: key)
+        
+        // 处理 Date? 类型
+        if let dateValue = newValue as? Date {
+            let timestamp = dateValue.timeIntervalSince1970
+            defaults.set(timestamp, forKey: key)
+            store.set(timestamp, forKey: key)
+        } else if let setValue = newValue as? Set<Int> {
+            let arrayValue = Array(setValue).sorted()
+            defaults.set(arrayValue, forKey: key)
+            store.set(arrayValue, forKey: key)
+        } else if let optionalUUID = newValue as? UUID? {
+            if let uuid = optionalUUID {
+                defaults.set(uuid.uuidString, forKey: key)
+                store.set(uuid.uuidString, forKey: key)
+            }
+        }
+        
+        // 处理其他类型
+        else {
+            defaults.set(newValue, forKey: key)
+            store.set(newValue, forKey: key)
+        }
         store.synchronize()
+        
+        print("完成数据更新 ✅")
+        print("本地数据:\(defaults.object(forKey: key) ?? "nil")")
+        print("iCloud数据:\(store.object(forKey: key) ?? "nil")")
     }
 }

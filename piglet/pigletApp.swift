@@ -16,6 +16,7 @@ struct pigletApp: App {
     @State private var modelConfigManager = ModelConfigManager.shared
     @State private var dataController = DataController.shared
     @State private var sound = SoundManager.shared
+    @State var avatarImage = AvatarImage.shared
     @Environment(\.scenePhase) var scenePhase
     
     init() {
@@ -34,6 +35,9 @@ struct pigletApp: App {
                 .task {
                     await iapManager.loadProduct()   // 加载产品信息
                     await iapManager.handleTransactions()   // 加载内购交易更新
+                }
+                .task(id: appStorage.avatarUpdatedUUID) {
+                    await avatarImage.loadAvatar(appStorage: appStorage)
                 }
         }
         .environment(sound)

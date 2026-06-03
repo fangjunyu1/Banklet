@@ -9,7 +9,6 @@ import SwiftUI
 
 // MARK: - 监听iCloud变化
 extension AppStorageManager {
-    
     /// 监听 iCloud 变化，同步到本地
     func observeiCloudChanges() {
         NotificationCenter.default.addObserver(
@@ -19,15 +18,28 @@ extension AppStorageManager {
             object: NSUbiquitousKeyValueStore.default
         )
     }
-    
+
     /// iCloud 数据变化时，更新本地数据
-    @objc private func iCloudDidUpdate(notification: Notification) {
-        print("iCloud数据发生变化，更新本地数据")
-        DispatchQueue.main.async {
-            self.loadFromiCloud()
+    @objc func iCloudDidUpdate(notification: Notification) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            
+            guard let userInfo = notification.userInfo,
+                  let changedKeys = userInfo[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String] else {
+                self.loadFromiCloud()
+                return
+            }
+            
+            self.isLoading = true
+            defer { self.isLoading = false }
+            
+            for key in changedKeys {
+                self.loadValueFromiCloud(key: key)
+            }
         }
     }
 }
+
 
 // MARK: - 迁移旧的数值
 extension AppStorageManager {

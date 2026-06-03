@@ -33037,6 +33037,378 @@
         }
       }
     },
+    "Free Account" : {
+      "comment" : "免费账户",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حساب مجاني"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsuz hesab"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Безплатен акаунт"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ফ্রি অ্যাকাউন্ট"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compte gratuït"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libre nga Account"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezplatný účet"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis konto"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kostenloses Konto"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δωρεάν λογαριασμός"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free Account"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuenta gratis"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasuta konto"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حساب رایگان"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ilmainen tili"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libreng Account"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compte gratuit"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuntas saor in aisce"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "મફત ખાતું"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חשבון חינמי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मुफ़्त खाता"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besplatan račun"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingyenes fiók"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akun gratis"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ókeypis reikningur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account gratuito"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無料アカウント"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akun Gratis"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тегін аккаунт"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "គណនីឥតគិតថ្លៃ"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ಉಚಿತ ಖಾತೆ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무료 계정"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nemokama paskyra"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezmaksas konts"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "സൗജന്യ അക്കൗണ്ട്"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मोफत खाते"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akaun percuma"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "အခမဲ့ အကောင့်"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis konto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis account"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ମାଗଣା ଖାତା"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਮੁਫ਼ਤ ਖਾਤਾ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Darmowe konto"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conta gratuita"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cont gratuit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бесплатный аккаунт"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bezplatný účet"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brezplačen račun"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Llogari falas"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gratis konto"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akaunti bila malipo"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "இலவச கணக்கு"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ఉచిత ఖాతా"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บัญชีฟรี"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ücretsiz Hesap"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Безкоштовний акаунт"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفت اکاؤنٹ"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bepul hisob"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tài khoản miễn phí"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "免费账户"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "免費帳戶"
+          }
+        }
+      }
+    },
     "GBP" : {
       "comment" : "英镑",
       "extractionState" : "manual",
@@ -58752,6 +59124,750 @@
         }
       }
     },
+    "profile card" : {
+      "comment" : "个人信息",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المعلومات الشخصية"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi məlumat"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лична информация"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ব্যক্তিগত তথ্য"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informació personal"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal nga Impormasyon"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osobní údaje"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personlige oplysninger"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persönliche Daten"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Προσωπικά στοιχεία"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal Info"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información personal"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isikuandmed"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اطلاعات شخصی"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henkilötiedot"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal na Impormasyon"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos personnelles"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eolas pearsanta"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "વ્યક્તિગત માહિતી"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מידע אישי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "व्यक्तिगत जानकारी"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osobni podaci"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Személyes adatok"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info pribadi"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persónuupplýsingar"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info personali"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人情報"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info Pribadi"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жеке ақпарат"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ព័ត៌មានផ្ទាល់ខ្លួន"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개인 정보"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asmeninė informacija"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personiskā informācija"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "സ്വകാര്യ വിവരം"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वैयक्तिक माहिती"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maklumat peribadi"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ကိုယ်ရေးအချက်အလက်"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personlig info"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persoonlijke info"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ବ୍ୟକ୍ତିଗତ ସୂଚନା"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਨਿੱਜੀ ਜਾਣਕਾਰੀ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dane osobowe"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informações pessoais"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informații personale"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личная информация"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osobné údaje"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Osebni podatki"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Të dhëna personale"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personlig info"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taarifa binafsi"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "தனிப்பட்ட தகவல்"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "వ్యక్తిగత సమాచారం"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้อมูลส่วนตัว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kişisel Bilgiler"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особиста інформація"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ذاتی معلومات"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shaxsiy ma’lumot"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thông tin cá nhân"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "个人信息"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "個人資訊"
+          }
+        }
+      }
+    },
+    "ProfilTip" : {
+      "comment" : "设置视图中关于用户信息的提示",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتم حفظ صورة المستخدم واسمه على الجهاز المحلي افتراضيًا. إذا تم تمكين iCloud للتطبيق، فسيتم رفع صورة المستخدم واسمه تلقائيًا إلى iCloud للمزامنة والمشاركة بين عدة أجهزة."
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İstifadəçinin şəkli və adı standart olaraq yerli cihazda saxlanılır. Tətbiq üçün iCloud aktivdirsə, istifadəçinin şəkli və adı avtomatik olaraq iCloud-a yüklənəcək və bir neçə cihaz arasında sinxronizasiya və paylaşım təmin ediləcək."
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По подразбиране снимката и името на потребителя се запазват на локалното устройство. Ако iCloud е активиран за приложението, снимката и името на потребителя автоматично ще се качват в iCloud за синхронизиране и споделяне между няколко устройства."
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ব্যবহারকারীর ছবি ও নাম ডিফল্টভাবে স্থানীয় ডিভাইসে সংরক্ষিত থাকে। অ্যাপে iCloud চালু থাকলে, ব্যবহারকারীর ছবি ও নাম স্বয়ংক্রিয়ভাবে iCloud-এ আপলোড হবে, যাতে একাধিক ডিভাইসে সিঙ্ক ও শেয়ার করা যায়।"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La imatge i el nom de l'usuari es desen per defecte al dispositiu local. Si l'iCloud està activat a l'app, la imatge i el nom de l'usuari es pujaran automàticament a l'iCloud per sincronitzar-los i compartir-los entre diversos dispositius."
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ang hulagway ug ngalan sa user i-save sa lokal nga device isip default. Kung naka-enable ang iCloud sa app, awtomatikong i-upload sa iCloud ang hulagway ug ngalan sa user para ma-sync ug ma-share sa daghang device."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrázek a jméno uživatele se ve výchozím nastavení ukládají do místního zařízení. Pokud je pro aplikaci zapnutý iCloud, obrázek a jméno uživatele se automaticky nahrají na iCloud pro synchronizaci a sdílení mezi více zařízeními."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brugerens billede og navn gemmes som standard på den lokale enhed. Hvis iCloud er aktiveret for appen, uploades brugerens billede og navn automatisk til iCloud, så de kan synkroniseres og deles mellem flere enheder."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Bild und der Name des Benutzers werden standardmäßig auf dem lokalen Gerät gespeichert. Wenn iCloud für die App aktiviert ist, werden Bild und Name des Benutzers automatisch in iCloud hochgeladen, um sie auf mehreren Geräten zu synchronisieren und zu teilen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η εικόνα και το όνομα του χρήστη αποθηκεύονται από προεπιλογή στην τοπική συσκευή. Αν το iCloud είναι ενεργοποιημένο για την εφαρμογή, η εικόνα και το όνομα του χρήστη θα μεταφορτώνονται αυτόματα στο iCloud για συγχρονισμό και κοινή χρήση σε πολλές συσκευές."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The user's picture and name are saved on the local device by default. If iCloud is enabled for the app, the user's picture and name will be automatically uploaded to iCloud for syncing and sharing across multiple devices."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La imagen y el nombre del usuario se guardan de forma predeterminada en el dispositivo local. Si iCloud está activado para la app, la imagen y el nombre del usuario se subirán automáticamente a iCloud para sincronizarlos y compartirlos entre varios dispositivos."
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kasutaja pilt ja nimi salvestatakse vaikimisi kohalikku seadmesse. Kui iCloud on rakenduse jaoks lubatud, laaditakse kasutaja pilt ja nimi automaatselt iCloudi, et neid mitme seadme vahel sünkroonida ja jagada."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصویر و نام کاربر به‌طور پیش‌فرض روی دستگاه محلی ذخیره می‌شود. اگر iCloud برای برنامه فعال باشد، تصویر و نام کاربر به‌طور خودکار در iCloud بارگذاری می‌شود تا بین چند دستگاه همگام‌سازی و به‌اشتراک گذاشته شود."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyttäjän kuva ja nimi tallennetaan oletuksena paikalliselle laitteelle. Jos iCloud on käytössä sovelluksessa, käyttäjän kuva ja nimi ladataan automaattisesti iCloudiin synkronointia ja jakamista varten useiden laitteiden välillä."
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ang larawan at pangalan ng user ay naka-save sa lokal na device bilang default. Kung naka-enable ang iCloud para sa app, awtomatikong ia-upload sa iCloud ang larawan at pangalan ng user para ma-sync at ma-share sa maraming device."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La photo et le nom de l'utilisateur sont enregistrés par défaut sur l'appareil local. Si iCloud est activé pour l'app, la photo et le nom de l'utilisateur seront automatiquement téléversés vers iCloud pour être synchronisés et partagés entre plusieurs appareils."
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sábháiltear pictiúr agus ainm an úsáideora ar an ngléas áitiúil de réir réamhshocraithe. Má tá iCloud cumasaithe don aip, uaslódálfar pictiúr agus ainm an úsáideora go huathoibríoch chuig iCloud chun iad a shioncronú agus a roinnt thar ghléasanna éagsúla."
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "વપરાશકર્તાનું ચિત્ર અને નામ મૂળભૂત રીતે સ્થાનિક ઉપકરણમાં સાચવાય છે. જો એપ માટે iCloud સક્ષમ હોય, તો વપરાશકર્તાનું ચિત્ર અને નામ આપમેળે iCloud પર અપલોડ થશે જેથી તે અનેક ઉપકરણો વચ્ચે સિંક અને શેર થઈ શકે."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תמונת המשתמש ושמו נשמרים כברירת מחדל במכשיר המקומי. אם iCloud מופעל עבור האפליקציה, תמונת המשתמש ושמו יועלו אוטומטית ל-iCloud לצורך סנכרון ושיתוף בין כמה מכשירים."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपयोगकर्ता की तस्वीर और नाम डिफ़ॉल्ट रूप से स्थानीय डिवाइस पर सहेजे जाते हैं। यदि ऐप के लिए iCloud सक्षम है, तो उपयोगकर्ता की तस्वीर और नाम कई डिवाइसों के बीच सिंक और साझा करने के लिए अपने आप iCloud पर अपलोड हो जाएंगे।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korisnikova slika i ime prema zadanim se postavkama spremaju na lokalni uređaj. Ako je iCloud omogućen za aplikaciju, korisnikova slika i ime automatski će se prenijeti na iCloud radi sinkronizacije i dijeljenja na više uređaja."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A felhasználó képe és neve alapértelmezés szerint a helyi eszközön kerül mentésre. Ha az iCloud engedélyezve van az alkalmazásban, a felhasználó képe és neve automatikusan feltöltődik az iCloudba, hogy több eszköz között szinkronizálható és megosztható legyen."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar dan nama pengguna disimpan di perangkat lokal secara default. Jika iCloud diaktifkan untuk app, gambar dan nama pengguna akan otomatis diunggah ke iCloud untuk disinkronkan dan dibagikan di beberapa perangkat."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mynd og nafn notandans eru sjálfgefið vistuð á staðbundna tækinu. Ef iCloud er virkt fyrir appið verður mynd og nafni notandans sjálfkrafa hlaðið upp í iCloud til samstillingar og deilingar milli margra tækja."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'immagine e il nome dell'utente vengono salvati di default sul dispositivo locale. Se iCloud è abilitato per l'app, l'immagine e il nome dell'utente verranno caricati automaticamente su iCloud per la sincronizzazione e la condivisione tra più dispositivi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーザーの画像と名前はデフォルトでローカルデバイスに保存されます。アプリでiCloudが有効になっている場合、ユーザーの画像と名前は自動的にiCloudへアップロードされ、複数のデバイス間で同期および共有されます。"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar lan jeneng pangguna kanthi gawan disimpen ing piranti lokal. Yen iCloud diaktifake kanggo app iki, gambar lan jeneng pangguna bakal otomatis diunggah menyang iCloud supaya bisa disinkronake lan dibagi ing pirang-pirang piranti."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пайдаланушының суреті мен аты әдепкі бойынша жергілікті құрылғыда сақталады. Қолданбада iCloud қосылған болса, пайдаланушының суреті мен аты бірнеше құрылғы арасында синхрондау және бөлісу үшін iCloud-қа автоматты түрде жүктеледі."
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "រូបភាព និងឈ្មោះអ្នកប្រើត្រូវបានរក្សាទុកលើឧបករណ៍មូលដ្ឋានតាមលំនាំដើម។ ប្រសិនបើបានបើក iCloud សម្រាប់កម្មវិធី រូបភាព និងឈ្មោះអ្នកប្រើនឹងត្រូវបានបង្ហោះទៅ iCloud ដោយស្វ័យប្រវត្តិ ដើម្បីធ្វើសមកាលកម្ម និងចែករំលែករវាងឧបករណ៍ជាច្រើន។"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ಬಳಕೆದಾರರ ಚಿತ್ರ ಮತ್ತು ಹೆಸರು ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಸ್ಥಳೀಯ ಸಾಧನದಲ್ಲಿ ಉಳಿಸಲಾಗುತ್ತದೆ. ಆಪ್‌ಗೆ iCloud ಸಕ್ರಿಯವಾಗಿದ್ದರೆ, ಬಳಕೆದಾರರ ಚಿತ್ರ ಮತ್ತು ಹೆಸರು ಅನೇಕ ಸಾಧನಗಳ ನಡುವೆ ಸಿಂಕ್ ಮತ್ತು ಹಂಚಿಕೊಳ್ಳಲು ಸ್ವಯಂಚಾಲಿತವಾಗಿ iCloud ಗೆ ಅಪ್‌ಲೋಡ್ ಆಗುತ್ತದೆ."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자의 사진과 이름은 기본적으로 로컬 기기에 저장됩니다. 앱에서 iCloud가 활성화되어 있으면 사용자의 사진과 이름이 자동으로 iCloud에 업로드되어 여러 기기 간에 동기화 및 공유됩니다."
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naudotojo paveikslėlis ir vardas pagal numatytuosius nustatymus išsaugomi vietiniame įrenginyje. Jei programoje įjungtas iCloud, naudotojo paveikslėlis ir vardas bus automatiškai įkelti į iCloud, kad būtų sinchronizuojami ir bendrinami keliuose įrenginiuose."
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lietotāja attēls un vārds pēc noklusējuma tiek saglabāti vietējā ierīcē. Ja lietotnei ir iespējots iCloud, lietotāja attēls un vārds tiks automātiski augšupielādēti iCloud, lai tos sinhronizētu un kopīgotu vairākās ierīcēs."
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ഉപയോക്താവിന്റെ ചിത്രംയും പേരും ഡിഫോൾട്ടായി ലോക്കൽ ഉപകരണത്തിൽ സംരക്ഷിക്കുന്നു. ആപ്പിനായി iCloud പ്രവർത്തനക്ഷമമാക്കിയാൽ, ഉപയോക്താവിന്റെ ചിത്രംയും പേരും ഒന്നിലധികം ഉപകരണങ്ങളിൽ സിങ്ക് ചെയ്യാനും പങ്കിടാനും സ്വയം iCloud-ലേക്ക് അപ്‌ലോഡ് ചെയ്യും."
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वापरकर्त्याचे चित्र आणि नाव डीफॉल्टनुसार स्थानिक डिव्हाइसवर जतन केले जाते. अॅपसाठी iCloud सक्षम असल्यास, वापरकर्त्याचे चित्र आणि नाव अनेक डिव्हाइसवर सिंक व शेअर करण्यासाठी आपोआप iCloud वर अपलोड केले जाईल."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gambar dan nama pengguna disimpan pada peranti setempat secara lalai. Jika iCloud didayakan untuk app, gambar dan nama pengguna akan dimuat naik secara automatik ke iCloud untuk disegerakkan dan dikongsi merentas berbilang peranti."
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "အသုံးပြုသူ၏ ပုံနှင့် အမည်ကို ပုံမှန်အားဖြင့် ဒေသတွင်း စက်တွင် သိမ်းဆည်းထားသည်။ အက်ပ်အတွက် iCloud ဖွင့်ထားပါက အသုံးပြုသူ၏ ပုံနှင့် အမည်ကို စက်များစွာအကြား စင့်ခ်လုပ်ပြီး မျှဝေရန် iCloud သို့ အလိုအလျောက် အပ်လုဒ်လုပ်ပါမည်။"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukerens bilde og navn lagres som standard på den lokale enheten. Hvis iCloud er aktivert for appen, lastes brukerens bilde og navn automatisk opp til iCloud for synkronisering og deling på flere enheter."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De afbeelding en naam van de gebruiker worden standaard op het lokale apparaat opgeslagen. Als iCloud is ingeschakeld voor de app, worden de afbeelding en naam van de gebruiker automatisch geüpload naar iCloud om te synchroniseren en te delen tussen meerdere apparaten."
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ବ୍ୟବହାରକାରୀଙ୍କ ଛବି ଓ ନାମ ଡିଫଲ୍ଟ ଭାବେ ସ୍ଥାନୀୟ ଡିଭାଇସରେ ସେଭ୍ ହୁଏ। ଆପ୍ ପାଇଁ iCloud ସକ୍ରିୟ ଥିଲେ, ବ୍ୟବହାରକାରୀଙ୍କ ଛବି ଓ ନାମ ସ୍ୱୟଂଚାଳିତ ଭାବେ iCloud କୁ ଅପଲୋଡ୍ ହେବ, ଯାହା ଅନେକ ଡିଭାଇସ ମଧ୍ୟରେ ସିଙ୍କ ଓ ସେୟାର ହୋଇପାରିବ।"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਵਰਤੋਂਕਾਰ ਦੀ ਤਸਵੀਰ ਅਤੇ ਨਾਮ ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਥਾਨਕ ਡਿਵਾਈਸ ਤੇ ਸੇਵ ਹੁੰਦੇ ਹਨ। ਜੇ ਐਪ ਲਈ iCloud ਚਾਲੂ ਹੈ, ਤਾਂ ਵਰਤੋਂਕਾਰ ਦੀ ਤਸਵੀਰ ਅਤੇ ਨਾਮ ਕਈ ਡਿਵਾਈਸਾਂ ਵਿਚਕਾਰ ਸਿੰਕ ਅਤੇ ਸਾਂਝੇ ਕਰਨ ਲਈ ਆਪਣੇ ਆਪ iCloud ਤੇ ਅੱਪਲੋਡ ਹੋ ਜਾਣਗੇ।"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdjęcie i nazwa użytkownika są domyślnie zapisywane na urządzeniu lokalnym. Jeśli iCloud jest włączony dla aplikacji, zdjęcie i nazwa użytkownika zostaną automatycznie przesłane do iCloud w celu synchronizacji i udostępniania na wielu urządzeniach."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A imagem e o nome do usuário são salvos por padrão no dispositivo local. Se o iCloud estiver ativado para o app, a imagem e o nome do usuário serão enviados automaticamente ao iCloud para sincronização e compartilhamento entre vários dispositivos."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imaginea și numele utilizatorului sunt salvate implicit pe dispozitivul local. Dacă iCloud este activat pentru aplicație, imaginea și numele utilizatorului vor fi încărcate automat în iCloud pentru sincronizare și partajare pe mai multe dispozitive."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изображение и имя пользователя по умолчанию сохраняются на локальном устройстве. Если для приложения включен iCloud, изображение и имя пользователя будут автоматически загружаться в iCloud для синхронизации и общего доступа на нескольких устройствах."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrázok a meno používateľa sa predvolene ukladajú do miestneho zariadenia. Ak je pre apku zapnutý iCloud, obrázok a meno používateľa sa automaticky nahrajú do iCloudu na synchronizáciu a zdieľanie medzi viacerými zariadeniami."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slika in ime uporabnika sta privzeto shranjena v lokalni napravi. Če je iCloud omogočen za aplikacijo, se bosta slika in ime uporabnika samodejno naložila v iCloud za sinhronizacijo in skupno rabo med več napravami."
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Figura dhe emri i përdoruesit ruhen si parazgjedhje në pajisjen lokale. Nëse iCloud është aktivizuar për aplikacionin, figura dhe emri i përdoruesit do të ngarkohen automatikisht në iCloud për sinkronizim dhe ndarje në disa pajisje."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Användarens bild och namn sparas som standard på den lokala enheten. Om iCloud är aktiverat för appen laddas användarens bild och namn automatiskt upp till iCloud för synkronisering och delning mellan flera enheter."
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Picha na jina la mtumiaji huhifadhiwa kwenye kifaa cha karibu kwa chaguo-msingi. Ikiwa iCloud imewashwa kwa programu, picha na jina la mtumiaji zitapakiwa kiotomatiki kwenye iCloud ili kusawazishwa na kushirikiwa kwenye vifaa vingi."
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "பயனரின் படம் மற்றும் பெயர் இயல்பாக உள்ளூர் சாதனத்தில் சேமிக்கப்படும். பயன்பாட்டிற்கு iCloud இயக்கப்பட்டிருந்தால், பயனரின் படம் மற்றும் பெயர் பல சாதனங்களுக்கு இடையே ஒத்திசைக்கவும் பகிரவும் தானாகவே iCloud-க்கு பதிவேற்றப்படும்."
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "వినియోగదారుడి చిత్రం మరియు పేరు డిఫాల్ట్‌గా స్థానిక పరికరంలో సేవ్ అవుతాయి. యాప్‌కు iCloud ప్రారంభించబడితే, వినియోగదారుడి చిత్రం మరియు పేరు అనేక పరికరాల మధ్య సింక్ చేసి పంచుకోవడానికి స్వయంచాలకంగా iCloud కు అప్‌లోడ్ అవుతాయి."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รูปภาพและชื่อของผู้ใช้จะบันทึกไว้ในอุปกรณ์ภายในเครื่องตามค่าเริ่มต้น หากเปิดใช้ iCloud สำหรับแอป รูปภาพและชื่อของผู้ใช้จะถูกอัปโหลดไปยัง iCloud โดยอัตโนมัติ เพื่อซิงค์และแชร์ระหว่างอุปกรณ์หลายเครื่อง"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanıcının resmi ve adı varsayılan olarak yerel aygıtta kaydedilir. Uygulama için iCloud etkinleştirilirse, kullanıcının resmi ve adı birden fazla aygıt arasında eşzamanlamak ve paylaşmak için otomatik olarak iCloud'a yüklenir."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зображення та ім’я користувача за замовчуванням зберігаються на локальному пристрої. Якщо для застосунку ввімкнено iCloud, зображення та ім’я користувача автоматично завантажуватимуться в iCloud для синхронізації та спільного доступу між кількома пристроями."
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صارف کی تصویر اور نام بطور ڈیفالٹ مقامی ڈیوائس پر محفوظ کیے جاتے ہیں۔ اگر ایپ کے لیے iCloud فعال ہو، تو صارف کی تصویر اور نام متعدد ڈیوائسز کے درمیان مطابقت پذیری اور اشتراک کے لیے خودکار طور پر iCloud پر اپ لوڈ ہو جائیں گے۔"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foydalanuvchining rasmi va nomi odatda mahalliy qurilmada saqlanadi. Ilova uchun iCloud yoqilgan bo‘lsa, foydalanuvchining rasmi va nomi bir nechta qurilmalar o‘rtasida sinxronlash va ulashish uchun avtomatik ravishda iCloud’ga yuklanadi."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ảnh và tên của người dùng được lưu trên thiết bị cục bộ theo mặc định. Nếu iCloud được bật cho ứng dụng, ảnh và tên của người dùng sẽ tự động được tải lên iCloud để đồng bộ hóa và chia sẻ trên nhiều thiết bị."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用户的图片和名称默认保存在本地设备中。如果应用启用了 iCloud，用户的图片和名称将自动上传至 iCloud，实现多个设备间的同步和共享。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用者的圖片和名稱預設儲存在本機裝置中。如果應用程式啟用了 iCloud，使用者的圖片和名稱將自動上傳至 iCloud，實現多個裝置間的同步和共享。"
+          }
+        }
+      }
+    },
     "Purchase Membership" : {
       "comment" : "购买会员",
       "extractionState" : "manual",
@@ -64622,6 +65738,378 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沙烏地里亞爾"
+          }
+        }
+      }
+    },
+    "save" : {
+      "comment" : "保存",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        },
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saxla"
+          }
+        },
+        "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запази"
+          }
+        },
+        "bn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "সংরক্ষণ"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desa"
+          }
+        },
+        "ceb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I-save"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αποθήκευση"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
+        },
+        "et" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvesta"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ذخیره"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna"
+          }
+        },
+        "fil" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I-save"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer"
+          }
+        },
+        "ga" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sábháil"
+          }
+        },
+        "gu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "સાચવો"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שמירה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सहेजें"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spremi"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mentés"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "jv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpen"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сақтау"
+          }
+        },
+        "km" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "រក្សាទុក"
+          }
+        },
+        "kn" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ಉಳಿಸಿ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        },
+        "lt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Išsaugoti"
+          }
+        },
+        "lv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saglabāt"
+          }
+        },
+        "ml" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "സംരക്ഷിക്കുക"
+          }
+        },
+        "mr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जतन करा"
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        },
+        "my" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "သိမ်းရန်"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar"
+          }
+        },
+        "or" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ସେଭ୍ କରନ୍ତୁ"
+          }
+        },
+        "pa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ਸੇਵ ਕਰੋ"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvar"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvează"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložiť"
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shrani"
+          }
+        },
+        "sq" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruaj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
+        },
+        "sw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hifadhi"
+          }
+        },
+        "ta" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "சேமி"
+          }
+        },
+        "te" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "సేవ్"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зберегти"
+          }
+        },
+        "ur" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محفوظ کریں"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saqlash"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
           }
         }
       }

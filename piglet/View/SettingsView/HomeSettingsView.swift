@@ -24,6 +24,10 @@ struct HomeSettingsView: View {
             Spacer().frame(height:20)
             // 外层，分隔所有组件视图
             VStack(spacing: 16) {
+                
+                // 个人头像
+                AccountSectionView()
+                
                 // 启用iCloud
                 HomeSettingRow(color: .color("226AD6"),icon: .sficon("icloud.fill"),title: "Enable iCloud",footnote:"iCloud is in beta, so please be careful when switching on and off.", accessory: .toggle($appStorage.isModelConfigManager, modelConfigManager))
                 

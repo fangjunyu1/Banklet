@@ -222,6 +222,10 @@
 		1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */; };
 		1D42C27F2ED9890B007A890A /* IdleTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */; };
 		1D4542BC2EF01AEF0042C564 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4542BB2EF01AE40042C564 /* Background.swift */; };
+		1D45CADF2FCFC39300BA028B /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45CADE2FCFC39200BA028B /* ImagePickerViewController.swift */; };
+		1D45CAE02FCFC51C00BA028B /* SettingsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45CADC2FCFC2C700BA028B /* SettingsProfileView.swift */; };
+		1D45CAE32FCFC66A00BA028B /* iCloudFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45CAE22FCFC66900BA028B /* iCloudFileManager.swift */; };
+		1D45CAE52FCFCA7300BA028B /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45CAE42FCFCA7100BA028B /* AvatarImage.swift */; };
 		1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
@@ -242,6 +246,7 @@
 		1D69821C2ECEF48F0040CD37 /* HomeCreateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */; };
 		1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */; };
 		1D6982222ECF554D0040CD37 /* CreateComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6982212ECF554D0040CD37 /* CreateComplete.json */; };
+		1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */; };
 		1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */; };
 		1D6E81252ECE07A100C88269 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81242ECE079F00C88269 /* DataController.swift */; };
 		1D73596E2D6425F700F7D599 /* BankletWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */; };
@@ -610,6 +615,10 @@
 		1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTouchManager.swift; sourceTree = "<group>"; };
 		1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerManager.swift; sourceTree = "<group>"; };
 		1D4542BB2EF01AE40042C564 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		1D45CADC2FCFC2C700BA028B /* SettingsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileView.swift; sourceTree = "<group>"; };
+		1D45CADE2FCFC39200BA028B /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		1D45CAE22FCFC66900BA028B /* iCloudFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudFileManager.swift; sourceTree = "<group>"; };
+		1D45CAE42FCFCA7100BA028B /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
 		1D532C6D2FCD0F2E003E7E1E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D532C6E2FCD0F2E003E7E1E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsEnum.swift; sourceTree = "<group>"; };
@@ -634,6 +643,7 @@
 		1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateTitleView.swift; sourceTree = "<group>"; };
 		1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateInputView.swift; sourceTree = "<group>"; };
 		1D6982212ECF554D0040CD37 /* CreateComplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateComplete.json; sourceTree = "<group>"; };
+		1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSectionView.swift; sourceTree = "<group>"; };
 		1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTipsModifier.swift; sourceTree = "<group>"; };
 		1D6E81242ECE079F00C88269 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1D73596D2D6425F700F7D599 /* BankletWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankletWatchApp.swift; sourceTree = "<group>"; };
@@ -978,6 +988,7 @@
 		1D2F9A5D2BFCA53C005C8676 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D45CAE12FCFC66300BA028B /* Components */,
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
 				1D845F4D2D23F3C000EDE480 /* Home.swift */,
@@ -1003,6 +1014,14 @@
 				1DEC987F2C10315500BEECFF /* Bundle.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D45CAE12FCFC66300BA028B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1D45CAE22FCFC66900BA028B /* iCloudFileManager.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		1D4E1E012ED0293500717238 /* TradeView */ = {
@@ -1328,8 +1347,10 @@
 		1DBCF41B2EB8DA6600B85BF4 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */,
 				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
+				1D45CADC2FCFC2C700BA028B /* SettingsProfileView.swift */,
 				1DCB0C542D3759D00037153C /* GeneralView.swift */,
 				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
 				1D3E13D62D49ADCC00747D20 /* AnimationView.swift */,
@@ -1365,6 +1386,8 @@
 		1DCBEDC22C02B776005BFFFA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D45CAE42FCFCA7100BA028B /* AvatarImage.swift */,
+				1D45CADE2FCFC39200BA028B /* ImagePickerViewController.swift */,
 				1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */,
 				1D7728442ED08D880046B35B /* HomeViewModel.swift */,
 				1D7728402ED06DEE0046B35B /* TradeViewModel.swift */,
@@ -1929,6 +1952,7 @@
 				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
+				1D45CAE32FCFC66A00BA028B /* iCloudFileManager.swift in Sources */,
 				1DC5248E2ECD913200E48964 /* ActivityCompleteView.swift in Sources */,
 				1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */,
 				1DE765B92D36718C00A55D36 /* HomeMoreInformationView.swift in Sources */,
@@ -1939,6 +1963,7 @@
 				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
 				1D8C38702ECC1D1600F7CAD5 /* ActivityContentTitle.swift in Sources */,
 				1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */,
+				1D45CAE52FCFCA7300BA028B /* AvatarImage.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */,
 				1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */,
@@ -2010,6 +2035,7 @@
 				1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */,
 				1D66C4CB2EBD9F3400001CF5 /* HomeStatsEmptyView.swift in Sources */,
 				1DD14EDE2EC0311700325DF7 /* LockApp.swift in Sources */,
+				1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */,
 				1D11245A2EE14DBD00E87CCC /* HomePrimaryBankAdvancedFeatures.swift in Sources */,
 				1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */,
 				1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */,
@@ -2019,6 +2045,7 @@
 				1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */,
 				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
+				1D45CAE02FCFC51C00BA028B /* SettingsProfileView.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
 				1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */,
 				1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */,
@@ -2039,6 +2066,7 @@
 				1DE45C6E2EB38D6C0079F76E /* backgroundImageView.swift in Sources */,
 				1DE164412D324CDA0010A78A /* SavingsRecord.swift in Sources */,
 				1D8C38722ECC1D6800F7CAD5 /* ActivityContentInput.swift in Sources */,
+				1D45CADF2FCFC39300BA028B /* ImagePickerViewController.swift in Sources */,
 				1DD089612EC1CD7D002EE03D /* HapticManager.swift in Sources */,
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
@@ -2473,7 +2501,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
@@ -2514,7 +2542,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
