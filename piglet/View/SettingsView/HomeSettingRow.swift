@@ -73,20 +73,6 @@ struct HomeSettingPremiumRow: View {
     }
     
     var body: some View {
-        var textColor: Color {
-            if colorScheme == .light {
-                isValidMember ? .white : .black
-            } else {
-                .white
-            }
-        }
-        var bgColor: Color {
-            if colorScheme == .light {
-                isValidMember ? AppColor.appColor : .white
-            } else {
-                isValidMember ? AppColor.appColor.opacity(0.8) : AppColor.appGrayColor
-            }
-        }
         VStack {
             HStack {
                 // 图标
@@ -105,27 +91,25 @@ struct HomeSettingPremiumRow: View {
                 Text(LocalizedStringKey(title))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-                    .foregroundColor(textColor)
                 Spacer()
-                if isLifetime {
-                    Text("Permanently valid")
-                        .font(.footnote)
-                        .foregroundColor(.white)
-                } else if isValidMember {
-                    VStack(alignment:.trailing, spacing:3) {
-                        // 到期时间
-                        Text("Expiry date")
-                        Text(formattedDate(date))
-                    }
-                    .font(.caption2)
-                    .foregroundColor(.white)
-                }
+//                if isLifetime {
+//                    Text("Permanently valid")
+//                        .font(.footnote)
+//                        .foregroundColor(.white)
+//                } else if isValidMember {
+//                    VStack(alignment:.trailing, spacing:3) {
+//                        // 到期时间
+//                        Text("Expiry date")
+//                        Text(formattedDate(date))
+//                    }
+//                    .font(.caption2)
+//                    .foregroundColor(.white)
+//                }
                 Image(systemName:"chevron.right")
-                    .foregroundColor(textColor)
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(bgColor)
+            .background(Color("AppColor"))
             .cornerRadius(10)
         }
     }

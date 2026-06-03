@@ -29261,6 +29261,12 @@
             "value" : "E-mail"
           }
         },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29361,12 +29367,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "郵件"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "E-mail"
           }
         }
       }
@@ -55819,7 +55819,7 @@
       }
     },
     "Permanently valid" : {
-      "comment" : "永久有效",
+      "comment" : "永久有效:暂不用",
       "extractionState" : "manual",
       "localizations" : {
         "ar" : {
