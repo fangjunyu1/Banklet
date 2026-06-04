@@ -19,9 +19,25 @@ struct PremiumView: View {
     @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var iapManager: IAPManager
     @State private var isLoading = false    // 加载画布
-    @State private var selectedProduct: Product?
+    @State private var selectedProduct: Product?    // 选择的产品
     @State private var isPurchaseSuccessfulView = false
     @State private var purchaseProductTask: Task<Void, Never>?
+    
+    var showCloseButton: Bool = false
+    
+    // 年度会员 ID
+    private let yearlyProductID = "com.fangjunyu.Qinote.yearly"
+    
+    private var expirationDateString: String {
+        Self.formatExpirationDate(appStorage.expirationDate)
+    }
+    
+    // 格式化显示日期
+    private static func formatExpirationDate(_ timestamp: TimeInterval) -> String {
+        Date(timeIntervalSince1970: timestamp)
+            .formatted(date: .abbreviated, time: .omitted)
+    }
+    
     var body: some View {
         VStack {
             // 显示列表
@@ -57,15 +73,8 @@ struct PremiumView: View {
                 // 购买会员
                 BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,isPurchaseSuccessfulView: $isPurchaseSuccessfulView, purchaseProductTask: $purchaseProductTask)
                     .sheet(isPresented: $isPurchaseSuccessfulView, content: {
-                        NavigationStack {
-                            if UIDevice.isPhone {
-                                PurchaseSuccessfulView()
-                                    .presentationDetents([.height(360)])
-                            } else {
-                                PurchaseSuccessfulView()
-                                    .frame(height: 360) // 限制高度
-                            }
-                        }
+                        PurchaseSuccessfulView()
+                            .presentationDetents([.height(360)])
                     })
             }
         }
@@ -208,6 +217,25 @@ private struct CurrentPlanView: View {
 private struct PremiumComponentsView: View {
     @Binding var selectedProduct: Product?
     @EnvironmentObject var iapManager: IAPManager
+    
+    // 选择年度会员
+    private func selectDefaultProductIfNeeded() {
+        let products = iapManager.products
+        
+        guard !products.isEmpty else { return }
+        
+        // 如果当前已选择的商品仍然存在，就不重复覆盖用户选择
+        if let selectedProduct,
+           products.contains(where: { $0 == selectedProduct }) {
+            return
+        }
+        
+        // 优先选择年度会员，找不到则选择第一个
+        selectedProduct =
+        products.first(where: { $0.id == "20240523" })
+        ?? products.first
+    }
+    
     var body: some View {
         VStack(spacing: 20) {
             // 只有加载产品，才会显示选择方案。
@@ -308,6 +336,12 @@ private struct PremiumComponentsView: View {
                 .modifier(VStackModifier())
             }
         }
+        .task {
+            if iapManager.products.isEmpty {
+                await iapManager.loadProduct()
+                selectDefaultProductIfNeeded()
+            }
+        }
     }
 }
 
@@ -397,12 +431,6 @@ private struct BuyPremiumView: View {
         }
         .padding(.bottom,10)
         .ignoresSafeArea()
-        .onAppear {
-            // 如果有产品，则默认选择最后一个产品
-            if !iapManager.products.isEmpty {
-                selectedProduct = iapManager.products.last
-            }
-        }
     }
 }
 
