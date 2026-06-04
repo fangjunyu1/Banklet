@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.com.fangjunyu.piglet</key>
+		<dict>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>Any</string>
+			<key>NSUbiquitousContainerName</key>
+			<string>Piglet</string>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CFBundleDisplayName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleURLTypes</key>

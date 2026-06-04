@@ -75,22 +75,28 @@ struct HomeSettingPremiumRow: View {
     var body: some View {
         VStack {
             HStack {
-                // 图标
-                if isValidMember {
-                        Image(systemName: "checkmark.seal.fill")
-                        .imageScale(.large)
-                            .foregroundColor(.white)
-                            .frame(width: 40,height: 30)
-                } else {
-                    ZStack {
-                        ColorView(color:color)
-                        iconView(icon: icon)
-                    }
-                    .padding(.trailing,10)
+                ZStack {
+                    ColorView(color:color)
+                    iconView(icon: icon)
                 }
+                .padding(.trailing,10)
+                // 图标
+//                if isValidMember {
+//                        Image(systemName: "checkmark.seal.fill")
+//                        .imageScale(.large)
+//                            .foregroundColor(.white)
+//                            .frame(width: 40,height: 30)
+//                } else {
+//                    ZStack {
+//                        ColorView(color:color)
+//                        iconView(icon: icon)
+//                    }
+//                    .padding(.trailing,10)
+//                }
                 Text(LocalizedStringKey(title))
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
+                    .modifier(BlackTextModifier())
                 Spacer()
 //                if isLifetime {
 //                    Text("Permanently valid")
@@ -106,6 +112,8 @@ struct HomeSettingPremiumRow: View {
 //                    .foregroundColor(.white)
 //                }
                 Image(systemName:"chevron.right")
+                    .foregroundColor(.primary)
+                    .modifier(BlackTextModifier())
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)

@@ -57,8 +57,15 @@ struct PremiumView: View {
                 // 购买会员
                 BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,isPurchaseSuccessfulView: $isPurchaseSuccessfulView, purchaseProductTask: $purchaseProductTask)
                     .sheet(isPresented: $isPurchaseSuccessfulView, content: {
-                        PurchaseSuccessfulView()
-                            .presentationDetents([.height(360)])
+                        NavigationStack {
+                            if UIDevice.isPhone {
+                                PurchaseSuccessfulView()
+                                    .presentationDetents([.height(360)])
+                            } else {
+                                PurchaseSuccessfulView()
+                                    .frame(height: 360) // 限制高度
+                            }
+                        }
                     })
             }
         }
@@ -377,8 +384,15 @@ private struct BuyPremiumView: View {
                 Footnote(text:"Restore Purchases")
             })
             .sheet(isPresented: $recoverySuccessful, content: {
-                RecoverySuccessfulView()
-                    .presentationDetents([.height(360)])
+                NavigationStack {
+                    if UIDevice.isPhone {
+                        RecoverySuccessfulView()
+                            .presentationDetents([.height(360)])
+                    } else {
+                        RecoverySuccessfulView()
+                            .frame(height: 360) // 限制高度
+                    }
+                }
             })
         }
         .padding(.bottom,10)
@@ -479,21 +493,22 @@ private struct RecoverySuccessfulView: View {
 private struct PurchaseSuccessfulView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        VStack {
-            Spacer().frame(height:30)
+        VStack(spacing: 20) {
             LottieView(filename: "BlueAccessVIP", isPlaying: true, playCount: 0, isReversed: false)
                 .frame(maxHeight: 150)
                 .frame(maxWidth: 500)
-            // 购买成功
-            Text("Purchase successful")
-                .modifier(TitleModifier())
-            // 高级会员
-            HStack(spacing:0) {
-                Text("Premium Member")
+            VStack {
+                // 购买成功
+                Text("Purchase successful")
+                    .modifier(TitleModifier())
+                // 高级会员
+                HStack(spacing:0) {
+                    Text("Premium Member")
+                }
+                .font(.footnote)
+                .fontWeight(.medium)
+                .foregroundColor(AppColor.appColor)
             }
-            .font(.footnote)
-            .fontWeight(.medium)
-            .foregroundColor(AppColor.appColor)
             Spacer()
             Text("Completed")
                 .modifier(ButtonModifier())
@@ -501,6 +516,8 @@ private struct PurchaseSuccessfulView: View {
                     dismiss()
                 }
         }
+        .padding(.vertical, 20)
+        .frame(height: 360)
     }
 }
 

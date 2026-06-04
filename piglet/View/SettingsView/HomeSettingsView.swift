@@ -96,6 +96,7 @@ struct HomeSettingsView: View {
                 // 高级会员
                 NavigationLink(destination: PremiumView()) {
                     HomeSettingPremiumRow(color: .line("9A4CF3", "6025E2"), icon: .img("vip"), title: "Premium Member")
+                        .foregroundColor(.red)
                 }
                 
                 // 关于我们、鸣谢、开源
