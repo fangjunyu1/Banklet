@@ -10,10 +10,11 @@ import SwiftUI
 struct AppIconView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
+    @Environment(IAPManager.self) var iapManager
     @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 0"
     
     let generator = UISelectionFeedbackGenerator()
-    
+
     let columns = Array(repeating: GridItem(.adaptive(minimum: 100, maximum: 120)), count: 3)
     
     var appIcon: [Int] {
@@ -24,6 +25,11 @@ struct AppIconView: View {
     func selectIcon(num: Int) -> Bool{
         selectedIconName == "AppIcon \(num)" ? true : false
     }
+    
+    func isLock(index: Int) -> Bool {
+        !appStorage.isValidMember && index >= appIconLimit
+    }
+    
     var body: some View {
         VStack {
             Spacer().frame(height: 10)
@@ -64,9 +70,10 @@ struct AppIconView: View {
                             }
                         })
                         .overlay {
-                            // 未内购的图标
-                            if !appStorage.isValidMember && index >= appIconLimit {
+                            if isLock(index: index) {
                                 LockApp()   // 未解锁的状态
+                                    .environment(appStorage)
+                                    .environment(iapManager)
                             }
                         }
                     }

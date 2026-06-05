@@ -10,10 +10,7 @@ import SwiftUI
 struct BackgroundView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     let generator = UISelectionFeedbackGenerator()
-    let columns = [
-        GridItem(.adaptive(minimum: 130, maximum: 200)), // 自动根据屏幕宽度生成尽可能多的单元格，宽度最小为 80 点
-        GridItem(.adaptive(minimum: 130, maximum: 200))
-    ]
+    let columns = Array(repeating: GridItem(.adaptive(minimum: 130, maximum: 160), spacing: 16), count: 2)
     var backgroundRange: [Int] {
         Array(0..<39)
     }
@@ -28,7 +25,7 @@ struct BackgroundView: View {
                     .shadow(radius: 1)
                 Spacer().frame(height: 20)
                 
-                LazyVGrid(columns: columns,spacing: 20) {
+                LazyVGrid(columns: columns, spacing: 16) {
                     BackgroundItemView(isSelected: appStorage.BackgroundImage.isEmpty) {
                         selectedBackground(nil)
                     }
@@ -67,7 +64,8 @@ struct BackgroundView: View {
 }
 
 private struct BackgroundItemView: View {
-    @Environment(AppStorageManager.self) var appStorage
+    @EnvironmentObject var appStorage: AppStorageManager
+    @EnvironmentObject var iapManager: IAPManager
     let index: Int?
     let isSelected: Bool
     let action: () -> Void
@@ -78,6 +76,11 @@ private struct BackgroundItemView: View {
         self.isSelected = isSelected
         self.action = action
     }
+    
+    func isLock(index: Int) -> Bool {
+        !appStorage.isValidMember && index >= backgroundLimit
+    }
+    
     var body: some View {
         ZStack {
             // 选中框
@@ -100,9 +103,12 @@ private struct BackgroundItemView: View {
                         .shadow(radius: 2)
                 }
             })
+            .buttonStyle(.plain)
             .overlay {
-                if let index = index,!appStorage.isValidMember && index >= backgroundLimit {
+                if isLock(index: index ?? 0) {
                     LockApp()   // 未解锁的状态
+                        .environment(appStorage)
+                        .environment(iapManager)
                 }
             }
         }
