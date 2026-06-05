@@ -11,7 +11,9 @@ struct AppIconView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
     @Environment(IAPManager.self) var iapManager
+    
     @State private var selectedIconName: String = UIApplication.shared.alternateIconName ?? "AppIcon 0"
+    @State private var showPro = false
     
     let generator = UISelectionFeedbackGenerator()
 
@@ -71,9 +73,12 @@ struct AppIconView: View {
                         })
                         .overlay {
                             if isLock(index: index) {
-                                LockApp()   // 未解锁的状态
-                                    .environment(appStorage)
-                                    .environment(iapManager)
+                                // 未解锁的状态
+                                LockApp() {
+                                    showPro = true
+                                }
+                                .environment(appStorage)
+                                .environment(iapManager)
                             }
                         }
                     }
@@ -84,6 +89,11 @@ struct AppIconView: View {
         }
         .navigationTitle("Icon")
         .modifier(BackgroundModifier())
+        .sheet(isPresented: $showPro) {
+            ProView(showCloseButton: true)
+                .environment(appStorage)
+                .environment(iapManager)
+        }
     }
     
     private func handleTap(iconName: String) {

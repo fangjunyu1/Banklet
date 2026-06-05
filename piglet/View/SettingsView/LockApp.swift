@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct LockApp: View {
-    @State private var showPro = false
     @Environment(AppStorageManager.self) var appStorage
     @Environment(IAPManager.self) var iapManager
+    
+    var action: () -> Void
+    
     var body: some View {
         Button(action: {
-            showPro.toggle()
+            action()
         }, label: {
             VStack {
                 Spacer()
@@ -33,10 +35,5 @@ struct LockApp: View {
                 Color.black.opacity(0.1).cornerRadius(10)
             }
         })
-        .sheet(isPresented: $showPro) {
-            ProView(showCloseButton: true)
-                .environment(appStorage)
-                .environment(iapManager)
-        }
     }
 }

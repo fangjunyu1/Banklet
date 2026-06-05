@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeMainView: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var idleManager: IdleTimerManager
+    @Environment(\.modelContext) var context
+    @EnvironmentObject var homeVM: HomeViewModel
     @State private var searchText = ""  // 搜索框
     @State private var showCreateView = false
     @State private var showMoreInformation = false
@@ -45,6 +48,15 @@ struct HomeMainView: View {
                     .sheet(isPresented: $showMoreInformation) {
                         NavigationStack {
                             HomeMoreInformationView(primary: primaryBank)
+                                .environment(idleManager)
+                        }
+                    }
+                    .sheet(isPresented: $homeVM.isTradeView) {
+                        NavigationStack {
+                            TradeView()
+                                .environment(appStorage)
+                                .environment(homeVM)
+                                .environmentObject(idleManager)
                         }
                     }
                 }

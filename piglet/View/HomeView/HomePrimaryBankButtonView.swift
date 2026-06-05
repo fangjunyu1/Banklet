@@ -35,7 +35,7 @@ struct HomePrimaryBankButtonView: View {
                     HapticManager.shared.selectionChanged()
                     homeVM.tardeModel = .deposit
                     homeVM.piggyBank = primaryBank
-                    withAnimation(.easeInOut(duration: 1)) { homeVM.isTradeView.toggle() }
+                    homeVM.isTradeView = true
                 }
                 
                 Spacer()
@@ -46,7 +46,7 @@ struct HomePrimaryBankButtonView: View {
                     HapticManager.shared.selectionChanged()
                     homeVM.tardeModel = .withdraw
                     homeVM.piggyBank = primaryBank
-                    withAnimation(.easeInOut(duration: 1)) { homeVM.isTradeView.toggle() }
+                    homeVM.isTradeView = true
                 }
                 
                 Spacer()

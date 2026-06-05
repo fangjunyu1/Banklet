@@ -13,6 +13,8 @@ struct AnimationView: View {
     @EnvironmentObject var appStorage: AppStorageManager
     @Environment(IAPManager.self) var iapManager
     
+    @State private var showPro = false
+    
     let generator = UISelectionFeedbackGenerator()
     let columns = Array(repeating: GridItem(.adaptive(minimum: 130, maximum: 160), spacing: 16), count: 2)
     
@@ -70,9 +72,12 @@ struct AnimationView: View {
                         })
                         .overlay {
                             if isLock(index: index) {
-                                LockApp()   // 未解锁的状态
-                                    .environment(appStorage)
-                                    .environment(iapManager)
+                                // 未解锁的状态
+                                LockApp() {
+                                    showPro = true
+                                }
+                                .environment(appStorage)
+                                .environment(iapManager)
                             }
                         }
                     }
@@ -82,6 +87,11 @@ struct AnimationView: View {
         }
         .navigationTitle("Animation")
         .modifier(BackgroundModifier())
+        .sheet(isPresented: $showPro) {
+            ProView(showCloseButton: true)
+                .environment(appStorage)
+                .environment(iapManager)
+        }
     }
     
     // 点击动画，触发振动

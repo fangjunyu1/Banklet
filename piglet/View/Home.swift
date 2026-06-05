@@ -38,7 +38,6 @@ struct Home: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var idleManager = IdleTimerManager.shared
-    @FocusState var focus: Field?
     
     var body: some View {
         ZStack {
@@ -110,7 +109,6 @@ struct Home: View {
                 }
                 print("selectedTab:\(selectedTab)")
             }
-            .blur(radius: homeVM.isTradeView ? 10 : 0)
             .environment(appStorage)
             .environment(homeActivityVM)
             .environment(homeVM)
@@ -134,18 +132,6 @@ struct Home: View {
                     print("检查定期存款逻辑")
                     SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
                 }
-            }
-            if homeVM.isTradeView {
-                Color.white
-                    .opacity(0.1)
-                    .onTapGesture {
-                        focus = nil
-                    }
-                TradeView(focus: $focus)
-                    .environment(appStorage)
-                    .environment(homeActivityVM)
-                    .environment(homeVM)
-                    .environmentObject(idleManager)
             }
         }
     }

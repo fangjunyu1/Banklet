@@ -10,13 +10,15 @@ import SwiftUI
 struct ButtonModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     
+    var disableStats: Bool = false
+    
     func body(content: Content) -> some View {
         content
             .frame(height: 60)
             .frame(minWidth: 200)
             .foregroundColor(Color.white)
             .contentShape(Rectangle())
-            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+            .background(disableStats ? Color.gray : colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
             .cornerRadius(10)
     }
 }

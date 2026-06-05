@@ -336,10 +336,6 @@
 		1DD7E8C62D27F5E200024A96 /* ModelConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */; };
 		1DDDD26A2EAD099E00AD9A5A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD2682EAD099E00AD9A5A /* Localizable.xcstrings */; };
 		1DDDD26B2EAD099E00AD9A5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DDDD2672EAD099E00AD9A5A /* InfoPlist.strings */; };
-		1DDEC5612ED14D2F00B940E2 /* TradeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */; };
-		1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */; };
-		1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */; };
-		1DDEC5692ED14D9200B940E2 /* TradeShowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */; };
 		1DDEC56B2ED1539300B940E2 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56A2ED1539300B940E2 /* check.json */; };
 		1DDEC56D2ED16C7800B940E2 /* money1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56C2ED16C7800B940E2 /* money1.mp3 */; };
 		1DDEC56F2ED170D200B940E2 /* FreeBlueLoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */; };
@@ -806,10 +802,6 @@
 		1DDDD2642EAD099E00AD9A5A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1DDDD2652EAD099E00AD9A5A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1DDDD2682EAD099E00AD9A5A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeButtonView.swift; sourceTree = "<group>"; };
-		1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeContentView.swift; sourceTree = "<group>"; };
-		1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeNotesView.swift; sourceTree = "<group>"; };
-		1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeShowContentView.swift; sourceTree = "<group>"; };
 		1DDEC56A2ED1539300B940E2 /* check.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
 		1DDEC56C2ED16C7800B940E2 /* money1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = money1.mp3; sourceTree = "<group>"; };
 		1DDEC56E2ED170D200B940E2 /* FreeBlueLoadingAnimation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FreeBlueLoadingAnimation.json; sourceTree = "<group>"; };
@@ -1043,18 +1035,6 @@
 				1D45CAE22FCFC66900BA028B /* iCloudFileManager.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		1D4E1E012ED0293500717238 /* TradeView */ = {
-			isa = PBXGroup;
-			children = (
-				1D7728422ED08C7E0046B35B /* TradeView.swift */,
-				1DDEC5602ED14D2C00B940E2 /* TradeButtonView.swift */,
-				1DDEC5622ED14D4100B940E2 /* TradeContentView.swift */,
-				1DDEC5642ED14D5900B940E2 /* TradeNotesView.swift */,
-				1DDEC5682ED14D9100B940E2 /* TradeShowContentView.swift */,
-			);
-			path = TradeView;
 			sourceTree = "<group>";
 		};
 		1D601B842C0747FC00052528 /* Frameworks */ = {
@@ -1349,8 +1329,8 @@
 				1DF137622EE2E4E4002429AD /* HomeBanksListView2.swift */,
 				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
 				1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */,
+				1D7728422ED08C7E0046B35B /* TradeView.swift */,
 				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
-				1D4E1E012ED0293500717238 /* TradeView */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -1994,7 +1974,6 @@
 				1D45CAE52FCFCA7300BA028B /* AvatarImage.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */,
-				1DDEC5652ED14D5A00B940E2 /* TradeNotesView.swift in Sources */,
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
@@ -2010,7 +1989,6 @@
 				1DFCC0AB2D2EAC3B00E67208 /* Triangle.swift in Sources */,
 				1DBBB0CD2ECA02DF00FFE2A0 /* KeyboardAdaptive.swift in Sources */,
 				1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */,
-				1DDEC5692ED14D9200B940E2 /* TradeShowContentView.swift in Sources */,
 				1DD14EE02EC0330B00325DF7 /* AnimatedImageView.swift in Sources */,
 				1D8C38742ECC1DB200F7CAD5 /* ActivityContentButton.swift in Sources */,
 				1D3663E82D72FD34003C1052 /* AppStorageManager.swift in Sources */,
@@ -2047,7 +2025,6 @@
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
 				1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */,
-				1DDEC5612ED14D2F00B940E2 /* TradeButtonView.swift in Sources */,
 				1D8C38762ECC7B1000F7CAD5 /* LifeSavingsView.swift in Sources */,
 				1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */,
 				1DE7360B2EB654BA00573C1A /* ActivityTab.swift in Sources */,
@@ -2078,7 +2055,6 @@
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1D45CAE02FCFC51C00BA028B /* SettingsProfileView.swift in Sources */,
 				1DBEC52E2EA13ECF006152D3 /* WidgetFunction.swift in Sources */,
-				1DDEC5632ED14D4200B940E2 /* TradeContentView.swift in Sources */,
 				1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */,
 				1D7ED6F52DFEE4DB000EB349 /* SoundManager.swift in Sources */,
 				1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */,
@@ -2533,7 +2509,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
@@ -2574,7 +2550,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
