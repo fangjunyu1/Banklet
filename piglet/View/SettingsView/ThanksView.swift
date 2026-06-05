@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ThanksView: View {
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.openURL) var openURL
     @State private var showAppStore = false
     let platformList: [String] = ["ChatGPT","LottieFiles","iconfont","Pinterest","Dirbbble","GitHub", "px"]
     let platformBlackList: [String] = ["ChatGPT-white","LottieFiles-white","iconfont-white","Pinterest-white","Dirbbble-white","GitHub", "px"]
@@ -44,37 +43,6 @@ struct ThanksView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 180)
-                    }
-                }
-                Spacer().frame(height:20)
-                // 更多作品
-                VStack(spacing: 10) {
-                    Text("More works")
-                        .modifier(TitleModifier())
-                    Text("iOS & macOS app collection")
-                        .modifier(FootNoteModifier())
-                    Image("FangApp")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 200)
-                        .frame(maxWidth: 500)
-                    Spacer().frame(height:10)
-                    Button {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-
-                        if let url = URL(string: "https://apps.apple.com/cn/developer/%E5%90%9B%E5%AE%87-%E6%96%B9/id1746520472") {
-                            openURL(url)
-                        }
-                    } label: {
-                        Text(verbatim: "App Store")
-                            .fontWeight(.medium)
-                            .padding(.vertical,20)
-                            .padding(.horizontal,50)
-                            .foregroundColor(.white)
-                            .background(AppColor.appColor)
-                            .cornerRadius(16)
-                            .shadow(radius: 5)
                     }
                 }
                 Spacer().frame(height:50)
