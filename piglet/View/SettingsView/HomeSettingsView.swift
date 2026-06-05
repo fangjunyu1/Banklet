@@ -91,7 +91,8 @@ struct HomeSettingsView: View {
                             .ignoresSafeArea()
                     }
                 }
-                .modifier(SettingVStackRowModifier())
+                .background(Color("AppColor"))
+                .cornerRadius(10)
                 
                 // 高级会员
                 NavigationLink(destination: ProView()) {
@@ -121,7 +122,8 @@ struct HomeSettingsView: View {
                         HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open Source",accessory: .none)
                     })
                 }
-                .modifier(SettingVStackRowModifier())
+                .background(Color("AppColor"))
+                .cornerRadius(10)
                 
                 Spacer().frame(height: 10)
                 // 版本号

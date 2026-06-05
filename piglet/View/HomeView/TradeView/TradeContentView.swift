@@ -49,7 +49,7 @@ struct TradeContentView: View {
         }
         .padding(20)
         .frame(width: 320)
-        .modifier(WhiteBgModifier())
+        .background(Color("AppColor"))
         .cornerRadius(10)
         .shadow(radius: 2)
     }

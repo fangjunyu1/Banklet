@@ -134,7 +134,7 @@ private struct HomeMoreInfomationNameView: View {
                 .foregroundColor(isEdit ? Color.primary : Color.gray)
                 .padding(10)
                 .frame(maxWidth: 200)
-                .modifier(WhiteBgModifier())
+                .background(Color("AppColor"))
                 .cornerRadius(10)
         }
     }
@@ -314,7 +314,7 @@ private struct HomeMoreInformationList4: View {
         }
         .padding(.vertical,5)
         .padding(.horizontal, 10)
-        .modifier(WhiteBgModifier())
+        .background(Color("AppColor"))
         .cornerRadius(10)
     }
 }
@@ -452,7 +452,7 @@ struct HomeMoreInformationIconList: View {
                         }
                     }
                     .padding(10)
-                    .modifier(WhiteBgModifier())
+                    .background(Color("AppColor"))
                     .cornerRadius(10)
                 }
             }

@@ -89,7 +89,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                     .scaledToFit()
                                     .frame(height:largeSize * 0.8)
                             }
-                            .modifier(WhiteBgModifier())
+                            .background(Color("AppColor"))
                             .frame(height:largeSize)
                             .cornerRadius(10)
                         })
@@ -114,7 +114,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                         }
                         .padding(10)
                         .frame(height:largeSize)
-                        .modifier(WhiteBgModifier())
+                        .background(Color("AppColor"))
                         .cornerRadius(10)
                         // 存取记录
                         NavigationLink(destination: AccessTimesView(), label: {
@@ -143,7 +143,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
                             }
                             .padding(10)
                             .frame(height: smallSize)
-                            .modifier(WhiteBgModifier())
+                            .background(Color("AppColor"))
                             .cornerRadius(10)
                         })
                     }

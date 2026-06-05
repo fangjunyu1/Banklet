@@ -33,7 +33,7 @@ struct HomeSettingRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .modifier(WhiteBgModifier())
+            .background(Color("AppColor"))
             .cornerRadius(10)
             .frame(maxWidth: .infinity)
             if let footnote = footnote {
@@ -138,7 +138,7 @@ struct HomeSettingNoIconRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .modifier(WhiteBgModifier())
+            .background(Color("AppColor"))
             .cornerRadius(10)
             if let footnote = footnote {
                 HStack {

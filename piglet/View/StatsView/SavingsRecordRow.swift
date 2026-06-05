@@ -65,7 +65,7 @@ struct SavingsRecordRow: View {
         }
         .frame(height:40)
         .padding(10)
-        .modifier(WhiteBgModifier())
+        .background(Color("AppColor"))
         .cornerRadius(10)
     }
 }

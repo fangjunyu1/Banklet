@@ -188,7 +188,7 @@ struct HomeCreateInputModifier: ViewModifier {
             .background {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(AppColor.gray.opacity(0.3), lineWidth: 10)
-                    .modifier(WhiteBgModifier())
+                    .background(Color("AppColor"))
                     .cornerRadius(10)
             }
     }

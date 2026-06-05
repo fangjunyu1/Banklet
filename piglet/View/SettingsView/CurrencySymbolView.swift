@@ -68,7 +68,7 @@ struct CurrencySymbolView: View {
                     }
                 }
                 .padding(.vertical,10)
-                .modifier(WhiteBgModifier())
+                .background(Color("AppColor"))
                 .cornerRadius(12)
                 .padding(.bottom, 50)
             }

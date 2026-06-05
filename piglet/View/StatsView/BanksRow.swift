@@ -37,7 +37,7 @@ struct BanksRow: View {
             }
         }
         .padding(20)
-        .modifier(WhiteBgModifier())
+        .background(Color("AppColor"))
         .cornerRadius(10)
     }
 }
