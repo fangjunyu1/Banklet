@@ -33,7 +33,7 @@ struct AccountSectionView: View {
                         Text(verbatim: "PRO")
                             .font(.caption2)
                             .fontWeight(.bold)
-                            .foregroundStyle(Color("GoldColor"))
+                            .foregroundStyle(Color.yellow)
                             .padding(.vertical, 2)
                             .padding(.horizontal, 10)
                             .background(Color.yellow.opacity(0.1))

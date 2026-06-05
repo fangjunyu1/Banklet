@@ -33,14 +33,3 @@ let PreminumList: [PreminumModel] = [
     // 持续更新
     PreminumModel(imgName: "square.stack.3d.up.fill", imgModel: .sf,color: AppColor.appColor, text: "Continuously updated", info: "The premium version continues to expand its features, unlocking more experiences such as music and events in the future.")
 ]
-
-let PurchaseNoticeList: [String] = [
-    // 订阅会自动续费，除非在 App Store 账户中取消。
-    "The subscription will automatically renew unless canceled in your App Store account.",
-    // 已购买会员可通过“恢复购买”找回。
-    "Members who have already purchased memberships can retrieve them through the \"Restore Purchase\" function.",
-    // 永久会员一次购买，永久有效，无需续费。
-    "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal.",
-    // 如需退订，请在 App Store → 账户 → 购买历史操作，开发者无法代为退订或退款。
-    "To unsubscribe, please go to App Store → Account → Purchase History. The developer cannot unsubscribe or issue a refund on your behalf."
-]

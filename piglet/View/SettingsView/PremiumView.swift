@@ -16,97 +16,118 @@ import SwiftUI
 import StoreKit
 
 struct PremiumView: View {
+    @Environment(\.dismiss) var dismiss
     @Environment(AppStorageManager.self) var appStorage
     @EnvironmentObject var iapManager: IAPManager
+    @State private var selectedProductID: String?
     @State private var isLoading = false    // 加载画布
-    @State private var selectedProduct: Product?    // 选择的产品
-    @State private var isPurchaseSuccessfulView = false
-    @State private var purchaseProductTask: Task<Void, Never>?
+    @State private var operationTask: Task<Void, Never>?    // 内购 Task
+    @State private var productResultStatus: ProductResultEnum?
     
     var showCloseButton: Bool = false
     
     // 年度会员 ID
-    private let yearlyProductID = "com.fangjunyu.Qinote.yearly"
+    private let yearlyProductID = "20240523"
     
-    private var expirationDateString: String {
-        Self.formatExpirationDate(appStorage.expirationDate)
+    // 已选择的产品
+    private var selectedProduct: Product? {
+        iapManager.displayProducts
+            .first { $0.product.id == selectedProductID }?
+            .product
     }
     
-    // 格式化显示日期
-    private static func formatExpirationDate(_ timestamp: TimeInterval) -> String {
-        Date(timeIntervalSince1970: timestamp)
-            .formatted(date: .abbreviated, time: .omitted)
-    }
-    
-    var body: some View {
-        VStack {
-            // 显示列表
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 20) {
-                    VStack {
-                        // 会员 动画
-                        LottieView(filename: "vip", isPlaying: true, playCount: 0, isReversed: false)
-                            .scaledToFit()
-                            .scaleEffect(1.3)
-                            .frame(maxHeight: 130)
-                            .frame(maxWidth: 500)
-                        VStack(spacing: 15) {
-                            // 储蓄每一个梦想
-                            Text("Saving every dream")
-                                .modifier(TitleModifier())
-                            Text("Give your piggy bank a fresh new look with more customization options, smoother animations, and unique themes.")
-                                .modifier(FootNoteModifier())
-                        }
-                    }
-                    // 当前方案
-                    if appStorage.isValidMember {
-                        CurrentPlanView()
-                    }
-                    // 选择方案、包含内容、购买提示的视图
-                    PremiumComponentsView(selectedProduct:$selectedProduct)
-                }
-                Spacer().frame(height: 20)
-            }
-            
-            // 只有加载产品，才会显示购买方案。
-            if !iapManager.products.isEmpty {
-                // 购买会员
-                BuyPremiumView(selectedProduct:$selectedProduct,loadPurchased: $isLoading,isPurchaseSuccessfulView: $isPurchaseSuccessfulView, purchaseProductTask: $purchaseProductTask)
-                    .sheet(isPresented: $isPurchaseSuccessfulView, content: {
-                        PurchaseSuccessfulView()
-                            .presentationDetents([.height(360)])
-                    })
-            }
+    // 选择年度会员
+    private func selectDefaultProductIfNeeded() {
+        let products = iapManager.displayProducts
+        
+        guard !products.isEmpty else {
+            return
         }
-        .navigationTitle("Premium Member")
-        .modifier(BackgroundModifier())
-        .scrollIndicators(.hidden)
-        .onAppear(perform: CheckPurchaseStatus)
-        .overlay {
-            if isLoading {
-                PurchaseLoadingView(isLoading: $isLoading,purchaseProductTask: $purchaseProductTask)
-            }
+        
+        // 如果当前已选择的商品仍然存在，就不重复覆盖用户选择
+        if let selectedProductID,
+           products.contains(where: { $0.product.id == selectedProductID }) {
+            return
         }
+        
+        selectedProductID =
+        products.first(where: { $0.product.id == yearlyProductID })?.product.id
+        ?? products.first?.product.id
     }
     
-    @MainActor
-    private func CheckPurchaseStatus() {
-        Task {
-            // 如果没有产品信息，则重新获取
-            if iapManager.products.isEmpty {
-                await iapManager.loadProduct()
-            }
-        }
-    }
-}
-
-// 加载产品-遮罩曾
-private struct PurchaseLoadingView: View {
-    @Binding var isLoading: Bool
-    @Binding var purchaseProductTask: Task<Void, Never>?
     var body: some View {
         ZStack {
-            Color.black.opacity(0.3).ignoresSafeArea()
+            VStack {
+                // 显示列表
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        proAnimation
+                        proTitle
+                        // 如果有会员才显示
+                        if appStorage.isValidMember {
+                            CurrentPlanView()
+                        }
+                        if !iapManager.displayProducts.isEmpty {
+                            chooseAPlan
+                        }
+                        included
+                        purchaseNotice
+                        Spacer()
+                    }
+                }
+                
+                VStack(spacing: 14) {
+                    subscribeButton
+                    restorePurchasesButton
+                }
+                .padding(.top, 10)
+                .padding(.bottom, 50)
+            }
+            .navigationTitle("Pro")
+            .modifier(BackgroundModifier())
+            
+            if isLoading {
+                loadingView
+            }
+        }
+        .sheet(item: $productResultStatus) { result in
+            ProductResultView(result: result)
+                .environmentObject(appStorage)
+                .environmentObject(iapManager)
+        }
+        .task {
+            if iapManager.displayProducts.isEmpty {
+                await iapManager.loadProduct()
+                selectDefaultProductIfNeeded()
+            }
+        }
+        .safeAreaInset(edge: .top) {
+            if showCloseButton {
+                closeButton
+            }
+        }
+    }
+    
+    // 关闭视图
+    var closeButton: some View {
+        HStack {
+            Spacer()
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.title.bold())
+                    .foregroundStyle(.secondary)
+            }
+            .buttonStyle(.plain)
+        }
+        .padding(30)
+    }
+    
+    // 加载视图
+    var loadingView: some View {
+        ZStack {
+            Color.black.opacity(0.5).ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
@@ -114,8 +135,8 @@ private struct PurchaseLoadingView: View {
                         // 振动
                         HapticManager.shared.selectionChanged()
                         isLoading.toggle()
-                        purchaseProductTask?.cancel()   // 取消购买任务
-                        purchaseProductTask = nil
+                        operationTask?.cancel()   // 取消购买任务
+                        operationTask = nil
                     }, label: {
                         Image(systemName: "xmark")
                             .font(.title)
@@ -129,309 +150,258 @@ private struct PurchaseLoadingView: View {
             // 加载条
             ProgressView("loading...")
                 .padding(20)
-                .cornerRadius(10)
                 .modifier(WhiteBgModifier())
                 .cornerRadius(10)
+                .opacity(0.8)
         }
     }
-}
-
-// 当前方案
-private struct CurrentPlanView: View {
-    @Environment(AppStorageManager.self) var appStorage
     
-    let date = Date(timeIntervalSince1970: AppStorageManager.shared.expirationDate)
-    let isLifetime = AppStorageManager.shared.isLifetime
-    let isSubScription = AppStorageManager.shared.expirationDate > Date().timeIntervalSince1970
-    let isValidMember = AppStorageManager.shared.isValidMember
-    
-    func formattedDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: date)
+    // 动画
+    var proAnimation: some View {
+        ReadyStage()
+            .scaleEffect(0.8)
+            .frame(height: 160)
     }
     
-    func formattedDateTest(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return formatter.string(from: date)
+    // 会员文本
+    var proTitle: some View {
+        VStack(spacing: 15) {
+            // 储蓄每一个梦想
+            Text("Saving every dream")
+                .modifier(TitleModifier())
+            Text("Give your piggy bank a fresh new look with more customization options, smoother animations, and unique themes.")
+                .modifier(FootNoteModifier())
+        }
     }
     
-    var body: some View {
+    // 选择方案
+    var chooseAPlan: some View {
         VStack {
-            // 只有加载产品，才会显示选择方案。
             // 选择方案
-            VStack {
-                HStack {
-                    Footnote(text: "Current Plan")
-                    Spacer()
+            HStack {
+                Footnote(text: "Choose a solution")
+                Spacer()
+            }
+            // 选择方案-列表
+            VStack(spacing: 10) {
+                ForEach(iapManager.displayProducts) { product in
+                    let isSelected: Bool = selectedProductID == product.product.id
+                    Button(action: {
+                        HapticManager.shared.selectionChanged()
+                        selectedProductID = product.product.id
+                    }, label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    Text(product.displayName)
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                    if let tag = product.info.tag, let tagColor = product.info.tagColor {
+                                        Text(tag)
+                                            .font(.caption2)
+                                            .fontWeight(.bold)
+                                            .padding(.vertical,3)
+                                            .padding(.horizontal, 8)
+                                            .foregroundStyle(tagColor)
+                                            .background(tagColor.opacity(0.15))
+                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                    }
+                                }
+                                HStack(spacing: 5) {
+                                    Text(product.displayPrice)
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                    HStack(spacing: 2) {
+                                        Text(verbatim: "/")
+                                        Text(product.info.priceSuffix)
+                                    }
+                                    .font(.footnote)
+                                    .foregroundStyle(.secondary)
+                                }
+                            }
+                            
+                            Spacer()
+                            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                                .imageScale(.large)
+                                .foregroundStyle(isSelected ? AppColor.appColor : Color.gray)
+                        }
+                        .frame(height: 60)
+                        .modifier(ProBg())
+                        .overlay {
+                            if isSelected {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .strokeBorder(AppColor.appColor, lineWidth: 3)
+                            }
+                        }
+                        .overlay {
+                            if product.info.isRecommend {
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        Text("Recommended")
+                                            .font(.caption)
+                                            .fontWeight(.medium)
+                                            .foregroundStyle(Color.white)
+                                            .padding(3)
+                                            .padding(.horizontal, 8)
+                                            .background(AppColor.appColor)
+                                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                                    }
+                                    Spacer()
+                                }
+                            }
+                        }
+                    })
+                    .buttonStyle(.plain)
                 }
             }
-            // 当前方案
-            VStack(spacing: 10) {
-                // 永久会员
-                if isLifetime {
-                    HStack {
-                        Image(systemName: "checkmark.seal.fill")
-                            .imageScale(.large)
-                        Text("Premium Member")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        Spacer()
-                        Text("Permanently valid")
-                            .font(.footnote)
+        }
+        .onAppear {
+            selectDefaultProductIfNeeded()
+        }
+        .onChange(of: iapManager.displayProducts.map { $0.product.id }) { _,_ in
+            selectDefaultProductIfNeeded()
+        }
+    }
+    
+    // 包含内容
+    var included: some View {
+        VStack {
+            HStack {
+                Footnote(text: "Contents")
+                Spacer()
+            }
+            // 包含内容-列表
+            VStack {
+                ForEach(Array(PreminumList.enumerated()), id:\.offset) { index, item in
+                    premiumItemView(premium: item)
+                    if index != PreminumList.count - 1 {
+                        Divider().padding(.leading, 50)
                     }
-                    .modifier(BlueTextModifier())
-                }
-                // 分割线
-                if isLifetime && isSubScription {
-                    Divider().padding(.leading, 40)
-                }
-                if appStorage.expirationDate > Date().timeIntervalSince1970 {
-                    HStack {
-                        Image(systemName: "checkmark.seal.fill")
-                            .imageScale(.large)
-                        Text("Premium Member")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                        Spacer()
-                        VStack(alignment:.trailing, spacing:3) {
-                            // 到期时间
-                            Text("Expiry date")
-                            #if DEBUG
-                            Text(formattedDateTest(date))
-                            #else
-                            Text(formattedDate(date))
-                            #endif
-                        }
-                        .font(.caption2)
-                    }
-                    .modifier(BlueTextModifier())
                 }
             }
             .modifier(VStackModifier())
         }
     }
-}
-// 选择方案、包含内容、购买提示的视图
-private struct PremiumComponentsView: View {
-    @Binding var selectedProduct: Product?
-    @EnvironmentObject var iapManager: IAPManager
     
-    // 选择年度会员
-    private func selectDefaultProductIfNeeded() {
-        let products = iapManager.products
-        
-        guard !products.isEmpty else { return }
-        
-        // 如果当前已选择的商品仍然存在，就不重复覆盖用户选择
-        if let selectedProduct,
-           products.contains(where: { $0 == selectedProduct }) {
-            return
-        }
-        
-        // 优先选择年度会员，找不到则选择第一个
-        selectedProduct =
-        products.first(where: { $0.id == "20240523" })
-        ?? products.first
-    }
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            // 只有加载产品，才会显示选择方案。
-            // 选择方案
-            if !iapManager.IAPProductList.isEmpty {
-                VStack {
-                    HStack {
-                        Footnote(text: "Choose a solution")
-                        Spacer()
-                    }
-                    // 选择方案-列表
-                    VStack(spacing: 10) {
-                        ForEach(Array(iapManager.IAPProductList.enumerated()), id:\.1.id) { index, item in
-                            if let products = iapManager.products.first(where: { $0.id == item.id }) {
-                                HStack(spacing: 8) {
-                                    if selectedProduct == products {
-                                        Image(systemName: "checkmark.circle.fill")
-                                            .imageScale(.large)
-                                            .foregroundColor(AppColor.appColor)
-                                    } else {
-                                        Image(systemName: "circle")
-                                            .imageScale(.large)
-                                            .foregroundColor(AppColor.gray)
-                                    }
-                                    VStack(alignment: .leading, spacing: 3) {
-                                        Text(LocalizedStringKey(item.name))
-                                            .modifier(DrakGrayTextModifier())
-                                        HStack(spacing: 0) {
-                                            Caption2(text: products.displayPrice)
-                                            if let priceSuffix = item.priceSuffix {
-                                                Footnote(text:"/")
-                                                Footnote(text: priceSuffix)
-                                            }
-                                        }
-                                    }
-                                    Spacer()
-                                    if item.name == "Lifetime" {
-                                        Text("Best choice")
-                                            .font(.footnote)
-                                            .fontWeight(.medium)
-                                            .foregroundColor(.white)
-                                            .padding(.vertical, 8)
-                                            .padding(.horizontal,14)
-                                            .background(AppColor.appColor)
-                                            .cornerRadius(5)
-                                    }
-                                }
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    // 振动
-                                    HapticManager.shared.selectionChanged()
-                                    // 如果重复点击内购商品，则清空内购商品
-                                    selectedProduct = products
-                                }
-                                // 分割线
-                                if index < iapManager.IAPProductList.count - 1 {
-                                    Divider().padding(.leading, 40)
-                                }
-                            }
-                        }
-                    }
-                    .modifier(VStackModifier())
-                }
-            }
-            
-            // 包含内容
-            VStack {
-                HStack {
-                    Footnote(text: "Contents")
-                    Spacer()
-                }
-                // 包含内容-列表
-                VStack {
-                    ForEach(Array(PreminumList.enumerated()), id:\.offset) { index, item in
-                        premiumItemView(premium: item)
-                        if index != PreminumList.count - 1 {
-                            Divider().padding(.leading, 50)
-                        }
-                    }
-                }
-                .modifier(VStackModifier())
-            }
-            
-            // 购买提示
-            VStack {
-                HStack {
-                    Footnote(text: "Purchase Tips")
-                    Spacer()
-                }
-                VStack(alignment: .leading, spacing:3) {
-                    ForEach(PurchaseNoticeList, id:\.self) { item in
-                        Text(LocalizedStringKey(item))
-                            .font(.caption2)
-                            .multilineTextAlignment(.leading)
-                            .modifier(GrayTextModifier())
-                    }
-                }
-                .modifier(VStackModifier())
-            }
-        }
-        .task {
-            if iapManager.products.isEmpty {
-                await iapManager.loadProduct()
-                selectDefaultProductIfNeeded()
-            }
-        }
-    }
-}
-
-
-// 购买会员按钮视图
-private struct BuyPremiumView: View {
-    @EnvironmentObject var iapManager: IAPManager
-    @Binding var selectedProduct: Product?
-    @Binding var loadPurchased:Bool
-    @Binding var isPurchaseSuccessfulView: Bool
-    @Binding var purchaseProductTask: Task<Void, Never>?
-    @State private var recoverySuccessful = false
-    var body: some View {
+    // 购买提示
+    var purchaseNotice: some View {
         VStack(spacing: 10) {
-            // 购买会员-按钮
+            HStack {
+                Footnote(text: "Purchase Tips")
+                Spacer()
+            }
+            HStack {
+                VStack(alignment: .leading) {
+                    // 订阅会自动续费，除非在 App Store 账户中取消。
+                    Text("The subscription will automatically renew unless canceled in your App Store account.")
+                    // 已购买会员可通过“恢复购买”找回。
+                    Text("Members who have already purchased memberships can retrieve them through the \"Restore Purchase\" function.")
+                    // 永久会员一次购买，永久有效，无需续费。
+                    Text("A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal.",)
+                    // 如需退订，请在 App Store → 账户 → 购买历史操作，开发者无法代为退订或退款。
+                    Text("To unsubscribe, please go to App Store → Account → Purchase History. The developer cannot unsubscribe or issue a refund on your behalf.")
+                }
+                Spacer()
+            }
+            .font(.caption2)
+            .modifier(GrayTextModifier())
+            .modifier(VStackModifier())
+        }
+    }
+    
+    // 恢复购买
+    var restorePurchasesButton: some View {
+        VStack {
             Button(action: {
-                // 振动
+                // 触发振动
                 HapticManager.shared.selectionChanged()
                 // 显示加载动画
-                loadPurchased = true
-                // 如果有商品信息，则购买商品。
-                if let selectedProduct = selectedProduct {
-                    purchaseProductTask = Task {
-                        await iapManager.purchaseProduct(selectedProduct) { success in
-                            if success == true {
-                                isPurchaseSuccessfulView = true
-                                // 振动
-                                HapticManager.shared.selectionChanged()
-                                // 成功音效
-                                SoundManager.shared.playSound(named: "successShot")
-                            }
-                            loadPurchased = false
-                            print("success:\(success)")
+                isLoading = true
+                
+                operationTask = Task {
+                    await iapManager.checkAllTransactions {
+                        result in
+                        print("完成恢复购买")
+                        // 移除加载动画
+                        isLoading = false
+                        // 弹出完成提示
+                        switch result {
+                        case .restoreSuccess:
+                            print("恢复成功")
+                            productResultStatus = .restoreSuccess
+                            SoundManager.shared.playSound(named: "successShot")
+                        case .restoreFailed:
+                            print("恢复失败")
+                            productResultStatus = .restoreFailed
+                        default:
+                            print("进入其他选择")
+                            break
                         }
                     }
                 }
             }, label: {
-                VStack(spacing:3) {
-                    // 会员信息
-                    HStack {
-                        Text("Purchase Membership")
-                        if let selectedProduct = selectedProduct,let product = iapManager.IAPProductList.first(where: { $0.id == selectedProduct.id }) {
-                            Text(verbatim: "(")+Text(LocalizedStringKey(product.name))+Text(verbatim: ")")
-                        }
-                    }
-                    // 价格
-                    if let selectedProduct = selectedProduct,let product = iapManager.IAPProductList.first(where: { $0.id == selectedProduct.id }) {
-                        HStack(spacing: 0) {
-                            Text(selectedProduct.displayPrice)
-                            if let priceSuffix = product.priceSuffix {
-                                Text(verbatim: "/")
-                                Text(LocalizedStringKey(priceSuffix))
-                            }
-                        }
-                        .font(.caption2)
-                        .foregroundColor(.white)
-                    }
-                }
-                .modifier(ButtonModifier3())
-            })
-            // 恢复购买-按钮
-            Button(action: {
-                HapticManager.shared.selectionChanged()
-                Task {
-                    await IAPManager.shared.checkAllTransactions() { success in
-                        recoverySuccessful = success
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                        // 成功音效
-                        SoundManager.shared.playSound(named: "successShot")
-                    }
-                }
-            },label: {
                 Footnote(text:"Restore Purchases")
             })
-            .sheet(isPresented: $recoverySuccessful, content: {
-                NavigationStack {
-                    if UIDevice.isPhone {
-                        RecoverySuccessfulView()
-                            .presentationDetents([.height(360)])
-                    } else {
-                        RecoverySuccessfulView()
-                            .frame(height: 360) // 限制高度
+            .buttonStyle(.plain)
+        }
+    }
+    
+    // 立即订阅
+    var subscribeButton: some View {
+        VStack {
+            Button(action: {
+                print("开始内购商品")
+                // 触发振动
+                HapticManager.shared.selectionChanged()
+                
+                guard let selectedProduct else { return }
+                // 显示加载动画
+                isLoading = true
+                
+                operationTask = Task {
+                    await iapManager.purchaseProduct(selectedProduct) { result in
+                        print("完成购买")
+                        // 移除加载动画
+                        isLoading = false
+                        
+                        // 弹出完成提示
+                        switch result {
+                        case .purchaseSuccess:
+                            productResultStatus = .purchaseSuccess
+                            // 成功音效
+                            SoundManager.shared.playSound(named: "successShot")
+                        case .purchaseFailed:
+                            productResultStatus = .purchaseFailed
+                        default:
+                            break
+                        }
                     }
                 }
+            }, label: {
+                Text("Subscribe Now")
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .foregroundColor(.white)
+                    .frame(width: 240,height: 60)
+                    .background(selectedProduct == nil ? Color.gray : AppColor.appColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
             })
+            .disabled(selectedProduct == nil)
         }
-        .padding(.bottom,10)
-        .ignoresSafeArea()
     }
+}
+
+enum ProductResultEnum: String, Identifiable {
+    var id: String {
+        rawValue
+    }
+    case purchaseSuccess
+    case purchaseFailed
+    case restoreSuccess
+    case restoreFailed
+    case stateless
 }
 
 // 会员权益-列表
@@ -504,7 +474,7 @@ private struct RecoverySuccessfulView: View {
                 .modifier(TitleModifier())
             // 高级会员
             HStack(spacing:0) {
-                Text("Premium Member")
+                Text("Pro")
             }
             .font(.footnote)
             .fontWeight(.medium)
@@ -531,7 +501,7 @@ private struct PurchaseSuccessfulView: View {
                     .modifier(TitleModifier())
                 // 高级会员
                 HStack(spacing:0) {
-                    Text("Premium Member")
+                    Text("Pro")
                 }
                 .font(.footnote)
                 .fontWeight(.medium)
@@ -555,6 +525,58 @@ private struct PurchaseSuccessfulView: View {
     }
     .environment(IAPManager.shared)
     .environmentObject(AppStorageManager.shared)
+}
+
+struct ReadyStage: View {
+    @State private var animateIn = false
+    
+    var backgroundRadialGradientRadius: Double = 150
+    
+    var backgroundRadialGradientSize: Double = 160
+    
+    var viewSize: Double = 200
+    
+    var body: some View {
+        ZStack {
+            Image("AppIcon 0")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 140)
+                .cornerRadius(30)
+                .overlay {
+                    Image("start")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .offset(x: 60, y: -60)
+                        .scaleEffect(animateIn ? 1 : 0.2)
+                        .opacity(animateIn ? 1 : 0)
+                        .animation(.spring(response: 0.45, dampingFraction: 0.75).delay(0.15), value: animateIn)
+                }
+                .rotationEffect(.degrees(animateIn ? 0 : -180))
+                .scaleEffect(animateIn ? 1 : 0.5)
+                .opacity(animateIn ? 1 : 0)
+                .background {
+                    RadialGradient(
+                        gradient: Gradient(colors: [Color(hex: "1000E3")]),
+                        center: .center,
+                        startRadius: 20,
+                        endRadius: backgroundRadialGradientRadius
+                    )
+                    .frame(width: backgroundRadialGradientSize, height: backgroundRadialGradientSize)
+                    .opacity(0.5)
+                    .cornerRadius(90)
+                    .blur(radius: 30)
+                }
+                .frame(height: viewSize)
+                .animation(.spring(response: 0.65, dampingFraction: 0.8), value: animateIn)
+            
+            RotatingBorderView()
+        }
+        .onAppear {
+            animateIn = true
+        }
+    }
 }
 
 #Preview {

@@ -124,6 +124,11 @@
 		1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0DF12F2C10B78E0098565F /* triggerNetworkRequest.swift */; };
 		1D1124562EE1115500E87CCC /* PiggyBankDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */; };
 		1D11245A2EE14DBD00E87CCC /* HomePrimaryBankAdvancedFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */; };
+		1D1237A22FD11F460052FDD6 /* ProductResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1237A12FD11F450052FDD6 /* ProductResultView.swift */; };
+		1D1237A52FD11FA40052FDD6 /* check2026.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1237A32FD11FA40052FDD6 /* check2026.json */; };
+		1D1237A62FD11FA40052FDD6 /* error2026.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1237A42FD11FA40052FDD6 /* error2026.json */; };
+		1D1237A82FD1203B0052FDD6 /* CurrentPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1237A72FD1203A0052FDD6 /* CurrentPlanView.swift */; };
+		1D1237AB2FD18C350052FDD6 /* ProBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1237AA2FD18C340052FDD6 /* ProBg.swift */; };
 		1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */; };
 		1D13B56A2EC5B13100044135 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D13B5692EC5B13000044135 /* AppStorage.swift */; };
 		1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1400B12D310E9500DC51C0 /* AboutUsView.swift */; };
@@ -324,6 +329,7 @@
 		1DD14EE42EC06B0600325DF7 /* BackgroundImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */; };
 		1DD151C12D25B042004B0936 /* PiggyBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C02D25B042004B0936 /* PiggyBank.swift */; };
 		1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD151C22D264209004B0936 /* PiggyBankData.swift */; };
+		1DD1AF862FD2AF3100AD62F4 /* RotatingBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD1AF852FD2AF3000AD62F4 /* RotatingBorderView.swift */; };
 		1DD55AF42FCECB6D00A32B61 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD55AF32FCECB6C00A32B61 /* UIDevice.swift */; };
 		1DD55AF62FCECC1D00A32B61 /* HomeSideTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD55AF52FCECC1D00A32B61 /* HomeSideTabView.swift */; };
 		1DD55AF82FCECC9E00A32B61 /* SingleSideTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD55AF72FCECC9900A32B61 /* SingleSideTabView.swift */; };
@@ -505,6 +511,11 @@
 		1D0FA7052D225A9E00ABF5F6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankDraft.swift; sourceTree = "<group>"; };
 		1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankAdvancedFeatures.swift; sourceTree = "<group>"; };
+		1D1237A12FD11F450052FDD6 /* ProductResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResultView.swift; sourceTree = "<group>"; };
+		1D1237A32FD11FA40052FDD6 /* check2026.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check2026.json; sourceTree = "<group>"; };
+		1D1237A42FD11FA40052FDD6 /* error2026.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = error2026.json; sourceTree = "<group>"; };
+		1D1237A72FD1203A0052FDD6 /* CurrentPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlanView.swift; sourceTree = "<group>"; };
+		1D1237AA2FD18C340052FDD6 /* ProBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProBg.swift; sourceTree = "<group>"; };
 		1D12F0732D6745DC00EEF511 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		1D13B5692EC5B13000044135 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		1D1400B12D310E9500DC51C0 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
@@ -742,6 +753,7 @@
 		1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImgView.swift; sourceTree = "<group>"; };
 		1DD151C02D25B042004B0936 /* PiggyBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBank.swift; sourceTree = "<group>"; };
 		1DD151C22D264209004B0936 /* PiggyBankData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankData.swift; sourceTree = "<group>"; };
+		1DD1AF852FD2AF3000AD62F4 /* RotatingBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingBorderView.swift; sourceTree = "<group>"; };
 		1DD55AF32FCECB6C00A32B61 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		1DD55AF52FCECC1D00A32B61 /* HomeSideTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideTabView.swift; sourceTree = "<group>"; };
 		1DD55AF72FCECC9900A32B61 /* SingleSideTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSideTabView.swift; sourceTree = "<group>"; };
@@ -876,6 +888,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1237A92FD18C290052FDD6 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				1D1237AA2FD18C340052FDD6 /* ProBg.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		1D1561AC2EB33BEB0041C0DD /* HomeAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1019,6 +1039,7 @@
 		1D45CAE12FCFC66300BA028B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DD1AF852FD2AF3000AD62F4 /* RotatingBorderView.swift */,
 				1D45CAE22FCFC66900BA028B /* iCloudFileManager.swift */,
 			);
 			path = Components;
@@ -1194,6 +1215,8 @@
 				1D2A5EFB2EBF215100C1F831 /* WorkingCat.json */,
 				1D36835B2EC867790089FE28 /* ThanksAnimation.json */,
 				1D6982212ECF554D0040CD37 /* CreateComplete.json */,
+				1D1237A32FD11FA40052FDD6 /* check2026.json */,
+				1D1237A42FD11FA40052FDD6 /* error2026.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1347,22 +1370,24 @@
 		1DBCF41B2EB8DA6600B85BF4 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */,
-				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
-				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
-				1D45CADC2FCFC2C700BA028B /* SettingsProfileView.swift */,
-				1DCB0C542D3759D00037153C /* GeneralView.swift */,
-				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
-				1D3E13D62D49ADCC00747D20 /* AnimationView.swift */,
-				1DCB0C562D375ADE0037153C /* BackgroundView.swift */,
-				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
-				1DD089572EC16C34002EE03D /* PremiumView.swift */,
 				1D1400B12D310E9500DC51C0 /* AboutUsView.swift */,
-				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
-				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
-				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
+				1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */,
+				1D3E13D62D49ADCC00747D20 /* AnimationView.swift */,
+				1D0D91202D472E7E00F287DA /* AppIconView.swift */,
+				1DCB0C562D375ADE0037153C /* BackgroundView.swift */,
 				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
+				1D051A142D58F34D004E2736 /* CurrencySymbolView.swift */,
+				1D1237A72FD1203A0052FDD6 /* CurrentPlanView.swift */,
+				1DCB0C542D3759D00037153C /* GeneralView.swift */,
+				1D01B4642EBB0F700022B549 /* HomeSettingRow.swift */,
+				1DE736062EB64D4D00573C1A /* HomeSettingsView.swift */,
 				1DD14EDD2EC0311400325DF7 /* LockApp.swift */,
+				1D66C4D62EBDFABF00001CF5 /* MailView.swift */,
+				1D1E110A2D4DBAF9003682EF /* OpenSourceView.swift */,
+				1DD089572EC16C34002EE03D /* PremiumView.swift */,
+				1D1237A12FD11F450052FDD6 /* ProductResultView.swift */,
+				1D45CADC2FCFC2C700BA028B /* SettingsProfileView.swift */,
+				1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -1472,6 +1497,7 @@
 				1DCBEDBF2C02B702005BFFFA /* Model */,
 				1D2F9A5D2BFCA53C005C8676 /* View */,
 				1DCBEDC22C02B776005BFFFA /* ViewModel */,
+				1D1237A92FD18C290052FDD6 /* ViewModifier */,
 				1D7FE03E2D20D5120065AA2E /* Info.plist */,
 			);
 			path = piglet;
@@ -1852,6 +1878,8 @@
 				1D66C4D92EBE2F0600001CF5 /* Sun.json in Resources */,
 				1D3E14152D4A35F600747D20 /* Home38.json in Resources */,
 				1D3E13FC2D4A160E00747D20 /* Home26.json in Resources */,
+				1D1237A52FD11FA40052FDD6 /* check2026.json in Resources */,
+				1D1237A62FD11FA40052FDD6 /* error2026.json in Resources */,
 				1D3E14322D4A5D7000747D20 /* Home48.json in Resources */,
 				1D3E142C2D4A5D7000747D20 /* Home49.json in Resources */,
 				1D3E13F32D4A0C8700747D20 /* Home17.json in Resources */,
@@ -1970,9 +1998,11 @@
 				1DD151C32D264209004B0936 /* PiggyBankData.swift in Sources */,
 				1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */,
 				1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */,
+				1DD1AF862FD2AF3100AD62F4 /* RotatingBorderView.swift in Sources */,
 				1D1695EB2D201BB10043A645 /* ContentView.swift in Sources */,
 				1D7728432ED08C800046B35B /* TradeView.swift in Sources */,
 				1DC524922ECDDC7600E48964 /* HomeCreateView.swift in Sources */,
+				1D1237A82FD1203B0052FDD6 /* CurrentPlanView.swift in Sources */,
 				1DE45C682EB355A10079F76E /* SingleTabView.swift in Sources */,
 				1DD55AF82FCECC9E00A32B61 /* SingleSideTabView.swift in Sources */,
 				1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */,
@@ -2012,6 +2042,7 @@
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
+				1D1237AB2FD18C350052FDD6 /* ProBg.swift in Sources */,
 				1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
@@ -2054,6 +2085,7 @@
 				1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */,
 				1D8C38782ECC7E7800F7CAD5 /* ActivityTextModifier.swift in Sources */,
 				1D1400B22D310E9500DC51C0 /* AboutUsView.swift in Sources */,
+				1D1237A22FD11F460052FDD6 /* ProductResultView.swift in Sources */,
 				1D1BE06F2EE064EA009BBAB1 /* CircularProgressView.swift in Sources */,
 				1D8C386A2ECC1B4600F7CAD5 /* EmergencyFund.swift in Sources */,
 				1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */,
@@ -2501,7 +2533,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
@@ -2542,7 +2574,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
