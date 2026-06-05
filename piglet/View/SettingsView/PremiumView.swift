@@ -1,5 +1,5 @@
 //
-//  PremiumView.swift
+//  ProView.swift
 //  piglet
 //
 //  Created by 方君宇 on 2025/11/10.
@@ -15,10 +15,10 @@
 import SwiftUI
 import StoreKit
 
-struct PremiumView: View {
+struct ProView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(AppStorageManager.self) var appStorage
-    @EnvironmentObject var iapManager: IAPManager
+    @Environment(IAPManager.self) var iapManager
     @State private var selectedProductID: String?
     @State private var isLoading = false    // 加载画布
     @State private var operationTask: Task<Void, Never>?    // 内购 Task
@@ -521,7 +521,7 @@ private struct PurchaseSuccessfulView: View {
 
 #Preview {
     NavigationStack{
-        PremiumView()
+        ProView()
     }
     .environment(IAPManager.shared)
     .environmentObject(AppStorageManager.shared)

@@ -16,7 +16,7 @@ struct Home: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
     @Environment(AppStorageManager.self) var appStorage
-    @EnvironmentObject var sound: SoundManager  // 通过 Sound 注入
+    @Environment(SoundManager.self) var sound
     @State private var homeActivityVM = HomeActivityViewModel()
     @Query(sort: [
         SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
@@ -55,6 +55,7 @@ struct Home: View {
                         homeView
                     }
                 }
+                .id(selectedTab)
             }
             if idleManager.isIdle {
                 SlientMode(isSlientMode: $idleManager.isIdle)

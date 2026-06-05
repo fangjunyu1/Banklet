@@ -63,5 +63,5 @@ struct ContentView: View {
         .modelContainer(PiggyBank.preview)
         .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
         .environment(AppStorageManager.shared)
-        .environmentObject(IAPManager.shared)
+        .environment(IAPManager.shared)
 }

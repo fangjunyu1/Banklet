@@ -11,15 +11,20 @@ import StoreKit
 struct AnimationView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
+    @Environment(IAPManager.self) var iapManager
     
     let generator = UISelectionFeedbackGenerator()
-    let columns = Array(repeating: GridItem(.adaptive(minimum: 130, maximum: 200)), count: 2)
+    let columns = Array(repeating: GridItem(.adaptive(minimum: 130, maximum: 160), spacing: 16), count: 2)
     
     var backgroundRange: [Int] {
         Array(0..<54)
     }
     
     var backgroundRangeLimit: Int = 8   // 免费Lottie动画数量
+    
+    func isLock(index: Int) -> Bool {
+        !appStorage.isValidMember && index >= backgroundRangeLimit
+    }
     
     var body: some View {
         VStack {
@@ -43,9 +48,8 @@ struct AnimationView: View {
                 Spacer()
             }
             ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: columns,spacing: 20) {
+                LazyVGrid(columns: columns, spacing: 16) {
                     ForEach(backgroundRange, id: \.self) { index in
-                        
                         // 当前选中动画
                         let selectedItem: Bool = appStorage.LoopAnimation == "Home\(index)"
                         Button(action: {
@@ -65,8 +69,10 @@ struct AnimationView: View {
                             }
                         })
                         .overlay {
-                            if !appStorage.isValidMember && index >= backgroundRangeLimit {
+                            if isLock(index: index) {
                                 LockApp()   // 未解锁的状态
+                                    .environment(appStorage)
+                                    .environment(iapManager)
                             }
                         }
                     }

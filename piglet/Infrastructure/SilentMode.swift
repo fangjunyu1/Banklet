@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SlientMode: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var appStorage: AppStorageManager
-    @EnvironmentObject var idleManager: IdleTimerManager
+    @Environment(AppStorageManager.self) var appStorage
+    @Environment(IdleTimerManager.self) var idleManager
     @Binding var isSlientMode: Bool
     var body: some View {
         var buttonColor: Color {
@@ -68,6 +68,6 @@ struct SlientMode: View {
 
 #Preview {
     SlientMode(isSlientMode: .constant(true))
-        .environmentObject(AppStorageManager.shared)
-        .environmentObject(IdleTimerManager.shared)
+        .environment(AppStorageManager.shared)
+        .environment(IdleTimerManager.shared)
 }
