@@ -40,11 +40,11 @@ class PiggyBank {
     }
     @Transient
     var amountText: String {    // 当前金额的String文本
-        currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
+        Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
     @Transient
     var targetAmountText: String {  // 目标金额的String文本
-        currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
+        Currency.currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
     }
     @Transient
     var progressText: String {  // 当前进度的String文本

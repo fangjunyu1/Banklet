@@ -31,7 +31,7 @@ struct HomePrimaryBankTitleView: View {
                             .imageScale(.large)
                             .fontWeight(.bold)
                     } else {
-                        Text(currencySymbol + " " + "****")
+                        Text(Currency.currencySymbol + " " + "****")
                             .font(.largeTitle)
                             .imageScale(.large)
                             .fontWeight(.bold)

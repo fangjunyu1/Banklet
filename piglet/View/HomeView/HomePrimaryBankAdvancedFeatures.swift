@@ -25,7 +25,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
         let progress: Double = primaryBank.progress
         let progressText = primaryBank.progressText
         let lastRecord = primaryBank.records?.max(by: { $0.date < $1.date })
-        let lastRecordAmountText = "\(currencySymbol + " " + (lastRecord?.amount.formattedWithTwoDecimalPlaces() ?? ""))"
+        let lastRecordAmountText = "\(Currency.currencySymbol + " " + (lastRecord?.amount.formattedWithTwoDecimalPlaces() ?? ""))"
         let lastRecordDate = formattedDate(lastRecord?.date ?? Date())
         let lastRecordSaveMoneyIcon = lastRecord?.saveMoney ?? true ? "arrowtriangle.down.fill" : "arrowtriangle.up.fill"
         let lastRecordSaveMoneyColor =  lastRecord?.saveMoney ?? true ? AppColor.green : AppColor.red

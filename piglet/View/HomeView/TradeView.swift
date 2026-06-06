@@ -162,7 +162,7 @@ struct TradeView: View {
             }
             
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(currencySymbol)
+                Text(Currency.currencySymbol)
                     .font(.system(size: 34, weight: .bold))
                     .foregroundColor(AppColor.gray)
                     .frame(height: 30)
@@ -255,7 +255,7 @@ struct TradeView: View {
                     .font(.headline)
                 
                 HStack(alignment: .firstTextBaseline, spacing: 8) {
-                    Text(currencySymbol)
+                    Text(Currency.currencySymbol)
                         .font(.system(size: 34, weight: .bold))
                         .foregroundColor(AppColor.gray)
                     

@@ -26,7 +26,7 @@ class SavingsRecord {
     var type: String = SavingsRecordType.manual.rawValue
     @Transient
     var amountText: String {    // 当前金额的String文本
-        currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
+        Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
     var piggyBank: PiggyBank? 
     

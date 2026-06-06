@@ -14,7 +14,7 @@ struct CurrencySymbolView: View {
         // 振动
         HapticManager.shared.selectionChanged()
         withAnimation {
-            appStorage.CurrencySymbol = currency.currencyAbbreviation
+            appStorage.CurrencySymbol = Currency.currencySymbolText(currency: currency)
         }
         print("当前货币符号:\(appStorage.CurrencySymbol)")
     }
@@ -43,20 +43,20 @@ struct CurrencySymbolView: View {
             }
             // 全部币种
             ScrollView {
-                ForEach(Array(currencySymbolList.sorted(by: {$0.currencyAbbreviation < $1.currencyAbbreviation}).enumerated()), id: \.offset) { index, currency in
-                    let lastIndex = currencySymbolList.count - 1
+                ForEach(Array(Currency.currencySymbolList.sorted(by: {$0.currencyAbbreviation < $1.currencyAbbreviation}).enumerated()), id: \.offset) { index, currency in
+                    let lastIndex = Currency.currencySymbolList.count - 1
                     Button(action: {
                         changeSymbols(currency: currency)
                     }, label: {
                         HStack{
-                            Image(currency.currencyAbbreviation)
+                            Image(Currency.currencySymbolText(currency: currency))
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 30)
                             Text(LocalizedStringKey(currency.currencyAbbreviation))
-                            Text(currency.currencyAbbreviation)
+                            Text(Currency.currencySymbolText(currency: currency))
                             Spacer()
-                            if appStorage.CurrencySymbol == currency.currencyAbbreviation {
+                            if appStorage.CurrencySymbol == Currency.currencySymbolText(currency: currency) {
                                 Image(systemName: "checkmark")
                             }
                         }

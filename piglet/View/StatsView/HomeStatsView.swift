@@ -107,7 +107,7 @@ struct HomeStatsView: View {
                         // 存款金额
                         VStack(alignment: .leading,spacing: 10) {
                             HStack(spacing: 10) {
-                                Text(currencySymbol)
+                                Text(Currency.currencySymbol)
                                     .foregroundColor(.gray)
                                 Text(savingRecordsCount)
                                     .font(.footnote)
