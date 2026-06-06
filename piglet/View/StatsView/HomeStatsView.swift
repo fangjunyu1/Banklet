@@ -21,7 +21,7 @@ struct HomeStatsView: View {
         case .inProgress:
             allPiggyBank.filter{ $0.progress < 1}
         case .completed:
-            allPiggyBank.filter{ $0.progress == 1}
+            allPiggyBank.filter{ $0.progress >= 1}
         }
     }
     

@@ -17,313 +17,358 @@ struct TradeView: View {
     @EnvironmentObject var homeVM: HomeViewModel
     // 打开存钱/取钱视图时，创建对象并管理金额和备注
     @State private var tradeVM = TradeViewModel()
-    @State private var textOffset: CGFloat = 40
-    @FocusState var focus: Field?
+    @FocusState private var focus: Field?
     
-    var showNavigationTitle: Text {
-        appStorage.isDebtModel ? Text("Debt Model") : Text(verbatim: "")
+    private var tradeTitle: LocalizedStringKey {
+        homeVM.tardeModel == .deposit ? "Deposit" : "Withdraw"
     }
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 30) {
-                if homeVM.piggyBank != nil {
-                    if tradeVM.tradeStatus == .prepare {
-                        // 存钱罐图标
-                        piggyBankIconView
-                        // 存钱罐名称
-                        piggyBankNameView
+        ZStack {
+            Background()
+                .ignoresSafeArea()
+            
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 22) {
+                    if let piggyBank = homeVM.piggyBank {
+                        switch tradeVM.tradeStatus {
+                        case .prepare:
+                            // 存钱信息
+                            prepareContent(piggyBank: piggyBank)
+                            
+                        case .loading:
+                            loadingContent
+                            
+                        case .finish:
+                            finishContent
+                        }
                     }
-                    // 存钱罐交易视图
-                    piggyBankContnetView
-                    // 存钱罐按钮
+                    Spacer()
                     piggyBankButtonView
+                        .padding(.horizontal, 20)
+                        .padding(.top, 12)
+                        .padding(.bottom, 12)
                 }
-                Spacer()
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+                .padding(.bottom, 120)
             }
         }
         .toolbar {
-            // 完成视图
             ToolbarItem(placement: .topBarLeading) {
-                Button(action: {
+                Button {
                     dismiss()
-                }, label: {
+                } label: {
                     Text("Completed")
                         .modifier(BlackTextModifier())
-                })
+                }
             }
+            
             if appStorage.isDebtModel {
                 ToolbarItem(placement: .principal) {
                     Text("Debt Model")
+                        .font(.footnote)
+                        .fontWeight(.medium)
                         .foregroundColor(Color(hex: "FF7D14"))
                         .padding(.vertical, 6)
                         .padding(.horizontal, 12)
                         .background(Color(hex: "FF7D14").opacity(0.1))
-                        .cornerRadius(8)
+                        .clipShape(Capsule())
+                }
+            }
+            
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                
+                Button {
+                    focus = nil
+                } label: {
+                    Text("Completed")
+                        .modifier(BlackTextModifier())
                 }
             }
         }
-        .padding(.horizontal, 20)
-        .frame(maxWidth: .infinity)
-        .background {
-            Background()
-        }
         .onAppear {
             focus = .amount
-            // 显示时，设置标志位为 true
+            
             print("显示交易视图，关闭计时器")
             idleManager.isShowingIdleView = true
             idleManager.stopTimer()
         }
         .onDisappear {
-            // 隐藏时，设置标志位为 false
             print("关闭交易视图，重启计时器")
             idleManager.isShowingIdleView = false
             idleManager.resetTimer()
         }
     }
     
-    // 存钱罐图标
     @ViewBuilder
-    var piggyBankIconView: some View {
-        if let piggyBank = homeVM.piggyBank {
+    private func prepareContent(piggyBank: PiggyBank) -> some View {
+        VStack(spacing: 20) {
+            // 存钱罐图标、名称和存入/取出状态
+            piggyBankHeaderView(piggyBank: piggyBank)
+            // 存钱输入框
+            amountInputCard
+            
+            if appStorage.isAccessNotes {
+                noteInputCard
+            }
+        }
+    }
+    
+    private func piggyBankHeaderView(piggyBank: PiggyBank) -> some View {
+        VStack(spacing: 12) {
             ZStack {
-                ZStack {
-                    // 背景圆环
-                    Circle()
-                        .stroke(.gray.opacity(0.2), style: StrokeStyle(lineWidth: 12, lineCap: .round))
-                    
-                    // 进度圆环
-                    Circle()
-                        .trim(from: 0, to: piggyBank.progress)
-                        .stroke(.blue, style: StrokeStyle(lineWidth: 12, lineCap: .round))
-                        .rotationEffect(.degrees(-90))
-                        .animation(.easeInOut(duration: 0.3), value: piggyBank.progress)
-                }
-                .frame(width: 100, height: 100)
-                .scaleEffect(0.9)
-                // 图标
+                Circle()
+                    .stroke(.gray.opacity(0.16), style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                
+                Circle()
+                    .trim(from: 0, to: piggyBank.progress)
+                    .stroke(AppColor.appColor, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                    .rotationEffect(.degrees(-90))
+                    .animation(.easeInOut(duration: 0.3), value: piggyBank.progress)
+                
                 Image(systemName: piggyBank.icon)
-                    .font(.largeTitle)
-                    .foregroundColor(.gray)
+                    .font(.system(size: 30, weight: .medium))
+                    .foregroundColor(AppColor.gray)
             }
+            .frame(width: 86, height: 86)
+            
+            Text(LocalizedStringKey(piggyBank.name))
+                .font(.headline)
+                .foregroundColor(AppColor.gray)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            
+            Text(tradeTitle)
+                .font(.caption)
+                .fontWeight(.medium)
+                .foregroundColor(AppColor.appColor)
+                .padding(.vertical, 5)
+                .padding(.horizontal, 12)
+                .background(AppColor.appColor.opacity(0.12))
+                .clipShape(Capsule())
         }
+        .frame(maxWidth: .infinity)
     }
     
-    // 存钱罐名称
-    @ViewBuilder
-    var piggyBankNameView: some View {
-        if let piggyBank = homeVM.piggyBank {
-            Text(verbatim: piggyBank.name)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color.gray)
-                .padding(10)
-                .frame(maxWidth: 200)
-                .background(Color("AppColor"))
-                .cornerRadius(10)
+    private var amountInputCard: some View {
+        VStack(spacing: 14) {
+            HStack {
+                Text("Amount")
+                    .font(.footnote)
+                    .modifier(GrayTextModifier())
+                Spacer()
+            }
+            
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Text(currencySymbol)
+                    .font(.system(size: 34, weight: .bold))
+                    .foregroundColor(AppColor.gray)
+                    .frame(height: 30)
+                
+                TextField(value: $tradeVM.amount, format: .number) {
+                    Text(verbatim: "0")
+                }
+                .font(.system(size: 58, weight: .bold))
+                .foregroundColor(AppColor.appColor)
+                .focused($focus, equals: .amount)
+                .keyboardType(.decimalPad)
+                .multilineTextAlignment(.leading)
+                .lineLimit(1)
+                .minimumScaleFactor(0.45)
+                .frame(minWidth: 120)
+                .onChange(of: tradeVM.amount) {
+                    HapticManager.shared.selectionChanged()
+                }
+                .frame(height: 50)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 100)
         }
+        .padding(.vertical, 28)
+        .padding(.horizontal, 20)
+        .background(Color("AppColor"))
+        .cornerRadius(24)
     }
     
-    @ViewBuilder
-    var piggyBankContnetView: some View {
-        switch tradeVM.tradeStatus {
-            // 完成存钱
-        case .finish:
-            VStack(spacing: 10) {
-                LottieView(
-                    filename: "check1",
-                    isPlaying: true,
-                    playCount: 1,
-                    isReversed: false
-                )
-                .scaledToFit()
-                .scaleEffect(1.2)
-                .frame(maxWidth: 100)
-                HStack {
-                    Text(currencySymbol)
-                        .font(.system(size: 45))
-                        .fontWeight(.bold)
-                        .foregroundColor(AppColor.gray)
-                    Text(verbatim: "\(tradeVM.amount?.formatted() ?? "")")
-                        .font(.system(size: 50))
-                        .fontWeight(.bold)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                }
-                .frame(width: 230)
-                VStack(spacing: 20) {
-                    // 存钱时间
-                    HStack {
-                        Text("Time")
-                        Spacer()
-                        Text(tradeVM.date ?? Date(), format: Date.FormatStyle.dateTime)
-                            .foregroundColor(AppColor.gray)
-                    }
-                    // 存钱备注
-                    if appStorage.isAccessNotes {
-                        HStack {
-                            Text("Notes")
-                            Spacer()
-                            if tradeVM.remark.isEmpty {
-                                Text("None")
-                                    .foregroundColor(AppColor.gray)
-                            } else {
-                                Text(verbatim: "\(tradeVM.remark)")
-                                    .foregroundColor(AppColor.gray)
-                            }
-                        }
-                    }
-                }
-                .font(.subheadline)
-                .padding(.top,10)
-                .padding(.horizontal,20)
+    private var noteInputCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Notes")
+                .font(.footnote)
+                .modifier(GrayTextModifier())
+            
+            TextField(text: $tradeVM.remark) {
+                Text("Add notes")
+                    .foregroundColor(.gray.opacity(0.5))
             }
-            // 填写信息
-        case .prepare:
-            VStack(spacing: 0) {
-                HStack(alignment: .center) {
-                    VStack {
-                        Spacer()
-                        // 存取标识
-                        Text(homeVM.tardeModel == .deposit ? "Deposit" : "Withdraw")
-                            .fontWeight(.medium)
-                            .padding(.bottom, 8)
-                    }
-                    Text(currencySymbol)
-                        .font(.system(size: 50))
-                        .fontWeight(.bold)
-                        .modifier(GrayTextModifier())
-                        .offset(x: textOffset)
-                        .onChange(of: tradeVM.amount) { _, newAmount in
-                            if let amount = newAmount {
-                                let length = String(Int(amount)).count
-                                print("length:\(length)")
-                                if length != 1 {
-                                    if length > 3 {
-                                        print("金额超过4位数")
-                                        textOffset = 0
-                                    } else {
-                                        print("金额未超过4位数，偏移\(CGFloat(length * -10)),textOffset:\(textOffset)")
-                                        textOffset = 40 + CGFloat(length * -10)
-                                    }
-                                }
-                            } else {
-                                textOffset = 40
-                            }
-                        }
-                    TextField(value: $tradeVM.amount, format: .number) {
-                        Text(verbatim: "_")
-                    }
-                    .fontWeight(.bold)
-                    .font(.system(size: 60))
-                    .foregroundColor(AppColor.appColor)
-                    .focused($focus, equals: .amount)
-                    .frame(width: 140)
-                    .keyboardType(.decimalPad)   // 数字 + 小数点键盘
-                    .frame(height: 70)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
-                    .multilineTextAlignment(.center)
-                    .onChange(of: tradeVM.amount) {
-                        // 振动
-                        HapticManager.shared.selectionChanged()
-                    }
-                }
-                // 备注
-                if appStorage.isAccessNotes {
-                    HStack {
-                        Text("Notes")
-                            .font(.footnote)
-                            .modifier(GrayTextModifier())
-                        TextField(text: $tradeVM.remark) {
-                            Text(verbatim: "")
-                        }
-                        .font(.footnote)
-                        .focused($focus, equals: .note)
-                        .onChange(of: tradeVM.remark) {
-                            // 振动
-                            HapticManager.shared.selectionChanged()
-                        }
-                        .frame(maxWidth: 300)
-                    }
-                    .padding(.vertical,8)
-                    .padding(.horizontal,10)
-                    .background(Color("AppColor"))
-                    .cornerRadius(6)
-                    .padding(.top,10)
-                }
+            .font(.body)
+            .focused($focus, equals: .note)
+            .onChange(of: tradeVM.remark) {
+                HapticManager.shared.selectionChanged()
             }
-            // 加载状态
-        case .loading:
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color("AppColor"))
+        .cornerRadius(18)
+    }
+    
+    private var loadingContent: some View {
+        VStack(spacing: 16) {
             LottieView(
                 filename: "FreeBlueLoadingAnimation",
                 isPlaying: true,
                 playCount: 0,
                 isReversed: false,
-                tintColor: colorScheme == .light ? nil : .white)
+                tintColor: colorScheme == .light ? nil : .white
+            )
             .scaledToFit()
-            .scaleEffect(1.5)
+            .scaleEffect(1.3)
             .frame(maxWidth: 100)
+            
+            Text(homeVM.tardeModel == .deposit ? "Depositing..." : "Withdrawing...")
+                .font(.subheadline)
+                .modifier(GrayTextModifier())
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 60)
+        .padding(.horizontal, 20)
+        .background(Color("AppColor"))
+        .cornerRadius(24)
+    }
+    
+    private var finishContent: some View {
+        VStack(spacing: 22) {
+            LottieView(
+                filename: "check1",
+                isPlaying: true,
+                playCount: 1,
+                isReversed: false
+            )
+            .scaledToFit()
+            .scaleEffect(1.15)
+            .frame(maxWidth: 100)
+            
+            VStack(spacing: 8) {
+                Text("Completed")
+                    .font(.headline)
+                
+                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                    Text(currencySymbol)
+                        .font(.system(size: 34, weight: .bold))
+                        .foregroundColor(AppColor.gray)
+                    
+                    Text(verbatim: "\(tradeVM.amount?.formatted() ?? "")")
+                        .font(.system(size: 48, weight: .bold))
+                        .foregroundColor(AppColor.appColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                }
+            }
+            
+            VStack(spacing: 14) {
+                resultRow(title: "Time") {
+                    Text(tradeVM.date ?? Date(), format: Date.FormatStyle.dateTime)
+                        .foregroundColor(AppColor.gray)
+                }
+                
+                if appStorage.isAccessNotes {
+                    resultRow(title: "Notes") {
+                        if tradeVM.remark.isEmpty {
+                            Text("None")
+                                .foregroundColor(AppColor.gray)
+                                .lineLimit(2)
+                        } else {
+                            Text(verbatim: tradeVM.remark)
+                                .foregroundColor(AppColor.gray)
+                                .lineLimit(2)
+                        }
+                    }
+                }
+            }
+            .font(.subheadline)
+        }
+        .padding(.vertical, 34)
+        .padding(.horizontal, 20)
+        .frame(maxWidth: .infinity)
+        .background(Color("AppColor"))
+        .cornerRadius(24)
+    }
+    
+    private func resultRow<Content: View>(
+        title: LocalizedStringKey,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        HStack(alignment: .firstTextBaseline) {
+            Text(title)
+                .modifier(GrayTextModifier())
+            
+            Spacer()
+            
+            content()
+                .multilineTextAlignment(.trailing)
         }
     }
     
-    var piggyBankButtonView: some View {
-        // 存钱按钮
-        VStack(spacing: 20) {
-            Button(action: {
-                // 振动
+    private var piggyBankButtonView: some View {
+        VStack(spacing: 14) {
+            Button {
                 HapticManager.shared.selectionChanged()
-                // 取消输入框焦点
                 focus = nil
-                // 根据存钱状态，调用方法
+                
                 switch tradeVM.tradeStatus {
                 case .prepare:
-                    tradeVM.tradeAmount(piggyBank: homeVM.piggyBank, tardeModel: homeVM.tardeModel)
+                    tradeVM.tradeAmount(
+                        piggyBank: homeVM.piggyBank,
+                        tardeModel: homeVM.tardeModel
+                    )
+                    
                 case .finish:
                     homeVM.isTradeView = false
-                    // 评分弹窗
+                    
                     if !appStorage.isRatingWindow {
                         SKStoreReviewController.requestReview()
                         appStorage.isRatingWindow = true
                     } else {
                         print("已经弹出过评分弹窗，不再设置")
                     }
+                    
                 case .loading:
                     break
                 }
-            }, label: {
+            } label: {
                 switch tradeVM.tradeStatus {
                 case .prepare:
-                    Text(homeVM.tardeModel == .deposit ? "Deposit" : "Withdraw")
+                    Text(tradeTitle)
                         .modifier(ButtonModifier(disableStats: tradeVM.amount == nil))
+                    
                 case .loading:
-                    Text(homeVM.tardeModel == .deposit ? "Deposit" : "Withdraw")
+                    Text(tradeTitle)
                         .modifier(ButtonModifier())
+                    
                 case .finish:
                     Text("Completed")
                         .modifier(ButtonModifier())
                 }
-            })
-            .disabled(tradeVM.tradeStatus == .loading ? true : false )
-            .disabled(tradeVM.amount == nil)
+            }
+            .disabled(
+                tradeVM.tradeStatus == .loading ||
+                (tradeVM.tradeStatus == .prepare && tradeVM.amount == nil && tradeVM.amount == 0)
+            )
             
-            // 取消按钮
-            Button(action: {
-                // 振动
-                HapticManager.shared.selectionChanged()
-                
-                UIView.animate(withDuration: 0.3) {
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            if tradeVM.tradeStatus != .finish {
+                Button {
+                    HapticManager.shared.selectionChanged()
+                    focus = nil
+                    homeVM.isTradeView = false
+                    tradeVM.cancelTask()
+                } label: {
+                    Text("Cancel")
+                        .font(.subheadline)
+                        .modifier(GrayTextModifier())
                 }
-                
-                homeVM.isTradeView = false
-                // 取消任务
-                tradeVM.cancelTask()
-            }, label: {
-                Text("Closure")
-                    .modifier(GrayTextModifier())
-            })
-            .opacity(tradeVM.tradeStatus != .finish ? 1 : 0)
+            }
         }
     }
 }
