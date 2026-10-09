@@ -81,7 +81,6 @@ struct ProView: View {
                     restorePurchasesButton
                 }
                 .padding(.top, 10)
-                .padding(.bottom, 50)
             }
             .navigationTitle("Pro")
             .modifier(BackgroundModifier())

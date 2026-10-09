@@ -10,8 +10,8 @@ import SwiftUI
 struct ThanksView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var showAppStore = false
-    let platformList: [String] = ["ChatGPT","LottieFiles","iconfont","Pinterest","Dirbbble","GitHub", "px"]
-    let platformBlackList: [String] = ["ChatGPT-white","LottieFiles-white","iconfont-white","Pinterest-white","Dirbbble-white","GitHub", "px"]
+    let platformList: [String] = ["ChatGPT","Freepik","LottieFiles","iconfont","Pinterest","Dirbbble","Pexels","GitHub", "px"]
+    let platformBlackList: [String] = ["ChatGPT-white","Freepik-white","LottieFiles-white","iconfont-white","Pinterest-white","Dirbbble-white", "Pexels-white", "GitHub", "px"]
     
     var body: some View {
         let list = colorScheme == .light ? platformList : platformBlackList
