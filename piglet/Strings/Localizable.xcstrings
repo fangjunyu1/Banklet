@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "0" : {
-      "shouldTranslate" : false
-    },
     "A lifetime membership is a one-time purchase that is valid indefinitely and requires no renewal." : {
       "comment" : "永久会员一次购买，永久有效，无需续费。",
       "extractionState" : "manual",

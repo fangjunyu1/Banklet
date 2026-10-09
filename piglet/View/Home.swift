@@ -34,8 +34,6 @@ struct Home: View {
         allPiggyBank.filter { $0.isPrimary }.first
     }
     @State private var lastTouchTime = Date()    // 最后点击时间，检测静默
-    // 每秒检查一次
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State private var idleManager = IdleTimerManager.shared
     
@@ -64,74 +62,72 @@ struct Home: View {
     }
     
     var homeView: some View {
+        // 主视图
         ZStack {
-            // 主视图
-            ZStack {
-                Group {
-                    switch selectedTab {
-                        // 主页视图
-                    case .home:
-                        HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
-                        // 活动视图
-                    case .activity:
-                        HomeActivityView()
-                        // 统计视图
-                    case .stats:
-                        HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
-                        // 统计视图
-                    case .settings:
-                        HomeSettingsView()
-                    }
-                }
-                if UIDevice.isPhone {
-                    // 液态玻璃 TabView 视图
-                    HomeTabView(selectedTab: $selectedTab)
+            Group {
+                switch selectedTab {
+                    // 主页视图
+                case .home:
+                    HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
+                    // 活动视图
+                case .activity:
+                    HomeActivityView()
+                    // 统计视图
+                case .stats:
+                    HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
+                    // 统计视图
+                case .settings:
+                    HomeSettingsView()
                 }
             }
-            .background {
-                Background()
+            if UIDevice.isPhone {
+                // 液态玻璃 TabView 视图
+                HomeTabView(selectedTab: $selectedTab)
             }
-            // 监听应用状态，如果返回，则调用Widget保存数据
-            .onChange(of: scenePhase) { _,newPhase in
-                if newPhase == .active {
-                    // App 进入活跃状态
-                    print("App 进入活跃状态")
-                }
-                if newPhase == .background {
-                    // 在应用进入后台时保存数据
-                    saveWidgetData(primaryBank)
-                    print("应用移入后台，调用Widget保存数据")
-                }
-                if newPhase == .inactive {
-                    // 应用即将终止时保存数据（iOS 15+）
-                    saveWidgetData(primaryBank)
-                    print("非活跃状态，调用Widget保存数据")
-                }
-                print("selectedTab:\(selectedTab)")
+        }
+        .background {
+            Background()
+        }
+        // 监听应用状态，如果返回，则调用Widget保存数据
+        .onChange(of: scenePhase) { _,newPhase in
+            if newPhase == .active {
+                // App 进入活跃状态
+                print("App 进入活跃状态")
             }
-            .environment(appStorage)
-            .environment(homeActivityVM)
-            .environment(homeVM)
-            .environmentObject(idleManager)
-            .onAppear {
-                // 重置计时
-                GlobalTouchManager.shared.onTouch = {
-                    idleManager.resetTimer()
-                }
-                // 设置计时
-                GlobalTouchManager.shared.setup()
-                // 播放音乐
-                if appStorage.isActivityMusic {
-                    homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
-                }
+            if newPhase == .background {
+                // 在应用进入后台时保存数据
+                saveWidgetData(primaryBank)
+                print("应用移入后台，调用Widget保存数据")
             }
-            .contentShape(Rectangle())
-            .onChange(of: scenePhase) { _, newValue in
-                // 如果应用为活跃状态
-                if newValue == .active {
-                    print("检查定期存款逻辑")
-                    SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
-                }
+            if newPhase == .inactive {
+                // 应用即将终止时保存数据（iOS 15+）
+                saveWidgetData(primaryBank)
+                print("非活跃状态，调用Widget保存数据")
+            }
+            print("selectedTab:\(selectedTab)")
+        }
+        .environment(appStorage)
+        .environment(homeActivityVM)
+        .environment(homeVM)
+        .environmentObject(idleManager)
+        .onAppear {
+            // 重置计时
+            GlobalTouchManager.shared.onTouch = {
+                idleManager.resetTimer()
+            }
+            // 设置计时
+            GlobalTouchManager.shared.setup()
+            // 播放音乐
+            if appStorage.isActivityMusic {
+                homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
+            }
+        }
+        .contentShape(Rectangle())
+        .onChange(of: scenePhase) { _, newValue in
+            // 如果应用为活跃状态
+            if newValue == .active {
+                print("检查定期存款逻辑")
+                SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
             }
         }
     }
