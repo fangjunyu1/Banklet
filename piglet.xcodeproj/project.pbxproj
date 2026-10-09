@@ -283,7 +283,6 @@
 		1D8C38742ECC1DB200F7CAD5 /* ActivityContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C38732ECC1DB100F7CAD5 /* ActivityContentButton.swift */; };
 		1D8C38762ECC7B1000F7CAD5 /* LifeSavingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C38752ECC7B1000F7CAD5 /* LifeSavingsView.swift */; };
 		1D8C38782ECC7E7800F7CAD5 /* ActivityTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C38772ECC7E6C00F7CAD5 /* ActivityTextModifier.swift */; };
-		1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */; };
 		1D91E62C2D6C56AF0081D285 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */; };
 		1DAD52D22E9E8C2D008D07CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DEB96D12D5D9D6D00A68C21 /* Assets.xcassets */; };
 		1DAD53772E9E95CC008D07CB /* GifWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */; };
@@ -665,7 +664,6 @@
 		1D8C38732ECC1DB100F7CAD5 /* ActivityContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityContentButton.swift; sourceTree = "<group>"; };
 		1D8C38752ECC7B1000F7CAD5 /* LifeSavingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSavingsView.swift; sourceTree = "<group>"; };
 		1D8C38772ECC7E6C00F7CAD5 /* ActivityTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTextModifier.swift; sourceTree = "<group>"; };
-		1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		1DAB2FE82D5F32EC00573E70 /* BankletWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankletWidgetExtension.entitlements; sourceTree = "<group>"; };
 		1DAD53762E9E95B7008D07CB /* GifWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifWidgetProvider.swift; sourceTree = "<group>"; };
@@ -881,14 +879,6 @@
 				1D1237AA2FD18C340052FDD6 /* ProBg.swift */,
 			);
 			path = ViewModifier;
-			sourceTree = "<group>";
-		};
-		1D186C182ECE8C9600362C48 /* Watch */ = {
-			isa = PBXGroup;
-			children = (
-				1D9177712DD8CFA600D32044 /* WCSessionDelegateImpl.swift */,
-			);
-			path = Watch;
 			sourceTree = "<group>";
 		};
 		1D186C192ECE8CA900362C48 /* Widget */ = {
@@ -1304,7 +1294,6 @@
 				1D7ED6F12DFEE490000EB349 /* Sound */,
 				1D64EFD22D21661F00832FB4 /* Strings */,
 				1D036E4430787C8100F71583 /* Lottie */,
-				1D186C182ECE8C9600362C48 /* Watch */,
 				1D39BB342EA3EB67007C3017 /* Extensions */,
 				1DAEF8BE2ECDF6B400B36FAB /* Resources */,
 				1D6E81232ECE079000C88269 /* SwiftData */,
@@ -1741,7 +1730,6 @@
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
 				1DF137632EE2E4ED002429AD /* HomeBanksListView2.swift in Sources */,
 				1D17FA492EEA6B6D00C306AF /* SavingsScheduler.swift in Sources */,
-				1D9177722DD8CFA700D32044 /* WCSessionDelegateImpl.swift in Sources */,
 				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
 				1D45CAE32FCFC66A00BA028B /* iCloudFileManager.swift in Sources */,
@@ -2161,7 +2149,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2212,7 +2200,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
