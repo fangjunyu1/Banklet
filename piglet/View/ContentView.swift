@@ -61,7 +61,9 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .modelContainer(PiggyBank.preview)
-        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environment(AppStorageManager.shared)
-        .environment(IAPManager.shared)
+        .environment(SoundManager.shared) // 加载音乐环境
+        .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
+        .environment(IAPManager.shared)    // 加载内购商品环境
+        .environment(ModelConfigManager.shared)    // 加载 iCloud 配置环境
+        .modelContainer(DataController.shared.container)   // 加载 iCloud 容器环境
 }

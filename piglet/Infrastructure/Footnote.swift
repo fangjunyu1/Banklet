@@ -11,7 +11,7 @@ struct Footnote: View {
     @Environment(\.colorScheme) var colorScheme
     var text: String
     var body: some View {
-        var color = colorScheme == .light ? Color.gray : Color.white
+        let color = colorScheme == .light ? Color.gray : Color.white
         Text(LocalizedStringKey(text))
             .font(.footnote)
             .foregroundColor(color)

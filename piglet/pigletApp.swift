@@ -40,10 +40,10 @@ struct pigletApp: App {
                     await avatarImage.loadAvatar(appStorage: appStorage)
                 }
         }
-        .environment(sound)
-        .environment(appStorage)
-        .environment(iapManager)
-        .environment(modelConfigManager)
-        .modelContainer(dataController.container)
+        .environment(sound) // 加载音乐环境
+        .environment(appStorage)    // 加载 UserDefaults 属性环境
+        .environment(iapManager)    // 加载内购商品环境
+        .environment(modelConfigManager)    // 加载 iCloud 配置环境
+        .modelContainer(dataController.container)   // 加载 iCloud 容器环境
     }
 }

@@ -13,7 +13,7 @@ struct EmailHelper {
     
     /// 打开发送邮件窗口（预填收件人、主题、设备信息等）
     static func sendFeedbackEmail() {
-        let email = "fangjunyu.com@gmail.com"
+        let email = "admin@fangjunyu.com"
         let subject = "Banklet Feedback"
         
         // 收集设备和 App 信息

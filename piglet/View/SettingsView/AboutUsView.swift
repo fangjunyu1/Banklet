@@ -77,7 +77,7 @@ struct AboutUsView: View {
                 HStack(spacing: 0) {
                     Text("Email")
                     Text(verbatim: " : ")
-                    Text(verbatim: "fangjunyu.com@gmail.com")
+                    Text(verbatim: "admin@fangjunyu.com")
                 }
                 // 网站
                 HStack(spacing: 0) {

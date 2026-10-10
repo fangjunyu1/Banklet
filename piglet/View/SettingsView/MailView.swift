@@ -31,7 +31,7 @@ struct MailView: View {
     
     var body: some View {
         MailComposeViewController(
-            recipients: ["fangjunyu.com@gmail.com"],
+            recipients: ["admin@fangjunyu.com"],
             subject: "Banklet Feedback",
             body: deviceInfo,
             resultCallback: { result in
