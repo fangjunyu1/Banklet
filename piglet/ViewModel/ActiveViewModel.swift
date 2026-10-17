@@ -205,7 +205,7 @@ final class ActiveViewModel:ObservableObject {
     // 创建人生存钱罐
     private func createLifeSavingBank() throws {
         // Step 1: 获取上下文
-        let context = DataController.shared.context
+        let context = ModelContainerManager.shared.context
         
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()
@@ -249,7 +249,7 @@ final class ActiveViewModel:ObservableObject {
     // 创建生活保障金
     private func createLifeFund() throws {
         // Step 1: 获取上下文
-        let context = DataController.shared.context
+        let context = ModelContainerManager.shared.context
         
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()

@@ -258,7 +258,7 @@
 		1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */; };
 		1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */; };
 		1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */; };
-		1D6E81252ECE07A100C88269 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81242ECE079F00C88269 /* DataController.swift */; };
+		1D6E81252ECE07A100C88269 /* ModelContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81242ECE079F00C88269 /* ModelContainerManager.swift */; };
 		1D749EBD2D59A3F000D04A07 /* CurrencySymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */; };
 		1D7728412ED06DF20046B35B /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728402ED06DEE0046B35B /* TradeViewModel.swift */; };
 		1D7728432ED08C800046B35B /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728422ED08C7E0046B35B /* TradeView.swift */; };
@@ -631,7 +631,7 @@
 		1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateInputView.swift; sourceTree = "<group>"; };
 		1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSectionView.swift; sourceTree = "<group>"; };
 		1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTipsModifier.swift; sourceTree = "<group>"; };
-		1D6E81242ECE079F00C88269 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1D6E81242ECE079F00C88269 /* ModelContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerManager.swift; sourceTree = "<group>"; };
 		1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbols.swift; sourceTree = "<group>"; };
 		1D7728402ED06DEE0046B35B /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
 		1D7728422ED08C7E0046B35B /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
@@ -1027,9 +1027,9 @@
 		1D6E81232ECE079000C88269 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
-				1D6E81242ECE079F00C88269 /* DataController.swift */,
-				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
+				1D6E81242ECE079F00C88269 /* ModelContainerManager.swift */,
 				1DD7E8C52D27F5E200024A96 /* ModelConfigManager.swift */,
+				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
 				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 			);
 			path = SwiftData;
@@ -1807,7 +1807,7 @@
 				1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */,
 				1DBCF41D2EB8DB6400B85BF4 /* EmailHelper.swift in Sources */,
 				1DD0895F2EC187D4002EE03D /* PreminumList.swift in Sources */,
-				1D6E81252ECE07A100C88269 /* DataController.swift in Sources */,
+				1D6E81252ECE07A100C88269 /* ModelContainerManager.swift in Sources */,
 				1DD089582EC16C3D002EE03D /* PremiumView.swift in Sources */,
 				1D27D83A2EB5B45400F6AFE6 /* GridProgressView.swift in Sources */,
 				1D1434A72EC9BBEE00FA6CBB /* ActivitySheetBg.swift in Sources */,
@@ -2149,7 +2149,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2200,7 +2200,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;

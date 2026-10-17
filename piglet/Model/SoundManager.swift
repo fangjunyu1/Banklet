@@ -14,7 +14,9 @@ class SoundManager:ObservableObject {
     private var players: [String: AVAudioPlayer] = [:]
     
     private init() {
+        print("进入 SoundManager 构造函数")
         preloadSounds(["money1","life0","life1","success","successShot"]) // 预加载音效
+        print("完成 SoundManager 构造函数")
     }
     
     private func preloadSounds(_ soundNames: [String]) {

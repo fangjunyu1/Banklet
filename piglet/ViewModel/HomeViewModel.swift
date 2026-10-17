@@ -25,7 +25,7 @@ class HomeViewModel:ObservableObject {
     // 删除存钱罐
     func deletePiggyBank(for data: PiggyBank) {
         // Step 1: 获取上下文
-        let context = DataController.shared.context
+        let context = ModelContainerManager.shared.context
         
         // Step 2: 判断是否为主存钱罐
         let wasPrimary = data.isPrimary
@@ -64,7 +64,7 @@ class HomeViewModel:ObservableObject {
 
     func setPiggyBank(for data: PiggyBank) {
         // Step 1: 获取上下文
-        let context = DataController.shared.context
+        let context = ModelContainerManager.shared.context
         
         // Step 2: 设置或查询描述符
         let fetchRequest = FetchDescriptor<PiggyBank>()

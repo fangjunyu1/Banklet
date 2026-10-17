@@ -13,7 +13,10 @@ class AvatarImage: ObservableObject {
     static let shared = AvatarImage()   // 全局单例
     
     // 私有化对象
-    private init() {}
+    private init() {
+        print("进入 AvatarImage 构造函数")
+        print("进入 AvatarImage 构造函数")
+    }
     
     func loadAvatar(appStorage: AppStorageManager) async {
         let imageName = appStorage.userImageName

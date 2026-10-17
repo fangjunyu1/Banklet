@@ -11,23 +11,13 @@ import WatchConnectivity
 
 @main
 struct pigletApp: App {
-    @State private var iapManager = IAPManager.shared
-    @State private var appStorage = AppStorageManager.shared
-    @State private var modelConfigManager = ModelConfigManager.shared
-    @State private var dataController = DataController.shared
+    @State private var iapManager: IAPManager = IAPManager.shared
+    @State private var appStorage: AppStorageManager = AppStorageManager.shared
+    @State private var modelConfigManager: ModelConfigManager = ModelConfigManager.shared
+    @State private var modelContainerManager: ModelContainerManager = ModelContainerManager.shared
     @State private var sound = SoundManager.shared
     @State var avatarImage = AvatarImage.shared
     @Environment(\.scenePhase) var scenePhase
-    
-    init() {
-        if appStorage.isModelConfigManager {
-            // isModelConfigManager为 true 时，设置为私有iCloud
-            modelConfigManager.cloudKitMode = .privateDatabase
-        } else {
-            // isModelConfigManager为 false 时，设置为空
-            modelConfigManager.cloudKitMode = .none
-        }
-    }
     
     var body: some Scene {
         WindowGroup {
@@ -43,7 +33,7 @@ struct pigletApp: App {
         .environment(sound) // 加载音乐环境
         .environment(appStorage)    // 加载 UserDefaults 属性环境
         .environment(iapManager)    // 加载内购商品环境
-        .environment(modelConfigManager)    // 加载 iCloud 配置环境
-        .modelContainer(dataController.container)   // 加载 iCloud 容器环境
+        .environment(modelConfigManager)    // ModelConfiguration
+        .modelContainer(modelContainerManager.container)   // ModelContainer
     }
 }

@@ -15,7 +15,7 @@ final class CreateStepViewModel: ObservableObject {
     
     func createPiggyBank(for data: PiggyBankData) {
         // Step 1: 获取上下文
-        let context = DataController.shared.context
+        let context = ModelContainerManager.shared.context
         
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()

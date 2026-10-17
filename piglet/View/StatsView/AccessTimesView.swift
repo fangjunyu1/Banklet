@@ -192,7 +192,7 @@ private struct PreviewAccessTimesView: View {
     PreviewAccessTimesView()
         .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
-        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
+        .environment(ModelConfigManager.shared)
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
 }

@@ -106,10 +106,9 @@ struct Home: View {
             }
             print("selectedTab:\(selectedTab)")
         }
-        .environment(appStorage)
         .environment(homeActivityVM)
         .environment(homeVM)
-        .environmentObject(idleManager)
+        .environment(idleManager)
         .onAppear {
             // 重置计时
             GlobalTouchManager.shared.onTouch = {
@@ -135,11 +134,11 @@ struct Home: View {
 
 
 #Preview {
-    Home()
+    ContentView()
         .modelContainer(PiggyBank.preview)
-        .environment(AppStorageManager.shared)
-        .environment(ModelConfigManager()) // 提供 ModelConfigManager 实例
-        .environmentObject(IAPManager.shared)
-        .environmentObject(SoundManager.shared)
-        .environment(\.locale, .init(identifier: "ru"))
+        .environment(SoundManager.shared) // 加载音乐环境
+        .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
+        .environment(IAPManager.shared)    // 加载内购商品环境
+        .environment(ModelConfigManager.shared)    // 加载 iCloud 配置环境
+        .modelContainer(ModelContainerManager.shared.container)   // 加载 iCloud 容器环境
 }

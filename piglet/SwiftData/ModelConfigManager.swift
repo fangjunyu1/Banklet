@@ -10,35 +10,39 @@ import SwiftData
 import SwiftUI
 
 @Observable
-class ModelConfigManager {
-    static let shared = ModelConfigManager()
-    var cloudKitMode: CloudKitMode = .privateDatabase {
-        didSet {
-            updateConfiguration()
-        }
-    }
-    
-    var currentConfiguration: ModelConfiguration = ModelConfiguration(
-        "PrivateDatabaseContainer",
-        cloudKitDatabase: .private("iCloud.com.fangjunyu.piglet")
+class ModelConfigManager: ObservableObject {
+    static let shared = ModelConfigManager(
+        appStorage: AppStorageManager.shared
     )
     
-    func updateConfiguration() {
+    private init(appStorage: AppStorageManager) {
+        print("进入 ModelConfigManager 构造函数")
+        if appStorage.isModelConfigManager {
+            cloudKitMode = .privateDatabase
+        } else {
+            cloudKitMode = .none
+        }
+        print("完成 ModelConfigManager 构造函数")
+    }
+    
+    var cloudKitMode: CloudKitMode
+    
+    var currentConfiguration: ModelConfiguration {
         switch cloudKitMode {
         case .none:
-            currentConfiguration = ModelConfiguration(
+            ModelConfiguration(
                 "LocalContainer",
-                cloudKitDatabase: .none
+                cloudKitDatabase:  .none
             )
         case .privateDatabase:
-            currentConfiguration = ModelConfiguration(
+            ModelConfiguration(
                 "PrivateDatabaseContainer",
                 cloudKitDatabase: .private("iCloud.com.fangjunyu.piglet")
             )
-        case .publicDatabase:
-            currentConfiguration = ModelConfiguration(
-                "PublicDatabaseContainer",
-                cloudKitDatabase: .automatic // 自动分配到公共数据库
+        case .automaticDatabase:
+            ModelConfiguration(
+                "AutomaticDatabaseContainer",
+                cloudKitDatabase: .automatic
             )
         }
     }
@@ -48,5 +52,5 @@ class ModelConfigManager {
 enum CloudKitMode {
     case none
     case privateDatabase
-    case publicDatabase
+    case automaticDatabase
 }

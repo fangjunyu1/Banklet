@@ -41,7 +41,10 @@ struct IAPDisplayProduct: Identifiable {
 class IAPManager:ObservableObject {
     static let shared = IAPManager()
     
-    private init() {}
+    private init() {
+        print("进入 IAPManager 构造函数")
+        print("完成 IAPManager 构造函数")
+    }
     
     private let oneTimeID = "20240523"
     

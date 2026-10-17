@@ -12,10 +12,12 @@ import Observation
 class AppStorageManager: ObservableObject {
     static let shared = AppStorageManager()  // 全局单例
     private init() {
+        print("进入 AppStorageManager 构造函数")
         migrateOldKeysIfNeeded() // 历史遗留数据处理
         loadUserDefault()   // 初始化时同步本地存储
         loadFromiCloud()    // 从iCloud读取数据
         observeiCloudChanges()  // 监听 iCloud 变化，同步到本地
+        print("完成 AppStorageManager 构造函数")
     }
     // 防止循环写入标志
     var isLoading = false
@@ -105,10 +107,10 @@ extension AppStorageManager {
         userName = defaults.string(forKey: "userName") ?? ""  // 用户名
         userImageName = defaults.string(forKey: "userName") ?? ""  // 用户头像
         if let idString = defaults.string(forKey: "avatarUpdatedUUID") {
-            print("本地 avatarUpdatedUUID：\(idString)")
+//            print("本地 avatarUpdatedUUID：\(idString)")
             avatarUpdatedUUID = UUID(uuidString: idString) ?? UUID()
         } else {
-            print("本地没有 avatarUpdatedUUID，avatarUpdatedUUID 为 nil")
+//            print("本地没有 avatarUpdatedUUID，avatarUpdatedUUID 为 nil")
             avatarUpdatedUUID = nil
         }
         
@@ -224,7 +226,7 @@ extension AppStorageManager {
 // MARK: - 更新字段，保存到 UserDefaults，并尝试同步 iCloud
 extension AppStorageManager {
     private func updateValue<T:Equatable>(key: String, newValue: T, oldValue: T) {
-        print("进入 updateValue 方法,newValue:\(newValue), oldValue:\(oldValue), isLoading:\(isLoading)")
+//        print("进入 updateValue 方法,newValue:\(newValue), oldValue:\(oldValue), isLoading:\(isLoading)")
         guard newValue != oldValue, !isLoading else { return }
         print("完成校验")
         

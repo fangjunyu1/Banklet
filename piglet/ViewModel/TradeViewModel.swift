@@ -16,7 +16,7 @@ class TradeViewModel:ObservableObject {
     var remark: String = ""
     var date: Date?
     var tradeStatus: TradeStatus = .prepare
-    let context = DataController.shared.context
+    let context = ModelContainerManager.shared.context
     var tradeTask: Task<Void,Never>?
     
     func tradeAmount(piggyBank: PiggyBank?,tardeModel: TradeModel) {

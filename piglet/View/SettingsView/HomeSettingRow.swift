@@ -230,7 +230,7 @@ private struct accessoryView: View {
             }
                 .onChange(of: isOn.wrappedValue) { _, newValue in
                     manager.cloudKitMode = newValue ? .privateDatabase : .none
-                    DataController.shared.updateContainer() // 更新容器
+                    ModelContainerManager.shared.updateContainer() // 更新容器
                 }
                 .frame(width: 80)
         case .binding(let isOn):
