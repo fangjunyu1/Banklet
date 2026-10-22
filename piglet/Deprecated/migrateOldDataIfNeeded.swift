@@ -12,7 +12,6 @@ import SwiftData
 struct migrateOldData: View {
     @Environment(\.modelContext) private var modelContext
     
-    
     // 1.0.1 使用UserDefault存储的内容，下面是迁移代码
     func migrateOldDataIfNeeded() {
         let userDefaults = UserDefaults.standard

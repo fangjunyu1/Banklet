@@ -77,9 +77,10 @@ struct Home: View {
                     HomeSettingsView()
                 }
             }
+            // 液态玻璃 TabView 视图
+            HomeTabView(selectedTab: $selectedTab)
             if UIDevice.isPhone {
-                // 液态玻璃 TabView 视图
-                HomeTabView(selectedTab: $selectedTab)
+                
             }
         }
         .background {

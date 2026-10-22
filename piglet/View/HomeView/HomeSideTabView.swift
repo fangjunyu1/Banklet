@@ -33,7 +33,7 @@ private struct HomeTabPreviewView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-            HomeTabView(selectedTab: $tab)
+            HomeSideTabView(selectedTab: $tab)
         }
     }
 }

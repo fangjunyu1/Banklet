@@ -7,87 +7,6 @@
 
 import SwiftUI
 
-// MARK: 文字样式
-
-struct LargeTitleModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .multilineTextAlignment(.center)
-    }
-}
-
-struct TitleModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.title)
-            .fontWeight(.medium)
-            .multilineTextAlignment(.center)
-    }
-}
-
-// 灰色注释文字
-struct FootNoteModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.footnote)
-            .foregroundStyle(.gray)
-            .multilineTextAlignment(.center)
-    }
-}
-
-// ======================
-// MARK: 按钮修饰符
-// ======================
-
-struct ButtonModifier: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
-    var disableStats: Bool = false
-    
-    func body(content: Content) -> some View {
-        content
-            .frame(height: 60)
-            .frame(minWidth: 200)
-            .foregroundColor(Color.white)
-            .contentShape(Rectangle())
-            .background(disableStats ? Color.gray : colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
-            .cornerRadius(10)
-    }
-}
-
-struct ButtonModifier2: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
-    func body(content: Content) -> some View {
-        content
-            .frame(height: 60)
-            .frame(minWidth: 200)
-            .foregroundColor(Color.white)
-            .contentShape(Rectangle())
-            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
-            .cornerRadius(20)
-    }
-}
-
-struct ButtonModifier3: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
-    func body(content: Content) -> some View {
-        content
-            .lineLimit(1)
-            .minimumScaleFactor(0.8)
-            .frame(height: 60)
-            .padding(.horizontal,20)
-            .foregroundColor(Color.white)
-            .contentShape(Rectangle())
-            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
-            .cornerRadius(20)
-    }
-}
-
-
 // ======================
 // MARK: Lottie 动画修饰符
 // ======================
@@ -204,5 +123,35 @@ struct LightBlueBgModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(colorScheme == .light ? AppColor.appColor.opacity(0.1) : Color.white.opacity(0.1))
+    }
+}
+
+struct ProBg: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(.vertical, 12)
+            .padding(.horizontal, 16)
+            .background(Color("AppColor"))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
+}
+
+struct Pro2Bg: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(.vertical, 6)
+            .padding(.horizontal, 16)
+            .background(Color("AppColor"))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
+}
+
+
+struct Pro3Bg: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(12)
+            .background(Color("WhiteAndBlack"))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
