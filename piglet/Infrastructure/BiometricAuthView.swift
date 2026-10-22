@@ -27,8 +27,9 @@ struct BiometricAuthView: View {
             Spacer().frame(height: 80)
             LottieView(filename: "lock", isPlaying: true, playCount: 0, isReversed: false)
                 .modifier(LottieModifier())
-                .scaleEffect(1.2)
+            
             Spacer().frame(height: 100)
+            
             VStack(spacing: 16) {
                 Button(action: {
                     onAuthenticate() // 调用闭包执行认证

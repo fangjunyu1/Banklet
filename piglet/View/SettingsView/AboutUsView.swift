@@ -15,7 +15,6 @@ struct AboutUsView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
                 LottieView(filename: "WorkingCat",isPlaying: true, playCount: 0, isReversed: false)
-                    .scaleEffect(1.3)
                     .modifier(LottieModifier())
                 VStack(spacing: 10) {
                     Text("Who are we?")

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct HomeMainView: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var idleManager: IdleTimerManager
     @Environment(\.modelContext) var context
+    @EnvironmentObject var idleManager: IdleTimerManager
     @EnvironmentObject var homeVM: HomeViewModel
     @State private var searchText = ""  // 搜索框
     @State private var showCreateView = false
@@ -89,5 +89,4 @@ struct HomeMainView: View {
         .environment(ModelConfigManager.shared)
         .environmentObject(IAPManager.shared)
         .environmentObject(SoundManager.shared)
-        .environment(\.locale, .init(identifier: "ta"))
 }

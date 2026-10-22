@@ -25,7 +25,7 @@ struct BiometricAuth {
                     if success {
                         completion(true,nil)
                     } else {
-                        let message = authenticationError?.localizedDescription ?? "Authentication failed"
+                        let message = authenticationError?.localizedDescription ?? "身份验证失败"
                         completion(false, message)
                     }
                 }
@@ -33,7 +33,7 @@ struct BiometricAuth {
         } else {
             // 设备不支持生物识别或密码验证
             DispatchQueue.main.async {
-                    let message = error?.localizedDescription ?? "Biometric authentication is not available"
+                    let message = error?.localizedDescription ?? "生物识别认证不可用"
                     completion(false, message)
             }
         }

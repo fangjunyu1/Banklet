@@ -7,14 +7,7 @@
 
 import SwiftUI
 
-struct TitleModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.title)
-            .fontWeight(.medium)
-            .multilineTextAlignment(.center)
-    }
-}
+// MARK: 文字样式
 
 struct LargeTitleModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -25,6 +18,16 @@ struct LargeTitleModifier: ViewModifier {
     }
 }
 
+struct TitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+    }
+}
+
+// 灰色注释文字
 struct FootNoteModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -34,28 +37,67 @@ struct FootNoteModifier: ViewModifier {
     }
 }
 
+// ======================
+// MARK: 按钮修饰符
+// ======================
+
+struct ButtonModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    var disableStats: Bool = false
+    
+    func body(content: Content) -> some View {
+        content
+            .frame(height: 60)
+            .frame(minWidth: 200)
+            .foregroundColor(Color.white)
+            .contentShape(Rectangle())
+            .background(disableStats ? Color.gray : colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+            .cornerRadius(10)
+    }
+}
+
+struct ButtonModifier2: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .frame(height: 60)
+            .frame(minWidth: 200)
+            .foregroundColor(Color.white)
+            .contentShape(Rectangle())
+            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+            .cornerRadius(20)
+    }
+}
+
+struct ButtonModifier3: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .lineLimit(1)
+            .minimumScaleFactor(0.8)
+            .frame(height: 60)
+            .padding(.horizontal,20)
+            .foregroundColor(Color.white)
+            .contentShape(Rectangle())
+            .background(colorScheme == .light ? AppColor.appColor : AppColor.appGrayColor)
+            .cornerRadius(20)
+    }
+}
+
+
+// ======================
+// MARK: Lottie 动画修饰符
+// ======================
+
 struct LottieModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .scaledToFit()
-            .frame(maxHeight: 200)
+            .frame(maxHeight: 240)
             .frame(maxWidth: 500)
-    }
-}
-
-struct LottieModifier2: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(maxHeight: 180)
-            .frame(maxWidth: 500)
-    }
-}
-
-struct LottieModifier3: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .scaledToFit()
-            .frame(maxWidth: 160)
     }
 }
 

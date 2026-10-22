@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 extension Double {
     func formattedWithTwoDecimalPlaces() -> String {
         let formatter = NumberFormatter()

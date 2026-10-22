@@ -17,12 +17,13 @@ struct ContentView: View {
     // 密码保护方法
     func authenticate() {
         // 检查用户是否启用了生物识别验证
-        guard appStorage.isBiometricEnabled else {
+        guard AppStorageManager.shared.isBiometricEnabled else {
             print("用户已禁用生物识别认证。")
             return
         }
         // 振动
         HapticManager.shared.selectionChanged()
+        // 即逆袭生物识别验证
         BiometricAuth.shared.authenticate(reason: "请验证身份以访问您的帐户") { success, error in
             if success {
                 isAuthenticated = true

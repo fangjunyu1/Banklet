@@ -16,7 +16,6 @@ struct OpenSourceView: View {
                 .frame(height: 50)
             LottieView(filename: "Sun", isPlaying: true, playCount: 0, isReversed: false)
                 .modifier(LottieModifier())
-                .scaleEffect(1.3)
             VStack(spacing: 10) {
                 // 让代码展现在阳光下
                 Text("Let the code show in the sun")
