@@ -73,9 +73,6 @@ struct Home: View {
                 case .activity:
                     HomeActivityView()
                     // 统计视图
-                case .stats:
-                    HomeStatsView(allPiggyBank: allPiggyBank, savingsRecords: savingsRecords)
-                    // 统计视图
                 case .settings:
                     HomeSettingsView()
                 }

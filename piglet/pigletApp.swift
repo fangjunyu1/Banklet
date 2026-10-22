@@ -17,7 +17,6 @@ struct pigletApp: App {
     @State private var modelContainerManager: ModelContainerManager = ModelContainerManager.shared
     @State private var sound = SoundManager.shared
     @State var avatarImage = AvatarImage.shared
-    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {

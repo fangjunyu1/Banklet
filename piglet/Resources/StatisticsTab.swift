@@ -4,8 +4,10 @@
 //
 //  Created by 方君宇 on 2025/11/2.
 //
+//  存钱罐完成状态
+//
 
-enum StatisticsTab: Int, CaseIterable {
+enum ProgressStatusTab: Int, CaseIterable {
     case all
     case inProgress
     case completed

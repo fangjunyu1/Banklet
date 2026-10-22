@@ -110,7 +110,6 @@ struct HomePrimaryBankAdvancedFeatures: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.gray)
                             }
-                            GridProgressView(rows: 5, columns: 10,progress: progress,filledColor: .blue)
                         }
                         .padding(10)
                         .frame(height:largeSize)
