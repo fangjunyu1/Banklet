@@ -39,21 +39,10 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            if UIDevice.isPhone {
-                NavigationStack {
-                    homeView
-                }
-            } else {
-                NavigationSplitView {
-                    HomeSideTabView(selectedTab: $selectedTab)
-                        .navigationSplitViewColumnWidth(320)
-                } detail: {
-                    NavigationStack {
-                        homeView
-                    }
-                }
-                .id(selectedTab)
+            NavigationStack {
+                homeView
             }
+            // 静默模式
             if idleManager.isIdle {
                 SlientMode(isSlientMode: $idleManager.isIdle)
                     .environmentObject(idleManager)
@@ -61,8 +50,8 @@ struct Home: View {
         }
     }
     
+    // 主视图
     var homeView: some View {
-        // 主视图
         ZStack {
             Group {
                 switch selectedTab {
@@ -79,12 +68,29 @@ struct Home: View {
             }
             // 液态玻璃 TabView 视图
             HomeTabView(selectedTab: $selectedTab)
-            if UIDevice.isPhone {
-                
-            }
         }
         .background {
             Background()
+        }
+        .onAppear {
+            // 重置计时
+            GlobalTouchManager.shared.onTouch = {
+                idleManager.resetTimer()
+            }
+            // 设置计时
+            GlobalTouchManager.shared.setup()
+            // 播放音乐
+            if appStorage.isActivityMusic {
+                homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
+            }
+        }
+        // 检查存钱罐的定期存款逻辑
+        .onChange(of: scenePhase) { _, newValue in
+            // 如果应用为活跃状态
+            if newValue == .active {
+                print("检查定期存款逻辑")
+                SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
+            }
         }
         // 监听应用状态，如果返回，则调用Widget保存数据
         .onChange(of: scenePhase) { _,newPhase in
@@ -107,26 +113,6 @@ struct Home: View {
         .environment(homeActivityVM)
         .environment(homeVM)
         .environment(idleManager)
-        .onAppear {
-            // 重置计时
-            GlobalTouchManager.shared.onTouch = {
-                idleManager.resetTimer()
-            }
-            // 设置计时
-            GlobalTouchManager.shared.setup()
-            // 播放音乐
-            if appStorage.isActivityMusic {
-                homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
-            }
-        }
-        .contentShape(Rectangle())
-        .onChange(of: scenePhase) { _, newValue in
-            // 如果应用为活跃状态
-            if newValue == .active {
-                print("检查定期存款逻辑")
-                SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
-            }
-        }
     }
 }
 
