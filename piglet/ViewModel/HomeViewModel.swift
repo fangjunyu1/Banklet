@@ -8,13 +8,6 @@
 import SwiftUI
 import SwiftData
 
-extension Bool: Comparable {
-    public static func < (lhs: Bool, rhs: Bool) -> Bool {
-        // 定义 false 小于 true (即 0 < 1)
-        return !lhs && rhs
-    }
-}
-
 @Observable
 @MainActor
 class HomeViewModel:ObservableObject {
@@ -37,7 +30,6 @@ class HomeViewModel:ObservableObject {
         if wasPrimary {
             let fetchRequest = FetchDescriptor<PiggyBank>(
                 sortBy: [
-                    SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
                     SortDescriptor(\PiggyBank.sortOrder),
                     SortDescriptor(\PiggyBank.creationDate, order: .reverse)
                 ]

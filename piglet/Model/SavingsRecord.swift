@@ -24,18 +24,25 @@ class SavingsRecord {
     var saveMoney: Bool = false // 存取为 true，取钱为 false
     var note: String? = nil  // 可选的备注信息
     var type: String = SavingsRecordType.manual.rawValue
-    @Transient
+    var piggyBank: PiggyBank?
+    
     var amountText: String {    // 当前金额的String文本
         Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
-    var piggyBank: PiggyBank? 
     
-    init(amount: Double, date: Date = Date(), saveMoney:Bool, note: String? = nil, piggyBank: PiggyBank? = nil, type: String? = nil) {
+    init(
+        amount: Double,
+        date: Date = Date(),
+        saveMoney:Bool,
+        note: String? = nil,
+        piggyBank: PiggyBank? = nil,
+        type: String = SavingsRecordType.manual.rawValue
+    ){
         self.amount = amount
         self.date = date
         self.saveMoney = saveMoney
         self.note = note
         self.piggyBank = piggyBank
-        self.type = type ?? SavingsRecordType.manual.rawValue
+        self.type = type
     }
 }

@@ -14,7 +14,6 @@ struct HomeBanksListView2: View {
     @EnvironmentObject var homeVM: HomeViewModel
     var primaryBank: PiggyBank?
     @Query(sort: [
-        SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
         SortDescriptor(\PiggyBank.sortOrder),
         SortDescriptor(\PiggyBank.creationDate, order: .reverse)
     ])   // 所有存钱罐，按创建日期排序

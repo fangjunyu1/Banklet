@@ -49,9 +49,6 @@ struct HomeActivityView: View {
         .background {
             HomeActivityViewBackground(activityTab: $homeActivityVM.tab)
         }
-//        .onDisappear {
-//            soundManager.stopAllSound()
-//        }
         .environment(homeActivityVM)
     }
 }

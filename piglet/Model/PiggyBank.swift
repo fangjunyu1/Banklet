@@ -10,7 +10,8 @@ import SwiftUI
 
 @Model
 class PiggyBank {
-    var isPrimary: Bool = false// 标记主要存钱罐
+    var isPrimary: Bool = false // 旧字段：暂时保留，后续不再用于列表管理
+    var isPinned: Bool = false  // 新字段：是否置顶
     var name: String = "" // 存钱罐名称
     var icon: String = "apple.logo"   // 图标名称
     var amount: Double = 0   // 存钱罐金额
@@ -28,37 +29,57 @@ class PiggyBank {
     var fixedDepositTime: Date = Date() // 定期存款-每天时分、每年月日
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
-    @Transient
     var progress: Double {  // 完成进度
         guard amount > 0, targetAmount > 0 else { return 0 }
         return amount / targetAmount
     }
-    @Transient
     var difference: Double {    // 差额
         let differenceNum = targetAmount - amount
         return differenceNum > 0 ? differenceNum : 0.0
     }
-    @Transient
     var amountText: String {    // 当前金额的String文本
         Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
-    @Transient
     var targetAmountText: String {  // 目标金额的String文本
         Currency.currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
     }
-    @Transient
     var progressText: String {  // 当前进度的String文本
         let truncated = floor(progress * 1000) / 1000
         return truncated.formatted(.percent.precision(.fractionLength(0...1)))
+    }
+    // 获取贴纸图片
+    var getImg: Image {
+        Image(IconList.getTextureName(name: icon))
     }
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    init(isPrimary: Bool, name: String, icon: String, amount: Double, initialAmount: Double, targetAmount: Double, creationDate: Date, expirationDate: Date, isExpirationDateEnabled: Bool, isFixedDeposit:Bool, fixedDepositType:String = FixedDepositEnum.Daily.rawValue,fixedDepositAmount: Double = 0.0,nextDepositDate: Date = Date(), fixedDepositWeekday: Int = 1, fixedDepositDay: Int = 1, fixedDepositTime: Date = Date(), completionDate: Date = Date(), sortOrder:Int = 0) {
+    init(
+        isPrimary: Bool = false,
+        isPinned: Bool = false,
+        name: String,
+        icon: String,
+        amount: Double,
+        initialAmount: Double,
+        targetAmount: Double,
+        creationDate: Date,
+        expirationDate: Date,
+        isExpirationDateEnabled: Bool,
+        isFixedDeposit:Bool,
+        fixedDepositType:String = FixedDepositEnum.Daily.rawValue,
+        fixedDepositAmount: Double = 0.0,
+        nextDepositDate: Date = Date(),
+        fixedDepositWeekday: Int = 1,
+        fixedDepositDay: Int = 1,
+        fixedDepositTime: Date = Date(),
+        completionDate: Date = Date(),
+        sortOrder:Int = 0
+    ) {
         self.isPrimary = isPrimary  // 标记主要存钱罐
+        self.isPinned = isPinned    // 置顶存钱罐
         self.name = name    // 存钱罐名称
-        self.icon = icon    // 存钱罐徒步
+        self.icon = icon    // 存钱罐图标
         self.amount = amount    // 存钱罐金额
         self.initialAmount = initialAmount  // 初始化金额
         self.targetAmount = targetAmount    // 目标金额

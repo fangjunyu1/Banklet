@@ -271,6 +271,9 @@
 		1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* Color.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
 		1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4D2D23F3C000EDE480 /* Home.swift */; };
+		1D8AF1A0308D93C3005DDD9A /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF19F308D93C3005DDD9A /* DeviceKit */; };
+		1D8AF1A3308D93CD005DDD9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF1A2308D93CD005DDD9A /* Lottie */; };
+		1D8AF1A6308D93D6005DDD9A /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF1A5308D93D6005DDD9A /* ClockHandRotationKit */; };
 		1D8B06342D3804E500F9338E /* BiometricAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B06332D3804E500F9338E /* BiometricAuthView.swift */; };
 		1D8C38662ECC150B00F7CAD5 /* ActiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */; };
 		1D8C386A2ECC1B4600F7CAD5 /* EmergencyFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C38692ECC1B4500F7CAD5 /* EmergencyFund.swift */; };
@@ -300,9 +303,6 @@
 		1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524942ECDDFB900E48964 /* CreateViewModel.swift */; };
 		1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524962ECDDFD800E48964 /* CreateStep.swift */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
-		1DCAA8252EDFC4BE00460337 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA8242EDFC4BE00460337 /* DeviceKit */; };
-		1DCAA8282EDFC4CD00460337 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA8272EDFC4CD00460337 /* Lottie */; };
-		1DCAA82B2EDFC4D500460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */; };
 		1DCAA82D2EDFC4DF00460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
 		1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C562D375ADE0037153C /* BackgroundView.swift */; };
@@ -754,10 +754,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCAA8282EDFC4CD00460337 /* Lottie in Frameworks */,
-				1DCAA82B2EDFC4D500460337 /* ClockHandRotationKit in Frameworks */,
+				1D8AF1A3308D93CD005DDD9A /* Lottie in Frameworks */,
+				1D8AF1A6308D93D6005DDD9A /* ClockHandRotationKit in Frameworks */,
 				1D33A1992C077D3B0073320F /* StoreKit.framework in Frameworks */,
-				1DCAA8252EDFC4BE00460337 /* DeviceKit in Frameworks */,
+				1D8AF1A0308D93C3005DDD9A /* DeviceKit in Frameworks */,
 				1D12F0742D6745DC00EEF511 /* WatchConnectivity.framework in Frameworks */,
 				1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */,
 			);
@@ -1332,9 +1332,9 @@
 			);
 			name = piglet;
 			packageProductDependencies = (
-				1DCAA8242EDFC4BE00460337 /* DeviceKit */,
-				1DCAA8272EDFC4CD00460337 /* Lottie */,
-				1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */,
+				1D8AF19F308D93C3005DDD9A /* DeviceKit */,
+				1D8AF1A2308D93CD005DDD9A /* Lottie */,
+				1D8AF1A5308D93D6005DDD9A /* ClockHandRotationKit */,
 			);
 			productName = piglet;
 			productReference = 1DE6144C2E6E708B0040FD65 /* piglet.app */;
@@ -1429,9 +1429,9 @@
 			);
 			mainGroup = 1DF555682BF60B1000BF0DE5;
 			packageReferences = (
-				1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */,
-				1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
+				1D8AF19E308D93C3005DDD9A /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				1D8AF1A1308D93CD005DDD9A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1D8AF1A4308D93D6005DDD9A /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */,
 			);
 			productRefGroup = 1DF555682BF60B1000BF0DE5;
 			projectDirPath = "";
@@ -2101,7 +2101,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2117,6 +2117,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -2152,7 +2153,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2168,6 +2169,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = piglet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -2228,20 +2230,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+		1D8AF19E308D93C3005DDD9A /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
+				minimumVersion = 5.9.0;
 			};
 		};
-		1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		1D8AF1A1308D93CD005DDD9A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.2;
+				minimumVersion = 4.6.1;
+			};
+		};
+		1D8AF1A4308D93D6005DDD9A /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/octree/ClockHandRotationKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
 			};
 		};
 		1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */ = {
@@ -2255,19 +2265,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1DCAA8242EDFC4BE00460337 /* DeviceKit */ = {
+		1D8AF19F308D93C3005DDD9A /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1DCAA8232EDFC4BE00460337 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			package = 1D8AF19E308D93C3005DDD9A /* XCRemoteSwiftPackageReference "DeviceKit" */;
 			productName = DeviceKit;
 		};
-		1DCAA8272EDFC4CD00460337 /* Lottie */ = {
+		1D8AF1A2308D93CD005DDD9A /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1DCAA8262EDFC4CD00460337 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 1D8AF1A1308D93CD005DDD9A /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		1DCAA82A2EDFC4D500460337 /* ClockHandRotationKit */ = {
+		1D8AF1A5308D93D6005DDD9A /* ClockHandRotationKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1DCAA8292EDFC4D500460337 /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
+			package = 1D8AF1A4308D93D6005DDD9A /* XCRemoteSwiftPackageReference "ClockHandRotationKit" */;
 			productName = ClockHandRotationKit;
 		};
 		1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */ = {

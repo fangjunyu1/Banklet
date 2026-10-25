@@ -46,7 +46,7 @@ enum IconList {
         // 足球，网球，听诊器，医疗包，背包，座椅，药丸  -> 存钱罐
         // T恤衫、铅笔，建筑，玩具，狗，猫，鱼，鸟，兔子，乌龟，爬虫 -> 存钱罐
         // 树，包，鞋子，床，煎锅，刀叉，礼花，键盘，火车 -> 存钱罐
-        // 游戏手柄，人生存钱罐（旧图标） -> 存钱罐
+        // 游戏手柄，人生存钱罐（旧图标），Apple 图标 -> 存钱罐
         "sun.min": "piggybank",
         "globe": "piggybank",
         "envelope": "piggybank",
@@ -98,6 +98,7 @@ enum IconList {
         "train": "piggybank", // 火车
         "gamecontroller": "piggybank",   // 游戏手柄
         "person.fill": "piggybank", // 人生存钱罐（旧图标）
+        "apple.logo": "piggybank",  // 默认 Apple 图标
     ]
     
     // 适配旧版本的图标，将旧的图标映射为新的贴图

@@ -19,7 +19,6 @@ struct Home: View {
     @Environment(SoundManager.self) var sound
     @State private var homeActivityVM = HomeActivityViewModel()
     @Query(sort: [
-        SortDescriptor(\PiggyBank.isPrimary, order: .reverse),
         SortDescriptor(\PiggyBank.sortOrder),
         SortDescriptor(\PiggyBank.creationDate, order: .reverse)
     ])   // 所有存钱罐，按创建日期排序
@@ -79,6 +78,10 @@ struct Home: View {
             }
             // 设置计时
             GlobalTouchManager.shared.setup()
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            // 播放音乐
+            guard newPhase == .active else { return }
             // 播放音乐
             if appStorage.isActivityMusic {
                 homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
