@@ -18,22 +18,12 @@ struct Home: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(SoundManager.self) var sound
     @State private var homeActivityVM = HomeActivityViewModel()
-    @Query(sort: [
-        SortDescriptor(\PiggyBank.sortOrder),
-        SortDescriptor(\PiggyBank.creationDate, order: .reverse)
-    ])   // 所有存钱罐，按创建日期排序
-    var allPiggyBank: [PiggyBank]
     @Query(sort: \SavingsRecord.date, order: .reverse)
     var savingsRecords: [SavingsRecord]  // 存取次数
     @State private var selectedTab = HomeTab.home  // 当前选择的Tab
     @State private var homeVM = HomeViewModel() // 视图步骤
     @State private var isSlientMode = false // 静默视图
-    // 获取第一个存钱罐
-    var primaryBank: PiggyBank? {
-        allPiggyBank.filter { $0.isPrimary }.first
-    }
     @State private var lastTouchTime = Date()    // 最后点击时间，检测静默
-    
     @State private var idleManager = IdleTimerManager.shared
     
     var body: some View {
@@ -56,7 +46,7 @@ struct Home: View {
                 switch selectedTab {
                     // 主页视图
                 case .home:
-                    HomeMainView(allPiggyBank: allPiggyBank, primaryBank: primaryBank)
+                    HomeMainView()
                     // 活动视图
                 case .activity:
                     HomeActivityView()
@@ -87,15 +77,7 @@ struct Home: View {
                 homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
             }
         }
-        // 检查存钱罐的定期存款逻辑
-        .onChange(of: scenePhase) { _, newValue in
-            // 如果应用为活跃状态
-            if newValue == .active {
-                print("检查定期存款逻辑")
-                SavingsScheduler.processAutoDeposits(context: modelContext, piggyBank: allPiggyBank)
-            }
-        }
-        // 监听应用状态，如果返回，则调用Widget保存数据
+        // 监听应用状态，如果返回，则调用 Widget 保存数据
         .onChange(of: scenePhase) { _,newPhase in
             if newPhase == .active {
                 // App 进入活跃状态
@@ -103,15 +85,14 @@ struct Home: View {
             }
             if newPhase == .background {
                 // 在应用进入后台时保存数据
-                saveWidgetData(primaryBank)
+                saveWidgetData()
                 print("应用移入后台，调用Widget保存数据")
             }
             if newPhase == .inactive {
                 // 应用即将终止时保存数据（iOS 15+）
-                saveWidgetData(primaryBank)
+                saveWidgetData()
                 print("非活跃状态，调用Widget保存数据")
             }
-            print("selectedTab:\(selectedTab)")
         }
         .environment(homeActivityVM)
         .environment(homeVM)

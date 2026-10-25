@@ -29,6 +29,9 @@ class PiggyBank {
     var fixedDepositTime: Date = Date() // 定期存款-每天时分、每年月日
     var completionDate: Date = Date()    // 完成日期
     var sortOrder: Int = 0
+    // 自定义愿望图片的文件名
+    var customImageFilename: String? = nil
+    
     var progress: Double {  // 完成进度
         guard amount > 0, targetAmount > 0 else { return 0 }
         return amount / targetAmount
@@ -74,7 +77,8 @@ class PiggyBank {
         fixedDepositDay: Int = 1,
         fixedDepositTime: Date = Date(),
         completionDate: Date = Date(),
-        sortOrder:Int = 0
+        sortOrder:Int = 0,
+        customImageFilename: String? = nil
     ) {
         self.isPrimary = isPrimary  // 标记主要存钱罐
         self.isPinned = isPinned    // 置顶存钱罐
@@ -95,6 +99,7 @@ class PiggyBank {
         self.fixedDepositTime = fixedDepositTime   // 定期存款-时分
         self.completionDate = completionDate
         self.sortOrder = sortOrder
+        self.customImageFilename = customImageFilename
     }
     
     @MainActor
