@@ -58,6 +58,11 @@ class PiggyBank {
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
+    /// 排序用的置顶权重，置顶为 1，未置顶为 0
+    var pinnedSortOrder: Int {
+        isPinned ? 1 : 0
+    }
+    
     init(
         isPrimary: Bool = false,
         isPinned: Bool = false,

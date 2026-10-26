@@ -19,7 +19,7 @@ struct SavingsScheduler {
         let enumType = FixedDepositEnum(rawValue: draft.fixedDepositType) ?? .Daily
         
         // 用户的最近存取时间可能是很久之前的时间,提取当前用户选择的 时-分 组件
-        var userComponents = calendar.dateComponents([.hour, .minute], from: draft.fixedDepositTime)
+        let userComponents = calendar.dateComponents([.hour, .minute], from: draft.fixedDepositTime)
         
         // 判断用户的存取类型
         switch enumType {
@@ -207,24 +207,36 @@ struct SavingsScheduler {
     
     // 定期存钱逻辑
     static func updateDepositsAndRecords(piggyBank:PiggyBank, date: Date, context: ModelContext) {
-        // 更新存钱罐金额
-        piggyBank.amount = piggyBank.fixedDepositAmount + piggyBank.amount
+        // 计算本次实际存入金额
+        let depositAmount = min(
+            piggyBank.fixedDepositAmount,
+            piggyBank.targetAmount - piggyBank.amount
+        )
         
-        // 如果存入金额大于目标金额，标记完成时间
-        if piggyBank.amount >= piggyBank.targetAmount {
-            piggyBank.completionDate = Date()
+        guard depositAmount > 0 else {
+            print("本次实际存入金额小于或等于 0，跳过本次存款")
+            return
         }
+        
+        // 更新存钱罐金额
+        piggyBank.amount += depositAmount
         
         // 创建存钱记录
         let record = SavingsRecord(
-            amount: piggyBank.fixedDepositAmount,
+            amount: depositAmount,
             date: date,
             saveMoney: true,
             note: nil,
             piggyBank: piggyBank,
             type: SavingsRecordType.automatic.rawValue
         )
+
         context.insert(record)
-        
+
+        // 如果存钱罐已存满，记录完成时间
+        if piggyBank.amount >= piggyBank.targetAmount {
+            piggyBank.completionDate = date
+            print("当前存钱罐已经存满，不再新增存钱逻辑")
+        }
     }
 }

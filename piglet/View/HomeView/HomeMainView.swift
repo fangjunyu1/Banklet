@@ -4,6 +4,8 @@
 //
 //  Created by 方君宇 on 2025/11/1.
 //
+//  默认水平边距为 20
+//
 
 import SwiftUI
 import SwiftData
@@ -14,59 +16,38 @@ struct HomeMainView: View {
     @Environment(\.modelContext) var context
     @EnvironmentObject var idleManager: IdleTimerManager
     @EnvironmentObject var homeVM: HomeViewModel
+    @Environment(AppStorageManager.self) var appStorage
     @State private var showCreateView = false
     @State private var showMoreInformation = false
     
-    @Query(sort: [
-        SortDescriptor(\PiggyBank.sortOrder),
-        SortDescriptor(\PiggyBank.creationDate, order: .reverse)
-    ])   // 所有存钱罐，按创建日期排序
+    @Query(
+        sort: [
+            SortDescriptor(\PiggyBank.sortOrder),
+            SortDescriptor(\PiggyBank.creationDate, order: .reverse)
+        ]
+    )
     var allPiggyBank: [PiggyBank]
     
-    var appStorage = AppStorageManager.shared
+    // 排序存钱罐列表
+    private var sortedPiggyBanks: [PiggyBank] {
+        allPiggyBank.sorted {
+            if $0.pinnedSortOrder != $1.pinnedSortOrder {
+                return $0.pinnedSortOrder < $1.pinnedSortOrder
+            }
+
+            if $0.sortOrder != $1.sortOrder {
+                return $0.sortOrder < $1.sortOrder
+            }
+
+            return $0.creationDate > $1.creationDate
+        }
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             // 如果有存钱罐
             if !allPiggyBank.isEmpty {
                 
-                // 如果有主存钱罐
-//                if allPiggyBank.isEmpty {
-//                    // 主存钱罐信息
-//                    VStack(spacing: 10) {
-//                        // 1、主存钱罐当前金额、金额、图标、名称
-//                        HomePrimaryBankTitleView(primaryBank: primaryBank,showMoreInformation: $showMoreInformation)
-//                        Spacer().frame(height:10)
-//                        // 2、Lottie 动画
-//                        LottieView(filename: appStorage.LoopAnimation, isPlaying: appStorage.isLoopAnimation, playCount: 0, isReversed: false)
-//                            .id(appStorage.LoopAnimation)
-//                            .scaledToFit()
-//                            .frame(maxWidth: 160)
-//                            .onTapGesture {
-//                                appStorage.isLoopAnimation.toggle()
-//                            }
-//                        // 3、主存钱罐信息、存入、取出、删除视图
-//                        HomePrimaryBankButtonView(primaryBank: primaryBank, showMoreInformation: $showMoreInformation)
-//                            .padding(.top,20)
-//                            .padding(.vertical,20)
-//                        // 4、高级功能、创建存钱罐、存取进度
-//                        HomePrimaryBankAdvancedFeatures(primaryBank: primaryBank,showCreateView: $showCreateView)
-//                    }
-//                    .sheet(isPresented: $showMoreInformation) {
-//                        NavigationStack {
-//                            HomeMoreInformationView(primary: primaryBank)
-//                                .environment(idleManager)
-//                        }
-//                    }
-//                    .sheet(isPresented: $homeVM.isTradeView) {
-//                        NavigationStack {
-//                            TradeView()
-//                                .environment(appStorage)
-//                                .environment(homeVM)
-//                                .environmentObject(idleManager)
-//                        }
-//                    }
-//                }
                 Spacer()
             } else {
                 // 显示空白视图
@@ -75,8 +56,7 @@ struct HomeMainView: View {
             // 底部空白
             Spacer().frame(height: 50)
         }
-        .navigationTitle("Home")
-        .padding(.horizontal,20)
+        .navigationTitle("存钱罐")
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background {
             BackgroundImgView()

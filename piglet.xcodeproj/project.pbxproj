@@ -892,8 +892,6 @@
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
 				1D845F4D2D23F3C000EDE480 /* Home.swift */,
-				1D4542BB2EF01AE40042C564 /* Background.swift */,
-				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
 				1DBCF4192EB8DA1C00B85BF4 /* HomeView */,
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
@@ -934,6 +932,8 @@
 				1DD14EDB2EC02C0700325DF7 /* Footnote.swift */,
 				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
 				1DEC906F2ED7382600DFDE90 /* SilentMode.swift */,
+				1D4542BB2EF01AE40042C564 /* Background.swift */,
+				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -2093,7 +2093,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2145,7 +2145,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;

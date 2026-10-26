@@ -29,7 +29,62 @@ struct Home: View {
     var body: some View {
         ZStack {
             NavigationStack {
-                homeView
+                ZStack {
+                    Group {
+                        switch selectedTab {
+                            // 主页视图
+                        case .home:
+                            HomeMainView()
+                            // 活动视图
+                        case .activity:
+                            HomeActivityView()
+                            // 统计视图
+                        case .settings:
+                            HomeSettingsView()
+                        }
+                    }
+                    // 液态玻璃 TabView 视图
+                    HomeTabView(selectedTab: $selectedTab)
+                }
+                .background {
+                    Background()
+                }
+                .onAppear {
+                    // 重置计时
+                    GlobalTouchManager.shared.onTouch = {
+                        idleManager.resetTimer()
+                    }
+                    // 设置计时
+                    GlobalTouchManager.shared.setup()
+                }
+                .onChange(of: scenePhase) { _, newPhase in
+                    // 播放音乐
+                    guard newPhase == .active else { return }
+                    // 播放音乐
+                    if appStorage.isActivityMusic {
+                        homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
+                    }
+                }
+                // 监听应用状态，如果返回，则调用 Widget 保存数据
+                .onChange(of: scenePhase) { _,newPhase in
+                    if newPhase == .active {
+                        // App 进入活跃状态
+                        print("App 进入活跃状态")
+                    }
+                    if newPhase == .background {
+                        // 在应用进入后台时保存数据
+                        saveWidgetData()
+                        print("应用移入后台，调用Widget保存数据")
+                    }
+                    if newPhase == .inactive {
+                        // 应用即将终止时保存数据（iOS 15+）
+                        saveWidgetData()
+                        print("非活跃状态，调用Widget保存数据")
+                    }
+                }
+                .environment(homeActivityVM)
+                .environment(homeVM)
+                .environment(idleManager)
             }
             // 静默模式
             if idleManager.isIdle {
@@ -37,66 +92,6 @@ struct Home: View {
                     .environmentObject(idleManager)
             }
         }
-    }
-    
-    // 主视图
-    var homeView: some View {
-        ZStack {
-            Group {
-                switch selectedTab {
-                    // 主页视图
-                case .home:
-                    HomeMainView()
-                    // 活动视图
-                case .activity:
-                    HomeActivityView()
-                    // 统计视图
-                case .settings:
-                    HomeSettingsView()
-                }
-            }
-            // 液态玻璃 TabView 视图
-            HomeTabView(selectedTab: $selectedTab)
-        }
-        .background {
-            Background()
-        }
-        .onAppear {
-            // 重置计时
-            GlobalTouchManager.shared.onTouch = {
-                idleManager.resetTimer()
-            }
-            // 设置计时
-            GlobalTouchManager.shared.setup()
-        }
-        .onChange(of: scenePhase) { _, newPhase in
-            // 播放音乐
-            guard newPhase == .active else { return }
-            // 播放音乐
-            if appStorage.isActivityMusic {
-                homeActivityVM.playMusicForCurrentTab(for: homeActivityVM.tab)    // 播放音乐
-            }
-        }
-        // 监听应用状态，如果返回，则调用 Widget 保存数据
-        .onChange(of: scenePhase) { _,newPhase in
-            if newPhase == .active {
-                // App 进入活跃状态
-                print("App 进入活跃状态")
-            }
-            if newPhase == .background {
-                // 在应用进入后台时保存数据
-                saveWidgetData()
-                print("应用移入后台，调用Widget保存数据")
-            }
-            if newPhase == .inactive {
-                // 应用即将终止时保存数据（iOS 15+）
-                saveWidgetData()
-                print("非活跃状态，调用Widget保存数据")
-            }
-        }
-        .environment(homeActivityVM)
-        .environment(homeVM)
-        .environment(idleManager)
     }
 }
 
