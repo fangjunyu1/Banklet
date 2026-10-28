@@ -68,7 +68,7 @@ struct CurrencySymbolView: View {
                     }
                 }
                 .padding(.vertical,10)
-                .background(Color("AppColor"))
+                .background(Color("defaultBackground"))
                 .cornerRadius(12)
                 .padding(.bottom, 50)
             }

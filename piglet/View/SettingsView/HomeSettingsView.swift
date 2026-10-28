@@ -91,7 +91,7 @@ struct HomeSettingsView: View {
                             .ignoresSafeArea()
                     }
                 }
-                .background(Color("AppColor"))
+                .background(Color("defaultBackground"))
                 .cornerRadius(10)
                 
                 // 高级会员
@@ -122,7 +122,7 @@ struct HomeSettingsView: View {
                         HomeSettingRow(color: .color("EAA22A"), icon: .img("OpenSource"), title: "Open Source",accessory: .none)
                     })
                 }
-                .background(Color("AppColor"))
+                .background(Color("defaultBackground"))
                 .cornerRadius(10)
                 
                 Spacer().frame(height: 10)

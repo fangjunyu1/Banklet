@@ -47,7 +47,7 @@ struct LifeFundView: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,20)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(20)
             .padding(.bottom,20)
         }

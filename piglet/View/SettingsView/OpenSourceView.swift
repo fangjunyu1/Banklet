@@ -41,7 +41,7 @@ struct OpenSourceView: View {
                             .foregroundColor(colorScheme == .light ? .black : AppColor.appGrayColor)
                     }
                     .cornerRadius(10)
-                    .background(Color("AppColor"))
+                    .background(Color("defaultBackground"))
             })
             .sheet(isPresented: $showGitHub) {
                 SafariView(url: URL(string: "https://github.com/fangjunyu1/Banklet")!)

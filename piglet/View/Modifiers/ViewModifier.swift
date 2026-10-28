@@ -131,7 +131,7 @@ struct ProBg: ViewModifier {
         content
             .padding(.vertical, 12)
             .padding(.horizontal, 16)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
@@ -141,7 +141,7 @@ struct Pro2Bg: ViewModifier {
         content
             .padding(.vertical, 6)
             .padding(.horizontal, 16)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

@@ -27,7 +27,7 @@ struct AboutUsView: View {
                         Text(LocalizedStringKey(item))
                             .font(.footnote)
                             .padding(10)
-                            .background(Color("AppColor"))
+                            .background(Color("defaultBackground"))
                             .cornerRadius(10)
                             .multilineTextAlignment(.center)
                         

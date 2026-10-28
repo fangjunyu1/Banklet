@@ -33,7 +33,7 @@ struct HomeSettingRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(10)
             .frame(maxWidth: .infinity)
             if let footnote = footnote {
@@ -117,7 +117,7 @@ struct HomeSettingPremiumRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(10)
         }
     }
@@ -138,7 +138,7 @@ struct HomeSettingNoIconRow: View {
             }
             .padding(.vertical,10)
             .padding(.horizontal,14)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(10)
             if let footnote = footnote {
                 HStack {

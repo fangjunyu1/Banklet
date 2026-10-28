@@ -188,7 +188,7 @@ struct TradeView: View {
         }
         .padding(.vertical, 28)
         .padding(.horizontal, 20)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .cornerRadius(24)
     }
     
@@ -210,7 +210,7 @@ struct TradeView: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .cornerRadius(18)
     }
     
@@ -234,7 +234,7 @@ struct TradeView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 60)
         .padding(.horizontal, 20)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .cornerRadius(24)
     }
     
@@ -292,7 +292,7 @@ struct TradeView: View {
         .padding(.vertical, 34)
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .cornerRadius(24)
     }
     

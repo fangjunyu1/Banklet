@@ -149,7 +149,7 @@ struct ProView: View {
             // 加载条
             ProgressView("loading...")
                 .padding(20)
-                .background(Color("AppColor"))
+                .background(Color("defaultBackground"))
                 .cornerRadius(10)
                 .opacity(0.8)
         }
@@ -454,7 +454,7 @@ private struct VStackModifier: ViewModifier {
         content
             .padding(10)
             .frame(maxWidth: .infinity,alignment: .leading)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(10)
     }
 }

@@ -116,7 +116,7 @@ struct HomeView: View {
             }
         }
         .padding(16)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(20)
     }
@@ -135,27 +135,60 @@ struct HomeView: View {
         let piggyBank: PiggyBank
         
         var body: some View {
-            VStack(spacing: 5) {
+            VStack {
+                // 存满后显示
+                if piggyBank.progress >= 1 {
+                    HStack {
+                        Text(verbatim: "已完成")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 4)
+                            .padding(.horizontal, 14)
+                            .foregroundStyle(AppColor.green)
+                            .background(Color("defaultBackground"))
+                            .cornerRadius(16)
+                        Spacer()
+                    }
+                    .padding(.bottom, 5)
+                }
+                
                 piggyBank.getImg
                     .resizable()
                     .scaledToFit()
-                    .padding(.horizontal, 20)
+                    .frame(maxWidth: 150)
                 
-                OutlinedText(
-                    text: piggyBank.name,
-                    fontSize: 16,
-                    fontWeight: .bold,
-                    foregroundColor: .black,
-                    strokeColor: .white,
-                    strokeWidth: 10,
-                    maxWidth: 160
-                )
                 
-                Text(verbatim: piggyBank.progressText)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(AppColor.gray)
+                HStack {
+                    OutlinedText(
+                        text: piggyBank.name,
+                        fontSize: 16,
+                        fontWeight: .bold,
+                        foregroundColor: .black,
+                        strokeColor: .white,
+                        strokeWidth: 10,
+                        maxWidth: 160
+                    )
+                    .overlay(alignment: .trailing) {
+                        if piggyBank.isPinned {
+                            Image(systemName: "pin.fill")
+                                .font(.system(size: 13, weight: .semibold))
+                                .foregroundStyle(.gray)
+                                .frame(width: 30, height: 30)
+                                .offset(x: 20)
+                        }
+                    }
+                }
+                
+                // 存钱进度，存满则不显示
+                if piggyBank.progress <= 1 {
+                    Text(verbatim: piggyBank.progressText)
+                        .fontWeight(.semibold)
+                        .font(.subheadline)
+                        .foregroundStyle(AppColor.gray)
+                }
             }
             .contentShape(Rectangle())
+            .padding(.horizontal, 20)
             .contextMenu {
                 Button {
                     piggyBank.isPinned.toggle()

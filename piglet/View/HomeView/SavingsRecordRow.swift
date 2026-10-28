@@ -65,7 +65,7 @@ struct SavingsRecordRow: View {
         }
         .frame(height:40)
         .padding(10)
-        .background(Color("AppColor"))
+        .background(Color("defaultBackground"))
         .cornerRadius(10)
     }
 }

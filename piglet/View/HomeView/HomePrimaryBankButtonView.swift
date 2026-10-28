@@ -97,7 +97,7 @@ private struct HomePrimaryBankSingleButtonView: View {
             .modifier(BlueTextModifier())
             .contentShape(Rectangle())
             .frame(width: width,height: height)
-            .background(Color("AppColor"))
+            .background(Color("defaultBackground"))
             .cornerRadius(10)
             .opacity(0.95)
         })
