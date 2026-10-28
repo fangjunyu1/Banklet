@@ -231,7 +231,6 @@
 		1D3DBBE12EFB92CA00063F0F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEC2D5D841F00CC6F23 /* SwiftUI.framework */; };
 		1D3DBBE42EFB92CB00063F0F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD13FEA2D5D841F00CC6F23 /* WidgetKit.framework */; };
 		1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E13D62D49ADCC00747D20 /* AnimationView.swift */; };
-		1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3F72082EB703E7000DF62A /* StatisticsTab.swift */; };
 		1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */; };
 		1D42C27F2ED9890B007A890A /* IdleTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */; };
 		1D4542BC2EF01AEF0042C564 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4542BB2EF01AE40042C564 /* Background.swift */; };
@@ -270,7 +269,7 @@
 		1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */; };
 		1D80E7C92C0BC0D300A79B96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7C82C0BC0D300A79B96 /* Color.swift */; };
 		1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80E7CD2C0BC72400A79B96 /* LottieView.swift */; };
-		1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4D2D23F3C000EDE480 /* Home.swift */; };
+		1D845F4E2D23F3C000EDE480 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D845F4D2D23F3C000EDE480 /* MainTabView.swift */; };
 		1D8AF1A0308D93C3005DDD9A /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF19F308D93C3005DDD9A /* DeviceKit */; };
 		1D8AF1A3308D93CD005DDD9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF1A2308D93CD005DDD9A /* Lottie */; };
 		1D8AF1A6308D93D6005DDD9A /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D8AF1A5308D93D6005DDD9A /* ClockHandRotationKit */; };
@@ -592,7 +591,6 @@
 		1D39BB352EA3EB7C007C3017 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		1D3E13D62D49ADCC00747D20 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationScaleConfig.swift; sourceTree = "<group>"; };
-		1D3F72082EB703E7000DF62A /* StatisticsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTab.swift; sourceTree = "<group>"; };
 		1D42C27C2ED981B1007A890A /* GlobalTouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTouchManager.swift; sourceTree = "<group>"; };
 		1D42C27E2ED9890A007A890A /* IdleTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerManager.swift; sourceTree = "<group>"; };
 		1D4542BB2EF01AE40042C564 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -641,7 +639,7 @@
 		1D7FE03E2D20D5120065AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D80E7C82C0BC0D300A79B96 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1D80E7CD2C0BC72400A79B96 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		1D845F4D2D23F3C000EDE480 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1D845F4D2D23F3C000EDE480 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		1D8B06332D3804E500F9338E /* BiometricAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthView.swift; sourceTree = "<group>"; };
 		1D8C38652ECC14FF00F7CAD5 /* ActiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewModel.swift; sourceTree = "<group>"; };
 		1D8C38692ECC1B4500F7CAD5 /* EmergencyFund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyFund.swift; sourceTree = "<group>"; };
@@ -891,7 +889,7 @@
 				1D45CAE12FCFC66300BA028B /* Components */,
 				1D1695EA2D201BB10043A645 /* ContentView.swift */,
 				1D7FE00F2D20CD100065AA2E /* WelcomeView.swift */,
-				1D845F4D2D23F3C000EDE480 /* Home.swift */,
+				1D845F4D2D23F3C000EDE480 /* MainTabView.swift */,
 				1DBCF4192EB8DA1C00B85BF4 /* HomeView */,
 				1D21686B2D9049CA00DC4376 /* ActiveView */,
 				1DBCF41B2EB8DA6600B85BF4 /* SettingsView */,
@@ -1180,7 +1178,6 @@
 				1DE736082EB64ED700573C1A /* HomeTab.swift */,
 				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
-				1D3F72082EB703E7000DF62A /* StatisticsTab.swift */,
 				1DD0895E2EC187C5002EE03D /* PreminumList.swift */,
 				1DC524962ECDDFD800E48964 /* CreateStep.swift */,
 				1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */,
@@ -1738,7 +1735,7 @@
 				1DEC90702ED7382B00DFDE90 /* SilentMode.swift in Sources */,
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
-				1D845F4E2D23F3C000EDE480 /* Home.swift in Sources */,
+				1D845F4E2D23F3C000EDE480 /* MainTabView.swift in Sources */,
 				1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
@@ -1767,7 +1764,6 @@
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,
 				1D01B4652EBB0F720022B549 /* HomeSettingRow.swift in Sources */,
 				1DCB0C572D375ADE0037153C /* BackgroundView.swift in Sources */,
-				1D3F72092EB703E9000DF62A /* StatisticsTab.swift in Sources */,
 				1D0DF1302C10B78E0098565F /* triggerNetworkRequest.swift in Sources */,
 				1D19F4863090772600193000 /* OutlinedTextCanvas.swift in Sources */,
 				1D45CAE02FCFC51C00BA028B /* SettingsProfileView.swift in Sources */,
@@ -2093,7 +2089,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 52;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2145,7 +2141,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 52;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;

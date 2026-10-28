@@ -31,6 +31,26 @@ struct TitleModifier: ViewModifier {
     }
 }
 
+// 二级标题
+struct Title2Modifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title2)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+    }
+}
+
+// 三级标题
+struct Title3Modifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.title3)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+    }
+}
+
 // 灰色注释文字
 struct FootNoteModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -38,5 +58,14 @@ struct FootNoteModifier: ViewModifier {
             .font(.footnote)
             .foregroundStyle(.gray)
             .multilineTextAlignment(.center)
+    }
+}
+
+struct FootNoteModifier1: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.footnote)
+            .foregroundStyle(.gray)
+            .multilineTextAlignment(.leading)
     }
 }

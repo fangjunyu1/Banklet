@@ -31,21 +31,25 @@ class PiggyBank {
     var sortOrder: Int = 0
     // 自定义愿望图片的文件名
     var customImageFilename: String? = nil
-    
-    var progress: Double {  // 完成进度
+    // 完成进度
+    var progress: Double {
         guard amount > 0, targetAmount > 0 else { return 0 }
-        return amount / targetAmount
+        return min(max(amount / targetAmount, 0), 1)
     }
-    var difference: Double {    // 差额
+    // 距离目标还差
+    var difference: Double {
         let differenceNum = targetAmount - amount
         return differenceNum > 0 ? differenceNum : 0.0
     }
+    // 当前金额 $10.0
     var amountText: String {    // 当前金额的String文本
         Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
     }
+    // 目标金额 $100.0
     var targetAmountText: String {  // 目标金额的String文本
         Currency.currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
     }
+    // 当前进度 10%
     var progressText: String {  // 当前进度的String文本
         let truncated = floor(progress * 1000) / 1000
         return truncated.formatted(.percent.precision(.fractionLength(0...1)))
@@ -56,11 +60,15 @@ class PiggyBank {
 //        print("icon: \(icon), image name: \(name)")
 //        return Image(name)
 //    }
+    // 获取贴纸图片
     var getImg: Image {
         let textureName = IconList.getTextureName(name: icon)
         return Image(textureName)
     }
-    
+    // 当前完成进度
+    var progressStatus: ProgressStatusTab {
+        amount >= targetAmount && targetAmount > 0 ? .done : .active
+    }
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
