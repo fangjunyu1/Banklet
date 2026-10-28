@@ -62138,6 +62138,24 @@
         }
       }
     },
+    "pin" : {
+      "comment" : "置顶",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置顶"
+          }
+        }
+      }
+    },
     "PKR" : {
       "comment" : "巴基斯坦卢比",
       "extractionState" : "manual",
@@ -90434,6 +90452,24 @@
         }
       }
     },
+    "unpin" : {
+      "comment" : "取消置顶",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unpin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "取消置顶"
+          }
+        }
+      }
+    },
     "USD" : {
       "comment" : "美元",
       "extractionState" : "manual",
@@ -98874,6 +98910,15 @@
           }
         }
       }
+    },
+    "删除" : {
+
+    },
+    "取消置顶" : {
+
+    },
+    "置顶" : {
+
     }
   },
   "version" : "1.0"

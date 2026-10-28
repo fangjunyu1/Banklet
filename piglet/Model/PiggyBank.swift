@@ -57,11 +57,7 @@ class PiggyBank {
 //        return Image(name)
 //    }
     var getImg: Image {
-        print("getImg 被调用")
-
         let textureName = IconList.getTextureName(name: icon)
-        print("原始名称：\(icon)，贴图名称：\(textureName)")
-
         return Image(textureName)
     }
     

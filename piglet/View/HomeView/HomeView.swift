@@ -25,25 +25,20 @@ struct HomeView: View {
         GridItem(.adaptive(minimum: 160, maximum: 200))
     ]
     
-    @Query(
-        sort: [
-            SortDescriptor(\PiggyBank.sortOrder),
-            SortDescriptor(\PiggyBank.creationDate, order: .reverse)
-        ]
-    )
+    @Query
     var allPiggyBank: [PiggyBank]
     
     // 排序存钱罐列表
     private var sortedPiggyBanks: [PiggyBank] {
         allPiggyBank.sorted {
             if $0.pinnedSortOrder != $1.pinnedSortOrder {
-                return $0.pinnedSortOrder < $1.pinnedSortOrder
+                return $0.pinnedSortOrder > $1.pinnedSortOrder
             }
-
+            
             if $0.sortOrder != $1.sortOrder {
-                return $0.sortOrder < $1.sortOrder
+                return $0.sortOrder > $1.sortOrder
             }
-
+            
             return $0.creationDate > $1.creationDate
         }
     }
@@ -126,31 +121,56 @@ struct HomeView: View {
     // 存钱罐列表
     private var filterPiggyBankView: some View {
         LazyVGrid(columns: columns, alignment: .center, spacing: 30) {
-            ForEach(filteredPiggyBanks, id:\.self) { piggyBank in
-                VStack(spacing: 5) {
-                    piggyBank.getImg
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 20)
-                    OutlinedText(
-                        text: piggyBank.name,
-                        fontSize: 16,
-                        fontWeight: .bold,
-                        foregroundColor: .black,
-                        strokeColor: .white,
-                        strokeWidth: 10,
-                        maxWidth: 160
+            ForEach(filteredPiggyBanks, id: \.persistentModelID) { piggyBank in
+                PiggyBankCard(piggyBank: piggyBank)
+            }
+        }
+    }
+    
+    private struct PiggyBankCard: View {
+        @Environment(\.modelContext) var context
+        let piggyBank: PiggyBank
+        
+        var body: some View {
+            VStack(spacing: 5) {
+                piggyBank.getImg
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.horizontal, 20)
+                
+                OutlinedText(
+                    text: piggyBank.name,
+                    fontSize: 16,
+                    fontWeight: .bold,
+                    foregroundColor: .black,
+                    strokeColor: .white,
+                    strokeWidth: 10,
+                    maxWidth: 160
+                )
+                
+                Text(verbatim: piggyBank.progressText)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppColor.gray)
+            }
+            .contentShape(Rectangle())
+            .contextMenu {
+                Button {
+                    piggyBank.isPinned.toggle()
+                    try? context.save()
+                } label: {
+                    Label(
+                        piggyBank.isPinned ? "Unpin" : "Pin",
+                        systemImage: piggyBank.isPinned ? "pin.slash" : "pin"
                     )
-                    Text(verbatim: piggyBank.progressText)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(AppColor.gray)
                 }
-                .onTapGesture {
-                    print("点击了视图")
+                
+                Button(role: .destructive) {
+                    // 后续添加删除逻辑
+                } label: {
+                    Label("Delete", systemImage: "trash")
                 }
             }
         }
-        .padding(.horizontal, 20)
     }
     
     // 空存钱罐
@@ -191,53 +211,53 @@ struct HomeView: View {
         }
     }
     // 存钱罐统计
-//    private var staticView: some View {
-//        HStack(spacing: 0) {
-//            // 存钱罐数量
-//            VStack(alignment: .leading, spacing: 6) {
-//                Text("Piggy Bank")
-//                    .font(.subheadline)
-//                    .foregroundStyle(.secondary)
-//
-//                HStack(alignment: .firstTextBaseline, spacing: 4) {
-//                    Text("\(allPiggyBank.count)")
-//                        .font(.title2)
-//                        .fontWeight(.semibold)
-//
-//                    Text("个")
-//                        .font(.caption)
-//                        .foregroundStyle(.secondary)
-//                }
-//            }
-//
-//            Spacer(minLength: 16)
-//
-//            // 累计存款
-//            VStack(alignment: .trailing, spacing: 6) {
-//                Text("Total Savings")
-//                    .font(.subheadline)
-//                    .foregroundStyle(.secondary)
-//
-//                Text(
-//                    "\(Currency.currencySymbol) \(allPiggyBank.reduce(0.0) { $0 + $1.amount }.formattedWithTwoDecimalPlaces())"
-//                )
-//                .font(.title2)
-//                .fontWeight(.bold)
-//                .contentTransition(.numericText())
-//                .lineLimit(1)
-//                .minimumScaleFactor(0.7)
-//            }
-//        }
-//        .padding(.horizontal, 20)
-//        .padding(.vertical, 18)
-//        .frame(maxWidth: .infinity, alignment: .leading)
-//        .background {
-//            RoundedRectangle(cornerRadius: 20, style: .continuous)
-//                .fill(.regularMaterial)
-//        }
-//        .padding(.top, 12)
-//        .padding(.horizontal, 20)
-//    }
+    //    private var staticView: some View {
+    //        HStack(spacing: 0) {
+    //            // 存钱罐数量
+    //            VStack(alignment: .leading, spacing: 6) {
+    //                Text("Piggy Bank")
+    //                    .font(.subheadline)
+    //                    .foregroundStyle(.secondary)
+    //
+    //                HStack(alignment: .firstTextBaseline, spacing: 4) {
+    //                    Text("\(allPiggyBank.count)")
+    //                        .font(.title2)
+    //                        .fontWeight(.semibold)
+    //
+    //                    Text("个")
+    //                        .font(.caption)
+    //                        .foregroundStyle(.secondary)
+    //                }
+    //            }
+    //
+    //            Spacer(minLength: 16)
+    //
+    //            // 累计存款
+    //            VStack(alignment: .trailing, spacing: 6) {
+    //                Text("Total Savings")
+    //                    .font(.subheadline)
+    //                    .foregroundStyle(.secondary)
+    //
+    //                Text(
+    //                    "\(Currency.currencySymbol) \(allPiggyBank.reduce(0.0) { $0 + $1.amount }.formattedWithTwoDecimalPlaces())"
+    //                )
+    //                .font(.title2)
+    //                .fontWeight(.bold)
+    //                .contentTransition(.numericText())
+    //                .lineLimit(1)
+    //                .minimumScaleFactor(0.7)
+    //            }
+    //        }
+    //        .padding(.horizontal, 20)
+    //        .padding(.vertical, 18)
+    //        .frame(maxWidth: .infinity, alignment: .leading)
+    //        .background {
+    //            RoundedRectangle(cornerRadius: 20, style: .continuous)
+    //                .fill(.regularMaterial)
+    //        }
+    //        .padding(.top, 12)
+    //        .padding(.horizontal, 20)
+    //    }
     
 }
 
