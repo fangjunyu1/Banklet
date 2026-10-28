@@ -11,31 +11,50 @@ import SwiftUI
 struct BackgroundImgView: View {
     @Environment(AppStorageManager.self) var appStorage
     @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
-        ZStack {
-            if !appStorage.BackgroundImage.isEmpty {
-                ZStack {
-                    Image(appStorage.BackgroundImage)
-                        .resizable()
-                        .scaledToFill()
-                        .blur(radius: appStorage.isBlurBackground ? 30 : 0)
-                        .ignoresSafeArea()
-                    Color.black.opacity(colorScheme == .light ? 0 : 0.95)
-                        .ignoresSafeArea()
-                }
-            } else {
-                if colorScheme == .light {
-                    Image("travel_pattern_background")
-                        .resizable()
-                        .opacity(0.1)
-                        .blur(radius: appStorage.isBlurBackground ? 30 : 0)
-                        .scaledToFill()
-                        .ignoresSafeArea()
-                } else {
-                    Color.black
-                        .ignoresSafeArea()
+        GeometryReader { geometry in
+            ZStack {
+                // 先确定背景容器的尺寸
+                Color.clear
+                    .overlay {
+                        Group {
+                            if !appStorage.BackgroundImage.isEmpty {
+                                Image(appStorage.BackgroundImage)
+                                    .resizable()
+                                    .scaledToFill()
+                            } else if colorScheme == .light {
+                                Image("travel_pattern_background")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .opacity(0.1)
+                            } else {
+                                Color.black
+                            }
+                        }
+                        .frame(
+                            width: geometry.size.width,
+                            height: geometry.size.height
+                        )
+                        .blur(
+                            radius: appStorage.isBlurBackground ? 30 : 0
+                        )
+                    }
+                    .clipped()
+
+                // 深色模式下，给自定义背景添加暗色遮罩
+                if !appStorage.BackgroundImage.isEmpty,
+                   colorScheme == .dark {
+                    Color.black.opacity(0.95)
                 }
             }
+            .frame(
+                width: geometry.size.width,
+                height: geometry.size.height
+            )
+            .clipped()
         }
+        .ignoresSafeArea()
+        .allowsHitTesting(false)
     }
 }

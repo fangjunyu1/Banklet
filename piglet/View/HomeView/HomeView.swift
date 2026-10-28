@@ -58,26 +58,29 @@ struct HomeView: View {
     let onCreatePiggyBank: () -> Void
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            // 如果有存钱罐
-            if !allPiggyBank.isEmpty {
-                // 搜索视图
-                searchPiggyBankView
-                // 所有存钱罐列表
-                filterPiggyBankView
-                Spacer()
-            } else {
-                // 显示空白视图
-                emptyView
+        ZStack {
+            // 固定背景，不参与 ScrollView 的滚动
+            BackgroundImgView()
+            
+            // 可滚动内容
+            ScrollView(showsIndicators: false) {
+                // 如果有存钱罐
+                if !allPiggyBank.isEmpty {
+                    // 搜索视图
+                    searchPiggyBankView
+                    // 所有存钱罐列表
+                    filterPiggyBankView
+                    Spacer()
+                } else {
+                    // 显示空白视图
+                    emptyView
+                }
+                // 底部空白
+                Spacer().frame(height: 50)
             }
-            // 底部空白
-            Spacer().frame(height: 50)
         }
         .navigationTitle("Piggy Bank")
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background {
-            BackgroundImgView()
-        }
         // 检查存钱罐的定期存款逻辑
         .onChange(of: scenePhase) { _, newValue in
             // 如果应用为活跃状态
@@ -159,7 +162,7 @@ struct HomeView: View {
                     try? context.save()
                 } label: {
                     Label(
-                        piggyBank.isPinned ? "Unpin" : "Pin",
+                        piggyBank.isPinned ? "unpin" : "pin",
                         systemImage: piggyBank.isPinned ? "pin.slash" : "pin"
                     )
                 }
