@@ -98,13 +98,14 @@ enum IconList {
         "train": "piggybank", // 火车
         "gamecontroller": "piggybank",   // 游戏手柄
         "person.fill": "piggybank", // 人生存钱罐（旧图标）
-        "apple.logo": "piggybank",  // 默认 Apple 图标
     ]
     
     // 适配旧版本的图标，将旧的图标映射为新的贴图
     static func getTextureName(name: String) -> String {
         // 如果可以在匹配列表中找到贴图，返回对应的贴图名称
         return mappingMattingName[name] ?? name
+//        let result = mappingMattingName[name]
+//        return result ?? name
     }
     
     static let list: [String] = [

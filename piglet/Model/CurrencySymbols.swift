@@ -16,7 +16,7 @@ struct Currency: Hashable {
     // 针对特殊的 ALL 等货币符号，返回对应的货币文本
     static func currencySymbolText(currency: Currency) -> String {
         if currency.currencyAbbreviation == "ALLCurrency" {
-            "ALL"
+            "all"
         } else {
             currency.currencyAbbreviation
         }

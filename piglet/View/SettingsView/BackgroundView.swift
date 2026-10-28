@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BackgroundView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var iapManager: IAPManager
     
@@ -33,8 +34,8 @@ struct BackgroundView: View {
                     BackgroundItemView(
                         showPro: $showPro,
                         isSelected: appStorage.BackgroundImage.isEmpty) {
-                        selectedBackground(nil)
-                    }
+                            selectedBackground(nil)
+                        }
                     ForEach(backgroundRange, id: \.self) { index in
                         BackgroundItemView(
                             showPro: $showPro,
@@ -78,6 +79,7 @@ struct BackgroundView: View {
 }
 
 private struct BackgroundItemView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var appStorage: AppStorageManager
     @EnvironmentObject var iapManager: IAPManager
     
@@ -106,13 +108,28 @@ private struct BackgroundItemView: View {
                     Image("bg\(index)")
                         .resizable()
                         .scaledToFill()
+                        .frame(width: 140, height: 100)
+                        .clipped()
                         .cornerRadius(10)
                         .scaleEffect(isSelected ? 0.8 : 1)
                 } else {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(AppColor.appBgGrayColor)
-                        .scaleEffect(isSelected ? 0.8 : 1)
-                        .shadow(radius: 2)
+                    if colorScheme == .light {
+                        Image("travel_pattern_background")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 140, height: 100)
+                            .clipped()
+                            .cornerRadius(10)
+                            .scaleEffect(isSelected ? 0.8 : 1)
+                            .ignoresSafeArea()
+                    } else {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(AppColor.appBgGrayColor)
+                            .frame(width: 140, height: 100)
+                            .clipped()
+                            .scaleEffect(isSelected ? 0.8 : 1)
+                            .shadow(radius: 2)
+                    }
                 }
             })
             .buttonStyle(.plain)
@@ -134,6 +151,11 @@ private struct BackgroundItemView: View {
 #Preview {
     NavigationStack {
         BackgroundView()
-            .environment(AppStorageManager.shared)
+            .modelContainer(PiggyBank.preview)
+            .environment(SoundManager.shared) // 加载音乐环境
+            .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
+            .environment(IAPManager.shared)    // 加载内购商品环境
+            .environment(ModelConfigManager.shared)    // 加载 iCloud 配置环境
+            .modelContainer(ModelContainerManager.shared.container)   // 加载 iCloud 容器环境
     }
 }

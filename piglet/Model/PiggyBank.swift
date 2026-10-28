@@ -51,9 +51,20 @@ class PiggyBank {
         return truncated.formatted(.percent.precision(.fractionLength(0...1)))
     }
     // 获取贴纸图片
+//    var getImg: Image {
+//        let name = IconList.getTextureName(name: icon)
+//        print("icon: \(icon), image name: \(name)")
+//        return Image(name)
+//    }
     var getImg: Image {
-        Image(IconList.getTextureName(name: icon))
+        print("getImg 被调用")
+
+        let textureName = IconList.getTextureName(name: icon)
+        print("原始名称：\(icon)，贴图名称：\(textureName)")
+
+        return Image(textureName)
     }
+    
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?

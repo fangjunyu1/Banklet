@@ -120,7 +120,7 @@ private struct FilterTabs: View {
     @Binding var selectedBank: PiggyBank?
     var body: some View {
         HStack {
-            TabButton(title: "All", isSelected: selectedBank == nil) {
+            TabButton(title: "all", isSelected: selectedBank == nil) {
                 // 振动
                 HapticManager.shared.selectionChanged()
                 withAnimation {

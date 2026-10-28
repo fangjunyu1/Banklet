@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeTabView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var selectedTab: HomeTab
+    let onCreatePiggyBank: () -> Void
     
     var body: some View {
         VStack {
@@ -61,10 +62,10 @@ struct HomeTabView: View {
         }
     }
     
-    // 左侧 Tab 菜单
+    // 右侧创建存钱罐按钮
     var rightTabView: some View {
         Button(action: {
-            
+            onCreatePiggyBank()
         }, label: {
             Image(systemName: "plus")
                 .foregroundStyle(colorScheme == .light ? .white : AppColor.appGrayColor)
@@ -113,7 +114,9 @@ private struct HomeTabPreviewView: View {
                         width: proxy.size.width,
                         height: proxy.size.height
                     )
-                HomeTabView(selectedTab: $tab)
+                HomeTabView(selectedTab: $tab) {
+                    
+                }
             }
         }
     }

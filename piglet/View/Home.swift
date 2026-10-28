@@ -11,7 +11,7 @@ import Combine
 import StoreKit
 import WidgetKit
 
-struct Home: View {
+struct MainTabView: View {
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.modelContext) var modelContext
     @Environment(\.colorScheme) var colorScheme
@@ -25,6 +25,7 @@ struct Home: View {
     @State private var isSlientMode = false // 静默视图
     @State private var lastTouchTime = Date()    // 最后点击时间，检测静默
     @State private var idleManager = IdleTimerManager.shared
+    @State private var showCreateView = false
     
     var body: some View {
         ZStack {
@@ -34,7 +35,9 @@ struct Home: View {
                         switch selectedTab {
                             // 主页视图
                         case .home:
-                            HomeMainView()
+                            HomeView {
+                                showCreateView = true
+                            }
                             // 活动视图
                         case .activity:
                             HomeActivityView()
@@ -44,7 +47,9 @@ struct Home: View {
                         }
                     }
                     // 液态玻璃 TabView 视图
-                    HomeTabView(selectedTab: $selectedTab)
+                    HomeTabView(selectedTab: $selectedTab) {
+                        showCreateView = true
+                    }
                 }
                 .background {
                     Background()
@@ -81,6 +86,9 @@ struct Home: View {
                         saveWidgetData()
                         print("非活跃状态，调用Widget保存数据")
                     }
+                }
+                .navigationDestination(isPresented: $showCreateView) {
+                    HomeCreateView()
                 }
                 .environment(homeActivityVM)
                 .environment(homeVM)

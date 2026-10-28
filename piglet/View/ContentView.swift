@@ -46,7 +46,7 @@ struct ContentView: View {
                     authenticate()
                 }
             } else {
-                Home()
+                MainTabView()
                     .onAppear {
                         // 该变量标识进入Home视图，防止人脸识别影响已进入 Home 视图的问题
                         showHomeView = true

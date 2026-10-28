@@ -25,7 +25,11 @@ struct BackgroundImgView: View {
                 }
             } else {
                 if colorScheme == .light {
-                    AppColor.appBgGrayColor
+                    Image("travel_pattern_background")
+                        .resizable()
+                        .opacity(0.1)
+                        .blur(radius: appStorage.isBlurBackground ? 30 : 0)
+                        .scaledToFill()
                         .ignoresSafeArea()
                 } else {
                     Color.black
