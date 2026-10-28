@@ -303,13 +303,14 @@ struct HomeView: View {
                         strokeWidth: 10,
                         maxWidth: 160
                     )
+                    .offset(x: piggyBank.isPinned ? -10 : 0)
                     .overlay(alignment: .trailing) {
                         if piggyBank.isPinned {
                             Image(systemName: "pin.fill")
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundStyle(.gray)
                                 .frame(width: 30, height: 30)
-                                .offset(x: 20)
+                                .offset(x: 10)
                         }
                     }
                 }
