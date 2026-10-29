@@ -1,5 +1,5 @@
 //
-//  HomeTabView.swift
+//  MainTabView.swift
 //  piglet
 //
 //  Created by 方君宇 on 2025/10/30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeTabView: View {
+struct MainTabView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var selectedTab: HomeTab
     let onCreatePiggyBank: () -> Void
@@ -114,7 +114,7 @@ private struct HomeTabPreviewView: View {
                         width: proxy.size.width,
                         height: proxy.size.height
                     )
-                HomeTabView(selectedTab: $tab) {
+                MainTabView(selectedTab: $tab) {
                     
                 }
             }

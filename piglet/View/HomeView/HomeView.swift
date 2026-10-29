@@ -386,7 +386,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    ContentView()
+    RootView()
         .modelContainer(PiggyBank.preview)
         .environment(SoundManager.shared) // 加载音乐环境
         .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
@@ -513,6 +513,14 @@ private struct HomeDeleteSheet: View {
             .padding(.horizontal, 30)
         }
         .padding(.top, 30)
+        .background {
+            if #available(iOS 26, *) {
+                // iOS 26 及以上版本，保留系统默认的 Sheet 背景
+            } else {
+                // iOS 26 以下版本，添加灰色背景
+                Background()
+            }
+        }
     }
 }
 

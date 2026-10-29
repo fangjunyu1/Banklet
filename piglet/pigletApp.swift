@@ -20,7 +20,7 @@ struct pigletApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .task {
                     await iapManager.loadProduct()   // 加载产品信息
                     await iapManager.handleTransactions()   // 加载内购交易更新

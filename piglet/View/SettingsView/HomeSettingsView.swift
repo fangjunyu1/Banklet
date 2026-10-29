@@ -198,7 +198,7 @@ private struct PreviewHomeSettingsView: View {
 }
 
 #Preview {
-    MainTabView()
+    ContentView()
         .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager.shared)

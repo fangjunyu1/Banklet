@@ -59,7 +59,7 @@ struct HomePrimaryBankTitleView: View {
 }
 
 #Preview {
-    MainTabView()
+    ContentView()
         .modelContainer(PiggyBank.preview)
         .environment(AppStorageManager.shared)
         .environment(ModelConfigManager.shared)
