@@ -241,7 +241,6 @@
 		1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */; };
 		1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */; };
 		1D5D778F2D91894F0044DEE5 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D778E2D91894F0044DEE5 /* Int.swift */; };
-		1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */; };
 		1D5FE1AA2EE0102500E14155 /* HomePrimaryBankButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */; };
 		1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D02EBDB92900001CF5 /* WebView.swift */; };
 		1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D22EBDC61000001CF5 /* SafariView.swift */; };
@@ -258,6 +257,7 @@
 		1D7728432ED08C800046B35B /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728422ED08C7E0046B35B /* TradeView.swift */; };
 		1D7728452ED08D8D0046B35B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7728442ED08D880046B35B /* HomeViewModel.swift */; };
 		1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */; };
+		1D7A6F103093831400964A45 /* PiggyBankDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A6F0F3093831100964A45 /* PiggyBankDetailView.swift */; };
 		1D7CDF38308A3ECA0029FA3C /* FontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CDF37308A3EC60029FA3C /* FontModifier.swift */; };
 		1D7CDF3A308A3EF10029FA3C /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7CDF39308A3EF00029FA3C /* ButtonModifier.swift */; };
 		1D7D4D3F2D224F45001EE006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D4D3D2D224F45001EE006 /* InfoPlist.strings */; };
@@ -602,7 +602,6 @@
 		1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingsEnum.swift; sourceTree = "<group>"; };
 		1D59D73A2D37F66F00BC449D /* BiometricAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1D5D778E2D91894F0044DEE5 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankTitleView.swift; sourceTree = "<group>"; };
 		1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryBankButtonView.swift; sourceTree = "<group>"; };
 		1D601B852C0747FD00052528 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1D66C4D02EBDB92900001CF5 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -620,6 +619,7 @@
 		1D7728422ED08C7E0046B35B /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
 		1D7728442ED08D880046B35B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressViewStyle.swift; sourceTree = "<group>"; };
+		1D7A6F0F3093831100964A45 /* PiggyBankDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiggyBankDetailView.swift; sourceTree = "<group>"; };
 		1D7CDF37308A3EC60029FA3C /* FontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModifier.swift; sourceTree = "<group>"; };
 		1D7CDF39308A3EF00029FA3C /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		1D7D4D3E2D224F45001EE006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1125,7 +1125,7 @@
 			isa = PBXGroup;
 			children = (
 				1DE736002EB64D2400573C1A /* HomeView.swift */,
-				1D5FE1A72EE0100900E14155 /* HomePrimaryBankTitleView.swift */,
+				1D7A6F0F3093831100964A45 /* PiggyBankDetailView.swift */,
 				1D5FE1A92EE0102300E14155 /* HomePrimaryBankButtonView.swift */,
 				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
 				1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */,
@@ -1679,7 +1679,6 @@
 				1D1561A72EB2F39B0041C0DD /* migrateOldDataIfNeeded.swift in Sources */,
 				1D17FA492EEA6B6D00C306AF /* SavingsScheduler.swift in Sources */,
 				1D7CDF3A308A3EF10029FA3C /* ButtonModifier.swift in Sources */,
-				1D5FE1A82EE0100B00E14155 /* HomePrimaryBankTitleView.swift in Sources */,
 				1D3E13D72D49ADCC00747D20 /* AnimationView.swift in Sources */,
 				1D45CAE32FCFC66A00BA028B /* iCloudFileManager.swift in Sources */,
 				1DC5248E2ECD913200E48964 /* ActivityCompleteView.swift in Sources */,
@@ -1791,6 +1790,7 @@
 				1D7A24B62EB49781008D4437 /* CustomProgressViewStyle.swift in Sources */,
 				1DE736092EB64EDA00573C1A /* HomeTab.swift in Sources */,
 				1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */,
+				1D7A6F103093831400964A45 /* PiggyBankDetailView.swift in Sources */,
 				1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2089,7 +2089,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2141,7 +2141,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;

@@ -18,6 +18,14 @@ struct CurrencySymbolView: View {
         }
         print("当前货币符号:\(appStorage.CurrencySymbol)")
     }
+    
+    private var allCurrencySymbol: [Currency] {
+        // 对当前货币缩写英文进行排序
+        Currency.currencySymbolList.sorted(by: {
+            $0.currencyAbbreviation < $1.currencyAbbreviation
+        })
+    }
+    
     var body: some View {
         VStack {
             Spacer().frame(height:10)
@@ -43,7 +51,7 @@ struct CurrencySymbolView: View {
             }
             // 全部币种
             ScrollView {
-                ForEach(Array(Currency.currencySymbolList.sorted(by: {$0.currencyAbbreviation < $1.currencyAbbreviation}).enumerated()), id: \.offset) { index, currency in
+                ForEach(Array(allCurrencySymbol).enumerated(), id: \.offset) { index, currency in
                     let lastIndex = Currency.currencySymbolList.count - 1
                     Button(action: {
                         changeSymbols(currency: currency)

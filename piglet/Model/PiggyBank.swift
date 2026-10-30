@@ -150,7 +150,7 @@ class PiggyBank {
     }
     
     static var PiggyBanks: [PiggyBank] {
-        let carPiggyBank = PiggyBank(isPrimary: true,name: "奔驰车", icon: "car", amount: 40000, initialAmount: 40000, targetAmount: 380000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let carPiggyBank = PiggyBank(isPrimary: true,name: "奔驰车", icon: "car", amount: 20000000, initialAmount: 300000, targetAmount: 40000000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
         let iPhonePiggyBank = PiggyBank(isPrimary: false, name: "iPhone 15 pro Max", icon: "iphone.gen2", amount: 5555, initialAmount: 5555, targetAmount: 8999, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
         let housePiggyBank = PiggyBank(isPrimary: false, name: "新房子", icon: "building.2", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
         return [carPiggyBank, iPhonePiggyBank, housePiggyBank]

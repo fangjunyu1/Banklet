@@ -8,15 +8,20 @@
 import Foundation
 
 // 货币符号数据模型
-struct Currency: Hashable {
+struct Currency: Identifiable, Hashable {
+    var id: String {
+        currencyAbbreviation
+    }
+    // 货币缩写英文
     var currencyAbbreviation: String
+    // 货币符号
     var currencySymbol: String
     
     // 当前货币符号
     // 针对特殊的 ALL 等货币符号，返回对应的货币文本
     static func currencySymbolText(currency: Currency) -> String {
         if currency.currencyAbbreviation == "ALLCurrency" {
-            "all"
+            "ALL"
         } else {
             currency.currencyAbbreviation
         }

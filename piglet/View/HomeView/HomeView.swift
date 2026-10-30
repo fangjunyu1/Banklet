@@ -26,6 +26,7 @@ enum ProgressStatusTab: Int, CaseIterable {
 }
 
 struct HomeView: View {
+    @Namespace private var namespace
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var context
@@ -257,8 +258,52 @@ struct HomeView: View {
     private var filterPiggyBankView: some View {
         LazyVGrid(columns: columns, alignment: .center, spacing: 30) {
             ForEach(filteredPiggyBanks, id: \.persistentModelID) { piggyBank in
-                PiggyBankCard(piggyBank: piggyBank) {
-                    selectedDeleteItem = piggyBank
+                NavigationLink {
+                    // 在 iOS 18 中新增缩放导航转场动画
+                    // navigationTransition 标记目标页面的导航转场效果
+                    if #available(iOS 18.0, *) {
+                        PiggyBankDetailView(
+                            piggyBank: piggyBank,
+                            namespace: namespace
+                        ) {
+                            selectedDeleteItem = piggyBank
+                        }
+                        .navigationTransition(
+                            .zoom(
+                                sourceID: piggyBank.id,
+                                in: namespace
+                            )
+                        )
+                    } else {
+                        PiggyBankDetailView(
+                            piggyBank: piggyBank,
+                            namespace: namespace
+                        ) {
+                            selectedDeleteItem = piggyBank
+                        }
+                    }
+                } label: {
+                    // 在 iOS 18 中新增缩放导航转场动画
+                    // matchedTransitionSource 标记导航转场的起始视图
+                    if #available(iOS 18.0, *) {
+                        PiggyBankCard(
+                            piggyBank: piggyBank,
+                            namespace: namespace
+                        ) {
+                            selectedDeleteItem = piggyBank
+                        }
+                        .matchedTransitionSource(
+                            id: piggyBank.id,
+                            in: namespace
+                        )
+                    } else {
+                        PiggyBankCard(
+                            piggyBank: piggyBank,
+                            namespace: namespace
+                        ) {
+                            selectedDeleteItem = piggyBank
+                        }
+                    }
                 }
             }
         }
@@ -268,6 +313,7 @@ struct HomeView: View {
     private struct PiggyBankCard: View {
         @Environment(\.modelContext) var context
         let piggyBank: PiggyBank
+        let namespace: Namespace.ID
         let onDelete: () -> Void
         
         var body: some View {
