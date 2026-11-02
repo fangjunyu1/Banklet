@@ -61,10 +61,12 @@ class PiggyBank {
 //        return Image(name)
 //    }
     // 获取贴纸图片
-    var getImg: Image {
+    var getImg: UIImage {
         let textureName = IconList.getTextureName(name: icon)
-        return Image(textureName)
+
+        return UIImage(named: textureName) ?? UIImage()
     }
+    
     // 当前完成进度
     var progressStatus: ProgressStatusTab {
         amount >= targetAmount && targetAmount > 0 ? .done : .active
@@ -127,7 +129,7 @@ class PiggyBank {
         do {
             let container = try ModelContainer(
                 for: PiggyBank.self, SavingsRecord.self,
-                configurations: ModelConfiguration(isStoredInMemoryOnly: true,cloudKitDatabase: .none)
+                configurations: ModelConfiguration(isStoredInMemoryOnly: true)
             )
             let context = container.mainContext
             for piggyBank in PiggyBanks {

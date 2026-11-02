@@ -202,9 +202,10 @@ struct HomeView: View {
                 .resizable()
                 .renderingMode(.template)
                 .scaledToFit()
-                .frame(width: 20)
+                .frame(width: 16)
                 .foregroundStyle(AppColor.gray)
             TextField("search_piggy_banks", text: $searchText)
+                .font(.subheadline)
             if !searchText.isEmpty {
                 Button(action: {
                     // 清理输入框内容
@@ -219,10 +220,10 @@ struct HomeView: View {
                 })
             }
         }
-        .padding(.vertical, 14)
-        .padding(.horizontal, 16)
-        .background(Color("defaultBackground"))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .padding(.vertical, 8)
+        .padding(.horizontal, 10)
+        .background(AppColor.lightGray)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal, 20)
     }
     
@@ -232,20 +233,22 @@ struct HomeView: View {
             HStack(spacing: 16) {
                 ForEach(ProgressStatusTab.allCases, id: \.rawValue) { tab in
                     let isSelected = selectedTab == tab
-                    Button(action: {
-                        selectedTab = tab
-                    }, label: {
-                        HStack {
-                            Text(LocalizedStringKey(tab.title))
-                            Text("\(piggyBankCounts[tab] ?? 0)")
-                        }
-                        .font(.subheadline)
-                        .foregroundStyle(isSelected ? .defaultBackground : .inverseBackground)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 20)
-                        .background(isSelected ? .inverseBackground : .defaultBackground)
-                        .cornerRadius(20)
-                    })
+                    if piggyBankCounts[tab] != 0 {
+                        Button(action: {
+                            selectedTab = tab
+                        }, label: {
+                            HStack {
+                                Text(LocalizedStringKey(tab.title))
+                                Text("\(piggyBankCounts[tab] ?? 0)")
+                            }
+                            .font(.footnote)
+                            .foregroundStyle(isSelected ? .defaultBackground : .inverseBackground)
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 12)
+                            .background(isSelected ? .inverseBackground : .defaultBackground)
+                            .cornerRadius(10)
+                        })
+                    }
                 }
                 Spacer()
             }
@@ -334,10 +337,19 @@ struct HomeView: View {
                     .padding(.bottom, 5)
                 }
                 
-                piggyBank.getImg
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: 150)
+                // 存钱罐贴纸
+                if let outlinedImage = OutlinedImage(
+                    image: piggyBank.getImg,
+                    color: .white,
+                    radius: 50
+                ) {
+                    Image(uiImage: outlinedImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: 150)
+                        .frame(maxHeight: 130)
+                        .shadow(color: .gray, radius: 2, x:0, y: 3)
+                }
                 
                 HStack {
                     OutlinedText(
@@ -473,10 +485,18 @@ private struct HomeDeleteSheet: View {
                 
                 // 存钱罐信息
                 HStack {
-                    item?.getImg
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 80)
+                    // 存钱罐图标
+                    if let item = item, let outlinedImage = OutlinedImage(
+                        image: item.getImg,
+                        color: .white,
+                        radius: 20
+                    ) {
+                        Image(uiImage: outlinedImage)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 80)
+                            .shadow(color: .gray, radius: 5, x:5, y: 5)
+                    }
                     VStack {
                         OutlinedText(
                             text: item?.name ?? "None",

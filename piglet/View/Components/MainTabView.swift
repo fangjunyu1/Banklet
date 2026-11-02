@@ -70,7 +70,7 @@ struct MainTabView: View {
             Image(systemName: "plus")
                 .foregroundStyle(colorScheme == .light ? .white : AppColor.appGrayColor)
                 .frame(width: 40,height: 40)
-                .background(colorScheme == .light ? AppColor.appGrayColor : .white)
+                .background(AppColor.darkGray)
                 .cornerRadius(40)
                 .shadow(radius: 3)
         })

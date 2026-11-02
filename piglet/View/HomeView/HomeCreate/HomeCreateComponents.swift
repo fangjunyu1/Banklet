@@ -57,10 +57,10 @@ struct HomeCreateInputIconView: View {
                     Button(action: {
                         piggyBank.icon = item
                     }, label: {
-                        Image(systemName: item)
-                            .foregroundColor(AppColor.gray)
-                            .imageScale(.large)
-                            .fontWeight(.bold)
+                        Image(item)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
                     })
                 }
             }
@@ -223,12 +223,12 @@ struct HomeCreatePreviewImage: View {
             // 截止日期
             HomeCreateDateView()
             // App图标
-            Image(systemName: piggyBank.icon)
-                .font(.largeTitle)
-                .foregroundColor(AppColor.gray)
-                .imageScale(.large)
+            Image(piggyBank.icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 80)
                 .opacity(step.tab == .icon ? 1 : 0)
-                .frame(height: 45)
+                .padding(.vertical, 20)
             // 定期存款的选项
             HomeCreatePickerFixedDepositView()
         }

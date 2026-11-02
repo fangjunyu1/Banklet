@@ -15,12 +15,12 @@ enum IconList {
         // 钢琴键 -> 钢琴
         "pianokeys": "piano",
         // 维修工具 -> 工具箱
-        "wrench.and.screwdriver": "toolbox",
+        "wrench.and.screwdriver": "repairtools",
         // 画笔 -> 绘画
-        "paintbrush.pointed": "painting",
+        "paintbrush.pointed": "art",
         // 毕业帽，书籍 -> 课程
-        "graduationcap" : "course",  // 毕业帽
-        "books.vertical": "course",  // 书籍
+        "graduationcap" : "book",  // 毕业帽
+        "books.vertical": "book",  // 书籍
         // 生日蛋糕 -> 生日
         "birthday.cake": "birthday",
         // 照片 -> 相机
@@ -108,20 +108,19 @@ enum IconList {
 //        return result ?? name
     }
     
+    // 未来考虑增加商铺、电车、工厂
     static let list: [String] = [
-        "camping",  // 野营
+        "piggybank",   // 存钱罐
         "guitar",   // 吉他
         "piano",    // 钢琴
-        "toolbox",   // 工具箱
-        "painting",   // 绘画
-        "course",    // 课程
-        "birthday",    // 生日
         "tv",   // 电视
         "watch",    // 手表
         "macbook",  // MacBook（笔记本）
         "pc",   // 电脑（主机）
+        "macmini",  // Mac Mini
         "ipad", // 平板
         "iphone",  // iPhone
+        "iphoneduo",    // iPhone Duo
         "applewatch",   // Watch
         "camera",   // 照相机
         "lens", // 镜头
@@ -129,32 +128,43 @@ enum IconList {
         "vrheadset", // VR 头显
         "headphones",   // 耳机（头戴式）
         "airpodspro",   // AirPods Pro（入耳式）
-        "ps4",  // PS4（游戏机）
-        "switch",   // Switch（游戏机）
+        "ps5",  // PS5（游戏机）
+        "switch2",   // Switch2（游戏机）
         "graphicscard", // 显卡
         "animefigurines",   // 手办（二次元）
         "speakers", // 音箱
         "projector",    // 投影仪
-        "robotvacuum",  // 扫地机器人
+        "robotvacuumcleaner",  // 扫地机器人
         "refrigerator", // 冰箱
         "washingmachine",   // 洗衣机
         "airconditioner",   // 空调
         "glasses",  // 眼镜
         "airplane", // 飞机
         "boat",    // 游艇
+        // MARK: 车辆
+        "sportscar",    // 跑车
+        "rv",    // 房车
         "car",  // 汽车
         "motorcycle",   // 摩托车
-        "rv",    // 房车
-        "electricvehicles",  // 电动车
+        "electricMoped",  // 电瓶车
+        "electricKickScooter",  // 电动滑板车
         "bicycle",  // 自行车
         "sofa", // 沙发
-        "house",    // 房子
+        "villa",    // 别墅
+        "apartment",    // 楼房
         "stroller", // 婴儿车
         "suitcase", // 旅行/旅游箱
-        "gold",     // 黄金
+        "goldjewelry",     // 黄金
         "ring",   // 戒指
         "mountain",   // 登山
-        "piggybank",   // 存钱罐
-        "pet",  // 宠物（猫和狗）
+        "dog",  // 狗
+        "cat",  // 猫
+        "makeup",   // 化妆品
+        "handbag",  // 手提包
+        "camping",  // 野营
+        "repairtools",   // 维修工具
+        "art",   // 绘画
+        "book",    // 书籍
+        "birthday",    // 生日
     ]
 }

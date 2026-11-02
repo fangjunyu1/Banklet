@@ -218,6 +218,7 @@
 		1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2386752D2E4B3F0033FBBA /* Double.swift */; };
 		1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */; };
 		1D2A5EFA2EBEE5CD00C1F831 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */; };
+		1D2D847A30958537005DBEE4 /* OutlinedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D847930958536005DBEE4 /* OutlinedImage.swift */; };
 		1D2F922C2E9CA5360077A235 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F922B2E9CA5240077A235 /* GifView.swift */; };
 		1D2F92332E9D2C340077A235 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F92322E9D2C320077A235 /* PlaceholderView.swift */; };
 		1D2F923E2E9D4E060077A235 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F923D2E9D4E030077A235 /* UIImage.swift */; };
@@ -580,6 +581,7 @@
 		1D2386752D2E4B3F0033FBBA /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		1D2A5EF52EBEE14600C1F831 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 		1D2A5EF92EBEE5AB00C1F831 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		1D2D847930958536005DBEE4 /* OutlinedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedImage.swift; sourceTree = "<group>"; };
 		1D2F922B2E9CA5240077A235 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		1D2F92322E9D2C320077A235 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		1D2F923D2E9D4E030077A235 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -914,26 +916,27 @@
 		1D45CAE12FCFC66300BA028B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DE45C692EB355BA0079F76E /* MainTabView.swift */,
+				1D2D847930958536005DBEE4 /* OutlinedImage.swift */,
+				1DD14EDF2EC0330A00325DF7 /* AnimatedImageView.swift */,
+				1D4542BB2EF01AE40042C564 /* Background.swift */,
+				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
+				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
+				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
+				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
+				1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */,
+				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
+				1DD14EDB2EC02C0700325DF7 /* Footnote.swift */,
+				1DD14EE12EC033DD00325DF7 /* GIFView.swift */,
+				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
+				1D80E7CD2C0BC72400A79B96 /* LottieView.swift */,
 				1D19F4853090772500193000 /* OutlinedTextCanvas.swift */,
 				1DD1AF852FD2AF3000AD62F4 /* RotatingBorderView.swift */,
-				1D8B06332D3804E500F9338E /* BiometricAuthView.swift */,
-				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
-				1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */,
-				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
 				1D66C4D22EBDC61000001CF5 /* SafariView.swift */,
-				1D80E7CD2C0BC72400A79B96 /* LottieView.swift */,
-				1D1BE06E2EE064E9009BBAB1 /* CircularProgressView.swift */,
-				1DE45C6D2EB38D6B0079F76E /* backgroundImageView.swift */,
-				1D7A24B52EB49774008D4437 /* CustomProgressViewStyle.swift */,
-				1D91E62B2D6C56AF0081D285 /* CircularProgressBar.swift */,
-				1DD14EE12EC033DD00325DF7 /* GIFView.swift */,
-				1DD14EDF2EC0330A00325DF7 /* AnimatedImageView.swift */,
-				1DD14EDB2EC02C0700325DF7 /* Footnote.swift */,
-				1DBBB0CC2ECA02DC00FFE2A0 /* KeyboardAdaptive.swift */,
 				1DEC906F2ED7382600DFDE90 /* SilentMode.swift */,
-				1D4542BB2EF01AE40042C564 /* Background.swift */,
-				1DD14EE32EC06B0500325DF7 /* BackgroundImgView.swift */,
-				1DE45C692EB355BA0079F76E /* MainTabView.swift */,
+				1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */,
+				1DFCC0AA2D2EAC3B00E67208 /* Triangle.swift */,
+				1D66C4D02EBDB92900001CF5 /* WebView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 			isa = PBXGroup;
 			children = (
 				1DD151C02D25B042004B0936 /* PiggyBank.swift */,
+				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 				1D1124552EE1115300E87CCC /* PiggyBankDraft.swift */,
 				1DD151C22D264209004B0936 /* PiggyBankData.swift */,
 				1D3663E72D72FD34003C1052 /* AppStorageManager.swift */,
@@ -1183,7 +1187,6 @@
 				1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */,
 				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
 				1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */,
-				1DE164402D324CDA0010A78A /* SavingsRecord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1726,6 +1729,7 @@
 				1DC524902ECDCDF000E48964 /* HomeActivityViewModel.swift in Sources */,
 				1D1E110B2D4DBAF9003682EF /* OpenSourceView.swift in Sources */,
 				1DE736032EB64D3000573C1A /* HomeActivityView.swift in Sources */,
+				1D2D847A30958537005DBEE4 /* OutlinedImage.swift in Sources */,
 				1DE45C6A2EB355BB0079F76E /* MainTabView.swift in Sources */,
 				1D1434A52EC9A3B600FA6CBB /* HomeActivityTitleView.swift in Sources */,
 				1DD55AF42FCECB6D00A32B61 /* UIDevice.swift in Sources */,
@@ -2089,7 +2093,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 56;
+				CURRENT_PROJECT_VERSION = 57;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2141,7 +2145,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 56;
+				CURRENT_PROJECT_VERSION = 57;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
