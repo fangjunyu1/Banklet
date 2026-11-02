@@ -298,7 +298,7 @@ struct HomeCreateInputFootNoteView: View {
 
 #Preview {
     NavigationStack {
-        HomeCreateView()
+        CreateView()
     }
     .environment(\.locale, .init(identifier: "ta"))
 }

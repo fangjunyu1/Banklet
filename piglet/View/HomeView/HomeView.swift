@@ -314,6 +314,7 @@ struct HomeView: View {
     
     // 存钱罐卡片
     private struct PiggyBankCard: View {
+        @Environment(\.colorScheme) var colorScheme
         @Environment(\.modelContext) var context
         let piggyBank: PiggyBank
         let namespace: Namespace.ID
@@ -340,7 +341,7 @@ struct HomeView: View {
                 // 存钱罐贴纸
                 if let outlinedImage = OutlinedImage(
                     image: piggyBank.getImg,
-                    color: .white,
+                    color: AppColor.defaultBackground,
                     radius: 50
                 ) {
                     Image(uiImage: outlinedImage)
@@ -348,16 +349,17 @@ struct HomeView: View {
                         .scaledToFit()
                         .frame(maxWidth: 150)
                         .frame(maxHeight: 130)
-                        .shadow(color: .gray, radius: 2, x:0, y: 3)
+                        .shadow(color: colorScheme == .light ? .gray : .black.opacity(0.5), radius: 2, x:0, y: 3)
                 }
                 
+                // 存钱罐名称
                 HStack {
                     OutlinedText(
                         text: piggyBank.name,
                         fontSize: 16,
                         fontWeight: .bold,
-                        foregroundColor: .black,
-                        strokeColor: .white,
+                        foregroundColor: AppColor.inverseBackground,
+                        strokeColor: AppColor.defaultBackground,
                         strokeWidth: 10,
                         maxWidth: 160
                     )

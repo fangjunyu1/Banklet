@@ -1,5 +1,5 @@
 //
-//  HomeCreateView.swift
+//  CreateView.swift
 //  piglet
 //
 //  Created by 方君宇 on 2025/11/19.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeCreateView: View {
+struct CreateView: View {
     @State private var piggyBank = PiggyBankData()
     @State private var step = CreateStepViewModel()
     @FocusState private var isFocus: Bool // 使用枚举管理焦点
@@ -62,6 +62,25 @@ struct HomeCreateView: View {
     }
 }
 
+// MARK: 创建存钱罐 - 名称
+struct HomeCreateTitleView: View {
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading,spacing: 10) {
+                Text("Create Piggy")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                Text("Please fill in your savings plan information completely, and set the name, goal and starting amount step by step.")
+                    .font(.footnote)
+                    .foregroundColor(AppColor.gray)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+    }
+}
+
 struct HomeCreateLottieView: View {
     var body: some View {
         LottieView(filename: "CreateComplete", isPlaying: true, playCount: 1, isReversed: false)
@@ -100,7 +119,7 @@ struct HomeCreateButtonView: View {
     }
 }
 
-struct HomeCreateViewdModifier: ViewModifier {
+struct CreateViewdModifier: ViewModifier {
     @FocusState.Binding var isFocus: Bool?
     
     func body(content: Content) -> some View {
@@ -121,6 +140,6 @@ struct HomeCreateViewdModifier: ViewModifier {
 
 #Preview {
     NavigationStack {
-        HomeCreateView()
+        CreateView()
     }
 }

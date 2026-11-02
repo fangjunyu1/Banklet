@@ -9,6 +9,8 @@
 
 import SwiftUI
 import CoreText
+import UIKit
+import CoreText
 
 struct OutlinedText: View {
 
@@ -127,18 +129,12 @@ struct OutlinedText: View {
 
                 // 绘制文字描边
                 cg.addPath(path)
-                cg.setStrokeColor(strokeColor.cgColor ?? CGColor(
-                    gray: 0,
-                    alpha: 1
-                ))
+                cg.setStrokeColor(resolveCGColor(strokeColor))
                 cg.strokePath()
 
                 // 填充文字
                 cg.addPath(path)
-                cg.setFillColor(foregroundColor.cgColor ?? CGColor(
-                    gray: 1,
-                    alpha: 1
-                ))
+                cg.setFillColor(resolveCGColor(foregroundColor))
                 cg.fillPath()
 
                 cg.restoreGState()
@@ -238,5 +234,9 @@ struct OutlinedText: View {
     /// 高度随文字缩放，避免占用多余空间
     private var measuredHeight: CGFloat {
         (fontSize * 1.5 + strokeWidth * 2) * scaleFactor
+    }
+    
+    private func resolveCGColor(_ color: Color) -> CGColor {
+        UIColor(color).cgColor
     }
 }

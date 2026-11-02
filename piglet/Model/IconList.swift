@@ -125,6 +125,8 @@ enum IconList {
         "camera",   // 照相机
         "lens", // 镜头
         "drones",   // 无人机
+        "pocketcamera", // 口袋云台相机
+        "actioncamera", // 运动相机
         "vrheadset", // VR 头显
         "headphones",   // 耳机（头戴式）
         "airpodspro",   // AirPods Pro（入耳式）

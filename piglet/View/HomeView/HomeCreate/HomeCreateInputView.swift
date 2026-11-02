@@ -196,7 +196,7 @@ struct HomeCreateInputModifier: ViewModifier {
 
 #Preview {
     NavigationStack {
-        HomeCreateView()
+        CreateView()
     }
     .environment(\.locale, .init(identifier: "ta"))
 }

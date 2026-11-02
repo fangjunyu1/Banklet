@@ -248,7 +248,6 @@
 		1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* Mail.swift */; };
 		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
 		1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */; };
-		1D69821C2ECEF48F0040CD37 /* HomeCreateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */; };
 		1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */; };
 		1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */; };
 		1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */; };
@@ -298,7 +297,7 @@
 		1DC2617C2C1093EA00A5E311 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC2617B2C1093EA00A5E311 /* MessageUI.framework */; };
 		1DC5248E2ECD913200E48964 /* ActivityCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5248D2ECD913100E48964 /* ActivityCompleteView.swift */; };
 		1DC524902ECDCDF000E48964 /* HomeActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */; };
-		1DC524922ECDDC7600E48964 /* HomeCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524912ECDDC6D00E48964 /* HomeCreateView.swift */; };
+		1DC524922ECDDC7600E48964 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524912ECDDC6D00E48964 /* CreateView.swift */; };
 		1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524942ECDDFB900E48964 /* CreateViewModel.swift */; };
 		1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524962ECDDFD800E48964 /* CreateStep.swift */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
@@ -611,7 +610,6 @@
 		1D66C4D42EBDD75B00001CF5 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateComponents.swift; sourceTree = "<group>"; };
-		1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateTitleView.swift; sourceTree = "<group>"; };
 		1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateInputView.swift; sourceTree = "<group>"; };
 		1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSectionView.swift; sourceTree = "<group>"; };
 		1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTipsModifier.swift; sourceTree = "<group>"; };
@@ -680,7 +678,7 @@
 		1DC2617B2C1093EA00A5E311 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1DC5248D2ECD913100E48964 /* ActivityCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCompleteView.swift; sourceTree = "<group>"; };
 		1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityViewModel.swift; sourceTree = "<group>"; };
-		1DC524912ECDDC6D00E48964 /* HomeCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateView.swift; sourceTree = "<group>"; };
+		1DC524912ECDDC6D00E48964 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		1DC524942ECDDFB900E48964 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 		1DC524962ECDDFD800E48964 /* CreateStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStep.swift; sourceTree = "<group>"; };
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
@@ -1116,9 +1114,8 @@
 		1DAEF8BD2ECDF63600B36FAB /* HomeCreate */ = {
 			isa = PBXGroup;
 			children = (
-				1DC524912ECDDC6D00E48964 /* HomeCreateView.swift */,
+				1DC524912ECDDC6D00E48964 /* CreateView.swift */,
 				1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */,
-				1D69821B2ECEF48E0040CD37 /* HomeCreateTitleView.swift */,
 				1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */,
 			);
 			path = HomeCreate;
@@ -1703,7 +1700,7 @@
 				1D1695EB2D201BB10043A645 /* RootView.swift in Sources */,
 				1D7728432ED08C800046B35B /* TradeView.swift in Sources */,
 				1D7CDF38308A3ECA0029FA3C /* FontModifier.swift in Sources */,
-				1DC524922ECDDC7600E48964 /* HomeCreateView.swift in Sources */,
+				1DC524922ECDDC7600E48964 /* CreateView.swift in Sources */,
 				1D1237A82FD1203B0052FDD6 /* CurrentPlanView.swift in Sources */,
 				1D66C4D12EBDB92A00001CF5 /* WebView.swift in Sources */,
 				1D8C38662ECC150B00F7CAD5 /* ActiveViewModel.swift in Sources */,
@@ -1749,7 +1746,6 @@
 				1DAEF8C02ECDF6E400B36FAB /* IconList.swift in Sources */,
 				1D1434AB2EC9BC4100FA6CBB /* ActivityMusicView.swift in Sources */,
 				1D2386762D2E4B3F0033FBBA /* Double.swift in Sources */,
-				1D69821C2ECEF48F0040CD37 /* HomeCreateTitleView.swift in Sources */,
 				1D5354652EBA3E5B00738441 /* HomeSettingsEnum.swift in Sources */,
 				1DBCF41D2EB8DB6400B85BF4 /* EmailHelper.swift in Sources */,
 				1DD0895F2EC187D4002EE03D /* PreminumList.swift in Sources */,
@@ -2093,7 +2089,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2145,7 +2141,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;

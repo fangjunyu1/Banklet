@@ -88,7 +88,7 @@ struct ContentView: View {
                     }
                 }
                 .navigationDestination(isPresented: $showCreateView) {
-                    HomeCreateView()
+                    CreateView()
                 }
                 .environment(homeActivityVM)
                 .environment(homeVM)
