@@ -339,18 +339,12 @@ struct HomeView: View {
                 }
                 
                 // 存钱罐贴纸
-                if let outlinedImage = OutlinedImage(
-                    image: piggyBank.getImg,
-                    color: AppColor.defaultBackground,
-                    radius: 50
-                ) {
-                    Image(uiImage: outlinedImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: 150)
-                        .frame(maxHeight: 130)
-                        .shadow(color: colorScheme == .light ? .gray : .black.opacity(0.5), radius: 2, x:0, y: 3)
-                }
+                OutlinedImageView(
+                    name: piggyBank.getImg
+                )
+                .frame(width: 120)
+//                .frame(maxHeight: 150)
+                .shadow(color: colorScheme == .light ? .gray : .black.opacity(0.5), radius: 2, x:0, y: 3)
                 
                 // 存钱罐名称
                 HStack {
@@ -457,6 +451,7 @@ struct HomeView: View {
 
 // 删除存钱罐视图
 private struct HomeDeleteSheet: View {
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) var context
     @Binding var item: PiggyBank?
     var body: some View {
@@ -487,18 +482,16 @@ private struct HomeDeleteSheet: View {
                 
                 // 存钱罐信息
                 HStack {
-                    // 存钱罐图标
-                    if let item = item, let outlinedImage = OutlinedImage(
-                        image: item.getImg,
-                        color: .white,
-                        radius: 20
-                    ) {
-                        Image(uiImage: outlinedImage)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 80)
-                            .shadow(color: .gray, radius: 5, x:5, y: 5)
+                    // 存钱罐贴纸
+                    if let item = item {
+                        OutlinedImageView(
+                            name: item.getImg
+                        )
+                        .frame(maxWidth: 150)
+                        .frame(maxHeight: 130)
+                        .shadow(color: colorScheme == .light ? .gray : .black.opacity(0.5), radius: 2, x:0, y: 3)
                     }
+                    
                     VStack {
                         OutlinedText(
                             text: item?.name ?? "None",

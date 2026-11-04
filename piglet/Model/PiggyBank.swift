@@ -13,7 +13,7 @@ class PiggyBank {
     var isPrimary: Bool = false // 旧字段：暂时保留，后续不再用于列表管理
     var isPinned: Bool = false  // 新字段：是否置顶
     var name: String = "" // 存钱罐名称
-    var icon: String = "apple.logo"   // 图标名称
+    var icon: String = "piggybank"   // 图标名称
     var amount: Double = 0   // 存钱罐金额
     var initialAmount: Double = 0 // 初始化金额，仅首次标记，用于后续展示
     var targetAmount: Double = 1  // 目标金额
@@ -27,7 +27,7 @@ class PiggyBank {
     var fixedDepositWeekday: Int = 1    // 定期存款-周几（1表示日，1表示一，范围1-7）
     var fixedDepositDay: Int = 1     // 定期存款-每月（1-31）
     var fixedDepositTime: Date = Date() // 定期存款-每天时分、每年月日
-    var completionDate: Date = Date()    // 完成日期
+    var completionDate: Date = Date()    // 完成日期，当存起罐满的时候，更新完成时间
     var sortOrder: Int = 0
     // 自定义愿望图片的文件名
     var customImageFilename: String? = nil
@@ -61,10 +61,8 @@ class PiggyBank {
 //        return Image(name)
 //    }
     // 获取贴纸图片
-    var getImg: UIImage {
-        let textureName = IconList.getTextureName(name: icon)
-
-        return UIImage(named: textureName) ?? UIImage()
+    var getImg: String {
+        IconList.getTextureName(name: icon)
     }
     
     // 当前完成进度
@@ -152,10 +150,20 @@ class PiggyBank {
     }
     
     static var PiggyBanks: [PiggyBank] {
-        let carPiggyBank = PiggyBank(isPrimary: true,name: "奔驰车", icon: "car", amount: 20000000, initialAmount: 300000, targetAmount: 40000000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
-        let iPhonePiggyBank = PiggyBank(isPrimary: false, name: "iPhone 15 pro Max", icon: "iphone.gen2", amount: 5555, initialAmount: 5555, targetAmount: 8999, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
-        let housePiggyBank = PiggyBank(isPrimary: false, name: "新房子", icon: "building.2", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
-        return [carPiggyBank, iPhonePiggyBank, housePiggyBank]
+        let piggyBank1 = PiggyBank(isPrimary: true,name: "奔驰车", icon: "car", amount: 20000000, initialAmount: 300000, targetAmount: 40000000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank2 = PiggyBank(isPrimary: false, name: "iPhone 15 pro Max", icon: "iphone.gen2", amount: 5555, initialAmount: 5555, targetAmount: 8999, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank3 = PiggyBank(isPrimary: false, name: "新房子", icon: "building.2", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank4 = PiggyBank(isPrimary: false, name: "大疆", icon: "drones", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank5 = PiggyBank(isPrimary: false, name: "Action4", icon: "actioncamera", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank6 = PiggyBank(isPrimary: false, name: "未来初音", icon: "animefigurines", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank7 = PiggyBank(isPrimary: false, name: "游艇", icon: "boat", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank8 = PiggyBank(isPrimary: false, name: "天鹅洗衣机", icon: "washingmachine", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank9 = PiggyBank(isPrimary: false, name: "奔驰房车", icon: "rv", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank10 = PiggyBank(isPrimary: false, name: "捷安特", icon: "bicycle", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank11 = PiggyBank(isPrimary: false, name: "新房", icon: "apartment", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank12 = PiggyBank(isPrimary: false, name: "爬山", icon: "mountain", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        let piggyBank13 = PiggyBank(isPrimary: false, name: "边牧", icon: "dog", amount: 0, initialAmount: 200000, targetAmount: 800000, creationDate: Date(), expirationDate: Date(), isExpirationDateEnabled: true, isFixedDeposit: false)
+        return [piggyBank1, piggyBank2, piggyBank3, piggyBank4, piggyBank5, piggyBank6, piggyBank7, piggyBank8, piggyBank9, piggyBank10, piggyBank11, piggyBank12, piggyBank13]
     }
 }
 

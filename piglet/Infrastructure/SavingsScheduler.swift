@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 
 // 计算下一次存钱周期的方法
-@MainActor
 struct SavingsScheduler {
     
     // 计算最近的一次定期存款时间

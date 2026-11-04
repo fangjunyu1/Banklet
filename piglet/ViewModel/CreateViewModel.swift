@@ -9,14 +9,9 @@ import SwiftUI
 import SwiftData
 
 @Observable
-@MainActor
-final class CreateStepViewModel: ObservableObject {
-    var tab: CreateStep = .name
+final class CreateViewModel: ObservableObject {
     
-    func createPiggyBank(for data: PiggyBankData) {
-        // Step 1: 获取上下文
-        let context = ModelContainerManager.shared.context
-        
+    func createPiggyBank(context: ModelContext,for data: PiggyBankData) {
         // Step 2: 查询所有存钱罐
         let fetchRequest = FetchDescriptor<PiggyBank>()
         let existingPiggyBanks: [PiggyBank]
@@ -71,46 +66,6 @@ final class CreateStepViewModel: ObservableObject {
             try context.save() // 提交上下文中的所有更改
         } catch {
             print("Fetch failed:", error)
-        }
-    }
-    
-    func step() {
-        switch self.tab {
-        case .name:
-            tab = .targetAmount
-        case .targetAmount:
-            tab = .icon
-        case .icon:
-            tab = .amount
-        case .amount:
-            tab = .regular
-        case .regular:
-            tab = .expirationDate
-        case .expirationDate:
-            tab = .complete
-            // 播放完成音效
-            SoundManager.shared.playSound(named: "success")
-        case .complete:
-            break
-        }
-    }
-    
-    func previousStep() {
-        switch self.tab {
-        case .name:
-            break
-        case .targetAmount:
-            tab = .name
-        case .icon:
-            tab = .targetAmount
-        case .amount:
-            tab = .icon
-        case .regular:
-            tab = .amount
-        case .expirationDate:
-            tab = .regular
-        case .complete:
-            tab = .expirationDate
         }
     }
 }

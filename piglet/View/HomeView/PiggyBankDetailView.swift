@@ -64,18 +64,10 @@ struct PiggyBankDetailView: View {
                 VStack {
                     VStack(spacing: 0) {
                         // 存钱罐图标
-                        if let outlinedImage = OutlinedImage(
-                            image: piggyBank.getImg,
-                            color: .blue,
-                            radius: 20
-                        ) {
-                            Image(uiImage: outlinedImage)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxWidth: 150)
-                                .onAppear {
-                                }
-                        }
+                        OutlinedImageView(
+                            name: piggyBank.getImg
+                        )
+                        .frame(maxWidth: 150)
                                                 
                         // 存钱罐名称
                         OutlinedText(

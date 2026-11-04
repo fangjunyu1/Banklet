@@ -7,7 +7,6 @@
 import AVFoundation
 
 @Observable
-@MainActor
 class SoundManager:ObservableObject {
     static let shared = SoundManager() // 单例
     

@@ -44,7 +44,7 @@ enum IconList {
         // 灯泡，帆船，眼睛，礼物，爆米花，树叶，信用卡，奖杯 -> 存钱罐
         // 电影，工作，工作包，茶杯，马克杯，哑铃，骰子 -> 存钱罐
         // 足球，网球，听诊器，医疗包，背包，座椅，药丸  -> 存钱罐
-        // T恤衫、铅笔，建筑，玩具，狗，猫，鱼，鸟，兔子，乌龟，爬虫 -> 存钱罐
+        // T恤衫、铅笔，建筑，玩具，鱼，鸟，兔子，乌龟，爬虫 -> 存钱罐
         // 树，包，鞋子，床，煎锅，刀叉，礼花，键盘，火车 -> 存钱罐
         // 游戏手柄，人生存钱罐（旧图标），Apple 图标 -> 存钱罐
         "sun.min": "piggybank",
@@ -80,13 +80,11 @@ enum IconList {
         "pencil.tip": "piggybank", // 铅笔
         "building.2": "piggybank",   // 建筑，高楼大厦
         "teddybear": "piggybank",    // 泰迪熊
-        "dog": "pet",  // 狗
-        "cat": "pet",  // 猫
-        "fish": "pet", // 鱼
-        "bird": "pet", // 鸟
-        "hare": "pet", // 兔子
-        "tortoise": "pet", // 乌龟
-        "ant": "pet",  // 蚂蚁
+        "fish": "piggybank", // 鱼
+        "bird": "piggybank", // 鸟
+        "hare": "piggybank", // 兔子
+        "tortoise": "piggybank", // 乌龟
+        "ant": "piggybank",  // 蚂蚁
         "tree": "piggybank",
         "shoe": "piggybank", // 鞋子
         "bag": "piggybank",  // 包
@@ -156,7 +154,7 @@ enum IconList {
         "apartment",    // 楼房
         "stroller", // 婴儿车
         "suitcase", // 旅行/旅游箱
-        "goldjewelry",     // 黄金
+        "goldjewelry",     // 黄金首饰
         "ring",   // 戒指
         "mountain",   // 登山
         "dog",  // 狗

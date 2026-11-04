@@ -69,7 +69,6 @@
 		1D036E7E30787C8200F71583 /* check1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3130787C8100F71583 /* check1.json */; };
 		1D036E7F30787C8200F71583 /* check2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3230787C8100F71583 /* check2.json */; };
 		1D036E8030787C8200F71583 /* check2026.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3330787C8100F71583 /* check2026.json */; };
-		1D036E8130787C8200F71583 /* CreateComplete.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3430787C8100F71583 /* CreateComplete.json */; };
 		1D036E8230787C8200F71583 /* EmptyBanklet.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3530787C8100F71583 /* EmptyBanklet.json */; };
 		1D036E8330787C8200F71583 /* emptyStats.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3630787C8100F71583 /* emptyStats.json */; };
 		1D036E8530787C8200F71583 /* error2026.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D036E3830787C8100F71583 /* error2026.json */; };
@@ -247,8 +246,6 @@
 		1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D22EBDC61000001CF5 /* SafariView.swift */; };
 		1D66C4D52EBDD75C00001CF5 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D42EBDD75B00001CF5 /* Mail.swift */; };
 		1D66C4D72EBDFAC400001CF5 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4D62EBDFABF00001CF5 /* MailView.swift */; };
-		1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */; };
-		1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */; };
 		1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */; };
 		1D6E81222ECDFF9800C88269 /* ToastTipsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */; };
 		1D6E81252ECE07A100C88269 /* ModelContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E81242ECE079F00C88269 /* ModelContainerManager.swift */; };
@@ -299,7 +296,6 @@
 		1DC524902ECDCDF000E48964 /* HomeActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */; };
 		1DC524922ECDDC7600E48964 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524912ECDDC6D00E48964 /* CreateView.swift */; };
 		1DC524952ECDDFBF00E48964 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524942ECDDFB900E48964 /* CreateViewModel.swift */; };
-		1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC524962ECDDFD800E48964 /* CreateStep.swift */; };
 		1DC55DBF2D40BE16008A8D5A /* SpacedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */; };
 		1DCAA82D2EDFC4DF00460337 /* ClockHandRotationKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCAA82C2EDFC4DF00460337 /* ClockHandRotationKit */; };
 		1DCB0C552D3759D00037153C /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB0C542D3759D00037153C /* GeneralView.swift */; };
@@ -445,7 +441,6 @@
 		1D036E3130787C8100F71583 /* check1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check1.json; sourceTree = "<group>"; };
 		1D036E3230787C8100F71583 /* check2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check2.json; sourceTree = "<group>"; };
 		1D036E3330787C8100F71583 /* check2026.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check2026.json; sourceTree = "<group>"; };
-		1D036E3430787C8100F71583 /* CreateComplete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateComplete.json; sourceTree = "<group>"; };
 		1D036E3530787C8100F71583 /* EmptyBanklet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyBanklet.json; sourceTree = "<group>"; };
 		1D036E3630787C8100F71583 /* emptyStats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyStats.json; sourceTree = "<group>"; };
 		1D036E3830787C8100F71583 /* error2026.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = error2026.json; sourceTree = "<group>"; };
@@ -609,8 +604,6 @@
 		1D66C4D22EBDC61000001CF5 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		1D66C4D42EBDD75B00001CF5 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		1D66C4D62EBDFABF00001CF5 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateComponents.swift; sourceTree = "<group>"; };
-		1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreateInputView.swift; sourceTree = "<group>"; };
 		1D6A991D2FCF3A2400B28BFC /* AccountSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSectionView.swift; sourceTree = "<group>"; };
 		1D6E81212ECDFF9600C88269 /* ToastTipsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastTipsModifier.swift; sourceTree = "<group>"; };
 		1D6E81242ECE079F00C88269 /* ModelContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerManager.swift; sourceTree = "<group>"; };
@@ -680,7 +673,6 @@
 		1DC5248F2ECDCDEF00E48964 /* HomeActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActivityViewModel.swift; sourceTree = "<group>"; };
 		1DC524912ECDDC6D00E48964 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		1DC524942ECDDFB900E48964 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
-		1DC524962ECDDFD800E48964 /* CreateStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStep.swift; sourceTree = "<group>"; };
 		1DC55DBE2D40BE16008A8D5A /* SpacedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedContainer.swift; sourceTree = "<group>"; };
 		1DC6C8252C0B5D4E008A6C92 /* piglet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piglet.entitlements; sourceTree = "<group>"; };
 		1DCB0C542D3759D00037153C /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
@@ -831,7 +823,6 @@
 				1D036E3130787C8100F71583 /* check1.json */,
 				1D036E3230787C8100F71583 /* check2.json */,
 				1D036E3330787C8100F71583 /* check2026.json */,
-				1D036E3430787C8100F71583 /* CreateComplete.json */,
 				1D036E3530787C8100F71583 /* EmptyBanklet.json */,
 				1D036E3630787C8100F71583 /* emptyStats.json */,
 				1D036E3830787C8100F71583 /* error2026.json */,
@@ -914,6 +905,7 @@
 		1D45CAE12FCFC66300BA028B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DC524912ECDDC6D00E48964 /* CreateView.swift */,
 				1DE45C692EB355BA0079F76E /* MainTabView.swift */,
 				1D2D847930958536005DBEE4 /* OutlinedImage.swift */,
 				1DD14EDF2EC0330A00325DF7 /* AnimatedImageView.swift */,
@@ -1111,16 +1103,6 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
-		1DAEF8BD2ECDF63600B36FAB /* HomeCreate */ = {
-			isa = PBXGroup;
-			children = (
-				1DC524912ECDDC6D00E48964 /* CreateView.swift */,
-				1D69821F2ECEF4D90040CD37 /* HomeCreateInputView.swift */,
-				1D6982192ECEF4160040CD37 /* HomeCreateComponents.swift */,
-			);
-			path = HomeCreate;
-			sourceTree = "<group>";
-		};
 		1DBCF4192EB8DA1C00B85BF4 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1130,7 +1112,6 @@
 				1DE765B82D36718C00A55D36 /* HomeMoreInformationView.swift */,
 				1D1124592EE14DBB00E87CCC /* HomePrimaryBankAdvancedFeatures.swift */,
 				1D7728422ED08C7E0046B35B /* TradeView.swift */,
-				1DAEF8BD2ECDF63600B36FAB /* HomeCreate */,
 				1DBCF40F2EB8482900B85BF4 /* AccessTimesView.swift */,
 				1DBCF4112EB8653E00B85BF4 /* SavingsRecordRow.swift */,
 			);
@@ -1180,7 +1161,6 @@
 				1DE45C6F2EB38DC80079F76E /* generateUniqueRandomProverb.swift */,
 				1D749EBC2D59A3F000D04A07 /* CurrencySymbols.swift */,
 				1DD0895E2EC187C5002EE03D /* PreminumList.swift */,
-				1DC524962ECDDFD800E48964 /* CreateStep.swift */,
 				1D5354642EBA3E5400738441 /* HomeSettingsEnum.swift */,
 				1D3E14402D4A743900747D20 /* AnimationScaleConfig.swift */,
 				1DAEF8BF2ECDF6D300B36FAB /* IconList.swift */,
@@ -1578,7 +1558,6 @@
 				1D036E7E30787C8200F71583 /* check1.json in Resources */,
 				1D036E7F30787C8200F71583 /* check2.json in Resources */,
 				1D036E8030787C8200F71583 /* check2026.json in Resources */,
-				1D036E8130787C8200F71583 /* CreateComplete.json in Resources */,
 				1D036E8230787C8200F71583 /* EmptyBanklet.json in Resources */,
 				1D036E8330787C8200F71583 /* emptyStats.json in Resources */,
 				1D036E8530787C8200F71583 /* error2026.json in Resources */,
@@ -1689,7 +1668,6 @@
 				1DD14EDC2EC02C0F00325DF7 /* Footnote.swift in Sources */,
 				1D66C4D32EBDC61100001CF5 /* SafariView.swift in Sources */,
 				1D8C38702ECC1D1600F7CAD5 /* ActivityContentTitle.swift in Sources */,
-				1DC524972ECDDFDE00E48964 /* CreateStep.swift in Sources */,
 				1D45CAE52FCFCA7300BA028B /* AvatarImage.swift in Sources */,
 				1DBCF4122EB8653F00B85BF4 /* SavingsRecordRow.swift in Sources */,
 				1D2A5EF62EBEE14A00C1F831 /* ThanksView.swift in Sources */,
@@ -1736,7 +1714,6 @@
 				1D7FE0102D20CD110065AA2E /* WelcomeView.swift in Sources */,
 				1DE736072EB64D5100573C1A /* HomeSettingsView.swift in Sources */,
 				1D845F4E2D23F3C000EDE480 /* ContentView.swift in Sources */,
-				1D69821A2ECEF42D0040CD37 /* HomeCreateComponents.swift in Sources */,
 				1D0D91212D472E7E00F287DA /* AppIconView.swift in Sources */,
 				1D80E7CE2C0BC72400A79B96 /* LottieView.swift in Sources */,
 				1DE45C702EB38DC90079F76E /* generateUniqueRandomProverb.swift in Sources */,
@@ -1757,7 +1734,6 @@
 				1DD14EDE2EC0311700325DF7 /* LockApp.swift in Sources */,
 				1D6A991E2FCF3A2900B28BFC /* AccountSectionView.swift in Sources */,
 				1D11245A2EE14DBD00E87CCC /* HomePrimaryBankAdvancedFeatures.swift in Sources */,
-				1D6982202ECEF4DA0040CD37 /* HomeCreateInputView.swift in Sources */,
 				1D42C27D2ED981B2007A890A /* GlobalTouchManager.swift in Sources */,
 				1D59D73B2D37F66F00BC449D /* BiometricAuth.swift in Sources */,
 				1DF555752BF60B1000BF0DE5 /* pigletApp.swift in Sources */,
@@ -2089,7 +2065,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/piglet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 58;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
@@ -2141,7 +2117,7 @@
 				CODE_SIGN_ENTITLEMENTS = piglet/pigletRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 58;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
