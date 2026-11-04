@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%lld" : {
 
     },
@@ -37883,6 +37886,9 @@
           }
         }
       }
+    },
+    "geometry.size.width: %lf" : {
+
     },
     "Give your piggy bank a fresh new look with more customization options, smoother animations, and unique themes." : {
       "comment" : "拥有更多自定义选项、更流畅的动画和独特主题，让你的存钱罐焕发新生命。",

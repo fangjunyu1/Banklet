@@ -64,6 +64,8 @@ struct HomeView: View {
     
     // 搜索文本框
     @State var searchText: String = ""
+    // 视图容器宽度
+    @State private var containerWidth: CGFloat = 0
     
     // 搜索存钱罐
     private var filteredPiggyBanks: [PiggyBank] {
@@ -139,7 +141,7 @@ struct HomeView: View {
                         progressStatusTabView
                     }
                     // 所有存钱罐列表
-                    filterPiggyBankView
+                    filterPiggyBankView(width: containerWidth)
                     
                     // 底部空白
                     Spacer().frame(height: 185)
@@ -151,6 +153,12 @@ struct HomeView: View {
         }
         .navigationTitle("Piggy Bank")
         .frame(maxWidth: .infinity,maxHeight: .infinity)
+        .onGeometryChange(for: CGFloat.self) { geometry in
+            print("geometry.size.width:\(geometry.size.width)")
+            return geometry.size.width
+        } action: { newWidth in
+            containerWidth = newWidth
+        }
         .sheet(item: $selectedDeleteItem) { item in
             HomeDeleteSheet(item: $selectedDeleteItem)
                 .presentationDetents([.height(300), .height(350)])
@@ -257,57 +265,64 @@ struct HomeView: View {
         .padding(.bottom, 20)
     }
     
+    // 动态计算行列
+    private func calculateColumnCount(width: CGFloat) -> Int {
+        
+        let minColumnWidth: CGFloat = 170
+        let spacing: CGFloat = 15
+        
+        let count = Int(
+            (width + spacing) / (minColumnWidth + spacing)
+        )
+        
+        return max(2, count)
+    }
+    
+    // 轮流分配队列
+    private func distributePiggyBanks(
+        _ items: [PiggyBank],
+        columnCount: Int
+    ) -> [[PiggyBank]] {
+        
+        var columns = Array(
+            repeating: [PiggyBank](),
+            count: columnCount
+        )
+        
+        for (index, item) in items.enumerated() {
+            let columnIndex = index % columnCount
+            columns[columnIndex].append(item)
+        }
+        
+        return columns
+    }
+    
     // 存钱罐列表
-    private var filterPiggyBankView: some View {
-        LazyVGrid(columns: columns, alignment: .center, spacing: 30) {
-            ForEach(filteredPiggyBanks, id: \.persistentModelID) { piggyBank in
-                NavigationLink {
-                    // 在 iOS 18 中新增缩放导航转场动画
-                    // navigationTransition 标记目标页面的导航转场效果
-                    if #available(iOS 18.0, *) {
-                        PiggyBankDetailView(
-                            piggyBank: piggyBank,
-                            namespace: namespace
-                        ) {
-                            selectedDeleteItem = piggyBank
-                        }
-                        .navigationTransition(
-                            .zoom(
-                                sourceID: piggyBank.id,
-                                in: namespace
-                            )
-                        )
-                    } else {
-                        PiggyBankDetailView(
-                            piggyBank: piggyBank,
-                            namespace: namespace
-                        ) {
-                            selectedDeleteItem = piggyBank
-                        }
-                    }
-                } label: {
-                    // 在 iOS 18 中新增缩放导航转场动画
-                    // matchedTransitionSource 标记导航转场的起始视图
-                    if #available(iOS 18.0, *) {
-                        PiggyBankCard(
-                            piggyBank: piggyBank,
-                            namespace: namespace
-                        ) {
-                            selectedDeleteItem = piggyBank
-                        }
-                        .matchedTransitionSource(
-                            id: piggyBank.id,
-                            in: namespace
-                        )
-                    } else {
-                        PiggyBankCard(
-                            piggyBank: piggyBank,
-                            namespace: namespace
-                        ) {
-                            selectedDeleteItem = piggyBank
-                        }
+    private func filterPiggyBankView(width: CGFloat) -> some View {
+        
+        
+        // 动态计算获得列数
+        let count = calculateColumnCount(
+            width: width
+        )
+        
+        let columns = distributePiggyBanks(
+            filteredPiggyBanks,
+            columnCount: count
+        )
+        
+        return HStack(alignment: .top, spacing: 15) {
+            ForEach(columns.indices, id: \.self) { index in
+                LazyVStack(spacing: 30) {
+                    ForEach(
+                        columns[index],
+                        id: \.persistentModelID
+                    ) { piggyBank in
+                        
+                        piggyBankNavigationLink(selectedDeleteItem: $selectedDeleteItem, namespace: namespace, piggyBank: piggyBank)
                     }
                 }
+                .frame(maxWidth: .infinity)
             }
         }
     }
@@ -343,7 +358,7 @@ struct HomeView: View {
                     name: piggyBank.getImg
                 )
                 .frame(width: 120)
-//                .frame(maxHeight: 150)
+                //                .frame(maxHeight: 150)
                 .shadow(color: colorScheme == .light ? .gray : .black.opacity(0.5), radius: 2, x:0, y: 3)
                 
                 // 存钱罐名称
@@ -355,7 +370,7 @@ struct HomeView: View {
                         foregroundColor: AppColor.inverseBackground,
                         strokeColor: AppColor.defaultBackground,
                         strokeWidth: 10,
-                        maxWidth: 160
+                        maxWidth: 150
                     )
                     .offset(x: piggyBank.isPinned ? -10 : 0)
                     .overlay(alignment: .trailing) {
@@ -395,6 +410,62 @@ struct HomeView: View {
                     onDelete()
                 } label: {
                     Label("Delete", systemImage: "trash")
+                }
+            }
+        }
+    }
+    
+    private struct piggyBankNavigationLink: View {
+        @Binding var selectedDeleteItem: PiggyBank?
+        var namespace: Namespace.ID
+        var piggyBank: PiggyBank
+        
+        var body: some View {
+            NavigationLink {
+                // 在 iOS 18 中新增缩放导航转场动画
+                // navigationTransition 标记目标页面的导航转场效果
+                if #available(iOS 18.0, *) {
+                    PiggyBankDetailView(
+                        piggyBank: piggyBank,
+                        namespace: namespace
+                    ) {
+                        selectedDeleteItem = piggyBank
+                    }
+                    .navigationTransition(
+                        .zoom(
+                            sourceID: piggyBank.id,
+                            in: namespace
+                        )
+                    )
+                } else {
+                    PiggyBankDetailView(
+                        piggyBank: piggyBank,
+                        namespace: namespace
+                    ) {
+                        selectedDeleteItem = piggyBank
+                    }
+                }
+            } label: {
+                // 在 iOS 18 中新增缩放导航转场动画
+                // matchedTransitionSource 标记导航转场的起始视图
+                if #available(iOS 18.0, *) {
+                    PiggyBankCard(
+                        piggyBank: piggyBank,
+                        namespace: namespace
+                    ) {
+                        selectedDeleteItem = piggyBank
+                    }
+                    .matchedTransitionSource(
+                        id: piggyBank.id,
+                        in: namespace
+                    )
+                } else {
+                    PiggyBankCard(
+                        piggyBank: piggyBank,
+                        namespace: namespace
+                    ) {
+                        selectedDeleteItem = piggyBank
+                    }
                 }
             }
         }
