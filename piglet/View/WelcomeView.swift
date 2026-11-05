@@ -15,75 +15,86 @@ struct WelcomeView: View {
     @State private var showPrivacyPolicy:Bool = false
     
     var body: some View {
-        VStack {
-            Spacer()
+        GeometryReader { geometry in
+            let height = geometry.size.height
             
-            // Lottie 动画
-            LottieView(filename:  step.lottieName, isPlaying: true, playCount: 0, isReversed: false)
-                .id(step.lottieName)
-                .scaleEffect(1.2)
-                .modifier(LottieModifier())
-            
-            Spacer().frame(height: 50)
-            
-            // 文字内容
-            VStack(spacing: 15) {
-                // 标题
-                Text(step.title)
-                    .modifier(LargeTitleModifier())
-                // 副标题
-                Text(step.subtitle)
-                    .modifier(FootNoteModifier())
-                Spacer().frame(height: 10)
-                // 圆形进度条
-                HStack {
-                    Circle()
-                        .frame(width: 8)
-                    Circle()
-                        .frame(width: 8)
-                        .foregroundColor(step == .privacy ? colorScheme == .light ? .black : .white : .gray)
+            VStack {
+                Spacer()
+                    .frame(minHeight: 30, maxHeight: 50)
+                if height > 500 {
+                    // Lottie 动画
+                    LottieView(filename: step.lottieName, isPlaying: true, playCount: 0, isReversed: false)
+                        .id(step.lottieName)
+                        .scaleEffect(1.2)
+                        .modifier(LottieModifier())
                 }
-            }
-            
-            Spacer()
-            
-            // 隐私政策-中文链接
-            Button(action: {
-                // 振动
-                HapticManager.shared.selectionChanged()
-                // 显示隐私政策视图
-                showPrivacyPolicy = true
-            }, label: {
-                Text("Privacy Policy")
-                    .modifier(FootNoteModifier())
-            })
-            .sheet(isPresented: $showPrivacyPolicy) {
-                SafariView(url: URL(string: "https://fangjunyu.com/2024/05/23/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/")!, entersReaderIfAvailable: true)
-                    .ignoresSafeArea()
-            }
-            .opacity(step == .privacy ? 1 : 0)
-            Spacer().frame(height: 10)
-            
-            // 开始或完成-按钮
-            Button(action: {
-                // 振动
-                HapticManager.shared.selectionChanged()
                 
-                if step == .welcome {
-                    withAnimation {
-                        step = .privacy
+                Spacer()
+                    .frame(minHeight: 10, maxHeight: 50)
+                
+                // 文字内容
+                VStack(spacing: 15) {
+                    // 标题
+                    Text(step.title)
+                        .modifier(LargeTitleModifier())
+                    // 副标题
+                    Text(step.subtitle)
+                        .fixedSize(horizontal: false, vertical: true) // 水平方向固定大小
+                        .modifier(FootNoteModifier())
+                    Spacer().frame(minHeight: 0, maxHeight: 10)
+                    // 圆形进度条
+                    HStack {
+                        Circle()
+                            .frame(width: 8)
+                        Circle()
+                            .frame(width: 8)
+                            .foregroundColor(step == .privacy ? colorScheme == .light ? .black : .white : .gray)
                     }
-                } else {
-                    appStorage.isCompletedWelcome = true
                 }
-            }, label: {
-                Text(step == .welcome ? "Start" : "Completed")
-                    .modifier(ButtonModifier())
-            })
-            Spacer()
-                .frame(height: 50)
+                
+                Spacer()
+                
+                // 隐私政策-中文链接
+                Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
+                    // 显示隐私政策视图
+                    showPrivacyPolicy = true
+                }, label: {
+                    Text("Privacy Policy")
+                        .modifier(FootNoteModifier())
+                })
+                .sheet(isPresented: $showPrivacyPolicy) {
+                    SafariView(url: URL(string: "https://fangjunyu.com/2024/05/23/%e5%ad%98%e9%92%b1%e7%8c%aa%e7%8c%aa-%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/")!, entersReaderIfAvailable: true)
+                        .ignoresSafeArea()
+                }
+                .opacity(step == .privacy ? 1 : 0)
+                
+                Spacer()
+                    .frame(minHeight: 10, maxHeight: 50)
+                
+                // 开始或完成-按钮
+                Button(action: {
+                    // 振动
+                    HapticManager.shared.selectionChanged()
+                    
+                    if step == .welcome {
+                        withAnimation {
+                            step = .privacy
+                        }
+                    } else {
+                        appStorage.isCompletedWelcome = true
+                    }
+                }, label: {
+                    Text(step == .welcome ? "Start" : "Completed")
+                        .modifier(ButtonModifier())
+                })
+                Spacer()
+                    .frame(minHeight: 10, maxHeight: 50)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.horizontal,20)
         }
-        .padding(.horizontal,20)
     }
 }
 
@@ -123,5 +134,5 @@ enum WelcomeStep {
 #Preview {
     WelcomeView()
         .environment(AppStorageManager.shared)
-//     .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
+    //     .environment(\.locale, .init(identifier: "de"))   // 设置语言为阿拉伯语
 }

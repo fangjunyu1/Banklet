@@ -15,8 +15,8 @@ struct LottieModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .scaledToFit()
-            .frame(maxHeight: 240)
-            .frame(maxWidth: 500)
+            .frame(minHeight: 200, maxHeight: 240)
+            .frame(minWidth: 200, maxWidth: 500)
     }
 }
 
