@@ -150,6 +150,7 @@ struct HomeView: View {
                     emptyView
                 }
             }
+
         }
         .navigationTitle("Piggy Bank")
         .frame(maxWidth: .infinity,maxHeight: .infinity)
