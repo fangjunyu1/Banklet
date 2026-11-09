@@ -22,7 +22,18 @@ struct pigletApp: App {
         WindowGroup {
             RootView()
                 .task {
-                    await iapManager.loadProduct()   // 加载产品信息
+                    // 迁移 UserDefaults，处理历史遗留问题
+                    appStorage.migrateOldKeysIfNeeded()
+
+                    // 迁移 SwiftData
+                    do {
+                        try modelContainerManager.migrateDataIfNeeded()
+                    } catch {
+                        print("数据迁移失败：\(error)")
+                    }
+
+                    // 加载内购信息
+                    await iapManager.loadProduct() // 加载产品信息
                     await iapManager.handleTransactions()   // 加载内购交易更新
                 }
                 .task(id: appStorage.avatarUpdatedUUID) {   // 更新头像 ID 后，刷新视图以获取最新头像

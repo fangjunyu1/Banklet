@@ -10,13 +10,25 @@ import SwiftUI
 
 @Model
 class PiggyBank {
+    // 数据版本
+    // 数据版本 1:显示 initialAmount 和 targetAmount
+    // 数据版本 2:显示 optionalTargetAmount 和 optionalInitialAmount
+    var dataVersion: Int = 1
+    
     var isPrimary: Bool = false // 旧字段：暂时保留，后续不再用于列表管理
     var isPinned: Bool = false  // 新字段：是否置顶
     var name: String = "" // 存钱罐名称
     var icon: String = "piggybank"   // 图标名称
     var amount: Double = 0   // 存钱罐金额
+    
+    // 旧字段，仅数据版本 1 使用
     var initialAmount: Double = 0 // 初始化金额，仅首次标记，用于后续展示
     var targetAmount: Double = 1  // 目标金额
+    
+    // 新字段，数据版本 2 使用
+    var optionalTargetAmount: Double? = nil
+    var optionalInitialAmount: Double? = nil
+    
     var creationDate: Date = Date()    // 创建日期
     var expirationDate: Date = Date()     // 截止日期
     var isExpirationDateEnabled: Bool = false   // 是否设置截止日期,true为设置了截止日期
@@ -31,52 +43,11 @@ class PiggyBank {
     var sortOrder: Int = 0
     // 自定义愿望图片的文件名
     var customImageFilename: String? = nil
-    // 完成进度
-    var progress: Double {
-        guard amount > 0, targetAmount > 0 else { return 0 }
-        return min(max(amount / targetAmount, 0), 1)
-    }
-    // 距离目标还差
-    var difference: Double {
-        let differenceNum = targetAmount - amount
-        return differenceNum > 0 ? differenceNum : 0.0
-    }
-    // 当前金额 $10.0
-    var amountText: String {    // 当前金额的String文本
-        Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
-    }
-    // 目标金额 $100.0
-    var targetAmountText: String {  // 目标金额的String文本
-        Currency.currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
-    }
-    // 当前进度 10%
-    var progressText: String {  // 当前进度的String文本
-        let truncated = floor(progress * 1000) / 1000
-        return truncated.formatted(.percent.precision(.fractionLength(0...1)))
-    }
-    // 获取贴纸图片
-//    var getImg: Image {
-//        let name = IconList.getTextureName(name: icon)
-//        print("icon: \(icon), image name: \(name)")
-//        return Image(name)
-//    }
-    // 获取贴纸图片
-    var getImg: String {
-        IconList.getTextureName(name: icon)
-    }
     
-    // 当前完成进度
-    var progressStatus: ProgressStatusTab {
-        amount >= targetAmount && targetAmount > 0 ? .done : .active
-    }
     /// 与存钱记录的关系
     @Relationship(deleteRule: .cascade,inverse: \SavingsRecord.piggyBank)
     var records: [SavingsRecord]?
     
-    /// 排序用的置顶权重，置顶为 1，未置顶为 0
-    var pinnedSortOrder: Int {
-        isPinned ? 1 : 0
-    }
     
     init(
         isPrimary: Bool = false,
@@ -121,6 +92,73 @@ class PiggyBank {
         self.sortOrder = sortOrder
         self.customImageFilename = customImageFilename
     }
+}
+
+// MARK: PiggyBank 计算属性
+extension PiggyBank {
+    // 完成进度
+    var progress: Double {
+        guard amount > 0, targetAmount > 0 else { return 0 }
+        return min(max(amount / targetAmount, 0), 1)
+    }
+    
+    // 计算初始金额
+    var effectiveInitialAmount: Double? {
+        if dataVersion >= 2 {
+            return optionalInitialAmount
+        }
+
+        return initialAmount
+    }
+    
+    // 计算目标金额
+    var effectiveTargetAmount: Double? {
+        if dataVersion >= 2 {
+            return optionalTargetAmount
+        }
+
+        return targetAmount > 1 ? targetAmount : nil
+    }
+    
+    // 距离目标还差
+    var difference: Double {
+        let differenceNum = targetAmount - amount
+        return max(targetAmount - amount, 0)
+    }
+    
+    // 当前金额 $10.0
+    var amountText: String {    // 当前金额的String文本
+        Currency.currencySymbol + " " + amount.formattedWithTwoDecimalPlaces()
+    }
+    // 目标金额 $100.0
+    var targetAmountText: String {  // 目标金额的String文本
+        Currency.currencySymbol + " " + targetAmount.formattedWithTwoDecimalPlaces()
+    }
+    // 当前进度 10%
+    var progressText: String {  // 当前进度的String文本
+        let truncated = floor(progress * 1000) / 1000
+        return truncated.formatted(.percent.precision(.fractionLength(0...1)))
+    }
+    
+    // 获取贴纸图片
+    var getImg: String {
+        IconList.getTextureName(name: icon)
+    }
+    
+    // 当前完成进度
+    var progressStatus: ProgressStatusTab {
+        amount >= targetAmount && targetAmount > 0 ? .done : .active
+    }
+    
+    // 排序用的置顶权重，置顶为 1，未置顶为 0
+    var pinnedSortOrder: Int {
+        isPinned ? 1 : 0
+    }
+    
+}
+
+// MARK: PiggyBank 静态预览数据
+extension PiggyBank {
     
     @MainActor
     static var preview: ModelContainer {

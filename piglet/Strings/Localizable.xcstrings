@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%lld" : {
 
     },
@@ -18386,6 +18383,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇方案"
+          }
+        }
+      }
+    },
+    "Choose an Icon" : {
+      "comment" : "选择图标",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择图标"
+          }
+        }
+      }
+    },
+    "Choose your favorite icon to decorate your piggy bank." : {
+      "comment" : "选择一个喜欢的图标，装饰你的存钱罐",
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个喜欢的图标，装饰你的存钱罐"
           }
         }
       }

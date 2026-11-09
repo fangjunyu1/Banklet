@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 // MARK: - 监听iCloud变化
 extension AppStorageManager {

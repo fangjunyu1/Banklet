@@ -13,7 +13,6 @@ class AppStorageManager: ObservableObject {
     static let shared = AppStorageManager()  // 全局单例
     private init() {
         print("进入 AppStorageManager 构造函数")
-        migrateOldKeysIfNeeded() // 历史遗留数据处理
         loadUserDefault()   // 初始化时同步本地存储
         loadFromiCloud()    // 从iCloud读取数据
         observeiCloudChanges()  // 监听 iCloud 变化，同步到本地

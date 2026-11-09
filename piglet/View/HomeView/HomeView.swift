@@ -215,6 +215,7 @@ struct HomeView: View {
                 .foregroundStyle(AppColor.gray)
             TextField("search_piggy_banks", text: $searchText)
                 .font(.subheadline)
+                .submitLabel(.done)
             if !searchText.isEmpty {
                 Button(action: {
                     // 清理输入框内容
