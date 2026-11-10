@@ -159,12 +159,13 @@ private struct HomeMoreInformationList1: View {
             HomeMoreInformationList(name: "Target amount",number: .amount($draft.targetAmount,$isFocused),isEdit:isEdit)
             Divider()
             // 存取进度
-            HomeMoreInformationList(name: "Access progress",number: .progress(draft.progressText),isEdit:isEdit)
+//            HomeMoreInformationList(name: "Access progress",number: .progress(draft.progressText),isEdit:isEdit)
             Divider()
             // 创建日期
             HomeMoreInformationList(name: "Creation Date",number: .date(draft.creationDate),isEdit:isEdit)
             // 完成日期
-            if primary.progress >= 1 {
+            if let progress = primary.progress,
+               progress >= 1 {
                 Divider()
                 HomeMoreInformationList(name: "Completion date",number: .date(draft.completionDate),isEdit:isEdit)
             }

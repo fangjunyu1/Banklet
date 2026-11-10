@@ -27,12 +27,6 @@ struct PiggyBankDraft {
     var fixedDepositTime: Date    // 定期存款-每天时分、每年月日
     var completionDate: Date    // 完成日期
     var sortOrder:Int   // 排序字段
-    // 只读字段 
-    var progress: Double    // 进度
-    var difference: Double
-    var amountText: String
-    var targetAmountText: String
-    var progressText: String
     
     
     init(from model: PiggyBank) {
@@ -54,12 +48,6 @@ struct PiggyBankDraft {
         self.fixedDepositTime = model.fixedDepositTime
         self.completionDate = model.completionDate
         self.sortOrder = model.sortOrder
-        // 只读字段
-        self.progress = model.progress
-        self.difference = model.difference
-        self.amountText = model.amountText
-        self.targetAmountText = model.targetAmountText
-        self.progressText = model.progressText
     }
     
     func apply(to model: PiggyBank,context:ModelContext) {

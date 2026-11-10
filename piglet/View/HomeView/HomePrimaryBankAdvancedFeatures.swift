@@ -22,7 +22,7 @@ struct HomePrimaryBankAdvancedFeatures: View {
     var body: some View {
         let silentImg = colorScheme == .light ? "SilentBlue" : "SilentWhite"
         let rmode: Image.TemplateRenderingMode = colorScheme == .light ? .original : .template
-        let progress: Double = primaryBank.progress
+        let progress: Double = primaryBank.progress ?? 0
         let progressText = primaryBank.progressText
         let lastRecord = primaryBank.records?.max(by: { $0.date < $1.date })
         let lastRecordAmountText = "\(Currency.currencySymbol + " " + (lastRecord?.amount.formattedWithTwoDecimalPlaces() ?? ""))"

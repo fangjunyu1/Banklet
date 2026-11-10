@@ -145,7 +145,7 @@ struct CreateView: View {
             HStack(spacing: 15) {
                 Text("Amount")
                     .fontWeight(.medium)
-                TextField(value: $piggyBank.targetAmount, format: .number) {
+                TextField(value: $piggyBank.optionalTargetAmount, format: .number) {
                     Text(verbatim: "0")
                 }
                 .font(.subheadline)

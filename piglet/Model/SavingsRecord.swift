@@ -15,6 +15,8 @@ enum SavingsRecordType: String,Identifiable {
     
     case manual     // 用户手动存/取
     case automatic  // 系统按频率自动执行的定期存款
+    case openingBalance // 存钱罐初始存入金额
+    case migrationAdjustment    // 存钱罐迁移校准金额
 }
 
 @Model
@@ -35,14 +37,14 @@ class SavingsRecord {
         date: Date = Date(),
         saveMoney:Bool,
         note: String? = nil,
+        type: SavingsRecordType = SavingsRecordType.manual,
         piggyBank: PiggyBank? = nil,
-        type: String = SavingsRecordType.manual.rawValue
     ){
         self.amount = amount
         self.date = date
         self.saveMoney = saveMoney
         self.note = note
+        self.type = type.rawValue
         self.piggyBank = piggyBank
-        self.type = type
     }
 }

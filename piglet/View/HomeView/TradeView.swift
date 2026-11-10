@@ -122,11 +122,11 @@ struct TradeView: View {
                 Circle()
                     .stroke(.gray.opacity(0.16), style: StrokeStyle(lineWidth: 10, lineCap: .round))
                 
-                Circle()
-                    .trim(from: 0, to: piggyBank.progress)
-                    .stroke(AppColor.appColor, style: StrokeStyle(lineWidth: 10, lineCap: .round))
-                    .rotationEffect(.degrees(-90))
-                    .animation(.easeInOut(duration: 0.3), value: piggyBank.progress)
+//                Circle()
+//                    .trim(from: 0, to: piggyBank.progress)
+//                    .stroke(AppColor.appColor, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+//                    .rotationEffect(.degrees(-90))
+//                    .animation(.easeInOut(duration: 0.3), value: piggyBank.progress)
                 
                 Image(systemName: piggyBank.icon)
                     .font(.system(size: 30, weight: .medium))

@@ -222,18 +222,11 @@ final class ActiveViewModel:ObservableObject {
         }
         
         // Step 4: 创建新的人生存钱罐
-        let piggyBank = PiggyBank(isPrimary: true,
-                                  name: "LifePiggy",
-                                  icon: "person.fill",
-                                  amount: 0,
-                                  initialAmount: 0,
-                                  targetAmount: Double(input.LifePiggy ?? 0),
-                                  creationDate: Date(),
-                                  expirationDate: Date(),
-                                  isExpirationDateEnabled: false,
-                                  isFixedDeposit: false,
-                                  fixedDepositType: FixedDepositEnum.Daily.rawValue,
-                                  fixedDepositAmount: 0
+        let piggyBank = PiggyBank(
+                                  dataVersion: 2,   // 数据版本
+                                  name: "LifePiggy", // 存钱罐名称
+                                  optionalTargetAmount: Double(input.LifePiggy ?? 0 ),    // 目标金额
+                                  bankType: PiggyBankType.lifeSaving   // 存钱罐类型
                                   )
         
         context.insert(piggyBank) // 将对象插入到上下文中
@@ -266,19 +259,13 @@ final class ActiveViewModel:ObservableObject {
         }
         
         // Step 4: 创建新的生活保障金
-        let piggyBank = PiggyBank(isPrimary: true,
-                                  name: "LifeFund",
-                                  icon: "heart",    // 爱心图标
-                                  amount: 0,
-                                  initialAmount: 0,
-                                  targetAmount: Double(input.lifeFund ?? 0),
-                                  creationDate: Date(),
-                                  expirationDate: Date(),
-                                  isExpirationDateEnabled: false,
-                                  isFixedDeposit: false,
-                                  fixedDepositType: FixedDepositEnum.Daily.rawValue,
-                                  fixedDepositAmount: 0
-                                  )
+        let piggyBank = PiggyBank(
+            dataVersion: 2,   // 数据版本
+            name: "LifeFund", // 存钱罐名称
+            optionalTargetAmount: Double(input.lifeFund ?? 0 ),    // 目标金额
+            bankType: PiggyBankType.lifeFund   // 存钱罐类型
+            )
+        
         
         context.insert(piggyBank) // 将对象插入到上下文中
         

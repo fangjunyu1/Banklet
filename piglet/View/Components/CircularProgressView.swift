@@ -14,7 +14,7 @@ struct CircularProgressView: View {
     @Binding var draft: PiggyBankDraft
     @Binding var showIcons: Bool
     var progress: Double {
-        primary.progress
+        primary.progress ?? 0
     }
     
     var body: some View {

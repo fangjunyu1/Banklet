@@ -37,30 +37,31 @@ final class CreateViewModel: ObservableObject {
         }
         
         // Step 5: 创建存钱罐
-        let piggyBank = PiggyBank(isPrimary: true,
-                                  name: data.name.isEmpty ? "New Banklet" : data.name,
-                                  icon: data.icon,
-                                  amount: data.amount ?? 0,
-                                  initialAmount: data.amount ?? 0,
-                                  targetAmount: data.targetAmount ?? 1,
-                                  creationDate: Date(),
-                                  expirationDate: data.expirationDate,
-                                  isExpirationDateEnabled: data.isExpirationDateEnabled,
-                                  isFixedDeposit: data.isFixedDeposit,
-                                  fixedDepositType: data.fixedDepositType,
-                                  fixedDepositAmount: data.fixedDepositAmount ?? 0,
-                                  nextDepositDate: fixedDate,    // 计算下一次存钱日期
-                                  fixedDepositWeekday: data.fixedDepositWeekday,
-                                  fixedDepositDay: data.fixedDepositDay,
-                                  fixedDepositTime: data.fixedDepositTime
-                                  )
+//        let piggyBank = PiggyBank(dataVersion: 1,
+//                                  isPrimary: true,
+//                                  name: data.name.isEmpty ? "New Banklet" : data.name,
+//                                  icon: data.icon,
+//                                  amount: 0,
+//                                  initialAmount: 0,
+//                                  targetAmount: 0,
+//                                  creationDate: Date(),
+//                                  expirationDate: data.expirationDate,
+//                                  isExpirationDateEnabled: data.isExpirationDateEnabled,
+//                                  isFixedDeposit: data.isFixedDeposit,
+//                                  fixedDepositType: data.fixedDepositType,
+//                                  fixedDepositAmount: data.fixedDepositAmount ?? 0,
+//                                  nextDepositDate: fixedDate,    // 计算下一次存钱日期
+//                                  fixedDepositWeekday: data.fixedDepositWeekday,
+//                                  fixedDepositDay: data.fixedDepositDay,
+//                                  fixedDepositTime: data.fixedDepositTime
+//        )
+//        
         
         
-        
-        piggyBank.nextDepositDate = fixedDate
-        
-        context.insert(piggyBank) // 将对象插入到上下文中
-        
+//        piggyBank.nextDepositDate = fixedDate
+//        
+//        context.insert(piggyBank) // 将对象插入到上下文中
+//        
         // Step 6: 保存上下文
         do {
             try context.save() // 提交上下文中的所有更改

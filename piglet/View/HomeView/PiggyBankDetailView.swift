@@ -81,16 +81,18 @@ struct PiggyBankDetailView: View {
                         )
                         
                         // 存钱罐金额
-                        OutlinedText(
-                            text: piggyBank.amountText,
-                            fontSize: 40,
-                            fontWeight: .bold,
-                            foregroundColor: .black,
-                            strokeColor: .white,
-                            strokeWidth: 10,
-                            maxWidth: 300
-                        )
-                        .frame(height: 36)
+                        if let targetAmount = piggyBank.targetAmountText {
+                            OutlinedText(
+                                text: targetAmount,
+                                fontSize: 40,
+                                fontWeight: .bold,
+                                foregroundColor: .black,
+                                strokeColor: .white,
+                                strokeWidth: 10,
+                                maxWidth: 300
+                            )
+                            .frame(height: 36)
+                        }
                     }
                     
                     Button(role: .destructive) {

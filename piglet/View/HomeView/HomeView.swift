@@ -237,7 +237,7 @@ struct HomeView: View {
         .padding(.horizontal, 20)
     }
     
-    // 存钱罐进度 Tab 视图
+    // 存钱罐标签（全部、进行中、完成） Tab 视图
     private var progressStatusTabView: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 16) {
@@ -340,7 +340,8 @@ struct HomeView: View {
         var body: some View {
             VStack(spacing: 2) {
                 // 存满后显示
-                if piggyBank.progress >= 1 {
+                if let progress = piggyBank.progress,
+                   progress == 1  {
                     HStack {
                         Text(verbatim: "已完成")
                             .font(.subheadline)
@@ -387,11 +388,13 @@ struct HomeView: View {
                 }
                 
                 // 存钱进度，存满则不显示
-                if piggyBank.progress <= 1 {
+                if let progress = piggyBank.progress,
+                   progress < 1 {
                     Text(verbatim: piggyBank.progressText)
                         .fontWeight(.semibold)
                         .font(.subheadline)
                         .foregroundStyle(AppColor.gray)
+                } else {
                 }
             }
             .contentShape(Rectangle())
@@ -512,15 +515,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    RootView()
-        .modelContainer(PiggyBank.preview)
-        .environment(SoundManager.shared) // 加载音乐环境
-        .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
-        .environment(IAPManager.shared)    // 加载内购商品环境
-        .environment(ModelConfigManager.shared)    // 加载 iCloud 配置环境
-        .modelContainer(ModelContainerManager.shared.container)   // 加载 iCloud 容器环境
-}
 
 // 删除存钱罐视图
 private struct HomeDeleteSheet: View {
@@ -656,6 +650,17 @@ private struct HomeDeleteSheet: View {
             }
         }
     }
+}
+
+
+#Preview {
+    RootView()
+        .modelContainer(PiggyBank.preview)
+        .environment(SoundManager.shared) // 加载音乐环境
+        .environment(AppStorageManager.shared)    // 加载 UserDefaults 属性环境
+        .environment(IAPManager.shared)    // 加载内购商品环境
+        .environment(ModelConfigManager.shared)    // 加载 iCloud 配置环境
+        .modelContainer(ModelContainerManager.shared.container)   // 加载 iCloud 容器环境
 }
 
 // 存钱概览

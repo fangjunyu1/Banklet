@@ -61,14 +61,82 @@ final class ModelContainerManager: ObservableObject {
             
             switch piggyBank.dataVersion {
             case 1:
-                // 版本 1 -> 版本 2
+                
+                // MARK: 版本 1 -> 版本 2
+                
+                print("存钱罐当前金额：\(piggyBank.amount)")
+                print("存钱罐初始金额：\(piggyBank.initialAmount)")
+                
+                // 1. 获取旧版历史记录
+                let existingRecords = piggyBank.records ?? []
+                
+                // 2. 计算历史记录净余额
+                let historyBalance = existingRecords.reduce(0.0) {
+                    $0 + ($1.saveMoney ? $1.amount : -$1.amount)
+                }
+                print("存钱罐存取记录 - 历史记录净余额：\(historyBalance)")
+                
+                // 3. 计算需要补充的校准金额
+                let migrationAdjustment = piggyBank.amount - (
+                    piggyBank.initialAmount + historyBalance
+                )
+                
+                // 4. 迁移初始金额
+                if piggyBank.initialAmount != 0 {
+                    print("迁移初始金额: \(piggyBank.initialAmount)，创建一条迁移初始金额记录")
+                    let initialRecord = SavingsRecord(
+                        amount: abs(piggyBank.initialAmount),
+                        date: piggyBank.creationDate,
+                        saveMoney: piggyBank.initialAmount > 0,
+                        type: .openingBalance,
+                        piggyBank: piggyBank
+                    )
+                    
+                    context.insert(initialRecord)
+                } else {
+                    print("无迁移初始金额")
+                }
+                
+                // 5. 添加迁移校准记录
+                if abs(migrationAdjustment) >= 0.01 {
+                    print("迁移校准记录金额: \(migrationAdjustment)，创建一条迁移校准记录")
+                    let migrationAdjustmentDate = piggyBank.creationDate
+                        .addingTimeInterval(1)
+                    
+                    let adjustmentRecord = SavingsRecord(
+                        amount: abs(migrationAdjustment),
+                        date: migrationAdjustmentDate,
+                        saveMoney: migrationAdjustment > 0,
+                        type: .migrationAdjustment,
+                        piggyBank: piggyBank
+                    )
+                    
+                    context.insert(adjustmentRecord)
+                } else {
+                    print("无迁移校准记录金额")
+                }
+                
+                // 6. 迁移目标金额
                 piggyBank.optionalTargetAmount = piggyBank.targetAmount
-                piggyBank.optionalInitialAmount = piggyBank.initialAmount
+                
+                // 7. 迁移到期日期
+                piggyBank.optionalExpirationDate = piggyBank.isExpirationDateEnabled
+                    ? piggyBank.expirationDate
+                    : nil
+                
+                // 8. 迁移完成日期，遵循旧版完成条件
+                if piggyBank.amount >= piggyBank.targetAmount {
+                    piggyBank.optionalCompletionDate =  piggyBank.completionDate
+                } else {
+                    piggyBank.optionalCompletionDate = nil
+                }
+                
+                // 7. 更新数据版本
                 piggyBank.dataVersion = 2
-
+                
                 hasChanges = true
             case 2:
-                // 版本 2 -> 版本 3
+                // MARK: 版本 2 -> 版本 3
                 break
             default:
                 break

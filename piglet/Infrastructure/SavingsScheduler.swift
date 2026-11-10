@@ -226,8 +226,8 @@ struct SavingsScheduler {
             date: date,
             saveMoney: true,
             note: nil,
+            type: SavingsRecordType.automatic,
             piggyBank: piggyBank,
-            type: SavingsRecordType.automatic.rawValue
         )
 
         context.insert(record)
